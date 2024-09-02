@@ -1,0 +1,6 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+.fi-sidebar-nav {
+    background: #18181b;
+}
