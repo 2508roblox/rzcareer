@@ -39,8 +39,10 @@ use Illuminate\Support\Facades\Auth;
 class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Quản lý đăng tuyển';
+    public static  ?string  $label = 'Danh sách tin đăng';
+    public static  ?string  $subheading = 'Danh sách tin đăng';
 
     public static function form(Form $form): Form
     {
@@ -49,103 +51,99 @@ class JobPostResource extends Resource
         return $form
         ->schema([
             // Group: Basic Information
-            Forms\Components\Section::make('Basic Information')
-            ->schema([
-                Forms\Components\Grid::make(2)
-                    ->schema([
-                        Forms\Components\Select::make('career_id')
-                            ->required()
-                            ->relationship('career', 'name')
-                            ->preload()
-                            ->searchable()
-                            ->label('Career'),
+            Forms\Components\Section::make(__('forms.basic_information'))
+                ->schema([
+                    Forms\Components\Grid::make(2)
+                        ->schema([
+                            Forms\Components\Select::make('career_id')
+                                ->required()
+                                ->relationship('career', 'name')
+                                ->preload()
+                                ->searchable()
+                                ->label(__('forms.career')),
 
+                            Forms\Components\Select::make('district_id')
+                                ->required()
+                                ->options(CommonDistrict::all()->pluck('name', 'id'))
+                                ->label(__('forms.district'))
+                                ->preload()
+                                ->searchable()
+                                ->reactive()
+                                ->live(100)
+                                ->default(null)
+                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                    $set('location_id', null);
 
-                        Forms\Components\Select::make('district_id')
-                            ->required()
-                            ->options(CommonDistrict::all()->pluck('name', 'id'))
-                            ->label('District')
-                            ->preload()
-                            ->searchable()
-                            ->reactive()
-                            ->live(100)
-                            ->default(null)
-                            ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                $set('location_id', null);
+                                    if ($state && $get('city_id')) {
+                                        $location = static::updateLocation($get);
+                                        if ($location) {
+                                            $set('location_id', $location->id);
+                                            $set('lat', $location->lat);
+                                            $set('lng', $location->lng);
+                                        } else {
+                                            $set('lat', '');
+                                            $set('lng', '');
+                                        }
+                                    }
+                                }),
 
-                                if ($state && $get('city_id')) {
-                                    $location = static::updateLocation($get);
+                            Forms\Components\Select::make('city_id')
+                                ->required()
+                                ->options(CommonCity::all()->pluck('name', 'id'))
+                                ->label(__('forms.city'))
+                                ->preload()
+                                ->searchable()
+                                ->reactive()
+                                ->live(100)
+                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                    $set('location_id', null);
+
+                                    if ($state) {
+                                        $location = static::updateLocation($get);
+                                        if ($location) {
+                                            $set('location_id', $location->id);
+                                            $set('lat', $location->lat);
+                                            $set('lng', $location->lng);
+                                        } else {
+                                            $set('lat', '');
+                                            $set('lng', '');
+                                        }
+                                    }
+                                }),
+
+                            Forms\Components\TextInput::make('location_id')
+                                ->disabled()
+                                ->dehydrated()
+                                ->label(__('forms.location')),
+
+                            Forms\Components\TextInput::make('lat')
+                                ->label(__('forms.latitude'))
+                                ->live(255)
+                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                    $location = static::createNewLocation($get);
                                     if ($location) {
                                         $set('location_id', $location->id);
-                                        $set('lat', $location->lat);
-                                        $set('lng', $location->lng);
-                                    } else {
-                                        $set('lat', '');
-                                        $set('lng', '');
                                     }
-                                }
-                            }),
+                                })
+                                ->disabled(fn(Component $component) => $component->getState('location_id') != null)
+                                ->hint(__('forms.latitude_hint')),
 
-                        Forms\Components\Select::make('city_id')
-                            ->required()
-                            ->options(CommonCity::all()->pluck('name', 'id'))
-                            ->label('City')
-                            ->preload()
-                            ->searchable()
-                            ->reactive()
-                            ->live(100)
-                            ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                $set('location_id', null);
-
-                                if ($state) {
-                                    $location = static::updateLocation($get);
+                            Forms\Components\TextInput::make('lng')
+                                ->label(__('forms.longitude'))
+                                ->live(255)
+                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                    $location = static::createNewLocation($get);
                                     if ($location) {
                                         $set('location_id', $location->id);
-                                        $set('lat', $location->lat);
-                                        $set('lng', $location->lng);
-                                    } else {
-                                        $set('lat', '');
-                                        $set('lng', '');
                                     }
-                                }
-                            }),
-
-                        Forms\Components\TextInput::make('location_id')
-                            ->disabled()
-                            ->dehydrated()
-                            ->label('Location'),
-
-                        Forms\Components\TextInput::make('lat')
-                            ->label('Latitude')
-                            ->live(255)
-                            ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                $location = static::createNewLocation($get);
-                                if ($location) {
-                                    $set('location_id', $location->id);
-                                }
-                            })
-                            ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                            ->hint('Enter the latitude coordinate.'),
-
-                        Forms\Components\TextInput::make('lng')
-                            ->label('Longitude')
-                            ->live(255)
-                            ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                $location = static::createNewLocation($get);
-                                if ($location) {
-                                    $set('location_id', $location->id);
-                                }
-                            })
-                            ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                            ->hint('Enter the longitude coordinate.'),
-
-
-                    ]),
+                                })
+                                ->disabled(fn(Component $component) => $component->getState('location_id') != null)
+                                ->hint(__('forms.longitude_hint')),
+                        ]),
                 ]),
 
-
             // Group: Job Details
-            Forms\Components\Section::make('Job Details')
+            Forms\Components\Section::make(__('forms.job_details'))
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
@@ -157,7 +155,7 @@ class JobPostResource extends Resource
                                     $slug = \Illuminate\Support\Str::slug($state);
                                     $set('slug', $slug);
                                 })
-                                ->label('Job Name'),
+                                ->label(__('forms.job_name')),
 
                             Forms\Components\TextInput::make('slug')
                                 ->required()
@@ -165,210 +163,209 @@ class JobPostResource extends Resource
                                 ->disabled()
                                 ->dehydrated()
                                 ->unique(JobPost::class, 'slug', ignoreRecord: true)
-                                ->label('Slug'),
+                                ->label(__('forms.slug')),
 
                             Forms\Components\DatePicker::make('deadline')
                                 ->required()
-                                ->label('Deadline'),
+                                ->label(__('forms.deadline')),
 
                             Forms\Components\TextInput::make('quantity')
                                 ->required()
                                 ->numeric()
-                                ->label('Quantity'),
+                                ->label(__('forms.quantity')),
 
                             Forms\Components\Select::make('gender_required')
                                 ->required()
                                 ->searchable()
                                 ->prefixIcon('heroicon-o-user')
                                 ->options([
-                                    0 => 'None',
-                                    1 => 'Male',
-                                    2 => 'Female',
+                                    0 => __('forms.gender_none'),
+                                    1 => __('forms.gender_male'),
+                                    2 => __('forms.gender_female'),
                                 ])
                                 ->default(0)
-                                ->placeholder('Select Gender')
-                                ->label('Gender Required'),
+                                ->placeholder(__('forms.select_gender'))
+                                ->label(__('forms.gender_required')),
 
                             Forms\Components\RichEditor::make('job_description')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label('Job Description'),
+                                ->label(__('forms.job_description')),
 
                             Forms\Components\MarkdownEditor::make('job_requirement')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label('Job Requirement'),
+                                ->label(__('forms.job_requirement')),
 
                             Forms\Components\MarkdownEditor::make('benefits_enjoyed')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label('Benefits Enjoyed'),
+                                ->label(__('forms.benefits_enjoyed')),
                         ]),
                 ]),
 
             // Group: Job Specifications
-            Forms\Components\Section::make('Job Specifications')
-            ->schema([
-                Forms\Components\Grid::make(2)
-                    ->schema([
-                        Forms\Components\Select::make('position')
-                            ->required()
-                            ->preload()
-                            ->searchable()
-                            ->options([
-                                'Manager' => 'Manager',
-                                'Developer' => 'Developer',
-                                'Designer' => 'Designer',
-                                'Analyst' => 'Analyst',
-                                'Support' => 'Support',
-                            ])
-                            ->placeholder('Select Position')
-                            ->label('Position')
-                            ->helperText('Choose the job position for this role.')
-                            ->hint('The position title within the company.')
-                            ->default('Developer') // Set a default value if applicable
-                            ->reactive() // Make it reactive if it affects other fields
-                            ->disablePlaceholderSelection() // Prevent placeholder from being selected
-                            ->columnSpan(1), // Adjust width in the grid
+            Forms\Components\Section::make(__('forms.job_specifications'))
+                ->schema([
+                    Forms\Components\Grid::make(2)
+                        ->schema([
+                            Forms\Components\Select::make('position')
+                                ->required()
+                                ->preload()
+                                ->searchable()
+                                ->options([
+                                    'Manager' => __('forms.position_manager'),
+                                    'Developer' => __('forms.position_developer'),
+                                    'Designer' => __('forms.position_designer'),
+                                    'Analyst' => __('forms.position_analyst'),
+                                    'Support' => __('forms.position_support'),
+                                ])
+                                ->placeholder(__('forms.select_position'))
+                                ->label(__('forms.position'))
+                                ->helperText(__('forms.position_helper'))
+                                ->hint(__('forms.position_hint'))
+                                ->default('Developer') // Set a default value if applicable
+                                ->reactive() // Make it reactive if it affects other fields
+                                ->disablePlaceholderSelection() // Prevent placeholder from being selected
+                                ->columnSpan(1), // Adjust width in the grid
 
-                        Forms\Components\Select::make('type_of_workplace')
-                            ->required()
-                            ->preload()
-                            ->searchable()
-                            ->options([
-                                'Office' => 'Office',
-                                'Remote' => 'Remote',
-                                'Hybrid' => 'Hybrid',
-                                'Field' => 'Field',
-                                'On-site' => 'On-site',
-                            ])
-                            ->placeholder('Select Type of Workplace')
-                            ->label('Type of Workplace')
-                            ->helperText('Select where the work will be performed.')
-                            ->hint('Workplace arrangement for the job.')
-                            ->default('Remote') // Set a default value if applicable
-                            ->reactive()
-                            ->disablePlaceholderSelection()
-                            ->columnSpan(1),
+                            Forms\Components\Select::make('type_of_workplace')
+                                ->required()
+                                ->preload()
+                                ->searchable()
+                                ->options([
+                                    'Office' => __('forms.workplace_office'),
+                                    'Remote' => __('forms.workplace_remote'),
+                                    'Hybrid' => __('forms.workplace_hybrid'),
+                                    'Field' => __('forms.workplace_field'),
+                                    'On-site' => __('forms.workplace_on_site'),
+                                ])
+                                ->placeholder(__('forms.select_workplace'))
+                                ->label(__('forms.type_of_workplace'))
+                                ->helperText(__('forms.workplace_helper'))
+                                ->hint(__('forms.workplace_hint'))
+                                ->default('Remote') // Set a default value if applicable
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
 
-                        Forms\Components\Select::make('experience')
-                            ->required()
-                            ->preload()
-                            ->searchable()
-                            ->options([
-                                '0-1 years' => '0-1 years',
-                                '2-3 years' => '2-3 years',
-                                '4-5 years' => '4-5 years',
-                                '6-10 years' => '6-10 years',
-                                '10+ years' => '10+ years',
-                            ])
-                            ->placeholder('Select Experience Level')
-                            ->label('Experience')
-                            ->helperText('Specify the required experience level.')
-                            ->hint('Experience required for the job.')
-                            ->default('2-3 years')
-                            ->reactive()
-                            ->disablePlaceholderSelection()
-                            ->columnSpan(1),
+                            Forms\Components\Select::make('experience')
+                                ->required()
+                                ->preload()
+                                ->searchable()
+                                ->options([
+                                    '0-1 years' => __('forms.experience_0_1'),
+                                    '2-3 years' => __('forms.experience_2_3'),
+                                    '4-5 years' => __('forms.experience_4_5'),
+                                    '6-10 years' => __('forms.experience_6_10'),
+                                    '10+ years' => __('forms.experience_10_plus'),
+                                ])
+                                ->placeholder(__('forms.select_experience'))
+                                ->label(__('forms.experience'))
+                                ->helperText(__('forms.experience_helper'))
+                                ->hint(__('forms.experience_hint'))
+                                ->default('2-3 years')
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
 
-                        Forms\Components\Select::make('academic_level')
-                            ->required()
-                            ->preload()
-                            ->searchable()
-                            ->options([
-                                'High School' => 'High School',
-                                'Associate Degree' => 'Associate Degree',
-                                'Bachelor\'s Degree' => 'Bachelor\'s Degree',
-                                'Master\'s Degree' => 'Master\'s Degree',
-                                'Doctorate' => 'Doctorate',
-                            ])
-                            ->placeholder('Select Academic Level')
-                            ->label('Academic Level')
-                            ->helperText('Indicate the required academic qualification.')
-                            ->hint('Educational qualification needed for the job.')
-                            ->default('Bachelor\'s Degree')
-                            ->reactive()
-                            ->disablePlaceholderSelection()
-                            ->columnSpan(1),
+                            Forms\Components\Select::make('academic_level')
+                                ->required()
+                                ->preload()
+                                ->searchable()
+                                ->options([
+                                    'High School' => __('forms.academic_high_school'),
+                                    'Associate Degree' => __('forms.academic_associate'),
+                                    'Bachelor\'s Degree' => __('forms.academic_bachelor'),
+                                    'Master\'s Degree' => __('forms.academic_master'),
+                                    'Doctorate' => __('forms.academic_doctorate'),
+                                ])
+                                ->placeholder(__('forms.select_academic_level'))
+                                ->label(__('forms.academic_level'))
+                                ->helperText(__('forms.academic_helper'))
+                                ->hint(__('forms.academic_hint'))
+                                ->default('Bachelor\'s Degree')
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
 
-                        Forms\Components\Select::make('job_type')
-                            ->required()
-                            ->preload()
-                            ->searchable()
-                            ->options([
-                                'Full-time' => 'Full-time',
-                                'Part-time' => 'Part-time',
-                                'Contract' => 'Contract',
-                                'Temporary' => 'Temporary',
-                                'Internship' => 'Internship',
-                                'Freelance' => 'Freelance',
-                            ])
-                            ->placeholder('Select Job Type')
-                            ->label('Job Type')
-                            ->helperText('Choose the type of employment.')
-                            ->hint('Employment type for the job.')
-                            ->default('Full-time')
-                            ->reactive()
-                            ->disablePlaceholderSelection()
-                            ->columnSpan(1),
+                            Forms\Components\Select::make('job_type')
+                                ->required()
+                                ->preload()
+                                ->searchable()
+                                ->options([
+                                    'Full-time' => __('forms.job_type_full_time'),
+                                    'Part-time' => __('forms.job_type_part_time'),
+                                    'Contract' => __('forms.job_type_contract'),
+                                    'Temporary' => __('forms.job_type_temporary'),
+                                    'Internship' => __('forms.job_type_internship'),
+                                    'Freelance' => __('forms.job_type_freelance'),
+                                ])
+                                ->placeholder(__('forms.select_job_type'))
+                                ->label(__('forms.job_type'))
+                                ->helperText(__('forms.job_type_helper'))
+                                ->hint(__('forms.job_type_hint'))
+                                ->default('Full-time')
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
 
-                        Forms\Components\TextInput::make('salary_min')
-                            ->required()
-                            ->numeric()
-                            ->label('Minimum Salary')
-                            ->placeholder('Enter minimum salary')
-                            ->helperText('Specify the minimum salary for the position.')
-                            ->hint('Minimum salary amount.')
-                            ->prefix('$') // Add currency symbol or any prefix
-                            ->suffix('per year') // Add suffix if needed
-                            ->columnSpan(1),
+                            Forms\Components\TextInput::make('salary_min')
+                                ->required()
+                                ->numeric()
+                                ->label(__('forms.salary_min'))
+                                ->placeholder(__('forms.enter_min_salary'))
+                                ->helperText(__('forms.salary_min_helper'))
+                                ->hint(__('forms.salary_min_hint'))
+                                ->prefix('$') // Add currency symbol or any prefix
+                                ->suffix(__('forms.salary_suffix')) // Add suffix if needed
+                                ->columnSpan(1),
 
-                        Forms\Components\TextInput::make('salary_max')
-                            ->required()
-                            ->numeric()
-                            ->label('Maximum Salary')
-                            ->placeholder('Enter maximum salary')
-                            ->helperText('Specify the maximum salary for the position.')
-                            ->hint('Maximum salary amount.')
-                            ->prefix('$') // Add currency symbol or any prefix
-                            ->suffix('per year') // Add suffix if needed
-                            ->columnSpan(1),
+                            Forms\Components\TextInput::make('salary_max')
+                                ->required()
+                                ->numeric()
+                                ->label(__('forms.salary_max'))
+                                ->placeholder(__('forms.enter_max_salary'))
+                                ->helperText(__('forms.salary_max_helper'))
+                                ->hint(__('forms.salary_max_hint'))
+                                ->prefix('$') // Add currency symbol or any prefix
+                                ->suffix(__('forms.salary_suffix')) // Add suffix if needed
+                                ->columnSpan(1),
 
-                        Forms\Components\Select::make('salary_type')
-                            ->required()
-                            ->label('Salary Type')
-                            ->options([
-                                'hourly' => 'Hourly',
-                                'monthly' => 'Monthly',
-                                'weekly' => 'Weekly',
-                            ])
-                            ->searchable()
-                            ->placeholder('Select Salary Type')
-                            ->default('monthly')
-                            ->helperText('Choose how the salary is calculated')
-                            ->hint('The salary calculation frequency.')
-                            ->preload()
-                            ->reactive()
-                            ->disablePlaceholderSelection()
-                            ->columnSpan(1),
-                    ]),
+                            Forms\Components\Select::make('salary_type')
+                                ->required()
+                                ->label(__('forms.salary_type'))
+                                ->options([
+                                    'hourly' => __('forms.salary_type_hourly'),
+                                    'monthly' => __('forms.salary_type_monthly'),
+                                    'weekly' => __('forms.salary_type_weekly'),
+                                ])
+                                ->searchable()
+                                ->placeholder(__('forms.select_salary_type'))
+                                ->default('monthly')
+                                ->helperText(__('forms.salary_type_helper'))
+                                ->hint(__('forms.salary_type_hint'))
+                                ->preload()
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
+                        ]),
                 ]),
 
-
             // Group: Visibility and Contact
-            Forms\Components\Section::make('Visibility and Contact')
+            Forms\Components\Section::make(__('forms.visibility_and_contact'))
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
                             Forms\Components\Toggle::make('is_hot')
-                                ->label('Hot')
+                                ->label(__('forms.is_hot'))
                                 ->required()
                                 ->default(false)
                                 ->onIcon('heroicon-o-fire')
                                 ->offIcon('heroicon-s-fire'),
 
                             Forms\Components\Toggle::make('is_urgent')
-                                ->label('Urgent')
+                                ->label(__('forms.is_urgent'))
                                 ->required()
                                 ->default(false)
                                 ->onIcon('heroicon-o-exclamation-circle')
@@ -378,52 +375,65 @@ class JobPostResource extends Resource
                                 ->required()
                                 ->maxLength(100)
                                 ->prefix('👤')
-                                ->placeholder('Enter contact person\'s name')
-                                ->helperText('Full name of the contact person'),
+                                ->placeholder(__('forms.enter_contact_name'))
+                                ->helperText(__('forms.contact_name_helper'))
+                                ->label(__('forms.contact_person_name')),
 
                             Forms\Components\TextInput::make('contact_person_phone')
                                 ->required()
                                 ->tel()
                                 ->maxLength(15)
                                 ->prefix('📞')
-                                ->placeholder('Enter contact person\'s phone number')
-                                ->helperText('Phone number of the contact person'),
+                                ->placeholder(__('forms.enter_contact_phone'))
+                                ->helperText(__('forms.contact_phone_helper'))
+                                ->label(__('forms.contact_person_phone')),
 
                             Forms\Components\TextInput::make('contact_person_email')
                                 ->required()
                                 ->email()
                                 ->maxLength(100)
                                 ->prefix('✉️')
-                                ->placeholder('Enter contact person\'s email address')
-                                ->helperText('Email address of the contact person'),
+                                ->placeholder(__('forms.enter_contact_email'))
+                                ->helperText(__('forms.contact_email_helper'))
+                                ->label(__('forms.contact_person_email')),
 
                             Forms\Components\Select::make('status')
                                 ->required()
                                 ->preload()
                                 ->searchable()
+                                ->disabled()
+                                ->dehydrated()
+                                ->default(0)
+                                ->afterStateHydrated(function ($set, $state) {
+                                    // Đảm bảo rằng nếu trạng thái chưa được đặt, sẽ gán giá trị mặc định
+                                    if ($state === null) {
+                                        $set('status', 0);
+                                    }
+                                })
                                 ->options([
-                                    0 => 'Pending Review',
-                                    1 => 'Approved',
-                                    2 => 'Rejected',
-                                    3 => 'Published',
-                                    4 => 'Closed',
-                                    5 => 'Expired',
-                                    6 => 'Under Review',
-                                    7 => 'Interviewing',
-                                    8 => 'Hired',
-                                    9 => 'Archived',
-                                    10 => 'Cancelled',
-                                    11 => 'On Hold',
-                                    12 => 'Filled',
-                                    13 => 'Draft',
-                                    14 => 'Reopened',
+                                    0 => __('forms.status_pending_review'),
+                                    1 => __('forms.status_approved'),
+                                    2 => __('forms.status_rejected'),
+                                    3 => __('forms.status_published'),
+                                    4 => __('forms.status_closed'),
+                                    5 => __('forms.status_expired'),
+                                    6 => __('forms.status_under_review'),
+                                    7 => __('forms.status_interviewing'),
+                                    8 => __('forms.status_hired'),
+                                    9 => __('forms.status_archived'),
+                                    10 => __('forms.status_cancelled'),
+                                    11 => __('forms.status_on_hold'),
+                                    12 => __('forms.status_filled'),
+                                    13 => __('forms.status_draft'),
+                                    14 => __('forms.status_reopened'),
                                 ])
                                 ->default(0)
-                                ->placeholder('Select Status')
-                                ->label('Status'),
+                                ->placeholder(__('forms.select_status'))
+                                ->label(__('forms.status')),
                         ]),
                 ]),
         ]);
+
     }
 
     public static function table(Table $table): Table

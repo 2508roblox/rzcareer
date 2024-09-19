@@ -30,7 +30,7 @@ class RecruiterAuthenticate extends Middleware
         $user = $guard->user();
 
         $panel = Filament::getCurrentPanel();
-
+        //thiếu phần kiểm tra has_company
         abort_if(
             $user instanceof FilamentUser ?
                 (!$user->canAccessPanel($panel) || !$user->hasRole('recruiter')) :
