@@ -262,7 +262,7 @@
 
 
                                                     <div class="flex-grow-1 ms-2">
-                                                        <h3 class="tooltip_job_1378956 h5  tooltip" title="">Quận 12 -
+                                                        <h3 class="tooltip_job_1378956 h5  tooltip" title="">Quận 12233 -
                                                             Thực Tập Sinh - Hỗ Trợ Mộc Và Lương</h3>
                                                         <div class="h6 text-muted">Công Ty TNHH Thương Mại Và Dịch Vụ
                                                             Nina</div>
