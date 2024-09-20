@@ -1,0 +1,263 @@
+.banner,
+.banner_frame {
+    position: relative;
+    overflow: hidden
+}
+
+.banner_wrapper {
+    line-height: 0;
+    margin: 0 0 20px
+}
+
+.banner,
+.custom-banners-cycle-slideshow .banner_wrapper {
+    margin: 0
+}
+
+.banner {
+    background-size: cover;
+    box-sizing: content-box;
+    max-height: 100%;
+    max-width: 100%
+}
+
+.custom-banners-cycle-slideshow {
+    margin: 0 0 20px;
+	box-sizing: border-box;
+}
+
+.custom-banners-cycle-slideshow *{
+	box-sizing: border-box;
+}
+
+
+.banner_wrapper .banner > img {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+	display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+}
+
+.banner_frame {
+    display: inline-block
+}
+
+.custom_banners_slide_full_width {
+    max-width: none!important;
+    max-height: none!important;
+    width: 100%!important;
+    height: auto!important
+}
+
+.custom_banners_slide_full_height {
+    max-width: none!important;
+    max-height: none!important;
+    width: auto!important;
+    height: 100%!important
+}
+
+.banner_frame>img {
+    bottom: -9999px;
+    height: auto;
+    left: -9999px;
+    margin: auto;
+    position: absolute;
+    right: -9999px;
+    top: -9999px;
+    width: auto
+}
+
+.banner_wrapper .banner img {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none
+}
+
+@media only screen and (max-width:500px) {
+    .banner.has_cta .banner_caption_inner {
+        /* display: none */
+    }
+}
+
+.rotatingBannerWidget .banner {
+    border: none
+}
+
+.banner .custom_banners_big_link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999
+}
+
+.banner_caption iframe {
+    position: relative;
+    z-index: 9999
+}
+
+.banner .banner_caption {
+    line-height: 1;
+    background-image: url(../img/black_70.png);
+    color: #FFF;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0
+}
+
+.banner .banner_caption_text {
+    display: inline-block;
+    line-height: 1.25;
+}
+
+.banner.bottom .banner_caption {
+    bottom: 0
+}
+
+.banner.left .banner_caption {
+    top: 0;
+    right: auto;
+    bottom: 0;
+    width: 30%
+}
+
+.banner.right .banner_caption {
+    top: 0;
+    left: auto;
+    bottom: 0;
+    width: 30%
+}
+
+.banner.top .banner_caption {
+    top: 0
+}
+
+.banner.bottom.has_cta .banner_caption,
+.banner.top.has_cta .banner_caption {
+    padding: 20px
+}
+
+.banner.left .banner_call_to_action,
+.banner.right .banner_call_to_action {
+    float: none;
+    text-align: center;
+    top: auto;
+    margin: 0 0 15px;
+    bottom: 15px;
+    right: 15px;
+    left: 15px
+}
+
+.banner.left .banner_call_to_action .banner_btn_cta,
+.banner.right .banner_call_to_action .banner_btn_cta {
+    display: block
+}
+
+.banner.legacy_cta_position .banner_call_to_action {
+    float: right;
+    margin-left: 10px
+}
+
+.banner_call_to_action {
+    display: inline-block;
+    margin: 0 10px
+}
+
+.banner .banner_call_to_action .banner_btn_cta {
+    background: orange;
+    border: 1px solid #FF8C00;
+    border-radius: 5px;
+    color: navy;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0;
+    padding: 6px 10px
+}
+
+.custom-banners-cycle-slideshow-default_style .custom-b-cycle-controls .custom-b-cycle-next,
+.custom-banners-cycle-slideshow-default_style .custom-b-cycle-controls .custom-b-cycle-prev {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    height: 34px;
+    margin-top: -42px;
+    text-shadow: 1px 1px 1px #000;
+    top: 50%;
+    width: auto;
+    z-index: 9999;
+    cursor: pointer
+}
+
+.custom-banners-cycle-slideshow {
+    overflow: hidden;
+    position: relative;
+	margin-bottom: 40px;
+}
+
+.custom-banners-cycle-slideshow .cycle-slide {
+    right: 0;
+    left: 0
+}
+
+.custom-b-cycle-controls {
+    text-align: center
+}
+
+.custom-banners-cycle-slideshow .custom-b-cycle-controls a {
+    border: 0 none;
+	box-shadow: none;
+}
+
+.custom-b-cycle-controls .custom-b-cycle-prev {
+    position: absolute;
+    left: 12px
+}
+
+.custom-b-cycle-controls .custom-b-cycle-next {
+    position: absolute;
+    right: 12px
+}
+
+.custom-b-cycle-controls .custom-b-cycle-pager {
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: auto;
+    z-index: 9999
+}
+
+.custom-b-cycle-controls .custom-b-cycle-pager span {
+    color: #ddd;
+    cursor: pointer;
+    font-size: 38px;
+    line-height: 19px;
+    opacity: .5
+}
+
+.custom-b-cycle-pager span a {
+    display: none
+}
+
+.custom-b-cycle-pager span::after {
+    content: "•"
+}
+
+.custom-b-cycle-pager span.cycle-pager-active {
+    color: #D69746;
+    opacity: 1
+}
+
+.custom-banners-cycle-slideshow-default_style .banner {
+	box-sizing: border-box;
+	margin-bottom: 40px;
+}
