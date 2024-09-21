@@ -21,17 +21,31 @@
     <meta property="al:ios:app_name" content="JobsGO">
     <title>{{ $title ?? 'Page Title' }}</title>
 
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2') }}" as="font"
+        type="font/woff2" crossorigin>
 
-    <link rel="preload" href="{{ asset('assets/teks/css/fonts/boxicons.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/teks/css/fonts/boxicons.woff2') }}" as="font" type="font/woff2"
+        crossorigin>
     <link href="{{ asset('assets/teks/css/icons.min.css?v=234208153091') }}" rel="stylesheet">
     <link href="{{ asset('assets/teks/css/base.min.css?v=234208153091') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css?v=1726838779') }}" rel="stylesheet">
+
+    {{-- List Jobs --}}
+    <link href="{{ asset('assets/static/assets/css/style.min.css?v=234208153091') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom.css?v=1726950148') }}" rel="stylesheet">
+    <link href="{{ asset('assets/static/assets/css/list.min.css?v=234208153091') }}" rel="stylesheet">
+    {{-- List Jobs --}}
+
     <script defer src="{{ asset('assets/teks/js/base.min.js?v=234208153091') }}"></script>
 
     <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>

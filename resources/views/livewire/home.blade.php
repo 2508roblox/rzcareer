@@ -1,13 +1,14 @@
 <div>
     <main>
-        <section class="teks-search-box text-dark py-5"  >
+        <section class="teks-search-box text-dark py-5">
             <style>
                 .teks-search-box {
-    background-image: url('{{ asset('assets/img/2024/bg1.webp') }}');
-    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ khu vực */
-    background-position: center; /* Đảm bảo hình nền luôn căn giữa */
-}
-
+                    background-image: url('{{ asset(' assets/img/2024/bg1.webp') }}');
+                    background-size: cover;
+                    /* Đảm bảo hình nền bao phủ toàn bộ khu vực */
+                    background-position: center;
+                    /* Đảm bảo hình nền luôn căn giữa */
+                }
             </style>
             <div class="container">
                 <div class="row">
@@ -43,7 +44,8 @@
                                     <li class="list-group-item">
                                         <a title="Việc làm Kế Toán" href="/viec-lam-ke-toan.html"
                                             class="list-group-item-action"><img height="15" width="15" loading="lazy"
-                                                src="{{ asset('assets/teks/img/ic-ke-toan.svg?v=234208153091') }}" alt="Việc làm Kế Toán"> Kế
+                                                src="{{ asset('assets/teks/img/ic-ke-toan.svg?v=234208153091') }}"
+                                                alt="Việc làm Kế Toán"> Kế
                                             Toán</a>
                                     </li>
                                     <li class="list-group-item">
@@ -56,13 +58,15 @@
                                     <li class="list-group-item">
                                         <a title="Việc làm Kỹ Thuật" href="/viec-lam-ky-thuat.html"
                                             class="list-group-item-action"><img height="15" width="15" loading="lazy"
-                                                src="{{ asset('assets/teks/img/ic-ky-thuat.svg?v=234208153091') }}" alt="Việc làm Kỹ Thuật">
+                                                src="{{ asset('assets/teks/img/ic-ky-thuat.svg?v=234208153091') }}"
+                                                alt="Việc làm Kỹ Thuật">
                                             Kỹ Thuật</a>
                                     </li>
                                     <li class="list-group-item">
                                         <a title="Việc làm Nhân Sự" href="/viec-lam-nhan-su.html"
                                             class="list-group-item-action"><img height="15" width="15" loading="lazy"
-                                                src="{{ asset('assets/teks/img/ic-nhan-su.svg?v=234208153091') }}" alt="Việc làm Nhân Sự">
+                                                src="{{ asset('assets/teks/img/ic-nhan-su.svg?v=234208153091') }}"
+                                                alt="Việc làm Nhân Sự">
                                             Nhân Sự</a>
                                     </li>
                                 </ul>
@@ -126,7 +130,8 @@
                     <div class="col-sm-5 col-md-4">
                         <div class="teks-box-today text-light">
                             <h6>
-                                <img src="{{ asset('assets/img/2024/ic3.svg?v=234208153091') }}" width="16" loading="lazy" alt="jobsgo">
+                                <img src="{{ asset('assets/img/2024/ic3.svg?v=234208153091') }}" width="16"
+                                    loading="lazy" alt="jobsgo">
                                 Thị trường làm việc hôm nay
                                 <small class="float-end fw-normal">20/09/2024</small>
                                 <div class="row my-3 mt-4 text-center">
@@ -144,14 +149,14 @@
                                 <div class="row my-3 mt-4 text-center">
                                     <h5 class="mb-3">Con số ấn tượng khác</h5>
                                     <div class="col-6">
-                                        <img src="{{ asset('assets/img/2024/ic4.svg?v=234208153091') }}" width="28" loading="lazy"
-                                            alt="jobsgo">
+                                        <img src="{{ asset('assets/img/2024/ic4.svg?v=234208153091') }}" width="28"
+                                            loading="lazy" alt="jobsgo">
                                         <p>Nhà tuyển dụng uy tín</p>
                                         <strong>120.000+</strong>
                                     </div>
                                     <div class="col-6">
-                                        <img src="{{ asset('assets/img/2024/ic5.svg?v=234208153091') }}" width="20" loading="lazy"
-                                            alt="jobsgo">
+                                        <img src="{{ asset('assets/img/2024/ic5.svg?v=234208153091') }}" width="20"
+                                            loading="lazy" alt="jobsgo">
                                         <p>Lượt tải ứng dụng</p>
                                         <strong>1.200.000+</strong>
                                     </div>
@@ -165,8 +170,8 @@
         </section>
         <section class="d-block d-lg-none text-center">
             <a href="https://jobsgo.vn/site/download?utm_source=home_mobile">
-                <img height="117" width="400" class="w-100 h-auto" loading="lazy" src="{{ asset('assets/teks/img/download-app.webp') }}"
-                    alt="Download JobsGO">
+                <img height="117" width="400" class="w-100 h-auto" loading="lazy"
+                    src="{{ asset('assets/teks/img/download-app.webp') }}" alt="Download JobsGO">
             </a>
         </section>
         <section class="bg-linear-gradient pt-2 py-sm-3 p-sm-4">
@@ -185,7 +190,8 @@
                         <div
                             class="alert d-none d-sm-block alert-light alert-dismissible rounded-1 text-dark py-1 px-2 small shadow-sm">
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            <img src="{{ asset('assets/img/2024/ic6.svg?v=234208153091') }}" width="16" loading="lazy" alt="jobsgo">
+                            <img src="{{ asset('assets/img/2024/ic6.svg?v=234208153091') }}" width="16" loading="lazy"
+                                alt="jobsgo">
                             <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
                         </div>
                         <div class="d-sm-block">
@@ -262,7 +268,8 @@
 
 
                                                     <div class="flex-grow-1 ms-2">
-                                                        <h3 class="tooltip_job_1378956 h5  tooltip" title="">Quận 12233 -
+                                                        <h3 class="tooltip_job_1378956 h5  tooltip" title="">Quận 12233
+                                                            -
                                                             Thực Tập Sinh - Hỗ Trợ Mộc Và Lương</h3>
                                                         <div class="h6 text-muted">Công Ty TNHH Thương Mại Và Dịch Vụ
                                                             Nina</div>
@@ -10293,7 +10300,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH BHNT AIA Việt Nam
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10307,7 +10315,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Phát Triển Khoa Học
                                                         Quốc Tế Trường Sinh</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Gia Lai</span></p>
+                                                        <span>Gia Lai</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10321,7 +10330,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Phát Triển Và Đầu
                                                         Tư Xây Dựng Vincons</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10334,7 +10344,8 @@
                                                         alt="AIA EXCHANGE">
                                                     <div class="h5 fw-bold text-dark">AIA EXCHANGE</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10347,7 +10358,8 @@
                                                         alt="Công Ty TNHH Shichida">
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Shichida</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10361,7 +10373,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Thương Mại Nguyễn
                                                         Kim</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10375,7 +10388,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần ABAHA Toàn Cầu
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10389,7 +10403,8 @@
                                                     <div class="h5 fw-bold text-dark">J&T Express Việt Nam -CN Hồ Chí
                                                         Minh</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10407,7 +10422,8 @@
                                                     <div class="h5 fw-bold text-dark">Ngân hàng Thương mại Cổ phần Đông
                                                         Nam Á</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10421,7 +10437,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Jinyu (Việt Nam) Tire
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Tây Ninh</span></p>
+                                                        <span>Tây Ninh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10435,7 +10452,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần One Mount Group
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10449,7 +10467,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun
                                                         Life Việt Nam </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10463,7 +10482,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun
                                                         Life Việt Nam - De La Sól</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>TPHCM</span></p>
+                                                        <span>TPHCM</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10477,7 +10497,8 @@
                                                     <div class="h5 fw-bold text-dark">Công ty TNHH Trang Thiết Bị Nha
                                                         Khoa (DOE)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10490,7 +10511,8 @@
                                                         alt="Exchange By AIA">
                                                     <div class="h5 fw-bold text-dark">Exchange By AIA</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10503,7 +10525,8 @@
                                                         alt="Công Ty Cổ Phần 1AutoCare">
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần 1AutoCare</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10521,7 +10544,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH BHNT Cathay Việt Nam
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10534,7 +10558,8 @@
                                                         alt="Bệnh viện Đa khoa Hà Nội">
                                                     <div class="h5 fw-bold text-dark">Bệnh viện Đa khoa Hà Nội</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10548,7 +10573,8 @@
                                                     <div class="h5 fw-bold text-dark"> Công Ty Cổ Phần Sản Phẩm Sinh
                                                         Thái</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10562,7 +10588,8 @@
                                                     <div class="h5 fw-bold text-dark">Ngân Hàng TMCP Hàng Hải Việt Nam -
                                                         MSB</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10576,7 +10603,8 @@
                                                     <div class="h5 fw-bold text-dark">Công ty TNHH Bảo hiểm Nhân thọ MB
                                                         Ageas Life </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10590,7 +10618,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Gcoop Việt Nam - Chi
                                                         Nhánh Hồ Chí Minh</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10604,7 +10633,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Phân Bón Hà Lan
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Long An</span></p>
+                                                        <span>Long An</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10618,7 +10648,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Omexey Home
                                                         Furnishing (Việt Nam)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Bình Dương</span></p>
+                                                        <span>Bình Dương</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10636,7 +10667,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Quảng Cáo Truyền
                                                         Thông Mind Media</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hổ Chí Minh</span></p>
+                                                        <span>Hổ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10649,7 +10681,8 @@
                                                         alt="Công Ty TNHH Careace">
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Careace</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10663,7 +10696,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần J - Việt</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
                                                         <span>Bình Dương
-                                                        </span></p>
+                                                        </span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10677,7 +10711,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Noroo-Nanpao Paints
                                                         And Coatings ( Việt Nam)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Đồng Nai</span></p>
+                                                        <span>Đồng Nai</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10691,7 +10726,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Thương Mại Dịch Vụ
                                                         Kết Giao Phát Triển Quốc Tế (IDECO)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10705,7 +10741,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ
                                                         Prudential Việt Nam - Bộ Phận Hợp Tác Kinh Doanh</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10719,7 +10756,8 @@
                                                     <div class="h5 fw-bold text-dark">CÔNG TY TNHH MỘT THÀNH VIÊN
                                                         MAILISA </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10732,7 +10770,8 @@
                                                         alt="Công ty Cổ phần Haplast">
                                                     <div class="h5 fw-bold text-dark">Công ty Cổ phần Haplast</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hưng Yên</span></p>
+                                                        <span>Hưng Yên</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10750,7 +10789,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Vàng Bạc Đá Quý
                                                         Lộc Phúc</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10764,7 +10804,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun
                                                         Life Việt Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10778,7 +10819,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Phần Mềm Datanova
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10792,7 +10834,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Dịch Vụ Bảo Vệ
                                                         Secom Việt Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10806,7 +10849,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Dược Phẩm Đại Cát
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10820,7 +10864,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun
                                                         Life Việt Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10834,7 +10879,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty CP Đầu Tư Phát Triển Dịch
                                                         Vụ Bất Động Sản True Value </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10848,7 +10894,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Tổng Đại Lý Bảo Hiểm
                                                         Nhân Thọ Tâm An HCM (Văn phòng TĐL Prudential)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10866,7 +10913,8 @@
                                                     <div class="h5 fw-bold text-dark"> Công ty TNHH Yakult Việt Nam
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10880,7 +10928,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Tư Vấn & Đào Tạo Đại
                                                         Dương</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10894,7 +10943,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Dược Hậu Giang
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Cần Thơ</span></p>
+                                                        <span>Cần Thơ</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10908,7 +10958,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Tập Đoàn Golden
                                                         Gate – Chi nhánh Miền Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10921,7 +10972,8 @@
                                                         alt="Công Ty Cổ Phần Sachi">
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Sachi</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10935,7 +10987,8 @@
                                                     <div class="h5 fw-bold text-dark">Ngân hàng TMCP Quốc tế Việt Nam
                                                         (VIB)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10948,7 +11001,8 @@
                                                         alt="AIA Alpha">
                                                     <div class="h5 fw-bold text-dark">AIA Alpha</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10962,7 +11016,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Sản Xuất Thương
                                                         Mại Kỳ Phát</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -10980,7 +11035,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ Sun
                                                         Life Việt Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội, Hồ Chí Minh</span></p>
+                                                        <span>Hà Nội, Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -10994,7 +11050,8 @@
                                                     <div class="h5 fw-bold text-dark">Công ty TNHH Khu Du Lịch Vịnh
                                                         Thiên Đường - ALMA</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11008,7 +11065,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Đào Tạo Tư Vấn PDCA -
                                                         Văn Phòng Đại Diện HCM</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11021,7 +11079,8 @@
                                                         alt="Ngân hàng TMCP Á Châu ACB">
                                                     <div class="h5 fw-bold text-dark">Ngân hàng TMCP Á Châu ACB</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11035,7 +11094,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ AIA
                                                         (Hồ Chí Minh)</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11048,7 +11108,8 @@
                                                         alt="Fe Credit">
                                                     <div class="h5 fw-bold text-dark">Fe Credit</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11062,7 +11123,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Phát Triển Công Nghệ
                                                         Cao Quyết Thắng</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11075,7 +11137,8 @@
                                                         alt="De La Sól By SunLife Vietnam">
                                                     <div class="h5 fw-bold text-dark">De La Sól By SunLife Vietnam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -11093,7 +11156,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Thương Mại Dịch Vụ
                                                         Phong Vũ</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11107,7 +11171,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Tập Đoàn TH
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11120,7 +11185,8 @@
                                                         alt="Công Ty TNHH Shopee Xpress">
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Shopee Xpress</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11134,7 +11200,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Thiết Kế Thi Công Hi
                                                         - Home</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11148,7 +11215,8 @@
                                                     <div class="h5 fw-bold text-dark">Hệ Thống Đại Siêu Thị GO!/Big C
                                                         Việt Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11162,7 +11230,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Sam Digital
                                                         Connections</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11176,7 +11245,8 @@
                                                     <div class="h5 fw-bold text-dark">Công ty Cổ phần Thương mại và Dịch
                                                         vụ Bất Động Sản Queen Land</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11190,7 +11260,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Đầu Tư Phát Triển
                                                         Du Lịch Ravi</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -11208,7 +11279,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty Tài Chính TNHH Một Thành
                                                         Viên Shinhan Việt Nam </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11222,7 +11294,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH Bảo Hiểm Nhân Thọ
                                                         Prudential Việt Nam - Bộ Phận PRUVenture</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11235,7 +11308,8 @@
                                                         alt="CALIFORNIA FITNESS & YOGA">
                                                     <div class="h5 fw-bold text-dark">CALIFORNIA FITNESS & YOGA</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>N/A</span></p>
+                                                        <span>N/A</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11249,7 +11323,8 @@
                                                     <div class="h5 fw-bold text-dark">Ngân Hàng TMCP Việt Nam Thịnh
                                                         Vượng VPBank</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11262,7 +11337,8 @@
                                                         alt="Công Ty Cổ Phần Vinhomes">
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Vinhomes</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11275,7 +11351,8 @@
                                                         alt="Công Ty TNHH MTV Healthpost">
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH MTV Healthpost</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hà Nội</span></p>
+                                                        <span>Hà Nội</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11289,7 +11366,8 @@
                                                     <div class="h5 fw-bold text-dark">CÔNG TY TNHH TAKASHIMAYA VIỆT NAM
                                                     </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11302,7 +11380,8 @@
                                                         alt="Công Ty Cổ Phần Ba Huân ">
                                                     <div class="h5 fw-bold text-dark">Công Ty Cổ Phần Ba Huân </div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -11320,7 +11399,8 @@
                                                     <div class="h5 fw-bold text-dark">Công Ty TNHH BHNT Sun Life Việt
                                                         Nam</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                             <div class="col">
@@ -11333,7 +11413,8 @@
                                                         alt="Phở 24">
                                                     <div class="h5 fw-bold text-dark">Phở 24</div>
                                                     <p class="small text-nowrap d-none"> <i class="bx bx-map"></i>
-                                                        <span>Hồ Chí Minh</span></p>
+                                                        <span>Hồ Chí Minh</span>
+                                                    </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -12986,7 +13067,8 @@
                                                 class="d-flex align-items-center teks-item text-dark">
                                                 <div class="flex-shrink-0">
                                                     <img class="w-100" width="50" height="50" loading="lazy"
-                                                        src="{{ asset('assets/teks/img/thiet-ke.svg?v=234208153091') }}" alt="Thiết kế">
+                                                        src="{{ asset('assets/teks/img/thiet-ke.svg?v=234208153091') }}"
+                                                        alt="Thiết kế">
                                                 </div>
                                                 <div class="flex-grow-1 ms-2">
                                                     <h3 class="h5">Thiết Kế</h3>
@@ -13027,7 +13109,8 @@
                                                 class="d-flex align-items-center teks-item text-dark">
                                                 <div class="flex-shrink-0">
                                                     <img class="w-100" width="50" height="50" loading="lazy"
-                                                        src="{{ asset('assets/teks/img/y-te.svg?v=234208153091') }}" alt="Y tế">
+                                                        src="{{ asset('assets/teks/img/y-te.svg?v=234208153091') }}"
+                                                        alt="Y tế">
                                                 </div>
                                                 <div class="flex-grow-1 ms-2">
                                                     <h3 class="h5">Y Tế</h3>
@@ -13065,7 +13148,8 @@
                                                             class="d-flex align-items-center teks-item text-dark">
                                                             <div class="flex-shrink-0">
                                                                 <img class="w-100" width="50" height="50" loading="lazy"
-                                                                    src="{{ asset('assets/img/2024/ic7.svg?v=234208153091') }}" alt="jobsgo">
+                                                                    src="{{ asset('assets/img/2024/ic7.svg?v=234208153091') }}"
+                                                                    alt="jobsgo">
                                                             </div>
                                                             <div class="flex-grow-1 ms-2">
                                                                 <h3 class="h5">Kiến thức</h3>
@@ -13078,7 +13162,8 @@
                                                             class="d-flex align-items-center teks-item text-dark">
                                                             <div class="flex-shrink-0">
                                                                 <img class="w-100" width="50" height="50" loading="lazy"
-                                                                    src="{{ asset('assets/img/2024/ic8.svg?v=234208153091') }}" alt="jobsgo">
+                                                                    src="{{ asset('assets/img/2024/ic8.svg?v=234208153091') }}"
+                                                                    alt="jobsgo">
                                                             </div>
                                                             <div class="flex-grow-1 ms-2">
                                                                 <h3 class="h5">Hỏi đáp Luật Lao Động</h3>
@@ -13091,7 +13176,8 @@
                                                             class="d-flex align-items-center teks-item text-dark">
                                                             <div class="flex-shrink-0">
                                                                 <img class="w-100" width="50" height="50" loading="lazy"
-                                                                    src="{{ asset('assets/img/2024/ic9.svg?v=234208153091') }}" alt="jobsgo">
+                                                                    src="{{ asset('assets/img/2024/ic9.svg?v=234208153091') }}"
+                                                                    alt="jobsgo">
                                                             </div>
                                                             <div class="flex-grow-1 ms-2">
                                                                 <h3 class="h5">Hỏi đáp bảo hiểm xã hội</h3>
@@ -13328,32 +13414,38 @@
                     <div class="row align-items-center row-cols-2 row-cols-lg-6">
                         <div class="col">
                             <a href="https://dantri.com.vn/kinh-doanh/nhung-dau-an-nhay-vot-cua-jobs-go-trong-tim-kiem-viec-lam-cho-ung-vien-20201105155001420.htm"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img7.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img7.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                         <div class="col">
                             <a href="https://cafebiz.vn/nhan-luc-kinh-nghiem-chien-luoc-cua-doanh-nghiep-trong-nam-2024-176240321135147219.chn"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img2.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img2.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                         <div class="col">
                             <a href="https://baodautu.vn/ceo-jobsgo-pham-thanh-hai-gio-la-luc-sai-buoc-nhanh-hon-d137714.html"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img3.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img3.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                         <div class="col">
                             <a href="https://genk.vn/nhung-startup-tung-goi-von-tai-shark-tank-viet-nam-gio-ra-sao-20190324083157746.chn"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img4.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img4.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                         <div class="col">
                             <a href="https://kenh14.vn/xoan-nao-vi-cv-jobsgo-ai-giai-quyet-trong-tich-tac-20240702180306549.chn"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img5.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img5.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                         <div class="col">
                             <a href="https://vietnamnet.vn/cach-nghi-khac-lam-khac-cua-startup-tim-viec-jobsgo-i268849.html"
-                                rel="nofollow" target="_blank"><img src="{{ asset('assets/img/2024/img1.svg?v=234208153091') }}" alt="jobsgo"
+                                rel="nofollow" target="_blank"><img
+                                    src="{{ asset('assets/img/2024/img1.svg?v=234208153091') }}" alt="jobsgo"
                                     loading="lazy"></a>
                         </div>
                     </div>
@@ -13383,11 +13475,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/reviewers/tue_dan.png') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/reviewers/tue_dan.png') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Tuệ Đan</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             JobsGO có App trên điện thoại dễ dùng, có thể nhận thông báo
                                                             và chat với NTD. Phần nào không biết có thể chat với Support
                                                             trên App, họ hướng dẫn chi tiết lắm. Tìm việc ở trên này
@@ -13400,11 +13494,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/reviewers/thuy_nga.png') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/reviewers/thuy_nga.png') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Thúy Nga</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình biết đến JobsGO qua sự giới thiệu của một người bạn nên
                                                             cũng thử tìm việc trên đó xem thế nào. Với việc làm Content
                                                             mà mình tìm kiếm thì có khá đa dạng các ngành nghề, lĩnh vực
@@ -13420,11 +13516,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/reviewers/quynh_anh.png') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/reviewers/quynh_anh.png') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Anh</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình đã có 1 trải nghiệm tốt khi tải ứng dụng, đăng ký tài
                                                             khoản JobsGO. Sau khi hoàn thành hồ sơ cá nhân hệ thống đã
                                                             chủ động tìm và gợi ý việc làm đến mình dựa theo những thông
@@ -13439,11 +13537,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/reviewers/thuy_anh.png') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/reviewers/thuy_anh.png') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Thuỳ Anh</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Tôi đã sử dụng nhiều ứng dụng khác nhau trước khi biết tới
                                                             JobsGO, nhưng đây thực sự là một ứng dụng tuyệt vời. Tôi rất
                                                             thích tính năng tạo CV online nhanh chóng, được phân tích và
@@ -13467,11 +13567,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/2.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/2.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình sử dụng app JobsGO để tìm việc làm từ 3 năm trước và
                                                             rất thích các tính năng của app như việc làm nhanh, tạo CV
                                                             dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm,
@@ -13484,11 +13586,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/1.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/1.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Em mới ra trường, chưa biết cách làm CV như thế nào. May có
                                                             một chị người quen bảo lên website JobsGO.vn tạo CV, được
                                                             hướng dẫn chi tiết. Trên JobsGO còn có phần phân tích CV rất
@@ -13502,11 +13606,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/4.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/4.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             JobsGO giúp em tìm thấy công việc phù hợp với mình thông qua
                                                             các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy
                                                             nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế
@@ -13518,11 +13624,13 @@
                                                 <div class="col">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/5.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/5.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
                                                         <p class="text-muted text-body small mxh-100">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó
                                                             mình đã nhìn thấy quảng cáo của JobsGO và cập nhật CV lên
                                                             website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc
@@ -13556,11 +13664,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/6.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/6.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Phương Thảo</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Tôi rất hài lòng với web JobsGO! Tôi nhận được phản hồi từ
                                                             các NTD rất nhanh. Giao diện mới giúp tôi thực hiện các thao
                                                             tác dễ dàng hơn và tôi đã nhận được nhiều lời mời phỏng vấn
@@ -13571,11 +13681,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/7.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/7.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Nguyễn Hạnh</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Tôi từng làm kế toán và sau đó chuyển sang Marketing. Sử
                                                             dụng CV tự làm của mình, tôi đã nhận được phản hồi rất kém
                                                             từ các NTD. Sau khi update CV của mình lên JobsGO AI, tôi đã
@@ -13592,11 +13704,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/8.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/8.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Trung Kiên</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình đã luôn nghĩ rằng CV dài 3 trang A4 của bản thân thật
                                                             hoàn hảo. Ôi, nhưng mình đã sai lầm! Từ khi biết đến tình
                                                             năng JobsGO AI, mình đã có một CV ngắn gọn, chính xác,
@@ -13608,11 +13722,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/9.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/9.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Anh Quân</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Trước kia, khi tôi đăng CV lên các trang tuyển dụng, tôi
                                                             nhận được rất ít phản hồi, thậm chí là không có. Kể từ khi
                                                             tôi bắt đầu đăng CV lên JobsGO.vn, tôi đã nhận được ba phản
@@ -13629,11 +13745,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/10.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/10.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Thu Trang</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             JobsGO đã làm rất tốt và tôi chắc chắn giới thiệu app tìm
                                                             việc này tới bạn bè của tôi. Nhân viên làm việc rất chuyên
                                                             nghiệp. Tôi được hướng dẫn chi tiết từ A-Z, giao diện mới
@@ -13645,11 +13763,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/1.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/1.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình sử dụng app JobsGO để tìm việc làm từ 3 năm trước và
                                                             rất thích các tính năng của app như việc làm nhanh, tạo CV
                                                             dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm,
@@ -13666,11 +13786,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/2.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/2.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Em mới ra trường, chưa biết cách làm CV như thế nào. May có
                                                             một chị người quen bảo lên website JobsGO.vn tạo CV, được
                                                             hướng dẫn chi tiết. Trên JobsGO còn có phần phân tích CV rất
@@ -13682,11 +13804,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/3.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/3.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Hồng Kim</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Tôi nghỉ việc để chăm sóc con cái cũng đã gần 2 năm. Nay ứng
                                                             tuyển lại thực sự khó khăn, may nhờ app JobsGO gợi ý các
                                                             danh sách việc làm phù hợp mà tôi đã giành được 2 cuộc phỏng
@@ -13702,11 +13826,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/4.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/4.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             JobsGO giúp em tìm thấy công việc phù hợp với mình thông qua
                                                             các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy
                                                             nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế
@@ -13717,11 +13843,13 @@
                                                 <div class="col-6">
                                                     <div class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
                                                         <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                            src="{{ asset('assets/teks/img/avatar/5.jpg') }}" alt="avatar" />
+                                                            src="{{ asset('assets/teks/img/avatar/5.jpg') }}"
+                                                            alt="avatar" />
                                                         <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
                                                         <p class="text-muted text-body small mxh-100 p-1">
                                                             <img class="d-block m-auto" loading="lazy"
-                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}" alt="JobsGo">
+                                                                src="{{ asset('assets/img/2024/ic16.svg?v=234208153091') }}"
+                                                                alt="JobsGo">
                                                             Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó
                                                             mình đã nhìn thấy quảng cáo của JobsGO và cập nhật CV lên
                                                             website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc
@@ -13880,7 +14008,8 @@
                     <div class="hidden-xs d-none d-sm-block theme-bg-shapes-right"></div>
                     <div class="hidden-xs d-none d-sm-block theme-bg-shapes-left"></div>
                     <div class="h2 mb-3 text-dark fw-bolder my-1">Tải miễn phí ứng dụng</div>
-                    <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu quả bằng cách tải
+                    <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu quả bằng cách
+                        tải
                         JobsGO về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!</div>
                     <div class="row gx-1 justify-content-center pt-2">
                         <div class="col-10 col-sm-5 col-xs-10 col-md-3 mt-2 mt-md-0">
@@ -13893,7 +14022,8 @@
                                 <li class="list-inline-item"><a target="_blank" href="https://jobsgo.vn/site/download">
                                         <img class="lazy"
                                             src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                            data-src="{{ asset('assets/teks/img/download.svg?v=1.2') }}" alt="JobsGO" width="220" height="83">
+                                            data-src="{{ asset('assets/teks/img/download.svg?v=1.2') }}" alt="JobsGO"
+                                            width="220" height="83">
 
                                     </a></li>
 
@@ -13906,4 +14036,3 @@
         </section>
     </main>
 </div>
-
