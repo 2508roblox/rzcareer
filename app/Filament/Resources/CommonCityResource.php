@@ -16,9 +16,13 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class CommonCityResource extends Resource
 {
     protected static ?string $model = CommonCity::class;
+    public static function getPluralModelLabel(): string
+    {
+        return 'Các thành phố chung'; // Nhãn số nhiều cho mô hình
+    }
 
     protected static ?string $navigationIcon = 'heroicon-o-map';
-    protected static ?string $navigationGroup = 'Common Data';
+    protected static ?string $navigationGroup = 'Dữ liệu chung';
 
     public static function form(Form $form): Form
     {
@@ -26,7 +30,9 @@ class CommonCityResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(30),
+                    ->maxLength(30)
+                    ->label('Tên thành phố') // Thêm nhãn tiếng Việt cho trường
+                    ->placeholder('Nhập tên thành phố'), // Thêm placeholder tiếng Việt
             ]);
     }
 
@@ -35,25 +41,35 @@ class CommonCityResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Tên thành phố'), // Thêm nhãn tiếng Việt cho cột
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->label('Ngày tạo'), // Thêm nhãn tiếng Việt cho cột
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->label('Ngày cập nhật'), // Thêm nhãn tiếng Việt cho cột
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make()
+                        ->label('Chỉnh sửa'),
+                    Tables\Actions\ViewAction::make()
+                        ->label('Xem'),
+                    Tables\Actions\DeleteAction::make()
+                        ->label('Xóa'),
+                ]),
+            ])->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->label('Xóa'),
                 ]),
             ]);
     }
@@ -64,7 +80,10 @@ class CommonCityResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [

@@ -9,12 +9,18 @@ class SavedResume extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'resume_id', 'user_id'
+        'resume_id',
+        'user_id',
+        'company_id'
     ];
 
     public function resume()
     {
         return $this->belongsTo(Resume::class);
+    }
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
     }
 
     public function user()
