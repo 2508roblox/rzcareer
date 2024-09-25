@@ -2,146 +2,153 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\JobPostResource\Pages;
-use App\Filament\Resources\JobPostResource\RelationManagers;
-use App\Models\CommonCity;
-use App\Models\CommonDistrict;
-use App\Models\CommonLocation;
-use App\Models\JobPost;
+use Carbon\Carbon;
 use Filament\Forms;
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
+use App\Models\User;
+use Filament\Tables;
+use App\Models\Company;
+use App\Models\JobPost;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
-use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\CommonCity;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
+use App\Models\CommonCareer;
+use App\Models\CommonDistrict;
+use App\Models\CommonLocation;
+use Filament\Actions\EditAction;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Grid;
+use Filament\Tables\Filters\Filter;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\Component;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Tables\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\JobPostResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\JobPostResource\RelationManagers;
+use Filament\Tables\Filters\SelectFilter;
 
 class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-briefcase';
-    protected static ?string $navigationGroup = 'Companies & Jobs';
+    protected static ?string $navigationGroup = 'Công ty & Công việc';
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Công việc'; // Trả về tên số nhiều cho mô hình Company
+    }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 // Group: Basic Information
-                Forms\Components\Section::make('Basic Information')
-                ->schema([
-                    Forms\Components\Grid::make(2)
-                        ->schema([
-                            Forms\Components\Select::make('career_id')
-                                ->required()
-                                ->relationship('career', 'name')
-                                ->preload()
-                                ->searchable()
-                                ->label('Career'),
+                Forms\Components\Section::make('Thông tin cơ bản')
+                    ->schema([
+                        Forms\Components\Grid::make(2)
+                            ->schema([
+                                Forms\Components\Select::make('career_id')
+                                    ->required()
+                                    ->relationship('career', 'name')
+                                    ->preload()
+                                    ->searchable()
+                                    ->label('Ngành nghề'),
 
-                            Forms\Components\Select::make('company_id')
-                                ->required()
-                                ->relationship('company', 'company_name')
-                                ->preload()
-                                ->searchable()
-                                ->label('Company')
-                                ->columnSpan(1),
+                                Forms\Components\Select::make('company_id')
+                                    ->required()
+                                    ->relationship('company', 'company_name')
+                                    ->preload()
+                                    ->searchable()
+                                    ->label('Công ty'),
 
-                            Forms\Components\Select::make('district_id')
-                                ->required()
-                                ->options(CommonDistrict::all()->pluck('name', 'id'))
-                                ->label('District')
-                                ->preload()
-                                ->searchable()
-                                ->reactive()
-                                ->live(100)
-                                ->default(null)
-                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                    $set('location_id', null);
-
-                                    if ($state && $get('city_id')) {
-                                        $location = static::updateLocation($get);
-                                        if ($location) {
-                                            $set('location_id', $location->id);
-                                            $set('lat', $location->lat);
-                                            $set('lng', $location->lng);
-                                        } else {
-                                            $set('lat', '');
-                                            $set('lng', '');
+                                Forms\Components\Select::make('district_id')
+                                    ->required()
+                                    ->options(CommonDistrict::all()->pluck('name', 'id'))
+                                    ->label('Quận/Huyện')
+                                    ->preload()
+                                    ->searchable()
+                                    ->reactive()
+                                    ->live(100)
+                                    ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                        $set('location_id', null);
+                                        if ($state && $get('city_id')) {
+                                            $location = static::updateLocation($get);
+                                            if ($location) {
+                                                $set('location_id', $location->id);
+                                                $set('lat', $location->lat);
+                                                $set('lng', $location->lng);
+                                            } else {
+                                                $set('lat', '');
+                                                $set('lng', '');
+                                            }
                                         }
-                                    }
-                                }),
+                                    }),
 
-                            Forms\Components\Select::make('city_id')
-                                ->required()
-                                ->options(CommonCity::all()->pluck('name', 'id'))
-                                ->label('City')
-                                ->preload()
-                                ->searchable()
-                                ->reactive()
-                                ->live(100)
-                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                    $set('location_id', null);
-
-                                    if ($state) {
-                                        $location = static::updateLocation($get);
-                                        if ($location) {
-                                            $set('location_id', $location->id);
-                                            $set('lat', $location->lat);
-                                            $set('lng', $location->lng);
-                                        } else {
-                                            $set('lat', '');
-                                            $set('lng', '');
+                                Forms\Components\Select::make('city_id')
+                                    ->required()
+                                    ->options(CommonCity::all()->pluck('name', 'id'))
+                                    ->label('Thành phố')
+                                    ->preload()
+                                    ->searchable()
+                                    ->reactive()
+                                    ->live(100)
+                                    ->afterStateUpdated(function ($state, callable $set, callable $get) {
+                                        $set('location_id', null);
+                                        if ($state) {
+                                            $location = static::updateLocation($get);
+                                            if ($location) {
+                                                $set('location_id', $location->id);
+                                                $set('lat', $location->lat);
+                                                $set('lng', $location->lng);
+                                            } else {
+                                                $set('lat', '');
+                                                $set('lng', '');
+                                            }
                                         }
-                                    }
-                                }),
+                                    }),
 
-                            Forms\Components\TextInput::make('location_id')
-                                ->disabled()
-                                ->dehydrated()
-                                ->label('Location'),
+                                Forms\Components\TextInput::make('location_id')
+                                    ->disabled()
+                                    ->dehydrated()
+                                    ->label('Địa điểm'),
 
-                            Forms\Components\TextInput::make('lat')
-                                ->label('Latitude')
-                                ->live(255)
-                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                    $location = static::createNewLocation($get);
-                                    if ($location) {
-                                        $set('location_id', $location->id);
-                                    }
-                                })
-                                ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                ->hint('Enter the latitude coordinate.'),
+                                Forms\Components\TextInput::make('lat')
+                                    ->label('Vĩ độ')
+                                    ->live(255)
+                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null)
+                                    ->hint('Nhập tọa độ vĩ độ.'),
 
-                            Forms\Components\TextInput::make('lng')
-                                ->label('Longitude')
-                                ->live(255)
-                                ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                                    $location = static::createNewLocation($get);
-                                    if ($location) {
-                                        $set('location_id', $location->id);
-                                    }
-                                })
-                                ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                ->hint('Enter the longitude coordinate.'),
+                                Forms\Components\TextInput::make('lng')
+                                    ->label('Kinh độ')
+                                    ->live(255)
+                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null)
+                                    ->hint('Nhập tọa độ kinh độ.'),
 
-                            Forms\Components\Select::make('user_id')
-                                ->required()
-                                ->relationship('user', 'full_name')
-                                ->preload()
-                                ->searchable()
-                                ->label('User'),
-                        ]),
+                                Forms\Components\Select::make('user_id')
+                                    ->required()
+                                    ->relationship('user', 'full_name')
+                                    ->preload()
+                                    ->searchable()
+                                    ->label('Người dùng'),
+                            ]),
                     ]),
 
-
                 // Group: Job Details
-                Forms\Components\Section::make('Job Details')
+                Forms\Components\Section::make('Chi tiết công việc')
                     ->schema([
                         Forms\Components\Grid::make(2)
                             ->schema([
@@ -153,7 +160,7 @@ class JobPostResource extends Resource
                                         $slug = \Illuminate\Support\Str::slug($state);
                                         $set('slug', $slug);
                                     })
-                                    ->label('Job Name'),
+                                    ->label('Tên công việc'),
 
                                 Forms\Components\TextInput::make('slug')
                                     ->required()
@@ -165,262 +172,107 @@ class JobPostResource extends Resource
 
                                 Forms\Components\DatePicker::make('deadline')
                                     ->required()
-                                    ->label('Deadline'),
+                                    ->label('Hạn cuối'),
 
                                 Forms\Components\TextInput::make('quantity')
                                     ->required()
                                     ->numeric()
-                                    ->label('Quantity'),
+                                    ->label('Số lượng'),
 
                                 Forms\Components\Select::make('gender_required')
                                     ->required()
                                     ->searchable()
                                     ->prefixIcon('heroicon-o-user')
                                     ->options([
-                                        0 => 'None',
-                                        1 => 'Male',
-                                        2 => 'Female',
+                                        0 => 'Không yêu cầu',
+                                        1 => 'Nam',
+                                        2 => 'Nữ',
                                     ])
                                     ->default(0)
-                                    ->placeholder('Select Gender')
-                                    ->label('Gender Required'),
+                                    ->placeholder('Chọn giới tính')
+                                    ->label('Giới tính yêu cầu'),
 
                                 Forms\Components\RichEditor::make('job_description')
                                     ->required()
                                     ->columnSpanFull()
-                                    ->label('Job Description'),
+                                    ->label('Mô tả công việc'),
 
                                 Forms\Components\MarkdownEditor::make('job_requirement')
                                     ->required()
                                     ->columnSpanFull()
-                                    ->label('Job Requirement'),
+                                    ->label('Yêu cầu công việc'),
 
                                 Forms\Components\MarkdownEditor::make('benefits_enjoyed')
                                     ->required()
                                     ->columnSpanFull()
-                                    ->label('Benefits Enjoyed'),
+                                    ->label('Quyền lợi'),
                             ]),
                     ]),
 
                 // Group: Job Specifications
-                Forms\Components\Section::make('Job Specifications')
-                ->schema([
-                    Forms\Components\Grid::make(2)
-                        ->schema([
-                            Forms\Components\Select::make('position')
-                                ->required()
-                                ->preload()
-                                ->searchable()
-                                ->options([
-                                    'Manager' => 'Manager',
-                                    'Developer' => 'Developer',
-                                    'Designer' => 'Designer',
-                                    'Analyst' => 'Analyst',
-                                    'Support' => 'Support',
-                                ])
-                                ->placeholder('Select Position')
-                                ->label('Position')
-                                ->helperText('Choose the job position for this role.')
-                                ->hint('The position title within the company.')
-                                ->default('Developer') // Set a default value if applicable
-                                ->reactive() // Make it reactive if it affects other fields
-                                ->disablePlaceholderSelection() // Prevent placeholder from being selected
-                                ->columnSpan(1), // Adjust width in the grid
-
-                            Forms\Components\Select::make('type_of_workplace')
-                                ->required()
-                                ->preload()
-                                ->searchable()
-                                ->options([
-                                    'Office' => 'Office',
-                                    'Remote' => 'Remote',
-                                    'Hybrid' => 'Hybrid',
-                                    'Field' => 'Field',
-                                    'On-site' => 'On-site',
-                                ])
-                                ->placeholder('Select Type of Workplace')
-                                ->label('Type of Workplace')
-                                ->helperText('Select where the work will be performed.')
-                                ->hint('Workplace arrangement for the job.')
-                                ->default('Remote') // Set a default value if applicable
-                                ->reactive()
-                                ->disablePlaceholderSelection()
-                                ->columnSpan(1),
-
-                            Forms\Components\Select::make('experience')
-                                ->required()
-                                ->preload()
-                                ->searchable()
-                                ->options([
-                                    '0-1 years' => '0-1 years',
-                                    '2-3 years' => '2-3 years',
-                                    '4-5 years' => '4-5 years',
-                                    '6-10 years' => '6-10 years',
-                                    '10+ years' => '10+ years',
-                                ])
-                                ->placeholder('Select Experience Level')
-                                ->label('Experience')
-                                ->helperText('Specify the required experience level.')
-                                ->hint('Experience required for the job.')
-                                ->default('2-3 years')
-                                ->reactive()
-                                ->disablePlaceholderSelection()
-                                ->columnSpan(1),
-
-                            Forms\Components\Select::make('academic_level')
-                                ->required()
-                                ->preload()
-                                ->searchable()
-                                ->options([
-                                    'High School' => 'High School',
-                                    'Associate Degree' => 'Associate Degree',
-                                    'Bachelor\'s Degree' => 'Bachelor\'s Degree',
-                                    'Master\'s Degree' => 'Master\'s Degree',
-                                    'Doctorate' => 'Doctorate',
-                                ])
-                                ->placeholder('Select Academic Level')
-                                ->label('Academic Level')
-                                ->helperText('Indicate the required academic qualification.')
-                                ->hint('Educational qualification needed for the job.')
-                                ->default('Bachelor\'s Degree')
-                                ->reactive()
-                                ->disablePlaceholderSelection()
-                                ->columnSpan(1),
-
-                            Forms\Components\Select::make('job_type')
-                                ->required()
-                                ->preload()
-                                ->searchable()
-                                ->options([
-                                    'Full-time' => 'Full-time',
-                                    'Part-time' => 'Part-time',
-                                    'Contract' => 'Contract',
-                                    'Temporary' => 'Temporary',
-                                    'Internship' => 'Internship',
-                                    'Freelance' => 'Freelance',
-                                ])
-                                ->placeholder('Select Job Type')
-                                ->label('Job Type')
-                                ->helperText('Choose the type of employment.')
-                                ->hint('Employment type for the job.')
-                                ->default('Full-time')
-                                ->reactive()
-                                ->disablePlaceholderSelection()
-                                ->columnSpan(1),
-
-                            Forms\Components\TextInput::make('salary_min')
-                                ->required()
-                                ->numeric()
-                                ->label('Minimum Salary')
-                                ->placeholder('Enter minimum salary')
-                                ->helperText('Specify the minimum salary for the position.')
-                                ->hint('Minimum salary amount.')
-                                ->prefix('$') // Add currency symbol or any prefix
-                                ->suffix('per year') // Add suffix if needed
-                                ->columnSpan(1),
-
-                            Forms\Components\TextInput::make('salary_max')
-                                ->required()
-                                ->numeric()
-                                ->label('Maximum Salary')
-                                ->placeholder('Enter maximum salary')
-                                ->helperText('Specify the maximum salary for the position.')
-                                ->hint('Maximum salary amount.')
-                                ->prefix('$') // Add currency symbol or any prefix
-                                ->suffix('per year') // Add suffix if needed
-                                ->columnSpan(1),
-
-                            Forms\Components\Select::make('salary_type')
-                                ->required()
-                                ->label('Salary Type')
-                                ->options([
-                                    'hourly' => 'Hourly',
-                                    'monthly' => 'Monthly',
-                                    'weekly' => 'Weekly',
-                                ])
-                                ->searchable()
-                                ->placeholder('Select Salary Type')
-                                ->default('monthly')
-                                ->helperText('Choose how the salary is calculated')
-                                ->hint('The salary calculation frequency.')
-                                ->preload()
-                                ->reactive()
-                                ->disablePlaceholderSelection()
-                                ->columnSpan(1),
-                        ]),
-                    ]),
-
-
-                // Group: Visibility and Contact
-                Forms\Components\Section::make('Visibility and Contact')
+                Forms\Components\Section::make('Thông số công việc')
                     ->schema([
                         Forms\Components\Grid::make(2)
                             ->schema([
-                                Forms\Components\Toggle::make('is_hot')
-                                    ->label('Hot')
-                                    ->required()
-                                    ->default(false)
-                                    ->onIcon('heroicon-o-fire')
-                                    ->offIcon('heroicon-s-fire'),
-
-                                Forms\Components\Toggle::make('is_urgent')
-                                    ->label('Urgent')
-                                    ->required()
-                                    ->default(false)
-                                    ->onIcon('heroicon-o-exclamation-circle')
-                                    ->offIcon('heroicon-o-exclamation-circle'),
-
-                                Forms\Components\TextInput::make('contact_person_name')
-                                    ->required()
-                                    ->maxLength(100)
-                                    ->prefix('👤')
-                                    ->placeholder('Enter contact person\'s name')
-                                    ->helperText('Full name of the contact person'),
-
-                                Forms\Components\TextInput::make('contact_person_phone')
-                                    ->required()
-                                    ->tel()
-                                    ->maxLength(15)
-                                    ->prefix('📞')
-                                    ->placeholder('Enter contact person\'s phone number')
-                                    ->helperText('Phone number of the contact person'),
-
-                                Forms\Components\TextInput::make('contact_person_email')
-                                    ->required()
-                                    ->email()
-                                    ->maxLength(100)
-                                    ->prefix('✉️')
-                                    ->placeholder('Enter contact person\'s email address')
-                                    ->helperText('Email address of the contact person'),
-
-                                Forms\Components\Select::make('status')
+                                Forms\Components\Select::make('position')
                                     ->required()
                                     ->preload()
                                     ->searchable()
                                     ->options([
-                                        0 => 'Pending Review',
-                                        1 => 'Approved',
-                                        2 => 'Rejected',
-                                        3 => 'Published',
-                                        4 => 'Closed',
-                                        5 => 'Expired',
-                                        6 => 'Under Review',
-                                        7 => 'Interviewing',
-                                        8 => 'Hired',
-                                        9 => 'Archived',
-                                        10 => 'Cancelled',
-                                        11 => 'On Hold',
-                                        12 => 'Filled',
-                                        13 => 'Draft',
-                                        14 => 'Reopened',
+                                        'Manager' => 'Quản lý',
+                                        'Developer' => 'Lập trình viên',
+                                        'Designer' => 'Thiết kế',
+                                        'Analyst' => 'Phân tích',
+                                        'Support' => 'Hỗ trợ',
                                     ])
-                                    ->default(0)
-                                    ->placeholder('Select Status')
-                                    ->label('Status'),
+                                    ->placeholder('Chọn vị trí')
+                                    ->label('Vị trí')
+                                    ->helperText('Chọn vị trí công việc cho vai trò này.')
+                                    ->hint('Tiêu đề vị trí trong công ty.')
+                                    ->default('Developer') // Đặt giá trị mặc định nếu có thể
+                                    ->reactive()
+                                    ->disablePlaceholderSelection()
+                                    ->columnSpan(1),
+
+                                Forms\Components\Select::make('type_of_workplace')
+                                    ->required()
+                                    ->preload()
+                                    ->searchable()
+                                    ->options([
+                                        'Office' => 'Văn phòng',
+                                        'Remote' => 'Từ xa',
+                                        'Hybrid' => 'Hỗn hợp',
+                                        'Field' => 'Thực địa',
+                                        'On-site' => 'Tại chỗ',
+                                    ])
+                                    ->placeholder('Chọn loại nơi làm việc')
+                                    ->label('Loại nơi làm việc')
+                                    ->helperText('Chọn nơi làm việc cho công việc này.')
+                                    ->hint('Sắp xếp nơi làm việc cho công việc.')
+                                    ->default('Remote')
+                                    ->reactive()
+                                    ->disablePlaceholderSelection()
+                                    ->columnSpan(1),
+
+                                Forms\Components\Select::make('experience')
+                                    ->required()
+                                    ->preload()
+                                    ->searchable()
+                                    ->options([
+                                        '0-1 years' => '0-1 năm',
+                                        '2-3 years' => '2-3 năm',
+                                        '4-5 years' => '4-5 năm',
+                                        '6-10 years' => '6-10 năm',
+                                        '10+ years' => '10+ năm',
+                                    ])
+                                    ->placeholder('Chọn cấp độ kinh nghiệm')
+                                    ->label('Kinh nghiệm')
+                                    ->helperText('Chỉ định cấp độ kinh nghiệm yêu cầu.'),
                             ]),
                     ]),
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
@@ -428,87 +280,154 @@ class JobPostResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('career_id')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Mã Nghề'),
+
                 Tables\Columns\TextColumn::make('company_id')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Mã Công Ty'),
+
                 Tables\Columns\TextColumn::make('location_id')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Mã Địa Điểm'),
+
                 Tables\Columns\TextColumn::make('user_id')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Mã Người Dùng'),
+
                 Tables\Columns\TextColumn::make('job_name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Tên Công Việc'),
+
                 Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Slug'),
+
                 Tables\Columns\TextColumn::make('deadline')
                     ->date()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Hạn Chót')
+                    ->formatStateUsing(fn($state) => \Carbon\Carbon::parse($state)->format('d/m/Y')),
+
                 Tables\Columns\TextColumn::make('quantity')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Số Lượng'),
+
                 Tables\Columns\TextColumn::make('gender_required')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Giới Tính Cần Thiết')
+                    ->formatStateUsing(fn($state) => match ($state) {
+                        0 => 'Không',
+                        1 => 'Nam',
+                        2 => 'Nữ',
+                        default => 'Không xác định',
+                    }),
+
                 Tables\Columns\TextColumn::make('position')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Chức Vụ'),
+
                 Tables\Columns\TextColumn::make('type_of_workplace')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Loại Nơi Làm Việc'),
+
                 Tables\Columns\TextColumn::make('experience')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Kinh Nghiệm'),
+
                 Tables\Columns\TextColumn::make('academic_level')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Trình Độ Học Vấn'),
+
                 Tables\Columns\TextColumn::make('job_type')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Loại Công Việc'),
+
                 Tables\Columns\TextColumn::make('salary_min')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Mức Lương Tối Thiểu'),
+
                 Tables\Columns\TextColumn::make('salary_max')
                     ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('salary_type'),
+                    ->sortable()
+                    ->label('Mức Lương Tối Đa'),
+
+                Tables\Columns\TextColumn::make('salary_type')
+                    ->label('Loại Lương'),
+
                 Tables\Columns\TextColumn::make('is_hot')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Nổi Bật')
+                    ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
+
                 Tables\Columns\TextColumn::make('is_urgent')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Khẩn Cấp')
+                    ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
+
                 Tables\Columns\TextColumn::make('contact_person_name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Tên Người Liên Hệ'),
+
                 Tables\Columns\TextColumn::make('contact_person_phone')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Số Điện Thoại Người Liên Hệ'),
+
                 Tables\Columns\TextColumn::make('contact_person_email')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Email Người Liên Hệ'),
+
                 Tables\Columns\TextColumn::make('views')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Lượt Xem'),
+
                 Tables\Columns\TextColumn::make('shares')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Lượt Chia Sẻ'),
+
                 Tables\Columns\TextColumn::make('status')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Trạng Thái'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->label('Ngày Tạo')
+                    ->formatStateUsing(fn($state) => \Carbon\Carbon::parse($state)->format('d/m/Y H:i')),
+
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->label('Ngày Cập Nhật')
+                    ->formatStateUsing(fn($state) => \Carbon\Carbon::parse($state)->format('d/m/Y H:i')),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make()->label('Chỉnh sửa'),
+                    Tables\Actions\ViewAction::make()->label('Xem'),
+                    Tables\Actions\DeleteAction::make()->label('Xóa'),
+                ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()->label('Xóa'),
                 ]),
             ]);
     }
+
 
     public static function getRelations(): array
     {
@@ -516,7 +435,10 @@ class JobPostResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [
