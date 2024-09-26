@@ -1,0 +1,736 @@
+@media all and (min-width: 1000px) and (max-width: 1300px) {
+
+    .btn {
+        font-size: 13px;
+    }
+
+    nav.navbar ul.nav > li > a, .teks-header .nav-link {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+}
+
+@media all and (min-width: 1000px) {
+    .teks-location {
+        padding-right: 20px;
+    }
+}
+
+#carousel8 .teks-item.text-dark:hover {
+    box-shadow: none !important;
+}
+
+.bg-001D35 {
+    border-color: #001D35 !important;
+    background: #001D35 !important;
+    color: #fff !important;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+
+.btn {
+    font-size: 14px;
+}
+
+.carousel-indicators button {
+    background-color: rgb(139 189 230) !important;
+}
+
+nav .dropdown li img,
+.teks-header .nav-link img {
+    position: relative;
+    top: -2px;
+}
+
+.dropdown-toggle:after {
+    opacity: .2;
+}
+
+.section-download .form-control {
+    border-radius: 4px !important;
+    padding: 9px 20px !important;
+    height: 42px !important;
+    font-size: 14px;
+}
+
+.section-download .btn {
+    border-radius: 4px !important;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: block;
+    background: #1772bd !important;
+    color: #fff !important;
+    z-index: 99;
+    font-size: 13px !important;
+    padding: 6px 12px !important;
+}
+
+.teks-header .nav-link {
+    font-weight: 600;
+}
+
+.bg-linear-gradient {
+    background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
+}
+
+.teks-section-title a, .teks-section-title > button {
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    background: rgba(25, 123, 205, 1);
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.mt-md-5 .px-3 {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+}
+
+#carousel1 .teks-item {
+    /* border: 0.4px solid rgba(255, 56, 56, 1) !important; */
+}
+
+#carousel2 .teks-item {
+    padding: 15px 5px !important;
+    min-height: 170px;
+}
+
+#carousel8 .teks-item {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+body .item-click:hover,
+.teks-item:hover {
+    border: 1px solid rgba(141, 196, 241, 1) !important;
+    background: #ffffff10 !important;
+}
+
+.teks-newspaper {
+    background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
+
+}
+
+.teks-search-box {
+    background: url(/assets_livewire/img/2024/bg1.webp);
+    background-size: cover;
+}
+.industry_summary_report a{
+
+}
+.teks-newspaper img {
+    max-width: 100%;
+    padding: 10px 15px;
+}
+
+.teks-cv-box {
+    background: url(/assets_livewire/img/2024/bg2.webp);
+    background-size: cover;
+}
+
+.teks-box-research-salary {
+    background: url(/assets_livewire/img/2024/bg3.webp);
+    background-size: cover;
+}
+
+.teks-search-box h1 {
+    color: #fff;
+}
+
+.teks-search-box .card {
+    background: #00000030;
+}
+
+.teks-search-box .card .small {
+    color: rgba(228, 228, 228, 1);
+}
+
+.teks-search-box .card-body {
+    padding: 15px 10px;
+}
+
+.teks-search-box .card * {
+    color: #fff;
+}
+
+.teks-search-box .sn {
+    background: linear-gradient(180deg, rgba(0, 11, 33, 0) 0%, #83C6FD 47.9%, rgba(0, 12, 36, 0) 100%);
+}
+
+.teks-cate .carousel-indicators {
+    bottom: -30px !important;
+    margin-bottom: 0;
+}
+
+.teks-cate .carousel-indicators button {
+    margin-top: 0 !important;
+}
+
+.teks-cate .teks-item {
+    min-height: auto;
+    /* border: .4px solid rgba(25, 123, 205, 1); */
+}
+
+.teks-cate .teks-item .text-muted,
+.teks-tools .teks-item .text-muted {
+    color: rgba(25, 123, 205, 1) !important;
+}
+
+.teks-cate {
+    background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
+}
+
+.teks-box-today .hr {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 47.5%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 1px;
+    display: block;
+}
+
+.teks-box-today {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.teks-box-today h5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27.32px;
+
+}
+
+.teks-box-today .row > .col-6 {
+    position: relative;
+}
+
+.teks-box-today .row > .col-6:last-child:after {
+    content: '';
+    width: 1px;
+    height: 60px;
+    position: absolute;
+    left: -1px;
+    background: linear-gradient(180deg, rgba(0, 11, 33, 0) 0%, #83C6FD 47.9%, rgba(0, 12, 36, 0) 100%);
+    top: 6px;
+}
+
+.teks-box-today h6 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21.86px;
+
+}
+
+.teks-box-today .row img {
+    margin-bottom: 10px;
+}
+
+.teks-location {
+    position: relative;
+}
+
+.teks-location .bx-map {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 9;
+    color: rgba(15, 23, 42, 1);
+}
+
+.teks-box-today p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+.teks-box-today small {
+    color: rgba(96, 172, 236, 1);
+}
+
+.teks-box-today strong {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.78px;
+    color: rgba(96, 172, 236, 1);
+
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    top: 5px;
+}
+
+.dot {
+    width: 17px;
+    height: 17px;
+    background: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border: 4px solid #888;
+}
+
+.jobs-collaboratives ul {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+.page-job-detail .employer-jobs.media-list-bordered > li,
+.page-job-detail .jobs-collaboratives .media-list-bordered > li,
+body .item-click .article {
+    border: .4px solid transparent !important;
+}
+
+.page-job-detail .employer-jobs.media-list-bordered > li:hover,
+.page-job-detail .media-list-bordered > li:hover,
+body .item-click .article:hover {
+    border-color: #197BCD !important;
+    border-radius: 4px;
+}
+
+.item-bk .item {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.jobs .media small.text-muted {
+
+}
+
+.job-detail-col-1 .panel {
+    box-shadow: none !important;
+    background: transparent;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: pulse 1.5s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.select2 * {
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49.18px;
+}
+
+.tooltipster-content .popover-footer .btn-success {
+    border-color: rgba(25, 123, 205, 1) !important;
+    background: linear-gradient(180deg, #C2E4FF -18.58%, #83C6FD -8.86%, #2280CD 120.37%) !important;
+}
+
+.alert-light .btn-close {
+    padding: 4px;
+    background-size: 50%;
+    top: 2.5px;
+    right: 5px;
+}
+
+html body .teks-header {
+    padding: 9px .5rem 10px !important;
+}
+
+.teks-tools .teks-item {
+    min-height: 60px;
+}
+
+[lang="vi"] .section-download .btn {
+    padding: 6px 12px !important;
+
+}
+
+.teks-search-form {
+    background: #0E4572;
+    padding: 7px 10px;
+}
+
+.colorgb-single .teks-search-form {
+    padding: 10px 10px 5px;
+}
+
+.fillters.clearfix {
+    background: #0E4572;
+    padding: 0 5px 5px;
+}
+
+.content-group img.pull-left {
+    margin-right: 10px;
+}
+
+.nav > li > a > img {
+    position: relative;
+    top: -2px;
+}
+
+.fixme-bk .panel-body i {
+    color: #1772bd !important;
+    width: 20px !important;
+    font-size: 14px;
+}
+
+.fixme-bk .panel-heading-bk {
+    margin-top: 15px !important;
+    border-top: 2px solid #eee;
+    padding-top: 15px !important;
+}
+
+.section-download, .footer {
+    background: #FAFAFA !important;
+}
+
+.bg-e4faff {
+    background: #e4faff;
+    border-radius: 4px !important;
+}
+
+.theme-bg-shapes-left, .theme-bg-shapes-right {
+    border-radius: 4px !important;
+}
+
+body .item-click .article:hover {
+    border-color: transparent !important;
+}
+
+body .mrg-bot-5 {
+    margin-bottom: 5px !important;
+}
+
+body .item-click {
+    border: 1px solid transparent !important;
+    border-radius: 4px;
+}
+
+
+.size-6 {
+    width: 16px;
+    height: 16px;
+}
+
+.list-inline.text-muted.mrg-bot-5 li {
+    border: 1px solid rgb(141 196 241 / 35%);
+    background: rgba(232, 243, 252, 1);
+    padding: 3px 10px;
+    margin: 10px 10px 10px 0;
+    border-radius: 4px;
+    color: rgba(17, 17, 17, 1);
+    font-size: 12px;
+}
+
+.text-dark {
+    color: #111;
+}
+
+ul.footer-navigation li a:hover {
+    color: #1772bd !important;
+}
+
+.company-info {
+}
+
+.company-info .padd-20 {
+}
+
+.company-info .padd-20 {
+}
+
+.company-info .padd-20 > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.padd-20.padd-t-0 {
+    padding-top: 0 !important;
+    padding-bottom: 5px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.padd-20.padd-0 {
+    padding: 0 !important;
+}
+
+.company-info .padd-20 > div > div {
+    width: 70px;
+    /* display: block; */
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.box-warning {
+    background: rgba(255, 246, 237, 1);
+    padding: 10px;
+    border: 1px solid rgba(255, 173, 98, .5);
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.company-info .padd-20 > div > span {
+    text-align: left;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgba(17, 17, 17, 1);
+}
+
+.heading-elements .heading-text svg {
+    top: 4px;
+    position: relative;
+}
+
+.content-group .h5.text-semibold {
+    color: #000 !important;
+}
+
+.box-salary-summary-report a {
+    font-size: 13px;
+}
+
+.box-salary-summary-report i {
+    top: -5px;
+}
+
+.box-salary-summary-report strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 170px;
+    font-size: 14.5px;
+}
+
+.box-salary-summary-report svg {
+    position: relative;
+    top: 3px;
+}
+
+.box-salary-summary-report .mean-salary {
+    color: rgba(25, 123, 205, 1);
+    font-size: 18px;
+}
+
+.box-salary-summary-report p {
+    margin-bottom: 0;
+}
+
+.box-salary-summary-report .d-flex {
+    margin-bottom: 3px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-salary-summary-report {
+    background: #fff;
+    box-shadow: 0 0 10px #eee;
+    color: #000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px 9px;
+}
+
+.box-summary-report {
+    background: rgb(14 68 112);
+    box-shadow: 0 0 10px #eee;
+    display: flex;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px 9px;
+}
+
+.box-summary-report p {
+    font-size: 12.3px;
+    margin-bottom: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.box-summary-report a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.box-summary-report i,
+.box-summary-report a svg {
+    position: relative;
+    top: 2px;
+}
+.box-summary-report a svg{
+    top: 3px;
+}
+
+.box-summary-report strong {
+    float: left;
+    font-size: 14.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 228px;
+    display: block;
+}
+
+.sidebar-widget .img-responsive,
+.img-responsive.hidden-xs {
+    width: 100% !important;
+    margin: auto;
+}
+
+.fixed.list-inline > li:last-child {
+    padding-right: 0 !important;
+}
+
+.content-group > .clearfix {
+    margin-top: 10px;
+}
+
+.profile-cover h2 a {
+    text-transform: initial;
+    font-size: 19px;
+}
+
+.dropdown-menu > li > .a {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.pagination {
+    margin-top: 5px;
+}
+
+#salarySummaryReport {
+    width: 60px !important;
+    height: 30px !important;
+    margin-top: -15px;
+}
+
+@media all and (min-width: 1000px) {
+    header .dropdown:hover .dropdown-menu {
+        max-width: 710px;
+
+    }
+
+    nav .navbar-right .dropdown-menu {
+        top: 50px;
+        max-width: 662px;
+
+    }
+
+    .padd-top-5.teks-seo {
+        padding-bottom: 20px !important;
+    }
+
+    .stack-media-on-mobile .list-inline.no-margin li .btn,
+    .stack-media-on-mobile .media-right.media-middle.text-nowrap,
+    .stack-media-on-mobile .list-inline.no-margin:not(.fixed) {
+        width: 100%;
+        display: block;
+    }
+
+    .page-research-salary .brows-job-category .item-click {
+        width: calc(50% - 10px);
+    }
+
+    .stack-media-on-mobile .list-inline.no-margin:not(.fixed) li:nth-child(1) {
+        width: 50%;
+    }
+
+    .stack-media-on-mobile .list-inline.no-margin:not(.fixed) li {
+        width: 25%;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .footer .container,
+    .section-download .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .list-inline.text-muted.mrg-bot-5 li {
+        margin-bottom: 0;
+        font-size: 11px;
+    }
+
+    .profile-cover {
+        padding-bottom: 0 !important;
+    }
+
+    .stack-media-on-mobile .list-inline.no-margin.fixed li:nth-child(3) {
+        padding-right: 0 !important;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .teks-tools .teks-item {
+        height: 75px;
+    }
+
+    .easy-autocomplete-container ul {
+        width: calc(100% - 10px) !important;
+        top: 110px !important;
+        position: fixed;
+        left: 6px !important;
+        right: 6px !important;
+        margin: auto;
+    }
+
+    .page-job-job .easy-autocomplete-container ul {
+        top: 105px !important;
+    }
+
+    .mxh-100 {
+        -webkit-line-clamp: 5;
+    }
+
+}
