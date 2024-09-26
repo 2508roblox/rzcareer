@@ -15,10 +15,12 @@
         "dotswan/filament-laravel-pulse": "^1.1",
         "filament/filament": "3.2.57",
         "hasnayeen/themes": "^3.0",
+        "jantinnerezo/livewire-alert": "^3.0",
         "joaopaulolndev/filament-pdf-viewer": "^1.0",
         "joaopaulolndev/filament-world-clock": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/pulse": "^1.2",
+        "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
         "naturalgroove/laravel-filament-image-generator-field": "^1.0"
     },
