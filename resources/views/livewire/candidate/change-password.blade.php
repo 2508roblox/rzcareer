@@ -397,7 +397,7 @@
                             <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                 <ul class="breadcrumb">
-                                    <li><a href="candidate/dashboard"">Bảng tin</a></li>
+                                    <li><a href="/candidate/dashboard">Bảng tin</a></li>
             <li>Thay đổi mật khẩu</li>
         </ul>
 

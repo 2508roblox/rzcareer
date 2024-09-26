@@ -582,7 +582,7 @@
 
 
                                         <div class="btn-group mb-20 btn-links hide" style="width:100%; text-align: center">
-                                            <a href="candidate/dashboard" class="border-primary text-uppercase text-bold btn btn-default"><i
+                                            <a href="/candidate/dashboard" class="border-primary text-uppercase text-bold btn btn-default"><i
                                                     class="fa fa-dashboard"></i> Bảng tin</a>
                                             <a href="candidate/pre-profile?tab=manage-resume"
                                                 class="border-primary text-uppercase text-bold btn btn-default"><i class="fa fa-line-chart"></i> Quản
@@ -604,7 +604,7 @@
 
                                         <nav>
                                             <ol class="cd-breadcrumb triangle custom-icons no-margin-top">
-                                                <li class="btn-default"><a href="candidate/dashboard">
+                                                <li class="btn-default"><a href="/candidate/dashboard">
                                                         <div class="nav-item"><i class="fa fa-dashboard"></i> Bảng tin</div>
                                                     </a></li>
                                                 <li class="btn-primary current"><a href="candidate/pre-profile?tab=manage-resume">
@@ -1283,7 +1283,7 @@ Add a counter to the multi-steps indicator
                                             <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                                 <ul class="breadcrumb">
-                                                    <li><a href="candidate/dashboard"> Bảng tin</a></li>
+                                                    <li><a href="/candidate/dashboard"> Bảng tin</a></li>
                                                     <li>Cập nhật hồ sơ cá nhân</li>
                                                 </ul>
                                                 <div class="heading-elements">
