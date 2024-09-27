@@ -208,7 +208,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
                                 class="fa fa-bars"></i></button>
                         <div class="navbar-header"><a class="navbar-brand" href="/">
-                                <img width="134" height="40" loading="lazy" src="/assets_livewire/teks/img/jobsgo-logo.svg" alt="JobsGO">
+                                <img width="134" height="40" loading="lazy" src="/logo.png" alt="JobsGO">
                             </a>
                             <div class="visible-xs"
                                 style="position: absolute;right: 70px;top: 17px;padding: 4px 6px;border-radius: 4px;background-color: #ff5c35; padding: 4px 20px; border-radius: 3px; line-height: 22px;">

@@ -3,7 +3,9 @@
 use App\Livewire\Candidate\ChangePassword;
 use App\Livewire\Candidate\CvGo;
 use App\Livewire\Candidate\Dashboard;
+use App\Livewire\Candidate\EmployersViewed;
 use App\Livewire\Candidate\ImportCvData;
+use App\Livewire\Candidate\JobsApplied;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
@@ -28,6 +30,8 @@ Route::get('/candidate/import-cv-data', ImportCvData::class);
 Route::get('/candidate/review', Review::class);
 Route::get('/candidate/cv-go', CvGo::class);
 Route::get('/candidate/change-password', ChangePassword::class);
+Route::get('/candidate/jobs-applied', JobsApplied::class);
+Route::get('/candidate/employers-viewed', EmployersViewed::class);
 
 Route::get('/site/register', Register::class);
 Route::get('/site/login', Login::class);

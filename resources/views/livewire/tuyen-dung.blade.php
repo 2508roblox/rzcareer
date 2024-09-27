@@ -68,7 +68,7 @@
             <div class="container d-none d-lg-block">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="/" title="Jobs on the GO" class="d-flex me-4 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                        <img width="134" height="40" src="/assets_livewire/teks/img/jobsgo-logo.svg" alt="JobsGO">
+                        <img width="134" height="40" src="/logo.png" alt="JobsGO">
                     </a>
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -340,7 +340,7 @@
                 <nav class="navbar bg-white p-0">
                     <div class="container-fluid p-0">
                         <a class="navbar-brand" href="/">
-                            <img width="134" height="40" src="/assets_livewire/teks/img/jobsgo-logo.svg" alt="JobsGO">
+                            <img width="134" height="40" src="/logo.png" alt="JobsGO">
                         </a>
                         <style>
                             .status_on {

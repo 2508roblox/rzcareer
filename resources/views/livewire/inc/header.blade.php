@@ -2,7 +2,7 @@
       <div class="container d-none d-lg-block">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" title="Jobs on the GO" class="d-flex me-4 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-            <img width="134" height="40" src="/assets_livewire/teks/img/jobsgo-logo.svg" alt="JobsGO">
+            <img width="134" height="40" src="/logo.png" alt="JobsGO">
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -128,7 +128,7 @@
             </a>
             <ul class="dropdown-menu text-small">
               <!-- Dropdown menu items -->
-              <li><a class="dropdown-item" href="/candidate/pre-profile?tab=manage-resume" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
+              <li><a class="dropdown-item" href="/candidate/manage-resume" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
               <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i class='bx bx-edit'></i> Cập nhật hồ sơ</a></li>
               <li><a class="dropdown-item" data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank" href="/candidate/detail?v=1727272320" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
               <li>
@@ -184,7 +184,7 @@
         <nav class="navbar bg-white p-0">
           <div class="container-fluid p-0">
             <a class="navbar-brand" href="/">
-              <img width="134" height="40" src="/assets_livewire/teks/img/jobsgo-logo.svg" alt="JobsGO">
+              <img width="134" height="40" src="/logo.png" alt="JobsGO">
             </a>
             <style>
               .status_on {
@@ -276,7 +276,7 @@
                     background-color: #4CAF50;
                   }
                 </style>
-                <li><a class="dropdown-item" href="/candidate/pre-profile?tab=manage-resume" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
+                <li><a class="dropdown-item" href="/candidate/manage-resume" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
                 <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i class='bx bx-edit'></i> Cập nhật hồ sơ</a></li>
                 <li><a class="dropdown-item" data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank" href="/candidate/detail?v=1727272320" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
                 <li>
