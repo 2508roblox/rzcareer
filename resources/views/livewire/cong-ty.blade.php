@@ -5,7 +5,7 @@
     <html lang="vi">
 
     <head>
-     
+
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
@@ -738,456 +738,92 @@
                         <div class="sidebar-widget padd-top-0 mrg-bot-0">
                             <div class="colorgb-container">
                                 <div class="clearfix">
-                                    <h4 class="mrg-bot-0"> <span>21 công ty Bảo hiểm tuyển dụng T09/2024 </span></h4>
+                                    <h4 class="mrg-bot-0"> <span>{{$companies->count()}} công ty tuyển dụng T09/2024 </span></h4>
                                 </div>
-                                <div class="row extra-mrg brows-employer-list mrg-bot-10">
-                                    <div class="colorgb-carousel-bk">
-                                        <div class="item">
+                                <style>
+                                    .grid-view.brows-job-list {
+                                        border-radius: 10px !important;
+                                    }
 
-                                            <style>
-                                                .grid-view.brows-job-list {
-                                                    border-radius: 10px !important;
-                                                }
+                                    .grid-view.brows-job-list:hover {
+                                        box-shadow: 0 1px 12px 0 rgb(0 0 0 / 15%);
+                                    }
 
-                                                .grid-view.brows-job-list:hover {
-                                                    box-shadow: 0 1px 12px 0 rgb(0 0 0 / 15%);
-                                                }
+                                    .job-location {
+                                        color: #000 !important;
+                                        padding: 2px 5px;
+                                        border: 1px solid #ddd !important;
+                                        margin: 2px;
+                                        border-radius: 5px !important;
+                                        font-size: 12px;
+                                    }
+                                </style>
+                             <div class="row extra-mrg brows-employer-list mrg-bot-10">
+    @foreach($companies as $company)
+    <div class="colorgb-carousel-bk">
+        <div class="item">
+            <div class="col-sm-2 col-xs-6">
+                <div class="grid-view brows-job-list clearfix">
+                    <a title="{{ $company->company_name }}" href="/tuyen-dung/{{ $company->slug }}">
+                        <div class="brows-job-company-img">
+                            <img onerror="this.src='/img/cj.jpg'"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                data-src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
+                                class="img-responsive lazy" alt="{{ $company->company_name }}">
+                        </div>
+                        <div class="brows-job-position padd-bot-5">
+                            <h3 class="mrg-bot-0">{{ $company->company_name }}</h3>
+                        </div>
+                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px;" title="Nam Từ Liêm, Hà Nội">
+                            Nam Từ Liêm, Hà Nội
+                        </p>
 
-                                                .job-location {
-                                                    color: #000 !important;
-                                                    padding: 2px 5px;
-                                                    border: 1px solid #ddd !important;
-                                                    margin: 2px;
-                                                    border-radius: 5px !important;
-                                                    font-size: 12px;
-                                                }
-                                            </style>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Tổng Công Ty Bảo Việt Nhân Thọ" href="/tuyen-dung/tong-cong-ty-bao-viet-nhan-tho-585159847.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/40625-200x200.jpg" class="img-responsive lazy" alt="Tổng Công Ty Bảo Việt Nhân Thọ"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Bao Viet Life </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Nam Từ Liêm, Hà Nội">
-                                                            Nam Từ Liêm, Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>34</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hưng Yên</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Cao Bằng</span>
-                                                        </p>
+                        <p class="mrg-bot-5" style="font-size:100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <span style="border-radius: 15px !important; padding: 0 10px !important; color:green">
+                                <b>{{ $company->jobPosts->count() }}</b> việc đang tuyển
+                            </span>
+                        </p>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công ty TNHH Bảo hiểm Nhân thọ MB Ageas Life " href="/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/8603-200x200.jpg" class="img-responsive lazy" alt="Công ty TNHH Bảo hiểm Nhân thọ MB Ageas Life "></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> MB AGEAS LIFE </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Hội sở MB - 21 Cát Linh - Phường Cát Linh - Quận Đống Đa - Hà Nội">
-                                                            Hội sở MB - 21 Cát Linh - Phường Cát Linh - Quận Đống Đa - Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>25</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Tây Ninh</span>
-                                                        </p>
+                        <p class="mrg-bot-5" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <span title="Địa điểm làm việc" class="job-location">
+                                <i class="bx bx-map"></i> {{ $company->district_name  }}
+                            </span>
+                            <span title="Địa điểm làm việc" class="job-location">
+                                <i class="bx bx-map"></i> {{ $company->city_name }}
+                            </span>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Bảo Hiểm Nhân Thọ Prudential Việt Nam - Bộ Phận Hợp Tác Kinh Doanh" href="/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-prudential-viet-nam-bo-phan-hop-tac-kinh-doanh-35033820.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/112-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Bảo Hiểm Nhân Thọ Prudential Việt Nam - Bộ Phận Hợp Tác Kinh Doanh"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Prudential VN </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 7, TP. HCM">
-                                                            Quận 7, TP. HCM </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>22</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
+                        </p>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Ngân Hàng TMCP Việt Nam Thịnh Vượng VPBank" href="/tuyen-dung/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank-35074557.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/115-200x200.jpg" class="img-responsive lazy" alt="Ngân Hàng TMCP Việt Nam Thịnh Vượng VPBank"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> VPBank </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Đống Đa, Hà Nội">
-                                                            Đống Đa, Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>17</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH PMC Bảo Hiểm" href="/tuyen-dung/cong-ty-tnhh-pmc-bao-hiem-2562180773.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/186219-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH PMC Bảo Hiểm"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Công Ty TNHH PMC Bảo Hiểm </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Việt Trì, Tỉnh Phú Thọ">
-                                                            Việt Trì, Tỉnh Phú Thọ </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>14</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
+                        @if($company->is_hot)
+                            <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
+                        @endif
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="
-Văn Phòng TĐL Prudential Gia Lai " href="/tuyen-dung/van-phong-tdl-prudential-gia-lai-1155545742.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/82630-200x200.jpg" class="img-responsive lazy" alt="
-Văn Phòng TĐL Prudential Gia Lai "></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Văn Phòng TĐL Prudential Gia Lai (Đội Thiên Mã) </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Pleiku, Tỉnh Gia Lai">
-                                                            Pleiku, Tỉnh Gia Lai </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>5</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Gia Lai</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
+<div class="clearfix">
+    <div class="text-center">
+        <ul class="pagination">
+            <li class="prev {{ $companies->onFirstPage() ? 'disabled' : '' }}">
+                <a href="#" wire:click.prevent="previousPage">&laquo;</a>
+            </li>
+            @for ($i = 1; $i <= $companies->lastPage(); $i++)
+                <li class="{{ $companies->currentPage() == $i ? 'active' : '' }}">
+                    <a href="#" wire:click.prevent="gotoPage({{ $i }})">{{ $i }}</a>
+                </li>
+            @endfor
+            <li class="next {{ $companies->hasMorePages() ? '' : 'disabled' }}">
+                <a href="#" wire:click.prevent="nextPage">&raquo;</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Đại Tiến Hưng phát" href="/tuyen-dung/cong-ty-tnhh-dai-tien-hung-phat-173688989.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/10323-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Đại Tiến Hưng phát"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> DẠI TIẾN HƯNG PHÁT </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Số 108 Nguyễn Hoàng - Mỹ Đình - Nam Từ Liêm - Hà Nội">
-                                                            Số 108 Nguyễn Hoàng - Mỹ Đình - Nam Từ Liêm - Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>3</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty Bảo Hiểm Nhân Thọ Dai-Ichi Life Việt Nam" href="/tuyen-dung/cong-ty-bao-hiem-nhan-tho-dai-ichi-life-viet-nam-35644875.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/157-200x200.jpg" class="img-responsive lazy" alt="Công Ty Bảo Hiểm Nhân Thọ Dai-Ichi Life Việt Nam"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Dai-ichi Việt Nam </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 12, Hồ Chí Minh">
-                                                            Quận 12, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>3</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Tổng Công ty cổ phần bảo hiểm Toàn Cầu			" href="/tuyen-dung/tong-cong-ty-co-phan-bao-hiem-toan-cau-55660321.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/1631-200x200.jpg" class="img-responsive lazy" alt="Tổng Công ty cổ phần bảo hiểm Toàn Cầu			"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> GIC </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Q. 3, Tp.Hồ Chí Minh">
-                                                            Q. 3, Tp.Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>3</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Tổng Công ty Cổ phần Bảo hiểm Bảo Long" href="/tuyen-dung/tong-cong-ty-co-phan-bao-hiem-bao-long-95120895.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/4537-200x200.jpg" class="img-responsive lazy" alt="Tổng Công ty Cổ phần Bảo hiểm Bảo Long"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Bảo Long Insurance </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 1, Tp Hồ Chí Minh">
-                                                            Quận 1, Tp Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>2</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Nam Định</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Bảo Hiểm Nhân Thọ Prudential Việt Nam - Bộ Phận PRUVenture" href="/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-prudential-viet-nam-bo-phan-pruventure-433142942.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/29430-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Bảo Hiểm Nhân Thọ Prudential Việt Nam - Bộ Phận PRUVenture"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> BỘ PHẬN PRUVenture </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 1, Hồ Chí Minh">
-                                                            Quận 1, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>2</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công ty TNHH MTV Nam Sài Gòn" href="/tuyen-dung/cong-ty-tnhh-mtv-nam-sai-gon-134662943.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/7449-200x200.jpg" class="img-responsive lazy" alt="Công ty TNHH MTV Nam Sài Gòn"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Nam Sài Gòn </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="phường Tân Hưng, quận 7">
-                                                            phường Tân Hưng, quận 7 </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>2</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Leapstack Việt Nam" href="/tuyen-dung/cong-ty-tnhh-leapstack-viet-nam-1259302881.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/90271-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Leapstack Việt Nam"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> LEAPSTACK </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 1, Hồ Chí Minh">
-                                                            Quận 1, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>2</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Điện Biên</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty Cổ Phần Tập Đoàn Công Nghệ Cappi Việt Nam" href="/tuyen-dung/cong-ty-co-phan-tap-doan-cong-nghe-cappi-viet-nam-1808193219.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/130693-200x200.jpg" class="img-responsive lazy" alt="Công Ty Cổ Phần Tập Đoàn Công Nghệ Cappi Việt Nam"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ CAPPI VIỆT NAM
-                                                            </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận Cầu Giấy, Hà Nội">
-                                                            Quận Cầu Giấy, Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>2</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="JobsGO HeadHunt" href="/tuyen-dung/jobsgo-headhunt-143502872.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/8100-200x200.jpg" class="img-responsive lazy" alt="JobsGO HeadHunt"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> JobsGO Headhunter </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Thanh Xuân, Hà Nội">
-                                                            Thanh Xuân, Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty Cổ Phần Bảo Hiểm Hùng Vương" href="/tuyen-dung/cong-ty-co-phan-bao-hiem-hung-vuong-864479877.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/61195-200x200.jpg" class="img-responsive lazy" alt="Công Ty Cổ Phần Bảo Hiểm Hùng Vương"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> BHV </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 1, Hồ Chí Minh">
-                                                            Quận 1, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Tuấn Toàn Tâm" href="/tuyen-dung/cong-ty-tnhh-tuan-toan-tam-1227840338.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/87954-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Tuấn Toàn Tâm"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> TUAN TOAN TAM CO., LTD </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Huyện Hóc Môn, Hồ Chí Minh">
-                                                            Huyện Hóc Môn, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Bảo Hiểm Nhân Thọ AIA (Team AIA Exchange)" href="/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-aia-team-aia-exchange-191830533.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/11659-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Bảo Hiểm Nhân Thọ AIA (Team AIA Exchange)"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Team AIA Exchange </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Văn phòng HN: Tầng 11, Lotte Liễu Giai,Ba Đình,Hà Nội">
-                                                            Văn phòng HN: Tầng 11, Lotte Liễu Giai,Ba Đình,Hà Nội </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Tĩnh</span>
-                                                        </p>
-
-                                                        <span class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="VĂN PHÒNG ĐẠI DIỆN ASMARA INTERNATIONAL LIMITED TẠI THÀNH PHỐ HỒ CHÍ MINH
-" href="/tuyen-dung/van-phong-dai-dien-asmara-international-limited-tai-thanh-pho-ho-chi-minh-204866373.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/12619-200x200.jpg" class="img-responsive lazy" alt="VĂN PHÒNG ĐẠI DIỆN ASMARA INTERNATIONAL LIMITED TẠI THÀNH PHỐ HỒ CHÍ MINH
-"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Asmara </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Binh Thanh Dist, Ho Chi Minh City">
-                                                            Binh Thanh Dist, Ho Chi Minh City </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Đà Nẵng</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 col-xs-6">
-                                                <div class="grid-view brows-job-list clearfix">
-                                                    <a title="Công Ty TNHH Tư Vấn Và Công Nghệ 10X" href="/tuyen-dung/cong-ty-tnhh-tu-van-va-cong-nghe-10x-1389158858.html">
-                                                        <div class="brows-job-company-img"><img onerror="this.src='/img/cj.jpg'" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://jobsgo.vn/media/img/employer/99834-200x200.jpg" class="img-responsive lazy" alt="Công Ty TNHH Tư Vấn Và Công Nghệ 10X"></div>
-                                                        <div class="brows-job-position padd-bot-5">
-                                                            <h3 class="mrg-bot-0"> Công Ty TNHH Tư Vấn Và Công Nghệ 10X </h3>
-                                                        </div>
-                                                        <p class="mrg-bot-0" style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px; " title="Quận 3, Hồ Chí Minh">
-                                                            Quận 3, Hồ Chí Minh </p>
-                                                        <p class="mrg-bot-5" style="font-size:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span style="border-radius: 15px !important;padding:0 10px !important;color:green"><b>1</b> việc đang tuyển</span>
-                                                        </p>
-                                                        <p class="mrg-bot-5" style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hồ Chí Minh</span>
-                                                            <span title="Địa điểm làm việc" class="job-location"><i class="bx bx-map"></i> Hà Nội</span>
-                                                        </p>
-
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                    <div class="text-center">
-                                        <ul class="pagination">
-                                            <li class="prev disabled"><span>&laquo;</span></li>
-                                            <li class="active"><a href="/cong-ty-bao-hiem.html" data-page="0">1</a></li>
-                                            <li><a href="/cong-ty-bao-hiem-trang-2.html" data-page="1">2</a></li>
-                                            <li class="next"><a href="/cong-ty-bao-hiem-trang-2.html" data-page="1">&raquo;</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

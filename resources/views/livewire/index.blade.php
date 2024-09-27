@@ -331,7 +331,7 @@
           <div class="mt-md-5 mt-3 teks-section">
             <div class="teks-section-title">
               <h2 class="h3">Nhà tuyển dụng tiêu biểu</h2>
-              <a href="/cong-ty-tieu-bieu.html">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <a href="/cong-ty">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                   <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                 </svg></a>
             </div>
@@ -347,7 +347,8 @@
                                         @for ($i = 0; $i < 8; $i++)
                                             @if (isset($companies[$index + $i]))
                                                 <div class="col">
-                                                    <a href="{{ $companies[$index + $i]->website_url ?? '#' }}" class="d-block border-0 p-0 text-center teks-item text-dark">
+                                                    <a href="{{  'tuyen-dung/' .   $companies[$index + $i]->slug }}" class="d-block border-0 p-0 text-center teks-item text-dark">
+
                                                         <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}" alt="{{ $companies[$index + $i]->company_name }}">
                                                         <div class="h5 fw-bold text-dark">{{ $companies[$index + $i]->company_name }}</div>
                                                         <p class="small text-nowrap d-none">
@@ -418,7 +419,7 @@
                                                 <div class="col">
                                                     <a href="{{ url('viec-lam/' . $hotJobPosts[$index + $i]['slug']) }}" class="d-flex teks-item text-dark">
                                                         <div class="flex-shrink-0 position-relative">
-                                                            <img class="lazy" width="80" height="80"  src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
+                                                            <img class="lazy" width="80" height="80"  data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
                                                         </div>
                                                         <div class="flex-grow-1 ms-2">
                                                             <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5 text-danger tooltip" title="">{{ $hotJobPosts[$index + $i]->job_name }}</h3>
@@ -1424,14 +1425,6 @@
     </a>
 
 
-    <script>
-      if (!localStorage.getItem("tokenCvBuilder")) {
-        localStorage.setItem("tokenCvBuilder", 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3MjcyMzIwLCJleHAiOjI0ODQxMzYzMjAsInVpZCI6MjU5OTgzNX0.OADbUqzW7LwE_UQ4v7X-HpisVOcmwbF12M0Gj8xOemU');
-      }
-      if (!localStorage.getItem("userCvBuilder")) {
-        localStorage.setItem("userCvBuilder", ('{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/lh3.googleusercontent.com\/a\/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"jobsgo","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"0","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":null,"username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"0","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'));
-      }
-    </script>
 
     <!--<div class="maintenance-banner">
 Để tăng chất lượng dịch vụ, JobsGO.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
@@ -1477,10 +1470,7 @@ html body {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <video controls width="100%">
-              <source src="/media/video/demo_write_cv_ai.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+
           </div>
           <div class="modal-footer">
             <a class="btn btn-primary m-auto d-block" href="/tao-cv-bang-ai.html">Tạo CV ngay</a>

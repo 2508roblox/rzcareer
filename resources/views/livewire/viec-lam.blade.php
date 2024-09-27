@@ -1395,7 +1395,7 @@
                                                        </div>
                                                        <div class="media">
                                                            <div class="media-left">
-                                                               <a href="{{ url('cong-ty/' . $jobPost->company->slug) }}" class="profile-thumb">
+                                                               <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}" class="profile-thumb">
                                                                    <img width="85" height="85"
                                                                         onerror="this.src='/img/cj.jpg'"
 
@@ -1411,7 +1411,7 @@
                                                                     </h5>
                                                                     <h2 style="font-size: 17px;">
                                                                         <a class="text-uppercase" style="color: #111!important;font-weight: bold;"
-                                                                           href="{{ url('cong-ty/' . $jobPost->company->slug) }}">
+                                                                           href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
                                                                            {{ $jobPost->company->company_name }} <!-- Hiển thị tên công ty -->
                                                                         </a>
                                                                     </h2>
@@ -1430,7 +1430,7 @@
                                                                     <span>{{ $jobPost->location->address ?? 'Chưa có thông tin' }}</span> <!-- Kiểm tra null -->
                                                                 </div>
                                                             </div>
-                                                            
+
 
                                                             <div class="teks-ajax-matching">
 

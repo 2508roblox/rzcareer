@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Index::class)->name('index');
 Route::get('/viec-lam/{slug}', ViecLam::class);
 Route::get('/tuyen-dung/{slug}', TuyenDung::class);
-Route::get('/cong-ty/{slug}', CongTy::class);
+Route::get('/cong-ty', CongTy::class);
 
 
 Route::get('/candidate/dashboard', Dashboard::class);

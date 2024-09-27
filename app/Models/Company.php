@@ -42,4 +42,16 @@ class Company extends Model
     {
         return $this->hasMany(ViewedResume::class);
     }
+    public function getJobPostsCountAttribute()
+{
+    return $this->jobPosts()->count();
+}
+public function getCityNameAttribute()
+{
+    return $this->location ? $this->location->city->name : null;
+}
+public function getDistrictNameAttribute()
+{
+    return $this->location ? $this->location->district->name : null;
+}
 }
