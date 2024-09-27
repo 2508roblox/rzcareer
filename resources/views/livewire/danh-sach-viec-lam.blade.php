@@ -8,21 +8,20 @@
     <html lang="vi">
 
     <head>
-        <base href="https://jobsgo.vn">
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font" type="font/woff2"
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font" type="font/woff2"
             crossorigin>
-        <link rel="preload" href="/teks/css/fonts/boxicons.woff2" as="font" type="font/woff2" crossorigin>
-        <link href="/teks/css/icons.min.css?v=2342081531001" rel="stylesheet">
+        <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font" type="font/woff2" crossorigin>
+        <link href="/assets_livewire/teks/css/icons.min.css?v=2342081531001" rel="stylesheet">
         <meta name='dmca-site-verification' content='SW92M2l3NDFsN0RiZ2FZSTRqMjM1dz090' />
 
 
@@ -62,14 +61,14 @@
         <meta name="geo.region" content="VN-Hà Nội">
         <meta name="google-play-app" content="app-id=vn.ca.hope.candidate">
         <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
-            href="/static/assets/css/fonts/et-line.woff">
+            href="/assets_livewire/static/assets/css/fonts/et-line.woff">
         <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
-            href="/static/assets/css/fonts/fontawesome-webfont.woff2?v=4.6.2">
+            href="/assets_livewire/static/assets/css/fonts/fontawesome-webfont.woff2?v=4.6.2">
         <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
-            href="/static/assets/css/fonts/glyphicons-halflings-regular.woff2">
+            href="/assets_livewire/static/assets/css/fonts/glyphicons-halflings-regular.woff2">
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
-            href="/static/assets/css/style.min.css?v=2342081531001">
-        <script defer src="/static/assets/js/javascript.min.js?v=2342081531001"></script>
+            href="/assets_livewire/static/assets/css/style.min.css?v=2342081531001">
+        <script defer src="/assets_livewire/static/assets/assets_livewire/js/javascript.min.js?v=2342081531001"></script>
         <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
         <script type="application/ld+json"> {
@@ -117,7 +116,7 @@
                 })
             });
         </script>
-        <link href="/css/custom.css?v=1727433676" rel="stylesheet">
+        <link href="/assets_livewire/css/custom.css?v=1727433676" rel="stylesheet">
     </head>
 
     <body class="page-job-tagvn ">
@@ -301,7 +300,7 @@
                                 style=" padding-top: 12px; display: flex !important; align-items:center;"
                                 class="dropdown-toggle" data-toggle="dropdown">
 
-                                <img loading="lazy" width="32" onerror="this.src='/bolt/assets/images/image.png'"
+                                <img loading="lazy" width="32" onerror="this.src='/assets_livewire/bolt/assets/images/image.png'"
                                     src="https://jobsgo.vn/uploads/avatar/202409/2593317_20240920203818.png?colorgb=1726839557"
                                     alt="Trần Lê Hoàng Giang" class="img-rounded">
                                 <span style="margin-left: 5px">
@@ -525,7 +524,7 @@
                 cursor: pointer
             }
         </style>
-        <link rel="stylesheet" type="text/css" href="/static/assets/css/list.min.css?v=2342081531001">
+        <link rel="stylesheet" type="text/css" href="/assets_livewire/static/assets/css/list.min.css?v=2342081531001">
 
         <section class="section wrap-1">
             <div class="container">
@@ -1035,12 +1034,12 @@
                                                                         <div class="col-sm-12">
                                                                             <div class="item-fl-box clearfix">
                                                                                 <div class="brows-job-company-img">
-                                                                                    <a title="{{ $jobPost->job_name }}" href="{{ url('job/' . $jobPost->slug) }}">
+                                                                                    <a title="{{ $jobPost->job_name }}" href="{{ url('viec-lam/' . $jobPost->slug) }}">
                                                                                         <img width="65" height="65"
                                                                                              title="{{ $jobPost->job_name }} - {{ $jobPost->company->company_name }}"
-                                                                                             onerror="this.src='/img/cj.jpg'" loading="lazy"
-                                                                                             src="{{ $jobPost->company->company_image_url }}"
-                                                                                             alt="{{ $jobPost->company->company_name }}"
+                                                                                             loading="lazy"
+                                                                                      src="{{ Storage::url($jobPost->company->company_image_url) }}"
+                                                                                    alt="{{ $jobPost->company->company_name }}"
                                                                                              class="img-responsive">
                                                                                     </a>
                                                                                 </div>
@@ -1114,48 +1113,36 @@
 
                                         <div id="report">
                                             <div>
-                                                <script rsync src="/js/chart.min.js"></script>
-                                                <div
-                                                    style="position: relative;max-width:1000px;display:block;margin-top: 30px;background: #fff;border-radius: 4px;padding: 10px;box-shadow: 0 0 10px #eee">
-                                                    <canvas id="jobsAppliesIndustryChart" width="800"
-                                                        height="400"></canvas><img height="40"
-                                                        src="/teks/img/jobsgo-logo.svg" id="watermark"
-                                                        style="position: absolute;top: 115px;left: 150px;transform: translate(-50%, -50%);opacity: 0.2;">
-                                                    <script>
-                                                        function drawWatermark(ctx, text, x, y, fontSize, color, rotation) {
-                                                            ctx.save();
-                                                            ctx.translate(x, y);
-                                                            ctx.rotate(rotation);
-                                                            ctx.font = fontSize + "px Arial";
-                                                            ctx.fillStyle = color;
-                                                            ctx.globalAlpha = 0.5; // Điều chỉnh độ mờ của watermark
-                                                            ctx.fillText(text, 0, 0);
-                                                            ctx.restore();
-                                                        }
+                                                <script rsync src="/assets_livewire/js/chart.min.js"></script>
+                                                <script>
+                                                    function drawWatermark(ctx, text, x, y, fontSize, color, rotation) {
+                                                                              ctx.save();
+                                                                              ctx.translate(x, y);
+                                                                              ctx.rotate(rotation);
+                                                                              ctx.font = fontSize + "px Arial";
+                                                                              ctx.fillStyle = color;
+                                                                              ctx.globalAlpha = 0.5; // Điều chỉnh độ mờ của watermark
+                                                                              ctx.fillText(text, 0, 0);
+                                                                              ctx.restore();
+                                                                          }
                                                         document.addEventListener('DOMContentLoaded', function() {
-                                                            const ctx = document.getElementById('jobsAppliesIndustryChart').getContext('2d');
+                                                    const ctx = document.getElementById('jobsAppliesIndustryChart').getContext('2d');
 
-                                                            const months = ['01/2023', '02/2023', '03/2023', '04/2023', '05/2023', '06/2023', '07/2023', '08/2023',
-                                                                '09/2023', '10/2023', '11/2023', '12/2023', '01/2024', '02/2024', '03/2024', '04/2024',
-                                                                '05/2024', '06/2024', '07/2024', '08/2024'
-                                                            ];
+                                                    const months = ['01/2023','02/2023','03/2023','04/2023','05/2023','06/2023','07/2023','08/2023','09/2023','10/2023','11/2023','12/2023','01/2024','02/2024','03/2024','04/2024','05/2024','06/2024','07/2024','08/2024'];
 
-                                                            const jobsData = [275, 386, 588, 401, 383, 257, 389, 517, 393, 325, 420, 381, 312, 180, 516, 444, 275,
-                                                                342, 340, 262, 116, 0, 0, 0
-                                                            ];
-                                                            const appliesData = [1264, 1572, 1539, 1237, 1157, 1181, 1185, 1627, 1624, 1434, 1274, 1510, 1595, 1188,
-                                                                1494, 1688, 1528, 1987, 1520, 931, 30, 0, 0, 0
-                                                            ];
+                                                    const jobsData = [275,386,588,401,383,257,389,517,393,325,420,381,312,180,516,444,275,342,340,262,116,0,0,0];
+                                                    const appliesData = [1264,1572,1539,1237,1157,1181,1185,1627,1624,1434,1274,1510,1595,1188,1494,1688,1528,1987,1520,931,30,0,0,0];
 
-                                                            const chart = new Chart(ctx, {
+                                                    const chart = new Chart(ctx, {
                                                                 type: 'bar', // Loại biểu đồ chính
                                                                 data: {
                                                                     labels: months,
-                                                                    datasets: [{
+                                                                    datasets: [
+                                                                        {
                                                                             label: 'Số lượt ứng tuyển',
 
-                                                                            borderColor: 'rgba(255, 197, 36, 1)',
-                                                                            backgroundColor: 'rgba(255, 197, 36, 1)',
+                                                                           borderColor: 'rgba(255, 197, 36, 1)',
+                                                                           backgroundColor: 'rgba(255, 197, 36, 1)',
                                                                             data: appliesData,
                                                                             borderWidth: 2,
                                                                             yAxisID: 'y2', // Trục y phải
@@ -1227,9 +1214,7 @@
                                                             });
 
                                                             chart.canvas.onclick = function(evt) {
-                                                                const points = chart.getElementsAtEventForMode(evt, 'nearest', {
-                                                                    intersect: true
-                                                                }, true);
+                                                                const points = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
                                                                 if (points.length) {
                                                                     const firstPoint = points[0];
                                                                     const label = chart.data.labels[firstPoint.index];
@@ -1239,14 +1224,22 @@
                                                             };
 
                                                             // Tạo hàm để vẽ watermark lên canvas
-                                                            function drawWatermark() {
-                                                                var watermark = document.getElementById('watermark');
-                                                                ctx.drawImage(watermark, 0, 0, ctx.canvas.width, ctx.canvas.height);
-                                                            }
+                                                                          function drawWatermark() {
+                                                                              var watermark = document.getElementById('watermark');
+                                                                              ctx.drawImage(watermark, 0, 0, ctx.canvas.width, ctx.canvas.height);
+                                                                          }
 
 
-                                                        });
+                                                });
                                                     </script>
+        
+                                                <div
+                                                    style="position: relative;max-width:1000px;display:block;margin-top: 30px;background: #fff;border-radius: 4px;padding: 10px;box-shadow: 0 0 10px #eee">
+                                                    <canvas id="jobsAppliesIndustryChart" width="800"
+                                                        height="400"></canvas><img height="40"
+                                                        src="/assets_livewire/teks/img/jobsgo-logo.svg" id="watermark"
+                                                        style="position: absolute;top: 115px;left: 150px;transform: translate(-50%, -50%);opacity: 0.2;">
+
 
                                                     <hr>
                                                     <p>Dựa trên dữ liệu của JobsGO, ngành <strong>Tài Chính/Ngân
