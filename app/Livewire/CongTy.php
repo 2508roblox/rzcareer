@@ -15,7 +15,7 @@ class CongTy extends Component
     public function render()
     {
         // Lấy danh sách công ty cùng với số lượng việc làm, phân trang
-        $companies = Company::withCount('jobPosts')->paginate($this->perPage);
+        $companies = Company::withCount(relations: 'jobPosts')->paginate($this->perPage);
 
         return view('livewire.cong-ty', [
             'companies' => $companies,

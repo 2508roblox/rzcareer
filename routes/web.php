@@ -9,6 +9,7 @@ use App\Livewire\Candidate\JobsApplied;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
+use App\Livewire\DanhSachViecLam;
 use App\Livewire\Index;
 use App\Livewire\Site\Login;
 use App\Livewire\Site\Register;
@@ -22,6 +23,7 @@ Route::get('/', Index::class)->name('index');
 Route::get('/viec-lam/{slug}', ViecLam::class);
 Route::get('/tuyen-dung/{slug}', TuyenDung::class);
 Route::get('/cong-ty', CongTy::class);
+Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
 
 
 Route::get('/candidate/dashboard', Dashboard::class);
