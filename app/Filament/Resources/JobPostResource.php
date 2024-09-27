@@ -197,12 +197,12 @@ class JobPostResource extends Resource
                                     ->columnSpanFull()
                                     ->label('Mô tả công việc'),
 
-                                Forms\Components\MarkdownEditor::make('job_requirement')
+                                Forms\Components\RichEditor::make('job_requirement')
                                     ->required()
                                     ->columnSpanFull()
                                     ->label('Yêu cầu công việc'),
 
-                                Forms\Components\MarkdownEditor::make('benefits_enjoyed')
+                                Forms\Components\RichEditor::make('benefits_enjoyed')
                                     ->required()
                                     ->columnSpanFull()
                                     ->label('Quyền lợi'),
@@ -268,8 +268,157 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn cấp độ kinh nghiệm')
                                     ->label('Kinh nghiệm')
                                     ->helperText('Chỉ định cấp độ kinh nghiệm yêu cầu.'),
-                            ]),
-                    ]),
+                                Forms\Components\Select::make('academic_level')
+                                    ->required()
+                                    ->preload()
+                                    ->searchable()
+                                    ->options([
+                                        'High School' => 'Trung học phổ thông',
+                                        'Associate Degree' => 'Bằng cao đẳng',
+                                        'Bachelor\'s Degree' => 'Bằng cử nhân',
+                                        'Master\'s Degree' => 'Bằng thạc sĩ',
+                                        'Doctorate' => 'Tiến sĩ',
+                                    ])
+                                    ->placeholder('Chọn trình độ học vấn')
+                                    ->label('Trình độ học vấn')
+                                    ->helperText('Chỉ ra trình độ học vấn cần thiết.')
+                                    ->hint('Trình độ học vấn cần cho công việc.')
+                                    ->default('Bằng cử nhân')
+                                    ->reactive()
+                                    ->disablePlaceholderSelection()
+                                    ->columnSpan(1),
+
+                                Forms\Components\Select::make('job_type')
+                                    ->required()
+                                    ->preload()
+                                    ->searchable()
+                                    ->options([
+                                        'Full-time' => 'Toàn thời gian',
+                                        'Part-time' => 'Bán thời gian',
+                                        'Contract' => 'Hợp đồng',
+                                        'Temporary' => 'Thời vụ',
+                                        'Internship' => 'Thực tập',
+                                        'Freelance' => 'Tự do',
+                                    ])
+                                    ->placeholder('Chọn loại công việc')
+                                    ->label('Loại công việc')
+                                    ->helperText('Chọn loại hình việc làm.')
+                                    ->hint('Loại hình việc làm cho công việc.')
+                                    ->default('Toàn thời gian')
+                                    ->reactive()
+                                    ->disablePlaceholderSelection()
+                                    ->columnSpan(1),
+
+                                Forms\Components\TextInput::make('salary_min')
+                                    ->required()
+                                    ->numeric()
+                                    ->label('Mức lương tối thiểu')
+                                    ->placeholder('Nhập mức lương tối thiểu')
+                                    ->helperText('Chỉ ra mức lương tối thiểu cho vị trí.')
+                                    ->hint('Số tiền lương tối thiểu.')
+                                    ->prefix('$') // Thêm ký hiệu tiền tệ hoặc bất kỳ tiền tố nào
+                                    ->suffix('mỗi năm') // Thêm hậu tố nếu cần
+                                    ->columnSpan(1),
+
+                                Forms\Components\TextInput::make('salary_max')
+                                    ->required()
+                                    ->numeric()
+                                    ->label('Mức lương tối đa')
+                                    ->placeholder('Nhập mức lương tối đa')
+                                    ->helperText('Chỉ ra mức lương tối đa cho vị trí.')
+                                    ->hint('Số tiền lương tối đa.')
+                                    ->prefix('$') // Thêm ký hiệu tiền tệ hoặc bất kỳ tiền tố nào
+                                    ->suffix('mỗi năm') // Thêm hậu tố nếu cần
+                                    ->columnSpan(1),
+
+                                Forms\Components\Select::make('salary_type')
+                                    ->required()
+                                    ->label('Loại lương')
+                                    ->options([
+                                        'hourly' => 'Theo giờ',
+                                        'monthly' => 'Theo tháng',
+                                        'weekly' => 'Theo tuần',
+                                    ])
+                                    ->searchable()
+                                    ->placeholder('Chọn loại lương')
+                                    ->default('monthly')
+                                    ->helperText('Chọn cách tính lương')
+                                    ->hint('Tần suất tính lương.')
+                                    ->preload()
+                                    ->reactive()
+                                    ->disablePlaceholderSelection()
+                                    ->columnSpan(1),
+
+                                Forms\Components\Section::make('Visibility and Contact')
+                                    ->schema([
+                                        Forms\Components\Grid::make(2)
+                                            ->schema([
+                                                Forms\Components\Toggle::make('is_hot')
+                                                    ->label('Nổi bật')
+                                                    ->required()
+                                                    ->default(false)
+                                                    ->onIcon('heroicon-o-fire')
+                                                    ->offIcon('heroicon-s-fire'),
+
+                                                Forms\Components\Toggle::make('is_urgent')
+                                                    ->label('Khẩn cấp')
+                                                    ->required()
+                                                    ->default(false)
+                                                    ->onIcon('heroicon-o-exclamation-circle')
+                                                    ->offIcon('heroicon-o-exclamation-circle'),
+
+                                                Forms\Components\TextInput::make('contact_person_name')
+                                                    ->required()
+                                                    ->maxLength(100)
+                                                    ->prefix('👤')
+                                                    ->placeholder('Nhập tên người liên hệ')
+                                                    ->helperText('Họ và tên của người liên hệ'),
+
+                                                Forms\Components\TextInput::make('contact_person_phone')
+                                                    ->required()
+                                                    ->tel()
+                                                    ->maxLength(15)
+                                                    ->prefix('📞')
+                                                    ->placeholder('Nhập số điện thoại của người liên hệ')
+                                                    ->helperText('Số điện thoại của người liên hệ'),
+
+                                                Forms\Components\TextInput::make('contact_person_email')
+                                                    ->required()
+                                                    ->email()
+                                                    ->maxLength(100)
+                                                    ->prefix('✉️')
+                                                    ->placeholder('Nhập địa chỉ email của người liên hệ')
+                                                    ->helperText('Địa chỉ email của người liên hệ'),
+
+                                                Forms\Components\Select::make('status')
+                                                    ->required()
+                                                    ->preload()
+                                                    ->searchable()
+                                                    ->options([
+                                                        0 => 'Đang chờ xem xét',
+                                                        1 => 'Được chấp thuận',
+                                                        2 => 'Bị từ chối',
+                                                        3 => 'Đã đăng',
+                                                        4 => 'Đã đóng',
+                                                        5 => 'Đã hết hạn',
+                                                        6 => 'Đang xem xét',
+                                                        7 => 'Đang phỏng vấn',
+                                                        8 => 'Đã thuê',
+                                                        9 => 'Đã lưu trữ',
+                                                        10 => 'Đã hủy',
+                                                        11 => 'Đang tạm dừng',
+                                                        12 => 'Đã lấp đầy',
+                                                        13 => 'Nháp',
+                                                        14 => 'Đã mở lại',
+                                                    ])
+                                                    ->default(0)
+                                                    ->placeholder('Chọn trạng thái')
+                                                    ->label('Trạng thái'),
+                                            ]),
+                                    ]),
+
+                            ])
+                    ])
             ]);
     }
 
