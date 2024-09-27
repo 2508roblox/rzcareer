@@ -20,7 +20,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockPlugin;
-use Kenepa\Banner\BannerPlugin;
+
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -45,6 +45,7 @@ class AdminPanelProvider extends PanelProvider
                 Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
                 StartSession::class,
@@ -59,37 +60,22 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                BannerPlugin::make(),
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
-                ->gridColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                    'lg' => 2
-                ])
-                ->sectionColumnSpan(1)
-                ->checkboxListColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                    'lg' => 4,
-                ])
-                ->resourceCheckboxListColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                ]),
+                \Hasnayeen\Themes\ThemesPlugin::make(),
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 FilamentWorldClockPlugin::make()
-                ->timezones([
-                    'Africa/Cairo',
-                    'Africa/Lagos',
-                    'America/Los_Angeles',
-                    'America/New_York',
-                    'America/Sao_Paulo',
-                    'Asia/Shanghai',
-                    'Asia/Singapore',
-                    'Asia/Tokyo',
+                    ->timezones([
+                        'Africa/Cairo',
+                        'Africa/Lagos',
+                        'America/Los_Angeles',
+                        'America/New_York',
+                        'America/Sao_Paulo',
+                        'Asia/Shanghai',
+                        'Asia/Singapore',
+                        'Asia/Tokyo',
 
-                ])
-                ->setColumnSpan('full')
-             ])   
-             ;
+                    ])
+                    ->setColumnSpan('full')
+            ])
+        ;
     }
 }

@@ -23,92 +23,105 @@ class SavedJobPostResource extends Resource
     protected static ?string $model = SavedJobPost::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-bookmark';
-    protected static ?string $navigationGroup = 'Resumes & Saved Items';
+    protected static ?string $navigationGroup = 'Sơ yếu lý lịch & Mục đã lưu';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Các bài đăng công việc đã lưu'; // Trả về tên số nhiều cho mô hình Company
+    }
 
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            // Section for Job Post Selection
-            Section::make('Job Post Details')
             ->schema([
-                Card::make([
-                    Select::make('job_post_id')
-                        ->label('Job Post')
-                        ->searchable()
-                        ->preload()
-                        ->options(function () {
-                            return \App\Models\JobPost::all()->pluck('job_name', 'id')->toArray();
-                        })
-                        ->required()
-                        ->placeholder('Select a Job Post')
-                        ->hint('Select the job post related to this entry.')
-                        ->reactive()
-                        ->afterStateUpdated(function ($state, callable $set) {
-                            // Handle state changes
-                        })
-                        ->prefixIcon('heroicon-o-briefcase'), // Optional: add a leading icon
-                ])->columnSpanFull(),
+                // Phần chọn Bài đăng công việc
+                Section::make('Chi tiết Bài đăng Công việc')
+                    ->schema([
+                        Card::make([
+                            Select::make('job_post_id')
+                                ->label('Bài đăng Công việc')
+                                ->searchable()
+                                ->preload()
+                                ->options(function () {
+                                    return \App\Models\JobPost::all()->pluck('job_name', 'id')->toArray();
+                                })
+                                ->required()
+                                ->placeholder('Chọn một Bài đăng Công việc')
+                                ->hint('Chọn bài đăng công việc liên quan đến mục này.')
+                                ->reactive()
+                                ->afterStateUpdated(function ($state, callable $set) {
+                                    // Xử lý thay đổi trạng thái
+                                })
+                                ->prefixIcon('heroicon-o-briefcase'), // Tùy chọn: thêm biểu tượng phía trước
+                        ])->columnSpanFull(),
 
-                TextInput::make('user_id')
-                    ->label('User ID')
-                    ->required()
-                    ->numeric()
-                    ->default(Auth::id())
-                    ->disabled()
-                    ->dehydrated()
-                    ->placeholder('Admin ID')
-                    ->hint('The ID of the user creating this entry.')
-                    ->maxLength(10) // Limit the maximum length
-                    ->suffixIcon('heroicon-o-user'), // Optional: add a trailing icon
-            ]),
-        ]);
+                        TextInput::make('user_id')
+                            ->label('ID Người dùng')
+                            ->required()
+                            ->numeric()
+                            ->default(Auth::id())
+                            ->disabled()
+                            ->dehydrated()
+                            ->placeholder('ID Quản trị viên')
+                            ->hint('ID của người dùng tạo mục này.')
+                            ->maxLength(10) // Giới hạn độ dài tối đa
+                            ->suffixIcon('heroicon-o-user'), // Tùy chọn: thêm biểu tượng phía sau
+                    ]),
+            ]);
     }
+
 
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            // Display job post name instead of ID
-            Tables\Columns\TextColumn::make('jobPost.job_name') // Adjust this based on your actual relationship and field names
-                ->label('Job Post Name')
-                ->sortable()
-                ->searchable(),
+            ->columns([
+                // Hiển thị tên bài đăng công việc thay vì ID
+                Tables\Columns\TextColumn::make('jobPost.job_name') // Điều chỉnh theo quan hệ và tên trường thực tế của bạn
+                    ->label('Tên Bài đăng Công việc')
+                    ->sortable()
+                    ->searchable(),
 
-            // Additional columns related to JobPost
-            Tables\Columns\TextColumn::make('jobPost.company.company_name') // Access company_name through the jobPost relationship
-            ->label('Company Name')
-            ->sortable()
-            ->searchable(),
+                // Các cột bổ sung liên quan đến Bài đăng Công việc
+                Tables\Columns\TextColumn::make('jobPost.company.company_name') // Truy cập company_name thông qua quan hệ jobPost
+                    ->label('Tên Công ty')
+                    ->sortable()
+                    ->searchable(),
 
+                Tables\Columns\TextColumn::make('jobPost.salary_max') // Điều chỉnh theo tên cột thực tế trong mô hình Bài đăng Công việc
+                    ->label('Mức lương Tối đa')
+                    ->sortable()
+                    ->searchable(),
 
-            Tables\Columns\TextColumn::make('jobPost.salary_max') // Adjust based on actual column names in JobPost model
-                ->label('Salary Max')
-                ->sortable()
-                ->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
-            Tables\Columns\TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
-
-            Tables\Columns\TextColumn::make('updated_at')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
-        ])
-        ->filters([
-            // Define any filters here if needed
-        ])
-        ->actions([
-            Tables\Actions\EditAction::make(),
-        ])
-        ->bulkActions([
-            Tables\Actions\BulkActionGroup::make([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]),
-        ]);
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                // Định nghĩa bất kỳ bộ lọc nào ở đây nếu cần
+            ])
+            ->actions([
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make()
+                        ->label('Chỉnh sửa'),
+                    Tables\Actions\ViewAction::make()
+                        ->label('Xem'),
+                    Tables\Actions\DeleteAction::make()
+                        ->label('Xóa'),
+                ]),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->label('Xóa'),
+                ]),
+            ]);
     }
+
 
     public static function getRelations(): array
     {
@@ -116,7 +129,10 @@ class SavedJobPostResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [
