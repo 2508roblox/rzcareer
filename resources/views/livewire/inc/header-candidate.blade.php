@@ -274,9 +274,15 @@
                             </a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="/site/logout" class="btn-colorgb-jgd" data-reload="true"
-                                data-pjax="false" title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"><i
-                                    class='bx bx-log-out-circle'></i> Đăng xuất</a></li>
+                        <li>
+                            <a href="#" 
+                               class="btn-colorgb-jgd" 
+                               title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"
+                               wire:click.prevent="logout"> <!-- Gọi phương thức logout -->
+                                <i class='bx bx-log-out-circle'></i> Đăng xuất
+                            </a>
+                        </li>
+                        
                         <script>
                             window.addEventListener('load', function() {
                                 $(function() {
