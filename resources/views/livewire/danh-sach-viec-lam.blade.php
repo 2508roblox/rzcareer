@@ -23,6 +23,7 @@
         <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font" type="font/woff2" crossorigin>
         <link href="/assets_livewire/teks/css/icons.min.css?v=2342081531001" rel="stylesheet">
         <meta name='dmca-site-verification' content='SW92M2l3NDFsN0RiZ2FZSTRqMjM1dz090' />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
         <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
@@ -543,33 +544,51 @@
                                                         <div class="container-bk">
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-sm-offset-1-bk">
-                                                                    <form class="bt-form clearfix">
-                                                                        <div class="row no-mrg teks-search">
-                                                                            <div class="col-xs-5 padd0 colorgb-search">
-                                                                                <input type="search"
-                                                                                    value="Tài Chính/Ngân Hàng"
-                                                                                    onfocus="this.select()"
-                                                                                    class="form-control br-1"
-                                                                                    id="jobRole"
-                                                                                    placeholder="Việc, công ty, ngành nghề...">
+                                                                    <div>
+                                                                        <form class="bt-form clearfix" wire:submit.prevent="searchJobs"> <!-- Prevent default submit -->
+                                                                            <div class="row no-mrg teks-search">
+                                                                                <div class="col-xs-5 padd0 colorgb-search">
+                                                                                    <input type="search"
+                                                                                           wire:model.live="keyword"
+                                                                                           onfocus="this.select()"
+                                                                                           class="form-control br-1"
+                                                                                           id="jobRole"
+                                                                                           placeholder="Việc, công ty, ngành nghề...">
+                                                                                </div>
+                                                                                <div class="col-xs-4 padd0 colorgb-place">
+                                                                                    <input type="search"
+                                                                                           wire:model.live="location"
+                                                                                           onfocus="this.select()"
+                                                                                           class="form-control br-1"
+                                                                                           id="jobPlace"
+                                                                                           placeholder="Tỉnh/thành, quận...">
+                                                                                </div>
+                                                                                <div class="col-xs-3 colorgb-submit padd0">
+                                                                                    <button class="btn btn-success btn-block text-uppercase" type="submit">
+                                                                                        <i class="bx hide bx-search-alt bx-sm text-white"></i>
+                                                                                        <span class="hidden-x">Tìm việc</span>
+                                                                                    </button>
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="col-xs-4 padd0 colorgb-place">
-                                                                                <input type="search" value=""
-                                                                                    onfocus="this.select()"
-                                                                                    class="form-control br-1"
-                                                                                    id="jobPlace"
-                                                                                    placeholder="Tỉnh/thành, quận...">
-                                                                            </div>
-                                                                            <div class="col-xs-3 colorgb-submit padd0">
-                                                                                <button id="jobSearch" type="submit"
-                                                                                    class="btn btn-success btn-block text-uppercase"
-                                                                                    onclick="ga('send', 'event', 'Search', 'click', 'TÌM KIẾM VIỆC LÀM')"><i
-                                                                                        class="bx hide bx-search-alt bx-sm text-white"></i>
-                                                                                    <span class="hidden-x">TÌM
-                                                                                        VIỆC</span></button>
-                                                                            </div>
+                                                                        </form>
+
+
+                                                                        <div>
+                                                                            <!-- Display job posts -->
+                                                                            @foreach($jobPosts as $job)
+                                                                                <div class="job-post">
+                                                                                    <h4>{{ $job->job_name }}</h4>
+                                                                                    <p>{{ $job->company->name }}</p>
+                                                                                    <p>{{ $job->location->city->name }}</p>
+                                                                                </div>
+                                                                            @endforeach
+
+                                                                            <!-- Pagination Links -->
+                                                                            {{ $jobPosts->links() }}
                                                                         </div>
-                                                                    </form>
+                                                                    </div>
+
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -980,10 +999,22 @@
 
                                             <div class="clearfix colorgb-carousel-bk v2">
                                                 <div class="sidebar-widget-title mrg-bot-10">
-                                                    <h1>Tuyển dụng {{ $totalJobs }} việc làm Tài Chính/Ngân Hàng - 27/09/2024 </h1>
-                                                    <span class="pull-right"><span class="hidden-xs">Việc</span> 1 - 50 / {{ $totalJobs }}</span>
-
+                                                    <h1>Tuyển dụng {{ $totalJobs }} việc làm</h1>
+                                                    <span class="pull-right">
+                                                        <span class="hidden-xs">Việc</span> 1 - {{ $jobPosts->count() }} / {{ $totalJobs }}
+                                                    </span>
                                                 </div>
+
+                                                @if($keyword || $location)
+                                                    <div class="search-keyword">
+                                                        <p>Kết quả tìm kiếm cho từ khóa: <strong>{{ $keyword }}</strong></p>
+                                                        @if($location)
+                                                            <p>Trong khu vực: <strong>{{ $location }}</strong></p>
+                                                        @endif
+                                                    </div>
+                                                @endif
+
+
                                                 <div class="row">
                                                     <div class="col-sm-12">
 
@@ -1232,7 +1263,7 @@
 
                                                 });
                                                     </script>
-        
+
                                                 <div
                                                     style="position: relative;max-width:1000px;display:block;margin-top: 30px;background: #fff;border-radius: 4px;padding: 10px;box-shadow: 0 0 10px #eee">
                                                     <canvas id="jobsAppliesIndustryChart" width="800"

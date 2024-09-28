@@ -34,93 +34,9 @@
     <script defer src="/assets_livewire/teks/js/base.min.js?v=234208153092"></script>
     <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-      gtag('config', 'G-EHD5KK9TRQ');
-      gtag('config', 'AW-10876503189');
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://jobsgo.vn/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://jobsgo.vn/viec-lam.html?k={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
 
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "CÔNG TY CỔ PHẦN JOBSGO",
-        "legalName": "JOBSGO.,JSC",
-        "url": "https://jobsgo.vn",
-        "contactPoint": [{
-            "@type": "ContactPoint",
-            "telephone": "(+84) 899 565 868",
-            "contactType": "customer service",
-            "areaServed": "VN",
-            "availableLanguage": [
-              "English",
-              "Vietnamese"
-            ]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "(+84) 34 650 6789",
-            "contactType": "technical support",
-            "areaServed": "VN",
-            "availableLanguage": [
-              "English",
-              "Vietnamese"
-            ]
-          }
-        ],
-        "logo": "https://jobsgo.vn/img/jobsgo-logo-blue.jpg",
-        "foundingDate": "2018",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Tầng 3 tòa G1, Five Star Garden",
-          "addressLocality": "Thanh Xuân",
-          "addressRegion": "HN",
-          "postalCode": "100000",
-          "addressCountry": "VN"
-        },
-        "sameAs": [
-          "https://www.facebook.com/JobsGOVN/",
-          "https://plus.google.com/u/1/b/108837933198755086918/108837933198755086918",
-          "https://www.linkedin.com/company/josbgo.vn/"
-        ]
-      }
-    </script>
 
-    <script type='application/ld+json'>
-      {
-        "@context": "http://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Công ty Cổ phần JobsGO",
-        "address": "Tầng 3 - Tòa G1, Five Star Garden, Thanh Xuân, Hà Nội",
-        "telephone": "0899565868",
-        "image": "https://jobsgo.vn/media/img/employer/8836-200x200.jpg",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "reviewCount": "5",
-          "ratingValue": "5"
-        }
-      }
-    </script>
 
 
 
@@ -137,15 +53,21 @@
               <h1 class="mb-4">Tìm việc làm mơ ước! </h1>
               <div class="row justify-content-center">
                 <div class="col-md-12">
-                  <div class="input-group mb-3">
-                    <input type="search" id="keyword" onfocus="this.select()" autocomplete="off" class="auto-complete form-control" placeholder="Từ khóa...">
-                    <div class="teks-location">
-                      <i class="bx bx-map"></i>
-                      <input type="search" id="location" onfocus="this.select()" autocomplete="off" class="auto-complete form-control" placeholder="Tỉnh/thành...">
-                    </div>
-                    <button class="btn btn-primary teks-btn-g" type="button" id="search"> <span class="d-inline-block fw-bold">Tìm việc</span></button>
-                  </div>
+                    <form wire:submit.prevent="redirectToJobList"> <!-- Wire form to redirect method -->
+                        <div class="input-group mb-3">
+                            <input type="search" id="123" wire:model.defer="keyword" onfocus="this.select()" autocomplete="off" class="auto-complete form-control" placeholder="Từ khóa...">
+                            <div class="teks-location">
+                                <i class="bx bx-map"></i>
+                                <input type="search" id="location" wire:model.defer="location" onfocus="this.select()" autocomplete="off" class="auto-complete form-control" placeholder="Tỉnh/thành...">
+                            </div>
+                            <button class="btn btn-primary teks-btn-g" type="submit" id="123"> <!-- Set type to submit -->
+                                <span class="d-inline-block fw-bold">Tìm việc</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
+
+
                 <div class="col-sm-12">
                   <ul class="list-group pb-2 pb-sm-3 list-group-horizontal">
                     <li class="list-group-item location">
