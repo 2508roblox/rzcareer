@@ -181,20 +181,25 @@ class ResumeResource extends Resource
                     ->columnSpanFull(),
                 // Group for Advanced Skills
                 Repeater::make('advancedSkills') // Tên trường cho kỹ năng nâng cao
-                    ->relationship('advancedSkills') // Đảm bảo mối quan hệ này đã được định nghĩa trong model
-                    ->schema([
+                ->relationship('advancedSkills') // Đảm bảo mối quan hệ này đã được định nghĩa trong model
+                ->schema([
+                    Grid::make(2)->schema([ // Create a Grid with 2 columns
                         TextInput::make('name')
                             ->required()
-                            ->label('Tên Kỹ năng Nâng cao'),
-                   
+                            ->label('Tên Kỹ năng Nâng cao')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('level')
                             ->required()
                             ->numeric(1)
-                              ->label('Số năm kinh nghiệm') // Tên trường đã được điều chỉnh
-                            ->placeholder('Nhập số năm kinh nghiệm'), // Placeholder để hướng dẫn người dùng
-                    ])
-                    ->label('Kỹ năng Nâng cao')
-                    ->columnSpanFull(),
+                            ->label('Số năm kinh nghiệm') // Tên trường đã được điều chỉnh
+                            ->placeholder('Nhập số năm kinh nghiệm') // Placeholder để hướng dẫn người dùng
+                            ->columnSpan(1), // Span 1 column
+                    ]),
+                ])
+                ->label('Kỹ năng Nâng cao')
+                ->columnSpanFull(),
+            
 
                 // Group for Resume Type
                 Section::make('Loại Hồ sơ')
@@ -215,90 +220,146 @@ class ResumeResource extends Resource
 
                 // Group for Education Details
                 Repeater::make('educationDetails')
-                    ->relationship('educationDetails')
-                    ->schema([
+                ->relationship('educationDetails')
+                ->schema([
+                    Grid::make(2)->schema([ // Create a Grid with 2 columns
                         TextInput::make('training_place')
                             ->required()
-                            ->label('Tên Tổ chức'),
+                            ->label('Tên Tổ chức')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('degree_name')
                             ->required()
-                            ->label('Bằng cấp'),
+                            ->label('Bằng cấp')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('major')
                             ->required()
-                            ->label('Ngành học'),
+                            ->label('Ngành học')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày bắt đầu')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('completed_date')
                             ->label('Ngày hoàn thành')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         Textarea::make('description')
-                            ->label('Mô tả'),
-                    ])
-                    ->label('Chi tiết Học vấn')
-                    ->columnSpanFull(),
+                            ->label('Mô tả')
+                            ->columnSpan(2), // Span both columns for description
+                    ]),
+                ])
+                ->label('Chi tiết Học vấn')
+                ->columnSpanFull(),
+            
 
                 // Group for Certificates
                 Repeater::make('certificates')
-                    ->relationship('certificates')
-                    ->schema([
+                ->relationship('certificates')
+                ->schema([
+                    Grid::make(2)->schema([ // Create a Grid with 2 columns
                         TextInput::make('name')
                             ->required()
-                            ->label('Tên Chứng chỉ'),
+                            ->label('Tên Chứng chỉ')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('training_place')
                             ->required()
-                            ->label('Cơ sở cấp'),
+                            ->label('Cơ sở cấp')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày cấp')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('expiration_date')
                             ->label('Ngày hết hạn')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         Textarea::make('description')
-                            ->label('Mô tả'),
-                    ])
-                    ->label('Chứng chỉ')
-                    ->columnSpanFull(),
+                            ->label('Mô tả')
+                            ->columnSpan(2), // Span both columns for description
+                    ]),
+                ])
+                ->label('Chứng chỉ đạt được')
+                ->columnSpanFull(),
+            
 
                 // Group for Experience Details
                 Repeater::make('experienceDetails')
-                    ->relationship('experienceDetails')
-                    ->schema([
+                ->relationship('experienceDetails')
+                ->schema([
+                    Grid::make(2)->schema([ // Wrap schema in a Grid with 2 columns
                         TextInput::make('company_name')
                             ->required()
-                            ->label('Tên Công ty'),
+                            ->label('Tên Công ty')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('job_name') // Updated to match the fillable attribute
                             ->required()
-                            ->label('Chức vụ'),
+                            ->label('Chức vụ')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày bắt đầu')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         TextInput::make('end_date')
                             ->label('Ngày kết thúc')
-                            ->type('date'),
+                            ->type('date')
+                            ->columnSpan(1), // Span 1 column
+            
                         Textarea::make('description') // Updated to match the fillable attribute
                             ->required()
-                            ->label('Nhiệm vụ'),
-                    ])
-                    ->label('Chi tiết Kinh nghiệm')
-                    ->columnSpanFull(),
-
+                            ->label('Nhiệm vụ')
+                            ->columnSpan(2), // Span both columns for description
+                    ]),
+                ])
+                ->label('Kinh nghiệm làm việc')
+                ->columnSpanFull(),
+            
                 // Group for Language Skills
                 Repeater::make('languageSkills')
-                    ->relationship('languageSkills')
-                    ->schema([
-                        TextInput::make('language')
+                ->relationship('languageSkills')
+                ->schema([
+                    Grid::make(2)->schema([
+                        Select::make('language')
                             ->required()
-                            ->label('Ngôn ngữ'),
-                        TextInput::make('level') // Updated to match the fillable attribute
+                            ->label('Ngôn ngữ')
+                            ->options([
+                                'Tiếng Anh' => 'Tiếng Anh',
+                                'Tiếng Pháp' => 'Tiếng Pháp',
+                                'Tiếng Nhật' => 'Tiếng Nhật',
+                                'Tiếng Hàn' => 'Tiếng Hàn',
+                                'Tiếng Đức' => 'Tiếng Đức',
+                                'Tiếng Ý' => 'Tiếng Ý',
+                                'Tiếng Trung' => 'Tiếng Trung',
+                                'Tiếng Nga' => 'Tiếng Nga',
+                            ])
+                            
+                            ->columnSpan(1), // Span 1 column
+            
+                        TextInput::make('level') // This remains as a TextInput for proficiency level
                             ->required()
-                            ->label('Trình độ'),
-                    ])
-                    ->label('Kỹ năng Ngôn ngữ')
-                    ->columnSpanFull(),
+                            ->numeric()
+                            ->label('Trình độ %')
+                            ->columnSpan(1), // Span 1 column
+                    ]),
+                ])
+            
+                ->label('Kỹ năng Ngôn ngữ')
+                ->columnSpanFull(),
+            
 
             ]);
     }
