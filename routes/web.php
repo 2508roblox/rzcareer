@@ -10,6 +10,7 @@ use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
+use App\Livewire\DocumentAttachment;
 use App\Livewire\HomeIndex;
 use App\Livewire\Index;
 use App\Livewire\Site\Login;
@@ -20,7 +21,7 @@ use App\Livewire\ViecLam;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', HomeIndex::class)->name('index');
+Route::get('/', action: HomeIndex::class)->name('index');
 Route::get('/viec-lam/{slug}', ViecLam::class);
 Route::get('/tuyen-dung/{slug}', TuyenDung::class);
 Route::get('/cong-ty', CongTy::class);
@@ -35,6 +36,7 @@ Route::get('/candidate/cv-go', CvGo::class);
 Route::get('/candidate/change-password', ChangePassword::class);
 Route::get('/candidate/jobs-applied', JobsApplied::class);
 Route::get('/candidate/employers-viewed', EmployersViewed::class);
+Route::get('/candidate/document-attachment', DocumentAttachment::class);
 
 Route::get('/site/register', Register::class);
 Route::get('/site/login', Login::class);

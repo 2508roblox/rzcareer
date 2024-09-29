@@ -44,6 +44,10 @@ class Resume extends Model
         return $this->hasMany(ResumeCertificate::class);
     }
 
+    public function advancedSkills()
+    {
+        return $this->hasMany(ResumeAdvancedSkill::class);
+    }
     public function experienceDetails()
     {
         return $this->hasMany(ResumeExperienceDetail::class);

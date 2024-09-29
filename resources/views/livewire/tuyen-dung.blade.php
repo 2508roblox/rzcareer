@@ -78,759 +78,7 @@
 
     <body class="">
 
-        <header class="teks-header p-sm-3 p-2 teks-shadow sticky-top bg-white">
-            <div class="container d-none d-lg-block">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" title="Jobs on the GO"
-                        class="d-flex me-4 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                        <img width="134" height="40" src="/logo.png" alt="JobsGO">
-                    </a>
-
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
-                        <li class="nav-item dropdown">
-                            <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                                href="/viec-lam.html">
-                                <img src="/assets_livewire/img/job.svg" alt="job" loading="lazy"> Việc làm
-                            </a>
-                            <ul class="dropdown-menu pb-3">
-                                <li>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
-                                                <ul class="list-unstyled">
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-tai-chinh-ngan-hang.html"> Việc làm Tài
-                                                            Chính/Ngân Hàng</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-ke-toan-kiem-toan.html"> Việc làm Kế
-                                                            Toán/Kiểm Toán</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành
-                                                            Chính/Văn Phòng</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-kinh-doanh-ban-hang.html"> Việc làm Kinh
-                                                            Doanh/Bán Hàng</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-marketing.html"> Việc
-                                                            làm Marketing</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-xay-dung.html"> Việc
-                                                            làm Xây dựng</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-it-phan-mem.html"> Việc
-                                                            làm IT Phần Mềm</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành
-                                                            Chính/Văn Phòng</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-3 ps-sm-0">
-                                                <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
-                                                <ul class="list-unstyled">
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-tai-ho-chi-minh.html"> Việc làm tại Hồ Chí
-                                                            Minh</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-ha-noi.html">
-                                                            Việc làm tại Hà Nội</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-da-nang.html">
-                                                            Việc làm tại Đà Nẵng</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-can-tho.html">
-                                                            Việc làm tại Cần Thơ</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-binh-duong.html">
-                                                            Việc làm tại Bình Dương</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-hai-phong.html">
-                                                            Việc làm tại Hải Phòng</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-dong-nai.html">
-                                                            Việc làm tại Đồng Nai</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-tai-quang-ninh.html">
-                                                            Việc làm tại Quảng Ninh</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
-                                                <ul class="list-unstyled">
-                                                    <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html"> Việc
-                                                            làm Tuyển Gấp</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc
-                                                            làm Nổi Bật</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-lao-dong-pho-thong.html"> Việc làm Lao động
-                                                            phổ thông</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="/viec-lam-khong-can-bang-cap.html"> Việc làm Không
-                                                            cần bằng cấp</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html">
-                                                            Việc làm Online tại nhà</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-part-time.html"> Việc
-                                                            làm Part-time</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc
-                                                            làm Thời vụ</a></li>
-                                                    <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc
-                                                            làm Remote</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                                href="/cong-ty.html">
-                                <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a></li>
-                                <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                                <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động Sản</a></li>
-                                <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                                href="/mau-cv-xin-viec.html">
-                                <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/review-cv.html">Đánh giá CV <small
-                                            class="badge bg-warning">N</small></a></li>
-                                <li><a class="dropdown-item" href="/tao-cv-bang-ai.html">Tạo CV bằng AI </a></li>
-                                <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
-                                <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                                href="/blog/">
-                                <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy"> Phát triển
-                                sự nghiệp
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                                <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp Luật Lao
-                                        Động</a></li>
-                                <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp Bảo Hiểm Xã
-                                        Hội</a></li>
-                                <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a></li>
-                                <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương Gross -
-                                        Net</a></li>
-                                <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng Nghiệp</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm EQ</a></li>
-                                <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc nghiệm tính
-                                        cách MBTI</a></li>
-                                <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-enneagram.html">Trắc nghiệm
-                                        tính cách Enneagram</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <style>
-                        .status_on {
-                            color: #4CAF50 !important;
-                        }
-
-                        .status_off {
-                            color: #FF5722 !important;
-                        }
-                    </style>
-                    <div class="dropdown me-sm-3 me-0 text-end mr--20">
-                        <a href="#" style=" padding-top: 12px; display: flex !important; align-items:center;"
-                            class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img class="lazy rounded-1"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                data-src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg"
-                                alt="avatar" width="32" height="32">
-                            <span style="margin-left: 5px" class="">
-                                <div class="d-flex fw-bold text-capitalize">
-                                    web developer </div>
-                                <div id="status_job_search" class="status_on">Đang tìm việc</div>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu text-small">
-                            <style>
-                                .switcher {
-                                    display: inline-block;
-                                    position: relative;
-                                    font-size: 16px;
-                                }
-
-                                .status_off {
-                                    color: #FF5722 !important;
-                                }
-
-                                .switch__input {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 36px;
-                                    height: 20px;
-                                    opacity: 0;
-                                    z-index: 0;
-                                }
-
-                                .switch__label {
-                                    display: block;
-                                    padding: 0 0 0 44px;
-                                    cursor: pointer;
-                                    color: #4CAF50;
-                                    font-weight: 600;
-                                    font-size: 14px
-                                }
-
-                                .switch__label:before {
-                                    content: "";
-                                    position: absolute;
-                                    top: 5px;
-                                    left: 0;
-                                    width: 36px;
-                                    height: 14px;
-                                    background-color: rgba(0, 0, 0, 0.26);
-                                    border-radius: 14px;
-                                    z-index: 1;
-                                    transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-                                }
-
-                                .switch__label:after {
-                                    content: "";
-                                    position: absolute;
-                                    top: 2px;
-                                    left: 0;
-                                    width: 20px;
-                                    height: 20px;
-                                    background-color: #fff;
-                                    border-radius: 14px;
-                                    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-                                    z-index: 2;
-                                    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-                                    transition-property: left, background-color;
-                                }
-
-                                .switch__input:checked+.switch__label:before {
-                                    background-color: #9fcaa0;
-                                }
-
-                                .switch__input:checked+.switch__label:after {
-                                    left: 16px;
-                                    background-color: #4CAF50;
-                                }
-                            </style>
-                            <li><a class="dropdown-item" href="/candidate/pre-profile?tab=manage-resume"
-                                    title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
-                            <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i
-                                        class='bx bx-edit'></i> Cập nhật hồ sơ</a></li>
-                            <li><a class="dropdown-item"
-                                    data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank"
-                                    href="/candidate/detail?v=1727319941"
-                                    title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i
-                                        class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/candidate/jobs-applied"
-                                    title="Danh sách việc làm đã ứng tuyển"><i class='bx bx-check-square'></i> Việc
-                                    làm ứng tuyển</a></li>
-                            <li><a class="dropdown-item" href="/candidate/jobs-saved"
-                                    title="Danh sách việc làm đã lưu"><i class='bx bx-heart-circle'></i> Việc làm đã
-                                    lưu</a></li>
-                            <li><a class="dropdown-item" data-caption="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn"
-                                    target="_blank" href="/candidate/recruiter-view"
-                                    title="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn"><i
-                                        class='bx bx-buildings'></i> NTD đã xem hồ sơ</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/candidate/video-clip"
-                                    title="Video/Clip giới thiệu bản thân"><i class='bx bx-video'></i> Video CV</a>
-                            </li>
-                            <li><a class="dropdown-item" href="/candidate/change-password" title="Đổi mật khẩu"><i
-                                        class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="javascript: void(0)">
-                                    <div class="switcher"><input type="checkbox" id="switch__input"
-                                            class="switch__input" checked> <label for="switch__input"
-                                            id="switch__label" class="switch__label status_on">Đang tìm việc</label>
-                                    </div>
-                                </a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/site/logout" class="btn-colorgb-jgd"
-                                    data-reload="true" data-pjax="false"
-                                    title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"><i
-                                        class='bx bx-log-out-circle'></i> Đăng xuất</a></li>
-                            <script>
-                                window.addEventListener('load', function() {
-                                    $(function() {
-
-                                        $('#switch__input').on('change', function() {
-                                            $.ajax({
-                                                url: '/api/profile',
-                                                data: {
-                                                    pk: 1,
-                                                    name: 'status',
-                                                    value: $(this).is(':checked') ? 0 : 2
-                                                },
-                                                success: function(response) {
-                                                    response = $.parseJSON(response);
-                                                    let statusClass = response.mess === 'on' ? 'status_on' :
-                                                        'status_off';
-                                                    let statusText = response.mess === 'on' ? 'Đang tìm việc' :
-                                                        'Đã tắt tìm việc';
-                                                    $('#switch__input').prop('checked', response.mess === 'on');
-                                                    $('#status_job_search').text(statusText).removeClass(
-                                                        'status_on status_off').addClass(statusClass);
-                                                    $('#switch__label').text(statusText).removeClass(
-                                                        'status_on status_off').addClass(statusClass);
-                                                    $('.status').removeClass('status_on status_off').addClass(
-                                                        statusClass);
-                                                    $('.status').text(statusText);
-                                                },
-                                                error: function() {
-                                                    let statusClass = 'status_off';
-                                                    let statusText = 'Đã tắt tìm việc';
-                                                    $('#switch__input').prop('checked', false);
-                                                    $('#status_job_search').text(statusText).removeClass(
-                                                        'status_on status_off').addClass(statusClass);
-                                                    $('#switch__label').text(statusText).removeClass(
-                                                        'status_on status_off').addClass(statusClass);
-                                                    $('.status').removeClass('status_on status_off').addClass(
-                                                        statusClass);
-                                                }
-                                            });
-                                        });
-                                    });
-                                });
-                            </script>
-                        </ul>
-                    </div>
-                    <div class="vr d-none d-xl-block"></div>
-                    <div class="d-none d-xl-block ms-sm-3 btn-group">
-                        <button type="button"
-                            class="btn rounded-2 text-capitalize dropdown-toggle text-primary border bg-f4f4f4"
-                            data-bs-toggle="dropdown">Nhà tuyển dụng</button>
-                        <ul class="dropdown-menu">
-                            <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Đăng Tin
-                                    Online</a></li>
-                            <li><a target="_blank" class="dropdown-item"
-                                    href="https://employer.jobsgo.vn/site/candidates">Tìm Hồ Sơ</a></li>
-                            <!--<li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Headhunt</a></li>
-        <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Tuyển Mass</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="d-block d-lg-none">
-                <nav class="navbar bg-white p-0">
-                    <div class="container-fluid p-0">
-                        <a class="navbar-brand" href="/">
-                            <img width="134" height="40" src="/logo.png" alt="JobsGO">
-                        </a>
-                        <style>
-                            .status_on {
-                                color: #4CAF50 !important;
-                            }
-
-                            .status_off {
-                                color: #FF5722 !important;
-                            }
-                        </style>
-                        <div class="dropdown me-sm-3 me-0 text-end mr--20">
-                            <a href="#"
-                                style=" padding-top: 12px; display: flex !important; align-items:center;"
-                                class="d-block link-dark text-decoration-none dropdown-toggle"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="lazy rounded-1"
-                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                    data-src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg"
-                                    alt="avatar" width="32" height="32">
-                                <span style="margin-left: 5px" class="">
-                                    <div class="d-flex fw-bold text-capitalize">
-                                        web developer </div>
-                                    <div id="status_job_search" class="status_on">Đang tìm việc</div>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu text-small">
-                                <style>
-                                    .switcher {
-                                        display: inline-block;
-                                        position: relative;
-                                        font-size: 16px;
-                                    }
-
-                                    .status_off {
-                                        color: #FF5722 !important;
-                                    }
-
-                                    .switch__input {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        width: 36px;
-                                        height: 20px;
-                                        opacity: 0;
-                                        z-index: 0;
-                                    }
-
-                                    .switch__label {
-                                        display: block;
-                                        padding: 0 0 0 44px;
-                                        cursor: pointer;
-                                        color: #4CAF50;
-                                        font-weight: 600;
-                                        font-size: 14px
-                                    }
-
-                                    .switch__label:before {
-                                        content: "";
-                                        position: absolute;
-                                        top: 5px;
-                                        left: 0;
-                                        width: 36px;
-                                        height: 14px;
-                                        background-color: rgba(0, 0, 0, 0.26);
-                                        border-radius: 14px;
-                                        z-index: 1;
-                                        transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-                                    }
-
-                                    .switch__label:after {
-                                        content: "";
-                                        position: absolute;
-                                        top: 2px;
-                                        left: 0;
-                                        width: 20px;
-                                        height: 20px;
-                                        background-color: #fff;
-                                        border-radius: 14px;
-                                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-                                        z-index: 2;
-                                        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-                                        transition-property: left, background-color;
-                                    }
-
-                                    .switch__input:checked+.switch__label:before {
-                                        background-color: #9fcaa0;
-                                    }
-
-                                    .switch__input:checked+.switch__label:after {
-                                        left: 16px;
-                                        background-color: #4CAF50;
-                                    }
-                                </style>
-                                <li><a class="dropdown-item" href="/candidate/pre-profile?tab=manage-resume"
-                                        title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
-                                <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i
-                                            class='bx bx-edit'></i> Cập nhật hồ sơ</a></li>
-                                <li><a class="dropdown-item"
-                                        data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank"
-                                        href="/candidate/detail?v=1727319941"
-                                        title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i
-                                            class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/candidate/jobs-applied"
-                                        title="Danh sách việc làm đã ứng tuyển"><i class='bx bx-check-square'></i>
-                                        Việc làm ứng tuyển</a></li>
-                                <li><a class="dropdown-item" href="/candidate/jobs-saved"
-                                        title="Danh sách việc làm đã lưu"><i class='bx bx-heart-circle'></i> Việc làm
-                                        đã lưu</a></li>
-                                <li><a class="dropdown-item"
-                                        data-caption="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn" target="_blank"
-                                        href="/candidate/recruiter-view"
-                                        title="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn"><i
-                                            class='bx bx-buildings'></i> NTD đã xem hồ sơ</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/candidate/video-clip"
-                                        title="Video/Clip giới thiệu bản thân"><i class='bx bx-video'></i> Video
-                                        CV</a></li>
-                                <li><a class="dropdown-item" href="/candidate/change-password"
-                                        title="Đổi mật khẩu"><i class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="javascript: void(0)">
-                                        <div class="switcher"><input type="checkbox" id="switch__input"
-                                                class="switch__input" checked> <label for="switch__input"
-                                                id="switch__label" class="switch__label status_on">Đang tìm
-                                                việc</label></div>
-                                    </a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/site/logout" class="btn-colorgb-jgd"
-                                        data-reload="true" data-pjax="false"
-                                        title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"><i
-                                            class='bx bx-log-out-circle'></i> Đăng xuất</a></li>
-                                <script>
-                                    window.addEventListener('load', function() {
-                                        $(function() {
-
-                                            $('#switch__input').on('change', function() {
-                                                $.ajax({
-                                                    url: '/api/profile',
-                                                    data: {
-                                                        pk: 1,
-                                                        name: 'status',
-                                                        value: $(this).is(':checked') ? 0 : 2
-                                                    },
-                                                    success: function(response) {
-                                                        response = $.parseJSON(response);
-                                                        let statusClass = response.mess === 'on' ? 'status_on' :
-                                                            'status_off';
-                                                        let statusText = response.mess === 'on' ? 'Đang tìm việc' :
-                                                            'Đã tắt tìm việc';
-                                                        $('#switch__input').prop('checked', response.mess === 'on');
-                                                        $('#status_job_search').text(statusText).removeClass(
-                                                            'status_on status_off').addClass(statusClass);
-                                                        $('#switch__label').text(statusText).removeClass(
-                                                            'status_on status_off').addClass(statusClass);
-                                                        $('.status').removeClass('status_on status_off').addClass(
-                                                            statusClass);
-                                                        $('.status').text(statusText);
-                                                    },
-                                                    error: function() {
-                                                        let statusClass = 'status_off';
-                                                        let statusText = 'Đã tắt tìm việc';
-                                                        $('#switch__input').prop('checked', false);
-                                                        $('#status_job_search').text(statusText).removeClass(
-                                                            'status_on status_off').addClass(statusClass);
-                                                        $('#switch__label').text(statusText).removeClass(
-                                                            'status_on status_off').addClass(statusClass);
-                                                        $('.status').removeClass('status_on status_off').addClass(
-                                                            statusClass);
-                                                    }
-                                                });
-                                            });
-                                        });
-                                    });
-                                </script>
-                            </ul>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                            <span class="navbar-toggler-icon"></span> <span class="d-none">Menu</span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item dropdown">
-                                        <a data-bs-toggle="dropdown" data-toggle="dropdown"
-                                            class="nav-link dropdown-toggle" href="/viec-lam.html">
-                                            <img src="/assets_livewire/img/job.svg" alt="job" loading="lazy">
-                                            Việc làm
-                                        </a>
-                                        <ul class="dropdown-menu pb-3">
-                                            <li>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-sm-4">
-                                                            <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề
-                                                            </div>
-                                                            <ul class="list-unstyled">
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-chinh-ngan-hang.html"> Việc
-                                                                        làm Tài Chính/Ngân Hàng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-ke-toan-kiem-toan.html"> Việc
-                                                                        làm Kế Toán/Kiểm Toán</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-hanh-chinh-van-phong.html">
-                                                                        Việc làm Hành Chính/Văn Phòng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-kinh-doanh-ban-hang.html"> Việc
-                                                                        làm Kinh Doanh/Bán Hàng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-marketing.html"> Việc làm
-                                                                        Marketing</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-xay-dung.html"> Việc làm Xây
-                                                                        dựng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-it-phan-mem.html"> Việc làm IT
-                                                                        Phần Mềm</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-hanh-chinh-van-phong.html">
-                                                                        Việc làm Hành Chính/Văn Phòng</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-3 ps-sm-0">
-                                                            <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm
-                                                            </div>
-                                                            <ul class="list-unstyled">
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-ho-chi-minh.html"> Việc làm
-                                                                        tại Hồ Chí Minh</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-ha-noi.html"> Việc làm tại
-                                                                        Hà Nội</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-da-nang.html"> Việc làm tại
-                                                                        Đà Nẵng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-can-tho.html"> Việc làm tại
-                                                                        Cần Thơ</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-binh-duong.html"> Việc làm
-                                                                        tại Bình Dương</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-hai-phong.html"> Việc làm
-                                                                        tại Hải Phòng</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-dong-nai.html"> Việc làm
-                                                                        tại Đồng Nai</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tai-quang-ninh.html"> Việc làm
-                                                                        tại Quảng Ninh</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu
-                                                            </div>
-                                                            <ul class="list-unstyled">
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-tuyen-gap.html"> Việc làm Tuyển
-                                                                        Gấp</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-noi-bat.html"> Việc làm Nổi
-                                                                        Bật</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-lao-dong-pho-thong.html"> Việc
-                                                                        làm Lao động phổ thông</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-khong-can-bang-cap.html"> Việc
-                                                                        làm Không cần bằng cấp</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-online-tai-nha.html"> Việc làm
-                                                                        Online tại nhà</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-part-time.html"> Việc làm
-                                                                        Part-time</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-thoi-vu.html"> Việc làm Thời
-                                                                        vụ</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/viec-lam-remote.html"> Việc làm
-                                                                        Remote</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a data-bs-toggle="dropdown" data-toggle="dropdown"
-                                            class="nav-link dropdown-toggle" href="/cong-ty.html">
-                                            <img src="/assets_livewire/img/employer.svg" alt="job"
-                                                loading="lazy"> Công ty
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                                            <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân
-                                                    Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                                            <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                                            <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động
-                                                    Sản</a></li>
-                                            <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a data-bs-toggle="dropdown" data-toggle="dropdown"
-                                            class="nav-link dropdown-toggle" href="/mau-cv-xin-viec.html">
-                                            <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV
-                                            / Hồ sơ
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="/review-cv.html">Đánh giá CV <small
-                                                        class="badge bg-warning">N</small></a></li>
-                                            <li><a class="dropdown-item" href="/tao-cv-bang-ai.html">Tạo CV bằng AI
-                                                </a></li>
-                                            <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
-                                            <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a data-bs-toggle="dropdown" data-toggle="dropdown"
-                                            class="nav-link dropdown-toggle" href="/blog/">
-                                            <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy">
-                                            Phát triển sự nghiệp
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                                            <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp
-                                                    Luật Lao Động</a></li>
-                                            <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp
-                                                    Bảo Hiểm Xã Hội</a></li>
-                                            <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương
-                                                    Gross - Net</a></li>
-                                            <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng
-                                                    Nghiệp</a></li>
-                                            <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm
-                                                    EQ</a></li>
-                                            <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc
-                                                    nghiệm tính cách MBTI</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/trac-nghiem-tinh-cach-enneagram.html">Trắc nghiệm tính cách
-                                                    Enneagram</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <div class="vr d-none d-xl-block"></div>
-                                <div class="d-none d-xl-block ms-sm-3 btn-group">
-                                    <button type="button"
-                                        class="btn rounded-2 text-capitalize dropdown-toggle text-primary border bg-f4f4f4"
-                                        data-bs-toggle="dropdown">Nhà tuyển dụng</button>
-                                    <ul class="dropdown-menu">
-                                        <li><a target="_blank" class="dropdown-item"
-                                                href="https://employer.jobsgo.vn/">Đăng Tin Online</a></li>
-                                        <li><a target="_blank" class="dropdown-item"
-                                                href="https://employer.jobsgo.vn/site/candidates">Tìm Hồ Sơ</a></li>
-                                        <!--<li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Headhunt</a></li>
-        <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Tuyển Mass</a></li>-->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+     @livewire('inc.header')
         <main>
             <link rel="stylesheet" href="/assets_livewire/teks/css/employer.min.css?v=234208153092">
             <style>
@@ -1038,8 +286,7 @@
                         </div>
 
                         <div class="d-block border-top d-sm-none py-2">
-                            <button
-                                class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-2 mb-2"
+                            <button class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-2 mb-2"
                                 data-eid="{{ $company->id }}">
                                 <span><i class='bx bx-bell'></i> Theo dõi</span>
                             </button>
@@ -1124,46 +371,59 @@
                                         </div>
                                         <div class="teks-section-content teks-swiper">
 
-                                            <div id="carousel3" class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel">
+                                            <div id="carousel3" class="carousel slide" data-bs-interval="5000"
+                                                data-bs-ride="carousel">
                                                 <div class="carousel-inner">
-                                                    @foreach($jobPosts->chunk(2) as $index => $chunk)  {{-- Chunk 2 jobs per carousel item --}}
-                                                        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                                            <div class="row row-cols-1 row-cols-lg-2 g-2">
-                                                                @foreach($chunk as $job)
-                                                                    <div class="col">
-                                                                        <a href="{{ url('viec-lam/' .  $job->slug)   }}" class="d-flex teks-item text-dark">
-                                                                            <div class="flex-shrink-0 position-relative">
-                                                                                <img class="lazy" width="80" height="80"
-                                                                                     onerror="this.src='/img/employer-logo.jpg'"
-                                                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                                                     data-src="{{  Storage::url(optional($job->company)->company_image_url ?? 'img/employer-logo.jpg') }}"
-                                                                                     alt="{{ $job->company->name }}">
-                                                                            </div>
-                                                                            <div class="flex-grow-1 ms-2">
-                                                                                <h3 class="h5 tooltip">{{ $job->job_name }}</h3>
-                                                                                <div class="h6 text-muted">{{ $job->company->name }}</div>
-                                                                                <ul class="p-0">
-                                                                                    <li class="list-group-item list-group-item-action">
-                                                                                        <i class='bx bx-money'></i> {{ $job->salary_min ? number_format($job->salary_min) . ' - ' . number_format($job->salary_max) . ' VND' : 'Thỏa thuận' }}
-                                                                                    </li>
-                                                                                    <li class="list-group-item list-group-item-action">
-                                                                                        <i class='bx bx-map'></i> {{ optional($job->location)->name }}
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </a>
+                                                    @foreach($jobPosts->chunk(2) as $index => $chunk) {{-- Chunk 2 jobs
+                                                    per carousel item --}}
+                                                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                                        <div class="row row-cols-1 row-cols-lg-2 g-2">
+                                                            @foreach($chunk as $job)
+                                                            <div class="col">
+                                                                <a href="{{ url('viec-lam/' .  $job->slug)   }}"
+                                                                    class="d-flex teks-item text-dark">
+                                                                    <div class="flex-shrink-0 position-relative">
+                                                                        <img class="lazy" width="80" height="80"
+                                                                            onerror="this.src='/img/employer-logo.jpg'"
+                                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                                            data-src="{{  Storage::url(optional($job->company)->company_image_url ?? 'img/employer-logo.jpg') }}"
+                                                                            alt="{{ $job->company->name }}">
                                                                     </div>
-                                                                @endforeach
+                                                                    <div class="flex-grow-1 ms-2">
+                                                                        <h3 class="h5 tooltip">{{ $job->job_name }}</h3>
+                                                                        <div class="h6 text-muted">{{
+                                                                            $job->company->name }}</div>
+                                                                        <ul class="p-0">
+                                                                            <li
+                                                                                class="list-group-item list-group-item-action">
+                                                                                <i class='bx bx-money'></i> {{
+                                                                                $job->salary_min ?
+                                                                                number_format($job->salary_min) . ' - '
+                                                                                . number_format($job->salary_max) . '
+                                                                                VND' : 'Thỏa thuận' }}
+                                                                            </li>
+                                                                            <li
+                                                                                class="list-group-item list-group-item-action">
+                                                                                <i class='bx bx-map'></i> {{
+                                                                                optional($job->location)->name }}
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </a>
                                                             </div>
+                                                            @endforeach
                                                         </div>
+                                                    </div>
                                                     @endforeach
                                                 </div>
                                                 <!-- Add Carousel Controls if needed -->
-                                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-bs-target="#carousel3" data-bs-slide="prev">
                                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                     <span class="visually-hidden">Previous</span>
                                                 </button>
-                                                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                                                <button class="carousel-control-next" type="button"
+                                                    data-bs-target="#carousel3" data-bs-slide="next">
                                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                     <span class="visually-hidden">Next</span>
                                                 </button>
@@ -1188,7 +448,8 @@
                                             <li class="d-flex align-items-center">
                                                 <i class='bx bx-globe'></i>
                                                 <span>
-                                                    <a target="_blank" rel="dofollow" href="{{ $company->website_url ?? '#' }}">
+                                                    <a target="_blank" rel="dofollow"
+                                                        href="{{ $company->website_url ?? '#' }}">
                                                         <p>{{ $company->website_url ?? 'Chưa có website.' }}</p>
                                                     </a>
                                                 </span>
@@ -1211,17 +472,26 @@
 
                                         <ul class="list-unstyled list-group list-group-vertical my-3">
                                             @if($company->facebook_url)
-                                                <li class="mb-2"><a target="_blank" rel="nofollow" href="{{ $company->facebook_url }}"><i class="bx bxl-facebook"></i> Facebook</a></li>
+                                            <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                    href="{{ $company->facebook_url }}"><i class="bx bxl-facebook"></i>
+                                                    Facebook</a></li>
                                             @endif
                                             @if($company->youtube_url)
-                                                <li class="mb-2"><a target="_blank" rel="nofollow" href="{{ $company->youtube_url }}"><i class="bx bxl-youtube"></i> YouTube</a></li>
+                                            <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                    href="{{ $company->youtube_url }}"><i class="bx bxl-youtube"></i>
+                                                    YouTube</a></li>
                                             @endif
                                             @if($company->linkedin_url)
-                                                <li class="mb-2"><a target="_blank" rel="nofollow" href="{{ $company->linkedin_url }}"><i class="bx bxl-linkedin"></i> LinkedIn</a></li>
+                                            <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                    href="{{ $company->linkedin_url }}"><i class="bx bxl-linkedin"></i>
+                                                    LinkedIn</a></li>
                                             @endif
                                         </ul>
 
-                                        <iframe style="background: #ddd; height: 200px; width: 100%; border: 0;" class="mb-3 clearfix" src="https://maps.google.com/maps?q={{ urlencode($company->address) }}&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                                        <iframe style="background: #ddd; height: 200px; width: 100%; border: 0;"
+                                            class="mb-3 clearfix"
+                                            src="https://maps.google.com/maps?q={{ urlencode($company->address) }}&output=embed"
+                                            allowfullscreen="" loading="lazy"></iframe>
                                     </div>
                                 </div>
 
@@ -1484,8 +754,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-12">
-                                                                                <div
-                                                                                    class="review-block-rate rating-1">
+                                                                                <div class="review-block-rate rating-1">
                                                                                     <button type="button"
                                                                                         class="btn btn-default btn-grey btn-xs"
                                                                                         data-val="1"
@@ -1526,8 +795,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-12">
-                                                                                <div
-                                                                                    class="review-block-rate rating-2">
+                                                                                <div class="review-block-rate rating-2">
                                                                                     <button type="button"
                                                                                         class="btn btn-default btn-grey btn-xs"
                                                                                         data-val="1"
@@ -1568,8 +836,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-12">
-                                                                                <div
-                                                                                    class="review-block-rate rating-3">
+                                                                                <div class="review-block-rate rating-3">
                                                                                     <button type="button"
                                                                                         class="btn btn-default btn-grey btn-xs"
                                                                                         data-val="1"
@@ -1610,8 +877,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-12">
-                                                                                <div
-                                                                                    class="review-block-rate rating-4">
+                                                                                <div class="review-block-rate rating-4">
                                                                                     <button type="button"
                                                                                         class="btn btn-default btn-grey btn-xs"
                                                                                         data-val="1"
@@ -1652,8 +918,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-12">
-                                                                                <div
-                                                                                    class="review-block-rate rating-5">
+                                                                                <div class="review-block-rate rating-5">
                                                                                     <button type="button"
                                                                                         class="btn btn-default btn-grey btn-xs"
                                                                                         data-val="1"
@@ -1692,10 +957,11 @@
                                                                             class="form-control mb-2 rating-title"
                                                                             placeholder="Tiêu đề *"></div>
                                                                     <div class="col-md-12 col-sm-12">
-                                                                        <textarea class="form-control mb-2 rating-content" placeholder="Nội dung *"></textarea>
+                                                                        <textarea
+                                                                            class="form-control mb-2 rating-content"
+                                                                            placeholder="Nội dung *"></textarea>
                                                                     </div>
-                                                                    <button
-                                                                        class="thm-btn btn btn-primary btn-comment"
+                                                                    <button class="thm-btn btn btn-primary btn-comment"
                                                                         type="button"><i
                                                                             class="fa fa-paper-plane-o"></i> Gửi đánh
                                                                         giá</button>
@@ -1818,8 +1084,8 @@
                         </div>
                         <div class="col-sm-3 col-6 col-xs-6 col-md-2">
                             <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo địa điểm">Việc theo địa điểm</div>
+                                <div class="widgettitle widget-title text-dark fw-bold" title="Việc làm theo địa điểm">
+                                    Việc theo địa điểm</div>
                                 <div class="textwidget">
                                     <div class="textwidget">
                                         <ul class="footer-navigation list-unstyled">
@@ -1829,14 +1095,14 @@
                                                     Nội</a></li>
                                             <li><a href="/viec-lam-tai-da-nang.html" title="Việc làm tại Đà Nẵng">Đà
                                                     Nẵng</a></li>
-                                            <li><a href="/viec-lam-tai-can-tho.html"
-                                                    title="Việc làm tại Cần Thơ">Cần Thơ</a></li>
+                                            <li><a href="/viec-lam-tai-can-tho.html" title="Việc làm tại Cần Thơ">Cần
+                                                    Thơ</a></li>
                                             <li><a href="/viec-lam-tai-binh-duong.html"
                                                     title="Việc làm tại Bình Dương">Bình Dương</a></li>
                                             <li><a href="/viec-lam-tai-hai-phong.html"
                                                     title="Việc làm tại Hải Phòng">Hải Phòng</a></li>
-                                            <li><a href="/viec-lam-tai-dong-nai.html"
-                                                    title="Việc làm tại Đồng Nai">Đồng Nai</a></li>
+                                            <li><a href="/viec-lam-tai-dong-nai.html" title="Việc làm tại Đồng Nai">Đồng
+                                                    Nai</a></li>
                                             <li><a href="/viec-lam-tai-quang-ninh.html"
                                                     title="Việc làm tại Quảng Ninh">Quảng Ninh</a></li>
                                         </ul>
@@ -1859,8 +1125,8 @@
                                                 title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a></li>
                                         <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
                                                 title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                        <li><a href="/viec-lam-marketing.html"
-                                                title="Việc làm Marketing">Marketing</a></li>
+                                        <li><a href="/viec-lam-marketing.html" title="Việc làm Marketing">Marketing</a>
+                                        </li>
                                         <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây Dựng</a>
                                         </li>
                                         <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài Xế</a></li>
@@ -1876,14 +1142,14 @@
                                     title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
                                 <div class="textwidget">
                                     <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-thuc-tap-sinh.html"
-                                                title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
+                                        <li><a href="/viec-lam-thuc-tap-sinh.html" title="Việc làm Thực Tập Sinh">Thực
+                                                Tập Sinh</a></li>
                                         <li><a href="/viec-lam-tro-ly-giam-doc.html" title="Việc làm Trợ Lý">Trợ
                                                 Lý</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-van-phong.html"
-                                                title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
-                                        <li><a href="/viec-lam-truong-phong.html"
-                                                title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
+                                        <li><a href="/viec-lam-nhan-vien-van-phong.html" title="Việc làm Tài Xế">Nhân
+                                                Viên Văn Phòng</a></li>
+                                        <li><a href="/viec-lam-truong-phong.html" title="Việc làm Trưởng Phòng">Trưởng
+                                                Phòng</a></li>
                                         <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám đốc</a>
                                         </li>
                                         <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem tất cả
@@ -1894,12 +1160,12 @@
                         </div>
                         <div class="col-sm-3 col-6 col-xs-6 col-md-2">
                             <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo loại hình">Việc theo loại hình</div>
+                                <div class="widgettitle widget-title text-dark fw-bold" title="Việc làm theo loại hình">
+                                    Việc theo loại hình</div>
                                 <div class="textwidget">
                                     <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-part-time.html"
-                                                title="Việc làm Part-time">Part-time</a></li>
+                                        <li><a href="/viec-lam-part-time.html" title="Việc làm Part-time">Part-time</a>
+                                        </li>
                                         <li><a href="/viec-lam-online.html" title="Việc làm Online">Online</a></li>
                                         <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời vụ</a>
                                         </li>
@@ -1909,8 +1175,8 @@
                                         <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
                                                 target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                                         <li class="list-inline-item"><a
-                                                href="https://www.linkedin.com/company/josbgo.vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
+                                                href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
+                                                    class='bx bx-xs bxl-linkedin'></i></a></li>
                                         <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
                                                 target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
                                     </ul>
@@ -1925,8 +1191,8 @@
                     <div class="row">
                         <div class="col-12 col-sm-10">
                             <ul class="list-inline list-unstyled mb-1 text-primary">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
+                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/about-us"
+                                        title="Về chúng tôi"><u>Giới
                                             thiệu</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                         href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
@@ -1942,8 +1208,8 @@
                                         href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
                                             thuận sử dụng</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/privacy-policy"
-                                        title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
+                                        href="https://jobsgo.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo
+                                            mật</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                         href="https://employer.jobsgo.vn"
                                         title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
@@ -1952,17 +1218,16 @@
                                         title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
                                 <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
                                         title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
-                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi" target="_blank"
+                                        title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
                                 <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
                                         title="Sơ đồ trang web"><u>Sitemap</u></a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-2">
                             <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
-                                            class='bx bx-xs bxl-facebook'></i></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/JobsGOVN/"
+                                        target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
                                         href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
                                             class='bx bx-xs bxl-linkedin'></i></a></li>
@@ -1981,13 +1246,12 @@
                         </div>
                         <div class="col-sm-2">
                             <div class="text-center">
-                                <a target="_blank" rel="nofollow"
-                                    href="http://online.gov.vn/Home/WebDetails/73770">
+                                <a target="_blank" rel="nofollow" href="http://online.gov.vn/Home/WebDetails/73770">
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/online-gov.svg" alt="JobsGO"
-                                        width="100" height="38">
+                                        data-src="/assets_livewire/teks/img/online-gov.svg" alt="JobsGO" width="100"
+                                        height="38">
 
                                 </a>
                                 <a target="_blank" rel="nofollow"
@@ -1996,8 +1260,8 @@
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO"
-                                        width="100" height="21">
+                                        data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO" width="100"
+                                        height="21">
 
                                 </a>
                                 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
@@ -2060,8 +1324,7 @@
                 <div class="toast-header">
                     <strong class="me-auto">Thông báo</strong>
                     <small class="">ngay bây giờ</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
 
@@ -2115,15 +1378,13 @@
             });
         </script>
 
-        <div class="modal fade" id="cv-modal" tabindex="-1" aria-labelledby="cv-modal-label"
-            aria-hidden="true">
+        <div class="modal fade" id="cv-modal" tabindex="-1" aria-labelledby="cv-modal-label" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="cv-modal-label">Tính năng viết CV tự động bằng AI trong vòng 2
                             phút!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <video controls width="100%">
@@ -2139,9 +1400,8 @@
         </div>
         <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
             style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
-            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy"
-                height="40" width="40" src="/assets_livewire/teks/img/jobsgo-ai-robot.svg?v=1.2"
-                alt="JobsGO AI"> </a>
+            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40"
+                src="/assets_livewire/teks/img/jobsgo-ai-robot.svg?v=1.2" alt="JobsGO AI"> </a>
         <script>
             window.addEventListener('load', function() {
                 $(function() {

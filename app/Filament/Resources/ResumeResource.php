@@ -179,6 +179,22 @@ class ResumeResource extends Resource
                             ->label('ID Công khai'),
                     ])
                     ->columnSpanFull(),
+                // Group for Advanced Skills
+                Repeater::make('advancedSkills') // Tên trường cho kỹ năng nâng cao
+                    ->relationship('advancedSkills') // Đảm bảo mối quan hệ này đã được định nghĩa trong model
+                    ->schema([
+                        TextInput::make('name')
+                            ->required()
+                            ->label('Tên Kỹ năng Nâng cao'),
+                   
+                        TextInput::make('level')
+                            ->required()
+                            ->numeric(1)
+                              ->label('Số năm kinh nghiệm') // Tên trường đã được điều chỉnh
+                            ->placeholder('Nhập số năm kinh nghiệm'), // Placeholder để hướng dẫn người dùng
+                    ])
+                    ->label('Kỹ năng Nâng cao')
+                    ->columnSpanFull(),
 
                 // Group for Resume Type
                 Section::make('Loại Hồ sơ')
