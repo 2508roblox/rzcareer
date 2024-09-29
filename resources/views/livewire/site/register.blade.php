@@ -157,9 +157,8 @@
                     </style>
 
                     <form wire:submit.prevent="register" class="login-form">
-                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="/site-logo">
-                            <img src="/assets_livewire/assets/layout/img/logo-2019-2.png" alt="JobsGO">
-                            <span class="slogan">Jobs on the Go</span>
+                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="site-logo">
+                            <img src="/logo-new.png" alt="JobsGO" height="50px" style="width: 50px !important; ">
                         </a>
 
                         <div class="panel panel-body">

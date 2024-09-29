@@ -6,68 +6,135 @@
                     <div>
                         <div>
 
-                            <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+                            <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+                            <!-- Please send your resume with cover letter to team@jobsgo.vn -->
                             <!DOCTYPE html>
                             <html lang="vi-VN">
 
                             <head>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2" crossorigin>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-                                <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
+                                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2"
+                                    as="font" type="font/woff2" crossorigin>
+                                <link rel="preload"
+                                    href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
+                                    type="font/woff2" crossorigin>
+                                <link rel="preload"
+                                    href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font"
+                                    type="font/woff2" crossorigin>
+                                <link rel="preload"
+                                    href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font"
+                                    type="font/woff2" crossorigin>
+                                <link rel="preload"
+                                    href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font"
+                                    type="font/woff2" crossorigin>
+                                <link rel="preload"
+                                    href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
+                                    type="font/woff2" crossorigin>
+                                <meta name="google-site-verification"
+                                    content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
                                 <meta charset="UTF-8">
                                 <link href="/assets_livewire/teks/css/icons.min.css?v=2342081531001" rel="stylesheet">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                                <meta name="viewport"
+                                    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
                                 <meta name="robots" content="noindex, nofollow">
                                 <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-                                <meta name="csrf-token" content="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
+                                <meta name="csrf-token"
+                                    content="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
 
                                 <title>JobsGO - Quản lý CV</title>
 
-                                <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/core.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/components.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/colors.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/extras/animate.min.css" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-                                <link href="https://jobsgo.vn/cv_template/dist/css/introjs.css?v=2342081531001" rel="stylesheet" type="text/css">
-                                <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
-                                <link href="https://jobsgo.vn/css/v2.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/nicescroll.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/drilldown.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/pace.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/prism.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/spin.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/ladda.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_buttons.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_select2.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/main.js?colorgb=2342081531001"></script>
-                                <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js"></script>
-                                <script type="text/javascript" src="https://jobsgo.vn/cv_template/dist/js/intro.js?v=2342081531001"></script>
+                                <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css"
+                                    rel="stylesheet" type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css"
+                                    rel="stylesheet" type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/bootstrap.min.css" rel="stylesheet"
+                                    type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/core.min.css" rel="stylesheet"
+                                    type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/components.min.css" rel="stylesheet"
+                                    type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/colors.min.css" rel="stylesheet"
+                                    type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/extras/animate.min.css" rel="stylesheet"
+                                    type="text/css">
+                                <link
+                                    href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css"
+                                    rel="stylesheet" type="text/css">
+                                <link href="https://jobsgo.vn/cv_template/dist/css/introjs.css?v=2342081531001"
+                                    rel="stylesheet" type="text/css">
+                                <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=2342081531001"
+                                    rel="stylesheet" type="text/css">
+                                <link href="https://jobsgo.vn/css/v2.css?colorgb=2342081531001" rel="stylesheet"
+                                    type="text/css">
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/core/libraries/jquery.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/ui/nicescroll.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/ui/drilldown.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/loaders/pace.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/ui/prism.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/buttons/spin.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/buttons/ladda.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/pages/components_buttons.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/pages/form_select2.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=2342081531001">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=2342081531001">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=2342081531001"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=2342081531001">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=2342081531001">
+                                </script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/main.js?colorgb=2342081531001"></script>
+                                <script type="text/javascript"
+                                    src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js">
+                                </script>
+                                <script type="text/javascript"
+                                    src="https://jobsgo.vn/cv_template/dist/js/intro.js?v=2342081531001"></script>
 
 
 
@@ -107,7 +174,8 @@
                                         color: #FF5722 !important;
                                     }
                                 </style>
-                                <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
+                                <script data-type="lazy"
+                                    data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
                                 <script>
                                     window.dataLayer = window.dataLayer || [];
 
@@ -208,8 +276,10 @@
                                                     color: #FF5722 !important;
                                                 }
                                             </style>
-                                            <script type="text/javascript" src="/bolt/assets/js/plugins/sliders/ion_rangeslider.min.js"></script>
-                                            <script type="text/javascript" src="/bolt/assets/js/plugins/ui/moment/moment_locales.min.js"></script>
+                                            <script type="text/javascript"
+                                                src="/bolt/assets/js/plugins/sliders/ion_rangeslider.min.js"></script>
+                                            <script type="text/javascript"
+                                                src="/bolt/assets/js/plugins/ui/moment/moment_locales.min.js"></script>
 
 
 
@@ -218,17 +288,24 @@
                                             <div class="modal fade" id="phoneAuthModal">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style=" padding: 15px 30px 5px !important;">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h5 class="text-bold modal-title text-uppercase" id="phoneAuthModalLabel">Xác minh số điện thoại qua Zalo</h5>
+                                                        <div class="modal-header"
+                                                            style=" padding: 15px 30px 5px !important;">
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h5 class="text-bold modal-title text-uppercase"
+                                                                id="phoneAuthModalLabel">Xác minh số điện thoại qua Zalo
+                                                            </h5>
                                                         </div>
                                                         <div class="modal-body">
                                                             <form id="phoneAuthForm">
                                                                 <div class="form-group">
                                                                     <label for="phoneNumber">Số điện thoại Zalo:</label>
-                                                                    <input maxlength="10" type="text" class="form-control" value="" id="phoneNumber" placeholder="Nhập SĐT Zalo của bạn">
+                                                                    <input maxlength="10" type="text"
+                                                                        class="form-control" value="" id="phoneNumber"
+                                                                        placeholder="Nhập SĐT Zalo của bạn">
                                                                 </div>
-                                                                <button type="submit" class="btn btn-primary">Gửi mã xác thực</button>
+                                                                <button type="submit" class="btn btn-primary">Gửi mã xác
+                                                                    thực</button>
                                                             </form>
                                                         </div>
                                                     </div>
@@ -238,16 +315,21 @@
                                             <div class="modal fade" id="otpVerificationModal">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style=" padding: 15px 30px 5px !important;">
-                                                            <h5 class="text-bold modal-title text-uppercase" id="otpVerificationModalLabel">Nhập mã xác thực OTP</h5>
+                                                        <div class="modal-header"
+                                                            style=" padding: 15px 30px 5px !important;">
+                                                            <h5 class="text-bold modal-title text-uppercase"
+                                                                id="otpVerificationModalLabel">Nhập mã xác thực OTP</h5>
                                                         </div>
                                                         <div class="modal-body">
                                                             <form id="otpVerificationForm">
                                                                 <div class="form-group">
                                                                     <label for="otpCode">Mã OTP trên Zalo:</label>
-                                                                    <input type="number" class="form-control" id="otpCode" placeholder="Nhập mã xác thực từ Zalo">
+                                                                    <input type="number" class="form-control"
+                                                                        id="otpCode"
+                                                                        placeholder="Nhập mã xác thực từ Zalo">
                                                                 </div>
-                                                                <button type="submit" class="btn btn-primary">Xác minh ngay</button>
+                                                                <button type="submit" class="btn btn-primary">Xác minh
+                                                                    ngay</button>
                                                             </form>
                                                         </div>
                                                     </div>
@@ -322,24 +404,33 @@
 
 
 
-                                            <div class="btn-group mb-20 btn-links hide" style="width:100%; text-align: center">
-                                                <a href="/candidate/dashboard" class="border-primary text-uppercase text-bold btn btn-default"><i
+                                            <div class="btn-group mb-20 btn-links hide"
+                                                style="width:100%; text-align: center">
+                                                <a href="/candidate/dashboard"
+                                                    class="border-primary text-uppercase text-bold btn btn-default"><i
                                                         class="fa fa-dashboard"></i> Bảng tin</a>
                                                 <a href="/candidate/manage-resume"
-                                                    class="border-primary text-uppercase text-bold btn btn-default"><i class="fa fa-line-chart"></i> Quản
+                                                    class="border-primary text-uppercase text-bold btn btn-default"><i
+                                                        class="fa fa-line-chart"></i> Quản
                                                     lý hồ sơ</a>
-                                                <a href="/candidate/import-cv-data" class="border-primary text-uppercase text-bold btn btn-default"><i
+                                                <a href="/candidate/import-cv-data"
+                                                    class="border-primary text-uppercase text-bold btn btn-default"><i
                                                         class="fa fa-upload"></i> Tải lên CV có sẵn</a>
                                                 <a href="/candidate/review"
-                                                    class="border-primary text-uppercase text-bold btn btn-primary current"><i class="fa fa-list-alt"></i> Hoàn
-                                                    thiện CV <div style="position:absolute;top:-5px;right:0px;font-size:9px;color:white;background:#ff5722;border-radius: 9px;width: 16px;height: 16px;line-height: 16px;;text-align:center">67</div></a>
+                                                    class="border-primary text-uppercase text-bold btn btn-primary current"><i
+                                                        class="fa fa-list-alt"></i> Hoàn
+                                                    thiện CV <div
+                                                        style="position:absolute;top:-5px;right:0px;font-size:9px;color:white;background:#ff5722;border-radius: 9px;width: 16px;height: 16px;line-height: 16px;;text-align:center">
+                                                        67</div></a>
                                                 <!--  <a href="candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
                                                 <!--"><i class="fa fa-exclamation-triangle"></i> Sửa lỗi CV-->
                                                 <!--</a>-->
                                                 <a href="candidate/pre-profile?tab=analyze"
-                                                    class="border-primary text-uppercase text-bold btn btn-default"><i class="fa fa-line-chart"></i> Phân
+                                                    class="border-primary text-uppercase text-bold btn btn-default"><i
+                                                        class="fa fa-line-chart"></i> Phân
                                                     tích CV</a>
-                                                <a href="cv-go" class="border-primary text-uppercase text-bold btn  btn-default"><i
+                                                <a href="cv-go"
+                                                    class="border-primary text-uppercase text-bold btn  btn-default"><i
                                                         class="fa fa-user"></i> Chọn Mẫu CV</a>
                                             </div>
 
@@ -347,8 +438,10 @@
                                                 @livewire('inc.breadcrumb')
                                             </nav>
                                             <div class="alert-candidate">
-                                                <div class="alert alert-info"><i class="icon-file-upload2"></i> Tiết kiệm thời gian cập nhật hồ sơ bằng cách tải
-                                                    lên CV. <a href="https://jobsgo.vn/phan-tich-cv.html" target="_blank"><u><b>Upload CV ngay!</b></u></a>
+                                                <div class="alert alert-info"><i class="icon-file-upload2"></i> Tiết
+                                                    kiệm thời gian cập nhật hồ sơ bằng cách tải
+                                                    lên CV. <a href="https://jobsgo.vn/phan-tich-cv.html"
+                                                        target="_blank"><u><b>Upload CV ngay!</b></u></a>
                                                 </div>
                                             </div>
                                             <style>
@@ -999,7 +1092,8 @@
                                             </script>
                                             <div class="panel mb-20 hide" style="margin: 0;border-bottom: 0;">
 
-                                                <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+                                                <div
+                                                    class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                                     <ul class="breadcrumb">
                                                         <li><a href="/candidate/dashboard"> Bảng tin</a></li>
@@ -1007,7 +1101,8 @@
                                                     </ul>
                                                     <div class="heading-elements">
                                                         <ul class="icons-list">
-                                                            <li>Lưu ý: các trường có dấu (<span style="color: red !important;">*</span>) là bắt buộc
+                                                            <li>Lưu ý: các trường có dấu (<span
+                                                                    style="color: red !important;">*</span>) là bắt buộc
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -1019,13 +1114,17 @@
                                                 <div class="row cv-profile">
                                                     <div class="col-sm-12">
                                                         <div class="alert alert-info hide">
-                                                            Bạn đã có sẵn CV? Hãy tải lên để cập nhật thông tin hồ sơ tự động. <a href="https://jobsgo.vn/phan-tich-cv.html?ref=pre-profile" target="_blank"><u><b>Upload CV ngay!</b></u></a>
+                                                            Bạn đã có sẵn CV? Hãy tải lên để cập nhật thông tin hồ sơ tự
+                                                            động. <a
+                                                                href="https://jobsgo.vn/phan-tich-cv.html?ref=pre-profile"
+                                                                target="_blank"><u><b>Upload CV ngay!</b></u></a>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-sm-4" style="position: sticky;top:0" id="panel">
                                                         <!-- Detached content -->
-                                                        <div class="card-box" style="min-height: 80vh;overflow-y: auto;">
+                                                        <div class="card-box"
+                                                            style="min-height: 80vh;overflow-y: auto;">
                                                             <div class="box-jc box-1">
                                                                 <div class="row-bk">
                                                                     <div class="col-sm-12-bk progress-score">
@@ -1042,97 +1141,239 @@
                                                                     </div>
 
                                                                     <div class="col-sm-12-bk text-center">
-                                                                        <h6 style="margin-bottom: 0 !important;" class="text-bold">Hồ sơ gần hoàn thiện</h6>
-                                                                        <p><small>Cập nhật hồ sơ theo gợi ý từ JobsGO Review</small></p>
+                                                                        <h6 style="margin-bottom: 0 !important;"
+                                                                            class="text-bold">Hồ sơ gần hoàn thiện</h6>
+                                                                        <p><small>Cập nhật hồ sơ theo gợi ý từ JobsGO
+                                                                                Review</small></p>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="list-group">
                                                                     <a href="#s1" class="list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-info-circle text-grey-300 pull-right"></i> 1. Thông tin cơ bản </h6>
-                                                                        <ul style="list-style-type: none;">
-                                                                            <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
-                                                                                Tên bạn đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
-                                                                                Email đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
-                                                                                Địa chỉ đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="fa fa-warning text-warning"></i>
-                                                                                Bổ sung số điện thoại
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="fa fa-warning text-warning"></i>
-                                                                                Bổ sung giới thiệu bản thân
-                                                                            </li>
-                                                                        </ul>
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-info-circle text-grey-300 pull-right"></i>
+                                                                            1. Thông tin cơ bản
+                                                                        </h6>
+                                                                        @if ($user)
+                                                                        @foreach ($resumes as $resume)
+                                                                            <div class="resume-info">
+                                                                                @if ($resume->seekerProfile)
+                                                                                    <ul style="list-style-type: none;">
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->user->name))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Tên bạn đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tên bạn
+                                                                                            @endif
+                                                                                        </li>
+                                                                                        
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->user->email))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Email đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung email
+                                                                                            @endif
+                                                                                        </li>
+                                                                                        
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->location->address))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Địa chỉ đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung địa chỉ
+                                                                                            @endif
+                                                                                        </li>
+                                                                                        
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->phone))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Số điện thoại đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung số điện thoại
+                                                                                            @endif
+                                                                                        </li>
+                                                                                        
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->introduction))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Giới thiệu bản thân đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung giới thiệu bản thân
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->birthday))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Ngày sinh đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung ngày sinh
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->gender))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Giới tính đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung giới tính
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->marital_status))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Tình trạng hôn nhân đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tình trạng hôn nhân
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->current_residence))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Chỗ ở hiện tại đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung chỗ ở hiện tại
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->working_location))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Tỉnh/Thành làm việc đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tỉnh/thành làm việc
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->degree))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Bằng cấp đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung bằng cấp
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->current_salary))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Mức lương hiện tại đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung mức lương hiện tại
+                                                                                            @endif
+                                                                                        </li>
+                                                                    
+                                                                                        <li>
+                                                                                            @if (!empty($resume->seekerProfile->desired_salary))
+                                                                                                <i class="fa fa-check-square-o text-success"></i> Mức lương mong muốn đã hoàn thiện
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung mức lương mong muốn
+                                                                                            @endif
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                @else
+                                                                                    <p>Không có thông tin seeker profile.</p>
+                                                                                @endif
+                                                                            </div>
+                                                                        @endforeach
+                                                                    @else
+                                                                        <p>Không có người dùng nào.</p>
+                                                                    @endif
+                                                                    
+
                                                                     </a>
+
                                                                     <a href="#s2" class="list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-suitcase text-grey-300 pull-right"></i> 2. Kỹ năng chuyên môn</h6>
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-suitcase text-grey-300 pull-right"></i>
+                                                                            2. Kỹ năng chuyên môn
+                                                                        </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i class="fa fa-warning text-warning"></i>
+                                                                                <i
+                                                                                    class="fa fa-warning text-warning"></i>
                                                                                 Bổ sung kỹ năng của bạn
                                                                             </li>
                                                                         </ul>
                                                                     </a>
                                                                     <a href="#s3" class="list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-list-alt text-grey-300 pull-right"></i> 3. Kinh nghiệm làm việc</h6>
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-list-alt text-grey-300 pull-right"></i>
+                                                                            3. Kinh nghiệm làm việc
+                                                                        </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Tên công ty đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Vị trí làm việc đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Mốc thời gian đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-warning text-warning"></i>
+                                                                                <i
+                                                                                    class="fa fa-warning text-warning"></i>
                                                                                 1 Điền mô tả công việc
                                                                             </li>
                                                                         </ul>
                                                                     </a>
                                                                     <a href="#s4" class="list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-graduation-cap text-grey-300 pull-right"></i> 4. Quá trình học tập</h6>
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-graduation-cap text-grey-300 pull-right"></i>
+                                                                            4. Quá trình học tập
+                                                                        </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Tên trường học đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Chuyên ngành đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 1 Mốc thời gian đã hoàn thiện
                                                                             </li>
                                                                             <li>
-                                                                                <i class="fa fa-warning text-warning"></i>
+                                                                                <i
+                                                                                    class="fa fa-warning text-warning"></i>
                                                                                 1 Điền mô tả học vấn
                                                                             </li>
                                                                         </ul>
                                                                     </a>
                                                                     <a href="#s5" class="hide list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-paperclip text-grey-300 pull-right"></i> 5. Tệp đính kèm</h6>
-                                                                        <p class="list-group-item-text text-size-small">Tải lên hồ sơ, chứng chỉ, bằng cấp...</p>
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-paperclip text-grey-300 pull-right"></i>
+                                                                            5. Tệp đính kèm
+                                                                        </h6>
+                                                                        <p class="list-group-item-text text-size-small">
+                                                                            Tải lên hồ sơ, chứng chỉ, bằng cấp...</p>
                                                                     </a>
-                                                                    <a href="/candidate/check-spell-format" class="list-group-item">
-                                                                        <h6 class="text-bold list-group-item-heading text-uppercase"><i class="fa fa-flag-checkered text-grey-300 pull-right"></i> 5. Kiểm tra lỗi chính tả</h6>
+                                                                    <a href="/candidate/check-spell-format"
+                                                                        class="list-group-item">
+                                                                        <h6
+                                                                            class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i
+                                                                                class="fa fa-flag-checkered text-grey-300 pull-right"></i>
+                                                                            5. Kiểm tra lỗi chính tả
+                                                                        </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                <i
+                                                                                    class="fa fa-check-square-o text-success"></i>
                                                                                 Hồ sơ của bạn không còn lỗi chính tả
                                                                             </li>
                                                                         </ul>
@@ -1172,17 +1413,31 @@
                                                             <div class="row">
                                                                 <div class="col-sm-3">
                                                                     <div class="text-center">
-                                                                        <div class="thumbnail" title="Cập nhật ảnh đại diện">
-                                                                            <div id="imageDropAvatar" class="thumb thumb-slide">
+                                                                        <div class="thumbnail"
+                                                                            title="Cập nhật ảnh đại diện">
+                                                                            <div id="imageDropAvatar"
+                                                                                class="thumb thumb-slide">
+                                                                                @if ($user && $user->avatar_url)
                                                                                 <img onerror="this.src='/bolt/assets/images/image.png'"
-                                                                                    src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
-                                                                                    class="avatar img-responsive" alt="web developer">
+                                                                                    src="{{ Storage::url($user->avatar_url) }}"
+                                                                                    class="avatar img-responsive"
+                                                                                    alt="Avatar của {{ $user->full_name }}">
+                                                                                @else
+                                                                                <img src="/bolt/assets/images/image.png"
+                                                                                    class="avatar img-responsive"
+                                                                                    alt="Avatar mặc định">
+                                                                                @endif
+
                                                                                 <div class="caption">
                                                                                     <label for="changeAvatar"
                                                                                         class="btn bg-success-400 btn-icon btn-xs"
-                                                                                        data-popup="lightbox"><i class="icon-plus2"></i>
-                                                                                        <input type="file" accept="image/*" id="changeAvatar"
-                                                                                            name="file" class="hide form-control">
+                                                                                        data-popup="lightbox"><i
+                                                                                            class="icon-plus2"></i>
+                                                                                        <input type="file"
+                                                                                            accept="image/*"
+                                                                                            id="changeAvatar"
+                                                                                            name="file"
+                                                                                            class="hide form-control">
                                                                                     </label>
                                                                                 </div>
                                                                             </div>
@@ -1193,13 +1448,49 @@
                                                                     <div class="box-jc box-ce box-1">
 
                                                                         <div class="box-row">
+                                                                            <div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>Thông Tin Người Dùng</h3>
 
-                                                                            <p class="text-muted mb-0"><strong>Họ tên:</strong> <span class="ml-2 editable" data-name="name" title="Họ tên">web developer</span></p>
-                                                                            <p class="text-muted mb-0"><strong>Ngày sinh:</strong> <span class="ml-2 editable" data-name="date_of_birth" data-type="combodate" data-value="1975" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="DD / MM / YYYY" data-pk="1" title="Ngày sinh">26/09/1975</span></p>
-                                                                            <p class="text-muted mb-0 "><strong>Giới tính:</strong> <span class="ml-2 gender" data-type="select" data-value="" data-name="gender" title="Giới tính"></span></p>
-                                                                            <p class="text-muted mb-0 "><strong>Vị trí mong muốn: <a data-toggle="popover" data-placement="bottom" data-content="Thông tin này giúp NTD đưa ra quyết định với CV của bạn nhanh hơn 50%" href="#"><i class="fa fa-info-circle"></i></a> </strong> <span class="ml-2 career_name" data-type="typeaheadjs" data-name="career_name" title="Vị trí/chức vụ mong muốn">Thực Tập Sinh Tuyển Dụng</span></p>
-                                                                            <p class="text-muted mb-0"><strong>Chức vụ:</strong> <span class="ml-2" data-name="job_position" data-value="" title="Vị trí / chức vụ"></span></p>
-                                                                            <p class="text-muted mb-0 "><strong>Trạng thái tìm việc: <a data-toggle="popover" data-placement="bottom" data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống JobsGO." href="#"><i class="fa fa-info-circle"></i></a> </strong> <span class="ml-2 status status_on" data-type="select" data-value="0" data-name="status" title="Trạng thái tìm việc">Đang tìm việc</span></p>
+                                                                                @if ($user)
+                                                                                <p class="text-muted mb-0"><strong>Họ
+                                                                                        tên:</strong>
+                                                                                    <span class="ml-2 editable"
+                                                                                        data-name="full_name"
+                                                                                        title="Họ tên">{{
+                                                                                        $user->full_name ?? 'Chưa có'
+                                                                                        }}</span>
+                                                                                </p>
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Email:</strong>
+                                                                                    <span class="ml-2 editable"
+                                                                                        data-name="email"
+                                                                                        title="Email">{{ $user->email ??
+                                                                                        'Chưa có' }}</span>
+                                                                                </p>
+                                                                                <p class="text-muted mb-0"><strong>Ngày
+                                                                                        tạo:</strong>
+                                                                                    <span class="ml-2"
+                                                                                        data-name="created_at"
+                                                                                        title="Ngày tạo">{{
+                                                                                        $user->created_at ?? 'Chưa có'
+                                                                                        }}</span>
+                                                                                </p>
+                                                                              
+                                                                                <p class="text-muted mb-0"><strong>Trạng
+                                                                                        thái:</strong>
+                                                                                    <span class="ml-2"
+                                                                                        data-name="is_active"
+                                                                                        title="Trạng thái">{{
+                                                                                        $user->is_active ? 'Hoạt động' :
+                                                                                        'Không hoạt động' }}</span>
+                                                                                </p>
+                                                                                @else
+                                                                                <p>Không có thông tin người dùng.</p>
+                                                                                @endif
+
+                                                                            </div>
                                                                             <script>
                                                                                 $(document).ready(function() {
                                                                                     $('[data-toggle="popover"]').popover();
@@ -1221,36 +1512,129 @@
 
                                                                 <div class="clearfix">
 
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Thông tin cơ bản <span style="color: red !important;">*</span></h6>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Thông tin cơ bản <span
+                                                                            style="color: red !important;">*</span></h6>
 
                                                                 </div>
                                                                 <div class="box-row">
-                                                                    <p class="text-muted mb-2"><strong>Giới thiệu bản thân:</strong> <span class="ml-2 editable" data-type="textarea" data-name="short_bio" title="Giới thiệu bản thân"></span></p>
+                                                                    <p class="text-muted mb-2"><strong>Giới thiệu bản
+                                                                            thân:</strong> <span class="ml-2 editable"
+                                                                            data-type="textarea" data-name="short_bio"
+                                                                            title="Giới thiệu bản thân"></span></p>
+                                                                    <div>
+                                                                        @if ($user)
+                                                                        @foreach ($resumes as $resume)
+                                                                        <div class="resume-info">
+                                                                            @if ($resume->seekerProfile)
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Số điện thoại:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="tel"
+                                                                                    title="Số điện thoại">{{
+                                                                                    $resume->seekerProfile->phone ??
+                                                                                    'Chưa có' }}</span>
+                                                                                <button type="button"
+                                                                                    class="btn btn-warning btn-xs p-5"
+                                                                                    style="padding: 0 10px !important;"
+                                                                                    data-toggle="modal"
+                                                                                    data-target="#phoneAuthModal">Xác
+                                                                                    minh SĐT qua Zalo</button>
+                                                                            </p>
 
-                                                                    <p class="text-muted mb-2 "><strong>Số điện thoại:</strong> <span class="ml-2 editable" data-name="tel" title="Số điện thoại"> </span> <button type="button" class="btn btn-warning btn-xs p-5" style=" padding: 0 10px !important; " data-toggle="modal" data-target="#phoneAuthModal">Xác minh SĐT qua Zalo</button></p>
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Ngày sinh:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="birthday"
+                                                                                    title="Ngày sinh">{{
+                                                                                    $resume->seekerProfile->birthday ??
+                                                                                    'Chưa có' }}</span>
+                                                                            </p>
 
-                                                                    <p class="text-muted mb-2 "><strong>Email:</strong> <span class="ml-2 editable" data-name="email" title="Email">2509roblox@gmail.com <i title="Email đã được xác minh" class="fa fa-check-circle text-green" aria-hidden="true"></i></span></p>
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Giới tính:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="gender"
+                                                                                    title="Giới tính">
+                                                                                    {{ $resume->seekerProfile->gender ==
+                                                                                    'F' ? 'Nữ' : 'Nam' }}
+                                                                                </span>
+                                                                            </p>
 
-                                                                    <p class="text-muted mb-1 "><strong>Chỗ ở hiện tại:</strong> <span class="ml-2 editable" data-type="textarea" data-name="current_city" title="Chỗ ở hiện tại">123</span></p>
-                                                                    <p class="text-muted mb-1 "><strong>Tỉnh/thành làm việc:</strong> <span class="ml-2 editable" data-type="text" data-name="province" title="Tỉnh thành">Hồ Chí Minh</span></p>
-                                                                    <p class="text-muted mb-1 "><strong>Bằng cấp:</strong> <span class="ml-2 degree" data-type="select" data-value="1" data-name="degree_id" title="Bằng cấp">Trung cấp - Nghề</span></p>
-                                                                    <p class="text-muted mb-1 "><strong>Mức lương hiện tại:</strong> <span class="ml-2 salary" data-type="select" data-value="" data-name="current_salary" title="Mức lương hiện tại"></span></p>
-                                                                    <p class="text-muted mb-1 "><strong>Mức lương mong muốn:</strong> từ <span class="ml-2 salary" data-type="select" data-value="" data-name="min_expect_salary" title="Mức lương mong muốn tối thiểu"></span> đến <span class="ml-2 salary" data-type="select" data-value="" data-name="max_expect_salary" title="Mức lương mong muốn tối đa"></span></p>
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Tình trạng hôn nhân:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="marital_status"
+                                                                                    title="Tình trạng hôn nhân">
+                                                                                    {{
+                                                                                    $resume->seekerProfile->marital_status
+                                                                                    == 'M' ? 'Đã kết hôn' : 'Chưa kết
+                                                                                    hôn' }}
+                                                                                </span>
+                                                                            </p>
 
-                                                                    <script>
-                                                                        $(function() {
-                                                                            $.fn.editable.defaults.url = baseUrl + '/api/profile';
-                                                                            $.fn.editable.defaults.emptytext = '(chưa có dữ liệu)';
-                                                                            $('span.career_name').editable({
-                                                                                pk: 1,
-                                                                                value: 'Thực Tập Sinh Tuyển Dụng',
-                                                                                typeahead: {
-                                                                                    name: 'career',
-                                                                                    local: ['Thực Tập Sinh Đào Tạo', 'Nhân Viên Đào Tạo', 'Chuyên Viên Đào Tạo', 'Giám Đốc Đào Tạo', 'Trưởng Phòng Đào Tạo', 'Chuyên Viên Huấn Luyện', 'Cộng Tác Viên Tuyển Dụng', 'Thực Tập Sinh Tuyển Dụng', 'Nhân Viên Tuyển Dụng', 'Chuyên Viên Tuyển Dụng', 'Trưởng Phòng Tuyển Dụng', 'Quản Lý Tuyển Dụng', 'Nhân Viên Tư Vấn Tuyển Dụng', 'Trưởng Phòng Hành Chính Nhân Sự', 'Nhân Viên Nhân Sự Tổng Hợp', 'Thực Tập Sinh Nhân Sự', 'Nhân Viên Hành Chính Nhân Sự', 'Quản Lý Nhân Sự', 'Trưởng Phòng Nhân Sự', 'Giám Đốc Nhân Sự', 'Pháp Chế Nhân Sự', 'Chuyên Viên Nhân Sự', 'Chuyên Viên Tư Vấn Nhân Sự', 'Quản Trị Nhân Lực', 'Chuyên Viên Phát Triển Nguồn Lực', 'Nhân Sự Tiền Lương', 'Nhân Viên Chế Độ Chính Sách', 'Cộng Tác Viên Hành Chính', 'Nhân Viên Hành Chính Văn Phòng', 'Nhân Viên Hành Chính Tổng Hợp', 'Nhân Viên Hành Chính', 'Chuyên Viên Hành Chính', 'Trưởng Phòng Hành Chính', 'Nhân Viên Văn Thư', 'Thư Ký Văn Phòng', 'Thư Ký Giám Đốc', 'Trợ Lý Giám Đốc', 'Nhân Viên Lễ Tân', 'Lễ Tân', 'Nhập Liệu', 'Nhân Viên Xử Lý Dữ Liệu', 'Nhân Viên Thống Kê', 'Back Office', 'Front Office', 'Thư Ký', 'Nhân Viên Pháp Chế', 'Chuyên Viên Pháp Chế', 'Trưởng Phòng Pháp Chế', 'Chuyên Viên Pháp Lý', 'Luật Sư', 'Chuyên Viên Chính Sách', 'Chuyên Viên Tư Vấn Pháp Luật', 'Cố Vấn Pháp Lý', 'Kế Toán Trưởng', 'Kế Toán Tổng hợp', 'Kế Toán Thuế', 'Kế Toán Giá thành', 'Kế Toán Tiền lương', 'Kế Toán Chi phí', 'Kế Toán Công nợ', 'Kế Toán Bán hàng', 'Kế Toán Quản trị', 'Kế Toán Kho', 'Kế Toán Vật Tư', 'Nhân Viên Kế Toán', 'Accounting Manager', 'Trưởng Phòng Tài Chính', 'Kiểm Soát Tài Chính', 'Giám Đốc Tài Chính', 'Quản Lý Nguồn Thu', 'Quản Lý Chi Phí', 'Kế Toán', 'Thủ Quỹ', 'Kiểm Toán Nội Bộ', 'Chuyên Viên Kiểm Soát Nội Bộ', 'Kiểm Toán Viên', 'Kiểm Soát Viên', 'Nhân Viên Tư Vấn', 'Tư Vấn Viên', 'Chuyên Viên Tư Vấn', 'Chuyên Viên Quan Hệ Khách Hàng', 'Thực Tập Sinh Kinh Doanh', 'Trợ Lý Kinh Doanh', 'Nhân Viên Kinh Doanh', 'Kỹ Sư Kinh Doanh', 'Kỹ Sư Bán Hàng', 'Chuyên Viên Kinh Doanh', 'Cộng Tác Viên Kinh Doanh', 'Trưởng Phòng Kinh Doanh', 'Giám Đốc Kinh Doanh', 'Quản Lý Kinh Doanh', 'Nhân Viên Bán Hàng', 'Cộng Tác Viên Bán Hàng', 'Trưởng Phòng Bán Hàng', 'Trưởng Kênh Bán Hàng', 'Giám Sát Bán Hàng', 'Quản Lý Bán Hàng', 'Giám Đốc Bán Hàng', 'Quản Lý Bán Lẻ', 'Đại Diện Bán Hàng', 'Nhân Viên Tư Vấn Bán Hàng', 'Nhân Viên Môi Giới', 'Trưởng Phòng Môi Giới', 'Nhân Viên Tiếp Thị', 'Giám Sát Tiếp Thị', 'Giám Sát Kinh Doanh', 'Cộng Tác Viên Phát Triển Thị Trường', 'Nhân Viên Phát Triển Thị Trường', 'Chuyên Viên Phát Triển Thị Trường', 'Trưởng Phòng Phát Triển Thị Trường', 'Nhân Viên Thị Trường', 'Presales', 'Sales', 'Nhân Viên Telesale', 'Trưởng Nhóm Telesale', 'Cộng Tác Viên Telesale', 'Telesale', 'Technical Sales', 'Telemarketing', 'Account Executive', 'Account Manager', 'Sales Admin', 'Nhân Viên Hỗ Trợ Kinh Doanh', 'Sales Engineer', 'Business Development', 'Chăm Sóc Khách Hàng', 'Nhân Viên Chăm Sóc Khách Hàng', 'Tổng Đài Viên', 'Nhân Viên Tổng Đài', 'Nhân Viên Hỗ Trợ Khách Hàng', 'Nhân Viên Theo Dõi Đơn Hàng', 'Nhân Viên Chăm Sóc Đơn Hàng', 'Nhân Viên Xử Lý Đơn Hàng', 'IT Support', 'IT Helpdesk', 'Cộng Tác Viên Thu Mua', 'Nhân Viên Thu Mua', 'Chuyên Viên Thu Mua', 'Quản Lý Thu Mua', 'Giám Sát Thu Mua', 'Trưởng Phòng Thu Mua', 'Nhân Viên Định Mức', 'Nhân Viên Tìm Nguồn Hàng', 'Nhân Viên Kế Hoạch', 'Chuyên Viên Kế Hoạch', 'Trưởng Phòng Kế Hoạch', 'Digital Marketing', 'Online Marketing', 'Content Marketing', 'Trade Marketing', 'Thực Tập Sinh Marketing', 'Cộng Tác Viên Marketing', 'Nhân Viên Marketing', 'Chuyên Viên Marketing', 'Trưởng Phòng Marketing', 'Marketing Manager', 'Giám Đốc Marketing', 'Chuyên Viên Thương Hiệu', 'Quản Lý Thương Hiệu', 'Nhân Viên Quảng Cáo', 'Chuyên Viên Quảng Cáo', 'Cộng Tác Viên Quảng Cáo', 'Nhân Viên Nội Dung', 'Chuyên Viên Nội Dung', 'Nhân Viên Quản Trị Nội Dung', 'Nhân Viên Quản Lý Nội Dung', 'Trưởng Nhóm Nội Dung', 'Cộng Tác Viên Nội Dung', 'Cộng Tác Viên Dịch Bài', 'Social Media', 'Chuyên Viên Media', 'Nhân Viên SEO', 'Chuyên Viên SEO', 'Cộng Tác Viên SEO', 'Quản Lý SEO', 'Dựng Phim', 'Nhân Viên Quan Hệ Đối Ngoại', 'Chuyên Viên Quan Hệ Đối Ngoại', 'Nhân Viên Đối Ngoại', 'Chuyên Viên Đối Ngoại', 'Thực Tập Sinh Truyền Thông', 'Nhân Viên Truyền Thông', 'Chuyên Viên Truyền Thông', 'Trưởng Phòng Truyền Thông', 'Giám Đốc Truyền Thông', 'Tổ Chức Sự Kiện', 'Nhân Viên Sự Kiện', 'Chuyên Viên Sự Kiện', 'Quản Lý Sự Kiện', 'Nhân Viên Xuất Nhập Khẩu', 'Chuyên Viên Xuất Nhập Khẩu', 'Trưởng Phòng Xuất Nhập Khẩu', 'Trưởng Phòng Thương Mại', 'Giám Đốc Thương Mại', 'Quản Lý Đơn Hàng', 'Lái Xe Nâng', 'Lái Xe', 'Tài Xế', 'Nhân Viên Vận Hành Xe', 'Nhân Viên Giao Hàng', 'Nhân Viên Giao Nhận', 'Trưởng Phòng Giao Nhận', 'Nhân Viên Vận Chuyển', 'Shipper', 'Nhân Viên Phụ Kho', 'Thủ Kho', 'Giám Sát Kho', 'Quản Lý Kho', 'Công Nhân Kho', 'Cộng Tác Viên Kho', 'Nhân Viên Kho', 'Nhân Viên Điều Vận', 'Nhân Viên Chứng Từ', 'Nhân Viên Điều Phối Vận Tải', 'Nhân Viên Điều Phối Đơn Hàng', 'Nhân Viên Quản Lý Chuỗi Cung Ứng', 'Chuyên Viên Cung Ứng', 'Nhân Viên Điều Hành', 'Trưởng Phòng Điều Hành', 'Quản Lý Đội Xe', 'Nhân Viên Hậu Cần', 'Giám Sát Cung Ứng', 'Trưởng Phòng Kho Vận', 'Chuyên Viên Phân Tích Tài Chính', 'Chuyên Viên Phân Tích', 'Chuyên Viên Tài Chính', 'Chuyên Viên Phân Tích Đầu Tư', 'Trưởng Phòng Đầu Tư', 'Chuyên Viên Tư Vấn Ngân Hàng', 'Cộng Tác Viên Thu Nợ', 'Nhân Viên Thu Nợ', 'Trưởng Phòng Thu Nợ', 'Chuyên Viên Xử Lý Nợ', 'Nhân Viên Quản Lý Nợ', 'Chuyên Viên Quản Lý Nợ', 'Cộng Tác Viên Phát Triển Dự Án', 'Nhân Viên Phát Triển Dự Án', 'Chuyên Viên Phát Triển Dự Án', 'Nhân Viên Tư Vấn Đầu Tư', 'Chuyên Viên Đầu Tư', 'Giám Đốc Đầu Tư', 'Chuyên Viên Định Giá', 'Chuyên Viên Thẩm Định Tài Sản', 'Thẩm Định Viên', 'Trưởng Phòng Thẩm Định', 'Chuyên Viên Quản Trị Rủi Ro', 'Chuyên Viên Thẩm Định Dự Án', 'Giao Dịch Viên', 'Trưởng Phòng Giao Dịch', 'Chuyên Viên Khách Hàng Cá Nhân', 'Trưởng Phòng Khách Hàng Cá Nhân', 'Chuyên Viên Khách Hàng Doanh Nghiệp', 'Chuyên Viên Quan Hệ Đối Tác', 'Chuyên Viên Quan Hệ', 'Trưởng Phòng Khách Hàng Doanh Nghiệp', 'Giám Đốc Khách Hàng Doanh Nghiệp', 'Nhân Viên Tư Vấn Tín Dụng', 'Chuyên Viên Tín Dụng', 'Trưởng Phòng Tín Dụng', 'Giám Đốc Tín Dụng', 'Chuyên Viên Thẻ', 'Chuyên Viên Thanh Toán Quốc Tế', 'Chuyên Viên Thanh Toán', 'Trưởng Phòng Thanh Toán', 'Chuyên Viên Phòng Chống Gian Lận', 'Chuyên Viên Quản Lý Hợp Đồng', 'Nhân Viên Môi Giới Chứng Khoán', 'Nhân Viên Dịch Vụ Khách Hàng', 'Trưởng Phòng Dịch Vụ Khách Hàng', 'Giám Đốc Dịch Vụ Khách Hàng', 'Nhân Viên Giải Quyết Khiếu Nại', 'Chuyên Viên Bồi Thường', 'Chuyên Viên Xử Lý Khiếu Nại', 'Chuyên Viên Tái Bảo Hiểm', 'Chuyên Viên Thẩm Định', 'Nhân Viên Bảo Hiểm', 'Chuyên Viên Đền Bù', 'Giám Sát Nhà Hàng', 'Quản Lý Nhà Hàng', 'Trưởng Ca Nhà Hàng', 'Kỹ Thuật Viên Spa', 'Quản Lý Spa', 'Nhân Viên Phục Vụ', 'Chuyên Viên Giám Sát', 'Thu Ngân', 'Nhân Viên Phục Vụ Bàn', 'Nhân Viên Phục Vụ Nhà Hàng', 'Nhân Viên Chạy Bàn', 'Nhân Viên Buồng Phòng', 'Đầu Bếp', 'Bếp Trưởng', 'Phụ Bếp', 'Nhân Viên Quầy Bar', 'Nhân Viên Pha Chế', 'Nhân Viên Chế Biến', 'Nhân Viên Bếp', 'Giám Sát F&B', 'Điều Phối Viên F&B', 'Điều Phối Viên', 'Bartender', 'Barista', 'Giám Sát Cửa Hàng', 'Quản Lý Cửa Hàng', 'Trợ Lý Cửa Hàng', 'Cửa Hàng Trưởng', 'Giám Sát Siêu Thị', 'Giám Đốc Siêu Thị', 'Quản Lý Showroom', 'Nhân Viên Giám Sát Camera', 'Nhân Viên Bảo Vệ', 'Bảo Vệ', 'Nhân Viên An Ninh', 'Chuyên Viên An Ninh', 'Nhân Viên Tạp Vụ', 'Nhân Viên Dọn Phòng', 'Nhân Viên Tạp Vụ Văn Phòng', 'Tạp Vụ', 'Lao Công', 'Giúp Việc', 'Bellman', 'Lao Động Phổ Thông', 'Kiến Trúc Sư', 'Kiến Trúc Sư Cảnh Quan', 'Nhân Viên Thiết Kế Nội Thất', 'Nhân Viên Thiết Kế Đồ Họa', 'Nhân Viên Thiết Kế Web', 'Nhân Viên Thiết Kế Thời Trang', 'Nhân Viên Thiết Kế Sản Phẩm', 'Nhân Viên Thiết Kế UI/UX', 'Hoạ Viên 3D', 'Hoạ Viên Kiến Trúc', 'Hoạ Sĩ 3D', 'Hoạ Sĩ', 'Nhân Viên Thiết Kế 2D', 'Nhân Viên Thiết Kế 3D', '2D Animator', '3D Animator', 'Cộng Tác Viên Thiết Kế', 'Nhân Viên Thiết Kế', 'Chuyên Viên Thiết Kế', 'Trưởng Phòng Thiết Kế', 'Kỹ Sư Thiết Kế', 'Giám Sát Thi Công', 'Giám Đốc Thi Công', 'Giám Sát Công Trường', 'Thư Ký Công Trình', 'Giám Sát Công Trình', 'Kỹ Sư Xây Dựng', 'Chỉ Huy Trưởng', 'Chỉ Huy Công Trình', 'Giám Sát Xây Dựng', 'Giám Đốc Xây Dựng', 'Quản Lý Thi Công', 'Nhân Viên Triển Khai Bản Vẽ', 'Nhân Viên Trắc Địa', 'Kỹ Sư Trắc Địa', 'Nhân Viên Giải Phóng Mặt Bằng', 'Nhân Viên Phát Triển Mặt Bằng', 'Nhân Viên Dự Toán', 'Kỹ Sư Dự Toán', 'Kỹ Sư Kết Cấu', 'Kỹ Sư Hiện Trường', 'Nhân Viên Vật Tư', 'Chuyên Viên Vật Tư', 'Kỹ Sư Khối Lượng', 'Quản Lý Khối Lượng', 'Kỹ Sư Trưởng Toà Nhà', 'Kỹ Sư Thiết Bị', 'Kỹ Sư Cảnh Quan', 'Kỹ Sư Cầu Đường', 'Kỹ Sư Công Trình', 'Kỹ Sư Dự Toán Xây Dựng', 'Kỹ Sư Hạ Tầng', 'Nhân Viên Đấu Thầu', 'Chuyên Viên Đấu Thầu', 'Trưởng Phòng Đấu Thầu', 'Giám Đốc Đấu Thầu', 'Chuyên Viên Kế Hoạch Dự Án', 'Chuyên Viên Điều Phối Dự Án', 'Trợ Lý Dự Án', 'Nhân Viên Dự Án', 'Chuyên Viên Dự Án', 'Giám Sát Dự Án', 'Trưởng Phòng Dự Án', 'Quản Lý Dự Án', 'Giám Đốc Dự Án', 'Nhân Viên An Toàn', 'Chuyên Viên An Toàn', 'Giám Sát An Toàn', 'Nhân Viên HSE', 'Chuyên Viên HSE', 'Quản Lý HSE', 'An Toàn Lao Động', 'Nhân Viên Vận Hành', 'Chuyên Viên Vận Hành', 'Giám Sát Vận Hành', 'Quản Lý Vận Hành', 'Kỹ Sư Sản Xuất', 'Quản Lý Sản Xuất', 'Công Nhân Sản Xuất', 'Nhân Viên Sản Xuất', 'Giám Sát Sản Xuất', 'Điều Phối Sản Xuất', 'Tổ Trưởng Sản Xuất', 'Trưởng Ca Sản Xuất', 'Trưởng Phòng Sản Xuất', 'Giám Đốc Sản Xuất', 'Quản Đốc Xưởng', 'Quản Đốc Nhà Máy', 'Quản Đốc Xí Nghiệp', 'Quản Đốc Sản Xuất', 'Quản Đốc', 'Nhân Viên Kiểm Tra Chất Lượng Sản Phẩm', 'Kiểm Định Viên', 'Giám Sát Sản Phẩm', 'Nhân Viên Kỹ Thuật Sản Phẩm', 'Chuyên Viên Phát Triển Sản Phẩm', 'Giám Đốc Sản Phẩm', 'Công Nhân Kỹ Thuật', 'Công Nhân Đóng Gói', 'Nhân Viên Đóng Gói', 'Giám Sát Đóng Gói', 'Chuyên Viên Quản Lý Nhãn Hàng', 'Công Nhân', 'Kỹ Sư Trưởng', 'Kỹ Sư Quản Lý Chất Lượng', 'Kỹ Sư Kiểm Soát Chất Lượng', 'Chuyên Viên Chất Lượng', 'Giám Sát Chất Lượng', 'Trưởng Phòng Chất Lượng', 'Chuyên Viên QA/QC', 'Chuyên Viên ISO', 'Biên Tập Viên', 'Nhân Viên Vận Hành Máy In', 'Nhân Viên In Ấn', 'Nhân Viên Thiết Kế In Ấn', 'Phóng Viên', 'Quay Phim', 'Đạo Diễn', 'Biên Kịch', 'Biên Dịch Tiếng Anh', 'Biên Dịch Tiếng Trung', 'Biên Dịch Tiếng Nhật', 'Biên Dịch Tiếng Hàn', 'Biên Dịch Viên', 'Phiên Dịch Tiếng Anh', 'Phiên Dịch Tiếng Trung', 'Phiên Dịch Tiếng Hàn', 'Phiên Dịch Tiếng Nhật', 'Phiên Dịch Viên', 'Bác Sĩ Răng Hàm Mặt', 'Trình Dược Viên', 'Dược Sĩ', 'Điều Dưỡng', 'Y Tá', 'Y Sỹ', 'Hộ Sinh', 'Bác Sĩ', 'Nha Sĩ', 'Nhân Viên Y Tế', 'Kỹ Sư Cơ Điện', 'Nhân Viên Cơ Điện', 'Nhân Viên Điện', 'Giám Sát Cơ Điện', 'Nhân Viên Cơ Khí', 'Thợ Cơ Khí', 'Công Nhân Cơ Khí', 'Kỹ Sư Cơ Khí', 'Kỹ Sư M&E', 'Giám Sát M&E', 'Kỹ Sư Ô Tô', 'Kỹ Sư Thiết Kế Cơ Khí', 'Thợ Cơ Điện', 'Thợ Vận Hành Máy', 'Nhân Viên Vận Hành Máy', 'Kỹ Thuật Viên Vận Hành', 'Thợ Bảo Trì', 'Kỹ Thuật Viên Bảo Trì', 'Kỹ Thuật Viên Bảo Hành', 'Nhân Viên Bảo Trì Cơ Khí', 'Kỹ Thuật Viên Điện Tử', 'Trưởng Bộ Phận Kỹ Thuật', 'Nhân Viên Bảo Hành', 'Nhân Viên Thiết Kế Kỹ Thuật', 'Kỹ Sư Thiết Kế Máy', 'Kỹ Sư Công Nghiệp', 'Kỹ Sư Chế Tạo Máy', 'Kỹ Sư Tự Động Hoá', 'Quản Đốc Cơ Khí', 'Nhân Viên Lắp Máy', 'Thợ Hàn', 'Công Nhân Hàn', 'Kỹ Sư Hàn', 'Thợ Gò', 'Thợ Tiện Cơ', 'Thợ Tiện', 'Thợ Phay', 'Thợ Đứng Máy', 'Nhân Viên Đứng Máy', 'Thợ Sửa Chữa', 'Nhân Viên Phay', 'Kỹ Sư Công Trường', 'Process Engineer', 'Mechanical Engineer', 'Thợ Điện', 'Kỹ Sư Điện', 'Kỹ Sư Điện Lạnh', 'Kỹ Sư Nhiệt Lạnh', 'Kỹ Sư Điều Hoà', 'Nhân Viên Bảo Trì', 'Nhân Viên Bảo Trì Điện', 'Kỹ Sư Bảo Trì', 'Trưởng Phòng Bảo Trì', 'Maintenance Technician', 'Kỹ Sư Phòng Cháy Chữa Cháy', 'Kỹ Sư Giám Sát', 'Nhân Viên Kỹ Thuật Điện Lạnh', 'Giám Sát Kỹ Thuật', 'Kỹ Thuật Viên Dự Án', 'Nhân Viên Hỗ Trợ Kỹ Thuật', 'Chuyên Viên Kỹ Thuật', 'Giám Đốc Kỹ Thuật', 'Service Engineer', 'Giáo Viên Mầm Non', 'Giáo Viên Tiếng Nhật', 'Giáo Viên Thể Dục', 'Giáo Viên', 'Chuyên Viên Tư Vấn Tuyển Sinh', 'Nhân Viên Tư Vấn Tuyển Sinh', 'Nhân Viên Tư Vấn Du Học', 'Giảng Viên Tiếng Anh', 'Giảng Viên Trung Cấp', 'Giảng Viên Đại Học', 'Giảng Viên', 'Trợ Giảng', 'Lập Trình Java', 'Lập Trình Web', 'Lập Trình PHP', 'Lập Trình C#', 'Lập Trình C/C++', 'Lập Trình .NET', 'Lập Trình Frontend', 'Lập Trình Backend', 'Lập Trình Mobile', 'Lập Trình Full stack', 'Lập Trình Nodejs', 'Lập Trình Hệ Thống', 'Lập Trình iOS', 'Lập Trình Android', 'Lập Trình Viên', 'Lập Trình', 'Kỹ Sư Phần Mềm', 'Chuyên Viên Phát Triển Ứng Dụng', 'Tester', 'Nhân Viên Kiểm Thử Phần Mềm', 'Kỹ Sư Hệ Thống', 'Trưởng Phòng Kỹ Thuật', 'Nhân Viên Hệ Thống', 'Chuyên Viên Phát Triển Phần Mềm', 'Software Tester', 'Data Scientist', 'Chuyên Viên Phân Tích Dữ Liệu', 'Big data', 'Kỹ Sư AI', 'Kỹ Sư DevOps', 'Quản Lý Chất Lượng', 'Project Manager', 'Product Manager', 'Network Engineer', 'Kỹ Sư Mạng', 'Nhân Viên Quản Trị Mạng', 'Chuyên Viên Quản Trị Dữ Liệu', 'Chuyên Viên Quản Trị Cơ Sở Dữ Liệu', 'Chuyên Viên Quản Trị Hệ Thống', 'Nhân Viên Quản Trị Web', 'Machine Learning', 'Kỹ Sư Cầu Nối', 'Kỹ Sư Firmware', 'Business Analyst', 'Solution Architect', 'Thực Tập Sinh Công Nghệ Thông Tin', 'Nhân Viên Công Nghệ Thông Tin', 'Chuyên Viên Công Nghệ Thông Tin', 'Trưởng Phòng Công Nghệ Thông Tin', 'Kỹ Sư Công Nghệ Thông Tin', 'Giám Đốc Công Nghệ', 'Chuyên Viên Bảo Mật', 'Nhân Viên Triển Khai Phần Mềm', 'Chuyên Viên Triển Khai Giải Pháp', 'Kỹ Sư Phần Cứng', 'Kỹ Sư Môi Trường', 'Kỹ Sư Cấp Thoát Nước', 'Kỹ Sư Quan Trắc', 'Nhân Viên Quan Trắc', 'Kỹ Sư Xử Lý Chất Thải', 'Kỹ Sư Điện Nước', 'Kỹ Sư Viễn Thông', 'Kỹ Sư Triển Khai Mạng', 'Kỹ Sư Triển Khai', 'Chuyên Viên Quản Trị Hạ Tầng Mạng', 'Kỹ Sư Nông Nghiệp', 'Kỹ Sư Bảo Vệ Thực Vật', 'Kỹ Sư Chăn Nuôi', 'Kỹ Thuật Viên Chăn Nuôi', 'Kỹ Sư Thú Y', 'Kỹ Thuật Viên Thú Y', 'Nhân Viên Trồng Trọt', 'Nhân Viên Kỹ Thuật Nông Nghiệp', 'Thợ Mộc', 'Thợ Sơn', 'Draftsman', 'Kỹ Sư Cad', 'Kỹ Thuật Nội Thất', 'Kỹ Thuật Viên Sơn', 'Kỹ Sư Mỏ', 'Kỹ Sư Hoá', 'Kỹ Sư Hóa Dầu', 'Kỹ Sư Địa Chất', 'Hướng Dẫn Viên Du Lịch', 'Nhân Viên Cứu Hộ', 'Huấn Luyện Viên', 'Giám Sát Toà Nhà', 'Nhân Viên Bảo Trì Toà Nhà', 'Quản Lý Toà Nhà', 'Chuyên Viên Cho Thuê', 'Quản Lý Cho Thuê', 'Chuyên Viên Nghiên Cứu', 'Trưởng Phòng Nghiên Cứu', 'Chuyên Viên Tư Vấn Chiến Lược', 'Giám Đốc Chiến Lược', 'Kỹ Sư Nghiên Cứu', 'Trợ Lý', 'Quản Lý Ngành Hàng', 'Giám Sát Khu Vực', 'Quản Lý Khu Vực', 'Quản Lý Chi Nhánh', 'Giám Đốc Chi Nhánh', 'Giám Đốc Vùng', 'Giám Đốc Miền', 'Giám Đốc Trung Tâm', 'Giám Đốc Điều Hành', 'Phó Giám Đốc', 'Giám Đốc', 'Thực Tập Sinh', 'Quản Lý Đào Tạo', 'Nhân Viên Văn Phòng', 'Nhân Viên Tổng Vụ', 'Trợ Lý Luật Sư', 'Tax Manager', 'Nhân Viên Bán Hàng Showroom', 'Customer Success', 'Media Planner', 'Media Buyer', 'Trưởng Phòng Chứng Từ', 'Nhân Viên Thủ Tục', 'Chuyên Viên Tái Cấu Trúc Nợ', 'Nhân Viên Tư Vấn Bảo Hiểm', 'Quản Lý Buồng Phòng', 'Bếp Phó', 'Nhân Viên Kiểm Soát Chi Phí', 'Kỹ Sư Thi Công', 'Kỹ Sư Dự Án', 'Kỹ Sư An Toàn', 'Phụ Tá Nha Khoa', 'Nhân Viên Chăm Sóc Cây Xanh', 'Thợ May', 'Công Nhân May', 'Thợ Cắt Rập', 'Quản Lý Trung Tâm', 'Nhân Viên Nhập Dữ Liệu', 'Nhân Viên Lưu Trữ', 'Nhân Viên PG', 'Giám Sát An Ninh', 'Trưởng Phòng Tạp Vụ', 'Nhân Viên Thiết Kế Quảng Cáo', 'Nhân Viên Sáng Tạo', 'Kỹ Sư Vận Hành Máy', 'Thợ Sắt', 'Nhân Viên May', 'Nhân Viên Tư Vấn Bất Động Sản', 'Đại Diện Kinh Doanh', 'Nhân Viên Điều Hành Vận Tải', 'Chuyên Viên Du Lịch', 'Trưởng Phòng Kế Toán', 'Thực Tập Sinh Kế Toán', 'Thực Tập Sinh Khách Sạn', 'Nhân Viên Kỹ Thuật Cơ Giới', 'Quản Lý Điều Hành', 'Quản Lý Lễ Tân', 'Nhân Viên Tư Vấn Giải Pháp Công Nghệ', 'Nhân Viên Đặt Phòng Khách Sạn', 'Thực Tập Sinh Thiết Kế', 'Thợ Xây', 'Nhân Viên Thi Công', 'Nhân Viên Giáo Vụ', 'Nhân Viên Kinh Doanh Tour Du Lịch', 'Trưởng Phòng Kinh Doanh Tour Du Lịch', 'Huấn Luyện Viên Cá Nhân', 'Nhân Viên Ngành Hàng', 'Video Editor', 'Giám Sát Buồng Phòng', 'Lễ Tân Khách Sạn', 'Chuyên Viên An Toàn Thông Tin', 'Kỹ Sư An Toàn Thông Tin', 'Sales Manager', 'Nhân Viên Kinh Doanh Online', 'Copywriter', 'Chuyên Viên Nguồn Vốn', 'Nhân Viên Phòng Lab', 'Giám Sát Phòng Lab']
-                                                                                }
-                                                                            });
-                                                                        })
-                                                                    </script>
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Chỗ ở hiện tại:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="current_residence"
+                                                                                    title="Chỗ ở hiện tại">{{
+                                                                                    $resume->seekerProfile->current_residence
+                                                                                    ?? 'Chưa có' }}</span>
+                                                                            </p>
+
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Tỉnh/thành làm việc:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="working_province"
+                                                                                    title="Tỉnh/thành làm việc">{{
+                                                                                    $resume->seekerProfile->working_province
+                                                                                    ?? 'Chưa có' }}</span>
+                                                                            </p>
+
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Bằng cấp:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="degree"
+                                                                                    title="Bằng cấp">{{
+                                                                                    $resume->seekerProfile->degree ??
+                                                                                    'Chưa có' }}</span>
+                                                                            </p>
+
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Mức lương hiện tại:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="current_salary"
+                                                                                    title="Mức lương hiện tại">{{
+                                                                                    $resume->seekerProfile->current_salary
+                                                                                    ?? 'Chưa có' }}</span>
+                                                                            </p>
+
+                                                                            <p class="text-muted mb-2">
+                                                                                <strong>Mức lương mong muốn:</strong>
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="expected_salary_min"
+                                                                                    title="Mức lương mong muốn tối thiểu">{{
+                                                                                    $resume->seekerProfile->expected_salary_min
+                                                                                    ?? 'Chưa có' }} triệu</span> -
+                                                                                <span class="ml-2 editable"
+                                                                                    data-name="expected_salary_max"
+                                                                                    title="Mức lương mong muốn tối đa">{{
+                                                                                    $resume->seekerProfile->expected_salary_max
+                                                                                    ?? 'Chưa có' }} triệu</span>
+                                                                            </p>
+                                                                            @else
+                                                                            <p>Không có thông tin seeker profile.</p>
+                                                                            @endif
+                                                                        </div>
+
+                                                                        @endforeach
+                                                                        @else
+                                                                        <p>Không có thông tin người dùng.</p>
+                                                                        @endif
+                                                                    </div>
+
+
                                                                 </div>
 
                                                             </div>
@@ -1261,8 +1645,16 @@
 
                                                                 <div class="clearfix">
 
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Kỹ năng chuyên môn <span style="color: red !important;">*</span></h6>
-                                                                    <button data-id="0" type="button" class="btn btn-add pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#colorgbModal61"><i class="icon-plus2"></i> Thêm mới kỹ năng chuyên môn</button>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Kỹ năng chuyên môn <span
+                                                                            style="color: red !important;">*</span></h6>
+                                                                    <button data-id="0" type="button"
+                                                                        class="btn btn-add pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#colorgbModal61"><i
+                                                                            class="icon-plus2"></i> Thêm mới kỹ năng
+                                                                        chuyên môn</button>
 
                                                                 </div>
                                                                 <div class="box-row box-cjcs">
@@ -1273,11 +1665,19 @@
                                                             </div>
                                                         </div>
                                                         <div class="bg-cv-ai">
-                                                            <img src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2" class="bouncing-image mr-10" style="width:35px;">
+                                                            <img src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2"
+                                                                class="bouncing-image mr-10" style="width:35px;">
                                                             <div class="roller">
                                                                 <div class="rolltext">
-                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile" class="text-white text-lg"><span>Hoàn hiện hồ sơ của bạn bằng AI</span><span class="btn-try-it">Trải nghiệm ngay!</span></a>
-                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile" class="text-white text-lg"><span>Tạo CV chuyên nghiệp bằng AI</span><span class="btn-try-it">Thử ngay!</span></a>
+                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile"
+                                                                        class="text-white text-lg"><span>Hoàn hiện hồ sơ
+                                                                            của bạn bằng AI</span><span
+                                                                            class="btn-try-it">Trải nghiệm
+                                                                            ngay!</span></a>
+                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile"
+                                                                        class="text-white text-lg"><span>Tạo CV chuyên
+                                                                            nghiệp bằng AI</span><span
+                                                                            class="btn-try-it">Thử ngay!</span></a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1291,8 +1691,11 @@
                                                                     <div class="box-jc box-cj box-1">
                                                                         <div class="clearfix">
                                                                             <div class="pull-left">
-                                                                                <h6 class="modal-title text-uppercase text-blue-800">Kinh nghiệm làm việc
-                                                                                    <span style="color: red !important;">*</span>
+                                                                                <h6
+                                                                                    class="modal-title text-uppercase text-blue-800">
+                                                                                    Kinh nghiệm làm việc
+                                                                                    <span
+                                                                                        style="color: red !important;">*</span>
                                                                                 </h6>
 
                                                                             </div>
@@ -1300,9 +1703,13 @@
 
                                                                             <div class="pull-right">
 
-                                                                                <button data-id="0" type="button" class="btn text-blue-800 pull-right btn-default"
-                                                                                    data-toggle="modal" data-backdrop="static" data-target="#colorgbModal1"><i
-                                                                                        class="icon-plus2"></i> Thêm mới kinh nghiệm làm việc
+                                                                                <button data-id="0" type="button"
+                                                                                    class="btn text-blue-800 pull-right btn-default"
+                                                                                    data-toggle="modal"
+                                                                                    data-backdrop="static"
+                                                                                    data-target="#colorgbModal1"><i
+                                                                                        class="icon-plus2"></i> Thêm mới
+                                                                                    kinh nghiệm làm việc
                                                                                 </button>
 
                                                                             </div>
@@ -1330,8 +1737,16 @@
 
                                                                 <div class="clearfix">
 
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Quá trình học tập <span style="color: red !important;">*</span></h6>
-                                                                    <button data-id="0" type="button" class="btn btn-add pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#colorgbModal21"><i class="icon-plus2"></i> Thêm mới quá trình học tập</button>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Quá trình học tập <span
+                                                                            style="color: red !important;">*</span></h6>
+                                                                    <button data-id="0" type="button"
+                                                                        class="btn btn-add pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#colorgbModal21"><i
+                                                                            class="icon-plus2"></i> Thêm mới quá trình
+                                                                        học tập</button>
 
                                                                 </div>
                                                                 <div class="box-timeline">
@@ -1349,8 +1764,17 @@
 
                                                                 <div class="box-2">
                                                                     <div class="clearfix">
-                                                                        <h6 class="modal-title text-uppercase pull-left text-blue-800">Ngôn ngữ thành thạo <span style="color: red !important;">*</span></h6>
-                                                                        <button type="button" class="btn pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#colorgbModal24"><i class="icon-plus2"></i> Thêm mới ngôn ngữ</button>
+                                                                        <h6
+                                                                            class="modal-title text-uppercase pull-left text-blue-800">
+                                                                            Ngôn ngữ thành thạo <span
+                                                                                style="color: red !important;">*</span>
+                                                                        </h6>
+                                                                        <button type="button"
+                                                                            class="btn pull-right text-blue-800 btn-default"
+                                                                            data-toggle="modal" data-backdrop="static"
+                                                                            data-target="#colorgbModal24"><i
+                                                                                class="icon-plus2"></i> Thêm mới ngôn
+                                                                            ngữ</button>
                                                                     </div>
                                                                     <div class="colorgb-row">
                                                                         <div class="lds-ripple">
@@ -1367,10 +1791,14 @@
                                                         <div class="card-box">
                                                             <div class="box-jc box-52">
                                                                 <div class="clearfix">
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Kỹ năng mềm <span
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Kỹ năng mềm <span
                                                                             style="color: red !important;">*</span></h6>
-                                                                    <button type="button" class="btn pull-right text-blue-800 btn-default"
-                                                                        data-toggle="modal" data-backdrop="static" data-target="#colorgbModal54"><i
+                                                                    <button type="button"
+                                                                        class="btn pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#colorgbModal54"><i
                                                                             class="icon-plus2"></i> Thêm mới kỹ năng mềm
                                                                     </button>
                                                                 </div>
@@ -1387,8 +1815,16 @@
                                                         <div class="card-box">
                                                             <div class="box-jc box-32">
                                                                 <div class="clearfix">
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Sở thích <span style="color: red !important;">*</span></h6>
-                                                                    <button type="button" class="btn pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#colorgbModal31"><i class="icon-plus2"></i> Thêm mới sở thích</button>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Sở thích <span
+                                                                            style="color: red !important;">*</span></h6>
+                                                                    <button type="button"
+                                                                        class="btn pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#colorgbModal31"><i
+                                                                            class="icon-plus2"></i> Thêm mới sở
+                                                                        thích</button>
                                                                 </div>
                                                                 <div class="colorgb-row">
                                                                     <div class="lds-ripple">
@@ -1403,8 +1839,16 @@
                                                         <div class="card-box">
                                                             <div class="box-cjp box-132">
                                                                 <div class="clearfix">
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Địa điểm mong muốn làm việc <span style="color: red !important;">*</span></h6>
-                                                                    <button type="button" class="btn pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#colorgbModal131"><i class="icon-plus2"></i> Thêm mới địa điểm</button>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Địa điểm mong muốn làm việc <span
+                                                                            style="color: red !important;">*</span></h6>
+                                                                    <button type="button"
+                                                                        class="btn pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#colorgbModal131"><i
+                                                                            class="icon-plus2"></i> Thêm mới địa
+                                                                        điểm</button>
                                                                 </div>
                                                                 <div class="colorgb-row">
                                                                     <div class="lds-ripple">
@@ -1419,8 +1863,12 @@
 
                                                         <div class="card-box" id="s5">
                                                             <div class="clearfix">
-                                                                <h6 class="modal-title text-uppercase text-blue-800">Tệp đính kèm <span style="color: red !important;">*</span></h6>
-                                                                <a target="_blank" href="/candidate/document-attachment" class="btn btn-default mt-10"><i class="fa fa-paperclip"></i>
+                                                                <h6 class="modal-title text-uppercase text-blue-800">Tệp
+                                                                    đính kèm <span
+                                                                        style="color: red !important;">*</span></h6>
+                                                                <a target="_blank" href="/candidate/document-attachment"
+                                                                    class="btn btn-default mt-10"><i
+                                                                        class="fa fa-paperclip"></i>
                                                                     Thêm mới tệp đính kèm</a>
                                                             </div>
                                                         </div>
@@ -1428,8 +1876,16 @@
                                                         <div id="section-certificate" class="card-box">
                                                             <div class="box-cjp box-132">
                                                                 <div class="clearfix">
-                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">Chứng chỉ <span style="color: red !important;">*</span></h6>
-                                                                    <button data-id="0" type="button" class="btn btn-add pull-right text-blue-800 btn-default" data-toggle="modal" data-backdrop="static" data-target="#license"><i class="icon-plus2"></i> Thêm mới chứng chỉ</button>
+                                                                    <h6
+                                                                        class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Chứng chỉ <span
+                                                                            style="color: red !important;">*</span></h6>
+                                                                    <button data-id="0" type="button"
+                                                                        class="btn btn-add pull-right text-blue-800 btn-default"
+                                                                        data-toggle="modal" data-backdrop="static"
+                                                                        data-target="#license"><i
+                                                                            class="icon-plus2"></i> Thêm mới chứng
+                                                                        chỉ</button>
                                                                 </div>
                                                                 <style>
                                                                     .error {
@@ -1442,290 +1898,889 @@
                                                                         <!-- Modal content-->
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
-                                                                                <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
-                                                                                <h4 class="modal-title text-default-800">Thêm chứng chỉ</h4>
+                                                                                <button type="button"
+                                                                                    title="Đóng cửa sổ" class="close"
+                                                                                    data-dismiss="modal">&times;</button>
+                                                                                <h4
+                                                                                    class="modal-title text-default-800">
+                                                                                    Thêm chứng chỉ</h4>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <div class="panel panel-body border-top-blue">
-                                                                                    <form action="#" id="form-submit-certificate" method="POST" novalidate>
+                                                                                <div
+                                                                                    class="panel panel-body border-top-blue">
+                                                                                    <form action="#"
+                                                                                        id="form-submit-certificate"
+                                                                                        method="POST" novalidate>
                                                                                         <div class="row">
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-certificate_type_name required">
-                                                                                                    <label class="control-label" for="certificate_type_name">Tên chứng chỉ</label>
-                                                                                                    <input type="text" id="certificate_type_name"
+                                                                                                <div
+                                                                                                    class="form-group field-certificate_type_name required">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="certificate_type_name">Tên
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="certificate_type_name"
                                                                                                         class="form-control js-example-basic-multiple"
                                                                                                         placeholder="VD: IELTS 8.0, TOEIC 850..."
                                                                                                         multiple="multiple"
                                                                                                         name="certificate_type_name" />
 
-                                                                                                    <p class="help-block help-block-error"></p>
+                                                                                                    <p
+                                                                                                        class="help-block help-block-error">
+                                                                                                    </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-organization_name required">
-                                                                                                    <label class="control-label" for="organization_name">Tổ chức cấp chứng chỉ</label>
-                                                                                                    <input type="hidden" id="organization_id" name="organization_id">
-                                                                                                    <input type="text" id="organization_name"
+                                                                                                <div
+                                                                                                    class="form-group field-organization_name required">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="organization_name">Tổ
+                                                                                                        chức cấp chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="hidden"
+                                                                                                        id="organization_id"
+                                                                                                        name="organization_id">
+                                                                                                    <input type="text"
+                                                                                                        id="organization_name"
                                                                                                         class="form-control js-example-basic-multiple"
                                                                                                         multiple="multiple"
                                                                                                         name="organization_name" />
 
-                                                                                                    <p class="help-block help-block-error"></p>
+                                                                                                    <p
+                                                                                                        class="help-block help-block-error">
+                                                                                                    </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="row">
-                                                                                            <div style="display:flex; align-items: end">
+                                                                                            <div
+                                                                                                style="display:flex; align-items: end">
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-issue_date_month required">
-                                                                                                        <label class="control-label" for="issue_date_month">Thời gian phát hành</label>
-                                                                                                        <select id="issue_date_month" class="form-control" name="issue_date_month">
-                                                                                                            <option value="">Tháng</option>
-                                                                                                            <option value="12">Tháng 12</option>
-                                                                                                            <option value="11">Tháng 11</option>
-                                                                                                            <option value="10">Tháng 10</option>
-                                                                                                            <option value="9">Tháng 9</option>
-                                                                                                            <option value="8">Tháng 8</option>
-                                                                                                            <option value="7">Tháng 7</option>
-                                                                                                            <option value="6">Tháng 6</option>
-                                                                                                            <option value="5">Tháng 5</option>
-                                                                                                            <option value="4">Tháng 4</option>
-                                                                                                            <option value="3">Tháng 3</option>
-                                                                                                            <option value="2">Tháng 2</option>
-                                                                                                            <option value="1">Tháng 1</option>
+                                                                                                    <div
+                                                                                                        class="form-group field-issue_date_month required">
+                                                                                                        <label
+                                                                                                            class="control-label"
+                                                                                                            for="issue_date_month">Thời
+                                                                                                            gian phát
+                                                                                                            hành</label>
+                                                                                                        <select
+                                                                                                            id="issue_date_month"
+                                                                                                            class="form-control"
+                                                                                                            name="issue_date_month">
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Tháng
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="12">
+                                                                                                                Tháng 12
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="11">
+                                                                                                                Tháng 11
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="10">
+                                                                                                                Tháng 10
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="9">
+                                                                                                                Tháng 9
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="8">
+                                                                                                                Tháng 8
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="7">
+                                                                                                                Tháng 7
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="6">
+                                                                                                                Tháng 6
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="5">
+                                                                                                                Tháng 5
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="4">
+                                                                                                                Tháng 4
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="3">
+                                                                                                                Tháng 3
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2">
+                                                                                                                Tháng 2
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1">
+                                                                                                                Tháng 1
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="issue_date_month-error" class="error" for="issue_date_month"></label>
+                                                                                                    <label
+                                                                                                        id="issue_date_month-error"
+                                                                                                        class="error"
+                                                                                                        for="issue_date_month"></label>
                                                                                                 </div>
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-issue_date_year">
-                                                                                                        <select id="issue_date_year" class="form-control" name="issue_date_year">
-                                                                                                            <option value="">Năm</option>
-                                                                                                            <option value="2024">Năm 2024</option>
-                                                                                                            <option value="2023">Năm 2023</option>
-                                                                                                            <option value="2022">Năm 2022</option>
-                                                                                                            <option value="2021">Năm 2021</option>
-                                                                                                            <option value="2020">Năm 2020</option>
-                                                                                                            <option value="2019">Năm 2019</option>
-                                                                                                            <option value="2018">Năm 2018</option>
-                                                                                                            <option value="2017">Năm 2017</option>
-                                                                                                            <option value="2016">Năm 2016</option>
-                                                                                                            <option value="2015">Năm 2015</option>
-                                                                                                            <option value="2014">Năm 2014</option>
-                                                                                                            <option value="2013">Năm 2013</option>
-                                                                                                            <option value="2012">Năm 2012</option>
-                                                                                                            <option value="2011">Năm 2011</option>
-                                                                                                            <option value="2010">Năm 2010</option>
-                                                                                                            <option value="2009">Năm 2009</option>
-                                                                                                            <option value="2008">Năm 2008</option>
-                                                                                                            <option value="2007">Năm 2007</option>
-                                                                                                            <option value="2006">Năm 2006</option>
-                                                                                                            <option value="2005">Năm 2005</option>
-                                                                                                            <option value="2004">Năm 2004</option>
-                                                                                                            <option value="2003">Năm 2003</option>
-                                                                                                            <option value="2002">Năm 2002</option>
-                                                                                                            <option value="2001">Năm 2001</option>
-                                                                                                            <option value="2000">Năm 2000</option>
-                                                                                                            <option value="1999">Năm 1999</option>
-                                                                                                            <option value="1998">Năm 1998</option>
-                                                                                                            <option value="1997">Năm 1997</option>
-                                                                                                            <option value="1996">Năm 1996</option>
-                                                                                                            <option value="1995">Năm 1995</option>
-                                                                                                            <option value="1994">Năm 1994</option>
-                                                                                                            <option value="1993">Năm 1993</option>
-                                                                                                            <option value="1992">Năm 1992</option>
-                                                                                                            <option value="1991">Năm 1991</option>
-                                                                                                            <option value="1990">Năm 1990</option>
-                                                                                                            <option value="1989">Năm 1989</option>
-                                                                                                            <option value="1988">Năm 1988</option>
-                                                                                                            <option value="1987">Năm 1987</option>
-                                                                                                            <option value="1986">Năm 1986</option>
-                                                                                                            <option value="1985">Năm 1985</option>
-                                                                                                            <option value="1984">Năm 1984</option>
-                                                                                                            <option value="1983">Năm 1983</option>
-                                                                                                            <option value="1982">Năm 1982</option>
-                                                                                                            <option value="1981">Năm 1981</option>
-                                                                                                            <option value="1980">Năm 1980</option>
-                                                                                                            <option value="1979">Năm 1979</option>
-                                                                                                            <option value="1978">Năm 1978</option>
-                                                                                                            <option value="1977">Năm 1977</option>
-                                                                                                            <option value="1976">Năm 1976</option>
-                                                                                                            <option value="1975">Năm 1975</option>
-                                                                                                            <option value="1974">Năm 1974</option>
-                                                                                                            <option value="1973">Năm 1973</option>
-                                                                                                            <option value="1972">Năm 1972</option>
-                                                                                                            <option value="1971">Năm 1971</option>
-                                                                                                            <option value="1970">Năm 1970</option>
+                                                                                                    <div
+                                                                                                        class="form-group field-issue_date_year">
+                                                                                                        <select
+                                                                                                            id="issue_date_year"
+                                                                                                            class="form-control"
+                                                                                                            name="issue_date_year">
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Năm
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2024">
+                                                                                                                Năm 2024
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2023">
+                                                                                                                Năm 2023
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2022">
+                                                                                                                Năm 2022
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2021">
+                                                                                                                Năm 2021
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2020">
+                                                                                                                Năm 2020
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2019">
+                                                                                                                Năm 2019
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2018">
+                                                                                                                Năm 2018
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2017">
+                                                                                                                Năm 2017
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2016">
+                                                                                                                Năm 2016
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2015">
+                                                                                                                Năm 2015
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2014">
+                                                                                                                Năm 2014
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2013">
+                                                                                                                Năm 2013
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2012">
+                                                                                                                Năm 2012
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2011">
+                                                                                                                Năm 2011
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2010">
+                                                                                                                Năm 2010
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2009">
+                                                                                                                Năm 2009
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2008">
+                                                                                                                Năm 2008
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2007">
+                                                                                                                Năm 2007
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2006">
+                                                                                                                Năm 2006
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2005">
+                                                                                                                Năm 2005
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2004">
+                                                                                                                Năm 2004
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2003">
+                                                                                                                Năm 2003
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2002">
+                                                                                                                Năm 2002
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2001">
+                                                                                                                Năm 2001
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2000">
+                                                                                                                Năm 2000
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1999">
+                                                                                                                Năm 1999
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1998">
+                                                                                                                Năm 1998
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1997">
+                                                                                                                Năm 1997
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1996">
+                                                                                                                Năm 1996
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1995">
+                                                                                                                Năm 1995
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1994">
+                                                                                                                Năm 1994
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1993">
+                                                                                                                Năm 1993
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1992">
+                                                                                                                Năm 1992
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1991">
+                                                                                                                Năm 1991
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1990">
+                                                                                                                Năm 1990
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1989">
+                                                                                                                Năm 1989
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1988">
+                                                                                                                Năm 1988
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1987">
+                                                                                                                Năm 1987
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1986">
+                                                                                                                Năm 1986
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1985">
+                                                                                                                Năm 1985
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1984">
+                                                                                                                Năm 1984
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1983">
+                                                                                                                Năm 1983
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1982">
+                                                                                                                Năm 1982
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1981">
+                                                                                                                Năm 1981
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1980">
+                                                                                                                Năm 1980
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1979">
+                                                                                                                Năm 1979
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1978">
+                                                                                                                Năm 1978
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1977">
+                                                                                                                Năm 1977
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1976">
+                                                                                                                Năm 1976
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1975">
+                                                                                                                Năm 1975
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1974">
+                                                                                                                Năm 1974
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1973">
+                                                                                                                Năm 1973
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1972">
+                                                                                                                Năm 1972
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1971">
+                                                                                                                Năm 1971
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1970">
+                                                                                                                Năm 1970
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="issue_date_year-error" class="error" for="issue_date_year"></label>
+                                                                                                    <label
+                                                                                                        id="issue_date_year-error"
+                                                                                                        class="error"
+                                                                                                        for="issue_date_year"></label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <p class="help-block help-block-error"></p>
+                                                                                            <p
+                                                                                                class="help-block help-block-error">
+                                                                                            </p>
                                                                                         </div>
 
                                                                                         <div class="row">
-                                                                                            <div style="display:flex; align-items: end">
+                                                                                            <div
+                                                                                                style="display:flex; align-items: end">
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-expiration_date_month">
-                                                                                                        <label class="control-label" for="expiration_date_month">Thời gian hết
+                                                                                                    <div
+                                                                                                        class="form-group field-expiration_date_month">
+                                                                                                        <label
+                                                                                                            class="control-label"
+                                                                                                            for="expiration_date_month">Thời
+                                                                                                            gian hết
                                                                                                             hạn</label>
-                                                                                                        <select id="expiration_date_month" class="form-control"
+                                                                                                        <select
+                                                                                                            id="expiration_date_month"
+                                                                                                            class="form-control"
                                                                                                             name="expiration_date_month">
-                                                                                                            <option value="">Tháng</option>
-                                                                                                            <option value="12">Tháng 12</option>
-                                                                                                            <option value="11">Tháng 11</option>
-                                                                                                            <option value="10">Tháng 10</option>
-                                                                                                            <option value="9">Tháng 9</option>
-                                                                                                            <option value="8">Tháng 8</option>
-                                                                                                            <option value="7">Tháng 7</option>
-                                                                                                            <option value="6">Tháng 6</option>
-                                                                                                            <option value="5">Tháng 5</option>
-                                                                                                            <option value="4">Tháng 4</option>
-                                                                                                            <option value="3">Tháng 3</option>
-                                                                                                            <option value="2">Tháng 2</option>
-                                                                                                            <option value="1">Tháng 1</option>
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Tháng
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="12">
+                                                                                                                Tháng 12
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="11">
+                                                                                                                Tháng 11
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="10">
+                                                                                                                Tháng 10
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="9">
+                                                                                                                Tháng 9
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="8">
+                                                                                                                Tháng 8
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="7">
+                                                                                                                Tháng 7
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="6">
+                                                                                                                Tháng 6
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="5">
+                                                                                                                Tháng 5
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="4">
+                                                                                                                Tháng 4
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="3">
+                                                                                                                Tháng 3
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2">
+                                                                                                                Tháng 2
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1">
+                                                                                                                Tháng 1
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="expiration_date_month-error" class="error"
+                                                                                                    <label
+                                                                                                        id="expiration_date_month-error"
+                                                                                                        class="error"
                                                                                                         for="expiration_date_month"></label>
                                                                                                 </div>
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-expiration_date_year">
-                                                                                                        <select id="expiration_date_year" class="form-control"
+                                                                                                    <div
+                                                                                                        class="form-group field-expiration_date_year">
+                                                                                                        <select
+                                                                                                            id="expiration_date_year"
+                                                                                                            class="form-control"
                                                                                                             name="expiration_date_year">
-                                                                                                            <option value="">Năm</option>
-                                                                                                            <option value="2054">Năm 2054</option>
-                                                                                                            <option value="2053">Năm 2053</option>
-                                                                                                            <option value="2052">Năm 2052</option>
-                                                                                                            <option value="2051">Năm 2051</option>
-                                                                                                            <option value="2050">Năm 2050</option>
-                                                                                                            <option value="2049">Năm 2049</option>
-                                                                                                            <option value="2048">Năm 2048</option>
-                                                                                                            <option value="2047">Năm 2047</option>
-                                                                                                            <option value="2046">Năm 2046</option>
-                                                                                                            <option value="2045">Năm 2045</option>
-                                                                                                            <option value="2044">Năm 2044</option>
-                                                                                                            <option value="2043">Năm 2043</option>
-                                                                                                            <option value="2042">Năm 2042</option>
-                                                                                                            <option value="2041">Năm 2041</option>
-                                                                                                            <option value="2040">Năm 2040</option>
-                                                                                                            <option value="2039">Năm 2039</option>
-                                                                                                            <option value="2038">Năm 2038</option>
-                                                                                                            <option value="2037">Năm 2037</option>
-                                                                                                            <option value="2036">Năm 2036</option>
-                                                                                                            <option value="2035">Năm 2035</option>
-                                                                                                            <option value="2034">Năm 2034</option>
-                                                                                                            <option value="2033">Năm 2033</option>
-                                                                                                            <option value="2032">Năm 2032</option>
-                                                                                                            <option value="2031">Năm 2031</option>
-                                                                                                            <option value="2030">Năm 2030</option>
-                                                                                                            <option value="2029">Năm 2029</option>
-                                                                                                            <option value="2028">Năm 2028</option>
-                                                                                                            <option value="2027">Năm 2027</option>
-                                                                                                            <option value="2026">Năm 2026</option>
-                                                                                                            <option value="2025">Năm 2025</option>
-                                                                                                            <option value="2024">Năm 2024</option>
-                                                                                                            <option value="2023">Năm 2023</option>
-                                                                                                            <option value="2022">Năm 2022</option>
-                                                                                                            <option value="2021">Năm 2021</option>
-                                                                                                            <option value="2020">Năm 2020</option>
-                                                                                                            <option value="2019">Năm 2019</option>
-                                                                                                            <option value="2018">Năm 2018</option>
-                                                                                                            <option value="2017">Năm 2017</option>
-                                                                                                            <option value="2016">Năm 2016</option>
-                                                                                                            <option value="2015">Năm 2015</option>
-                                                                                                            <option value="2014">Năm 2014</option>
-                                                                                                            <option value="2013">Năm 2013</option>
-                                                                                                            <option value="2012">Năm 2012</option>
-                                                                                                            <option value="2011">Năm 2011</option>
-                                                                                                            <option value="2010">Năm 2010</option>
-                                                                                                            <option value="2009">Năm 2009</option>
-                                                                                                            <option value="2008">Năm 2008</option>
-                                                                                                            <option value="2007">Năm 2007</option>
-                                                                                                            <option value="2006">Năm 2006</option>
-                                                                                                            <option value="2005">Năm 2005</option>
-                                                                                                            <option value="2004">Năm 2004</option>
-                                                                                                            <option value="2003">Năm 2003</option>
-                                                                                                            <option value="2002">Năm 2002</option>
-                                                                                                            <option value="2001">Năm 2001</option>
-                                                                                                            <option value="2000">Năm 2000</option>
-                                                                                                            <option value="1999">Năm 1999</option>
-                                                                                                            <option value="1998">Năm 1998</option>
-                                                                                                            <option value="1997">Năm 1997</option>
-                                                                                                            <option value="1996">Năm 1996</option>
-                                                                                                            <option value="1995">Năm 1995</option>
-                                                                                                            <option value="1994">Năm 1994</option>
-                                                                                                            <option value="1993">Năm 1993</option>
-                                                                                                            <option value="1992">Năm 1992</option>
-                                                                                                            <option value="1991">Năm 1991</option>
-                                                                                                            <option value="1990">Năm 1990</option>
-                                                                                                            <option value="1989">Năm 1989</option>
-                                                                                                            <option value="1988">Năm 1988</option>
-                                                                                                            <option value="1987">Năm 1987</option>
-                                                                                                            <option value="1986">Năm 1986</option>
-                                                                                                            <option value="1985">Năm 1985</option>
-                                                                                                            <option value="1984">Năm 1984</option>
-                                                                                                            <option value="1983">Năm 1983</option>
-                                                                                                            <option value="1982">Năm 1982</option>
-                                                                                                            <option value="1981">Năm 1981</option>
-                                                                                                            <option value="1980">Năm 1980</option>
-                                                                                                            <option value="1979">Năm 1979</option>
-                                                                                                            <option value="1978">Năm 1978</option>
-                                                                                                            <option value="1977">Năm 1977</option>
-                                                                                                            <option value="1976">Năm 1976</option>
-                                                                                                            <option value="1975">Năm 1975</option>
-                                                                                                            <option value="1974">Năm 1974</option>
-                                                                                                            <option value="1973">Năm 1973</option>
-                                                                                                            <option value="1972">Năm 1972</option>
-                                                                                                            <option value="1971">Năm 1971</option>
-                                                                                                            <option value="1970">Năm 1970</option>
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Năm
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2054">
+                                                                                                                Năm 2054
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2053">
+                                                                                                                Năm 2053
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2052">
+                                                                                                                Năm 2052
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2051">
+                                                                                                                Năm 2051
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2050">
+                                                                                                                Năm 2050
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2049">
+                                                                                                                Năm 2049
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2048">
+                                                                                                                Năm 2048
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2047">
+                                                                                                                Năm 2047
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2046">
+                                                                                                                Năm 2046
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2045">
+                                                                                                                Năm 2045
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2044">
+                                                                                                                Năm 2044
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2043">
+                                                                                                                Năm 2043
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2042">
+                                                                                                                Năm 2042
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2041">
+                                                                                                                Năm 2041
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2040">
+                                                                                                                Năm 2040
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2039">
+                                                                                                                Năm 2039
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2038">
+                                                                                                                Năm 2038
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2037">
+                                                                                                                Năm 2037
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2036">
+                                                                                                                Năm 2036
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2035">
+                                                                                                                Năm 2035
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2034">
+                                                                                                                Năm 2034
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2033">
+                                                                                                                Năm 2033
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2032">
+                                                                                                                Năm 2032
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2031">
+                                                                                                                Năm 2031
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2030">
+                                                                                                                Năm 2030
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2029">
+                                                                                                                Năm 2029
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2028">
+                                                                                                                Năm 2028
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2027">
+                                                                                                                Năm 2027
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2026">
+                                                                                                                Năm 2026
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2025">
+                                                                                                                Năm 2025
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2024">
+                                                                                                                Năm 2024
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2023">
+                                                                                                                Năm 2023
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2022">
+                                                                                                                Năm 2022
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2021">
+                                                                                                                Năm 2021
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2020">
+                                                                                                                Năm 2020
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2019">
+                                                                                                                Năm 2019
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2018">
+                                                                                                                Năm 2018
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2017">
+                                                                                                                Năm 2017
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2016">
+                                                                                                                Năm 2016
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2015">
+                                                                                                                Năm 2015
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2014">
+                                                                                                                Năm 2014
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2013">
+                                                                                                                Năm 2013
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2012">
+                                                                                                                Năm 2012
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2011">
+                                                                                                                Năm 2011
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2010">
+                                                                                                                Năm 2010
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2009">
+                                                                                                                Năm 2009
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2008">
+                                                                                                                Năm 2008
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2007">
+                                                                                                                Năm 2007
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2006">
+                                                                                                                Năm 2006
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2005">
+                                                                                                                Năm 2005
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2004">
+                                                                                                                Năm 2004
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2003">
+                                                                                                                Năm 2003
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2002">
+                                                                                                                Năm 2002
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2001">
+                                                                                                                Năm 2001
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2000">
+                                                                                                                Năm 2000
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1999">
+                                                                                                                Năm 1999
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1998">
+                                                                                                                Năm 1998
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1997">
+                                                                                                                Năm 1997
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1996">
+                                                                                                                Năm 1996
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1995">
+                                                                                                                Năm 1995
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1994">
+                                                                                                                Năm 1994
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1993">
+                                                                                                                Năm 1993
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1992">
+                                                                                                                Năm 1992
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1991">
+                                                                                                                Năm 1991
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1990">
+                                                                                                                Năm 1990
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1989">
+                                                                                                                Năm 1989
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1988">
+                                                                                                                Năm 1988
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1987">
+                                                                                                                Năm 1987
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1986">
+                                                                                                                Năm 1986
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1985">
+                                                                                                                Năm 1985
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1984">
+                                                                                                                Năm 1984
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1983">
+                                                                                                                Năm 1983
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1982">
+                                                                                                                Năm 1982
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1981">
+                                                                                                                Năm 1981
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1980">
+                                                                                                                Năm 1980
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1979">
+                                                                                                                Năm 1979
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1978">
+                                                                                                                Năm 1978
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1977">
+                                                                                                                Năm 1977
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1976">
+                                                                                                                Năm 1976
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1975">
+                                                                                                                Năm 1975
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1974">
+                                                                                                                Năm 1974
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1973">
+                                                                                                                Năm 1973
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1972">
+                                                                                                                Năm 1972
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1971">
+                                                                                                                Năm 1971
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1970">
+                                                                                                                Năm 1970
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="expiration_date_year-error" class="error"
+                                                                                                    <label
+                                                                                                        id="expiration_date_year-error"
+                                                                                                        class="error"
                                                                                                         for="expiration_date_year"></label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <p class="help-block help-block-error"></p>
+                                                                                            <p
+                                                                                                class="help-block help-block-error">
+                                                                                            </p>
                                                                                         </div>
 
                                                                                         <div class="row">
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="credential_id">ID chứng chỉ</label>
-                                                                                                    <input type="text" id="credential_id" class="form-control"
-                                                                                                        name="credential_id" placeholder="">
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="credential_id">ID
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="credential_id"
+                                                                                                        class="form-control"
+                                                                                                        name="credential_id"
+                                                                                                        placeholder="">
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="credential_url">URL chứng chỉ</label>
-                                                                                                    <input type="text" id="credential_url" class="form-control"
-                                                                                                        name="credential_url" placeholder="">
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="credential_url">URL
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="credential_url"
+                                                                                                        class="form-control"
+                                                                                                        name="credential_url"
+                                                                                                        placeholder="">
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="note">Ghi chú</label>
-                                                                                                    <textarea class="form-control"
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="note">Ghi
+                                                                                                        chú</label>
+                                                                                                    <textarea
+                                                                                                        class="form-control"
                                                                                                         name="note">
                                       </textarea>
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="form-group mt-10">
                                                                                             <span class="pull-left">
-                                                                                                <button type="submit" id="btn-submit-certificate"
+                                                                                                <button type="submit"
+                                                                                                    id="btn-submit-certificate"
                                                                                                     class="btn btn-primary btn-ladda btn-ladda-spinner">
-                                                                                                    <i class="icon-floppy-disk position-left"></i>
-                                                                                                    <span class="ladda-label">Lưu lại</span>
-                                                                                                    <span class="ladda-spinner"></span>
-                                                                                                    <span class="ladda-spinner"></span>
+                                                                                                    <i
+                                                                                                        class="icon-floppy-disk position-left"></i>
+                                                                                                    <span
+                                                                                                        class="ladda-label">Lưu
+                                                                                                        lại</span>
+                                                                                                    <span
+                                                                                                        class="ladda-spinner"></span>
+                                                                                                    <span
+                                                                                                        class="ladda-spinner"></span>
                                                                                                 </button>
                                                                                             </span>
                                                                                         </div>
@@ -1874,295 +2929,895 @@
                                                                         <!-- Modal content-->
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
-                                                                                <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
-                                                                                <h4 class="modal-title text-default-800">Sửa chứng chỉ</h4>
+                                                                                <button type="button"
+                                                                                    title="Đóng cửa sổ" class="close"
+                                                                                    data-dismiss="modal">&times;</button>
+                                                                                <h4
+                                                                                    class="modal-title text-default-800">
+                                                                                    Sửa chứng chỉ</h4>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                <div class="panel panel-body border-top-blue">
-                                                                                    <form action="#" id="form-edit-submit-certificate" method="POST" novalidate>
-                                                                                        <input type="hidden" id="edit_certificate_id"
+                                                                                <div
+                                                                                    class="panel panel-body border-top-blue">
+                                                                                    <form action="#"
+                                                                                        id="form-edit-submit-certificate"
+                                                                                        method="POST" novalidate>
+                                                                                        <input type="hidden"
+                                                                                            id="edit_certificate_id"
                                                                                             class="form-control js-example-basic-multiple"
                                                                                             multiple="multiple"
                                                                                             name="certificate_id" />
                                                                                         <div class="row">
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-certificate_type_name required">
-                                                                                                    <label class="control-label" for="certificate_type_name">Tên chứng chỉ</label>
-                                                                                                    <input type="text" id="edit_certificate_type_name"
+                                                                                                <div
+                                                                                                    class="form-group field-certificate_type_name required">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="certificate_type_name">Tên
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="edit_certificate_type_name"
                                                                                                         class="form-control js-example-basic-multiple"
                                                                                                         placeholder="VD: IELTS 8.0, TOEIC 850..."
                                                                                                         multiple="multiple"
                                                                                                         name="certificate_type_name" />
 
-                                                                                                    <p class="help-block help-block-error"></p>
+                                                                                                    <p
+                                                                                                        class="help-block help-block-error">
+                                                                                                    </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-organization_name required">
-                                                                                                    <label class="control-label" for="organization_name">Tổ chức cấp chứng chỉ</label>
-                                                                                                    <input type="hidden" id="organization_id" name="organization_id">
-                                                                                                    <input type="text" id="edit_organization_name"
+                                                                                                <div
+                                                                                                    class="form-group field-organization_name required">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="organization_name">Tổ
+                                                                                                        chức cấp chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="hidden"
+                                                                                                        id="organization_id"
+                                                                                                        name="organization_id">
+                                                                                                    <input type="text"
+                                                                                                        id="edit_organization_name"
                                                                                                         class="form-control js-example-basic-multiple"
                                                                                                         multiple="multiple"
                                                                                                         name="organization_name" />
 
-                                                                                                    <p class="help-block help-block-error"></p>
+                                                                                                    <p
+                                                                                                        class="help-block help-block-error">
+                                                                                                    </p>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="row">
-                                                                                            <div style="display:flex; align-items: end">
+                                                                                            <div
+                                                                                                style="display:flex; align-items: end">
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-issue_date_month required">
-                                                                                                        <label class="control-label" for="edit_issue_date_month">Thời gian phát hành</label>
-                                                                                                        <select id="edit_issue_date_month" class="form-control" name="issue_date_month">
-                                                                                                            <option value="">Tháng</option>
-                                                                                                            <option value="12">Tháng 12</option>
-                                                                                                            <option value="11">Tháng 11</option>
-                                                                                                            <option value="10">Tháng 10</option>
-                                                                                                            <option value="9">Tháng 9</option>
-                                                                                                            <option value="8">Tháng 8</option>
-                                                                                                            <option value="7">Tháng 7</option>
-                                                                                                            <option value="6">Tháng 6</option>
-                                                                                                            <option value="5">Tháng 5</option>
-                                                                                                            <option value="4">Tháng 4</option>
-                                                                                                            <option value="3">Tháng 3</option>
-                                                                                                            <option value="2">Tháng 2</option>
-                                                                                                            <option value="1">Tháng 1</option>
+                                                                                                    <div
+                                                                                                        class="form-group field-issue_date_month required">
+                                                                                                        <label
+                                                                                                            class="control-label"
+                                                                                                            for="edit_issue_date_month">Thời
+                                                                                                            gian phát
+                                                                                                            hành</label>
+                                                                                                        <select
+                                                                                                            id="edit_issue_date_month"
+                                                                                                            class="form-control"
+                                                                                                            name="issue_date_month">
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Tháng
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="12">
+                                                                                                                Tháng 12
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="11">
+                                                                                                                Tháng 11
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="10">
+                                                                                                                Tháng 10
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="9">
+                                                                                                                Tháng 9
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="8">
+                                                                                                                Tháng 8
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="7">
+                                                                                                                Tháng 7
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="6">
+                                                                                                                Tháng 6
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="5">
+                                                                                                                Tháng 5
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="4">
+                                                                                                                Tháng 4
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="3">
+                                                                                                                Tháng 3
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2">
+                                                                                                                Tháng 2
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1">
+                                                                                                                Tháng 1
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="edit_issue_date_month-error" class="error" for="edit_issue_date_month"></label>
+                                                                                                    <label
+                                                                                                        id="edit_issue_date_month-error"
+                                                                                                        class="error"
+                                                                                                        for="edit_issue_date_month"></label>
                                                                                                 </div>
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-edit_issue_date_year">
-                                                                                                        <select id="edit_issue_date_year" class="form-control" name="issue_date_year">
-                                                                                                            <option value="">Năm</option>
-                                                                                                            <option value="2024">Năm 2024</option>
-                                                                                                            <option value="2023">Năm 2023</option>
-                                                                                                            <option value="2022">Năm 2022</option>
-                                                                                                            <option value="2021">Năm 2021</option>
-                                                                                                            <option value="2020">Năm 2020</option>
-                                                                                                            <option value="2019">Năm 2019</option>
-                                                                                                            <option value="2018">Năm 2018</option>
-                                                                                                            <option value="2017">Năm 2017</option>
-                                                                                                            <option value="2016">Năm 2016</option>
-                                                                                                            <option value="2015">Năm 2015</option>
-                                                                                                            <option value="2014">Năm 2014</option>
-                                                                                                            <option value="2013">Năm 2013</option>
-                                                                                                            <option value="2012">Năm 2012</option>
-                                                                                                            <option value="2011">Năm 2011</option>
-                                                                                                            <option value="2010">Năm 2010</option>
-                                                                                                            <option value="2009">Năm 2009</option>
-                                                                                                            <option value="2008">Năm 2008</option>
-                                                                                                            <option value="2007">Năm 2007</option>
-                                                                                                            <option value="2006">Năm 2006</option>
-                                                                                                            <option value="2005">Năm 2005</option>
-                                                                                                            <option value="2004">Năm 2004</option>
-                                                                                                            <option value="2003">Năm 2003</option>
-                                                                                                            <option value="2002">Năm 2002</option>
-                                                                                                            <option value="2001">Năm 2001</option>
-                                                                                                            <option value="2000">Năm 2000</option>
-                                                                                                            <option value="1999">Năm 1999</option>
-                                                                                                            <option value="1998">Năm 1998</option>
-                                                                                                            <option value="1997">Năm 1997</option>
-                                                                                                            <option value="1996">Năm 1996</option>
-                                                                                                            <option value="1995">Năm 1995</option>
-                                                                                                            <option value="1994">Năm 1994</option>
-                                                                                                            <option value="1993">Năm 1993</option>
-                                                                                                            <option value="1992">Năm 1992</option>
-                                                                                                            <option value="1991">Năm 1991</option>
-                                                                                                            <option value="1990">Năm 1990</option>
-                                                                                                            <option value="1989">Năm 1989</option>
-                                                                                                            <option value="1988">Năm 1988</option>
-                                                                                                            <option value="1987">Năm 1987</option>
-                                                                                                            <option value="1986">Năm 1986</option>
-                                                                                                            <option value="1985">Năm 1985</option>
-                                                                                                            <option value="1984">Năm 1984</option>
-                                                                                                            <option value="1983">Năm 1983</option>
-                                                                                                            <option value="1982">Năm 1982</option>
-                                                                                                            <option value="1981">Năm 1981</option>
-                                                                                                            <option value="1980">Năm 1980</option>
-                                                                                                            <option value="1979">Năm 1979</option>
-                                                                                                            <option value="1978">Năm 1978</option>
-                                                                                                            <option value="1977">Năm 1977</option>
-                                                                                                            <option value="1976">Năm 1976</option>
-                                                                                                            <option value="1975">Năm 1975</option>
-                                                                                                            <option value="1974">Năm 1974</option>
-                                                                                                            <option value="1973">Năm 1973</option>
-                                                                                                            <option value="1972">Năm 1972</option>
-                                                                                                            <option value="1971">Năm 1971</option>
-                                                                                                            <option value="1970">Năm 1970</option>
+                                                                                                    <div
+                                                                                                        class="form-group field-edit_issue_date_year">
+                                                                                                        <select
+                                                                                                            id="edit_issue_date_year"
+                                                                                                            class="form-control"
+                                                                                                            name="issue_date_year">
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Năm
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2024">
+                                                                                                                Năm 2024
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2023">
+                                                                                                                Năm 2023
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2022">
+                                                                                                                Năm 2022
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2021">
+                                                                                                                Năm 2021
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2020">
+                                                                                                                Năm 2020
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2019">
+                                                                                                                Năm 2019
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2018">
+                                                                                                                Năm 2018
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2017">
+                                                                                                                Năm 2017
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2016">
+                                                                                                                Năm 2016
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2015">
+                                                                                                                Năm 2015
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2014">
+                                                                                                                Năm 2014
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2013">
+                                                                                                                Năm 2013
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2012">
+                                                                                                                Năm 2012
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2011">
+                                                                                                                Năm 2011
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2010">
+                                                                                                                Năm 2010
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2009">
+                                                                                                                Năm 2009
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2008">
+                                                                                                                Năm 2008
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2007">
+                                                                                                                Năm 2007
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2006">
+                                                                                                                Năm 2006
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2005">
+                                                                                                                Năm 2005
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2004">
+                                                                                                                Năm 2004
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2003">
+                                                                                                                Năm 2003
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2002">
+                                                                                                                Năm 2002
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2001">
+                                                                                                                Năm 2001
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2000">
+                                                                                                                Năm 2000
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1999">
+                                                                                                                Năm 1999
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1998">
+                                                                                                                Năm 1998
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1997">
+                                                                                                                Năm 1997
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1996">
+                                                                                                                Năm 1996
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1995">
+                                                                                                                Năm 1995
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1994">
+                                                                                                                Năm 1994
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1993">
+                                                                                                                Năm 1993
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1992">
+                                                                                                                Năm 1992
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1991">
+                                                                                                                Năm 1991
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1990">
+                                                                                                                Năm 1990
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1989">
+                                                                                                                Năm 1989
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1988">
+                                                                                                                Năm 1988
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1987">
+                                                                                                                Năm 1987
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1986">
+                                                                                                                Năm 1986
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1985">
+                                                                                                                Năm 1985
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1984">
+                                                                                                                Năm 1984
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1983">
+                                                                                                                Năm 1983
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1982">
+                                                                                                                Năm 1982
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1981">
+                                                                                                                Năm 1981
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1980">
+                                                                                                                Năm 1980
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1979">
+                                                                                                                Năm 1979
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1978">
+                                                                                                                Năm 1978
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1977">
+                                                                                                                Năm 1977
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1976">
+                                                                                                                Năm 1976
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1975">
+                                                                                                                Năm 1975
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1974">
+                                                                                                                Năm 1974
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1973">
+                                                                                                                Năm 1973
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1972">
+                                                                                                                Năm 1972
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1971">
+                                                                                                                Năm 1971
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1970">
+                                                                                                                Năm 1970
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="edit_issue_date_year-error" class="error" for="edit_issue_date_year"></label>
+                                                                                                    <label
+                                                                                                        id="edit_issue_date_year-error"
+                                                                                                        class="error"
+                                                                                                        for="edit_issue_date_year"></label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <p class="help-block help-block-error"></p>
+                                                                                            <p
+                                                                                                class="help-block help-block-error">
+                                                                                            </p>
                                                                                         </div>
 
                                                                                         <div class="row">
-                                                                                            <div style="display:flex; align-items: end">
+                                                                                            <div
+                                                                                                style="display:flex; align-items: end">
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-edit_expiration_date_month">
-                                                                                                        <label class="control-label" for="edit_expiration_date_month">Thời gian hết
+                                                                                                    <div
+                                                                                                        class="form-group field-edit_expiration_date_month">
+                                                                                                        <label
+                                                                                                            class="control-label"
+                                                                                                            for="edit_expiration_date_month">Thời
+                                                                                                            gian hết
                                                                                                             hạn</label>
-                                                                                                        <select id="edit_expiration_date_month" class="form-control"
+                                                                                                        <select
+                                                                                                            id="edit_expiration_date_month"
+                                                                                                            class="form-control"
                                                                                                             name="expiration_date_month">
-                                                                                                            <option value="">Tháng</option>
-                                                                                                            <option value="12">Tháng 12</option>
-                                                                                                            <option value="11">Tháng 11</option>
-                                                                                                            <option value="10">Tháng 10</option>
-                                                                                                            <option value="9">Tháng 9</option>
-                                                                                                            <option value="8">Tháng 8</option>
-                                                                                                            <option value="7">Tháng 7</option>
-                                                                                                            <option value="6">Tháng 6</option>
-                                                                                                            <option value="5">Tháng 5</option>
-                                                                                                            <option value="4">Tháng 4</option>
-                                                                                                            <option value="3">Tháng 3</option>
-                                                                                                            <option value="2">Tháng 2</option>
-                                                                                                            <option value="1">Tháng 1</option>
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Tháng
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="12">
+                                                                                                                Tháng 12
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="11">
+                                                                                                                Tháng 11
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="10">
+                                                                                                                Tháng 10
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="9">
+                                                                                                                Tháng 9
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="8">
+                                                                                                                Tháng 8
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="7">
+                                                                                                                Tháng 7
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="6">
+                                                                                                                Tháng 6
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="5">
+                                                                                                                Tháng 5
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="4">
+                                                                                                                Tháng 4
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="3">
+                                                                                                                Tháng 3
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2">
+                                                                                                                Tháng 2
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1">
+                                                                                                                Tháng 1
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="edit_expiration_date_month-error" class="error"
+                                                                                                    <label
+                                                                                                        id="edit_expiration_date_month-error"
+                                                                                                        class="error"
                                                                                                         for="edit_expiration_date_month"></label>
                                                                                                 </div>
                                                                                                 <div class="col-xs-6">
-                                                                                                    <div class="form-group field-edit_expiration_date_year">
-                                                                                                        <select id="edit_expiration_date_year" class="form-control"
+                                                                                                    <div
+                                                                                                        class="form-group field-edit_expiration_date_year">
+                                                                                                        <select
+                                                                                                            id="edit_expiration_date_year"
+                                                                                                            class="form-control"
                                                                                                             name="expiration_date_year">
-                                                                                                            <option value="">Năm</option>
-                                                                                                            <option value="2054">Năm 2054</option>
-                                                                                                            <option value="2053">Năm 2053</option>
-                                                                                                            <option value="2052">Năm 2052</option>
-                                                                                                            <option value="2051">Năm 2051</option>
-                                                                                                            <option value="2050">Năm 2050</option>
-                                                                                                            <option value="2049">Năm 2049</option>
-                                                                                                            <option value="2048">Năm 2048</option>
-                                                                                                            <option value="2047">Năm 2047</option>
-                                                                                                            <option value="2046">Năm 2046</option>
-                                                                                                            <option value="2045">Năm 2045</option>
-                                                                                                            <option value="2044">Năm 2044</option>
-                                                                                                            <option value="2043">Năm 2043</option>
-                                                                                                            <option value="2042">Năm 2042</option>
-                                                                                                            <option value="2041">Năm 2041</option>
-                                                                                                            <option value="2040">Năm 2040</option>
-                                                                                                            <option value="2039">Năm 2039</option>
-                                                                                                            <option value="2038">Năm 2038</option>
-                                                                                                            <option value="2037">Năm 2037</option>
-                                                                                                            <option value="2036">Năm 2036</option>
-                                                                                                            <option value="2035">Năm 2035</option>
-                                                                                                            <option value="2034">Năm 2034</option>
-                                                                                                            <option value="2033">Năm 2033</option>
-                                                                                                            <option value="2032">Năm 2032</option>
-                                                                                                            <option value="2031">Năm 2031</option>
-                                                                                                            <option value="2030">Năm 2030</option>
-                                                                                                            <option value="2029">Năm 2029</option>
-                                                                                                            <option value="2028">Năm 2028</option>
-                                                                                                            <option value="2027">Năm 2027</option>
-                                                                                                            <option value="2026">Năm 2026</option>
-                                                                                                            <option value="2025">Năm 2025</option>
-                                                                                                            <option value="2024">Năm 2024</option>
-                                                                                                            <option value="2023">Năm 2023</option>
-                                                                                                            <option value="2022">Năm 2022</option>
-                                                                                                            <option value="2021">Năm 2021</option>
-                                                                                                            <option value="2020">Năm 2020</option>
-                                                                                                            <option value="2019">Năm 2019</option>
-                                                                                                            <option value="2018">Năm 2018</option>
-                                                                                                            <option value="2017">Năm 2017</option>
-                                                                                                            <option value="2016">Năm 2016</option>
-                                                                                                            <option value="2015">Năm 2015</option>
-                                                                                                            <option value="2014">Năm 2014</option>
-                                                                                                            <option value="2013">Năm 2013</option>
-                                                                                                            <option value="2012">Năm 2012</option>
-                                                                                                            <option value="2011">Năm 2011</option>
-                                                                                                            <option value="2010">Năm 2010</option>
-                                                                                                            <option value="2009">Năm 2009</option>
-                                                                                                            <option value="2008">Năm 2008</option>
-                                                                                                            <option value="2007">Năm 2007</option>
-                                                                                                            <option value="2006">Năm 2006</option>
-                                                                                                            <option value="2005">Năm 2005</option>
-                                                                                                            <option value="2004">Năm 2004</option>
-                                                                                                            <option value="2003">Năm 2003</option>
-                                                                                                            <option value="2002">Năm 2002</option>
-                                                                                                            <option value="2001">Năm 2001</option>
-                                                                                                            <option value="2000">Năm 2000</option>
-                                                                                                            <option value="1999">Năm 1999</option>
-                                                                                                            <option value="1998">Năm 1998</option>
-                                                                                                            <option value="1997">Năm 1997</option>
-                                                                                                            <option value="1996">Năm 1996</option>
-                                                                                                            <option value="1995">Năm 1995</option>
-                                                                                                            <option value="1994">Năm 1994</option>
-                                                                                                            <option value="1993">Năm 1993</option>
-                                                                                                            <option value="1992">Năm 1992</option>
-                                                                                                            <option value="1991">Năm 1991</option>
-                                                                                                            <option value="1990">Năm 1990</option>
-                                                                                                            <option value="1989">Năm 1989</option>
-                                                                                                            <option value="1988">Năm 1988</option>
-                                                                                                            <option value="1987">Năm 1987</option>
-                                                                                                            <option value="1986">Năm 1986</option>
-                                                                                                            <option value="1985">Năm 1985</option>
-                                                                                                            <option value="1984">Năm 1984</option>
-                                                                                                            <option value="1983">Năm 1983</option>
-                                                                                                            <option value="1982">Năm 1982</option>
-                                                                                                            <option value="1981">Năm 1981</option>
-                                                                                                            <option value="1980">Năm 1980</option>
-                                                                                                            <option value="1979">Năm 1979</option>
-                                                                                                            <option value="1978">Năm 1978</option>
-                                                                                                            <option value="1977">Năm 1977</option>
-                                                                                                            <option value="1976">Năm 1976</option>
-                                                                                                            <option value="1975">Năm 1975</option>
-                                                                                                            <option value="1974">Năm 1974</option>
-                                                                                                            <option value="1973">Năm 1973</option>
-                                                                                                            <option value="1972">Năm 1972</option>
-                                                                                                            <option value="1971">Năm 1971</option>
-                                                                                                            <option value="1970">Năm 1970</option>
+                                                                                                            <option
+                                                                                                                value="">
+                                                                                                                Năm
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2054">
+                                                                                                                Năm 2054
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2053">
+                                                                                                                Năm 2053
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2052">
+                                                                                                                Năm 2052
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2051">
+                                                                                                                Năm 2051
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2050">
+                                                                                                                Năm 2050
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2049">
+                                                                                                                Năm 2049
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2048">
+                                                                                                                Năm 2048
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2047">
+                                                                                                                Năm 2047
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2046">
+                                                                                                                Năm 2046
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2045">
+                                                                                                                Năm 2045
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2044">
+                                                                                                                Năm 2044
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2043">
+                                                                                                                Năm 2043
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2042">
+                                                                                                                Năm 2042
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2041">
+                                                                                                                Năm 2041
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2040">
+                                                                                                                Năm 2040
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2039">
+                                                                                                                Năm 2039
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2038">
+                                                                                                                Năm 2038
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2037">
+                                                                                                                Năm 2037
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2036">
+                                                                                                                Năm 2036
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2035">
+                                                                                                                Năm 2035
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2034">
+                                                                                                                Năm 2034
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2033">
+                                                                                                                Năm 2033
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2032">
+                                                                                                                Năm 2032
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2031">
+                                                                                                                Năm 2031
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2030">
+                                                                                                                Năm 2030
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2029">
+                                                                                                                Năm 2029
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2028">
+                                                                                                                Năm 2028
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2027">
+                                                                                                                Năm 2027
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2026">
+                                                                                                                Năm 2026
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2025">
+                                                                                                                Năm 2025
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2024">
+                                                                                                                Năm 2024
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2023">
+                                                                                                                Năm 2023
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2022">
+                                                                                                                Năm 2022
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2021">
+                                                                                                                Năm 2021
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2020">
+                                                                                                                Năm 2020
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2019">
+                                                                                                                Năm 2019
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2018">
+                                                                                                                Năm 2018
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2017">
+                                                                                                                Năm 2017
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2016">
+                                                                                                                Năm 2016
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2015">
+                                                                                                                Năm 2015
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2014">
+                                                                                                                Năm 2014
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2013">
+                                                                                                                Năm 2013
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2012">
+                                                                                                                Năm 2012
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2011">
+                                                                                                                Năm 2011
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2010">
+                                                                                                                Năm 2010
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2009">
+                                                                                                                Năm 2009
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2008">
+                                                                                                                Năm 2008
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2007">
+                                                                                                                Năm 2007
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2006">
+                                                                                                                Năm 2006
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2005">
+                                                                                                                Năm 2005
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2004">
+                                                                                                                Năm 2004
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2003">
+                                                                                                                Năm 2003
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2002">
+                                                                                                                Năm 2002
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2001">
+                                                                                                                Năm 2001
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="2000">
+                                                                                                                Năm 2000
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1999">
+                                                                                                                Năm 1999
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1998">
+                                                                                                                Năm 1998
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1997">
+                                                                                                                Năm 1997
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1996">
+                                                                                                                Năm 1996
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1995">
+                                                                                                                Năm 1995
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1994">
+                                                                                                                Năm 1994
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1993">
+                                                                                                                Năm 1993
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1992">
+                                                                                                                Năm 1992
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1991">
+                                                                                                                Năm 1991
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1990">
+                                                                                                                Năm 1990
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1989">
+                                                                                                                Năm 1989
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1988">
+                                                                                                                Năm 1988
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1987">
+                                                                                                                Năm 1987
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1986">
+                                                                                                                Năm 1986
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1985">
+                                                                                                                Năm 1985
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1984">
+                                                                                                                Năm 1984
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1983">
+                                                                                                                Năm 1983
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1982">
+                                                                                                                Năm 1982
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1981">
+                                                                                                                Năm 1981
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1980">
+                                                                                                                Năm 1980
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1979">
+                                                                                                                Năm 1979
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1978">
+                                                                                                                Năm 1978
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1977">
+                                                                                                                Năm 1977
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1976">
+                                                                                                                Năm 1976
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1975">
+                                                                                                                Năm 1975
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1974">
+                                                                                                                Năm 1974
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1973">
+                                                                                                                Năm 1973
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1972">
+                                                                                                                Năm 1972
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1971">
+                                                                                                                Năm 1971
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="1970">
+                                                                                                                Năm 1970
+                                                                                                            </option>
                                                                                                         </select>
                                                                                                     </div>
-                                                                                                    <label id="edit_expiration_date_year-error" class="error"
+                                                                                                    <label
+                                                                                                        id="edit_expiration_date_year-error"
+                                                                                                        class="error"
                                                                                                         for="edit_expiration_date_year"></label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <p class="help-block help-block-error"></p>
+                                                                                            <p
+                                                                                                class="help-block help-block-error">
+                                                                                            </p>
                                                                                         </div>
 
                                                                                         <div class="row">
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="credential_id">ID chứng chỉ</label>
-                                                                                                    <input type="text" id="edit_credential_id" class="form-control"
-                                                                                                        name="credential_id" placeholder="">
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="credential_id">ID
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="edit_credential_id"
+                                                                                                        class="form-control"
+                                                                                                        name="credential_id"
+                                                                                                        placeholder="">
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="credential_url">URL chứng chỉ</label>
-                                                                                                    <input type="text" id="edit_credential_url" class="form-control"
-                                                                                                        name="credential_url" placeholder="">
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="credential_url">URL
+                                                                                                        chứng
+                                                                                                        chỉ</label>
+                                                                                                    <input type="text"
+                                                                                                        id="edit_credential_url"
+                                                                                                        class="form-control"
+                                                                                                        name="credential_url"
+                                                                                                        placeholder="">
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                             <div class="col-xs-12">
-                                                                                                <div class="form-group field-eduinfoform-school_name">
-                                                                                                    <label class="control-label" for="note">Ghi chú</label>
-                                                                                                    <textarea class="form-control"
+                                                                                                <div
+                                                                                                    class="form-group field-eduinfoform-school_name">
+                                                                                                    <label
+                                                                                                        class="control-label"
+                                                                                                        for="note">Ghi
+                                                                                                        chú</label>
+                                                                                                    <textarea
+                                                                                                        class="form-control"
                                                                                                         id="note-certificate"
                                                                                                         name="note">
                                       </textarea>
                                                                                                 </div>
-                                                                                                <p class="help-block help-block-error"></p>
+                                                                                                <p
+                                                                                                    class="help-block help-block-error">
+                                                                                                </p>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="form-group mt-10">
                                                                                             <span class="pull-left">
-                                                                                                <button type="submit" id="btn-submit-edit-certificate"
+                                                                                                <button type="submit"
+                                                                                                    id="btn-submit-edit-certificate"
                                                                                                     class="btn btn-primary btn-ladda btn-ladda-spinner">
-                                                                                                    <i class="icon-floppy-disk position-left"></i>
-                                                                                                    <span class="ladda-label">Lưu lại</span>
-                                                                                                    <span class="ladda-spinner"></span>
-                                                                                                    <span class="ladda-spinner"></span>
+                                                                                                    <i
+                                                                                                        class="icon-floppy-disk position-left"></i>
+                                                                                                    <span
+                                                                                                        class="ladda-label">Lưu
+                                                                                                        lại</span>
+                                                                                                    <span
+                                                                                                        class="ladda-spinner"></span>
+                                                                                                    <span
+                                                                                                        class="ladda-spinner"></span>
                                                                                                 </button>
                                                                                             </span>
                                                                                         </div>
@@ -2389,9 +4044,13 @@
 
                                                         <div class="card-box hide">
                                                             <div class="clearfix">
-                                                                <h6 class="modal-title text-uppercase text-blue-800">Giới thiệu bản thân <span style="color: red !important;">*</span></h6>
+                                                                <h6 class="modal-title text-uppercase text-blue-800">
+                                                                    Giới thiệu bản thân <span
+                                                                        style="color: red !important;">*</span></h6>
 
-                                                                <a target="_blank" href="/candidate/video-clip" class="btn btn-default mt-20"><i class="glyphicon glyphicon-facetime-video"></i>
+                                                                <a target="_blank" href="/candidate/video-clip"
+                                                                    class="btn btn-default mt-20"><i
+                                                                        class="glyphicon glyphicon-facetime-video"></i>
                                                                     Quản lý Video/Clip</a>
                                                             </div>
                                                         </div>
@@ -2405,136 +4064,7 @@
                                                 <div class="row manage-resume">
                                                     <div class="col-sm-12">
                                                         <section class="section wrap-1">
-                                                            <h4 class="panel-title" style="padding: 20px 20px 0 20px !important;flex-wrap: wrap;">
-                                                                <span class="mb-10">Thông tin hồ sơ</span>
-                                                                <div style="display: flex;">
-                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile" class="btn btn-default text-capitalize text-blue-800 mr-10 btn-hover-line" title="Cập nhật bằng AI"><svg>
-                                                                            <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                                                        </svg> <img src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2" class="bouncing-image"> Cập nhật bằng AI</a> <a class="pull-right text-capitalize font-13 text-white btn btn-primary" title="Cập nhật hồ sơ"
-                                                                        href="/candidate/pre-profile">
-                                                                        <span class="fa fa-edit"></span> Cập nhật hồ sơ
-                                                                    </a>
-                                                                </div>
-                                                            </h4>
 
-                                                            <div class="row mb-20">
-                                                                <div class="col-sm-12">
-                                                                    <div class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0" style="background: #fff">
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div class="colorgb-carousel-bk v2">
-                                                                                    <div class="row" style="padding: 20px">
-                                                                                        <div class="col-md-4 col-sm-12" style="padding-right: 8px !important">
-                                                                                            <article class="platinum">
-                                                                                                <div class="brows-job-list"
-                                                                                                    style="display: flex; justify-content: center">
-                                                                                                    <div class="card-box statistic-cv" id="panel-statistic"></div>
-                                                                                                </div>
-                                                                                            </article>
-                                                                                        </div>
-                                                                                        <div class="col-md-8 col-sm-12" style="padding-left: 8px !important">
-                                                                                            <article class="platinum">
-                                                                                                <div class="brows-job-list">
-                                                                                                    <div class="card-box card-information ml-10">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-sm-3">
-                                                                                                                <div class="text-center pr-10">
-                                                                                                                    <div class="thumbnail" title="Cập nhật ảnh đại diện">
-                                                                                                                        <div id="imageDropAvatar" class="thumb thumb-slide">
-                                                                                                                            <a href="/candidate/pre-profile">
-                                                                                                                                <img onerror="this.src='/bolt/assets/images/image.png'"
-                                                                                                                                    src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
-                                                                                                                                    class="avatar img-responsive" alt="web developer">
-                                                                                                                            </a>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-sm-9">
-                                                                                                                <div class="box-jc box-ce box-1">
-                                                                                                                    <div class="box-row">
-                                                                                                                        <p class="text-muted mb-2"><strong>Họ tên:</strong>
-                                                                                                                            <span class="ml-2 editable editable-click "
-                                                                                                                                data-name="name"
-                                                                                                                                title="Họ tên">web developer</span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-2"><strong>Ngày
-                                                                                                                                sinh:</strong>
-                                                                                                                            <span class="ml-2 editable editable-click "
-                                                                                                                                data-name="date_of_birth"
-                                                                                                                                data-type="combodate"
-                                                                                                                                data-value="1975"
-                                                                                                                                data-format="YYYY-MM-DD"
-                                                                                                                                data-viewformat="DD/MM/YYYY"
-                                                                                                                                data-template="DD / MM / YYYY" data-pk="1"
-                                                                                                                                title="Ngày sinh">26/09/1975 </span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-2 "><strong>Giới
-                                                                                                                                tính:</strong>
-                                                                                                                            <span class="ml-2 gender editable-click  editable-empty "
-                                                                                                                                data-type="select"
-                                                                                                                                data-value=""
-                                                                                                                                data-name="gender"
-                                                                                                                                title="Giới tính"> </span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-1 "><strong>Vị trí mong
-                                                                                                                                muốn:
-                                                                                                                                <a data-toggle="popover"
-                                                                                                                                    data-placement="bottom"
-                                                                                                                                    data-content="Thông tin này giúp NTD đưa ra quyết định với CV của bạn nhanh hơn 50%"
-                                                                                                                                    href="#"><i
-                                                                                                                                        class="fa fa-info-circle"></i>
-                                                                                                                                </a>
-                                                                                                                            </strong>
-                                                                                                                            <span class="ml-2 editable editable-click "
-                                                                                                                                title="Vị trí/chức vụ mong muốn">Thực Tập Sinh Tuyển Dụng </span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-2"><strong>Chức vụ:</strong>
-                                                                                                                            <span class="ml-2 editable-click  editable-empty "
-                                                                                                                                data-name="job_position"
-                                                                                                                                data-value=""
-                                                                                                                                title="Vị trí / chức vụ">
-                                                                                                                                (Chưa có dữ liệu) </span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-1 ">
-                                                                                                                            <strong>Trạng thái tìm việc:
-                                                                                                                                <a data-toggle="popover"
-                                                                                                                                    data-placement="bottom"
-                                                                                                                                    data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống JobsGO."
-                                                                                                                                    href="#">
-                                                                                                                                    <i class="fa fa-info-circle"></i>
-                                                                                                                                </a>
-                                                                                                                            </strong>
-                                                                                                                            <span
-                                                                                                                                class="ml-2 status status_on"
-                                                                                                                                data-type="select"
-                                                                                                                                data-value="0"
-                                                                                                                                data-name="status"
-                                                                                                                                title="Trạng thái tìm việc">Đang tìm việc </span>
-                                                                                                                        </p>
-                                                                                                                        <p class="text-muted mb-2">
-                                                                                                                            <strong>Ngày cập nhật:</strong>
-                                                                                                                            <span class="ml-2 editable-click "
-                                                                                                                                data-name="job_position"
-                                                                                                                                data-value="26/09/2024"
-                                                                                                                                title="Ngày cập nhật">
-                                                                                                                                26/09/2024 </span>
-                                                                                                                        </p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </article>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                             <style>
                                                                 p {
                                                                     line-height: 1.5;
@@ -2838,54 +4368,102 @@
                                                                     min-height: 247px !important;
                                                                 }
                                                             </style>
-                                                     
+
                                                             <div class="row no-mrg mb-10">
                                                                 <div class="col-sm-12">
-                                                                    <div class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
-                                                                        <h4 class="panel-title" style="padding: 20px !important;flex-wrap: wrap;">
-                                                                            <span class="mb-10">Danh sách CV tạo từ CVGo - <strong>(3/10)</strong></span>
+                                                                    <div
+                                                                        class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
+                                                                        <h4 class="panel-title"
+                                                                            style="padding: 20px !important;flex-wrap: wrap;">
+                                                                            <span class="mb-10">Danh sách CV tạo từ CVGo
+                                                                                - <strong>(3/10)</strong></span>
                                                                             <div style="display: flex;">
-                                                                                <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile" class="btn btn-default text-capitalize text-blue-800 mr-10 btn-hover-line" title="Tạo CV Bằng AI"><svg>
-                                                                                        <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                                                                    </svg> <img src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2" class="bouncing-image"> Tạo CV Bằng AI</a> <a class="pull-right text-capitalize font-13 text-white btn btn-primary" id="add-new-cv-new" title="Tạo CV mới"
+                                                                                <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile"
+                                                                                    class="btn btn-default text-capitalize text-blue-800 mr-10 btn-hover-line"
+                                                                                    title="Tạo CV Bằng AI"><svg>
+                                                                                        <rect x="0" y="0" fill="none"
+                                                                                            width="100%"
+                                                                                            height="100%" />
+                                                                                    </svg> <img
+                                                                                        src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2"
+                                                                                        class="bouncing-image"> Tạo CV
+                                                                                    Bằng AI</a> <a
+                                                                                    class="pull-right text-capitalize font-13 text-white btn btn-primary"
+                                                                                    id="add-new-cv-new"
+                                                                                    title="Tạo CV mới"
                                                                                     href="/candidate/pre-profile?tab=cv-go">
-                                                                                    <span class="glyphicon glyphicon-plus"></span> Tạo CV mới
+                                                                                    <span
+                                                                                        class="glyphicon glyphicon-plus"></span>
+                                                                                    Tạo CV mới
                                                                                 </a>
                                                                             </div>
                                                                         </h4>
                                                                         <div class="row pb-20">
                                                                             <div class="col-sm-12">
                                                                                 <div class="colorgb-carousel-bk v2">
-                                                                                    <div class="row" style="padding: 0 20px">
+                                                                                    <div class="row"
+                                                                                        style="padding: 0 20px">
                                                                                         <div class="col-md-4 col-sm-12">
                                                                                             <article class="platinum">
-                                                                                                <div class="brows-job-list">
-                                                                                                    <div class="col-sm-12">
-                                                                                                        <div class="item-fl-box">
-                                                                                                            <div class="brows-job-company-img">
-                                                                                                                <a href="/cv-go/THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09"><img
-                                                                                                                        onerror="" class="img-responsive" alt=""
+                                                                                                <div
+                                                                                                    class="brows-job-list">
+                                                                                                    <div
+                                                                                                        class="col-sm-12">
+                                                                                                        <div
+                                                                                                            class="item-fl-box">
+                                                                                                            <div
+                                                                                                                class="brows-job-company-img">
+                                                                                                                <a
+                                                                                                                    href="/cv-go/THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09"><img
+                                                                                                                        onerror=""
+                                                                                                                        class="img-responsive"
+                                                                                                                        alt=""
                                                                                                                         src="/assets_livewire/cv_template/assets/images/theme/theme_42.png" /></a>
                                                                                                             </div>
-                                                                                                            <div class="brows-job-position">
-                                                                                                                <h3 class="cv-name-title" contenteditable="true"
-                                                                                                                    data-id="THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09">CV mới</h3>
-                                                                                                                <p class="font-13">Mẫu CV Sale Manager - vi-VN</p>
-                                                                                                                <p class="font-12">
-                                                                                                                    <a href="/cv-go/THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09">
-                                                                                                                        <span><i class="glyphicon glyphicon-pencil"></i> Chỉnh sửa</span>
+                                                                                                            <div
+                                                                                                                class="brows-job-position">
+                                                                                                                <h3 class="cv-name-title"
+                                                                                                                    contenteditable="true"
+                                                                                                                    data-id="THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09">
+                                                                                                                    CV
+                                                                                                                    mới
+                                                                                                                </h3>
+                                                                                                                <p
+                                                                                                                    class="font-13">
+                                                                                                                    Mẫu
+                                                                                                                    CV
+                                                                                                                    Sale
+                                                                                                                    Manager
+                                                                                                                    -
+                                                                                                                    vi-VN
+                                                                                                                </p>
+                                                                                                                <p
+                                                                                                                    class="font-12">
+                                                                                                                    <a
+                                                                                                                        href="/cv-go/THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09">
+                                                                                                                        <span><i
+                                                                                                                                class="glyphicon glyphicon-pencil"></i>
+                                                                                                                            Chỉnh
+                                                                                                                            sửa</span>
                                                                                                                     </a>
-                                                                                                                    <a href="javascript:void(0)" class="download-cv"
+                                                                                                                    <a href="javascript:void(0)"
+                                                                                                                        class="download-cv"
                                                                                                                         data-id="THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09"
                                                                                                                         data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống...">
-                                                                                                                        <span class="mrg-l-10 hidden-xs"><i
-                                                                                                                                class="glyphicon glyphicon-save-file"></i> Tải xuống</span>
+                                                                                                                        <span
+                                                                                                                            class="mrg-l-10 hidden-xs"><i
+                                                                                                                                class="glyphicon glyphicon-save-file"></i>
+                                                                                                                            Tải
+                                                                                                                            xuống</span>
                                                                                                                     </a>
                                                                                                                     <a href="javascript:void(0)"
                                                                                                                         class="delete-cv"
                                                                                                                         data-id="THR1Z01lNkUyR3VxcXI3OFNyMFlXdz09">
-                                                                                                                        <span class="brows-job-sallery"><i
-                                                                                                                                class="glyphicon glyphicon-remove"></i> Xóa CV</span>
+                                                                                                                        <span
+                                                                                                                            class="brows-job-sallery"><i
+                                                                                                                                class="glyphicon glyphicon-remove"></i>
+                                                                                                                            Xóa
+                                                                                                                            CV</span>
                                                                                                                     </a>
                                                                                                                 </p>
                                                                                                             </div>
@@ -2896,33 +4474,65 @@
                                                                                         </div>
                                                                                         <div class="col-md-4 col-sm-12">
                                                                                             <article class="platinum">
-                                                                                                <div class="brows-job-list">
-                                                                                                    <div class="col-sm-12">
-                                                                                                        <div class="item-fl-box">
-                                                                                                            <div class="brows-job-company-img">
-                                                                                                                <a href="/cv-go/QzVSM3VIWlFZc0tpYkxxenphZk1QQT09"><img
-                                                                                                                        onerror="" class="img-responsive" alt=""
+                                                                                                <div
+                                                                                                    class="brows-job-list">
+                                                                                                    <div
+                                                                                                        class="col-sm-12">
+                                                                                                        <div
+                                                                                                            class="item-fl-box">
+                                                                                                            <div
+                                                                                                                class="brows-job-company-img">
+                                                                                                                <a
+                                                                                                                    href="/cv-go/QzVSM3VIWlFZc0tpYkxxenphZk1QQT09"><img
+                                                                                                                        onerror=""
+                                                                                                                        class="img-responsive"
+                                                                                                                        alt=""
                                                                                                                         src="/assets_livewire/cv_template/assets/images/theme/theme_30.png" /></a>
                                                                                                             </div>
-                                                                                                            <div class="brows-job-position">
-                                                                                                                <h3 class="cv-name-title" contenteditable="true"
-                                                                                                                    data-id="QzVSM3VIWlFZc0tpYkxxenphZk1QQT09">CV mới</h3>
-                                                                                                                <p class="font-13">Mẫu CV Hiện Đại 2 - vi-VN</p>
-                                                                                                                <p class="font-12">
-                                                                                                                    <a href="/cv-go/QzVSM3VIWlFZc0tpYkxxenphZk1QQT09">
-                                                                                                                        <span><i class="glyphicon glyphicon-pencil"></i> Chỉnh sửa</span>
+                                                                                                            <div
+                                                                                                                class="brows-job-position">
+                                                                                                                <h3 class="cv-name-title"
+                                                                                                                    contenteditable="true"
+                                                                                                                    data-id="QzVSM3VIWlFZc0tpYkxxenphZk1QQT09">
+                                                                                                                    CV
+                                                                                                                    mới
+                                                                                                                </h3>
+                                                                                                                <p
+                                                                                                                    class="font-13">
+                                                                                                                    Mẫu
+                                                                                                                    CV
+                                                                                                                    Hiện
+                                                                                                                    Đại
+                                                                                                                    2 -
+                                                                                                                    vi-VN
+                                                                                                                </p>
+                                                                                                                <p
+                                                                                                                    class="font-12">
+                                                                                                                    <a
+                                                                                                                        href="/cv-go/QzVSM3VIWlFZc0tpYkxxenphZk1QQT09">
+                                                                                                                        <span><i
+                                                                                                                                class="glyphicon glyphicon-pencil"></i>
+                                                                                                                            Chỉnh
+                                                                                                                            sửa</span>
                                                                                                                     </a>
-                                                                                                                    <a href="javascript:void(0)" class="download-cv"
+                                                                                                                    <a href="javascript:void(0)"
+                                                                                                                        class="download-cv"
                                                                                                                         data-id="QzVSM3VIWlFZc0tpYkxxenphZk1QQT09"
                                                                                                                         data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống...">
-                                                                                                                        <span class="mrg-l-10 hidden-xs"><i
-                                                                                                                                class="glyphicon glyphicon-save-file"></i> Tải xuống</span>
+                                                                                                                        <span
+                                                                                                                            class="mrg-l-10 hidden-xs"><i
+                                                                                                                                class="glyphicon glyphicon-save-file"></i>
+                                                                                                                            Tải
+                                                                                                                            xuống</span>
                                                                                                                     </a>
                                                                                                                     <a href="javascript:void(0)"
                                                                                                                         class="delete-cv"
                                                                                                                         data-id="QzVSM3VIWlFZc0tpYkxxenphZk1QQT09">
-                                                                                                                        <span class="brows-job-sallery"><i
-                                                                                                                                class="glyphicon glyphicon-remove"></i> Xóa CV</span>
+                                                                                                                        <span
+                                                                                                                            class="brows-job-sallery"><i
+                                                                                                                                class="glyphicon glyphicon-remove"></i>
+                                                                                                                            Xóa
+                                                                                                                            CV</span>
                                                                                                                     </a>
                                                                                                                 </p>
                                                                                                             </div>
@@ -2933,26 +4543,56 @@
                                                                                         </div>
                                                                                         <div class="col-md-4 col-sm-12">
                                                                                             <article class="platinum">
-                                                                                                <div class="brows-job-list">
-                                                                                                    <div class="col-sm-12">
-                                                                                                        <div class="item-fl-box">
-                                                                                                            <div class="brows-job-company-img">
-                                                                                                                <a href="/cv-go/cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09"><img
-                                                                                                                        onerror="" class="img-responsive" alt=""
+                                                                                                <div
+                                                                                                    class="brows-job-list">
+                                                                                                    <div
+                                                                                                        class="col-sm-12">
+                                                                                                        <div
+                                                                                                            class="item-fl-box">
+                                                                                                            <div
+                                                                                                                class="brows-job-company-img">
+                                                                                                                <a
+                                                                                                                    href="/cv-go/cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09"><img
+                                                                                                                        onerror=""
+                                                                                                                        class="img-responsive"
+                                                                                                                        alt=""
                                                                                                                         src="/assets_livewire/cv_template/assets/images/theme/default.png" /></a>
                                                                                                             </div>
-                                                                                                            <div class="brows-job-position">
-                                                                                                                <h3 data-id="cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09">CV mặc định</h3>
-                                                                                                                <p class="font-13">Mẫu CV Tiêu Chuẩn 1 - vi-VN</p>
-                                                                                                                <p class="font-12">
-                                                                                                                    <a href="/cv-go/cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09">
-                                                                                                                        <span><i class="glyphicon glyphicon-pencil"></i> Chỉnh sửa</span>
+                                                                                                            <div
+                                                                                                                class="brows-job-position">
+                                                                                                                <h3
+                                                                                                                    data-id="cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09">
+                                                                                                                    CV
+                                                                                                                    mặc
+                                                                                                                    định
+                                                                                                                </h3>
+                                                                                                                <p
+                                                                                                                    class="font-13">
+                                                                                                                    Mẫu
+                                                                                                                    CV
+                                                                                                                    Tiêu
+                                                                                                                    Chuẩn
+                                                                                                                    1 -
+                                                                                                                    vi-VN
+                                                                                                                </p>
+                                                                                                                <p
+                                                                                                                    class="font-12">
+                                                                                                                    <a
+                                                                                                                        href="/cv-go/cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09">
+                                                                                                                        <span><i
+                                                                                                                                class="glyphicon glyphicon-pencil"></i>
+                                                                                                                            Chỉnh
+                                                                                                                            sửa</span>
                                                                                                                     </a>
-                                                                                                                    <a href="javascript:void(0)" class="download-cv"
+                                                                                                                    <a href="javascript:void(0)"
+                                                                                                                        class="download-cv"
                                                                                                                         data-id="cCsyOTMvZk9VNG1xdWJMNmt2TVV5UT09"
                                                                                                                         data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống...">
-                                                                                                                        <span class="mrg-l-10 hidden-xs"><i
-                                                                                                                                class="glyphicon glyphicon-save-file"></i> Tải xuống</span>
+                                                                                                                        <span
+                                                                                                                            class="mrg-l-10 hidden-xs"><i
+                                                                                                                                class="glyphicon glyphicon-save-file"></i>
+                                                                                                                            Tải
+                                                                                                                            xuống</span>
                                                                                                                     </a>
                                                                                                                 </p>
                                                                                                             </div>
@@ -2970,80 +4610,163 @@
                                                             </div>
                                                             <div class="row no-mrg">
                                                                 <div class="col-sm-12">
-                                                                    <div class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
+                                                                    <div
+                                                                        class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
                                                                         <!-- Detached content -->
                                                                         <div class="container-detached mt-10">
                                                                             <div class="content-detached">
-                                                                                <div class="tab-pane fade in active" id="profile">
+                                                                                <div class="tab-pane fade in active"
+                                                                                    id="profile">
                                                                                     <!-- Profile info -->
                                                                                     <div class="panel panel-flat">
                                                                                         <div class="panel-body">
                                                                                             <h4 class="panel-title">
-                                                                                                <span>Danh sách CV đã tải lên</span>
+                                                                                                <span>Danh sách CV đã
+                                                                                                    tải lên</span>
                                                                                                 <a class="pull-right text-capitalize font-13 text-white btn btn-primary"
-                                                                                                    id="toggleButton_" title="Tải CV mới"
+                                                                                                    id="toggleButton_"
+                                                                                                    title="Tải CV mới"
                                                                                                     href="/candidate/import-cv-data"><span
-                                                                                                        class="glyphicon glyphicon-upload"></span> Tải
+                                                                                                        class="glyphicon glyphicon-upload"></span>
+                                                                                                    Tải
                                                                                                     CV lên</a>
                                                                                             </h4>
-                                                                                            <div class="steps-basic wizard clearfix" role="application" id="steps-uid-0">
-                                                                                                <div class="content clearfix">
-                                                                                                    <div id="elementToToggle">
-                                                                                                        <fieldset id="steps-uid-0-p-0" role="tabpanel"
-                                                                                                            aria-labelledby="steps-uid-0-h-0" class="body current"
+                                                                                            <div class="steps-basic wizard clearfix"
+                                                                                                role="application"
+                                                                                                id="steps-uid-0">
+                                                                                                <div
+                                                                                                    class="content clearfix">
+                                                                                                    <div
+                                                                                                        id="elementToToggle">
+                                                                                                        <fieldset
+                                                                                                            id="steps-uid-0-p-0"
+                                                                                                            role="tabpanel"
+                                                                                                            aria-labelledby="steps-uid-0-h-0"
+                                                                                                            class="body current"
                                                                                                             aria-hidden="false">
-                                                                                                            <form id="w0" class="form-horizontal" action="/candidate/pre-profile?tab=review" method="post" enctype="multipart/form-data">
-                                                                                                                <input type="hidden" name="_csrf-jobsgo-candidate" value="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
+                                                                                                            <form
+                                                                                                                id="w0"
+                                                                                                                class="form-horizontal"
+                                                                                                                action="/candidate/pre-profile?tab=review"
+                                                                                                                method="post"
+                                                                                                                enctype="multipart/form-data">
+                                                                                                                <input
+                                                                                                                    type="hidden"
+                                                                                                                    name="_csrf-jobsgo-candidate"
+                                                                                                                    value="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
 
 
 
 
-                                                                                                                <div class="form-group field-cvresumeform-title required">
-                                                                                                                    <label class="control-label col-sm-4 text-right" for="cvresumeform-title">Tiêu đề</label>
-                                                                                                                    <div class="col-sm-4">
-                                                                                                                        <input type="text" id="cvresumeform-title" class="form-control" name="CvResumeForm[title]" value="Tài liệu chứng chỉ - web developer" aria-required="true">
+                                                                                                                <div
+                                                                                                                    class="form-group field-cvresumeform-title required">
+                                                                                                                    <label
+                                                                                                                        class="control-label col-sm-4 text-right"
+                                                                                                                        for="cvresumeform-title">Tiêu
+                                                                                                                        đề</label>
+                                                                                                                    <div
+                                                                                                                        class="col-sm-4">
+                                                                                                                        <input
+                                                                                                                            type="text"
+                                                                                                                            id="cvresumeform-title"
+                                                                                                                            class="form-control"
+                                                                                                                            name="CvResumeForm[title]"
+                                                                                                                            value="Tài liệu chứng chỉ - web developer"
+                                                                                                                            aria-required="true">
 
-                                                                                                                        <p class="help-block help-block-error "></p>
+                                                                                                                        <p
+                                                                                                                            class="help-block help-block-error ">
+                                                                                                                        </p>
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                                <div class="form-group field-cvresumeform-description">
-                                                                                                                    <label class="control-label col-sm-4 text-right" for="cvresumeform-description">Mô tả</label>
-                                                                                                                    <div class="col-sm-4">
-                                                                                                                        <textarea id="cvresumeform-description" class="form-control" name="CvResumeForm[description]">Cập nhật ngày: 26/09/2024</textarea>
+                                                                                                                <div
+                                                                                                                    class="form-group field-cvresumeform-description">
+                                                                                                                    <label
+                                                                                                                        class="control-label col-sm-4 text-right"
+                                                                                                                        for="cvresumeform-description">Mô
+                                                                                                                        tả</label>
+                                                                                                                    <div
+                                                                                                                        class="col-sm-4">
+                                                                                                                        <textarea
+                                                                                                                            id="cvresumeform-description"
+                                                                                                                            class="form-control"
+                                                                                                                            name="CvResumeForm[description]">Cập nhật ngày: 26/09/2024</textarea>
 
-                                                                                                                        <p class="help-block help-block-error "></p>
+                                                                                                                        <p
+                                                                                                                            class="help-block help-block-error ">
+                                                                                                                        </p>
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                                <div class="form-group field-cvresumeform-file_upload">
-                                                                                                                    <label class="control-label col-sm-4 text-right" for="cvresumeform-file_upload">Tài liệu tải lên</label>
-                                                                                                                    <div class="col-sm-4">
-                                                                                                                        <input type="hidden" name="CvResumeForm[file_upload]" value=""><input type="file" id="cvresumeform-file_upload" class="file-styled" name="CvResumeForm[file_upload]">
+                                                                                                                <div
+                                                                                                                    class="form-group field-cvresumeform-file_upload">
+                                                                                                                    <label
+                                                                                                                        class="control-label col-sm-4 text-right"
+                                                                                                                        for="cvresumeform-file_upload">Tài
+                                                                                                                        liệu
+                                                                                                                        tải
+                                                                                                                        lên</label>
+                                                                                                                    <div
+                                                                                                                        class="col-sm-4">
+                                                                                                                        <input
+                                                                                                                            type="hidden"
+                                                                                                                            name="CvResumeForm[file_upload]"
+                                                                                                                            value=""><input
+                                                                                                                            type="file"
+                                                                                                                            id="cvresumeform-file_upload"
+                                                                                                                            class="file-styled"
+                                                                                                                            name="CvResumeForm[file_upload]">
 
-                                                                                                                        <p class="help-block help-block-error "></p>
+                                                                                                                        <p
+                                                                                                                            class="help-block help-block-error ">
+                                                                                                                        </p>
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                                <div class="hide">
-                                                                                                                    <input type="hidden" name="CvResumeForm[jid]"
+                                                                                                                <div
+                                                                                                                    class="hide">
+                                                                                                                    <input
+                                                                                                                        type="hidden"
+                                                                                                                        name="CvResumeForm[jid]"
                                                                                                                         value="">
                                                                                                                 </div>
-                                                                                                                <div class="form-group">
-                                                                                                                    <div class="col-sm-offset-4 col-sm-4">
-                                                                                                                        <button type="submit" class="btn btn-primary  btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-file-upload position-left"></i> <span class="ladda-label">Tải tài liệu lên</span></button>
+                                                                                                                <div
+                                                                                                                    class="form-group">
+                                                                                                                    <div
+                                                                                                                        class="col-sm-offset-4 col-sm-4">
+                                                                                                                        <button
+                                                                                                                            type="submit"
+                                                                                                                            class="btn btn-primary  btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                                                                            data-style="zoom-out"><i
+                                                                                                                                class="icon-file-upload position-left"></i>
+                                                                                                                            <span
+                                                                                                                                class="ladda-label">Tải
+                                                                                                                                tài
+                                                                                                                                liệu
+                                                                                                                                lên</span></button>
                                                                                                                     </div>
                                                                                                                 </div>
 
                                                                                                             </form>
                                                                                                         </fieldset>
                                                                                                     </div>
-                                                                                                    <div class="clearfix">
-                                                                                                        <h6 class="modal-title text-uppercase pull-left text-orange-700 mb-20">
-                                                                                                            <i class="icon-file-media"></i> Tài liệu chứng chỉ đã tải lên
+                                                                                                    <div
+                                                                                                        class="clearfix">
+                                                                                                        <h6
+                                                                                                            class="modal-title text-uppercase pull-left text-orange-700 mb-20">
+                                                                                                            <i
+                                                                                                                class="icon-file-media"></i>
+                                                                                                            Tài liệu
+                                                                                                            chứng chỉ đã
+                                                                                                            tải lên
                                                                                                         </h6>
                                                                                                     </div>
 
-                                                                                                    <div class="form-group">
-                                                                                                        <div class="clearfix file-no-sortable">
-                                                                                                            <input type="file" class="colorgb-file-input"
+                                                                                                    <div
+                                                                                                        class="form-group">
+                                                                                                        <div
+                                                                                                            class="clearfix file-no-sortable">
+                                                                                                            <input
+                                                                                                                type="file"
+                                                                                                                class="colorgb-file-input"
                                                                                                                 multiple="multiple">
                                                                                                         </div>
                                                                                                     </div>
@@ -3194,9 +4917,15 @@
                                                                 }
                                                             }
                                                         </style>
-                                                        <link href="/bolt/assets/js/plugins/bootstrap-fileinput-master/css/fileinput.css" rel="stylesheet" type="text/css">
-                                                        <script type="text/javascript" src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/fileinput.js"></script>
-                                                        <script type="text/javascript" src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/locales/vi.js"></script>
+                                                        <link
+                                                            href="/bolt/assets/js/plugins/bootstrap-fileinput-master/css/fileinput.css"
+                                                            rel="stylesheet" type="text/css">
+                                                        <script type="text/javascript"
+                                                            src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/fileinput.js">
+                                                        </script>
+                                                        <script type="text/javascript"
+                                                            src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/locales/vi.js">
+                                                        </script>
                                                         <script type="text/javascript">
                                                             $(document).ready(function() {
                                                                 $('[data-toggle="popover"]').popover();
@@ -3375,14 +5104,17 @@
                                             </div>
                                             <div class="container">
                                                 <div class="alert" role="alert" style="display: none;"></div>
-                                                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" style="display: none;"
+                                                <div class="modal fade" id="modal" tabindex="-1"
+                                                    aria-labelledby="modalLabel" style="display: none;"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <div class="modal-content-header">
-                                                                    <h5 class="modal-title" id="modalLabel">Cắt hình ảnh</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <h5 class="modal-title" id="modalLabel">Cắt hình ảnh
+                                                                    </h5>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">×</span>
                                                                     </button>
                                                                 </div>
@@ -3393,8 +5125,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer pt-3">
-                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                                                                <button type="button" class="btn btn-primary" id="crop">Lưu ảnh</button>
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Đóng</button>
+                                                                <button type="button" class="btn btn-primary"
+                                                                    id="crop">Lưu ảnh</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -4311,22 +6045,30 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Kinh nghiệm làm việc</h4>
+                                                            <button type="button" title="Đóng cửa sổ" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Kinh nghiệm làm
+                                                                việc</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="panel panel-body border-top-blue">
                                                                 <div class="row">
 
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-expinfoform-job_company required">
-                                                                            <label class="control-label" for="expinfoform-job_company">Tên công ty</label>
-                                                                            <div class="easy-autocomplete"><input type="text" id="expinfoform-job_company"
+                                                                        <div
+                                                                            class="form-group field-expinfoform-job_company required">
+                                                                            <label class="control-label"
+                                                                                for="expinfoform-job_company">Tên công
+                                                                                ty</label>
+                                                                            <div class="easy-autocomplete"><input
+                                                                                    type="text"
+                                                                                    id="expinfoform-job_company"
                                                                                     class="form-control"
                                                                                     name="ExpInfoForm[job_company]"
                                                                                     placeholder="Công ty đã làm việc"
                                                                                     autocomplete="off">
-                                                                                <div class="easy-autocomplete-container" id="eac-container-expinfoform-job_company">
+                                                                                <div class="easy-autocomplete-container"
+                                                                                    id="eac-container-expinfoform-job_company">
                                                                                     <ul></ul>
                                                                                 </div>
                                                                             </div>
@@ -4335,12 +6077,20 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-expinfoform-job_title required">
-                                                                            <label class="control-label" for="expinfoform-job_title">Chức danh</label>
-                                                                            <div class="easy-autocomplete"><input type="text" id="expinfoform-job_title"
-                                                                                    class="form-control" name="ExpInfoForm[job_title]"
-                                                                                    placeholder="Vị trí công việc" autocomplete="off">
-                                                                                <div class="easy-autocomplete-container" id="eac-container-expinfoform-job_title">
+                                                                        <div
+                                                                            class="form-group field-expinfoform-job_title required">
+                                                                            <label class="control-label"
+                                                                                for="expinfoform-job_title">Chức
+                                                                                danh</label>
+                                                                            <div class="easy-autocomplete"><input
+                                                                                    type="text"
+                                                                                    id="expinfoform-job_title"
+                                                                                    class="form-control"
+                                                                                    name="ExpInfoForm[job_title]"
+                                                                                    placeholder="Vị trí công việc"
+                                                                                    autocomplete="off">
+                                                                                <div class="easy-autocomplete-container"
+                                                                                    id="eac-container-expinfoform-job_title">
                                                                                     <ul></ul>
                                                                                 </div>
                                                                             </div>
@@ -4353,84 +6103,163 @@
 
                                                                 <div class="row">
                                                                     <div class="col-sm-6">
-                                                                        <div class="form-group field-expinfoform-date_start required">
-                                                                            <label class="control-label" for="expinfoform-date_start">Thời gian bắt đầu</label>
+                                                                        <div
+                                                                            class="form-group field-expinfoform-date_start required">
+                                                                            <label class="control-label"
+                                                                                for="expinfoform-date_start">Thời gian
+                                                                                bắt đầu</label>
                                                                             <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6" style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_start_1" class="form-control hide" name="ExpInfoForm[date_start_1]">
-                                                                                        <option value="">Tháng...</option>
-                                                                                        <option value="01">Tháng 01</option>
-                                                                                        <option value="02">Tháng 02</option>
-                                                                                        <option value="03">Tháng 03</option>
-                                                                                        <option value="04">Tháng 04</option>
-                                                                                        <option value="05">Tháng 05</option>
-                                                                                        <option value="06">Tháng 06</option>
-                                                                                        <option value="07">Tháng 07</option>
-                                                                                        <option value="08">Tháng 08</option>
-                                                                                        <option value="09">Tháng 09</option>
-                                                                                        <option value="10">Tháng 10</option>
-                                                                                        <option value="11">Tháng 11</option>
-                                                                                        <option value="12">Tháng 12</option>
+                                                                                <div class="col-sm-6 col-xs-6"
+                                                                                    style="margin-top: 0px">
+                                                                                    <select
+                                                                                        id="expinfoform-date_start_1"
+                                                                                        class="form-control hide"
+                                                                                        name="ExpInfoForm[date_start_1]">
+                                                                                        <option value="">Tháng...
+                                                                                        </option>
+                                                                                        <option value="01">Tháng 01
+                                                                                        </option>
+                                                                                        <option value="02">Tháng 02
+                                                                                        </option>
+                                                                                        <option value="03">Tháng 03
+                                                                                        </option>
+                                                                                        <option value="04">Tháng 04
+                                                                                        </option>
+                                                                                        <option value="05">Tháng 05
+                                                                                        </option>
+                                                                                        <option value="06">Tháng 06
+                                                                                        </option>
+                                                                                        <option value="07">Tháng 07
+                                                                                        </option>
+                                                                                        <option value="08">Tháng 08
+                                                                                        </option>
+                                                                                        <option value="09">Tháng 09
+                                                                                        </option>
+                                                                                        <option value="10">Tháng 10
+                                                                                        </option>
+                                                                                        <option value="11">Tháng 11
+                                                                                        </option>
+                                                                                        <option value="12">Tháng 12
+                                                                                        </option>
                                                                                     </select>
                                                                                 </div>
-                                                                                <div class="col-sm-6 col-xs-6" style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_start_2" class="form-control" name="ExpInfoForm[date_start_2]">
+                                                                                <div class="col-sm-6 col-xs-6"
+                                                                                    style="margin-top: 0px">
+                                                                                    <select
+                                                                                        id="expinfoform-date_start_2"
+                                                                                        class="form-control"
+                                                                                        name="ExpInfoForm[date_start_2]">
                                                                                         <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024</option>
-                                                                                        <option value="2023">Năm 2023</option>
-                                                                                        <option value="2022">Năm 2022</option>
-                                                                                        <option value="2021">Năm 2021</option>
-                                                                                        <option value="2020">Năm 2020</option>
-                                                                                        <option value="2019">Năm 2019</option>
-                                                                                        <option value="2018">Năm 2018</option>
-                                                                                        <option value="2017">Năm 2017</option>
-                                                                                        <option value="2016">Năm 2016</option>
-                                                                                        <option value="2015">Năm 2015</option>
-                                                                                        <option value="2014">Năm 2014</option>
-                                                                                        <option value="2013">Năm 2013</option>
-                                                                                        <option value="2012">Năm 2012</option>
-                                                                                        <option value="2011">Năm 2011</option>
-                                                                                        <option value="2010">Năm 2010</option>
-                                                                                        <option value="2009">Năm 2009</option>
-                                                                                        <option value="2008">Năm 2008</option>
-                                                                                        <option value="2007">Năm 2007</option>
-                                                                                        <option value="2006">Năm 2006</option>
-                                                                                        <option value="2005">Năm 2005</option>
-                                                                                        <option value="2004">Năm 2004</option>
-                                                                                        <option value="2003">Năm 2003</option>
-                                                                                        <option value="2002">Năm 2002</option>
-                                                                                        <option value="2001">Năm 2001</option>
-                                                                                        <option value="2000">Năm 2000</option>
-                                                                                        <option value="1999">Năm 1999</option>
-                                                                                        <option value="1998">Năm 1998</option>
-                                                                                        <option value="1997">Năm 1997</option>
-                                                                                        <option value="1996">Năm 1996</option>
-                                                                                        <option value="1995">Năm 1995</option>
-                                                                                        <option value="1994">Năm 1994</option>
-                                                                                        <option value="1993">Năm 1993</option>
-                                                                                        <option value="1992">Năm 1992</option>
-                                                                                        <option value="1991">Năm 1991</option>
-                                                                                        <option value="1990">Năm 1990</option>
-                                                                                        <option value="1989">Năm 1989</option>
-                                                                                        <option value="1988">Năm 1988</option>
-                                                                                        <option value="1987">Năm 1987</option>
-                                                                                        <option value="1986">Năm 1986</option>
-                                                                                        <option value="1985">Năm 1985</option>
-                                                                                        <option value="1984">Năm 1984</option>
-                                                                                        <option value="1983">Năm 1983</option>
-                                                                                        <option value="1982">Năm 1982</option>
-                                                                                        <option value="1981">Năm 1981</option>
-                                                                                        <option value="1980">Năm 1980</option>
-                                                                                        <option value="1979">Năm 1979</option>
-                                                                                        <option value="1978">Năm 1978</option>
-                                                                                        <option value="1977">Năm 1977</option>
-                                                                                        <option value="1976">Năm 1976</option>
-                                                                                        <option value="1975">Năm 1975</option>
-                                                                                        <option value="1974">Năm 1974</option>
-                                                                                        <option value="1973">Năm 1973</option>
-                                                                                        <option value="1972">Năm 1972</option>
-                                                                                        <option value="1971">Năm 1971</option>
-                                                                                        <option value="1970">Năm 1970</option>
+                                                                                        <option value="2024">Năm 2024
+                                                                                        </option>
+                                                                                        <option value="2023">Năm 2023
+                                                                                        </option>
+                                                                                        <option value="2022">Năm 2022
+                                                                                        </option>
+                                                                                        <option value="2021">Năm 2021
+                                                                                        </option>
+                                                                                        <option value="2020">Năm 2020
+                                                                                        </option>
+                                                                                        <option value="2019">Năm 2019
+                                                                                        </option>
+                                                                                        <option value="2018">Năm 2018
+                                                                                        </option>
+                                                                                        <option value="2017">Năm 2017
+                                                                                        </option>
+                                                                                        <option value="2016">Năm 2016
+                                                                                        </option>
+                                                                                        <option value="2015">Năm 2015
+                                                                                        </option>
+                                                                                        <option value="2014">Năm 2014
+                                                                                        </option>
+                                                                                        <option value="2013">Năm 2013
+                                                                                        </option>
+                                                                                        <option value="2012">Năm 2012
+                                                                                        </option>
+                                                                                        <option value="2011">Năm 2011
+                                                                                        </option>
+                                                                                        <option value="2010">Năm 2010
+                                                                                        </option>
+                                                                                        <option value="2009">Năm 2009
+                                                                                        </option>
+                                                                                        <option value="2008">Năm 2008
+                                                                                        </option>
+                                                                                        <option value="2007">Năm 2007
+                                                                                        </option>
+                                                                                        <option value="2006">Năm 2006
+                                                                                        </option>
+                                                                                        <option value="2005">Năm 2005
+                                                                                        </option>
+                                                                                        <option value="2004">Năm 2004
+                                                                                        </option>
+                                                                                        <option value="2003">Năm 2003
+                                                                                        </option>
+                                                                                        <option value="2002">Năm 2002
+                                                                                        </option>
+                                                                                        <option value="2001">Năm 2001
+                                                                                        </option>
+                                                                                        <option value="2000">Năm 2000
+                                                                                        </option>
+                                                                                        <option value="1999">Năm 1999
+                                                                                        </option>
+                                                                                        <option value="1998">Năm 1998
+                                                                                        </option>
+                                                                                        <option value="1997">Năm 1997
+                                                                                        </option>
+                                                                                        <option value="1996">Năm 1996
+                                                                                        </option>
+                                                                                        <option value="1995">Năm 1995
+                                                                                        </option>
+                                                                                        <option value="1994">Năm 1994
+                                                                                        </option>
+                                                                                        <option value="1993">Năm 1993
+                                                                                        </option>
+                                                                                        <option value="1992">Năm 1992
+                                                                                        </option>
+                                                                                        <option value="1991">Năm 1991
+                                                                                        </option>
+                                                                                        <option value="1990">Năm 1990
+                                                                                        </option>
+                                                                                        <option value="1989">Năm 1989
+                                                                                        </option>
+                                                                                        <option value="1988">Năm 1988
+                                                                                        </option>
+                                                                                        <option value="1987">Năm 1987
+                                                                                        </option>
+                                                                                        <option value="1986">Năm 1986
+                                                                                        </option>
+                                                                                        <option value="1985">Năm 1985
+                                                                                        </option>
+                                                                                        <option value="1984">Năm 1984
+                                                                                        </option>
+                                                                                        <option value="1983">Năm 1983
+                                                                                        </option>
+                                                                                        <option value="1982">Năm 1982
+                                                                                        </option>
+                                                                                        <option value="1981">Năm 1981
+                                                                                        </option>
+                                                                                        <option value="1980">Năm 1980
+                                                                                        </option>
+                                                                                        <option value="1979">Năm 1979
+                                                                                        </option>
+                                                                                        <option value="1978">Năm 1978
+                                                                                        </option>
+                                                                                        <option value="1977">Năm 1977
+                                                                                        </option>
+                                                                                        <option value="1976">Năm 1976
+                                                                                        </option>
+                                                                                        <option value="1975">Năm 1975
+                                                                                        </option>
+                                                                                        <option value="1974">Năm 1974
+                                                                                        </option>
+                                                                                        <option value="1973">Năm 1973
+                                                                                        </option>
+                                                                                        <option value="1972">Năm 1972
+                                                                                        </option>
+                                                                                        <option value="1971">Năm 1971
+                                                                                        </option>
+                                                                                        <option value="1970">Năm 1970
+                                                                                        </option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -4440,95 +6269,179 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-sm-6">
-                                                                        <div class="form-group field-expinfoform-date_end">
+                                                                        <div
+                                                                            class="form-group field-expinfoform-date_end">
                                                                             <div class="row">
                                                                                 <div class="col-xs-6">
-                                                                                    <label class="control-label pull-left-bk" for="expinfoform-date_end">Thời gian kết thúc</label>
+                                                                                    <label
+                                                                                        class="control-label pull-left-bk"
+                                                                                        for="expinfoform-date_end">Thời
+                                                                                        gian kết thúc</label>
 
                                                                                 </div>
                                                                                 <div class="col-xs-6">
-                                                                                    <span class="pull-right-bk"><input id="current" type="checkbox" class="styled"> <label
-                                                                                            class="control-label text-grey" for="current" title="Tôi đang làm việc tại đây"><small>Đang làm việc</small></label></span>
+                                                                                    <span class="pull-right-bk"><input
+                                                                                            id="current" type="checkbox"
+                                                                                            class="styled"> <label
+                                                                                            class="control-label text-grey"
+                                                                                            for="current"
+                                                                                            title="Tôi đang làm việc tại đây"><small>Đang
+                                                                                                làm
+                                                                                                việc</small></label></span>
 
                                                                                 </div>
 
                                                                             </div>
                                                                             <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6" style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_1" class="form-control hide" name="ExpInfoForm[date_end_1]">
-                                                                                        <option value="">Tháng...</option>
-                                                                                        <option value="01">Tháng 01</option>
-                                                                                        <option value="02">Tháng 02</option>
-                                                                                        <option value="03">Tháng 03</option>
-                                                                                        <option value="04">Tháng 04</option>
-                                                                                        <option value="05">Tháng 05</option>
-                                                                                        <option value="06">Tháng 06</option>
-                                                                                        <option value="07">Tháng 07</option>
-                                                                                        <option value="08">Tháng 08</option>
-                                                                                        <option value="09">Tháng 09</option>
-                                                                                        <option value="10">Tháng 10</option>
-                                                                                        <option value="11">Tháng 11</option>
-                                                                                        <option value="12">Tháng 12</option>
+                                                                                <div class="col-sm-6 col-xs-6"
+                                                                                    style="margin-top: 0px">
+                                                                                    <select id="expinfoform-date_end_1"
+                                                                                        class="form-control hide"
+                                                                                        name="ExpInfoForm[date_end_1]">
+                                                                                        <option value="">Tháng...
+                                                                                        </option>
+                                                                                        <option value="01">Tháng 01
+                                                                                        </option>
+                                                                                        <option value="02">Tháng 02
+                                                                                        </option>
+                                                                                        <option value="03">Tháng 03
+                                                                                        </option>
+                                                                                        <option value="04">Tháng 04
+                                                                                        </option>
+                                                                                        <option value="05">Tháng 05
+                                                                                        </option>
+                                                                                        <option value="06">Tháng 06
+                                                                                        </option>
+                                                                                        <option value="07">Tháng 07
+                                                                                        </option>
+                                                                                        <option value="08">Tháng 08
+                                                                                        </option>
+                                                                                        <option value="09">Tháng 09
+                                                                                        </option>
+                                                                                        <option value="10">Tháng 10
+                                                                                        </option>
+                                                                                        <option value="11">Tháng 11
+                                                                                        </option>
+                                                                                        <option value="12">Tháng 12
+                                                                                        </option>
                                                                                     </select>
                                                                                 </div>
-                                                                                <div class="col-sm-6 col-xs-6" style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_2" class="form-control" name="ExpInfoForm[date_end_2]">
+                                                                                <div class="col-sm-6 col-xs-6"
+                                                                                    style="margin-top: 0px">
+                                                                                    <select id="expinfoform-date_end_2"
+                                                                                        class="form-control"
+                                                                                        name="ExpInfoForm[date_end_2]">
                                                                                         <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024</option>
-                                                                                        <option value="2023">Năm 2023</option>
-                                                                                        <option value="2022">Năm 2022</option>
-                                                                                        <option value="2021">Năm 2021</option>
-                                                                                        <option value="2020">Năm 2020</option>
-                                                                                        <option value="2019">Năm 2019</option>
-                                                                                        <option value="2018">Năm 2018</option>
-                                                                                        <option value="2017">Năm 2017</option>
-                                                                                        <option value="2016">Năm 2016</option>
-                                                                                        <option value="2015">Năm 2015</option>
-                                                                                        <option value="2014">Năm 2014</option>
-                                                                                        <option value="2013">Năm 2013</option>
-                                                                                        <option value="2012">Năm 2012</option>
-                                                                                        <option value="2011">Năm 2011</option>
-                                                                                        <option value="2010">Năm 2010</option>
-                                                                                        <option value="2009">Năm 2009</option>
-                                                                                        <option value="2008">Năm 2008</option>
-                                                                                        <option value="2007">Năm 2007</option>
-                                                                                        <option value="2006">Năm 2006</option>
-                                                                                        <option value="2005">Năm 2005</option>
-                                                                                        <option value="2004">Năm 2004</option>
-                                                                                        <option value="2003">Năm 2003</option>
-                                                                                        <option value="2002">Năm 2002</option>
-                                                                                        <option value="2001">Năm 2001</option>
-                                                                                        <option value="2000">Năm 2000</option>
-                                                                                        <option value="1999">Năm 1999</option>
-                                                                                        <option value="1998">Năm 1998</option>
-                                                                                        <option value="1997">Năm 1997</option>
-                                                                                        <option value="1996">Năm 1996</option>
-                                                                                        <option value="1995">Năm 1995</option>
-                                                                                        <option value="1994">Năm 1994</option>
-                                                                                        <option value="1993">Năm 1993</option>
-                                                                                        <option value="1992">Năm 1992</option>
-                                                                                        <option value="1991">Năm 1991</option>
-                                                                                        <option value="1990">Năm 1990</option>
-                                                                                        <option value="1989">Năm 1989</option>
-                                                                                        <option value="1988">Năm 1988</option>
-                                                                                        <option value="1987">Năm 1987</option>
-                                                                                        <option value="1986">Năm 1986</option>
-                                                                                        <option value="1985">Năm 1985</option>
-                                                                                        <option value="1984">Năm 1984</option>
-                                                                                        <option value="1983">Năm 1983</option>
-                                                                                        <option value="1982">Năm 1982</option>
-                                                                                        <option value="1981">Năm 1981</option>
-                                                                                        <option value="1980">Năm 1980</option>
-                                                                                        <option value="1979">Năm 1979</option>
-                                                                                        <option value="1978">Năm 1978</option>
-                                                                                        <option value="1977">Năm 1977</option>
-                                                                                        <option value="1976">Năm 1976</option>
-                                                                                        <option value="1975">Năm 1975</option>
-                                                                                        <option value="1974">Năm 1974</option>
-                                                                                        <option value="1973">Năm 1973</option>
-                                                                                        <option value="1972">Năm 1972</option>
-                                                                                        <option value="1971">Năm 1971</option>
-                                                                                        <option value="1970">Năm 1970</option>
+                                                                                        <option value="2024">Năm 2024
+                                                                                        </option>
+                                                                                        <option value="2023">Năm 2023
+                                                                                        </option>
+                                                                                        <option value="2022">Năm 2022
+                                                                                        </option>
+                                                                                        <option value="2021">Năm 2021
+                                                                                        </option>
+                                                                                        <option value="2020">Năm 2020
+                                                                                        </option>
+                                                                                        <option value="2019">Năm 2019
+                                                                                        </option>
+                                                                                        <option value="2018">Năm 2018
+                                                                                        </option>
+                                                                                        <option value="2017">Năm 2017
+                                                                                        </option>
+                                                                                        <option value="2016">Năm 2016
+                                                                                        </option>
+                                                                                        <option value="2015">Năm 2015
+                                                                                        </option>
+                                                                                        <option value="2014">Năm 2014
+                                                                                        </option>
+                                                                                        <option value="2013">Năm 2013
+                                                                                        </option>
+                                                                                        <option value="2012">Năm 2012
+                                                                                        </option>
+                                                                                        <option value="2011">Năm 2011
+                                                                                        </option>
+                                                                                        <option value="2010">Năm 2010
+                                                                                        </option>
+                                                                                        <option value="2009">Năm 2009
+                                                                                        </option>
+                                                                                        <option value="2008">Năm 2008
+                                                                                        </option>
+                                                                                        <option value="2007">Năm 2007
+                                                                                        </option>
+                                                                                        <option value="2006">Năm 2006
+                                                                                        </option>
+                                                                                        <option value="2005">Năm 2005
+                                                                                        </option>
+                                                                                        <option value="2004">Năm 2004
+                                                                                        </option>
+                                                                                        <option value="2003">Năm 2003
+                                                                                        </option>
+                                                                                        <option value="2002">Năm 2002
+                                                                                        </option>
+                                                                                        <option value="2001">Năm 2001
+                                                                                        </option>
+                                                                                        <option value="2000">Năm 2000
+                                                                                        </option>
+                                                                                        <option value="1999">Năm 1999
+                                                                                        </option>
+                                                                                        <option value="1998">Năm 1998
+                                                                                        </option>
+                                                                                        <option value="1997">Năm 1997
+                                                                                        </option>
+                                                                                        <option value="1996">Năm 1996
+                                                                                        </option>
+                                                                                        <option value="1995">Năm 1995
+                                                                                        </option>
+                                                                                        <option value="1994">Năm 1994
+                                                                                        </option>
+                                                                                        <option value="1993">Năm 1993
+                                                                                        </option>
+                                                                                        <option value="1992">Năm 1992
+                                                                                        </option>
+                                                                                        <option value="1991">Năm 1991
+                                                                                        </option>
+                                                                                        <option value="1990">Năm 1990
+                                                                                        </option>
+                                                                                        <option value="1989">Năm 1989
+                                                                                        </option>
+                                                                                        <option value="1988">Năm 1988
+                                                                                        </option>
+                                                                                        <option value="1987">Năm 1987
+                                                                                        </option>
+                                                                                        <option value="1986">Năm 1986
+                                                                                        </option>
+                                                                                        <option value="1985">Năm 1985
+                                                                                        </option>
+                                                                                        <option value="1984">Năm 1984
+                                                                                        </option>
+                                                                                        <option value="1983">Năm 1983
+                                                                                        </option>
+                                                                                        <option value="1982">Năm 1982
+                                                                                        </option>
+                                                                                        <option value="1981">Năm 1981
+                                                                                        </option>
+                                                                                        <option value="1980">Năm 1980
+                                                                                        </option>
+                                                                                        <option value="1979">Năm 1979
+                                                                                        </option>
+                                                                                        <option value="1978">Năm 1978
+                                                                                        </option>
+                                                                                        <option value="1977">Năm 1977
+                                                                                        </option>
+                                                                                        <option value="1976">Năm 1976
+                                                                                        </option>
+                                                                                        <option value="1975">Năm 1975
+                                                                                        </option>
+                                                                                        <option value="1974">Năm 1974
+                                                                                        </option>
+                                                                                        <option value="1973">Năm 1973
+                                                                                        </option>
+                                                                                        <option value="1972">Năm 1972
+                                                                                        </option>
+                                                                                        <option value="1971">Năm 1971
+                                                                                        </option>
+                                                                                        <option value="1970">Năm 1970
+                                                                                        </option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -4538,13 +6451,20 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="form-group field-expinfoform-job_description required">
-                                                                    <label class="control-label" for="expinfoform-job_description">Mô tả công việc</label>
+                                                                <div
+                                                                    class="form-group field-expinfoform-job_description required">
+                                                                    <label class="control-label"
+                                                                        for="expinfoform-job_description">Mô tả công
+                                                                        việc</label>
                                                                     <div class="small text-muted mb-15">
-                                                                        Sử dụng các gạch đầu dòng để ghi lại chi tiết và thành tích của bạn ở vị trí này, thể hiện qua các con số, cách làm rõ ràng.
+                                                                        Sử dụng các gạch đầu dòng để ghi lại chi tiết và
+                                                                        thành tích của bạn ở vị trí này, thể hiện qua
+                                                                        các con số, cách làm rõ ràng.
                                                                     </div>
-                                                                    <textarea id="expinfoform-job_description" class="form-control myTextarea"
-                                                                        name="ExpInfoForm[job_description]" placeholder="Bổ sung thông tin..."></textarea>
+                                                                    <textarea id="expinfoform-job_description"
+                                                                        class="form-control myTextarea"
+                                                                        name="ExpInfoForm[job_description]"
+                                                                        placeholder="Bổ sung thông tin..."></textarea>
 
                                                                     <div id="tagSuggestions"></div>
 
@@ -4600,15 +6520,19 @@
                                                                             });
                                                                         });
                                                                     </script>
-                                                                    <p class="small help-block"><u>Lưu ý:</u> viết mô tả công việc đã làm của bạn trên 100 ký tự để tăng cơ hội phỏng vấn</p>
+                                                                    <p class="small help-block"><u>Lưu ý:</u> viết mô tả
+                                                                        công việc đã làm của bạn trên 100 ký tự để tăng
+                                                                        cơ hội phỏng vấn</p>
                                                                 </div>
 
                                                                 <div class="form-group">
                                                                     <span class="pull-left"><button type="button"
                                                                             class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
                                                                             data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i> <span
-                                                                                class="ladda-label">Lưu lại</span><span class="ladda-spinner"></span><span
+                                                                                class="icon-floppy-disk position-left"></i>
+                                                                            <span class="ladda-label">Lưu
+                                                                                lại</span><span
+                                                                                class="ladda-spinner"></span><span
                                                                                 class="ladda-spinner"></span></button></span>
 
                                                                     <input type="hidden" class="form-control" id="id">
@@ -4766,8 +6690,11 @@
 
                                                 }
                                             </script>
-                                            <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
-                                            <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
+                                            <link rel="stylesheet"
+                                                href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                            <script
+                                                src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js">
+                                            </script>
                                             <script>
                                                 $(function() {
 
@@ -4852,25 +6779,41 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Quá trình học tập</h4>
+                                                            <button type="button" title="Đóng cửa sổ" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Quá trình học tập
+                                                            </h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="panel panel-body border-top-blue">
 
                                                                 <div class="row">
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-eduinfoform-school_name required">
-                                                                            <label class="control-label" for="eduinfoform-school_name">Trường học</label>
-                                                                            <input type="text" id="eduinfoform-school_name" class="form-control" name="EduInfoForm[school_name]" placeholder="Tên trường học">
+                                                                        <div
+                                                                            class="form-group field-eduinfoform-school_name required">
+                                                                            <label class="control-label"
+                                                                                for="eduinfoform-school_name">Trường
+                                                                                học</label>
+                                                                            <input type="text"
+                                                                                id="eduinfoform-school_name"
+                                                                                class="form-control"
+                                                                                name="EduInfoForm[school_name]"
+                                                                                placeholder="Tên trường học">
 
                                                                             <p class="help-block help-block-error"></p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-eduinfoform-specialization required">
-                                                                            <label class="control-label" for="eduinfoform-specialization">Chuyên ngành</label>
-                                                                            <input type="text" id="eduinfoform-specialization" class="form-control" name="EduInfoForm[specialization]" placeholder="Ngành học">
+                                                                        <div
+                                                                            class="form-group field-eduinfoform-specialization required">
+                                                                            <label class="control-label"
+                                                                                for="eduinfoform-specialization">Chuyên
+                                                                                ngành</label>
+                                                                            <input type="text"
+                                                                                id="eduinfoform-specialization"
+                                                                                class="form-control"
+                                                                                name="EduInfoForm[specialization]"
+                                                                                placeholder="Ngành học">
 
                                                                             <p class="help-block help-block-error"></p>
                                                                         </div>
@@ -4881,25 +6824,37 @@
                                                                 <div class="row">
 
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-eduinfoform-degree_id required">
-                                                                            <label class="control-label" for="eduinfoform-degree_id">Bằng cấp</label>
-                                                                            <select id="eduinfoform-degree_id" class="form-control" name="EduInfoForm[degree_id]">
+                                                                        <div
+                                                                            class="form-group field-eduinfoform-degree_id required">
+                                                                            <label class="control-label"
+                                                                                for="eduinfoform-degree_id">Bằng
+                                                                                cấp</label>
+                                                                            <select id="eduinfoform-degree_id"
+                                                                                class="form-control"
+                                                                                name="EduInfoForm[degree_id]">
                                                                                 <option value="">Chọn...</option>
-                                                                                <option value="1">Trung cấp - Nghề</option>
+                                                                                <option value="1">Trung cấp - Nghề
+                                                                                </option>
                                                                                 <option value="2">Cao Đẳng</option>
                                                                                 <option value="3">Đại Học</option>
                                                                                 <option value="4">Thạc sỹ</option>
                                                                                 <option value="5">Tiến sỹ</option>
-                                                                                <option value="6">Chứng chỉ chuyên ngành</option>
+                                                                                <option value="6">Chứng chỉ chuyên ngành
+                                                                                </option>
                                                                             </select>
 
                                                                             <p class="help-block help-block-error"></p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-xs-6">
-                                                                        <div class="form-group field-eduinfoform-date_end required">
-                                                                            <label class="control-label" for="eduinfoform-date_end">Năm tốt nghiệp</label>
-                                                                            <select id="eduinfoform-date_end" class="form-control" name="EduInfoForm[date_end]">
+                                                                        <div
+                                                                            class="form-group field-eduinfoform-date_end required">
+                                                                            <label class="control-label"
+                                                                                for="eduinfoform-date_end">Năm tốt
+                                                                                nghiệp</label>
+                                                                            <select id="eduinfoform-date_end"
+                                                                                class="form-control"
+                                                                                name="EduInfoForm[date_end]">
                                                                                 <option value="">Chọn...</option>
                                                                                 <option value="2024">Năm 2024</option>
                                                                                 <option value="2023">Năm 2023</option>
@@ -4962,18 +6917,35 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group field-eduinfoform-hightlight required">
-                                                                    <label class="control-label" for="eduinfoform-hightlight">Mô tả quá trình học tập</label>
-                                                                    <p class="small">Dự án, nghiên cứu cá nhân, thành tựu, kinh nghiệm đã tích lũy...</p>
-                                                                    <textarea id="eduinfoform-hightlight" class="form-control" name="EduInfoForm[hightlight]" placeholder="Mô tả quá trình học tập..."></textarea>
+                                                                <div
+                                                                    class="form-group field-eduinfoform-hightlight required">
+                                                                    <label class="control-label"
+                                                                        for="eduinfoform-hightlight">Mô tả quá trình học
+                                                                        tập</label>
+                                                                    <p class="small">Dự án, nghiên cứu cá nhân, thành
+                                                                        tựu, kinh nghiệm đã tích lũy...</p>
+                                                                    <textarea id="eduinfoform-hightlight"
+                                                                        class="form-control"
+                                                                        name="EduInfoForm[hightlight]"
+                                                                        placeholder="Mô tả quá trình học tập..."></textarea>
                                                                     <p class="help-block help-block-error"></p>
                                                                 </div>
 
 
                                                                 <div class="form-group">
                                                                     <input type="hidden" class="form-control" id="id">
-                                                                    <span class="pull-left"><button type="button" class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Lưu lại</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button></span>
-                                                                    <span class="pull-right"><input id="current" type="checkbox" class="styled"> <label class="control-label" for="current">Tôi đang học tại đây</label></span>
+                                                                    <span class="pull-left"><button type="button"
+                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                            data-style="zoom-out"><i
+                                                                                class="icon-floppy-disk position-left"></i>
+                                                                            <span class="ladda-label">Lưu
+                                                                                lại</span><span
+                                                                                class="ladda-spinner"></span><span
+                                                                                class="ladda-spinner"></span></button></span>
+                                                                    <span class="pull-right"><input id="current"
+                                                                            type="checkbox" class="styled"> <label
+                                                                            class="control-label" for="current">Tôi đang
+                                                                            học tại đây</label></span>
                                                                 </div>
                                                             </div>
 
@@ -4989,21 +6961,34 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Cập nhật ngôn ngữ thành thạo</h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Cập nhật ngôn ngữ
+                                                                thành thạo</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="panel panel-body border-top-blue">
                                                                 <div class="text-center">
-                                                                    <img src="" alt="" width="100px" class="img-responsive display-block">
+                                                                    <img src="" alt="" width="100px"
+                                                                        class="img-responsive display-block">
                                                                     <h6 class="no-margin text-semibold"></h6>
-                                                                    <p class="content-group-sm text-muted">(Chọn mức độ từ 1 đến 100%)</p>
+                                                                    <p class="content-group-sm text-muted">(Chọn mức độ
+                                                                        từ 1 đến 100%)</p>
                                                                 </div>
-                                                                <input type="text" value="" class="form-control" id="ion-start-2">
+                                                                <input type="text" value="" class="form-control"
+                                                                    id="ion-start-2">
                                                             </div>
                                                             <div class="clearfix">
                                                                 <div class="text-center">
-                                                                    <button data-dismiss="modal" type="button" class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Hoàn tất</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button>
+                                                                    <button data-dismiss="modal" type="button"
+                                                                        class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                        data-style="zoom-out"><i
+                                                                            class="icon-floppy-disk position-left"></i>
+                                                                        <span class="ladda-label">Hoàn tất</span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span></button>
 
                                                                 </div>
                                                             </div>
@@ -5019,63 +7004,110 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành thạo</h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành
+                                                                thạo</h4>
                                                         </div>
                                                         <div class="modal-body">
 
                                                             <div class="row">
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1" class="text-center" data-val="50" data-title="Tiếng Anh" data-img="https://jobsgo.vn/media/icon_flag/England-Flag.png" title="Tiếng Anh">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/England-Flag.png" alt="Tiếng Anh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="1"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Anh"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/England-Flag.png"
+                                                                        title="Tiếng Anh">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/England-Flag.png"
+                                                                            alt="Tiếng Anh" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Anh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2" class="text-center" data-val="50" data-title="Tiếng Pháp" data-img="https://jobsgo.vn/media/icon_flag/France-Flag.png" title="Tiếng Pháp">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/France-Flag.png" alt="Tiếng Pháp" width="100">
+                                                                    <a href="javascript:void(0)" data-id="2"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Pháp"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/France-Flag.png"
+                                                                        title="Tiếng Pháp">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/France-Flag.png"
+                                                                            alt="Tiếng Pháp" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Pháp</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 hide">
-                                                                    <a href="javascript:void(0)" data-id="3" class="text-center" data-val="50" data-title="Tiếng Việt" data-img="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png" title="Tiếng Việt">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png" alt="Tiếng Việt" width="100">
+                                                                    <a href="javascript:void(0)" data-id="3"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Việt"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
+                                                                        title="Tiếng Việt">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
+                                                                            alt="Tiếng Việt" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Việt</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="4" class="text-center" data-val="50" data-title="Tiếng Nhật" data-img="https://jobsgo.vn/media/icon_flag/Japan-Flag.png" title="Tiếng Nhật">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Japan-Flag.png" alt="Tiếng Nhật" width="100">
+                                                                    <a href="javascript:void(0)" data-id="4"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Nhật"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
+                                                                        title="Tiếng Nhật">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
+                                                                            alt="Tiếng Nhật" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Nhật</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="5" class="text-center" data-val="50" data-title="Tiếng Hàn" data-img="https://jobsgo.vn/media/icon_flag/Korea-Flag.png" title="Tiếng Hàn">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Korea-Flag.png" alt="Tiếng Hàn" width="100">
+                                                                    <a href="javascript:void(0)" data-id="5"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Hàn"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
+                                                                        title="Tiếng Hàn">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
+                                                                            alt="Tiếng Hàn" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Hàn</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="6" class="text-center" data-val="50" data-title="Tiếng Đức" data-img="https://jobsgo.vn/media/icon_flag/Germany-Flag.png" title="Tiếng Đức">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Germany-Flag.png" alt="Tiếng Đức" width="100">
+                                                                    <a href="javascript:void(0)" data-id="6"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Đức"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
+                                                                        title="Tiếng Đức">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
+                                                                            alt="Tiếng Đức" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Đức</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="7" class="text-center" data-val="50" data-title="Tiếng Ý" data-img="https://jobsgo.vn/media/icon_flag/Italy-Flag.png" title="Tiếng Ý">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Italy-Flag.png" alt="Tiếng Ý" width="100">
+                                                                    <a href="javascript:void(0)" data-id="7"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Ý"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
+                                                                        title="Tiếng Ý">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
+                                                                            alt="Tiếng Ý" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Ý</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="8" class="text-center" data-val="50" data-title="Tiếng Trung" data-img="https://jobsgo.vn/media/icon_flag/China-Flag.png" title="Tiếng Trung">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/China-Flag.png" alt="Tiếng Trung" width="100">
+                                                                    <a href="javascript:void(0)" data-id="8"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Trung"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/China-Flag.png"
+                                                                        title="Tiếng Trung">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/China-Flag.png"
+                                                                            alt="Tiếng Trung" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Trung</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="9" class="text-center" data-val="50" data-title="Tiếng Nga" data-img="https://jobsgo.vn/media/icon_flag/Russia-Flag.png" title="Tiếng Nga">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Russia-Flag.png" alt="Tiếng Nga" width="100">
+                                                                    <a href="javascript:void(0)" data-id="9"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiếng Nga"
+                                                                        data-img="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
+                                                                        title="Tiếng Nga">
+                                                                        <img src="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
+                                                                            alt="Tiếng Nga" width="100">
                                                                         <h6 class="text-nowrap">Tiếng Nga</h6>
                                                                     </a>
                                                                 </div>
@@ -5318,8 +7350,11 @@
                                             </script>
 
 
-                                            <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
-                                            <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
+                                            <link rel="stylesheet"
+                                                href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                            <script
+                                                src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js">
+                                            </script>
                                             <script>
                                                 $(function() {
 
@@ -5392,87 +7427,156 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
                                                             <h4 class="modal-title text-default-800">Chọn sở thích</h4>
                                                         </div>
                                                         <div class="modal-body">
 
                                                             <div class="row">
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1" class="text-center" data-val="50" data-title="Du Lịch" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/du-lich.png" title="Du Lịch">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/du-lich.png" alt="Du Lịch" width="100">
+                                                                    <a href="javascript:void(0)" data-id="1"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Du Lịch"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/du-lich.png"
+                                                                        title="Du Lịch">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/du-lich.png"
+                                                                            alt="Du Lịch" width="100">
                                                                         <h6 class="text-nowrap">Du Lịch</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2" class="text-center" data-val="50" data-title="Thể thao" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/the-thao.png" title="Thể thao">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/the-thao.png" alt="Thể thao" width="100">
+                                                                    <a href="javascript:void(0)" data-id="2"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thể thao"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/the-thao.png"
+                                                                        title="Thể thao">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/the-thao.png"
+                                                                            alt="Thể thao" width="100">
                                                                         <h6 class="text-nowrap">Thể thao</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="3" class="text-center" data-val="50" data-title="Đọc sách" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/doc-sach.png" title="Đọc sách">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/doc-sach.png" alt="Đọc sách" width="100">
+                                                                    <a href="javascript:void(0)" data-id="3"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đọc sách"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/doc-sach.png"
+                                                                        title="Đọc sách">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/doc-sach.png"
+                                                                            alt="Đọc sách" width="100">
                                                                         <h6 class="text-nowrap">Đọc sách</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="4" class="text-center" data-val="50" data-title="Chụp ảnh" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/chup-anh.png" title="Chụp ảnh">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/chup-anh.png" alt="Chụp ảnh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="4"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Chụp ảnh"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/chup-anh.png"
+                                                                        title="Chụp ảnh">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/chup-anh.png"
+                                                                            alt="Chụp ảnh" width="100">
                                                                         <h6 class="text-nowrap">Chụp ảnh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="5" class="text-center" data-val="50" data-title="Chơi game" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/choi-game.png" title="Chơi game">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/choi-game.png" alt="Chơi game" width="100">
+                                                                    <a href="javascript:void(0)" data-id="5"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Chơi game"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/choi-game.png"
+                                                                        title="Chơi game">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/choi-game.png"
+                                                                            alt="Chơi game" width="100">
                                                                         <h6 class="text-nowrap">Chơi game</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="6" class="text-center" data-val="50" data-title="Viết lách" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/viet-lach.png" title="Viết lách">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/viet-lach.png" alt="Viết lách" width="100">
+                                                                    <a href="javascript:void(0)" data-id="6"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Viết lách"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/viet-lach.png"
+                                                                        title="Viết lách">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/viet-lach.png"
+                                                                            alt="Viết lách" width="100">
                                                                         <h6 class="text-nowrap">Viết lách</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="7" class="text-center" data-val="50" data-title="Xem Phim" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/xem-phim.png" title="Xem Phim">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/xem-phim.png" alt="Xem Phim" width="100">
+                                                                    <a href="javascript:void(0)" data-id="7"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Xem Phim"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/xem-phim.png"
+                                                                        title="Xem Phim">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/xem-phim.png"
+                                                                            alt="Xem Phim" width="100">
                                                                         <h6 class="text-nowrap">Xem Phim</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="8" class="text-center" data-val="50" data-title="Hội họa" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/hoi-hoa.png" title="Hội họa">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/hoi-hoa.png" alt="Hội họa" width="100">
+                                                                    <a href="javascript:void(0)" data-id="8"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hội họa"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/hoi-hoa.png"
+                                                                        title="Hội họa">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/hoi-hoa.png"
+                                                                            alt="Hội họa" width="100">
                                                                         <h6 class="text-nowrap">Hội họa</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="9" class="text-center" data-val="50" data-title="Làm bánh" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/lam-banh.png" title="Làm bánh">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/lam-banh.png" alt="Làm bánh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="9"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Làm bánh"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/lam-banh.png"
+                                                                        title="Làm bánh">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/lam-banh.png"
+                                                                            alt="Làm bánh" width="100">
                                                                         <h6 class="text-nowrap">Làm bánh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="10" class="text-center" data-val="50" data-title="Nghệ thuật" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/nghe-thuat.png" title="Nghệ thuật">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/nghe-thuat.png" alt="Nghệ thuật" width="100">
+                                                                    <a href="javascript:void(0)" data-id="10"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Nghệ thuật"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/nghe-thuat.png"
+                                                                        title="Nghệ thuật">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/nghe-thuat.png"
+                                                                            alt="Nghệ thuật" width="100">
                                                                         <h6 class="text-nowrap">Nghệ thuật</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="11" class="text-center" data-val="50" data-title="Thiện nguyện" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/thien-nguyen.png" title="Thiện nguyện">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/thien-nguyen.png" alt="Thiện nguyện" width="100">
+                                                                    <a href="javascript:void(0)" data-id="11"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thiện nguyện"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/thien-nguyen.png"
+                                                                        title="Thiện nguyện">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/thien-nguyen.png"
+                                                                            alt="Thiện nguyện" width="100">
                                                                         <h6 class="text-nowrap">Thiện nguyện</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="12" class="text-center" data-val="50" data-title="Ca nhạc" data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/ca-nhac.png" title="Ca nhạc">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/ca-nhac.png" alt="Ca nhạc" width="100">
+                                                                    <a href="javascript:void(0)" data-id="12"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Ca nhạc"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_hobby/ca-nhac.png"
+                                                                        title="Ca nhạc">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_hobby/ca-nhac.png"
+                                                                            alt="Ca nhạc" width="100">
                                                                         <h6 class="text-nowrap">Ca nhạc</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="col-sm-12 text-center">
                                                                     <hr>
-                                                                    <button data-dismiss="modal" type="button" class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Hoàn tất</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button>
+                                                                    <button data-dismiss="modal" type="button"
+                                                                        class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                        data-style="zoom-out"><i
+                                                                            class="icon-floppy-disk position-left"></i>
+                                                                        <span class="ladda-label">Hoàn tất</span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span></button>
                                                                 </div>
 
                                                             </div>
@@ -5489,417 +7593,761 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
                                                             <h4 class="modal-title text-default-800">Chọn địa điểm</h4>
                                                         </div>
                                                         <div class="modal-body">
 
                                                             <div class="row">
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1" class="text-center" data-val="50" data-title="Hà Nội" data-img="https://jobsgo.vn/media/icon_province/ha_noi.png" title="Hà Nội">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_noi.png" alt="Hà Nội" width="100">
+                                                                    <a href="javascript:void(0)" data-id="1"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hà Nội"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ha_noi.png"
+                                                                        title="Hà Nội">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_noi.png"
+                                                                            alt="Hà Nội" width="100">
                                                                         <h6 class="text-nowrap">Hà Nội</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2" class="text-center" data-val="50" data-title="Hồ Chí Minh" data-img="https://jobsgo.vn/media/icon_province/tp_hcm.png" title="Hồ Chí Minh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/tp_hcm.png" alt="Hồ Chí Minh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="2"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hồ Chí Minh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/tp_hcm.png"
+                                                                        title="Hồ Chí Minh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/tp_hcm.png"
+                                                                            alt="Hồ Chí Minh" width="100">
                                                                         <h6 class="text-nowrap">Hồ Chí Minh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="3" class="text-center" data-val="50" data-title="Đà Nẵng" data-img="https://jobsgo.vn/media/icon_province/da_nang.png" title="Đà Nẵng">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/da_nang.png" alt="Đà Nẵng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="3"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đà Nẵng"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/da_nang.png"
+                                                                        title="Đà Nẵng">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/da_nang.png"
+                                                                            alt="Đà Nẵng" width="100">
                                                                         <h6 class="text-nowrap">Đà Nẵng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="7" class="text-center" data-val="50" data-title="An Giang" data-img="https://jobsgo.vn/media/icon_province/an_giang.png" title="An Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/an_giang.png" alt="An Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="7"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="An Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/an_giang.png"
+                                                                        title="An Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/an_giang.png"
+                                                                            alt="An Giang" width="100">
                                                                         <h6 class="text-nowrap">An Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="8" class="text-center" data-val="50" data-title="Bà Rịa - Vũng Tàu" data-img="https://jobsgo.vn/media/icon_province/ba_ria_vung_tau.png" title="Bà Rịa - Vũng Tàu">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ba_ria_vung_tau.png" alt="Bà Rịa - Vũng Tàu" width="100">
+                                                                    <a href="javascript:void(0)" data-id="8"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bà Rịa - Vũng Tàu"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ba_ria_vung_tau.png"
+                                                                        title="Bà Rịa - Vũng Tàu">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ba_ria_vung_tau.png"
+                                                                            alt="Bà Rịa - Vũng Tàu" width="100">
                                                                         <h6 class="text-nowrap">Bà Rịa - Vũng Tàu</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="9" class="text-center" data-val="50" data-title="Bắc Giang" data-img="https://jobsgo.vn/media/icon_province/bac_giang.png" title="Bắc Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_giang.png" alt="Bắc Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="9"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bắc Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/bac_giang.png"
+                                                                        title="Bắc Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_giang.png"
+                                                                            alt="Bắc Giang" width="100">
                                                                         <h6 class="text-nowrap">Bắc Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="10" class="text-center" data-val="50" data-title="Bắc Kạn" data-img="https://jobsgo.vn/media/icon_province/bac_kan.png" title="Bắc Kạn">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_kan.png" alt="Bắc Kạn" width="100">
+                                                                    <a href="javascript:void(0)" data-id="10"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bắc Kạn"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/bac_kan.png"
+                                                                        title="Bắc Kạn">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_kan.png"
+                                                                            alt="Bắc Kạn" width="100">
                                                                         <h6 class="text-nowrap">Bắc Kạn</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="11" class="text-center" data-val="50" data-title="Bạc Liêu" data-img="https://jobsgo.vn/media/icon_province/bac_lieu.png" title="Bạc Liêu">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_lieu.png" alt="Bạc Liêu" width="100">
+                                                                    <a href="javascript:void(0)" data-id="11"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bạc Liêu"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/bac_lieu.png"
+                                                                        title="Bạc Liêu">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_lieu.png"
+                                                                            alt="Bạc Liêu" width="100">
                                                                         <h6 class="text-nowrap">Bạc Liêu</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="12" class="text-center" data-val="50" data-title="Bắc Ninh" data-img="https://jobsgo.vn/media/icon_province/bac_ninh.png" title="Bắc Ninh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_ninh.png" alt="Bắc Ninh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="12"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bắc Ninh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/bac_ninh.png"
+                                                                        title="Bắc Ninh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/bac_ninh.png"
+                                                                            alt="Bắc Ninh" width="100">
                                                                         <h6 class="text-nowrap">Bắc Ninh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="13" class="text-center" data-val="50" data-title="Bến Tre" data-img="https://jobsgo.vn/media/icon_province/ben_tre.png" title="Bến Tre">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ben_tre.png" alt="Bến Tre" width="100">
+                                                                    <a href="javascript:void(0)" data-id="13"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bến Tre"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ben_tre.png"
+                                                                        title="Bến Tre">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ben_tre.png"
+                                                                            alt="Bến Tre" width="100">
                                                                         <h6 class="text-nowrap">Bến Tre</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="14" class="text-center" data-val="50" data-title="Bình Định" data-img="https://jobsgo.vn/media/icon_province/binh_dinh.png" title="Bình Định">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_dinh.png" alt="Bình Định" width="100">
+                                                                    <a href="javascript:void(0)" data-id="14"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bình Định"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/binh_dinh.png"
+                                                                        title="Bình Định">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_dinh.png"
+                                                                            alt="Bình Định" width="100">
                                                                         <h6 class="text-nowrap">Bình Định</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="15" class="text-center" data-val="50" data-title="Bình Dương" data-img="https://jobsgo.vn/media/icon_province/binh_duong.png" title="Bình Dương">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_duong.png" alt="Bình Dương" width="100">
+                                                                    <a href="javascript:void(0)" data-id="15"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bình Dương"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/binh_duong.png"
+                                                                        title="Bình Dương">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_duong.png"
+                                                                            alt="Bình Dương" width="100">
                                                                         <h6 class="text-nowrap">Bình Dương</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="16" class="text-center" data-val="50" data-title="Bình Phước" data-img="https://jobsgo.vn/media/icon_province/binh_phuoc.png" title="Bình Phước">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_phuoc.png" alt="Bình Phước" width="100">
+                                                                    <a href="javascript:void(0)" data-id="16"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bình Phước"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/binh_phuoc.png"
+                                                                        title="Bình Phước">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_phuoc.png"
+                                                                            alt="Bình Phước" width="100">
                                                                         <h6 class="text-nowrap">Bình Phước</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="17" class="text-center" data-val="50" data-title="Bình Thuận" data-img="https://jobsgo.vn/media/icon_province/binh_thuan.png" title="Bình Thuận">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_thuan.png" alt="Bình Thuận" width="100">
+                                                                    <a href="javascript:void(0)" data-id="17"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Bình Thuận"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/binh_thuan.png"
+                                                                        title="Bình Thuận">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/binh_thuan.png"
+                                                                            alt="Bình Thuận" width="100">
                                                                         <h6 class="text-nowrap">Bình Thuận</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="18" class="text-center" data-val="50" data-title="Cà Mau" data-img="https://jobsgo.vn/media/icon_province/ca_mau.png" title="Cà Mau">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ca_mau.png" alt="Cà Mau" width="100">
+                                                                    <a href="javascript:void(0)" data-id="18"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Cà Mau"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ca_mau.png"
+                                                                        title="Cà Mau">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ca_mau.png"
+                                                                            alt="Cà Mau" width="100">
                                                                         <h6 class="text-nowrap">Cà Mau</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="19" class="text-center" data-val="50" data-title="Cần Thơ" data-img="https://jobsgo.vn/media/icon_province/can_tho.png" title="Cần Thơ">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/can_tho.png" alt="Cần Thơ" width="100">
+                                                                    <a href="javascript:void(0)" data-id="19"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Cần Thơ"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/can_tho.png"
+                                                                        title="Cần Thơ">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/can_tho.png"
+                                                                            alt="Cần Thơ" width="100">
                                                                         <h6 class="text-nowrap">Cần Thơ</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="20" class="text-center" data-val="50" data-title="Cao Bằng" data-img="https://jobsgo.vn/media/icon_province/cao_bang.png" title="Cao Bằng">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/cao_bang.png" alt="Cao Bằng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="20"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Cao Bằng"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/cao_bang.png"
+                                                                        title="Cao Bằng">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/cao_bang.png"
+                                                                            alt="Cao Bằng" width="100">
                                                                         <h6 class="text-nowrap">Cao Bằng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="21" class="text-center" data-val="50" data-title="Đắk Lắk" data-img="https://jobsgo.vn/media/icon_province/dac_lak.png" title="Đắk Lắk">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/dac_lak.png" alt="Đắk Lắk" width="100">
+                                                                    <a href="javascript:void(0)" data-id="21"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đắk Lắk"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/dac_lak.png"
+                                                                        title="Đắk Lắk">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/dac_lak.png"
+                                                                            alt="Đắk Lắk" width="100">
                                                                         <h6 class="text-nowrap">Đắk Lắk</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="22" class="text-center" data-val="50" data-title="Đắk Nông" data-img="https://jobsgo.vn/media/icon_province/dac_nong.png" title="Đắk Nông">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/dac_nong.png" alt="Đắk Nông" width="100">
+                                                                    <a href="javascript:void(0)" data-id="22"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đắk Nông"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/dac_nong.png"
+                                                                        title="Đắk Nông">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/dac_nong.png"
+                                                                            alt="Đắk Nông" width="100">
                                                                         <h6 class="text-nowrap">Đắk Nông</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="23" class="text-center" data-val="50" data-title="Điện Biên" data-img="https://jobsgo.vn/media/icon_province/dien_bien.png" title="Điện Biên">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/dien_bien.png" alt="Điện Biên" width="100">
+                                                                    <a href="javascript:void(0)" data-id="23"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Điện Biên"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/dien_bien.png"
+                                                                        title="Điện Biên">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/dien_bien.png"
+                                                                            alt="Điện Biên" width="100">
                                                                         <h6 class="text-nowrap">Điện Biên</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="24" class="text-center" data-val="50" data-title="Đồng Nai" data-img="https://jobsgo.vn/media/icon_province/dong_nai.png" title="Đồng Nai">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/dong_nai.png" alt="Đồng Nai" width="100">
+                                                                    <a href="javascript:void(0)" data-id="24"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đồng Nai"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/dong_nai.png"
+                                                                        title="Đồng Nai">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/dong_nai.png"
+                                                                            alt="Đồng Nai" width="100">
                                                                         <h6 class="text-nowrap">Đồng Nai</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="25" class="text-center" data-val="50" data-title="Đồng Tháp" data-img="https://jobsgo.vn/media/icon_province/dong_thap.png" title="Đồng Tháp">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/dong_thap.png" alt="Đồng Tháp" width="100">
+                                                                    <a href="javascript:void(0)" data-id="25"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đồng Tháp"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/dong_thap.png"
+                                                                        title="Đồng Tháp">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/dong_thap.png"
+                                                                            alt="Đồng Tháp" width="100">
                                                                         <h6 class="text-nowrap">Đồng Tháp</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="26" class="text-center" data-val="50" data-title="Gia Lai" data-img="https://jobsgo.vn/media/icon_province/gia_lai.png" title="Gia Lai">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/gia_lai.png" alt="Gia Lai" width="100">
+                                                                    <a href="javascript:void(0)" data-id="26"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Gia Lai"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/gia_lai.png"
+                                                                        title="Gia Lai">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/gia_lai.png"
+                                                                            alt="Gia Lai" width="100">
                                                                         <h6 class="text-nowrap">Gia Lai</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="27" class="text-center" data-val="50" data-title="Hà Giang" data-img="https://jobsgo.vn/media/icon_province/ha_giang.png" title="Hà Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_giang.png" alt="Hà Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="27"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hà Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ha_giang.png"
+                                                                        title="Hà Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_giang.png"
+                                                                            alt="Hà Giang" width="100">
                                                                         <h6 class="text-nowrap">Hà Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="28" class="text-center" data-val="50" data-title="Hà Nam" data-img="https://jobsgo.vn/media/icon_province/ha_nam.png" title="Hà Nam">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_nam.png" alt="Hà Nam" width="100">
+                                                                    <a href="javascript:void(0)" data-id="28"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hà Nam"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ha_nam.png"
+                                                                        title="Hà Nam">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_nam.png"
+                                                                            alt="Hà Nam" width="100">
                                                                         <h6 class="text-nowrap">Hà Nam</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="29" class="text-center" data-val="50" data-title="Hà Tĩnh" data-img="https://jobsgo.vn/media/icon_province/ha_tinh.png" title="Hà Tĩnh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_tinh.png" alt="Hà Tĩnh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="29"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hà Tĩnh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ha_tinh.png"
+                                                                        title="Hà Tĩnh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ha_tinh.png"
+                                                                            alt="Hà Tĩnh" width="100">
                                                                         <h6 class="text-nowrap">Hà Tĩnh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="30" class="text-center" data-val="50" data-title="Hải Dương" data-img="https://jobsgo.vn/media/icon_province/hai_duong.png" title="Hải Dương">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/hai_duong.png" alt="Hải Dương" width="100">
+                                                                    <a href="javascript:void(0)" data-id="30"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hải Dương"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/hai_duong.png"
+                                                                        title="Hải Dương">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/hai_duong.png"
+                                                                            alt="Hải Dương" width="100">
                                                                         <h6 class="text-nowrap">Hải Dương</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="31" class="text-center" data-val="50" data-title="Hải Phòng" data-img="https://jobsgo.vn/media/icon_province/hai_phong.png" title="Hải Phòng">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/hai_phong.png" alt="Hải Phòng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="31"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hải Phòng"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/hai_phong.png"
+                                                                        title="Hải Phòng">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/hai_phong.png"
+                                                                            alt="Hải Phòng" width="100">
                                                                         <h6 class="text-nowrap">Hải Phòng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="32" class="text-center" data-val="50" data-title="Hậu Giang" data-img="https://jobsgo.vn/media/icon_province/hau_giang.png" title="Hậu Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/hau_giang.png" alt="Hậu Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="32"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hậu Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/hau_giang.png"
+                                                                        title="Hậu Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/hau_giang.png"
+                                                                            alt="Hậu Giang" width="100">
                                                                         <h6 class="text-nowrap">Hậu Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="33" class="text-center" data-val="50" data-title="Hòa Bình" data-img="https://jobsgo.vn/media/icon_province/hoa_binh.png" title="Hòa Bình">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/hoa_binh.png" alt="Hòa Bình" width="100">
+                                                                    <a href="javascript:void(0)" data-id="33"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hòa Bình"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/hoa_binh.png"
+                                                                        title="Hòa Bình">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/hoa_binh.png"
+                                                                            alt="Hòa Bình" width="100">
                                                                         <h6 class="text-nowrap">Hòa Bình</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="34" class="text-center" data-val="50" data-title="Hưng Yên" data-img="https://jobsgo.vn/media/icon_province/hung_yen.png" title="Hưng Yên">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/hung_yen.png" alt="Hưng Yên" width="100">
+                                                                    <a href="javascript:void(0)" data-id="34"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hưng Yên"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/hung_yen.png"
+                                                                        title="Hưng Yên">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/hung_yen.png"
+                                                                            alt="Hưng Yên" width="100">
                                                                         <h6 class="text-nowrap">Hưng Yên</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="35" class="text-center" data-val="50" data-title="Khánh Hòa" data-img="https://jobsgo.vn/media/icon_province/khanh_hoa.png" title="Khánh Hòa">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/khanh_hoa.png" alt="Khánh Hòa" width="100">
+                                                                    <a href="javascript:void(0)" data-id="35"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Khánh Hòa"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/khanh_hoa.png"
+                                                                        title="Khánh Hòa">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/khanh_hoa.png"
+                                                                            alt="Khánh Hòa" width="100">
                                                                         <h6 class="text-nowrap">Khánh Hòa</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="36" class="text-center" data-val="50" data-title="Kiên Giang" data-img="https://jobsgo.vn/media/icon_province/kien_giang.png" title="Kiên Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/kien_giang.png" alt="Kiên Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="36"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Kiên Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/kien_giang.png"
+                                                                        title="Kiên Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/kien_giang.png"
+                                                                            alt="Kiên Giang" width="100">
                                                                         <h6 class="text-nowrap">Kiên Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="37" class="text-center" data-val="50" data-title="Kon Tum" data-img="https://jobsgo.vn/media/icon_province/kon_tum.png" title="Kon Tum">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/kon_tum.png" alt="Kon Tum" width="100">
+                                                                    <a href="javascript:void(0)" data-id="37"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Kon Tum"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/kon_tum.png"
+                                                                        title="Kon Tum">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/kon_tum.png"
+                                                                            alt="Kon Tum" width="100">
                                                                         <h6 class="text-nowrap">Kon Tum</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="38" class="text-center" data-val="50" data-title="Lai Châu" data-img="https://jobsgo.vn/media/icon_province/lai_chau.png" title="Lai Châu">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/lai_chau.png" alt="Lai Châu" width="100">
+                                                                    <a href="javascript:void(0)" data-id="38"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lai Châu"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/lai_chau.png"
+                                                                        title="Lai Châu">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/lai_chau.png"
+                                                                            alt="Lai Châu" width="100">
                                                                         <h6 class="text-nowrap">Lai Châu</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="39" class="text-center" data-val="50" data-title="Lâm Đồng" data-img="https://jobsgo.vn/media/icon_province/lam_dong.png" title="Lâm Đồng">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/lam_dong.png" alt="Lâm Đồng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="39"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lâm Đồng"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/lam_dong.png"
+                                                                        title="Lâm Đồng">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/lam_dong.png"
+                                                                            alt="Lâm Đồng" width="100">
                                                                         <h6 class="text-nowrap">Lâm Đồng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="40" class="text-center" data-val="50" data-title="Lạng Sơn" data-img="https://jobsgo.vn/media/icon_province/lang_son.png" title="Lạng Sơn">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/lang_son.png" alt="Lạng Sơn" width="100">
+                                                                    <a href="javascript:void(0)" data-id="40"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lạng Sơn"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/lang_son.png"
+                                                                        title="Lạng Sơn">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/lang_son.png"
+                                                                            alt="Lạng Sơn" width="100">
                                                                         <h6 class="text-nowrap">Lạng Sơn</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="41" class="text-center" data-val="50" data-title="Lào Cai" data-img="https://jobsgo.vn/media/icon_province/lao_cai.png" title="Lào Cai">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/lao_cai.png" alt="Lào Cai" width="100">
+                                                                    <a href="javascript:void(0)" data-id="41"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lào Cai"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/lao_cai.png"
+                                                                        title="Lào Cai">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/lao_cai.png"
+                                                                            alt="Lào Cai" width="100">
                                                                         <h6 class="text-nowrap">Lào Cai</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="42" class="text-center" data-val="50" data-title="Long An" data-img="https://jobsgo.vn/media/icon_province/long_an.png" title="Long An">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/long_an.png" alt="Long An" width="100">
+                                                                    <a href="javascript:void(0)" data-id="42"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Long An"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/long_an.png"
+                                                                        title="Long An">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/long_an.png"
+                                                                            alt="Long An" width="100">
                                                                         <h6 class="text-nowrap">Long An</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="43" class="text-center" data-val="50" data-title="Nam Định" data-img="https://jobsgo.vn/media/icon_province/nam_dinh.png" title="Nam Định">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/nam_dinh.png" alt="Nam Định" width="100">
+                                                                    <a href="javascript:void(0)" data-id="43"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Nam Định"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/nam_dinh.png"
+                                                                        title="Nam Định">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/nam_dinh.png"
+                                                                            alt="Nam Định" width="100">
                                                                         <h6 class="text-nowrap">Nam Định</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="44" class="text-center" data-val="50" data-title="Nghệ An" data-img="https://jobsgo.vn/media/icon_province/nghe_an.png" title="Nghệ An">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/nghe_an.png" alt="Nghệ An" width="100">
+                                                                    <a href="javascript:void(0)" data-id="44"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Nghệ An"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/nghe_an.png"
+                                                                        title="Nghệ An">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/nghe_an.png"
+                                                                            alt="Nghệ An" width="100">
                                                                         <h6 class="text-nowrap">Nghệ An</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="45" class="text-center" data-val="50" data-title="Ninh Bình" data-img="https://jobsgo.vn/media/icon_province/ninh_binh.png" title="Ninh Bình">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ninh_binh.png" alt="Ninh Bình" width="100">
+                                                                    <a href="javascript:void(0)" data-id="45"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Ninh Bình"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ninh_binh.png"
+                                                                        title="Ninh Bình">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ninh_binh.png"
+                                                                            alt="Ninh Bình" width="100">
                                                                         <h6 class="text-nowrap">Ninh Bình</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="46" class="text-center" data-val="50" data-title="Ninh Thuận" data-img="https://jobsgo.vn/media/icon_province/ninh_thuan.png" title="Ninh Thuận">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/ninh_thuan.png" alt="Ninh Thuận" width="100">
+                                                                    <a href="javascript:void(0)" data-id="46"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Ninh Thuận"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/ninh_thuan.png"
+                                                                        title="Ninh Thuận">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/ninh_thuan.png"
+                                                                            alt="Ninh Thuận" width="100">
                                                                         <h6 class="text-nowrap">Ninh Thuận</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="47" class="text-center" data-val="50" data-title="Phú Thọ" data-img="https://jobsgo.vn/media/icon_province/phu_tho.png" title="Phú Thọ">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/phu_tho.png" alt="Phú Thọ" width="100">
+                                                                    <a href="javascript:void(0)" data-id="47"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Phú Thọ"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/phu_tho.png"
+                                                                        title="Phú Thọ">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/phu_tho.png"
+                                                                            alt="Phú Thọ" width="100">
                                                                         <h6 class="text-nowrap">Phú Thọ</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="48" class="text-center" data-val="50" data-title="Phú Yên" data-img="https://jobsgo.vn/media/icon_province/phu_yen.png" title="Phú Yên">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/phu_yen.png" alt="Phú Yên" width="100">
+                                                                    <a href="javascript:void(0)" data-id="48"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Phú Yên"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/phu_yen.png"
+                                                                        title="Phú Yên">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/phu_yen.png"
+                                                                            alt="Phú Yên" width="100">
                                                                         <h6 class="text-nowrap">Phú Yên</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="49" class="text-center" data-val="50" data-title="Quảng Bình" data-img="https://jobsgo.vn/media/icon_province/quang_binh.png" title="Quảng Bình">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_binh.png" alt="Quảng Bình" width="100">
+                                                                    <a href="javascript:void(0)" data-id="49"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quảng Bình"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_binh.png"
+                                                                        title="Quảng Bình">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_binh.png"
+                                                                            alt="Quảng Bình" width="100">
                                                                         <h6 class="text-nowrap">Quảng Bình</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="50" class="text-center" data-val="50" data-title="Quảng Nam" data-img="https://jobsgo.vn/media/icon_province/quang_nam.png" title="Quảng Nam">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_nam.png" alt="Quảng Nam" width="100">
+                                                                    <a href="javascript:void(0)" data-id="50"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quảng Nam"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_nam.png"
+                                                                        title="Quảng Nam">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_nam.png"
+                                                                            alt="Quảng Nam" width="100">
                                                                         <h6 class="text-nowrap">Quảng Nam</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="51" class="text-center" data-val="50" data-title="Quảng Ngãi" data-img="https://jobsgo.vn/media/icon_province/quang_ngai.png" title="Quảng Ngãi">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_ngai.png" alt="Quảng Ngãi" width="100">
+                                                                    <a href="javascript:void(0)" data-id="51"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quảng Ngãi"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_ngai.png"
+                                                                        title="Quảng Ngãi">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_ngai.png"
+                                                                            alt="Quảng Ngãi" width="100">
                                                                         <h6 class="text-nowrap">Quảng Ngãi</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="52" class="text-center" data-val="50" data-title="Quảng Ninh" data-img="https://jobsgo.vn/media/icon_province/quang_ninh.png" title="Quảng Ninh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_ninh.png" alt="Quảng Ninh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="52"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quảng Ninh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_ninh.png"
+                                                                        title="Quảng Ninh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_ninh.png"
+                                                                            alt="Quảng Ninh" width="100">
                                                                         <h6 class="text-nowrap">Quảng Ninh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="53" class="text-center" data-val="50" data-title="Quảng Trị" data-img="https://jobsgo.vn/media/icon_province/quang_tri.png" title="Quảng Trị">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png" alt="Quảng Trị" width="100">
+                                                                    <a href="javascript:void(0)" data-id="53"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quảng Trị"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                        title="Quảng Trị">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                            alt="Quảng Trị" width="100">
                                                                         <h6 class="text-nowrap">Quảng Trị</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="54" class="text-center" data-val="50" data-title="Sóc Trăng" data-img="https://jobsgo.vn/media/icon_province/soc_trang.png" title="Sóc Trăng">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/soc_trang.png" alt="Sóc Trăng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="54"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Sóc Trăng"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/soc_trang.png"
+                                                                        title="Sóc Trăng">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/soc_trang.png"
+                                                                            alt="Sóc Trăng" width="100">
                                                                         <h6 class="text-nowrap">Sóc Trăng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="55" class="text-center" data-val="50" data-title="Sơn La" data-img="https://jobsgo.vn/media/icon_province/son_la.png" title="Sơn La">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/son_la.png" alt="Sơn La" width="100">
+                                                                    <a href="javascript:void(0)" data-id="55"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Sơn La"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/son_la.png"
+                                                                        title="Sơn La">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/son_la.png"
+                                                                            alt="Sơn La" width="100">
                                                                         <h6 class="text-nowrap">Sơn La</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="56" class="text-center" data-val="50" data-title="Tây Ninh" data-img="https://jobsgo.vn/media/icon_province/tay_ninh.png" title="Tây Ninh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/tay_ninh.png" alt="Tây Ninh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="56"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tây Ninh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/tay_ninh.png"
+                                                                        title="Tây Ninh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/tay_ninh.png"
+                                                                            alt="Tây Ninh" width="100">
                                                                         <h6 class="text-nowrap">Tây Ninh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="57" class="text-center" data-val="50" data-title="Thái Bình" data-img="https://jobsgo.vn/media/icon_province/thai_binh.png" title="Thái Bình">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/thai_binh.png" alt="Thái Bình" width="100">
+                                                                    <a href="javascript:void(0)" data-id="57"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thái Bình"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/thai_binh.png"
+                                                                        title="Thái Bình">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/thai_binh.png"
+                                                                            alt="Thái Bình" width="100">
                                                                         <h6 class="text-nowrap">Thái Bình</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="58" class="text-center" data-val="50" data-title="Thái Nguyên" data-img="https://jobsgo.vn/media/icon_province/thai_nguyen.png" title="Thái Nguyên">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/thai_nguyen.png" alt="Thái Nguyên" width="100">
+                                                                    <a href="javascript:void(0)" data-id="58"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thái Nguyên"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/thai_nguyen.png"
+                                                                        title="Thái Nguyên">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/thai_nguyen.png"
+                                                                            alt="Thái Nguyên" width="100">
                                                                         <h6 class="text-nowrap">Thái Nguyên</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="59" class="text-center" data-val="50" data-title="Thanh Hóa" data-img="https://jobsgo.vn/media/icon_province/thanh_hoa.png" title="Thanh Hóa">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/thanh_hoa.png" alt="Thanh Hóa" width="100">
+                                                                    <a href="javascript:void(0)" data-id="59"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thanh Hóa"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/thanh_hoa.png"
+                                                                        title="Thanh Hóa">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/thanh_hoa.png"
+                                                                            alt="Thanh Hóa" width="100">
                                                                         <h6 class="text-nowrap">Thanh Hóa</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="60" class="text-center" data-val="50" data-title="Thừa Thiên Huế" data-img="https://jobsgo.vn/media/icon_province/thua_thien_hue.png" title="Thừa Thiên Huế">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/thua_thien_hue.png" alt="Thừa Thiên Huế" width="100">
+                                                                    <a href="javascript:void(0)" data-id="60"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thừa Thiên Huế"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/thua_thien_hue.png"
+                                                                        title="Thừa Thiên Huế">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/thua_thien_hue.png"
+                                                                            alt="Thừa Thiên Huế" width="100">
                                                                         <h6 class="text-nowrap">Thừa Thiên Huế</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="61" class="text-center" data-val="50" data-title="Tiền Giang" data-img="https://jobsgo.vn/media/icon_province/tien_giang.png" title="Tiền Giang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/tien_giang.png" alt="Tiền Giang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="61"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tiền Giang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/tien_giang.png"
+                                                                        title="Tiền Giang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/tien_giang.png"
+                                                                            alt="Tiền Giang" width="100">
                                                                         <h6 class="text-nowrap">Tiền Giang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="62" class="text-center" data-val="50" data-title="Trà Vinh" data-img="https://jobsgo.vn/media/icon_province/tra_vinh.png" title="Trà Vinh">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/tra_vinh.png" alt="Trà Vinh" width="100">
+                                                                    <a href="javascript:void(0)" data-id="62"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Trà Vinh"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/tra_vinh.png"
+                                                                        title="Trà Vinh">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/tra_vinh.png"
+                                                                            alt="Trà Vinh" width="100">
                                                                         <h6 class="text-nowrap">Trà Vinh</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="63" class="text-center" data-val="50" data-title="Tuyên Quang" data-img="https://jobsgo.vn/media/icon_province/tuyen_quang.png" title="Tuyên Quang">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/tuyen_quang.png" alt="Tuyên Quang" width="100">
+                                                                    <a href="javascript:void(0)" data-id="63"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tuyên Quang"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/tuyen_quang.png"
+                                                                        title="Tuyên Quang">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/tuyen_quang.png"
+                                                                            alt="Tuyên Quang" width="100">
                                                                         <h6 class="text-nowrap">Tuyên Quang</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="64" class="text-center" data-val="50" data-title="Vĩnh Long" data-img="https://jobsgo.vn/media/icon_province/vinh_long.png" title="Vĩnh Long">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/vinh_long.png" alt="Vĩnh Long" width="100">
+                                                                    <a href="javascript:void(0)" data-id="64"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Vĩnh Long"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/vinh_long.png"
+                                                                        title="Vĩnh Long">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/vinh_long.png"
+                                                                            alt="Vĩnh Long" width="100">
                                                                         <h6 class="text-nowrap">Vĩnh Long</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="65" class="text-center" data-val="50" data-title="Vĩnh Phúc" data-img="https://jobsgo.vn/media/icon_province/vinh_phuc.png" title="Vĩnh Phúc">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/vinh_phuc.png" alt="Vĩnh Phúc" width="100">
+                                                                    <a href="javascript:void(0)" data-id="65"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Vĩnh Phúc"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/vinh_phuc.png"
+                                                                        title="Vĩnh Phúc">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/vinh_phuc.png"
+                                                                            alt="Vĩnh Phúc" width="100">
                                                                         <h6 class="text-nowrap">Vĩnh Phúc</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="66" class="text-center" data-val="50" data-title="Yên Bái" data-img="https://jobsgo.vn/media/icon_province/yen_bai.png" title="Yên Bái">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/yen_bai.png" alt="Yên Bái" width="100">
+                                                                    <a href="javascript:void(0)" data-id="66"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Yên Bái"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/yen_bai.png"
+                                                                        title="Yên Bái">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/yen_bai.png"
+                                                                            alt="Yên Bái" width="100">
                                                                         <h6 class="text-nowrap">Yên Bái</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="67" class="text-center" data-val="50" data-title="Nước ngoài" data-img="https://jobsgo.vn/media/icon_province/quang_tri.png" title="Nước ngoài">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png" alt="Nước ngoài" width="100">
+                                                                    <a href="javascript:void(0)" data-id="67"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Nước ngoài"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                        title="Nước ngoài">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                            alt="Nước ngoài" width="100">
                                                                         <h6 class="text-nowrap">Nước ngoài</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="68" class="text-center" data-val="50" data-title="Toàn quốc" data-img="https://jobsgo.vn/media/icon_province/quang_tri.png" title="Toàn quốc">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png" alt="Toàn quốc" width="100">
+                                                                    <a href="javascript:void(0)" data-id="68"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Toàn quốc"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                        title="Toàn quốc">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                            alt="Toàn quốc" width="100">
                                                                         <h6 class="text-nowrap">Toàn quốc</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="69" class="text-center" data-val="50" data-title="Miền Nam" data-img="https://jobsgo.vn/media/icon_province/quang_tri.png" title="Miền Nam">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png" alt="Miền Nam" width="100">
+                                                                    <a href="javascript:void(0)" data-id="69"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Miền Nam"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                        title="Miền Nam">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                            alt="Miền Nam" width="100">
                                                                         <h6 class="text-nowrap">Miền Nam</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-2 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="73" class="text-center" data-val="50" data-title="Tây Nguyên" data-img="https://jobsgo.vn/media/icon_province/quang_tri.png" title="Tây Nguyên">
-                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png" alt="Tây Nguyên" width="100">
+                                                                    <a href="javascript:void(0)" data-id="73"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Tây Nguyên"
+                                                                        data-img="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                        title="Tây Nguyên">
+                                                                        <img src="https://jobsgo.vn/media/icon_province/quang_tri.png"
+                                                                            alt="Tây Nguyên" width="100">
                                                                         <h6 class="text-nowrap">Tây Nguyên</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="col-sm-12 text-center">
                                                                     <hr>
-                                                                    <button data-dismiss="modal" type="button" class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Hoàn tất</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button>
+                                                                    <button data-dismiss="modal" type="button"
+                                                                        class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                        data-style="zoom-out"><i
+                                                                            class="icon-floppy-disk position-left"></i>
+                                                                        <span class="ladda-label">Hoàn tất</span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span></button>
                                                                 </div>
 
                                                             </div>
@@ -5980,23 +8428,36 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Cập nhật kỹ năng mềm</h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Cập nhật kỹ năng
+                                                                mềm</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="panel panel-body border-top-blue">
                                                                 <div class="text-center">
-                                                                    <img src="" alt="" width="100px" class="img-responsive display-block">
+                                                                    <img src="" alt="" width="100px"
+                                                                        class="img-responsive display-block">
                                                                     <h6 class="no-margin text-semibold"></h6>
-                                                                    <p class="content-group-sm text-muted">(Chọn mức độ từ 1 đến 100%)</p>
+                                                                    <p class="content-group-sm text-muted">(Chọn mức độ
+                                                                        từ 1 đến 100%)</p>
                                                                 </div>
-                                                                <input type="text" value="" class="form-control" id="ion-start-52">
+                                                                <input type="text" value="" class="form-control"
+                                                                    id="ion-start-52">
 
 
                                                             </div>
                                                             <div class="clearfix">
                                                                 <div class="text-center">
-                                                                    <button data-dismiss="modal" type="button" class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Hoàn tất</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button>
+                                                                    <button data-dismiss="modal" type="button"
+                                                                        class="btn btn-success btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                        data-style="zoom-out"><i
+                                                                            class="icon-floppy-disk position-left"></i>
+                                                                        <span class="ladda-label">Hoàn tất</span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span><span
+                                                                            class="ladda-spinner"></span></button>
 
                                                                 </div>
                                                             </div>
@@ -6013,105 +8474,143 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Chọn kỹ năng mềm</h4>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Chọn kỹ năng mềm
+                                                            </h4>
                                                         </div>
                                                         <div class="modal-body">
 
                                                             <div class="row">
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1" class="text-center"
-                                                                        data-val="50" data-title="Thuyết trình"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/thuyet_trinh.png" title="Thuyết trình">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/thuyet_trinh.png" alt="Thuyết trình" width="100">
+                                                                    <a href="javascript:void(0)" data-id="1"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Thuyết trình"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/thuyet_trinh.png"
+                                                                        title="Thuyết trình">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/thuyet_trinh.png"
+                                                                            alt="Thuyết trình" width="100">
                                                                         <h6 class="text-nowrap">Thuyết trình</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2" class="text-center"
-                                                                        data-val="50" data-title="Quản lý thời gian"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/quan_ly_thoi_gian.png" title="Quản lý thời gian">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/quan_ly_thoi_gian.png" alt="Quản lý thời gian" width="100">
+                                                                    <a href="javascript:void(0)" data-id="2"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Quản lý thời gian"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/quan_ly_thoi_gian.png"
+                                                                        title="Quản lý thời gian">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/quan_ly_thoi_gian.png"
+                                                                            alt="Quản lý thời gian" width="100">
                                                                         <h6 class="text-nowrap">Quản lý thời gian</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="5" class="text-center"
-                                                                        data-val="50" data-title="Giao tiếp"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/giao_tiep.png" title="Giao tiếp">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/giao_tiep.png" alt="Giao tiếp" width="100">
+                                                                    <a href="javascript:void(0)" data-id="5"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Giao tiếp"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/giao_tiep.png"
+                                                                        title="Giao tiếp">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/giao_tiep.png"
+                                                                            alt="Giao tiếp" width="100">
                                                                         <h6 class="text-nowrap">Giao tiếp</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="6" class="text-center"
-                                                                        data-val="50" data-title="Giải quyết vấn đề"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/icon_default.png" title="Giải quyết vấn đề">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/icon_default.png" alt="Giải quyết vấn đề" width="100">
+                                                                    <a href="javascript:void(0)" data-id="6"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Giải quyết vấn đề"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/icon_default.png"
+                                                                        title="Giải quyết vấn đề">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/icon_default.png"
+                                                                            alt="Giải quyết vấn đề" width="100">
                                                                         <h6 class="text-nowrap">Giải quyết vấn đề</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="12" class="text-center"
-                                                                        data-val="50" data-title="Làm việc nhóm"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lam_viec_nhom.png" title="Làm việc nhóm">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lam_viec_nhom.png" alt="Làm việc nhóm" width="100">
+                                                                    <a href="javascript:void(0)" data-id="12"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Làm việc nhóm"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lam_viec_nhom.png"
+                                                                        title="Làm việc nhóm">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lam_viec_nhom.png"
+                                                                            alt="Làm việc nhóm" width="100">
                                                                         <h6 class="text-nowrap">Làm việc nhóm</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="13" class="text-center"
-                                                                        data-val="50" data-title="Đàm phán"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/dam_phan.png" title="Đàm phán">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/dam_phan.png" alt="Đàm phán" width="100">
+                                                                    <a href="javascript:void(0)" data-id="13"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Đàm phán"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/dam_phan.png"
+                                                                        title="Đàm phán">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/dam_phan.png"
+                                                                            alt="Đàm phán" width="100">
                                                                         <h6 class="text-nowrap">Đàm phán</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="14" class="text-center"
-                                                                        data-val="50" data-title="Năng động"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/nang_dong.png" title="Năng động">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/nang_dong.png" alt="Năng động" width="100">
+                                                                    <a href="javascript:void(0)" data-id="14"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Năng động"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/nang_dong.png"
+                                                                        title="Năng động">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/nang_dong.png"
+                                                                            alt="Năng động" width="100">
                                                                         <h6 class="text-nowrap">Năng động</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="15" class="text-center"
-                                                                        data-val="50" data-title="Lãnh Đạo"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lanh_dao.png" title="Lãnh Đạo">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lanh_dao.png" alt="Lãnh Đạo" width="100">
+                                                                    <a href="javascript:void(0)" data-id="15"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lãnh Đạo"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lanh_dao.png"
+                                                                        title="Lãnh Đạo">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lanh_dao.png"
+                                                                            alt="Lãnh Đạo" width="100">
                                                                         <h6 class="text-nowrap">Lãnh Đạo</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="16" class="text-center"
-                                                                        data-val="50" data-title="Phân tích"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/phan_tich.png" title="Phân tích">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/phan_tich.png" alt="Phân tích" width="100">
+                                                                    <a href="javascript:void(0)" data-id="16"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Phân tích"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/phan_tich.png"
+                                                                        title="Phân tích">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/phan_tich.png"
+                                                                            alt="Phân tích" width="100">
                                                                         <h6 class="text-nowrap">Phân tích</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="17" class="text-center"
-                                                                        data-val="50" data-title="Lập kế hoạch"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lap_ke_hoach.png" title="Lập kế hoạch">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lap_ke_hoach.png" alt="Lập kế hoạch" width="100">
+                                                                    <a href="javascript:void(0)" data-id="17"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Lập kế hoạch"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/lap_ke_hoach.png"
+                                                                        title="Lập kế hoạch">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/lap_ke_hoach.png"
+                                                                            alt="Lập kế hoạch" width="100">
                                                                         <h6 class="text-nowrap">Lập kế hoạch</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="18" class="text-center"
-                                                                        data-val="50" data-title="Hòa đồng"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/hoa_dong.png" title="Hòa đồng">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/hoa_dong.png" alt="Hòa đồng" width="100">
+                                                                    <a href="javascript:void(0)" data-id="18"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Hòa đồng"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/hoa_dong.png"
+                                                                        title="Hòa đồng">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/hoa_dong.png"
+                                                                            alt="Hòa đồng" width="100">
                                                                         <h6 class="text-nowrap">Hòa đồng</h6>
                                                                     </a>
                                                                 </div>
                                                                 <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="19" class="text-center"
-                                                                        data-val="50" data-title="Xây dựng quan hệ"
-                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/xay_dung_quan_he.png" title="Xây dựng quan hệ">
-                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/xay_dung_quan_he.png" alt="Xây dựng quan hệ" width="100">
+                                                                    <a href="javascript:void(0)" data-id="19"
+                                                                        class="text-center" data-val="50"
+                                                                        data-title="Xây dựng quan hệ"
+                                                                        data-img="https://admin.jobsgo.vn/assets/media/icon_softskill/xay_dung_quan_he.png"
+                                                                        title="Xây dựng quan hệ">
+                                                                        <img src="https://admin.jobsgo.vn/assets/media/icon_softskill/xay_dung_quan_he.png"
+                                                                            alt="Xây dựng quan hệ" width="100">
                                                                         <h6 class="text-nowrap">Xây dựng quan hệ</h6>
                                                                     </a>
                                                                 </div>
@@ -6247,8 +8746,10 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Kỹ năng chuyên môn</h4>
+                                                            <button type="button" title="Đóng cửa sổ" class="close"
+                                                                data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Kỹ năng chuyên môn
+                                                            </h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="panel panel-body border-top-blue">
@@ -6256,189 +8757,297 @@
                                                                 <div class="row-cjc">
                                                                     <div class="row">
                                                                         <div class="col-xs-8">
-                                                                            <div class="form-group field-eduinfoform-school_name required">
-                                                                                <label class="control-label">Kỹ năng chuyên môn</label>
+                                                                            <div
+                                                                                class="form-group field-eduinfoform-school_name required">
+                                                                                <label class="control-label">Kỹ năng
+                                                                                    chuyên môn</label>
 
-                                                                                <select name="cid[]" class="form-control">
+                                                                                <select name="cid[]"
+                                                                                    class="form-control">
                                                                                     <option value="">Chọn...</option>
 
                                                                                     <optgroup label="Xây Dựng">
 
-                                                                                        <option value="143">Xây Dựng</option>
-                                                                                        <option value="252">Trắc Địa</option>
-                                                                                        <option value="253">Thi Công</option>
-                                                                                        <option value="254">Giám Sát Công Trình</option>
-                                                                                        <option value="255">Kết Cấu Công Trình</option>
-                                                                                        <option value="256">Vật Tư Xây Dựng</option>
-                                                                                        <option value="257">Dự Toán</option>
-                                                                                        <option value="258">Lái Xe Công Trường</option>
+                                                                                        <option value="143">Xây Dựng
+                                                                                        </option>
+                                                                                        <option value="252">Trắc Địa
+                                                                                        </option>
+                                                                                        <option value="253">Thi Công
+                                                                                        </option>
+                                                                                        <option value="254">Giám Sát
+                                                                                            Công Trình</option>
+                                                                                        <option value="255">Kết Cấu Công
+                                                                                            Trình</option>
+                                                                                        <option value="256">Vật Tư Xây
+                                                                                            Dựng</option>
+                                                                                        <option value="257">Dự Toán
+                                                                                        </option>
+                                                                                        <option value="258">Lái Xe Công
+                                                                                            Trường</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Tài Chính/Ngân Hàng">
+                                                                                    <optgroup
+                                                                                        label="Tài Chính/Ngân Hàng">
 
-                                                                                        <option value="164">Giao Dịch Viên (Tại Quầy)</option>
-                                                                                        <option value="109">Môi Giới Chứng Khoán</option>
-                                                                                        <option value="211">Phân Tích Tài Chính</option>
-                                                                                        <option value="212">Xử Lý Nợ</option>
-                                                                                        <option value="213">Giao Dịch Viên Ngân Hàng</option>
-                                                                                        <option value="214">Quản Trị Rủi Ro</option>
-                                                                                        <option value="215">Quản Lý Tín Dụng</option>
-                                                                                        <option value="216">Thẩm Định Tín Dụng</option>
-                                                                                        <option value="217">Đầu Tư Dự Án</option>
-                                                                                        <option value="218">Quan Hệ Khách Hàng</option>
+                                                                                        <option value="164">Giao Dịch
+                                                                                            Viên (Tại Quầy)</option>
+                                                                                        <option value="109">Môi Giới
+                                                                                            Chứng Khoán</option>
+                                                                                        <option value="211">Phân Tích
+                                                                                            Tài Chính</option>
+                                                                                        <option value="212">Xử Lý Nợ
+                                                                                        </option>
+                                                                                        <option value="213">Giao Dịch
+                                                                                            Viên Ngân Hàng</option>
+                                                                                        <option value="214">Quản Trị Rủi
+                                                                                            Ro</option>
+                                                                                        <option value="215">Quản Lý Tín
+                                                                                            Dụng</option>
+                                                                                        <option value="216">Thẩm Định
+                                                                                            Tín Dụng</option>
+                                                                                        <option value="217">Đầu Tư Dự Án
+                                                                                        </option>
+                                                                                        <option value="218">Quan Hệ
+                                                                                            Khách Hàng</option>
                                                                                         <option value="219">CFA</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Du Lịch">
 
-                                                                                        <option value="233">Lái Xe Khách</option>
-                                                                                        <option value="453">Điều Hành Tour</option>
-                                                                                        <option value="115">Du Lịch</option>
-                                                                                        <option value="117">Hàng Không/Sân Bay</option>
+                                                                                        <option value="233">Lái Xe Khách
+                                                                                        </option>
+                                                                                        <option value="453">Điều Hành
+                                                                                            Tour</option>
+                                                                                        <option value="115">Du Lịch
+                                                                                        </option>
+                                                                                        <option value="117">Hàng
+                                                                                            Không/Sân Bay</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Giáo Dục/Đào Tạo">
 
-                                                                                        <option value="397">Tâm lý học</option>
-                                                                                        <option value="398">Quản lý giáo dục</option>
-                                                                                        <option value="171">Đào Tạo</option>
-                                                                                        <option value="276">Giáo Dục Mầm Non</option>
-                                                                                        <option value="277">Giáo Dục Phổ Thông</option>
-                                                                                        <option value="278">Ngoại Ngữ</option>
-                                                                                        <option value="279">Trợ Giảng</option>
-                                                                                        <option value="280">Giảng Viên</option>
-                                                                                        <option value="281">Tuyển Sinh</option>
-                                                                                        <option value="282">Giáo Dục Đặc Biệt</option>
+                                                                                        <option value="397">Tâm lý học
+                                                                                        </option>
+                                                                                        <option value="398">Quản lý giáo
+                                                                                            dục</option>
+                                                                                        <option value="171">Đào Tạo
+                                                                                        </option>
+                                                                                        <option value="276">Giáo Dục Mầm
+                                                                                            Non</option>
+                                                                                        <option value="277">Giáo Dục Phổ
+                                                                                            Thông</option>
+                                                                                        <option value="278">Ngoại Ngữ
+                                                                                        </option>
+                                                                                        <option value="279">Trợ Giảng
+                                                                                        </option>
+                                                                                        <option value="280">Giảng Viên
+                                                                                        </option>
+                                                                                        <option value="281">Tuyển Sinh
+                                                                                        </option>
+                                                                                        <option value="282">Giáo Dục Đặc
+                                                                                            Biệt</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="In Ấn/Chế Bản">
 
-                                                                                        <option value="119">In Ấn/Xuất Bản</option>
+                                                                                        <option value="119">In Ấn/Xuất
+                                                                                            Bản</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Kế Toán/Kiểm Toán">
 
-                                                                                        <option value="183">Kiểm Soát Nội Bộ</option>
-                                                                                        <option value="177">Kế Toán Tổng Hợp</option>
-                                                                                        <option value="403">Kế toán thanh toán</option>
-                                                                                        <option value="175">Kế Toán Thuế</option>
-                                                                                        <option value="193">AccNet</option>
-                                                                                        <option value="192">FAST</option>
-                                                                                        <option value="189">Misa</option>
+                                                                                        <option value="183">Kiểm Soát
+                                                                                            Nội Bộ</option>
+                                                                                        <option value="177">Kế Toán Tổng
+                                                                                            Hợp</option>
+                                                                                        <option value="403">Kế toán
+                                                                                            thanh toán</option>
+                                                                                        <option value="175">Kế Toán Thuế
+                                                                                        </option>
+                                                                                        <option value="193">AccNet
+                                                                                        </option>
+                                                                                        <option value="192">FAST
+                                                                                        </option>
+                                                                                        <option value="189">Misa
+                                                                                        </option>
                                                                                         <option value="188">CPA</option>
-                                                                                        <option value="187">ACCA</option>
-                                                                                        <option value="186">Kế Toán Xây Dựng</option>
-                                                                                        <option value="185">Thủ Quỹ</option>
-                                                                                        <option value="182">Kiểm Toán</option>
-                                                                                        <option value="181">Kế Toán Quản Trị</option>
-                                                                                        <option value="180">Kế Toán Bán Hàng</option>
-                                                                                        <option value="179">Kế Toán Sản Xuất</option>
-                                                                                        <option value="178">Kế Toán Công Nợ</option>
-                                                                                        <option value="176">Kế Toán Kho</option>
+                                                                                        <option value="187">ACCA
+                                                                                        </option>
+                                                                                        <option value="186">Kế Toán Xây
+                                                                                            Dựng</option>
+                                                                                        <option value="185">Thủ Quỹ
+                                                                                        </option>
+                                                                                        <option value="182">Kiểm Toán
+                                                                                        </option>
+                                                                                        <option value="181">Kế Toán Quản
+                                                                                            Trị</option>
+                                                                                        <option value="180">Kế Toán Bán
+                                                                                            Hàng</option>
+                                                                                        <option value="179">Kế Toán Sản
+                                                                                            Xuất</option>
+                                                                                        <option value="178">Kế Toán Công
+                                                                                            Nợ</option>
+                                                                                        <option value="176">Kế Toán Kho
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Kiến Trúc/Nội Thất">
+                                                                                    <optgroup
+                                                                                        label="Kiến Trúc/Nội Thất">
 
-                                                                                        <option value="132">Thiết Kế Nội Thất</option>
-                                                                                        <option value="222">CAD/CAM</option>
-                                                                                        <option value="224">Họa Viên Kiến Trúc</option>
-                                                                                        <option value="121">Kiến Trúc</option>
+                                                                                        <option value="132">Thiết Kế Nội
+                                                                                            Thất</option>
+                                                                                        <option value="222">CAD/CAM
+                                                                                        </option>
+                                                                                        <option value="224">Họa Viên
+                                                                                            Kiến Trúc</option>
+                                                                                        <option value="121">Kiến Trúc
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Môi Trường">
 
-                                                                                        <option value="122">Môi Trường/Xử Lý Chất Thải</option>
+                                                                                        <option value="122">Môi
+                                                                                            Trường/Xử Lý Chất Thải
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Sản Xuất/Lắp Ráp/Chế Biến">
+                                                                                    <optgroup
+                                                                                        label="Sản Xuất/Lắp Ráp/Chế Biến">
 
-                                                                                        <option value="114">Mộc/Đồ Gỗ</option>
-                                                                                        <option value="125">Vận Hành Sản Xuất</option>
-                                                                                        <option value="126">Quản Lý Chất Lượng (QA/QC)</option>
-                                                                                        <option value="127">Vật Tư Sản Xuất</option>
-                                                                                        <option value="142">Quản Lý Sản Xuất</option>
-                                                                                        <option value="146">Chế Biến Thực Phẩm</option>
-                                                                                        <option value="207">Giám Sát Sản Xuất</option>
-                                                                                        <option value="208">Kỹ Thuật Công Nghiệp</option>
-                                                                                        <option value="209">Nghiên Cứu Và Phát Triển (R&D)</option>
+                                                                                        <option value="114">Mộc/Đồ Gỗ
+                                                                                        </option>
+                                                                                        <option value="125">Vận Hành Sản
+                                                                                            Xuất</option>
+                                                                                        <option value="126">Quản Lý Chất
+                                                                                            Lượng (QA/QC)</option>
+                                                                                        <option value="127">Vật Tư Sản
+                                                                                            Xuất</option>
+                                                                                        <option value="142">Quản Lý Sản
+                                                                                            Xuất</option>
+                                                                                        <option value="146">Chế Biến
+                                                                                            Thực Phẩm</option>
+                                                                                        <option value="207">Giám Sát Sản
+                                                                                            Xuất</option>
+                                                                                        <option value="208">Kỹ Thuật
+                                                                                            Công Nghiệp</option>
+                                                                                        <option value="209">Nghiên Cứu
+                                                                                            Và Phát Triển (R&D)</option>
                                                                                         <option value="300">Sơn</option>
-                                                                                        <option value="260">Công Nhân</option>
+                                                                                        <option value="260">Công Nhân
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Nông/Lâm/Ngư Nghiệp">
+                                                                                    <optgroup
+                                                                                        label="Nông/Lâm/Ngư Nghiệp">
 
-                                                                                        <option value="134">Thủy Hải Sản</option>
-                                                                                        <option value="286">Trồng Trọt</option>
-                                                                                        <option value="287">Chăn Nuôi</option>
-                                                                                        <option value="288">Lâm Nghiệp</option>
-                                                                                        <option value="290">Ngư Nghiệp</option>
-                                                                                        <option value="396">Quản lý đất đai</option>
+                                                                                        <option value="134">Thủy Hải Sản
+                                                                                        </option>
+                                                                                        <option value="286">Trồng Trọt
+                                                                                        </option>
+                                                                                        <option value="287">Chăn Nuôi
+                                                                                        </option>
+                                                                                        <option value="288">Lâm Nghiệp
+                                                                                        </option>
+                                                                                        <option value="290">Ngư Nghiệp
+                                                                                        </option>
+                                                                                        <option value="396">Quản lý đất
+                                                                                            đai</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Luật/Pháp Chế">
 
-                                                                                        <option value="129">Luật</option>
-                                                                                        <option value="170">Pháp Chế</option>
-                                                                                        <option value="291">Luật Hành Chính</option>
+                                                                                        <option value="129">Luật
+                                                                                        </option>
+                                                                                        <option value="170">Pháp Chế
+                                                                                        </option>
+                                                                                        <option value="291">Luật Hành
+                                                                                            Chính</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Kho Vận">
 
-                                                                                        <option value="458">Vận Tải</option>
-                                                                                        <option value="459">Hàng Hải</option>
-                                                                                        <option value="229">Thủ Kho</option>
-                                                                                        <option value="230">Phụ Kho</option>
-                                                                                        <option value="231">Lái Xe Tải</option>
-                                                                                        <option value="232">Lái Xe Nâng</option>
-                                                                                        <option value="234">Giao Nhận Hàng</option>
-                                                                                        <option value="235">Giám Sát Kho</option>
-                                                                                        <option value="154">Lái Xe</option>
-                                                                                        <option value="155">Giao Hàng(Shipper)</option>
+                                                                                        <option value="458">Vận Tải
+                                                                                        </option>
+                                                                                        <option value="459">Hàng Hải
+                                                                                        </option>
+                                                                                        <option value="229">Thủ Kho
+                                                                                        </option>
+                                                                                        <option value="230">Phụ Kho
+                                                                                        </option>
+                                                                                        <option value="231">Lái Xe Tải
+                                                                                        </option>
+                                                                                        <option value="232">Lái Xe Nâng
+                                                                                        </option>
+                                                                                        <option value="234">Giao Nhận
+                                                                                            Hàng</option>
+                                                                                        <option value="235">Giám Sát Kho
+                                                                                        </option>
+                                                                                        <option value="154">Lái Xe
+                                                                                        </option>
+                                                                                        <option value="155">Giao
+                                                                                            Hàng(Shipper)</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Viễn Thông">
 
-                                                                                        <option value="106">Bưu Chính Viễn Thông</option>
+                                                                                        <option value="106">Bưu Chính
+                                                                                            Viễn Thông</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Dệt May/Da Giày">
 
-                                                                                        <option value="461">Da Giày</option>
-                                                                                        <option value="147">Dệt May</option>
+                                                                                        <option value="461">Da Giày
+                                                                                        </option>
+                                                                                        <option value="147">Dệt May
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Chăm Sóc Khách Hàng">
+                                                                                    <optgroup
+                                                                                        label="Chăm Sóc Khách Hàng">
 
-                                                                                        <option value="163">Tổng Đài Viên</option>
-                                                                                        <option value="165">IT Helpdesk</option>
-                                                                                        <option value="302">Chăm Sóc Khách Hàng</option>
+                                                                                        <option value="163">Tổng Đài
+                                                                                            Viên</option>
+                                                                                        <option value="165">IT Helpdesk
+                                                                                        </option>
+                                                                                        <option value="302">Chăm Sóc
+                                                                                            Khách Hàng</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Truyền Hình/Báo Chí">
+                                                                                    <optgroup
+                                                                                        label="Truyền Hình/Báo Chí">
 
-                                                                                        <option value="225">Dựng Phim/Hiệu Ứng Video</option>
-                                                                                        <option value="284">Nghệ Thuật</option>
+                                                                                        <option value="225">Dựng
+                                                                                            Phim/Hiệu Ứng Video</option>
+                                                                                        <option value="284">Nghệ Thuật
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Thu Mua">
 
-                                                                                        <option value="265">Thu Mua</option>
-                                                                                        <option value="266">Định Mức</option>
-                                                                                        <option value="267">Tìm Nguồn Hàng</option>
+                                                                                        <option value="265">Thu Mua
+                                                                                        </option>
+                                                                                        <option value="266">Định Mức
+                                                                                        </option>
+                                                                                        <option value="267">Tìm Nguồn
+                                                                                            Hàng</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Quản Lý">
 
-                                                                                        <option value="401">Quản Lý Điều Hành</option>
+                                                                                        <option value="401">Quản Lý Điều
+                                                                                            Hành</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Hoá Sinh">
 
-                                                                                        <option value="108">Công Nghệ Sinh Học</option>
-                                                                                        <option value="118">Hóa Học/Hóa Chất</option>
+                                                                                        <option value="108">Công Nghệ
+                                                                                            Sinh Học</option>
+                                                                                        <option value="118">Hóa Học/Hóa
+                                                                                            Chất</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Vận Hành/Bảo Trì/Bảo Dưỡng">
+                                                                                    <optgroup
+                                                                                        label="Vận Hành/Bảo Trì/Bảo Dưỡng">
 
                                                                                     </optgroup>
 
@@ -6448,248 +9057,392 @@
 
                                                                                     <optgroup label="Dược Phẩm/Mỹ Phẩm">
 
-                                                                                        <option value="454">Tư Vấn Dược Phẩm</option>
-                                                                                        <option value="96">Dược Phẩm</option>
-                                                                                        <option value="123">Mỹ Phẩm</option>
+                                                                                        <option value="454">Tư Vấn Dược
+                                                                                            Phẩm</option>
+                                                                                        <option value="96">Dược Phẩm
+                                                                                        </option>
+                                                                                        <option value="123">Mỹ Phẩm
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Sáng Tạo/Nghệ Thuật">
+                                                                                    <optgroup
+                                                                                        label="Sáng Tạo/Nghệ Thuật">
 
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Đấu Thầu/Dự Án">
 
-                                                                                        <option value="77">Đấu Thầu</option>
-                                                                                        <option value="130">Phi Chính Phủ/Phi Lợi Nhuận</option>
-                                                                                        <option value="268">Quản Lý Dự Án</option>
-                                                                                        <option value="269">Lập Kế Hoạch</option>
+                                                                                        <option value="77">Đấu Thầu
+                                                                                        </option>
+                                                                                        <option value="130">Phi Chính
+                                                                                            Phủ/Phi Lợi Nhuận</option>
+                                                                                        <option value="268">Quản Lý Dự
+                                                                                            Án</option>
+                                                                                        <option value="269">Lập Kế Hoạch
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="IT Phần Mềm">
 
                                                                                         <option value="21">PHP</option>
-                                                                                        <option value="200">Machine Learning</option>
-                                                                                        <option value="199">Cloud (AWS/Azure)</option>
-                                                                                        <option value="197">Data Warehouse</option>
-                                                                                        <option value="196">Kỹ Sư Cầu Nối</option>
-                                                                                        <option value="195">Triển Khai Phần Mềm</option>
-                                                                                        <option value="145">Frontend (HTML/CSS)</option>
-                                                                                        <option value="144">Javascript</option>
+                                                                                        <option value="200">Machine
+                                                                                            Learning</option>
+                                                                                        <option value="199">Cloud
+                                                                                            (AWS/Azure)</option>
+                                                                                        <option value="197">Data
+                                                                                            Warehouse</option>
+                                                                                        <option value="196">Kỹ Sư Cầu
+                                                                                            Nối</option>
+                                                                                        <option value="195">Triển Khai
+                                                                                            Phần Mềm</option>
+                                                                                        <option value="145">Frontend
+                                                                                            (HTML/CSS)</option>
+                                                                                        <option value="144">Javascript
+                                                                                        </option>
                                                                                         <option value="32">SAP</option>
-                                                                                        <option value="27">Data Analytics</option>
-                                                                                        <option value="25">Big Data/Hadoop</option>
+                                                                                        <option value="27">Data
+                                                                                            Analytics</option>
+                                                                                        <option value="25">Big
+                                                                                            Data/Hadoop</option>
                                                                                         <option value="24">Ruby</option>
-                                                                                        <option value="23">QA/Test</option>
-                                                                                        <option value="22">Python</option>
-                                                                                        <option value="2">Quản Lý Sản Phẩm</option>
-                                                                                        <option value="20">NodeJS</option>
-                                                                                        <option value="16">Full-stack</option>
-                                                                                        <option value="14">.NET/C#</option>
-                                                                                        <option value="13">ASP.NET</option>
-                                                                                        <option value="12">Oracle</option>
+                                                                                        <option value="23">QA/Test
+                                                                                        </option>
+                                                                                        <option value="22">Python
+                                                                                        </option>
+                                                                                        <option value="2">Quản Lý Sản
+                                                                                            Phẩm</option>
+                                                                                        <option value="20">NodeJS
+                                                                                        </option>
+                                                                                        <option value="16">Full-stack
+                                                                                        </option>
+                                                                                        <option value="14">.NET/C#
+                                                                                        </option>
+                                                                                        <option value="13">ASP.NET
+                                                                                        </option>
+                                                                                        <option value="12">Oracle
+                                                                                        </option>
                                                                                         <option value="10">SQL</option>
                                                                                         <option value="9">C/C++</option>
                                                                                         <option value="8">Java</option>
-                                                                                        <option value="7">Backend</option>
-                                                                                        <option value="6">Android</option>
+                                                                                        <option value="7">Backend
+                                                                                        </option>
+                                                                                        <option value="6">Android
+                                                                                        </option>
                                                                                         <option value="5">iOS</option>
-                                                                                        <option value="3">Quản Lý Dự Án (IT)</option>
+                                                                                        <option value="3">Quản Lý Dự Án
+                                                                                            (IT)</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="IT Phần Cứng">
 
-                                                                                        <option value="15">Hệ Nhúng</option>
-                                                                                        <option value="18">Phần Cứng Máy Tính/Điện Thoại</option>
-                                                                                        <option value="28">An Ninh Mạng</option>
-                                                                                        <option value="30">IT Support</option>
-                                                                                        <option value="33">Quản Trị Hệ Thống</option>
-                                                                                        <option value="34">Quản Trị Mạng</option>
-                                                                                        <option value="201">Thiết Kế Vi Mạch</option>
-                                                                                        <option value="202">Firmware</option>
-                                                                                        <option value="203">CCNA</option>
-                                                                                        <option value="204">CCNP</option>
+                                                                                        <option value="15">Hệ Nhúng
+                                                                                        </option>
+                                                                                        <option value="18">Phần Cứng Máy
+                                                                                            Tính/Điện Thoại</option>
+                                                                                        <option value="28">An Ninh Mạng
+                                                                                        </option>
+                                                                                        <option value="30">IT Support
+                                                                                        </option>
+                                                                                        <option value="33">Quản Trị Hệ
+                                                                                            Thống</option>
+                                                                                        <option value="34">Quản Trị Mạng
+                                                                                        </option>
+                                                                                        <option value="201">Thiết Kế Vi
+                                                                                            Mạch</option>
+                                                                                        <option value="202">Firmware
+                                                                                        </option>
+                                                                                        <option value="203">CCNA
+                                                                                        </option>
+                                                                                        <option value="204">CCNP
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Thiết Kế">
 
-                                                                                        <option value="29">UI/UX</option>
-                                                                                        <option value="101">Adobe Photoshop</option>
-                                                                                        <option value="220">Thiết Kế 3D</option>
-                                                                                        <option value="221">Thiết Kế 2D</option>
-                                                                                        <option value="223">Thiết Kế Sản Phẩm</option>
-                                                                                        <option value="226">Adobe Illustrator</option>
-                                                                                        <option value="227">Adobe Premier</option>
-                                                                                        <option value="228">Adobe After Effect</option>
-                                                                                        <option value="292">Hoạt Hình (Animation)</option>
-                                                                                        <option value="293">Thiết Kế Game</option>
-                                                                                        <option value="294">Thiết Kế Thời Trang</option>
+                                                                                        <option value="29">UI/UX
+                                                                                        </option>
+                                                                                        <option value="101">Adobe
+                                                                                            Photoshop</option>
+                                                                                        <option value="220">Thiết Kế 3D
+                                                                                        </option>
+                                                                                        <option value="221">Thiết Kế 2D
+                                                                                        </option>
+                                                                                        <option value="223">Thiết Kế Sản
+                                                                                            Phẩm</option>
+                                                                                        <option value="226">Adobe
+                                                                                            Illustrator</option>
+                                                                                        <option value="227">Adobe
+                                                                                            Premier</option>
+                                                                                        <option value="228">Adobe After
+                                                                                            Effect</option>
+                                                                                        <option value="292">Hoạt Hình
+                                                                                            (Animation)</option>
+                                                                                        <option value="293">Thiết Kế
+                                                                                            Game</option>
+                                                                                        <option value="294">Thiết Kế
+                                                                                            Thời Trang</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Marketing">
 
-                                                                                        <option value="38">Nội Dung</option>
-                                                                                        <option value="39">Seeding (Forum/Facebook)</option>
-                                                                                        <option value="41">Media Buying</option>
-                                                                                        <option value="42">Media Planning</option>
+                                                                                        <option value="38">Nội Dung
+                                                                                        </option>
+                                                                                        <option value="39">Seeding
+                                                                                            (Forum/Facebook)</option>
+                                                                                        <option value="41">Media Buying
+                                                                                        </option>
+                                                                                        <option value="42">Media
+                                                                                            Planning</option>
                                                                                         <option value="46">SEO</option>
-                                                                                        <option value="47">Facebook Ads</option>
-                                                                                        <option value="48">Google Ads(AdWords)</option>
-                                                                                        <option value="51">Offline Marketing (Báo/Đài/Truyền Hình)</option>
-                                                                                        <option value="56">Social Marketing</option>
-                                                                                        <option value="205">Digital Marketing</option>
+                                                                                        <option value="47">Facebook Ads
+                                                                                        </option>
+                                                                                        <option value="48">Google
+                                                                                            Ads(AdWords)</option>
+                                                                                        <option value="51">Offline
+                                                                                            Marketing (Báo/Đài/Truyền
+                                                                                            Hình)</option>
+                                                                                        <option value="56">Social
+                                                                                            Marketing</option>
+                                                                                        <option value="205">Digital
+                                                                                            Marketing</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Truyền Thông/PR/Quảng Cáo">
+                                                                                    <optgroup
+                                                                                        label="Truyền Thông/PR/Quảng Cáo">
 
-                                                                                        <option value="50">Quản Trị Thương Hiệu (Branding)</option>
-                                                                                        <option value="52">Sự Kiện</option>
-                                                                                        <option value="206">Truyền Thông/Báo Chí</option>
+                                                                                        <option value="50">Quản Trị
+                                                                                            Thương Hiệu (Branding)
+                                                                                        </option>
+                                                                                        <option value="52">Sự Kiện
+                                                                                        </option>
+                                                                                        <option value="206">Truyền
+                                                                                            Thông/Báo Chí</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Kinh Doanh/Bán Hàng">
+                                                                                    <optgroup
+                                                                                        label="Kinh Doanh/Bán Hàng">
 
-                                                                                        <option value="76">Tư Vấn Doanh Nghiệp (B2B)</option>
-                                                                                        <option value="79">Tư Vấn Bán Hàng</option>
-                                                                                        <option value="81">Bán Hàng Qua Điện Thoại (Telesale)</option>
-                                                                                        <option value="82">Đào Tạo Bán Hàng</option>
-                                                                                        <option value="83">Nghiên Cứu Thị Trường</option>
-                                                                                        <option value="160">Phát Triển Thị Trường</option>
-                                                                                        <option value="161">Kỹ Sư Bán Hàng (Sale Engineer)</option>
-                                                                                        <option value="303">Giám Sát Bán Hàng</option>
+                                                                                        <option value="76">Tư Vấn Doanh
+                                                                                            Nghiệp (B2B)</option>
+                                                                                        <option value="79">Tư Vấn Bán
+                                                                                            Hàng</option>
+                                                                                        <option value="81">Bán Hàng Qua
+                                                                                            Điện Thoại (Telesale)
+                                                                                        </option>
+                                                                                        <option value="82">Đào Tạo Bán
+                                                                                            Hàng</option>
+                                                                                        <option value="83">Nghiên Cứu
+                                                                                            Thị Trường</option>
+                                                                                        <option value="160">Phát Triển
+                                                                                            Thị Trường</option>
+                                                                                        <option value="161">Kỹ Sư Bán
+                                                                                            Hàng (Sale Engineer)
+                                                                                        </option>
+                                                                                        <option value="303">Giám Sát Bán
+                                                                                            Hàng</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Nhân Sự">
 
-                                                                                        <option value="166">Quản Trị Nhân Sự (HR)</option>
-                                                                                        <option value="167">Tuyển Dụng (HR)</option>
-                                                                                        <option value="172">Bảo Hiểm Và Tiền Lương (C&B)</option>
-                                                                                        <option value="173">HRBP</option>
+                                                                                        <option value="166">Quản Trị
+                                                                                            Nhân Sự (HR)</option>
+                                                                                        <option value="167">Tuyển Dụng
+                                                                                            (HR)</option>
+                                                                                        <option value="172">Bảo Hiểm Và
+                                                                                            Tiền Lương (C&B)</option>
+                                                                                        <option value="173">HRBP
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Hành Chính/Văn Phòng">
+                                                                                    <optgroup
+                                                                                        label="Hành Chính/Văn Phòng">
 
-                                                                                        <option value="62">Thư Ký</option>
-                                                                                        <option value="148">Hành chính Văn phòng</option>
-                                                                                        <option value="168">Lễ Tân (Receptionist)</option>
-                                                                                        <option value="169">Nhập Liệu</option>
-                                                                                        <option value="174">Văn Thư/Lưu Trữ</option>
-                                                                                        <option value="133">Thư Viện</option>
+                                                                                        <option value="62">Thư Ký
+                                                                                        </option>
+                                                                                        <option value="148">Hành chính
+                                                                                            Văn phòng</option>
+                                                                                        <option value="168">Lễ Tân
+                                                                                            (Receptionist)</option>
+                                                                                        <option value="169">Nhập Liệu
+                                                                                        </option>
+                                                                                        <option value="174">Văn Thư/Lưu
+                                                                                            Trữ</option>
+                                                                                        <option value="133">Thư Viện
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Lao Động Phổ Thông">
+                                                                                    <optgroup
+                                                                                        label="Lao Động Phổ Thông">
 
-                                                                                        <option value="63">Bảo Vệ</option>
-                                                                                        <option value="259">Lao Công/Tạp Vụ</option>
-                                                                                        <option value="261">Giúp Việc</option>
+                                                                                        <option value="63">Bảo Vệ
+                                                                                        </option>
+                                                                                        <option value="259">Lao Công/Tạp
+                                                                                            Vụ</option>
+                                                                                        <option value="261">Giúp Việc
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Bán Sỉ/Bán Lẻ/Cửa Hàng">
+                                                                                    <optgroup
+                                                                                        label="Bán Sỉ/Bán Lẻ/Cửa Hàng">
 
-                                                                                        <option value="75">Bán Lẻ</option>
-                                                                                        <option value="184">Thu Ngân</option>
+                                                                                        <option value="75">Bán Lẻ
+                                                                                        </option>
+                                                                                        <option value="184">Thu Ngân
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Xuất Nhập Khẩu">
 
-                                                                                        <option value="78">Thương Mại Quốc Tế</option>
-                                                                                        <option value="138">Xuất Nhập Khẩu</option>
-                                                                                        <option value="263">Chứng Từ</option>
-                                                                                        <option value="264">Quản Lý Đơn Hàng</option>
+                                                                                        <option value="78">Thương Mại
+                                                                                            Quốc Tế</option>
+                                                                                        <option value="138">Xuất Nhập
+                                                                                            Khẩu</option>
+                                                                                        <option value="263">Chứng Từ
+                                                                                        </option>
+                                                                                        <option value="264">Quản Lý Đơn
+                                                                                            Hàng</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Bảo Hiểm">
 
-                                                                                        <option value="84">Tư Vấn Bảo Hiểm</option>
+                                                                                        <option value="84">Tư Vấn Bảo
+                                                                                            Hiểm</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Bất Động Sản">
 
-                                                                                        <option value="86">Bất Động Sản</option>
+                                                                                        <option value="86">Bất Động Sản
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Nhà Hàng/Khách Sạn">
+                                                                                    <optgroup
+                                                                                        label="Nhà Hàng/Khách Sạn">
 
-                                                                                        <option value="236">Pha Chế Rượu (Bartender)</option>
-                                                                                        <option value="237">Pha Chế Cafe (Barista)</option>
-                                                                                        <option value="238">Bếp Trưởng</option>
-                                                                                        <option value="239">Phụ Bếp</option>
-                                                                                        <option value="240">Giám Sát Dịch Vụ</option>
-                                                                                        <option value="242">Buồng Phòng</option>
+                                                                                        <option value="236">Pha Chế Rượu
+                                                                                            (Bartender)</option>
+                                                                                        <option value="237">Pha Chế Cafe
+                                                                                            (Barista)</option>
+                                                                                        <option value="238">Bếp Trưởng
+                                                                                        </option>
+                                                                                        <option value="239">Phụ Bếp
+                                                                                        </option>
+                                                                                        <option value="240">Giám Sát
+                                                                                            Dịch Vụ</option>
+                                                                                        <option value="242">Buồng Phòng
+                                                                                        </option>
                                                                                         <option value="243">Bàn</option>
-                                                                                        <option value="295">Điều Phối Viên</option>
-                                                                                        <option value="296">Hành Lý</option>
-                                                                                        <option value="262">Phục Vụ Bàn</option>
+                                                                                        <option value="295">Điều Phối
+                                                                                            Viên</option>
+                                                                                        <option value="296">Hành Lý
+                                                                                        </option>
+                                                                                        <option value="262">Phục Vụ Bàn
+                                                                                        </option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Cơ Khí/Ô Tô/Tự Động Hóa">
+                                                                                    <optgroup
+                                                                                        label="Cơ Khí/Ô Tô/Tự Động Hóa">
 
-                                                                                        <option value="92">Cơ Điện</option>
-                                                                                        <option value="110">Cơ Khí</option>
-                                                                                        <option value="136">Tự Động Hóa</option>
-                                                                                        <option value="244">Lắp Ráp</option>
-                                                                                        <option value="245">Vận Hành Máy</option>
-                                                                                        <option value="246">Chế Tạo Máy</option>
-                                                                                        <option value="247">Thang Máy</option>
-                                                                                        <option value="248">Vệ Sinh Công Nghiệp</option>
-                                                                                        <option value="249">Hàn Xì</option>
+                                                                                        <option value="92">Cơ Điện
+                                                                                        </option>
+                                                                                        <option value="110">Cơ Khí
+                                                                                        </option>
+                                                                                        <option value="136">Tự Động Hóa
+                                                                                        </option>
+                                                                                        <option value="244">Lắp Ráp
+                                                                                        </option>
+                                                                                        <option value="245">Vận Hành Máy
+                                                                                        </option>
+                                                                                        <option value="246">Chế Tạo Máy
+                                                                                        </option>
+                                                                                        <option value="247">Thang Máy
+                                                                                        </option>
+                                                                                        <option value="248">Vệ Sinh Công
+                                                                                            Nghiệp</option>
+                                                                                        <option value="249">Hàn Xì
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Spa/Làm Đẹp">
 
-                                                                                        <option value="210">Trang Sức</option>
-                                                                                        <option value="283">Thể Chất</option>
-                                                                                        <option value="94">Thời Trang</option>
-                                                                                        <option value="131">Spa/Làm Đẹp</option>
-                                                                                        <option value="285">Thể Hình</option>
+                                                                                        <option value="210">Trang Sức
+                                                                                        </option>
+                                                                                        <option value="283">Thể Chất
+                                                                                        </option>
+                                                                                        <option value="94">Thời Trang
+                                                                                        </option>
+                                                                                        <option value="131">Spa/Làm Đẹp
+                                                                                        </option>
+                                                                                        <option value="285">Thể Hình
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Y Tế">
 
-                                                                                        <option value="271">Y Tá/Điều Dưỡng</option>
-                                                                                        <option value="272">Nội Khoa</option>
-                                                                                        <option value="273">Ngoại Khoa</option>
-                                                                                        <option value="274">Tai Mũi Họng</option>
-                                                                                        <option value="275">Nha Khoa</option>
-                                                                                        <option value="298">Thú Y</option>
-                                                                                        <option value="399">Đa khoa</option>
-                                                                                        <option value="400">Sản khoa</option>
+                                                                                        <option value="271">Y Tá/Điều
+                                                                                            Dưỡng</option>
+                                                                                        <option value="272">Nội Khoa
+                                                                                        </option>
+                                                                                        <option value="273">Ngoại Khoa
+                                                                                        </option>
+                                                                                        <option value="274">Tai Mũi Họng
+                                                                                        </option>
+                                                                                        <option value="275">Nha Khoa
+                                                                                        </option>
+                                                                                        <option value="298">Thú Y
+                                                                                        </option>
+                                                                                        <option value="399">Đa khoa
+                                                                                        </option>
+                                                                                        <option value="400">Sản khoa
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Mỏ/Địa Chất">
 
-                                                                                        <option value="98">Dầu Khí</option>
-                                                                                        <option value="111">Địa Chất</option>
+                                                                                        <option value="98">Dầu Khí
+                                                                                        </option>
+                                                                                        <option value="111">Địa Chất
+                                                                                        </option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="An Toàn Lao Động">
 
-                                                                                        <option value="103">An Toàn Lao Động</option>
+                                                                                        <option value="103">An Toàn Lao
+                                                                                            Động</option>
                                                                                     </optgroup>
 
                                                                                     <optgroup label="Biên Phiên Dịch">
 
-                                                                                        <option value="105">Biên/Phiên Dịch</option>
+                                                                                        <option value="105">Biên/Phiên
+                                                                                            Dịch</option>
                                                                                     </optgroup>
 
-                                                                                    <optgroup label="Điện/Điện Tử/Điện Lạnh">
+                                                                                    <optgroup
+                                                                                        label="Điện/Điện Tử/Điện Lạnh">
 
-                                                                                        <option value="104">Bảo Trì - Sửa Chữa</option>
-                                                                                        <option value="112">Điện Lạnh/Nhiệt Lạnh</option>
-                                                                                        <option value="250">Kỹ Thuật Camera</option>
+                                                                                        <option value="104">Bảo Trì -
+                                                                                            Sửa Chữa</option>
+                                                                                        <option value="112">Điện
+                                                                                            Lạnh/Nhiệt Lạnh</option>
+                                                                                        <option value="250">Kỹ Thuật
+                                                                                            Camera</option>
                                                                                     </optgroup>
 
 
                                                                                 </select>
 
-                                                                                <p class="help-block help-block-error"></p>
+                                                                                <p class="help-block help-block-error">
+                                                                                </p>
                                                                             </div>
 
 
                                                                         </div>
                                                                         <div class="col-xs-4">
-                                                                            <div class="form-group field-eduinfoform-specialization required">
-                                                                                <label class="control-label">Số năm kinh nghiệm</label>
-                                                                                <select name="cexp[]" class="form-control">
+                                                                            <div
+                                                                                class="form-group field-eduinfoform-specialization required">
+                                                                                <label class="control-label">Số năm kinh
+                                                                                    nghiệm</label>
+                                                                                <select name="cexp[]"
+                                                                                    class="form-control">
                                                                                     <option value="">Chọn...</option>
                                                                                     <option value="1">1 năm</option>
                                                                                     <option value="2">2 năm</option>
@@ -6714,7 +9467,8 @@
 
                                                                                 </select>
 
-                                                                                <p class="help-block help-block-error"></p>
+                                                                                <p class="help-block help-block-error">
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -6723,7 +9477,11 @@
 
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
-                                                                        <button class="btn btn-xs btn-default btn-clone-row-cjc mb-20"><i class="fa fa-plus-square" aria-hidden="true"></i> Thêm kỹ năng chuyên môn</button>
+                                                                        <button
+                                                                            class="btn btn-xs btn-default btn-clone-row-cjc mb-20"><i
+                                                                                class="fa fa-plus-square"
+                                                                                aria-hidden="true"></i> Thêm kỹ năng
+                                                                            chuyên môn</button>
                                                                     </div>
                                                                 </div>
 
@@ -6767,7 +9525,14 @@
 
                                                                 <div class="form-group">
                                                                     <input type="hidden" class="form-control" id="id">
-                                                                    <span class="pull-left"><button type="button" class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-floppy-disk position-left"></i> <span class="ladda-label">Lưu lại</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button></span>
+                                                                    <span class="pull-left"><button type="button"
+                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
+                                                                            data-style="zoom-out"><i
+                                                                                class="icon-floppy-disk position-left"></i>
+                                                                            <span class="ladda-label">Lưu
+                                                                                lại</span><span
+                                                                                class="ladda-spinner"></span><span
+                                                                                class="ladda-spinner"></span></button></span>
                                                                 </div>
                                                             </div>
 
@@ -7063,7 +9828,7 @@
                                                     });
                                                 });
                                             </script>
-                                        
+
                                             <script>
                                                 ! function(t) {
                                                     var e, i, n, s, r, o = {
@@ -7867,21 +10632,30 @@
                                                         <div class="content-group">
                                                             <div class="panel-body bg-blue-800 text-center">
                                                                 <div class="content-group-sm">
-                                                                    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" class="text-white" href="https://jobsgo.vn/candidate/detail?v=1727349985" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng">
+                                                                    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
+                                                                        data-fancybox data-type="iframe"
+                                                                        class="text-white"
+                                                                        href="https://jobsgo.vn/candidate/detail?v=1727349985"
+                                                                        title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng">
                                                                         <h6 class="text-semibold no-margin-bottom">
                                                                             web developer
                                                                         </h6>
                                                                         <span class="display-block">
 
-                                                                            N/A 49 tuổi <br> <span class="text-orange-300 text-uppercase"><i class="hide icon-eye8"></i></span>
+                                                                            N/A 49 tuổi <br> <span
+                                                                                class="text-orange-300 text-uppercase"><i
+                                                                                    class="hide icon-eye8"></i></span>
                                                                         </span>
 
 
                                                                     </a>
 
-                                                                    <div class="progress progress-striped active mt-10" title="Hồ sơ xin việc đã hoàn thiện được 45%">
-                                                                        <div class="progress-bar progress-bar-success" style="width: 45%">
-                                                                            <span class="text-size-mini text-capitalize">45%</span>
+                                                                    <div class="progress progress-striped active mt-10"
+                                                                        title="Hồ sơ xin việc đã hoàn thiện được 45%">
+                                                                        <div class="progress-bar progress-bar-success"
+                                                                            style="width: 45%">
+                                                                            <span
+                                                                                class="text-size-mini text-capitalize">45%</span>
                                                                         </div>
                                                                     </div>
 
@@ -7893,26 +10667,68 @@
                                                                     <!-- /user thumbnail -->
                                                                 </div>
 
-                                                                <ul class="list-inline list-inline-condensed no-margin-bottom">
-                                                                    <li><a href="javascript:void(0)" class="btn bg-blue-800 btn-rounded btn-icon editable" data-name="facebook" title="Cập nhật địa chỉ trang cá nhân của bạn trên Facebook"><span class="hide">https://</span></a></li>
-                                                                    <li><a href="javascript:void(0)" class="btn bg-blue-800 btn-rounded btn-icon editable" data-name="google_plus" title="Cập nhật địa chỉ trang cá nhân của bạn trên Google+"><span class="hide">https://</span></a></li>
-                                                                    <li><a href="javascript:void(0)" class="btn bg-blue-800 btn-rounded btn-icon editable" data-name="twitter" title="Cập nhật địa chỉ trang cá nhân của bạn trên Twitter"><span class="hide">https://</span></a></li>
-                                                                    <li><a href="javascript:void(0)" class="btn bg-blue-800 btn-rounded btn-icon editable" data-name="linkedin" title="Cập nhật địa chỉ trang cá nhân của bạn trên Linkedin"><span class="hide">https://</span></a></li>
-                                                                    <li><a href="javascript:void(0)" class="btn bg-blue-800 btn-rounded btn-icon editable" data-name="skype" title="Cập nhật địa chỉ liên lạc của bạn qua Skype"><span class="hide">live:</a></li>
+                                                                <ul
+                                                                    class="list-inline list-inline-condensed no-margin-bottom">
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="btn bg-blue-800 btn-rounded btn-icon editable"
+                                                                            data-name="facebook"
+                                                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Facebook"><span
+                                                                                class="hide">https://</span></a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="btn bg-blue-800 btn-rounded btn-icon editable"
+                                                                            data-name="google_plus"
+                                                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Google+"><span
+                                                                                class="hide">https://</span></a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="btn bg-blue-800 btn-rounded btn-icon editable"
+                                                                            data-name="twitter"
+                                                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Twitter"><span
+                                                                                class="hide">https://</span></a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="btn bg-blue-800 btn-rounded btn-icon editable"
+                                                                            data-name="linkedin"
+                                                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Linkedin"><span
+                                                                                class="hide">https://</span></a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="btn bg-blue-800 btn-rounded btn-icon editable"
+                                                                            data-name="skype"
+                                                                            title="Cập nhật địa chỉ liên lạc của bạn qua Skype"><span
+                                                                                class="hide">live:</a></li>
                                                                 </ul>
                                                             </div>
 
                                                             <div class="panel no-border-top no-border-radius-top">
                                                                 <ul class="navigation">
                                                                     <li class="navigation-header">Cá nhân</li>
-                                                                    <li><a href="candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin việc</a></li>
-                                                                    <li><a href="candidate/document-attachment"><i class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
-                                                                    <li><a href="candidate/import-linkedin-data"><i class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a></li>
-                                                                    <li data-intro='<h4 class="text-center">CV Go đã xuất hiện!</h4><p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width="200px" src="/assets_livewire/cv_template/assets/images/theme/cv3.png" />'><a href="/candidate/pre-profile?tab=manage-resume" target="_blank"><i class="icon-copy"></i>CV Go - Tạo CV cực chất<span class="badge badge-danger">Mới!</span></a></li>
+                                                                    <li><a href="candidate/profile"><i
+                                                                                class="icon-file-text"></i> Hồ sơ xin
+                                                                            việc</a></li>
+                                                                    <li><a href="candidate/document-attachment"><i
+                                                                                class="icon-file-media"></i> Đính kèm
+                                                                            CV/chứng chỉ</a></li>
+                                                                    <li><a href="candidate/import-linkedin-data"><i
+                                                                                class="icon-linkedin"></i>Nhập thông tin
+                                                                            từ LinkedIn</a></li>
+                                                                    <li
+                                                                        data-intro='<h4 class="text-center">CV Go đã xuất hiện!</h4><p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width="200px" src="/assets_livewire/cv_template/assets/images/theme/cv3.png" />'>
+                                                                        <a href="/candidate/pre-profile?tab=manage-resume"
+                                                                            target="_blank"><i class="icon-copy"></i>CV
+                                                                            Go - Tạo CV cực chất<span
+                                                                                class="badge badge-danger">Mới!</span></a>
+                                                                    </li>
                                                                     <li class="navigation-divider"></li>
-                                                                    <li><a href="candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
-                                                                    <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                                    <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i> Việc làm phù hợp</a></li>
+                                                                    <li><a href="candidate/jobs-applied"
+                                                                            title="Danh sách việc làm đã ứng tuyển"><i
+                                                                                class="icon-stack-check"></i> Việc làm
+                                                                            đã ứng tuyển</a></li>
+                                                                    <li><a href="candidate/jobs-saved"
+                                                                            title="Danh sách việc làm đã lưu"><i
+                                                                                class="icon-stack-star"></i> Việc làm đã
+                                                                            lưu</a></li>
+                                                                    <li><a href="candidate/jobs-matching"
+                                                                            title="Danh sách việc làm phù hợp"><i
+                                                                                class="icon-stack4"></i> Việc làm phù
+                                                                            hợp</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -7946,16 +10762,19 @@
                                         <div class="modal-content">
 
                                             <div class="model-header">
-                                                <button type="button" class="close" data-dismiss="modal" onclick="colorgbGridReload()">×</button>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    onclick="colorgbGridReload()">×</button>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="pace-demo colorgb-pace-demo">
                                                     <div class="theme_tail_circle">
-                                                        <div class="pace_progress" data-progress-text="60%" data-progress="60"></div>
+                                                        <div class="pace_progress" data-progress-text="60%"
+                                                            data-progress="60"></div>
                                                         <div class="pace_activity"></div>
                                                     </div>
                                                 </div>
-                                                <iframe class="colorgb-content-wrapper" width="100%" height="100%" frameborder="0"></iframe>
+                                                <iframe class="colorgb-content-wrapper" width="100%" height="100%"
+                                                    frameborder="0"></iframe>
                                             </div>
 
                                         </div><!-- /.modal-content -->
@@ -8088,7 +10907,10 @@
                                             }
                                         }], []);
                                     });
-                                </script><a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" href="https://jobsgo.vn/candidate/detail?v=1727349985" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+                                </script><a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox
+                                    data-type="iframe" href="https://jobsgo.vn/candidate/detail?v=1727349985"
+                                    title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float">
+                                    <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
 
                                 <script>
                                     $(function() {
@@ -8110,33 +10932,66 @@
                                         <!-- Modal content-->
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h5 class="modal-title text-center"><strong>THÔNG BÁO CẬP NHẬT QUY CHẾ HOẠT ĐỘNG WEBSITE JOBSGO.VN</strong></h5>
+                                                <button type="button" class="close"
+                                                    data-dismiss="modal">&times;</button>
+                                                <h5 class="modal-title text-center"><strong>THÔNG BÁO CẬP NHẬT QUY CHẾ
+                                                        HOẠT ĐỘNG WEBSITE JOBSGO.VN</strong></h5>
                                             </div>
                                             <div class="modal-body pt-5">
-                                                <p>JobsGO xin thông báo về việc Quy chế hoạt động của website JobsGO.vn đã được cập nhật để tuân thủ theo Nghị định 13/2023/NĐ-CP của Chính Phủ về Bảo vệ dữ liệu cá nhân, có hiệu lực thi hành kể từ ngày 01/07/2023.</p>
+                                                <p>JobsGO xin thông báo về việc Quy chế hoạt động của website JobsGO.vn
+                                                    đã được cập nhật để tuân thủ theo Nghị định 13/2023/NĐ-CP của Chính
+                                                    Phủ về Bảo vệ dữ liệu cá nhân, có hiệu lực thi hành kể từ ngày
+                                                    01/07/2023.</p>
                                                 <p>Các nội dung được cập nhật bao gồm:</p>
                                                 <ul class="pl-10">
-                                                    <li>Phần VI. Chính sách xử lý dữ liệu cá nhân và bảo vệ thông tin người dùng;</li>
-                                                    <li>Phần IX. Quyền và trách nhiệm của Ban quản lý Sàn giao dịch TMĐT JobsGO.vn;</li>
-                                                    <li>Phần X. Quyền và trách nhiệm của Nhà tuyển dụng trên JobsGO.vn;</li>
+                                                    <li>Phần VI. Chính sách xử lý dữ liệu cá nhân và bảo vệ thông tin
+                                                        người dùng;</li>
+                                                    <li>Phần IX. Quyền và trách nhiệm của Ban quản lý Sàn giao dịch TMĐT
+                                                        JobsGO.vn;</li>
+                                                    <li>Phần X. Quyền và trách nhiệm của Nhà tuyển dụng trên JobsGO.vn;
+                                                    </li>
                                                     <li>Phần XI. Quyền và trách nhiệm của Ứng viên trên JobsGO.vn;</li>
-                                                    <li>Các nội dung khác có liên quan đến mục đích, phạm vi, cách thức, trách nhiệm của các Bên liên quan đến hoạt động xử lý dữ liệu cá nhân trên JobsGO.vn;</li>
+                                                    <li>Các nội dung khác có liên quan đến mục đích, phạm vi, cách thức,
+                                                        trách nhiệm của các Bên liên quan đến hoạt động xử lý dữ liệu cá
+                                                        nhân trên JobsGO.vn;</li>
                                                 </ul>
-                                                <p>Vui lòng xem nội dung Quy chế hoạt động sau khi cập nhật <a target="_blank" href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">tại đây</a></p>
-                                                <p>JobsGO kính mong Quý Người dùng thấu hiểu rằng, hoạt động xử lý dữ liệu cá nhân là quan trọng và cần thiết để JobsGO kết nối Ứng viên với các Nhà Tuyển dụng. JobsGO đảm bảo những nội dung được cập nhật tại Quy chế tuân thủ đúng quy định về bảo vệ dữ liệu cá nhân theo Nghị định 13/2023/NĐ-CP và luôn nhằm mục đích bảo vệ quyền của Người dùng đối với những thông tin đã cung cấp trên hệ thống JobsGO.vn.</p>
-                                                <p>Chúng tôi mong nhận được xác nhận từ Người dùng về việc đồng ý với Quy chế hoạt động sau khi cập nhật và tiếp tục sử dụng dịch vụ của JobsGO. </p>
+                                                <p>Vui lòng xem nội dung Quy chế hoạt động sau khi cập nhật <a
+                                                        target="_blank"
+                                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">tại
+                                                        đây</a></p>
+                                                <p>JobsGO kính mong Quý Người dùng thấu hiểu rằng, hoạt động xử lý dữ
+                                                    liệu cá nhân là quan trọng và cần thiết để JobsGO kết nối Ứng viên
+                                                    với các Nhà Tuyển dụng. JobsGO đảm bảo những nội dung được cập nhật
+                                                    tại Quy chế tuân thủ đúng quy định về bảo vệ dữ liệu cá nhân theo
+                                                    Nghị định 13/2023/NĐ-CP và luôn nhằm mục đích bảo vệ quyền của Người
+                                                    dùng đối với những thông tin đã cung cấp trên hệ thống JobsGO.vn.
+                                                </p>
+                                                <p>Chúng tôi mong nhận được xác nhận từ Người dùng về việc đồng ý với
+                                                    Quy chế hoạt động sau khi cập nhật và tiếp tục sử dụng dịch vụ của
+                                                    JobsGO. </p>
                                                 <p>JobsGO chân thành cảm ơn!</p>
 
                                                 <div class="checkbox">
-                                                    <label><input id="agreement" checked type="checkbox"> <span class="text-default">Tôi đã đọc, hiểu và đồng ý với các nội dung tại Quy chế hoạt động của website JobsGO.vn</span></label>
+                                                    <label><input id="agreement" checked type="checkbox"> <span
+                                                            class="text-default">Tôi đã đọc, hiểu và đồng ý với các nội
+                                                            dung tại Quy chế hoạt động của website
+                                                            JobsGO.vn</span></label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label><input id="save_cv" checked type="checkbox"> <span class="text-default">Tôi đồng ý để JobsGO.vn xử lý các dữ liệu cá nhân của mình theo quy định tại <a target="_blank" href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">Quy chế hoạt động</a> và <a target="_blank" href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf">Chính sách xử lý dữ liệu cá nhân</a></span> </label>
+                                                    <label><input id="save_cv" checked type="checkbox"> <span
+                                                            class="text-default">Tôi đồng ý để JobsGO.vn xử lý các dữ
+                                                            liệu cá nhân của mình theo quy định tại <a target="_blank"
+                                                                href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">Quy
+                                                                chế hoạt động</a> và <a target="_blank"
+                                                                href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf">Chính
+                                                                sách xử lý dữ liệu cá nhân</a></span> </label>
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <button type="button" class="btn btn-policy btn-block bg-green btn-lg btn-ladda btn-ladda-spinner btn-ladda-progress text-uppercase" data-style="zoom-out">Hoàn tất <b><i class="icon-circle-right2"></i></b></button>
+                                                    <button type="button"
+                                                        class="btn btn-policy btn-block bg-green btn-lg btn-ladda btn-ladda-spinner btn-ladda-progress text-uppercase"
+                                                        data-style="zoom-out">Hoàn tất <b><i
+                                                                class="icon-circle-right2"></i></b></button>
                                                 </div>
 
                                             </div>

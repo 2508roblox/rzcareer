@@ -128,19 +128,7 @@
             </a>
             <ul class="dropdown-menu text-small">
               <!-- Dropdown menu items -->
-              <li><a class="dropdown-item" href="/candidate/manage-resume" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
-              <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i class='bx bx-edit'></i> Cập nhật hồ sơ</a></li>
-              <li><a class="dropdown-item" data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank" href="/candidate/detail?v=1727272320" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="/candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i class='bx bx-check-square'></i> Việc làm ứng tuyển</a></li>
-              <li><a class="dropdown-item" href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i class='bx bx-heart-circle'></i> Việc làm đã lưu</a></li>
-              <li><a class="dropdown-item" data-caption="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn" target="_blank" href="/candidate/recruiter-view" title="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn"><i class='bx bx-buildings'></i> NTD đã xem hồ sơ</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="/candidate/video-clip" title="Video/Clip giới thiệu bản thân"><i class='bx bx-video'></i> Video CV</a></li>
+              <li><a class="dropdown-item" href="/candidate/dashboard" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
               <li><a class="dropdown-item" href="/candidate/change-password" title="Đổi mật khẩu"><i class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
               <li>
                 <hr class="dropdown-divider">
