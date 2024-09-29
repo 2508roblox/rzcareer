@@ -734,7 +734,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/31017-200x200.jpg?v=1567160872"
                                                                             class="img-md" alt="31017"></div>
@@ -761,7 +761,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/60479-200x200.jpg?v=1719564740"
                                                                             class="img-md" alt="60479"></div>
@@ -788,7 +788,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/234304-200x200.jpg?v=1722416899"
                                                                             class="img-md" alt="234304"></div>
@@ -816,7 +816,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/14402-200x200.jpg?v=1717033955"
                                                                             class="img-md" alt="14402"></div>
@@ -844,7 +844,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/101237-200x200.jpg?v=1689844740"
                                                                             class="img-md" alt="101237"></div>
@@ -872,7 +872,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/89492-200x200.jpg?v=1655435656"
                                                                             class="img-md" alt="89492"></div>
@@ -899,7 +899,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/107655-200x200.jpg?v=1679038362"
                                                                             class="img-md" alt="107655"></div>
@@ -926,7 +926,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/36785-200x200.jpg?v=1575280410"
                                                                             class="img-md" alt="36785"></div>
@@ -953,7 +953,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/73755-200x200.jpg?v=1631010645"
                                                                             class="img-md" alt="73755"></div>
@@ -981,7 +981,7 @@
                                                                     class="media-link">
                                                                     <div class="media-left"><img width="69"
                                                                             height="69"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             loading="lazy"
                                                                             src="https://jobsgo.vn/media/img/employer/31017-200x200.jpg?v=1567160872"
                                                                             class="img-md" alt="31017"></div>
@@ -1032,7 +1032,7 @@
                                                                     <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
                                                                         class="profile-thumb">
                                                                         <img width="85" height="85"
-                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            onerror="this.src='/img/default-company.svg'"
                                                                             data-src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : 'default-logo.jpg' }}"
                                                                             class="img-md img-circle lazy"
                                                                             alt="{{ $jobPost->company->name }}">
@@ -1104,7 +1104,7 @@
                                                                             <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
 
                                                                                                                                                             <div class="media-left">
-                                                                                    <img width="69" height="69" onerror="this.src='/img/cj.jpg'"
+                                                                                    <img width="69" height="69" onerror="this.src='/img/default-company.svg'"
                                                                                          loading="lazy"
                                                                                          src="{{ $relatedJob->company->logo_url }}" class="img-md" alt="{{ $relatedJob->company->name }}">
                                                                                 </div>

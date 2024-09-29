@@ -3,7 +3,7 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
                 class="fa fa-bars"></i></button>
         <div class="navbar-header"><a class="navbar-brand" href="/">
-                <img width="134" height="40" loading="lazy" src="/logo.png" alt="JobsGO">
+                <img width="134" height="40" loading="lazy" src="/assets_livewire/logo-light.svg"src="/logo.png" alt="JobsGO">
             </a>
             <div class="visible-xs"
                 style="position: absolute;right: 70px;top: 17px;padding: 4px 6px;border-radius: 4px;background-color: #ff5c35; padding: 4px 20px; border-radius: 3px; line-height: 22px;">
@@ -102,22 +102,7 @@
                         <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/blog/">
-                        <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy"> Phát triển sự nghiệp
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                        <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp Luật Lao Động</a></li>
-                        <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp Bảo Hiểm Xã Hội</a></li>
-                        <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a></li>
-                        <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương Gross - Net</a></li>
-                        <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng Nghiệp</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm EQ</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc nghiệm tính cách MBTI</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-enneagram.html">Trắc nghiệm tính cách Enneagram</a></li>
-                    </ul>
-                </li>
+             
             </ul>
             <ul class="nav teks-nav navbar-nav navbar-right navbar-left-2" data-in="fadeInDown" data-out="fadeOutUp">
 
@@ -131,7 +116,7 @@
                             alt="web developer" class="img-rounded">
                         <span style="margin-left: 5px">
                             <div class="d-flex text-bold" style="font-weight: bold;">
-                                web developer </div>
+                                {{ Auth::user()->full_name }} </div>
                             <div id="status_job_search"
                                 class="status_on">Đang tìm việc</div>
                         </span>

@@ -172,7 +172,7 @@
         <nav class="navbar bg-white p-0">
           <div class="container-fluid p-0">
             <a class="navbar-brand" href="/">
-              <img width="134" height="40" src="/logo.png" alt="JobsGO">
+              <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
             </a>
             <style>
               .status_on {
@@ -191,7 +191,7 @@
                   data-src="https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c" alt="avatar" width="32" height="32">
                 <span style="margin-left: 5px" class="">
                   <div class="d-flex fw-bold text-capitalize">
-                    web developer </div>
+                    {{ Auth::user()->full_name }}</div>
                   <div id="status_job_search"
                     class="status_on">Đang tìm việc</div>
                 </span>
@@ -392,19 +392,21 @@
                       <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu 1</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a></li>
-                      <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                      <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động Sản</a></li>
-                      <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a></li>
-                    </ul>
+                      @php
+                          // Get the top 10 careers with the most companies
+                          $careers = App\Models\CommonCareer::withCount('companies')
+                              ->orderBy('companies_count', 'desc')
+                              ->take(10)
+                              ->get();
+                      @endphp
+                      @foreach($careers as $career)
+                          <li>
+                              <a class="dropdown-item" href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
+                                  {{ $career->name }} ({{ $career->companies_count }} công ty)
+                              </a>
+                          </li>
+                      @endforeach
+                  </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/mau-cv-xin-viec.html">
@@ -417,22 +419,7 @@
                       <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/blog/">
-                      <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy"> Phát triển sự nghiệp
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                      <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp Luật Lao Động</a></li>
-                      <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp Bảo Hiểm Xã Hội</a></li>
-                      <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a></li>
-                      <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương Gross - Net</a></li>
-                      <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng Nghiệp</a></li>
-                      <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm EQ</a></li>
-                      <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc nghiệm tính cách MBTI</a></li>
-                      <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-enneagram.html">Trắc nghiệm tính cách Enneagram</a></li>
-                    </ul>
-                  </li>
+              
                 </ul>
                 <div class="vr d-none d-xl-block"></div>
                 <div class="d-none d-xl-block ms-sm-3 btn-group">

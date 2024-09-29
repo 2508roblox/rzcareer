@@ -558,7 +558,7 @@
                                                         <a title="{{ $company->company_name }}"
                                                             href="/tuyen-dung/{{ $company->slug }}">
                                                             <div class="brows-job-company-img">
-                                                                <img onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"
+                                                                <img onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
                                                                 src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
                                                                     data-src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
                                                                     class="img-responsive lazy"

@@ -219,7 +219,7 @@
                 <div class="col">
                     <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" class="d-flex teks-item text-dark">
                         <div class="flex-shrink-0 position-relative">
-                            <img class="lazy" width="80" height="80"  onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"
+                            <img class="lazy" width="80" height="80"  onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
                                  data-src="{{ Storage::url($jobPost['company']['company_image_url']) }}"
                                  lazy>
                         </div>
@@ -283,7 +283,7 @@
                                                 <div class="col">
                                                     <a href="{{  'tuyen-dung/' .   $companies[$index + $i]->slug }}" class="d-block border-0 p-0 text-center teks-item text-dark">
 
-                                                        <img  onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"  class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}" alt="{{ $companies[$index + $i]->company_name }}">
+                                                        <img  onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"  class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}" alt="{{ $companies[$index + $i]->company_name }}">
                                                         <div class="h5 fw-bold text-dark">{{ $companies[$index + $i]->company_name }}</div>
                                                         <p class="small text-nowrap d-none">
                                                             <i class="bx bx-map"></i>
@@ -353,7 +353,7 @@
                                                 <div class="col">
                                                     <a href="{{ url('viec-lam/' . $hotJobPosts[$index + $i]['slug']) }}" class="d-flex teks-item text-dark">
                                                         <div class="flex-shrink-0 position-relative" >
-                                                            <img class="lazy" width="80" height="80"   onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"  data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
+                                                            <img class="lazy" width="80" height="80"   onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"  data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
                                                         </div>
                                                         <div class="flex-grow-1 ms-2">
                                                             <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5 text-danger tooltip" title="">{{ $hotJobPosts[$index + $i]->job_name }}</h3>
