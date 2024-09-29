@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\CompanyResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CompanyResource\RelationManagers;
+use App\Models\CommonCareer;
 
 class CompanyResource extends Resource
 {
@@ -143,15 +144,9 @@ class CompanyResource extends Resource
                                 Forms\Components\DatePicker::make('since')
                                     ->label('Từ năm'),
 
-                                Forms\Components\Select::make('field_operation')
+                                    Forms\Components\Select::make('field_operation')
                                     ->label('Lĩnh vực hoạt động')
-                                    ->options([
-                                        'tech' => 'Công nghệ',
-                                        'finance' => 'Tài chính',
-                                        'health' => 'Chăm sóc sức khỏe',
-                                        'education' => 'Giáo dục',
-                                        'retail' => 'Bán lẻ',
-                                    ])
+                                    ->options(CommonCareer::pluck('name', 'id')->toArray()) // Load career names into the select
                                     ->required(),
 
                                 Forms\Components\RichEditor::make('description')

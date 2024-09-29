@@ -39,11 +39,18 @@ class CommonCareerResource extends Resource
                             ->maxLength(150)
                             ->placeholder('Nhập tên ứng dụng'),
 
-                        Forms\Components\TextInput::make('icon_url')
-                            ->label('URL biểu tượng')
+                            Forms\Components\FileUpload::make('icon_url')
+                            ->label('Tải lên biểu tượng')
                             ->required()
-                            ->maxLength(300)
-                            ->placeholder('Nhập URL biểu tượng'),
+                            ->maxSize(1024) // Maximum file size in kilobytes (adjust as necessary)
+                            ->placeholder('Chọn file biểu tượng')
+                            ->image() // Optional: Specify that only images are allowed
+                            ->disk('public') // Specify the disk where the file will be stored
+                            ->directory('icons') // Optional: Specify the directory within the disk to store the file
+                            ->preserveFilenames() // Optional: Preserve the original file names
+                            ->enableOpen() // Optional: Allow users to open the file
+                            ->columnSpan(2), // Adjust column span if needed
+
 
                         Forms\Components\TextInput::make('app_icon_name')
                             ->label('Tên biểu tượng ứng dụng')

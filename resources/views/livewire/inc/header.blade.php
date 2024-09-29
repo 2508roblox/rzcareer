@@ -18,29 +18,41 @@
                       <div class="col-sm-4">
                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                         <ul class="list-unstyled">
-                          <li><a class="dropdown-item" href="/viec-lam-tai-chinh-ngan-hang.html"> Việc làm Tài Chính/Ngân Hàng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-ke-toan-kiem-toan.html"> Việc làm Kế Toán/Kiểm Toán</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành Chính/Văn Phòng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-kinh-doanh-ban-hang.html"> Việc làm Kinh Doanh/Bán Hàng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-marketing.html"> Việc làm Marketing</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-xay-dung.html"> Việc làm Xây dựng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-it-phan-mem.html"> Việc làm IT Phần Mềm</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành Chính/Văn Phòng</a></li>
+                            @foreach(
+                                App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                                    ->orderBy('job_posts_count', 'desc')      // Sort by the number of job posts
+                                    ->limit(10)                               // Limit to top 10 careers
+                                    ->get() as $career)
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
+                                        Việc làm {{ $career->name }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
+
+
                       </div>
                       <div class="col-sm-3 ps-sm-0">
                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                         <ul class="list-unstyled">
-                          <li><a class="dropdown-item" href="/viec-lam-tai-ho-chi-minh.html"> Việc làm tại Hồ Chí Minh</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-ha-noi.html"> Việc làm tại Hà Nội</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-da-nang.html"> Việc làm tại Đà Nẵng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-can-tho.html"> Việc làm tại Cần Thơ</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-binh-duong.html"> Việc làm tại Bình Dương</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-hai-phong.html"> Việc làm tại Hải Phòng</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-dong-nai.html"> Việc làm tại Đồng Nai</a></li>
-                          <li><a class="dropdown-item" href="/viec-lam-tai-quang-ninh.html"> Việc làm tại Quảng Ninh</a></li>
+                            @foreach(
+                                App\Models\CommonCity::withCount('jobPosts')  // Count related job posts
+                                    ->orderBy('job_posts_count', 'desc')     // Sort by job posts count
+                                    ->limit(10)                               // Limit to top 10 cities
+                                    ->get() as $city)
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}">
+                                        Việc làm tại {{ $city->name }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
-                      </div>
+                    </div>
+
+
                       <div class="col-sm-4">
                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
                         <ul class="list-unstyled">
@@ -60,20 +72,27 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
-                <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
-              </a>
-              <ul class="dropdown-menu">
-                @php
-                      $careers = App\Models\CommonCareer::all(); // Lấy tất cả các nghề nghiệp
-                @endphp
-              @foreach($careers as $career)
-              <li><a class="dropdown-item" href="{{ url('/' . strtolower(str_replace(' ', '-', $career->name)) . '.html') }}">
-                  {{ $career->name }}</a>
-              </li>
-          @endforeach
-              </ul>
+                <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
+                    <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
+                </a>
+                <ul class="dropdown-menu">
+                    @php
+                        // Get the top 10 careers with the most companies
+                        $careers = App\Models\CommonCareer::withCount('companies')
+                            ->orderBy('companies_count', 'desc')
+                            ->take(10)
+                            ->get();
+                    @endphp
+                    @foreach($careers as $career)
+                        <li>
+                            <a class="dropdown-item" href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
+                                {{ $career->name }} ({{ $career->companies_count }} công ty)
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
             </li>
+
             <li class="nav-item dropdown">
               <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/mau-cv-xin-viec.html">
                 <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -327,7 +346,7 @@
                             <div class="col-sm-4">
                               <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                               <ul class="list-unstyled">
-                                <li><a class="dropdown-item" href="/viec-lam-tai-chinh-ngan-hang.html"> Việc làm Tài Chính/Ngân Hàng</a></li>
+                                <li><a class="dropdown-item" href="/viec-lam-tai-chinh-ngan-hang.html"> Việc làm Tài Chính/Ngân Hàng1</a></li>
                                 <li><a class="dropdown-item" href="/viec-lam-ke-toan-kiem-toan.html"> Việc làm Kế Toán/Kiểm Toán</a></li>
                                 <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành Chính/Văn Phòng</a></li>
                                 <li><a class="dropdown-item" href="/viec-lam-kinh-doanh-ban-hang.html"> Việc làm Kinh Doanh/Bán Hàng</a></li>

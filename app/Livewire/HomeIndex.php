@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\CommonCareer;
 use Livewire\Component;
 use App\Models\JobPost;
 use App\Models\Company;
@@ -11,6 +12,7 @@ class HomeIndex extends Component
     public $hotJobPosts;  // Danh sách công việc nổi bật
     public $urgentJobPosts; // Danh sách công việc tuyển gấp
     public $companies;
+    public $careers;
 
     // Properties for search
     public $keyword = '';
@@ -19,17 +21,21 @@ class HomeIndex extends Component
     public function mount()
     {
         // Lấy danh sách các JobPost có is_hot = 1
-        $this->hotJobPosts = JobPost::with(['career', 'company', 'location'])
+        $this->hotJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
             ->where('is_hot', 1)
             ->get();
 
         // Lấy danh sách các JobPost có is_urgent = 1
-        $this->urgentJobPosts = JobPost::with(['career', 'company', 'location'])
+        $this->urgentJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
             ->where('is_urgent', 1)
             ->get();
 
         // Lấy danh sách các công ty
         $this->companies = Company::all();
+        $this->careers = CommonCareer::withCount('jobPosts')
+        ->orderBy('job_posts_count', 'desc')
+        ->take(12)
+        ->get();
     }
 
     public function searchJobs()
@@ -65,6 +71,8 @@ class HomeIndex extends Component
             'hotJobPosts' => $this->hotJobPosts,
             'urgentJobPosts' => $this->urgentJobPosts,
             'companies' => $this->companies,
+            'careers' => $this->careers, // Add this line
+
         ]);
     }
 }
