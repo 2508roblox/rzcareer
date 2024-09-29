@@ -72,24 +72,27 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
-                <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
-              </a>
-              <ul class="dropdown-menu">
-                @php
-                    $careers = App\Models\CommonCareer::all(); // Get all careers
-                @endphp
-                @foreach($careers as $career)
-                    <li>
-                        <a class="dropdown-item" href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
-                            {{ $career->name }}
-
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-
+                <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
+                    <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
+                </a>
+                <ul class="dropdown-menu">
+                    @php
+                        // Get the top 10 careers with the most companies
+                        $careers = App\Models\CommonCareer::withCount('companies')
+                            ->orderBy('companies_count', 'desc')
+                            ->take(10)
+                            ->get();
+                    @endphp
+                    @foreach($careers as $career)
+                        <li>
+                            <a class="dropdown-item" href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
+                                {{ $career->name }} ({{ $career->companies_count }} công ty)
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
             </li>
+
             <li class="nav-item dropdown">
               <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/mau-cv-xin-viec.html">
                 <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ

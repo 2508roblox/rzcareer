@@ -12,7 +12,7 @@ class CongTy extends Component
 {
     use WithPagination; // Kích hoạt phân trang
 
-    public $perPage = 10; // Số lượng công ty trên mỗi trang
+    public $perPage = 20; // Số lượng công ty trên mỗi trang
     public $field_operation; // To store the filtering field
 
     public function mount()

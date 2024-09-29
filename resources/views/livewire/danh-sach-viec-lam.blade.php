@@ -238,16 +238,16 @@
 
                                                                         <div>
                                                                             <!-- Display job posts -->
-                                                                            @foreach($jobPosts as $job)
+                                                                            {{-- @foreach($jobPosts as $job)
                                                                                 <div class="job-post">
                                                                                     <h4>{{ $job->job_name }}</h4>
                                                                                     <p>{{ $job->company->name }}</p>
                                                                                     <p>{{ $job->location->city->name }}</p>
                                                                                 </div>
-                                                                            @endforeach
+                                                                            @endforeach --}}
 
                                                                             <!-- Pagination Links -->
-                                                                            {{ $jobPosts->links() }}
+                                                                            {{-- {{ $jobPosts->links() }} --}}
                                                                         </div>
                                                                     </div>
 

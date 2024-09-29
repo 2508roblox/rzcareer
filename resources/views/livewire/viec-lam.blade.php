@@ -163,7 +163,7 @@
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
                             alt="Tải app JobsGO" src="/assets_livewire/media/img/500x100-banner-2.gif"
                             class="img-responsive lazy"></a>
-                            @livewire('inc.header-nav')
+                    @livewire('inc.header-nav')
 
                     <link href="/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css?v=234208153092"
                         rel="stylesheet" type="text/css">
@@ -415,12 +415,16 @@
 
                                                                     <span>{{ $jobPost->career->name }}</span>
                                                                 </li>
-                                                                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                                                                        <a href="{{ url('viec-lam/' . $jobPost->slug) }}" itemtype="https://schema.org/Thing" itemprop="item">
-                                                                            <span itemprop="name">{{ $jobPost->job_name }}</span>
-                                                                        </a>
+                                                                <li itemprop="itemListElement" itemscope
+                                                                    itemtype="https://schema.org/ListItem">
+                                                                    <a href="{{ url('viec-lam/' . $jobPost->slug) }}"
+                                                                        itemtype="https://schema.org/Thing"
+                                                                        itemprop="item">
+                                                                        <span
+                                                                            itemprop="name">{{ $jobPost->job_name }}</span>
+                                                                    </a>
 
-                                                                    </li>
+                                                                </li>
 
 
                                                             </ol>
@@ -430,17 +434,23 @@
                                                     <div
                                                         class="media stack-media-on-mobile text-left content-group pb-0 mrg-top-10">
                                                         <div class="media-body-2">
-                                                            <h1 class="media-heading text-semibold">[Thành phố]{{ $jobPost->job_name }} </h1>
+                                                            <h1 class="media-heading text-semibold">[Thành
+                                                                phố]{{ $jobPost->job_name }} </h1>
 
                                                             <ul class="list-inline text-muted mrg-bot-5">
                                                                 <li>
-                                                                    <i class="bx bx-time-five"></i> <span>Hết hạn trong</span>
-                                                                    <span class="deadline">{{ round(\Carbon\Carbon::parse($jobPost->deadline)->diffInDays(now())) }} </span>
+                                                                    <i class="bx bx-time-five"></i> <span>Hết hạn
+                                                                        trong</span>
+                                                                    <span
+                                                                        class="deadline">{{ round(\Carbon\Carbon::parse($jobPost->deadline)->diffInDays(now())) }}
+                                                                    </span>
                                                                     <span>ngày nữa</span>
                                                                 </li>
                                                                 <li>
                                                                     <i class="bx bx-money"></i> <span>Mức lương</span>
-                                                                    <span class="salary">{{ round(($jobPost->salary_min + $jobPost->salary_max) / 1000000, 2) }} triệu</span>
+                                                                    <span
+                                                                        class="salary">{{ round(($jobPost->salary_min + $jobPost->salary_max) / 1000000, 2) }}
+                                                                        triệu</span>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -561,7 +571,8 @@
                                                                     src="/assets_livewire/img/2024/ic21.svg"
                                                                     alt="JobsGo">
                                                                 <p class="h5 text-semibold">Yêu cầu bằng cấp
-                                                                    <small>(tối thiểu)</small></p>
+                                                                    <small>(tối thiểu)</small>
+                                                                </p>
                                                                 <p>{{ $jobPost->academic_level }}</p>
                                                             </div>
                                                         </div>
@@ -702,7 +713,8 @@
                                                                 class="h6 text-size-mini pt-10 pb-5 panel-title text-uppercase">
                                                                 <a href="https://jobsgo.vn/viec-lam.html#tim_viec_nhanh"
                                                                     target="_blank">Việc làm</a>
-                                                                liên quan </span></h2>
+                                                                liên quan </span>
+                                                            </h2>
                                                             <div class="heading-elements"><a
                                                                     title="Xem thêm việc làm Kế Toán Tổng Hợp"
                                                                     href="/viec-lam-ke-toan-tong-hop.html"
@@ -1013,28 +1025,31 @@
                                                     <div class="panel-body">
                                                         <div class="profile-cover">
                                                             <div class="profile-cover-img"
-                                                            style="background-image: url(' {{ Storage::url($jobPost->company->company_cover_image_url)}}'  );">
-                                                       </div>
-                                                       <div class="media">
-                                                           <div class="media-left">
-                                                               <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}" class="profile-thumb">
-                                                                   <img width="85" height="85"
-                                                                        onerror="this.src='/img/cj.jpg'"
-
-                                                                        data-src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : 'default-logo.jpg' }}"
-                                                                        class="img-md img-circle lazy"
-                                                                        alt="{{ $jobPost->company->name }}">
-                                                               </a>
-                                                           </div>
+                                                                style="background-image: url(' {{ Storage::url($jobPost->company->company_cover_image_url) }}'  );">
+                                                            </div>
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
+                                                                        class="profile-thumb">
+                                                                        <img width="85" height="85"
+                                                                            onerror="this.src='/img/cj.jpg'"
+                                                                            data-src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : 'default-logo.jpg' }}"
+                                                                            class="img-md img-circle lazy"
+                                                                            alt="{{ $jobPost->company->name }}">
+                                                                    </a>
+                                                                </div>
 
                                                                 <div class="media-body">
                                                                     <h5 class="hide" style="margin-bottom: 0;">
-                                                                        <small class="display-block">Mời bạn đến làm việc ở</small>
+                                                                        <small class="display-block">Mời bạn đến làm
+                                                                            việc ở</small>
                                                                     </h5>
                                                                     <h2 style="font-size: 17px;">
-                                                                        <a class="text-uppercase" style="color: #111!important;font-weight: bold;"
-                                                                           href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
-                                                                           {{ $jobPost->company->company_name }} <!-- Hiển thị tên công ty -->
+                                                                        <a class="text-uppercase"
+                                                                            style="color: #111!important;font-weight: bold;"
+                                                                            href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
+                                                                            {{ $jobPost->company->company_name }}
+                                                                            <!-- Hiển thị tên công ty -->
                                                                         </a>
                                                                     </h2>
                                                                 </div>
@@ -1044,12 +1059,15 @@
                                                         <div class="company-info text-grey">
                                                             <div class="padd-20 padd-t-0">
                                                                 <div>
-                                                                    <div><i class="bx bx-sm bx-briefcase"></i> Lĩnh vực:</div>
-                                                                    <span>{{ $jobPost->career->name ?? 'Chưa có thông tin' }}</span> <!-- Kiểm tra null -->
+                                                                    <div><i class="bx bx-sm bx-briefcase"></i> Lĩnh
+                                                                        vực:</div>
+                                                                    <span>{{ $jobPost->career->name ?? 'Chưa có thông tin' }}</span>
+                                                                    <!-- Kiểm tra null -->
                                                                 </div>
                                                                 <div>
                                                                     <div><i class='bx bx-sm bx-map'></i> Địa chỉ:</div>
-                                                                    <span>{{ $jobPost->location->address ?? 'Chưa có thông tin' }}</span> <!-- Kiểm tra null -->
+                                                                    <span>{{ $jobPost->location->address ?? 'Chưa có thông tin' }}</span>
+                                                                    <!-- Kiểm tra null -->
                                                                 </div>
                                                             </div>
 
@@ -1066,54 +1084,43 @@
                                                                         title="Công Ty TNHH Chế Biến Nước Chấm Mekong cũng đang tuyển">
                                                                         <a href="https://jobsgo.vn/viec-lam.html#việc_làm"
                                                                             target="_blank">Việc làm</a> khác cùng công
-                                                                        ty </span></h2>
-                                                                    <div class="heading-elements"><a
-                                                                            title="Xem thêm việc làm"
+                                                                        ty
+                                                                    </h2>
+                                                                    <div class="heading-elements">
+                                                                        <a title="Xem thêm việc làm"
                                                                             href="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html?tab=jobs"
                                                                             class="heading-text text-blue-700">Xem thêm
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                viewBox="0 0 24 24"
-                                                                                fill="currentColor" class="size-6">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                                                                 <path fill-rule="evenodd"
                                                                                     d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                                                                                     clip-rule="evenodd"></path>
-                                                                            </svg></a></div>
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
-                                                                <ul
-                                                                    class="row media-list employer-jobs jobs media-list-linked media-list-bordered">
-                                                                    <li title="Kế Toán Nội Bộ (Đức Hoà, Long An)"
-                                                                        class="col-sm-6 media standard"> <a
-                                                                            href="/viec-lam/ke-toan-noi-bo-duc-hoa-long-an-18749000565.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                            class="media-link">
-                                                                            <div class="media-left"><img
-                                                                                    width="69" height="69"
-                                                                                    onerror="this.src='/img/cj.jpg'"
-                                                                                    loading="lazy"
-                                                                                    src="https://jobsgo.vn/media/img/employer/39234-200x200.jpg?v=1623656960"
-                                                                                    class="img-md" alt="39234">
-                                                                            </div>
-                                                                            <div class="media-body"><span
-                                                                                    class="h6 media-heading">Kế Toán
-                                                                                    Nội Bộ (Đức Hoà, Long
-                                                                                    An)</span><small
-                                                                                    class="text-muted">Công Ty TNHH Chế
-                                                                                    Biến Nước Chấm Mekong</small>
-                                                                                <p class="text-muted">
-                                                                                    <span
-                                                                                        class="btn text-uppercase btn-xs btn-default"><i
-                                                                                            class="bx bx-map"></i> Long
-                                                                                        An</span>
+                                                                <ul class="row media-list employer-jobs jobs media-list-linked media-list-bordered">
+                                                                    @foreach($relatedJobs as $relatedJob)
+                                                                        <li title="{{ $relatedJob->title }}" class="col-sm-6 media standard">
+                                                                            <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
 
-
-
-                                                                                    <span
-                                                                                        class="btn btn-xs btn-default"><i
-                                                                                            class="fa fa-money"></i>
-                                                                                        Thỏa thuận </span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </a> </li>
+                                                                                                                                                            <div class="media-left">
+                                                                                    <img width="69" height="69" onerror="this.src='/img/cj.jpg'"
+                                                                                         loading="lazy"
+                                                                                         src="{{ $relatedJob->company->logo_url }}" class="img-md" alt="{{ $relatedJob->company->name }}">
+                                                                                </div>
+                                                                                <div class="media-body">
+                                                                                    <span class="h6 media-heading">{{ $relatedJob->title }}</span>
+                                                                                    <small class="text-muted">{{ $relatedJob->company->name }}</small>
+                                                                                    <p class="text-muted">
+                                                                                        <span class="btn text-uppercase btn-xs btn-default"><i class="bx bx-map"></i> {{ $relatedJob->location->name }}</span>
+                                                                                        <span class="btn btn-xs btn-default"><i class="fa fa-money"></i>{{ $relatedJob->salary }}</span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    @endforeach
                                                                 </ul>
+
                                                             </div>
                                                             <div class="mrg-top-10"><a rel="nofollow"
                                                                     href="https://tcg.metro.tokyo.lg.jp/portal/Vietnam2024?utm_source=detail_sidebar"
@@ -1281,8 +1288,7 @@
                                                         </a> </li>
                                                     <li class="media col-sm-3"> <a
                                                             href="/viec-lam-thuc-tap-sinh-ke-toan.html"
-                                                            title="Thực Tập Sinh Kế Toán"
-                                                            class="media-link clearfix">
+                                                            title="Thực Tập Sinh Kế Toán" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Thực Tập
                                                                     Sinh Kế Toán</span> </div>
@@ -1344,10 +1350,10 @@
                                                     <label class="control-label" for="reportform-verifycode">Mã xác
                                                         thực</label>
                                                     <img id="reportform-verifycode-image"
-                                                        src="/site/captcha?v=66f4cc658a0515.28674991"
-                                                        alt=""> <input type="text"
-                                                        id="reportform-verifycode" class="form-control"
-                                                        name="ReportForm[verifyCode]" aria-required="true">
+                                                        src="/site/captcha?v=66f4cc658a0515.28674991" alt="">
+                                                    <input type="text" id="reportform-verifycode"
+                                                        class="form-control" name="ReportForm[verifyCode]"
+                                                        aria-required="true">
 
                                                     <p class="help-block help-block-error"></p>
                                                 </div> <button type="submit"
@@ -1446,7 +1452,7 @@
                             $('.jobs-collaboratives').hide();
                             $('#teksStatus').html(
                                 '<div class="alert alert-warning">Bạn chưa thể ứng tuyển vị trí này. Hãy hoàn thiện hồ sơ để tiếp tục!</div>'
-                                );
+                            );
                         }
                     </script>
 
@@ -1550,15 +1556,16 @@
                                                 <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5,
                                                     607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh
                                                     <br>Điện thoại: <a class="text-primary" title="JobsGO Miền Nam"
-                                                        href="tel:0896557388">0896.557.388</a></p>
+                                                        href="tel:0896557388">0896.557.388</a>
+                                                </p>
                                                 <p><strong>Email:</strong> <a
                                                         href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a><br /><strong
                                                         title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
                                                         title="Chăm sóc ứng viên" class="text-primary"
                                                         href="tel:0705052927">070.505.2927</a><br>
-                                                    <strong>Hotline:</strong> <a title="Hotline"
-                                                        class="text-primary"
-                                                        href="tel:0899.565.868">0899.565.868</a></p>
+                                                    <strong>Hotline:</strong> <a title="Hotline" class="text-primary"
+                                                        href="tel:0899.565.868">0899.565.868</a>
+                                                </p>
                                             </div>
 
                                         </div>
@@ -1790,12 +1797,12 @@
                         if (!localStorage.getItem("tokenCvBuilder")) {
                             localStorage.setItem("tokenCvBuilder",
                                 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3MzE5MTQxLCJleHAiOjI0ODQxODMxNDEsInVpZCI6MjU5OTgzNX0.YZGCASeK8aUsWGQMOIqorpsr-SoF6jtky5UK_Pcr6EU'
-                                );
+                            );
                         }
                         if (!localStorage.getItem("userCvBuilder")) {
                             localStorage.setItem("userCvBuilder", (
                                 '{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/jobsgo.vn\/uploads\/avatar\/202409\/2599835_20240925210030.jpg","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"jobsgo","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTk4MzUsInN1YiI6MjU5OTgzNSwiaWF0IjoxNzI3MzA1ODYzLCJleHAiOjE3Mjc1NjUwNjN9.HQx8DpR-0z1LRLkPuOm3o2DZXfXG66xRmMfU_oWKd8zBhB5l5m-X8_AfOap-70yZHrhTFRXg7HTnyAbAeYa48fSOocAtlbH8x30HlXUJQl7TyWxL0zd2ZoI5xGWQ0cJ--o4feGOtkLsCEluuMEHIMc48gTSsKbC-YxqTg8mZudh92OFK_xq8RfSk4KqvfmNeQnv7q2vBI7PLuV99X3nhQ1f2CvVU_eJ5spbPB8G1TRGmVwWQk_g_57TkpbOKW77KipYLq58byMn31wkU-qmMXsNBpohOF52ojrnrK0pscqPrVcm3oRVYQiGvKMO2-VsmPcVbIoA9ZozQdgHcQ86NVQ","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"1","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":"53","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"2","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'
-                                ));
+                            ));
                         }
                     </script>
 

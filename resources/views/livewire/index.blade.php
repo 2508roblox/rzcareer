@@ -195,44 +195,56 @@
 
                 <div id="carousel1" class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel">
                   <div class="carousel-indicators">
-                    @for ($i = 0; $i < ceil(count($urgentJobPosts) / 15); $i++)
-                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="{{ $i }}" class="{{ $i === 0 ? 'active' : '' }}" aria-label="Slide {{ $i + 1 }}"></button>
+                    @php
+                    $totalPages = ceil(count($urgentJobPosts) / 15); // Tính tổng số trang
+                    $maxPages = min($totalPages, 10); // Giới hạn tối đa là 10 trang
+                @endphp
+
+                @for ($i = 0; $i < $maxPages; $i++)
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="{{ $i }}" class="{{ $i == 0 ? 'active' : '' }}" aria-label="Slide {{ $i + 1 }}"></button>
                 @endfor
+
                   </div>
 
                   <div class="carousel-inner">
-                        @foreach (array_chunk($urgentJobPosts->toArray(), 15) as $index => $jobChunk)
-                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                            <div class="row row-cols-1 row-cols-lg-3 g-2">
-                                @foreach ($jobChunk as $jobPost)
-                                    <div class="col">
-                                        <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" class="d-flex teks-item text-dark">
-                                            <div class="flex-shrink-0 position-relative">
-                                                <img class="lazy" width="80" height="80"
-                                                     data-src="{{ Storage::url($jobPost['company']['company_image_url']) }}"
-                                                     lazy>
-                                            </div>
+                    @php
+    // Lấy tối đa 150 công việc
+    $limitedJobPosts = $urgentJobPosts->take(150);
+@endphp
 
-                                            <div class="flex-grow-1 ms-2">
-                                                <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name'] }}</h3>
-                                                <div class="h6 text-muted">{{ $jobPost['company']['company_name'] }}</div>
-                                                <ul class="p-0">
-                                                    <li class="list-group-item list-group-item-action">
-                                                        <i class="bx bx-money"></i>
-                                                        {{ number_format($jobPost['salary_min'] / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost['salary_max'] / 1_000_000, 0, '.', ',') }} triệu VNĐ
-                                                    </li>
-
-                                                    <li class="list-group-item list-group-item-action">
-                                                        <i class="bx bx-map"></i> {{ $jobPost['city']['name'] }}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                @endforeach
-                            </div>
+@foreach (array_chunk($limitedJobPosts->toArray(), 15) as $index => $jobChunk)
+    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+        <div class="row row-cols-1 row-cols-lg-3 g-2">
+            @foreach ($jobChunk as $jobPost)
+                <div class="col">
+                    <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" class="d-flex teks-item text-dark">
+                        <div class="flex-shrink-0 position-relative">
+                            <img class="lazy" width="80" height="80"  onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"
+                                 data-src="{{ Storage::url($jobPost['company']['company_image_url']) }}"
+                                 lazy>
                         </div>
-                    @endforeach
+
+                        <div class="flex-grow-1 ms-2">
+                            <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name'] }}</h3>
+                            <div class="h6 text-muted">{{ $jobPost['company']['company_name'] }}</div>
+                            <ul class="p-0">
+                                <li class="list-group-item list-group-item-action">
+                                    <i class="bx bx-money"></i>
+                                    {{ number_format($jobPost['salary_min'] / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost['salary_max'] / 1_000_000, 0, '.', ',') }} triệu VNĐ
+                                </li>
+
+                                <li class="list-group-item list-group-item-action">
+                                    <i class="bx bx-map"></i> {{ $jobPost['city']['name'] }}
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endforeach
+
 
 
 
@@ -271,7 +283,7 @@
                                                 <div class="col">
                                                     <a href="{{  'tuyen-dung/' .   $companies[$index + $i]->slug }}" class="d-block border-0 p-0 text-center teks-item text-dark">
 
-                                                        <img onerror="this.src='/img/employer-logo.jpg'" class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}" alt="{{ $companies[$index + $i]->company_name }}">
+                                                        <img  onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"  class="w-75 teks-img-thumbnail mb-2" width="90" height="90" loading="lazy" src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}" alt="{{ $companies[$index + $i]->company_name }}">
                                                         <div class="h5 fw-bold text-dark">{{ $companies[$index + $i]->company_name }}</div>
                                                         <p class="small text-nowrap d-none">
                                                             <i class="bx bx-map"></i>
@@ -340,8 +352,8 @@
                                             @if (isset($hotJobPosts[$index + $i]))
                                                 <div class="col">
                                                     <a href="{{ url('viec-lam/' . $hotJobPosts[$index + $i]['slug']) }}" class="d-flex teks-item text-dark">
-                                                        <div class="flex-shrink-0 position-relative">
-                                                            <img class="lazy" width="80" height="80"  data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
+                                                        <div class="flex-shrink-0 position-relative" >
+                                                            <img class="lazy" width="80" height="80"   onerror="this.src='{{ asset('assets_livewire/img/cj.jpg') }}'"  data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
                                                         </div>
                                                         <div class="flex-grow-1 ms-2">
                                                             <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5 text-danger tooltip" title="">{{ $hotJobPosts[$index + $i]->job_name }}</h3>
@@ -498,144 +510,6 @@
         </div>
       </section>
 
-      <section class="bg-white teks-tools py-4 py-sm-5">
-        <div class="container">
-          <h2 class="mb-4 text-dark text-center">Công cụ phát triển sự nghiệp</h2>
-          <div class="teks-section-content teks-swiper">
-            <div id="carousel55" class="carousel slide" data-bs-interval="999999" data-bs-ride="carousel">
-              <div class="carousel-inner pb-1">
-                <div class="carousel-item active">
-                  <div class="row align-items-center justify-content-center">
-                    <div class="col-sm-9">
-                      <div class="row">
-                        <div class="col-sm-4 order-2 order-sm-1">
-                          <div class="row row-cols-2 row-cols-sm-1 g-2">
-                            <div class="col">
-                              <a href="/blog/" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic7.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Kiến thức</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/hoi-dap-luat-lao-dong.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic8.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Hỏi đáp Luật Lao Động</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/hoi-dap-bao-hiem-xa-hoi.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic9.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Hỏi đáp bảo hiểm xã hội</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/tra-cuu-luong.html" class="mb-2 d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic10.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Tra cứu lương</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-
-                          </div>
-                        </div>
-                        <div class="col-sm-4 order-1 order-sm-2">
-                          <div class="row row-cols-1 g-2">
-                            <div class="col">
-                              <img class="m-auto d-block w-xs-25 mb-4 w-100" loading="lazy" src="/assets_livewire/img/2024/img9.webp" alt="jobsgo">
-                            </div>
-                            <div class="col">
-                              <a href="/trac-nghiem-tinh-cach-enneagram.html" class="d-flex mb-2 align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic11.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Trắc nghiệm tính cách Enneagram</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-
-                          </div>
-                        </div>
-                        <div class="col-sm-4 order-3 order-sm-3">
-                          <div class="row row-cols-2 row-cols-sm-1 g-2">
-                            <div class="col">
-                              <a href="/la-ban-huong-nghiep.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic12.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">La bàn hướng nghiệp</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/trac-nghiem-eq.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic13.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Trắc nghiệm EQ</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/trac-nghiem-tinh-cach-mbti.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic14.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Trắc nghiệm tính cách MBTI</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="/tinh-luong-gross-net.html" class="d-flex align-items-center teks-item text-dark">
-                                <div class="flex-shrink-0">
-                                  <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/img/2024/ic15.svg?v=234208153092" alt="jobsgo">
-                                </div>
-                                <div class="flex-grow-1 ms-2">
-                                  <h3 class="h5">Đổi lương Gross - Net</h3>
-                                  <div class="h6 text-muted">Khám phá ngay »</div>
-                                </div>
-                              </a>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
 
       <section class="text-white teks-box-research-salary">
@@ -645,7 +519,7 @@
               <div class="col-lg-3 teks-section-title ps-3 text-center text-lg-start">
                 <h2 class="text-white fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
                 <p class="w-100 mb-3">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
-                <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy" src="/assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092" alt="JobsGO">
+                <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy" src="{{ asset('assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092') }}" alt="JobsGO">
 
               </div>
               <div class="col-lg-9">
@@ -730,30 +604,7 @@
 
       <section class="bg-white teks-newspaper py-4 py-sm-5">
         <div class="container">
-          <h2 class="mb-4 text-dark text-center">Báo chí nói gì về JobsGO</h2>
-          <div class="teks-section p-0 rounded-4">
-            <div class="row align-items-center row-cols-2 row-cols-lg-6">
-              <div class="col">
-                <a href="https://dantri.com.vn/kinh-doanh/nhung-dau-an-nhay-vot-cua-jobs-go-trong-tim-kiem-viec-lam-cho-ung-vien-20201105155001420.htm" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img7.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-              <div class="col">
-                <a href="https://cafebiz.vn/nhan-luc-kinh-nghiem-chien-luoc-cua-doanh-nghiep-trong-nam-2024-176240321135147219.chn" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img2.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-              <div class="col">
-                <a href="https://baodautu.vn/ceo-jobsgo-pham-thanh-hai-gio-la-luc-sai-buoc-nhanh-hon-d137714.html" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img3.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-              <div class="col">
-                <a href="https://genk.vn/nhung-startup-tung-goi-von-tai-shark-tank-viet-nam-gio-ra-sao-20190324083157746.chn" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img4.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-              <div class="col">
-                <a href="https://kenh14.vn/xoan-nao-vi-cv-jobsgo-ai-giai-quyet-trong-tich-tac-20240702180306549.chn" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img5.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-              <div class="col">
-                <a href="https://vietnamnet.vn/cach-nghi-khac-lam-khac-cua-startup-tim-viec-jobsgo-i268849.html" rel="nofollow" target="_blank"><img src="/assets_livewire/img/2024/img1.svg?v=234208153092" alt="jobsgo" loading="lazy"></a>
-              </div>
-            </div>
 
-          </div>
 
 
         </div>
@@ -1058,33 +909,7 @@
       </section> -->
 
     </main>
-    <section class="section-download cta-section bg-white pt-4 text-center position-relative">
 
-      <div class="container">
-        <div class="bg-e4faff position-relative shadow rounded-4 py-4">
-          <div class="hidden-xs d-none d-sm-block theme-bg-shapes-right"></div>
-          <div class="hidden-xs d-none d-sm-block theme-bg-shapes-left"></div>
-          <div class="h2 mb-3 text-dark fw-bolder my-1">Tải miễn phí ứng dụng</div>
-          <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu quả bằng cách tải JobsGO về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!</div>
-          <div class="row gx-1 justify-content-center pt-2">
-            <div class="col-10 col-sm-5 col-xs-10 col-md-3 mt-2 mt-md-0">
-              <div class="input-group input-get-link mb-3">
-                <input type="tel" class="form-control phone" placeholder="Nhập SĐT để lấy link tải App">
-                <button class="btn btn-outline-light text-uppercase btn-get-link" type="button">Gửi đi</button>
-              </div>
-              <ul class="app-stores list-unstyled list-inline mx-auto d-inline-block">
-                <li class="list-inline-item"><a target="_blank" href="https://jobsgo.vn/site/download">
-                    <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="/assets_livewire/teks/img/download.svg?v=1.2" alt="JobsGO" width="220" height="83">
-
-                  </a></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
     <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
       <div class="no-padding">
         <div class="container">
