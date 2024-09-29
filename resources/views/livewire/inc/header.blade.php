@@ -64,18 +64,14 @@
                 <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a></li>
-                <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động Sản</a></li>
-                <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a></li>
+                @php
+                      $careers = App\Models\CommonCareer::all(); // Lấy tất cả các nghề nghiệp
+                @endphp
+              @foreach($careers as $career)
+              <li><a class="dropdown-item" href="{{ url('/' . strtolower(str_replace(' ', '-', $career->name)) . '.html') }}">
+                  {{ $career->name }}</a>
+              </li>
+          @endforeach
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -157,7 +153,7 @@
     </a>
 </li>
 
- 
+
  </ul>
           </div>
           @else
@@ -404,7 +400,7 @@
                       <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a></li>
+                      <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu 1</a></li>
                       <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
                       <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a></li>
                       <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
