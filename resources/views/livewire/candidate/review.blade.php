@@ -1135,7 +1135,7 @@
                                                                             <span class="progress-right">
                                                                                 <span class="progress-bar"></span>
                                                                             </span>
-                                                                            <div class="progress-value">67%</div>
+                                                                            <div class="progress-value">{{$a * 25}}%</div>
 
                                                                         </div>
                                                                     </div>
@@ -1143,8 +1143,7 @@
                                                                     <div class="col-sm-12-bk text-center">
                                                                         <h6 style="margin-bottom: 0 !important;"
                                                                             class="text-bold">Hồ sơ gần hoàn thiện</h6>
-                                                                        <p><small>Cập nhật hồ sơ theo gợi ý từ JobsGO
-                                                                                Review</small></p>
+                                                                     
                                                                     </div>
                                                                 </div>
 
@@ -1158,122 +1157,50 @@
                                                                         </h6>
                                                                         @if ($user)
                                                                         @foreach ($resumes as $resume)
-                                                                            <div class="resume-info">
-                                                                                @if ($resume->seekerProfile)
-                                                                                    <ul style="list-style-type: none;">
+                                                                        <div class="resume-info">
+                                                                            @if ($resume->seekerProfile)
+                                                                                <ul style="list-style-type: none;">
+                                                                                    @php
+                                                                                        // Array of attributes to check
+                                                                                        $attributes = [
+                                                                                            'name' => 'Tên bạn đã hoàn thiện',
+                                                                                            'email' => 'Email đã hoàn thiện',
+                                                                                            'location.address' => 'Địa chỉ đã hoàn thiện',
+                                                                                            'phone' => 'Số điện thoại đã hoàn thiện',
+                                                                                            'introduction' => 'Giới thiệu bản thân đã hoàn thiện',
+                                                                                            'birthday' => 'Ngày sinh đã hoàn thiện',
+                                                                                            'gender' => 'Giới tính đã hoàn thiện',
+                                                                                            'marital_status' => 'Tình trạng hôn nhân đã hoàn thiện',
+                                                                                            'current_residence' => 'Chỗ ở hiện tại đã hoàn thiện',
+                                                                                            'working_location' => 'Tỉnh/Thành làm việc đã hoàn thiện',
+                                                                                            'degree' => 'Bằng cấp đã hoàn thiện',
+                                                                                            'current_salary' => 'Mức lương hiện tại đã hoàn thiện',
+                                                                                            'desired_salary' => 'Mức lương mong muốn đã hoàn thiện',
+                                                                                        ];
+                                                                                    @endphp
+                                                                        
+                                                                                    @foreach ($attributes as $key => $message)
                                                                                         <li>
-                                                                                            @if (!empty($resume->seekerProfile->user->name))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Tên bạn đã hoàn thiện
+                                                                                            @if (data_get($resume->seekerProfile, $key))
+                                                                                                <i class="fa fa-check-square-o text-success"></i>
+                                                                                                {{ $message }}
                                                                                             @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tên bạn
+                                                                                                <i class="fa fa-warning text-warning"></i>
+                                                                                                Bổ sung {{ strtolower($message) }}
                                                                                             @endif
                                                                                         </li>
-                                                                                        
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->user->email))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Email đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung email
-                                                                                            @endif
-                                                                                        </li>
-                                                                                        
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->location->address))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Địa chỉ đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung địa chỉ
-                                                                                            @endif
-                                                                                        </li>
-                                                                                        
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->phone))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Số điện thoại đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung số điện thoại
-                                                                                            @endif
-                                                                                        </li>
-                                                                                        
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->introduction))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Giới thiệu bản thân đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung giới thiệu bản thân
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->birthday))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Ngày sinh đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung ngày sinh
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->gender))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Giới tính đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung giới tính
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->marital_status))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Tình trạng hôn nhân đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tình trạng hôn nhân
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->current_residence))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Chỗ ở hiện tại đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung chỗ ở hiện tại
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->working_location))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Tỉnh/Thành làm việc đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung tỉnh/thành làm việc
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->degree))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Bằng cấp đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung bằng cấp
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->current_salary))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Mức lương hiện tại đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung mức lương hiện tại
-                                                                                            @endif
-                                                                                        </li>
-                                                                    
-                                                                                        <li>
-                                                                                            @if (!empty($resume->seekerProfile->desired_salary))
-                                                                                                <i class="fa fa-check-square-o text-success"></i> Mức lương mong muốn đã hoàn thiện
-                                                                                            @else
-                                                                                                <i class="fa fa-warning text-warning"></i> Bổ sung mức lương mong muốn
-                                                                                            @endif
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                @else
-                                                                                    <p>Không có thông tin seeker profile.</p>
-                                                                                @endif
-                                                                            </div>
+                                                                                    @endforeach
+                                                                                </ul>
+                                                                            @else
+                                                                                <p>Không có thông tin seeker profile.</p>
+                                                                            @endif
+                                                                        </div>
+                                                                        
                                                                         @endforeach
-                                                                    @else
+                                                                        @else
                                                                         <p>Không có người dùng nào.</p>
-                                                                    @endif
-                                                                    
+                                                                        @endif
+
 
                                                                     </a>
 
@@ -1477,7 +1404,7 @@
                                                                                         $user->created_at ?? 'Chưa có'
                                                                                         }}</span>
                                                                                 </p>
-                                                                              
+
                                                                                 <p class="text-muted mb-0"><strong>Trạng
                                                                                         thái:</strong>
                                                                                     <span class="ml-2"
@@ -1658,29 +1585,71 @@
 
                                                                 </div>
                                                                 <div class="box-row box-cjcs">
-
-
+                                                                    @foreach ($resumes as $resume)
+                                                                        @if ($resume->advancedSkills->isNotEmpty())
+                                                                            @foreach ($resume->advancedSkills as $skill)
+                                                                                <div class="skill-card"> <!-- Card for each skill -->
+                                                                                    <p class="skill-name text-muted mb-0">
+                                                                                        <strong>{{ $skill->name }}</strong>
+                                                                                    </p>
+                                                                                    <p class="skill-level text-muted mb-2">
+                                                                                        <span class="ml-2 editable" data-name="expected_salary_min" >
+                                                                                            {{ $skill->level }} năm kinh nghiệm
+                                                                                        </span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            @endforeach
+                                                                        @else
+                                                                            <p>No advanced skills available for this resume.</p>
+                                                                        @endif
+                                                                    @endforeach
                                                                 </div>
+                                                                <style>
+.box-row {
+    display: flex;
+    flex-direction: column; /* Stack skills vertically */
+    gap: 15px; /* Space between skill cards */
+}
 
+.skill-card {
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside each card */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.skill-card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.skill-name {
+    font-weight: bold; /* Emphasize skill name */
+}
+
+.skill-level {
+    margin-top: 5px; /* Space above skill level */
+}
+
+.text-muted {
+    color: #6c757d; /* Bootstrap muted color */
+}
+
+.editable {
+    cursor: pointer; /* Indicate that this can be edited */
+}
+
+.editable:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+                                                                </style>
+                                                                
                                                             </div>
                                                         </div>
-                                                        <div class="bg-cv-ai">
-                                                            <img src="https://jobsgo.vn/teks/img/jobsgo-ai-robot.svg?v=1.2"
-                                                                class="bouncing-image mr-10" style="width:35px;">
-                                                            <div class="roller">
-                                                                <div class="rolltext">
-                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile"
-                                                                        class="text-white text-lg"><span>Hoàn hiện hồ sơ
-                                                                            của bạn bằng AI</span><span
-                                                                            class="btn-try-it">Trải nghiệm
-                                                                            ngay!</span></a>
-                                                                    <a href="https://jobsgo.vn/tao-cv-bang-ai.html?utm_source=pre-profile"
-                                                                        class="text-white text-lg"><span>Tạo CV chuyên
-                                                                            nghiệp bằng AI</span><span
-                                                                            class="btn-try-it">Thử ngay!</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                   
                                                         <div class="card-box" id="s3">
 
 
@@ -1689,38 +1658,97 @@
                                                                 <div class="tab-pane show active">
 
                                                                     <div class="box-jc box-cj box-1">
-                                                                        <div class="clearfix">
-                                                                            <div class="pull-left">
-                                                                                <h6
-                                                                                    class="modal-title text-uppercase text-blue-800">
-                                                                                    Kinh nghiệm làm việc
-                                                                                    <span
-                                                                                        style="color: red !important;">*</span>
-                                                                                </h6>
-
+                                                                        
+                                                                        <div class="box-row box-cjcs">
+                                                                            <div class="clearfix">
+                                                                                <div class="pull-left">
+                                                                                    <h6 class="modal-title text-uppercase text-blue-800">
+                                                                                        Kinh nghiệm làm việc
+                                                                                        <span style="color: red !important;">*</span>
+                                                                                    </h6>
+                                                                                </div>
+                                                                            
+                                                                                <div class="pull-right">
+                                                                                    <button data-id="0" type="button"
+                                                                                            class="btn text-blue-800 pull-right btn-default"
+                                                                                            data-toggle="modal"
+                                                                                            data-backdrop="static"
+                                                                                            data-target="#colorgbModal1">
+                                                                                        <i class="icon-plus2"></i> Thêm mới kinh nghiệm làm việc
+                                                                                    </button>
+                                                                                </div>
                                                                             </div>
-
-
-                                                                            <div class="pull-right">
-
-                                                                                <button data-id="0" type="button"
-                                                                                    class="btn text-blue-800 pull-right btn-default"
-                                                                                    data-toggle="modal"
-                                                                                    data-backdrop="static"
-                                                                                    data-target="#colorgbModal1"><i
-                                                                                        class="icon-plus2"></i> Thêm mới
-                                                                                    kinh nghiệm làm việc
-                                                                                </button>
-
+                                                                            
+                                                                            <div class="box-timeline">
+                                                                                <div class="timeline timeline-left mt-20">
+                                                                                    <div class="timeline-container">
+                                                                                        @foreach ($resumes as $resume)
+                                                                                            @if ($resume->experienceDetails->isNotEmpty())
+                                                                                                @foreach ($resume->experienceDetails as $experience)
+                                                                                                    <div class="timeline-row">
+                                                                                                        <div class="timeline-icon">
+                                                                                                            <div class="bg-blue-700">
+                                                                                                                <i class="icon-clipboard5"></i>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row mb-0">
+                                                                                                            <div class="col-lg-12">
+                                                                                                                <div class="panel panel-flat timeline-content">
+                                                                                                                    <div class="panel-heading">
+                                                                                                                        <h5 class="panel-title" title="Chức danh">Chức danh: {{ $experience->job_name }}</h5>
+                                                                                                                        <div class="btn-group heading-elements">
+                                                                                                                            <button data-id="{{ $experience->id }}"
+                                                                                                                                    data-i1="{{ $experience->company_name }}"
+                                                                                                                                    data-i2="{{ $experience->job_name }}"
+                                                                                                                                    data-i31="{{ date('Y', strtotime($experience->start_date)) }}"
+                                                                                                                                    data-i32="{{ date('m', strtotime($experience->start_date)) }}"
+                                                                                                                                    data-i41="{{ date('Y', strtotime($experience->end_date)) }}"
+                                                                                                                                    data-i42="{{ date('m', strtotime($experience->end_date)) }}"
+                                                                                                                                    data-i5="{{ $experience->description }}"
+                                                                                                                                    data-toggle="modal"
+                                                                                                                                    data-backdrop="static"
+                                                                                                                                    data-target="#colorgbModal1"
+                                                                                                                                    class="btn btn-update-cjh btn-xs btn-default text-green">
+                                                                                                                                <i class="icon-pencil7 position-left"></i> Sửa
+                                                                                                                            </button>
+                                                                                                                            <button data-id="{{ $experience->id }}"
+                                                                                                                                    class="btn btn-del-cjh btn-xs btn-default text-warning">
+                                                                                                                                <i class="icon-trash position-left"></i> Xóa
+                                                                                                                            </button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="panel-body">
+                                                                                                                        <div class="panel-{{ $experience->id }}">
+                                                                                                                            <div>
+                                                                                                                                <div class="panel-heading-bk pb-5">
+                                                                                                                                    <div title="Công ty">Công ty: {{ $experience->company_name }}</div>
+                                                                                                                                    <div class="text-muted mb-0">
+                                                                                                                                        <strong>Thời gian:</strong> {{ date('Y-m', strtotime($experience->start_date)) }} đến {{ date('Y-m', strtotime($experience->end_date)) }} 
+                                                                                                                                        ({{ \Carbon\Carbon::parse($experience->start_date)->diffInMonths($experience->end_date) }} tháng)
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                <p style="font-size:14px;" class="pb-15" title="Mô tả công việc">
+                                                                                                                                    <strong>Mô tả:</strong> {{ $experience->description }}
+                                                                                                                                </p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endforeach
+                                                                                            @else
+                                                                                                <p class="text-muted">Chưa có kinh nghiệm làm việc nào cho hồ sơ này.</p>
+                                                                                            @endif
+                                                                                        @endforeach
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
-
+                                                                            
+                                                                            
                                                                         </div>
-                                                                        <div class="box-timeline">
-                                                                            <div class="lds-ripple">
-                                                                                <div></div>
-                                                                                <div></div>
-                                                                            </div>
-                                                                        </div>
+                                                                        
 
                                                                     </div>
 
@@ -1736,26 +1764,83 @@
                                                             <div class="box-jc box-ce box-1">
 
                                                                 <div class="clearfix">
-
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Quá trình học tập <span
-                                                                            style="color: red !important;">*</span></h6>
+                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Quá trình học tập <span style="color: red !important;">*</span>
+                                                                    </h6>
                                                                     <button data-id="0" type="button"
                                                                         class="btn btn-add pull-right text-blue-800 btn-default"
                                                                         data-toggle="modal" data-backdrop="static"
-                                                                        data-target="#colorgbModal21"><i
-                                                                            class="icon-plus2"></i> Thêm mới quá trình
-                                                                        học tập</button>
-
+                                                                        data-target="#colorgbModal21">
+                                                                        <i class="icon-plus2"></i> Thêm mới quá trình học tập
+                                                                    </button>
                                                                 </div>
+                                                                
                                                                 <div class="box-timeline">
-                                                                    <div class="lds-ripple">
-                                                                        <div></div>
-                                                                        <div></div>
+                                                                    <div class="timeline timeline-left mt-20">
+                                                                        <div class="timeline-container">
+                                                                            @foreach ($resumes as $resume)
+                                                                                @if ($resume->educationDetails->isNotEmpty())
+                                                                                    @foreach ($resume->educationDetails as $education)
+                                                                                        <div class="timeline-row">
+                                                                                            <div class="timeline-icon">
+                                                                                                <div class="bg-orange-700">
+                                                                                                    <i class="icon-graduation2"></i>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-lg-12">
+                                                                                                    <div class="panel panel-flat timeline-content">
+                                                                                                        <div class="panel-heading">
+                                                                                                            <h5 class="panel-title">Tên trường: {{ $education->degree_name }}</h5>
+                                                                                                            <div class="btn-group heading-elements">
+                                                                                                                <button data-id="{{ $education->id }}" 
+                                                                                                                        data-i1="{{ $education->degree_name }}"
+                                                                                                                        data-i2="{{ $education->completed_date }}"
+                                                                                                                        data-i3="{{ $education->start_date }}"
+                                                                                                                        data-i4="{{ $education->training_place }}"
+                                                                                                                        data-i5="{{ $education->description }}"
+                                                                                                                        data-i6="0" 
+                                                                                                                        data-toggle="modal" 
+                                                                                                                        data-backdrop="static" 
+                                                                                                                        data-target="#colorgbModal21" 
+                                                                                                                        class="btn btn-update btn-xs btn-default text-green">
+                                                                                                                    <i class="icon-pencil7 position-left"></i> Sửa
+                                                                                                                </button>
+                                                                                                                <button data-id="{{ $education->id }}" 
+                                                                                                                        class="btn btn-del btn-del-ce btn-xs btn-default text-warning">
+                                                                                                                    <i class="icon-trash position-left"></i> Xóa
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="panel-body">
+                                                                                                            <div class="panel-{{ $education->id }}">
+                                                                                                                <div>
+                                                                                                                    <div class="panel-heading-bk">
+                                                                                                                        <div>Bằng cấp: {{ $education->degree_name }}. Chuyên ngành: {{ $education->major }}</div>
+                                                                                                                        <div class="text-muted">Năm tốt nghiệp: {{ $education->completed_date }}</div>
+                                                                                                                    </div>
+                                                                                                                    <p style="font-size:14px;" class="pb-15" title="Mô tả quá trình học tập">
+                                                                                                                       Mô tả: {{ $education->description }}
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    @endforeach
+                                                                                @else
+                                                                                    <p>No education details available for this resume.</p>
+                                                                                @endif
+                                                                            @endforeach
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-
+                                                                
+                                                            
+                                                                
+                                                                
                                                             </div>
                                                         </div>
 
@@ -1764,2283 +1849,129 @@
 
                                                                 <div class="box-2">
                                                                     <div class="clearfix">
-                                                                        <h6
-                                                                            class="modal-title text-uppercase pull-left text-blue-800">
-                                                                            Ngôn ngữ thành thạo <span
-                                                                                style="color: red !important;">*</span>
+                                                                        <h6 class="modal-title text-uppercase pull-left text-blue-800">
+                                                                            Ngôn ngữ thành thạo <span style="color: red !important;">*</span>
                                                                         </h6>
                                                                         <button type="button"
-                                                                            class="btn pull-right text-blue-800 btn-default"
-                                                                            data-toggle="modal" data-backdrop="static"
-                                                                            data-target="#colorgbModal24"><i
-                                                                                class="icon-plus2"></i> Thêm mới ngôn
-                                                                            ngữ</button>
+                                                                                class="btn pull-right text-blue-800 btn-default"
+                                                                                data-toggle="modal" data-backdrop="static"
+                                                                                data-target="#colorgbModal24">
+                                                                            <i class="icon-plus2"></i> Thêm mới ngôn ngữ
+                                                                        </button>
                                                                     </div>
                                                                     <div class="colorgb-row">
-                                                                        <div class="lds-ripple">
-                                                                            <div></div>
-                                                                            <div></div>
+                                                                        <div class="row">
+                                                                            @foreach ($resumes as $resume)
+                                                                                @if ($resume->languageSkills->isNotEmpty())
+                                                                                @php
+                                                                                // Array mapping languages to their corresponding flag images
+                                                                                $languageFlags = [
+                                                                                    'Tiếng Anh' => 'https://jobsgo.vn/media/icon_flag/England-Flag.png',
+                                                                                    'Tiếng Pháp' => 'https://jobsgo.vn/media/icon_flag/France-Flag.png',
+                                                                                    'Tiếng Việt' => 'https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png',
+                                                                                    'Tiếng Nhật' => 'https://jobsgo.vn/media/icon_flag/Japan-Flag.png',
+                                                                                    'Tiếng Hàn' => 'https://jobsgo.vn/media/icon_flag/Korea-Flag.png',
+                                                                                    'Tiếng Đức' => 'https://jobsgo.vn/media/icon_flag/Germany-Flag.png',
+                                                                                    'Tiếng Ý' => 'https://jobsgo.vn/media/icon_flag/Italy-Flag.png',
+                                                                                    'Tiếng Trung' => 'https://jobsgo.vn/media/icon_flag/China-Flag.png',
+                                                                                    'Tiếng Nga' => 'https://jobsgo.vn/media/icon_flag/Russia-Flag.png',
+                                                                                ];
+                                                                            @endphp
+                                                                            
+                                                                            @foreach ($resume->languageSkills as $skill)
+                                                                                <div class="item-jcc col-md-2 col-sm-3 col-xs-4">
+                                                                                    <a href="javascript:void(0)">
+                                                                                        <div class="img">
+                                                                                            <img src="{{ $languageFlags[$skill->language] ?? 'default-image-url.png' }}" alt="{{ $skill->language }}" width="100"> <!-- Use the mapping for the flag -->
+                                                                                            <span>{{ $skill->level }}%</span> <!-- Assuming level is a percentage -->
+                                                                                        </div>
+                                                                                        <h6 class="text-nowrap" style="text-align: center">{{ $skill->language }}</h6>
+                                                                                    </a>
+                                                                                    <button title="Xóa bỏ" class="btn-del btn-del-css" data-id="{{ $skill->id }}" data-iid="{{ $skill->id }}">
+                                                                                        <i class="icon-close2"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            @endforeach
+                                                                            
+                                                                                @else
+                                                                                    <div class="col-md-12">
+                                                                                        <p>Chưa có ngôn ngữ thành thạo nào cho hồ sơ này.</p>
+                                                                                    </div>
+                                                                                @endif
+                                                                            @endforeach
                                                                         </div>
                                                                     </div>
+                                                                    
+                                                                    
                                                                 </div>
 
                                                             </div>
                                                         </div>
 
 
-                                                        <div class="card-box">
-                                                            <div class="box-jc box-52">
-                                                                <div class="clearfix">
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Kỹ năng mềm <span
-                                                                            style="color: red !important;">*</span></h6>
-                                                                    <button type="button"
-                                                                        class="btn pull-right text-blue-800 btn-default"
-                                                                        data-toggle="modal" data-backdrop="static"
-                                                                        data-target="#colorgbModal54"><i
-                                                                            class="icon-plus2"></i> Thêm mới kỹ năng mềm
-                                                                    </button>
-                                                                </div>
-                                                                <div class="colorgb-row">
-                                                                    <div class="lds-ripple">
-                                                                        <div></div>
-                                                                        <div></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                  
 
-                                                        </div>
-
-                                                        <div class="card-box">
-                                                            <div class="box-jc box-32">
-                                                                <div class="clearfix">
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Sở thích <span
-                                                                            style="color: red !important;">*</span></h6>
-                                                                    <button type="button"
-                                                                        class="btn pull-right text-blue-800 btn-default"
-                                                                        data-toggle="modal" data-backdrop="static"
-                                                                        data-target="#colorgbModal31"><i
-                                                                            class="icon-plus2"></i> Thêm mới sở
-                                                                        thích</button>
-                                                                </div>
-                                                                <div class="colorgb-row">
-                                                                    <div class="lds-ripple">
-                                                                        <div></div>
-                                                                        <div></div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="card-box">
-                                                            <div class="box-cjp box-132">
-                                                                <div class="clearfix">
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Địa điểm mong muốn làm việc <span
-                                                                            style="color: red !important;">*</span></h6>
-                                                                    <button type="button"
-                                                                        class="btn pull-right text-blue-800 btn-default"
-                                                                        data-toggle="modal" data-backdrop="static"
-                                                                        data-target="#colorgbModal131"><i
-                                                                            class="icon-plus2"></i> Thêm mới địa
-                                                                        điểm</button>
-                                                                </div>
-                                                                <div class="colorgb-row">
-                                                                    <div class="lds-ripple">
-                                                                        <div></div>
-                                                                        <div></div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="card-box" id="s5">
-                                                            <div class="clearfix">
-                                                                <h6 class="modal-title text-uppercase text-blue-800">Tệp
-                                                                    đính kèm <span
-                                                                        style="color: red !important;">*</span></h6>
-                                                                <a target="_blank" href="/candidate/document-attachment"
-                                                                    class="btn btn-default mt-10"><i
-                                                                        class="fa fa-paperclip"></i>
-                                                                    Thêm mới tệp đính kèm</a>
-                                                            </div>
-                                                        </div>
-
+                                                        
                                                         <div id="section-certificate" class="card-box">
                                                             <div class="box-cjp box-132">
                                                                 <div class="clearfix">
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Chứng chỉ <span
-                                                                            style="color: red !important;">*</span></h6>
-                                                                    <button data-id="0" type="button"
-                                                                        class="btn btn-add pull-right text-blue-800 btn-default"
-                                                                        data-toggle="modal" data-backdrop="static"
-                                                                        data-target="#license"><i
-                                                                            class="icon-plus2"></i> Thêm mới chứng
-                                                                        chỉ</button>
+                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Chứng chỉ <span style="color: red !important;">*</span>
+                                                                    </h6>
+                                                                    <button data-id="0" type="button" 
+                                                                            class="btn btn-add pull-right text-blue-800 btn-default"
+                                                                            data-toggle="modal" 
+                                                                            data-backdrop="static" 
+                                                                            data-target="#license">
+                                                                        <i class="icon-plus2"></i> Thêm mới chứng chỉ
+                                                                    </button>
                                                                 </div>
-                                                                <style>
-                                                                    .error {
-                                                                        color: red;
-                                                                        magin-top: 5px
-                                                                    }
-                                                                </style>
-                                                                <div id="license" class="modal" role="dialog">
-                                                                    <div class="modal-dialog modal-md">
-                                                                        <!-- Modal content-->
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <button type="button"
-                                                                                    title="Đóng cửa sổ" class="close"
-                                                                                    data-dismiss="modal">&times;</button>
-                                                                                <h4
-                                                                                    class="modal-title text-default-800">
-                                                                                    Thêm chứng chỉ</h4>
+                                                                @foreach ($resumes as $resume)
+                                                            
+                                                                @if ($resume->certificates->isNotEmpty())
+                                                                    <div class="certificate-container"> <!-- Container for certificates -->
+                                                                        @foreach ($resume->certificates as $certificate)
+                                                                            <div class="certificate-card"> <!-- Card for each certificate -->
+                                                                                <h5>Tên chứng chỉ: {{ $certificate->name }}</h5> <!-- Certificate name -->
+                                                                                <p><strong>Cơ sở cấp:</strong> {{ $certificate->training_place }}</p>
+                                                                                <p><strong>Ngày cấp:</strong> {{ \Carbon\Carbon::parse($certificate->start_date)->format('d/m/Y') }}</p>
+                                                                                <p><strong>Ngày hết hạn:</strong> {{ $certificate->expiration_date ? \Carbon\Carbon::parse($certificate->expiration_date)->format('d/m/Y') : 'Không xác định' }}</p>
+                                                                                <p><strong>Mô tả:</strong> {{ $certificate->description }}</p>
                                                                             </div>
-                                                                            <div class="modal-body">
-                                                                                <div
-                                                                                    class="panel panel-body border-top-blue">
-                                                                                    <form action="#"
-                                                                                        id="form-submit-certificate"
-                                                                                        method="POST" novalidate>
-                                                                                        <div class="row">
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-certificate_type_name required">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="certificate_type_name">Tên
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="certificate_type_name"
-                                                                                                        class="form-control js-example-basic-multiple"
-                                                                                                        placeholder="VD: IELTS 8.0, TOEIC 850..."
-                                                                                                        multiple="multiple"
-                                                                                                        name="certificate_type_name" />
-
-                                                                                                    <p
-                                                                                                        class="help-block help-block-error">
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-organization_name required">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="organization_name">Tổ
-                                                                                                        chức cấp chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="hidden"
-                                                                                                        id="organization_id"
-                                                                                                        name="organization_id">
-                                                                                                    <input type="text"
-                                                                                                        id="organization_name"
-                                                                                                        class="form-control js-example-basic-multiple"
-                                                                                                        multiple="multiple"
-                                                                                                        name="organization_name" />
-
-                                                                                                    <p
-                                                                                                        class="help-block help-block-error">
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div
-                                                                                                style="display:flex; align-items: end">
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-issue_date_month required">
-                                                                                                        <label
-                                                                                                            class="control-label"
-                                                                                                            for="issue_date_month">Thời
-                                                                                                            gian phát
-                                                                                                            hành</label>
-                                                                                                        <select
-                                                                                                            id="issue_date_month"
-                                                                                                            class="form-control"
-                                                                                                            name="issue_date_month">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Tháng
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="12">
-                                                                                                                Tháng 12
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="11">
-                                                                                                                Tháng 11
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="10">
-                                                                                                                Tháng 10
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="9">
-                                                                                                                Tháng 9
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="8">
-                                                                                                                Tháng 8
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="7">
-                                                                                                                Tháng 7
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="6">
-                                                                                                                Tháng 6
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="5">
-                                                                                                                Tháng 5
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="4">
-                                                                                                                Tháng 4
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="3">
-                                                                                                                Tháng 3
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2">
-                                                                                                                Tháng 2
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1">
-                                                                                                                Tháng 1
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="issue_date_month-error"
-                                                                                                        class="error"
-                                                                                                        for="issue_date_month"></label>
-                                                                                                </div>
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-issue_date_year">
-                                                                                                        <select
-                                                                                                            id="issue_date_year"
-                                                                                                            class="form-control"
-                                                                                                            name="issue_date_year">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Năm
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2024">
-                                                                                                                Năm 2024
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2023">
-                                                                                                                Năm 2023
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2022">
-                                                                                                                Năm 2022
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2021">
-                                                                                                                Năm 2021
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2020">
-                                                                                                                Năm 2020
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2019">
-                                                                                                                Năm 2019
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2018">
-                                                                                                                Năm 2018
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2017">
-                                                                                                                Năm 2017
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2016">
-                                                                                                                Năm 2016
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2015">
-                                                                                                                Năm 2015
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2014">
-                                                                                                                Năm 2014
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2013">
-                                                                                                                Năm 2013
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2012">
-                                                                                                                Năm 2012
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2011">
-                                                                                                                Năm 2011
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2010">
-                                                                                                                Năm 2010
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2009">
-                                                                                                                Năm 2009
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2008">
-                                                                                                                Năm 2008
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2007">
-                                                                                                                Năm 2007
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2006">
-                                                                                                                Năm 2006
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2005">
-                                                                                                                Năm 2005
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2004">
-                                                                                                                Năm 2004
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2003">
-                                                                                                                Năm 2003
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2002">
-                                                                                                                Năm 2002
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2001">
-                                                                                                                Năm 2001
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2000">
-                                                                                                                Năm 2000
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1999">
-                                                                                                                Năm 1999
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1998">
-                                                                                                                Năm 1998
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1997">
-                                                                                                                Năm 1997
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1996">
-                                                                                                                Năm 1996
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1995">
-                                                                                                                Năm 1995
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1994">
-                                                                                                                Năm 1994
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1993">
-                                                                                                                Năm 1993
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1992">
-                                                                                                                Năm 1992
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1991">
-                                                                                                                Năm 1991
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1990">
-                                                                                                                Năm 1990
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1989">
-                                                                                                                Năm 1989
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1988">
-                                                                                                                Năm 1988
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1987">
-                                                                                                                Năm 1987
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1986">
-                                                                                                                Năm 1986
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1985">
-                                                                                                                Năm 1985
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1984">
-                                                                                                                Năm 1984
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1983">
-                                                                                                                Năm 1983
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1982">
-                                                                                                                Năm 1982
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1981">
-                                                                                                                Năm 1981
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1980">
-                                                                                                                Năm 1980
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1979">
-                                                                                                                Năm 1979
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1978">
-                                                                                                                Năm 1978
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1977">
-                                                                                                                Năm 1977
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1976">
-                                                                                                                Năm 1976
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1975">
-                                                                                                                Năm 1975
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1974">
-                                                                                                                Năm 1974
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1973">
-                                                                                                                Năm 1973
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1972">
-                                                                                                                Năm 1972
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1971">
-                                                                                                                Năm 1971
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1970">
-                                                                                                                Năm 1970
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="issue_date_year-error"
-                                                                                                        class="error"
-                                                                                                        for="issue_date_year"></label>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <p
-                                                                                                class="help-block help-block-error">
-                                                                                            </p>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div
-                                                                                                style="display:flex; align-items: end">
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-expiration_date_month">
-                                                                                                        <label
-                                                                                                            class="control-label"
-                                                                                                            for="expiration_date_month">Thời
-                                                                                                            gian hết
-                                                                                                            hạn</label>
-                                                                                                        <select
-                                                                                                            id="expiration_date_month"
-                                                                                                            class="form-control"
-                                                                                                            name="expiration_date_month">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Tháng
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="12">
-                                                                                                                Tháng 12
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="11">
-                                                                                                                Tháng 11
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="10">
-                                                                                                                Tháng 10
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="9">
-                                                                                                                Tháng 9
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="8">
-                                                                                                                Tháng 8
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="7">
-                                                                                                                Tháng 7
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="6">
-                                                                                                                Tháng 6
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="5">
-                                                                                                                Tháng 5
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="4">
-                                                                                                                Tháng 4
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="3">
-                                                                                                                Tháng 3
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2">
-                                                                                                                Tháng 2
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1">
-                                                                                                                Tháng 1
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="expiration_date_month-error"
-                                                                                                        class="error"
-                                                                                                        for="expiration_date_month"></label>
-                                                                                                </div>
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-expiration_date_year">
-                                                                                                        <select
-                                                                                                            id="expiration_date_year"
-                                                                                                            class="form-control"
-                                                                                                            name="expiration_date_year">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Năm
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2054">
-                                                                                                                Năm 2054
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2053">
-                                                                                                                Năm 2053
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2052">
-                                                                                                                Năm 2052
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2051">
-                                                                                                                Năm 2051
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2050">
-                                                                                                                Năm 2050
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2049">
-                                                                                                                Năm 2049
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2048">
-                                                                                                                Năm 2048
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2047">
-                                                                                                                Năm 2047
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2046">
-                                                                                                                Năm 2046
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2045">
-                                                                                                                Năm 2045
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2044">
-                                                                                                                Năm 2044
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2043">
-                                                                                                                Năm 2043
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2042">
-                                                                                                                Năm 2042
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2041">
-                                                                                                                Năm 2041
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2040">
-                                                                                                                Năm 2040
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2039">
-                                                                                                                Năm 2039
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2038">
-                                                                                                                Năm 2038
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2037">
-                                                                                                                Năm 2037
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2036">
-                                                                                                                Năm 2036
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2035">
-                                                                                                                Năm 2035
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2034">
-                                                                                                                Năm 2034
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2033">
-                                                                                                                Năm 2033
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2032">
-                                                                                                                Năm 2032
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2031">
-                                                                                                                Năm 2031
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2030">
-                                                                                                                Năm 2030
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2029">
-                                                                                                                Năm 2029
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2028">
-                                                                                                                Năm 2028
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2027">
-                                                                                                                Năm 2027
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2026">
-                                                                                                                Năm 2026
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2025">
-                                                                                                                Năm 2025
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2024">
-                                                                                                                Năm 2024
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2023">
-                                                                                                                Năm 2023
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2022">
-                                                                                                                Năm 2022
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2021">
-                                                                                                                Năm 2021
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2020">
-                                                                                                                Năm 2020
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2019">
-                                                                                                                Năm 2019
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2018">
-                                                                                                                Năm 2018
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2017">
-                                                                                                                Năm 2017
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2016">
-                                                                                                                Năm 2016
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2015">
-                                                                                                                Năm 2015
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2014">
-                                                                                                                Năm 2014
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2013">
-                                                                                                                Năm 2013
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2012">
-                                                                                                                Năm 2012
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2011">
-                                                                                                                Năm 2011
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2010">
-                                                                                                                Năm 2010
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2009">
-                                                                                                                Năm 2009
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2008">
-                                                                                                                Năm 2008
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2007">
-                                                                                                                Năm 2007
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2006">
-                                                                                                                Năm 2006
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2005">
-                                                                                                                Năm 2005
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2004">
-                                                                                                                Năm 2004
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2003">
-                                                                                                                Năm 2003
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2002">
-                                                                                                                Năm 2002
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2001">
-                                                                                                                Năm 2001
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2000">
-                                                                                                                Năm 2000
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1999">
-                                                                                                                Năm 1999
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1998">
-                                                                                                                Năm 1998
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1997">
-                                                                                                                Năm 1997
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1996">
-                                                                                                                Năm 1996
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1995">
-                                                                                                                Năm 1995
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1994">
-                                                                                                                Năm 1994
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1993">
-                                                                                                                Năm 1993
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1992">
-                                                                                                                Năm 1992
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1991">
-                                                                                                                Năm 1991
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1990">
-                                                                                                                Năm 1990
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1989">
-                                                                                                                Năm 1989
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1988">
-                                                                                                                Năm 1988
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1987">
-                                                                                                                Năm 1987
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1986">
-                                                                                                                Năm 1986
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1985">
-                                                                                                                Năm 1985
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1984">
-                                                                                                                Năm 1984
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1983">
-                                                                                                                Năm 1983
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1982">
-                                                                                                                Năm 1982
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1981">
-                                                                                                                Năm 1981
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1980">
-                                                                                                                Năm 1980
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1979">
-                                                                                                                Năm 1979
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1978">
-                                                                                                                Năm 1978
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1977">
-                                                                                                                Năm 1977
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1976">
-                                                                                                                Năm 1976
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1975">
-                                                                                                                Năm 1975
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1974">
-                                                                                                                Năm 1974
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1973">
-                                                                                                                Năm 1973
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1972">
-                                                                                                                Năm 1972
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1971">
-                                                                                                                Năm 1971
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1970">
-                                                                                                                Năm 1970
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="expiration_date_year-error"
-                                                                                                        class="error"
-                                                                                                        for="expiration_date_year"></label>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <p
-                                                                                                class="help-block help-block-error">
-                                                                                            </p>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="credential_id">ID
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="credential_id"
-                                                                                                        class="form-control"
-                                                                                                        name="credential_id"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="credential_url">URL
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="credential_url"
-                                                                                                        class="form-control"
-                                                                                                        name="credential_url"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="note">Ghi
-                                                                                                        chú</label>
-                                                                                                    <textarea
-                                                                                                        class="form-control"
-                                                                                                        name="note">
-                                      </textarea>
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="form-group mt-10">
-                                                                                            <span class="pull-left">
-                                                                                                <button type="submit"
-                                                                                                    id="btn-submit-certificate"
-                                                                                                    class="btn btn-primary btn-ladda btn-ladda-spinner">
-                                                                                                    <i
-                                                                                                        class="icon-floppy-disk position-left"></i>
-                                                                                                    <span
-                                                                                                        class="ladda-label">Lưu
-                                                                                                        lại</span>
-                                                                                                    <span
-                                                                                                        class="ladda-spinner"></span>
-                                                                                                    <span
-                                                                                                        class="ladda-spinner"></span>
-                                                                                                </button>
-                                                                                            </span>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
+                                                                        @endforeach
                                                                     </div>
-                                                                </div>
-                                                                <script src="/js/validation-rules-jquery.js"></script>
-                                                                <script>
-                                                                    $(document).ready(function() {
-                                                                        $('#license').on('shown.bs.modal', function() {
-                                                                            $('.form-group').css('margin-bottom', 0)
-                                                                            $("#certificate_type_name").easyAutocomplete({
-                                                                                url: function(phrase) {
-                                                                                    return "/api/search-certificate-type";
-                                                                                },
-                                                                                getValue: function(element) {
-                                                                                    return element.certificate_type_name;
-                                                                                },
-                                                                                ajaxSettings: {
-                                                                                    dataType: "json",
-                                                                                    method: "POST",
-                                                                                    data: {
-                                                                                        dataType: "json"
-                                                                                    }
-                                                                                },
+                                                                @else
+                                                                    <p>No certificates available for this resume.</p>
+                                                                @endif
+                                                            @endforeach
+                                                            
+                                                            
+                                                            </div> </div>
+                                                            <style>
+                                                            .certificate-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+}
 
-                                                                                preparePostData: function(data) {
-                                                                                    data.certificate_type_name = $("#certificate_type_name").val();
-                                                                                    return data;
-                                                                                },
+.certificate-card {
+    border: 1px solid #ccc; /* Border around each card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    width: 100%; /* Full width for each card */
+}
 
-                                                                                requestDelay: 400,
-                                                                            });
+.certificate-card h5 {
+    margin: 0 0 10px; /* Space below the title */
+}
 
-                                                                            $("#organization_name").easyAutocomplete({
-                                                                                url: function(phrase) {
-                                                                                    return "/api/search-certificate-organization";
-                                                                                },
-                                                                                getValue: formatAutocompleteValue,
-                                                                                ajaxSettings: {
-                                                                                    dataType: "json",
-                                                                                    method: "POST",
-                                                                                    data: {
-                                                                                        dataType: "json"
-                                                                                    }
-                                                                                },
-                                                                                preparePostData: function(data) {
-                                                                                    data.organization_name = $("#organization_name").val();
-                                                                                    return data;
-                                                                                },
-                                                                                requestDelay: 400,
-                                                                                list: {
-                                                                                    onClickEvent: function() {
-                                                                                        const selectedValue = $("#organization_name").getSelectedItemData();
-                                                                                        $("#organization_name").val(selectedValue.organization_name)
-                                                                                        $("#organization_id").val(selectedValue.id)
-                                                                                    }
-                                                                                }
-                                                                            });
+.certificate-card p {
+    margin: 5px 0; /* Space between paragraphs */
+}
 
-                                                                            function formatAutocompleteValue(element) {
-                                                                                return `<div class='select2-result-repository clearfix'>
-                  ${formatRepositoryMeta(element)}
-              </div>`;
-                                                                            }
-
-                                                                            function formatRepositoryMeta(element) {
-                                                                                return `<div class='select2-result-repository__meta' style="margin-left: 5px !important;">
-                  <div class='select2-result-repository__avatar'>
-                      <img src="${element.logo}" />
-                  </div>
-                  ${formatRepositoryContent(element)}
-              </div>`;
-                                                                            }
-
-                                                                            function formatRepositoryContent(element) {
-                                                                                return `<div class='select2-result-repository__content' style="padding-left: 20px !important">
-                  <div class='select2-result-repository__title' style='text-transform: capitalize !important;'>${element.organization_name}</div>
-                  <div class='select2-result-repository__title' style='text-transform: capitalize !important; font-weight: 600'>Company • ${element.service}</div>
-              </div>`;
-                                                                            }
-                                                                        });
-
-                                                                        $('#btn-submit-certificate').click(function(e) {
-                                                                            $('#form-submit-certificate').validate({
-                                                                                rules: {
-                                                                                    certificate_type_name: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    organization_name: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    issue_date_month: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    issue_date_year: {
-                                                                                        required: true
-                                                                                    },
-                                                                                },
-                                                                                messages: {
-                                                                                    certificate_type_name: {
-                                                                                        'required': 'Tên chứng chỉ không để trống!'
-                                                                                    },
-                                                                                    organization_name: {
-                                                                                        required: 'Tên tổ chức không để trống!'
-                                                                                    },
-                                                                                    issue_date_month: {
-                                                                                        required: 'Chọn tháng phát hành'
-                                                                                    },
-                                                                                    issue_date_year: {
-                                                                                        required: 'Chọn năm phát hành'
-                                                                                    },
-                                                                                },
-                                                                                submitHandler: function(form) {
-                                                                                    $.ajax({
-                                                                                        type: 'post',
-                                                                                        data: $('#form-submit-certificate').serialize(),
-                                                                                        dataType: "json",
-                                                                                        url: "/api/save-certificate",
-                                                                                        success: function(result) {
-                                                                                            $('#license').modal('hide');
-                                                                                            colorgbJGrowl('bg-success', 'Cập nhật dữ liệu thành công');
-
-                                                                                            setTimeout(function() {
-                                                                                                location.reload();
-                                                                                            }, 1500);
-                                                                                        }
-                                                                                    });
-                                                                                }
-                                                                            });
-                                                                        })
-                                                                    });
-                                                                </script>
-                                                                <style>
-                                                                    .error {
-                                                                        color: red;
-                                                                        magin-top: 5px
-                                                                    }
-                                                                </style>
-                                                                <div id="edit_certificate" class="modal" role="dialog">
-                                                                    <div class="modal-dialog modal-md">
-                                                                        <!-- Modal content-->
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <button type="button"
-                                                                                    title="Đóng cửa sổ" class="close"
-                                                                                    data-dismiss="modal">&times;</button>
-                                                                                <h4
-                                                                                    class="modal-title text-default-800">
-                                                                                    Sửa chứng chỉ</h4>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                                <div
-                                                                                    class="panel panel-body border-top-blue">
-                                                                                    <form action="#"
-                                                                                        id="form-edit-submit-certificate"
-                                                                                        method="POST" novalidate>
-                                                                                        <input type="hidden"
-                                                                                            id="edit_certificate_id"
-                                                                                            class="form-control js-example-basic-multiple"
-                                                                                            multiple="multiple"
-                                                                                            name="certificate_id" />
-                                                                                        <div class="row">
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-certificate_type_name required">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="certificate_type_name">Tên
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="edit_certificate_type_name"
-                                                                                                        class="form-control js-example-basic-multiple"
-                                                                                                        placeholder="VD: IELTS 8.0, TOEIC 850..."
-                                                                                                        multiple="multiple"
-                                                                                                        name="certificate_type_name" />
-
-                                                                                                    <p
-                                                                                                        class="help-block help-block-error">
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-organization_name required">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="organization_name">Tổ
-                                                                                                        chức cấp chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="hidden"
-                                                                                                        id="organization_id"
-                                                                                                        name="organization_id">
-                                                                                                    <input type="text"
-                                                                                                        id="edit_organization_name"
-                                                                                                        class="form-control js-example-basic-multiple"
-                                                                                                        multiple="multiple"
-                                                                                                        name="organization_name" />
-
-                                                                                                    <p
-                                                                                                        class="help-block help-block-error">
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div
-                                                                                                style="display:flex; align-items: end">
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-issue_date_month required">
-                                                                                                        <label
-                                                                                                            class="control-label"
-                                                                                                            for="edit_issue_date_month">Thời
-                                                                                                            gian phát
-                                                                                                            hành</label>
-                                                                                                        <select
-                                                                                                            id="edit_issue_date_month"
-                                                                                                            class="form-control"
-                                                                                                            name="issue_date_month">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Tháng
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="12">
-                                                                                                                Tháng 12
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="11">
-                                                                                                                Tháng 11
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="10">
-                                                                                                                Tháng 10
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="9">
-                                                                                                                Tháng 9
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="8">
-                                                                                                                Tháng 8
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="7">
-                                                                                                                Tháng 7
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="6">
-                                                                                                                Tháng 6
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="5">
-                                                                                                                Tháng 5
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="4">
-                                                                                                                Tháng 4
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="3">
-                                                                                                                Tháng 3
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2">
-                                                                                                                Tháng 2
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1">
-                                                                                                                Tháng 1
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="edit_issue_date_month-error"
-                                                                                                        class="error"
-                                                                                                        for="edit_issue_date_month"></label>
-                                                                                                </div>
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-edit_issue_date_year">
-                                                                                                        <select
-                                                                                                            id="edit_issue_date_year"
-                                                                                                            class="form-control"
-                                                                                                            name="issue_date_year">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Năm
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2024">
-                                                                                                                Năm 2024
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2023">
-                                                                                                                Năm 2023
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2022">
-                                                                                                                Năm 2022
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2021">
-                                                                                                                Năm 2021
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2020">
-                                                                                                                Năm 2020
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2019">
-                                                                                                                Năm 2019
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2018">
-                                                                                                                Năm 2018
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2017">
-                                                                                                                Năm 2017
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2016">
-                                                                                                                Năm 2016
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2015">
-                                                                                                                Năm 2015
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2014">
-                                                                                                                Năm 2014
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2013">
-                                                                                                                Năm 2013
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2012">
-                                                                                                                Năm 2012
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2011">
-                                                                                                                Năm 2011
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2010">
-                                                                                                                Năm 2010
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2009">
-                                                                                                                Năm 2009
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2008">
-                                                                                                                Năm 2008
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2007">
-                                                                                                                Năm 2007
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2006">
-                                                                                                                Năm 2006
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2005">
-                                                                                                                Năm 2005
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2004">
-                                                                                                                Năm 2004
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2003">
-                                                                                                                Năm 2003
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2002">
-                                                                                                                Năm 2002
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2001">
-                                                                                                                Năm 2001
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2000">
-                                                                                                                Năm 2000
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1999">
-                                                                                                                Năm 1999
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1998">
-                                                                                                                Năm 1998
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1997">
-                                                                                                                Năm 1997
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1996">
-                                                                                                                Năm 1996
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1995">
-                                                                                                                Năm 1995
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1994">
-                                                                                                                Năm 1994
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1993">
-                                                                                                                Năm 1993
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1992">
-                                                                                                                Năm 1992
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1991">
-                                                                                                                Năm 1991
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1990">
-                                                                                                                Năm 1990
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1989">
-                                                                                                                Năm 1989
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1988">
-                                                                                                                Năm 1988
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1987">
-                                                                                                                Năm 1987
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1986">
-                                                                                                                Năm 1986
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1985">
-                                                                                                                Năm 1985
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1984">
-                                                                                                                Năm 1984
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1983">
-                                                                                                                Năm 1983
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1982">
-                                                                                                                Năm 1982
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1981">
-                                                                                                                Năm 1981
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1980">
-                                                                                                                Năm 1980
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1979">
-                                                                                                                Năm 1979
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1978">
-                                                                                                                Năm 1978
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1977">
-                                                                                                                Năm 1977
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1976">
-                                                                                                                Năm 1976
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1975">
-                                                                                                                Năm 1975
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1974">
-                                                                                                                Năm 1974
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1973">
-                                                                                                                Năm 1973
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1972">
-                                                                                                                Năm 1972
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1971">
-                                                                                                                Năm 1971
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1970">
-                                                                                                                Năm 1970
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="edit_issue_date_year-error"
-                                                                                                        class="error"
-                                                                                                        for="edit_issue_date_year"></label>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <p
-                                                                                                class="help-block help-block-error">
-                                                                                            </p>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div
-                                                                                                style="display:flex; align-items: end">
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-edit_expiration_date_month">
-                                                                                                        <label
-                                                                                                            class="control-label"
-                                                                                                            for="edit_expiration_date_month">Thời
-                                                                                                            gian hết
-                                                                                                            hạn</label>
-                                                                                                        <select
-                                                                                                            id="edit_expiration_date_month"
-                                                                                                            class="form-control"
-                                                                                                            name="expiration_date_month">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Tháng
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="12">
-                                                                                                                Tháng 12
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="11">
-                                                                                                                Tháng 11
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="10">
-                                                                                                                Tháng 10
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="9">
-                                                                                                                Tháng 9
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="8">
-                                                                                                                Tháng 8
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="7">
-                                                                                                                Tháng 7
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="6">
-                                                                                                                Tháng 6
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="5">
-                                                                                                                Tháng 5
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="4">
-                                                                                                                Tháng 4
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="3">
-                                                                                                                Tháng 3
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2">
-                                                                                                                Tháng 2
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1">
-                                                                                                                Tháng 1
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="edit_expiration_date_month-error"
-                                                                                                        class="error"
-                                                                                                        for="edit_expiration_date_month"></label>
-                                                                                                </div>
-                                                                                                <div class="col-xs-6">
-                                                                                                    <div
-                                                                                                        class="form-group field-edit_expiration_date_year">
-                                                                                                        <select
-                                                                                                            id="edit_expiration_date_year"
-                                                                                                            class="form-control"
-                                                                                                            name="expiration_date_year">
-                                                                                                            <option
-                                                                                                                value="">
-                                                                                                                Năm
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2054">
-                                                                                                                Năm 2054
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2053">
-                                                                                                                Năm 2053
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2052">
-                                                                                                                Năm 2052
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2051">
-                                                                                                                Năm 2051
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2050">
-                                                                                                                Năm 2050
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2049">
-                                                                                                                Năm 2049
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2048">
-                                                                                                                Năm 2048
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2047">
-                                                                                                                Năm 2047
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2046">
-                                                                                                                Năm 2046
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2045">
-                                                                                                                Năm 2045
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2044">
-                                                                                                                Năm 2044
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2043">
-                                                                                                                Năm 2043
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2042">
-                                                                                                                Năm 2042
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2041">
-                                                                                                                Năm 2041
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2040">
-                                                                                                                Năm 2040
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2039">
-                                                                                                                Năm 2039
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2038">
-                                                                                                                Năm 2038
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2037">
-                                                                                                                Năm 2037
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2036">
-                                                                                                                Năm 2036
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2035">
-                                                                                                                Năm 2035
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2034">
-                                                                                                                Năm 2034
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2033">
-                                                                                                                Năm 2033
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2032">
-                                                                                                                Năm 2032
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2031">
-                                                                                                                Năm 2031
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2030">
-                                                                                                                Năm 2030
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2029">
-                                                                                                                Năm 2029
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2028">
-                                                                                                                Năm 2028
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2027">
-                                                                                                                Năm 2027
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2026">
-                                                                                                                Năm 2026
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2025">
-                                                                                                                Năm 2025
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2024">
-                                                                                                                Năm 2024
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2023">
-                                                                                                                Năm 2023
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2022">
-                                                                                                                Năm 2022
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2021">
-                                                                                                                Năm 2021
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2020">
-                                                                                                                Năm 2020
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2019">
-                                                                                                                Năm 2019
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2018">
-                                                                                                                Năm 2018
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2017">
-                                                                                                                Năm 2017
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2016">
-                                                                                                                Năm 2016
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2015">
-                                                                                                                Năm 2015
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2014">
-                                                                                                                Năm 2014
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2013">
-                                                                                                                Năm 2013
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2012">
-                                                                                                                Năm 2012
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2011">
-                                                                                                                Năm 2011
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2010">
-                                                                                                                Năm 2010
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2009">
-                                                                                                                Năm 2009
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2008">
-                                                                                                                Năm 2008
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2007">
-                                                                                                                Năm 2007
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2006">
-                                                                                                                Năm 2006
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2005">
-                                                                                                                Năm 2005
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2004">
-                                                                                                                Năm 2004
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2003">
-                                                                                                                Năm 2003
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2002">
-                                                                                                                Năm 2002
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2001">
-                                                                                                                Năm 2001
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="2000">
-                                                                                                                Năm 2000
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1999">
-                                                                                                                Năm 1999
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1998">
-                                                                                                                Năm 1998
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1997">
-                                                                                                                Năm 1997
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1996">
-                                                                                                                Năm 1996
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1995">
-                                                                                                                Năm 1995
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1994">
-                                                                                                                Năm 1994
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1993">
-                                                                                                                Năm 1993
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1992">
-                                                                                                                Năm 1992
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1991">
-                                                                                                                Năm 1991
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1990">
-                                                                                                                Năm 1990
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1989">
-                                                                                                                Năm 1989
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1988">
-                                                                                                                Năm 1988
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1987">
-                                                                                                                Năm 1987
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1986">
-                                                                                                                Năm 1986
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1985">
-                                                                                                                Năm 1985
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1984">
-                                                                                                                Năm 1984
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1983">
-                                                                                                                Năm 1983
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1982">
-                                                                                                                Năm 1982
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1981">
-                                                                                                                Năm 1981
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1980">
-                                                                                                                Năm 1980
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1979">
-                                                                                                                Năm 1979
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1978">
-                                                                                                                Năm 1978
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1977">
-                                                                                                                Năm 1977
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1976">
-                                                                                                                Năm 1976
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1975">
-                                                                                                                Năm 1975
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1974">
-                                                                                                                Năm 1974
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1973">
-                                                                                                                Năm 1973
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1972">
-                                                                                                                Năm 1972
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1971">
-                                                                                                                Năm 1971
-                                                                                                            </option>
-                                                                                                            <option
-                                                                                                                value="1970">
-                                                                                                                Năm 1970
-                                                                                                            </option>
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                    <label
-                                                                                                        id="edit_expiration_date_year-error"
-                                                                                                        class="error"
-                                                                                                        for="edit_expiration_date_year"></label>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <p
-                                                                                                class="help-block help-block-error">
-                                                                                            </p>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="credential_id">ID
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="edit_credential_id"
-                                                                                                        class="form-control"
-                                                                                                        name="credential_id"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="credential_url">URL
-                                                                                                        chứng
-                                                                                                        chỉ</label>
-                                                                                                    <input type="text"
-                                                                                                        id="edit_credential_url"
-                                                                                                        class="form-control"
-                                                                                                        name="credential_url"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                            <div class="col-xs-12">
-                                                                                                <div
-                                                                                                    class="form-group field-eduinfoform-school_name">
-                                                                                                    <label
-                                                                                                        class="control-label"
-                                                                                                        for="note">Ghi
-                                                                                                        chú</label>
-                                                                                                    <textarea
-                                                                                                        class="form-control"
-                                                                                                        id="note-certificate"
-                                                                                                        name="note">
-                                      </textarea>
-                                                                                                </div>
-                                                                                                <p
-                                                                                                    class="help-block help-block-error">
-                                                                                                </p>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="form-group mt-10">
-                                                                                            <span class="pull-left">
-                                                                                                <button type="submit"
-                                                                                                    id="btn-submit-edit-certificate"
-                                                                                                    class="btn btn-primary btn-ladda btn-ladda-spinner">
-                                                                                                    <i
-                                                                                                        class="icon-floppy-disk position-left"></i>
-                                                                                                    <span
-                                                                                                        class="ladda-label">Lưu
-                                                                                                        lại</span>
-                                                                                                    <span
-                                                                                                        class="ladda-spinner"></span>
-                                                                                                    <span
-                                                                                                        class="ladda-spinner"></span>
-                                                                                                </button>
-                                                                                            </span>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                                <script src="/js/validation-rules-jquery.js"></script>
-                                                                <script>
-                                                                    function extractMonthAndYear(dateString) {
-                                                                        if (dateString) {
-                                                                            const parts = dateString.split('/');
-
-                                                                            if (parts.length === 2) {
-                                                                                var month = parts[0];
-                                                                                var year = parts[1];
-
-                                                                                return {
-                                                                                    month: month,
-                                                                                    year: year
-                                                                                };
-                                                                            }
-                                                                        }
-
-                                                                        return null;
-                                                                    }
-
-                                                                    $(document).ready(function() {
-                                                                        $('.edit-certificate').on('click', function() {
-                                                                            var certificateId = $(this).data('id');
-
-                                                                            $.ajax({
-                                                                                type: 'get',
-                                                                                data: {
-                                                                                    certificateId: certificateId
-                                                                                },
-                                                                                dataType: "json",
-                                                                                url: "/api/edit-certificate",
-                                                                                success: function(response) {
-                                                                                    console.log(response, 29289289)
-                                                                                    $('#edit_certificate_type_name').val(response.name)
-                                                                                    $('#edit_organization_name').val(response.organization_name)
-                                                                                    $('#edit_credential_id').val(response.credential_id)
-                                                                                    $('#note-certificate').val(response.note)
-                                                                                    $('#edit_credential_url').val(response.credential_url)
-                                                                                    $('#edit_certificate_id').val(response.id)
-
-                                                                                    //issue_date
-                                                                                    const issue_date_month = extractMonthAndYear(response.issue_date).month
-                                                                                    const issue_date_year = extractMonthAndYear(response.issue_date).year
-
-                                                                                    if (issue_date_month) {
-                                                                                        $('#edit_issue_date_month option').each(function() {
-                                                                                            if ($(this).val() == issue_date_month) {
-                                                                                                $(this).attr('selected', 'selected');
-                                                                                            }
-                                                                                        });
-                                                                                    }
-
-                                                                                    $('#edit_issue_date_month').select2();
-
-                                                                                    if (issue_date_year) {
-                                                                                        $('#edit_issue_date_year option').each(function() {
-                                                                                            if ($(this).val() == issue_date_year) {
-                                                                                                $(this).attr('selected', 'selected');
-                                                                                            }
-                                                                                        });
-                                                                                    }
-
-                                                                                    $('#edit_issue_date_year').select2();
-
-                                                                                    const expiration_date_month = extractMonthAndYear(response.expiration_date).month
-                                                                                    const expiration_date_year = extractMonthAndYear(response.expiration_date).year
-                                                                                    if (expiration_date_year) {
-                                                                                        $('#edit_expiration_date_year option').each(function() {
-                                                                                            if ($(this).val() == expiration_date_year) {
-                                                                                                $(this).attr('selected', 'selected');
-                                                                                            }
-                                                                                        });
-                                                                                    }
-
-                                                                                    if (expiration_date_month) {
-                                                                                        $('#edit_expiration_date_month option').each(function() {
-                                                                                            if ($(this).val() == expiration_date_month) {
-                                                                                                $(this).attr('selected', 'selected');
-                                                                                            }
-                                                                                        });
-                                                                                    }
-
-                                                                                    $('#edit_expiration_date_year').select2();
-                                                                                    $('#edit_expiration_date_month').select2();
-                                                                                }
-                                                                            });
-                                                                        })
-                                                                        $('#edit_certificate').on('shown.bs.modal', function(event) {
-                                                                            $('.form-group').css('margin-bottom', 0)
-                                                                            $("#certificate_type_name").easyAutocomplete({
-                                                                                url: function(phrase) {
-                                                                                    return "/api/search-certificate-type";
-                                                                                },
-                                                                                getValue: function(element) {
-                                                                                    return element.certificate_type_name;
-                                                                                },
-                                                                                ajaxSettings: {
-                                                                                    dataType: "json",
-                                                                                    method: "POST",
-                                                                                    data: {
-                                                                                        dataType: "json"
-                                                                                    }
-                                                                                },
-
-                                                                                preparePostData: function(data) {
-                                                                                    data.certificate_type_name = $("#certificate_type_name").val();
-                                                                                    return data;
-                                                                                },
-
-                                                                                requestDelay: 400,
-                                                                            });
-
-                                                                            $("#organization_name").easyAutocomplete({
-                                                                                url: function(phrase) {
-                                                                                    return "/api/search-certificate-organization";
-                                                                                },
-                                                                                getValue: formatAutocompleteValue,
-                                                                                ajaxSettings: {
-                                                                                    dataType: "json",
-                                                                                    method: "POST",
-                                                                                    data: {
-                                                                                        dataType: "json"
-                                                                                    }
-                                                                                },
-                                                                                preparePostData: function(data) {
-                                                                                    data.organization_name = $("#organization_name").val();
-                                                                                    return data;
-                                                                                },
-                                                                                requestDelay: 400,
-                                                                                list: {
-                                                                                    onClickEvent: function() {
-                                                                                        const selectedValue = $("#organization_name").getSelectedItemData();
-                                                                                        $("#organization_name").val(selectedValue.organization_name)
-                                                                                        $("#organization_id").val(selectedValue.id)
-                                                                                    }
-                                                                                }
-                                                                            });
-
-                                                                            function formatAutocompleteValue(element) {
-                                                                                return `<div class='select2-result-repository clearfix'>
-                  ${formatRepositoryMeta(element)}
-              </div>`;
-                                                                            }
-
-                                                                            function formatRepositoryMeta(element) {
-                                                                                return `<div class='select2-result-repository__meta' style="margin-left: 5px !important;">
-                  <div class='select2-result-repository__avatar'>
-                      <img src="${element.logo}" />
-                  </div>
-                  ${formatRepositoryContent(element)}
-              </div>`;
-                                                                            }
-
-                                                                            function formatRepositoryContent(element) {
-                                                                                return `<div class='select2-result-repository__content' style="padding-left: 20px !important">
-                  <div class='select2-result-repository__title' style='text-transform: capitalize !important;'>${element.organization_name}</div>
-                  <div class='select2-result-repository__title' style='text-transform: capitalize !important; font-weight: 600'>Company • ${element.service}</div>
-              </div>`;
-                                                                            }
-                                                                        });
-
-                                                                        $('#btn-submit-edit-certificate').click(function(e) {
-                                                                            $('#form-edit-submit-certificate').validate({
-                                                                                rules: {
-                                                                                    certificate_type_name: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    organization_name: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    issue_date_month: {
-                                                                                        required: true
-                                                                                    },
-                                                                                    issue_date_year: {
-                                                                                        required: true
-                                                                                    },
-                                                                                },
-                                                                                messages: {
-                                                                                    certificate_type_name: {
-                                                                                        'required': 'Tên chứng chỉ không để trống!'
-                                                                                    },
-                                                                                    organization_name: {
-                                                                                        required: 'Tên tổ chức không để trống!'
-                                                                                    },
-                                                                                    issue_date_month: {
-                                                                                        required: 'Chọn tháng phát hành'
-                                                                                    },
-                                                                                    issue_date_year: {
-                                                                                        required: 'Chọn năm phát hành'
-                                                                                    },
-                                                                                },
-                                                                                submitHandler: function(form) {
-                                                                                    $.ajax({
-                                                                                        type: 'post',
-                                                                                        data: $('#form-edit-submit-certificate').serialize(),
-                                                                                        dataType: "json",
-                                                                                        url: "/api/update-certificate",
-                                                                                        success: function(result) {
-                                                                                            $('#license').modal('hide');
-                                                                                            colorgbJGrowl('bg-success', 'Cập nhật dữ liệu thành công');
-
-                                                                                            setTimeout(function() {
-                                                                                                location.reload();
-                                                                                            }, 1500);
-                                                                                        }
-                                                                                    });
-                                                                                }
-                                                                            });
-                                                                        })
-                                                                    });
-                                                                </script>
-                                                            </div>
-                                                        </div>
+                                                            </style>
+                                                              
 
                                                         <div class="card-box hide">
                                                             <div class="clearfix">
