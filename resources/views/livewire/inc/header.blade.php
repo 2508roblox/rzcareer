@@ -2,7 +2,7 @@
       <div class="container d-none d-lg-block">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" title="Jobs on the GO" class="d-flex me-4 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-            <img width="134" height="40" src="/logo.png" alt="JobsGO">
+            <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -85,22 +85,7 @@
                 <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/blog/">
-                <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy"> Phát triển sự nghiệp
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp Luật Lao Động</a></li>
-                <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp Bảo Hiểm Xã Hội</a></li>
-                <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a></li>
-                <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương Gross - Net</a></li>
-                <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng Nghiệp</a></li>
-                <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm EQ</a></li>
-                <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc nghiệm tính cách MBTI</a></li>
-                <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-enneagram.html">Trắc nghiệm tính cách Enneagram</a></li>
-              </ul>
-            </li>
+          
           </ul>
 
           <style>

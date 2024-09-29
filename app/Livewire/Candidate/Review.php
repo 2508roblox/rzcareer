@@ -66,6 +66,7 @@ class Review extends Component
 
     private function isSeekerProfileComplete($seekerProfile)
     {
+        // dd($seekerProfile);
         // Check if all relevant fields in seekerProfile are not empty
         return !empty($seekerProfile->user_id) &&
                !empty($seekerProfile->location_id) &&
@@ -84,7 +85,6 @@ class Review extends Component
 
     public function render()
     {
-
         
         return view('livewire.candidate.review', [
             'user' => $this->user,

@@ -285,32 +285,7 @@
 
 
                                             <!-- The popup modal -->
-                                            <div class="modal fade" id="phoneAuthModal">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header"
-                                                            style=" padding: 15px 30px 5px !important;">
-                                                            <button type="button" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h5 class="text-bold modal-title text-uppercase"
-                                                                id="phoneAuthModalLabel">Xác minh số điện thoại qua Zalo
-                                                            </h5>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form id="phoneAuthForm">
-                                                                <div class="form-group">
-                                                                    <label for="phoneNumber">Số điện thoại Zalo:</label>
-                                                                    <input maxlength="10" type="text"
-                                                                        class="form-control" value="" id="phoneNumber"
-                                                                        placeholder="Nhập SĐT Zalo của bạn">
-                                                                </div>
-                                                                <button type="submit" class="btn btn-primary">Gửi mã xác
-                                                                    thực</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                          
                                             <!-- The OTP verification modal -->
                                             <div class="modal fade" id="otpVerificationModal">
                                                 <div class="modal-dialog" role="document">
@@ -1163,8 +1138,6 @@
                                                                                     @php
                                                                                         // Array of attributes to check
                                                                                         $attributes = [
-                                                                                            'name' => 'Tên bạn đã hoàn thiện',
-                                                                                            'email' => 'Email đã hoàn thiện',
                                                                                             'location.address' => 'Địa chỉ đã hoàn thiện',
                                                                                             'phone' => 'Số điện thoại đã hoàn thiện',
                                                                                             'introduction' => 'Giới thiệu bản thân đã hoàn thiện',
@@ -1172,10 +1145,11 @@
                                                                                             'gender' => 'Giới tính đã hoàn thiện',
                                                                                             'marital_status' => 'Tình trạng hôn nhân đã hoàn thiện',
                                                                                             'current_residence' => 'Chỗ ở hiện tại đã hoàn thiện',
-                                                                                            'working_location' => 'Tỉnh/Thành làm việc đã hoàn thiện',
+                                                                                            'working_province' => 'Tỉnh/Thành làm việc đã hoàn thiện',
                                                                                             'degree' => 'Bằng cấp đã hoàn thiện',
                                                                                             'current_salary' => 'Mức lương hiện tại đã hoàn thiện',
-                                                                                            'desired_salary' => 'Mức lương mong muốn đã hoàn thiện',
+                                                                                            'expected_salary_min' => 'Mức lương tối thiều đã hoàn thiện',
+                                                                                            'expected_salary_max' => 'Mức lương tối đa đã hoàn thiện',
                                                                                         ];
                                                                                     @endphp
                                                                         
@@ -1213,72 +1187,57 @@
                                                                         </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i
-                                                                                    class="fa fa-warning text-warning"></i>
-                                                                                Bổ sung kỹ năng của bạn
+                                                                                    @foreach ($resumes as $resume)
+                                                                                        <li>
+                                                                                            @if ($resume->advancedSkills->isNotEmpty())
+                                                                                                <i class="fa fa-check-square-o text-success"></i> <!-- Success icon -->
+                                                                                                Đã bổ sung kỹ năng
+                                                                                            @else
+                                                                                                <i class="fa fa-warning text-warning"></i> <!-- Warning icon -->
+                                                                                                Bổ sung kỹ năng của bạn
+                                                                                            @endif
+                                                                                        </li>
+                                                                                    @endforeach
+                                                                                
                                                                             </li>
                                                                         </ul>
                                                                     </a>
                                                                     <a href="#s3" class="list-group-item">
-                                                                        <h6
-                                                                            class="text-bold list-group-item-heading text-uppercase">
-                                                                            <i
-                                                                                class="fa fa-list-alt text-grey-300 pull-right"></i>
+                                                                        <h6 class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i class="fa fa-list-alt text-grey-300 pull-right"></i>
                                                                             3. Kinh nghiệm làm việc
                                                                         </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Tên công ty đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Vị trí làm việc đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Mốc thời gian đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-warning text-warning"></i>
-                                                                                1 Điền mô tả công việc
+                                                                                @if ($resumes->contains(function ($resume) { return $resume->experienceDetails->isNotEmpty(); }))
+                                                                                    <i class="fa fa-check-square-o text-success"></i> <!-- Success icon -->
+                                                                                    Đã bổ sung kinh nghiệm làm việc
+                                                                                @else
+                                                                                    <i class="fa fa-warning text-warning"></i> <!-- Warning icon -->
+                                                                                    Bổ sung kinh nghiệm làm việc của bạn
+                                                                                @endif
                                                                             </li>
                                                                         </ul>
                                                                     </a>
+                                                                    
                                                                     <a href="#s4" class="list-group-item">
-                                                                        <h6
-                                                                            class="text-bold list-group-item-heading text-uppercase">
-                                                                            <i
-                                                                                class="fa fa-graduation-cap text-grey-300 pull-right"></i>
+                                                                        <h6 class="text-bold list-group-item-heading text-uppercase">
+                                                                            <i class="fa fa-graduation-cap text-grey-300 pull-right"></i>
                                                                             4. Quá trình học tập
                                                                         </h6>
                                                                         <ul style="list-style-type: none;">
                                                                             <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Tên trường học đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Chuyên ngành đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                1 Mốc thời gian đã hoàn thiện
-                                                                            </li>
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-warning text-warning"></i>
-                                                                                1 Điền mô tả học vấn
+                                                                                @if ($resumes->contains(function ($resume) { return $resume->educationDetails->isNotEmpty(); }))
+                                                                                    <i class="fa fa-check-square-o text-success"></i> <!-- Success icon -->
+                                                                                    Đã bổ sung quá trình học tập
+                                                                                @else
+                                                                                    <i class="fa fa-warning text-warning"></i> <!-- Warning icon -->
+                                                                                    Bổ sung quá trình học tập của bạn
+                                                                                @endif
                                                                             </li>
                                                                         </ul>
                                                                     </a>
+                                                                    
                                                                     <a href="#s5" class="hide list-group-item">
                                                                         <h6
                                                                             class="text-bold list-group-item-heading text-uppercase">
@@ -1289,22 +1248,7 @@
                                                                         <p class="list-group-item-text text-size-small">
                                                                             Tải lên hồ sơ, chứng chỉ, bằng cấp...</p>
                                                                     </a>
-                                                                    <a href="/candidate/check-spell-format"
-                                                                        class="list-group-item">
-                                                                        <h6
-                                                                            class="text-bold list-group-item-heading text-uppercase">
-                                                                            <i
-                                                                                class="fa fa-flag-checkered text-grey-300 pull-right"></i>
-                                                                            5. Kiểm tra lỗi chính tả
-                                                                        </h6>
-                                                                        <ul style="list-style-type: none;">
-                                                                            <li>
-                                                                                <i
-                                                                                    class="fa fa-check-square-o text-success"></i>
-                                                                                Hồ sơ của bạn không còn lỗi chính tả
-                                                                            </li>
-                                                                        </ul>
-                                                                    </a>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1315,25 +1259,43 @@
                                                                     -webkit-transform: rotate(0deg);
                                                                     transform: rotate(0deg);
                                                                 }
-
+                                                        
                                                                 100% {
-                                                                    -webkit-transform: rotate(180deg);
-                                                                    transform: rotate(180deg);
+                                                                    @if ($a == 2 || $a == 3 || $a == 4  )
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); /* Full 180 degrees */
+            @elseif ($a == 1)
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); /* 90 degrees for a=3 */
+            @elseif ($a == 0)
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg); /* 0 degrees for a=2 */
+            @endif
                                                                 }
                                                             }
-
+                                                        
                                                             @keyframes loading-2 {
                                                                 0% {
                                                                     -webkit-transform: rotate(0deg);
                                                                     transform: rotate(0deg);
                                                                 }
-
+                                                        
                                                                 100% {
-                                                                    -webkit-transform: rotate(60deg);
-                                                                    transform: rotate(60deg);
-                                                                }
+            @if ($a == 4)
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); /* Full 180 degrees */
+            @elseif ($a == 3)
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); /* 90 degrees for a=3 */
+            @elseif ($a == 2)
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg); /* 0 degrees for a=2 */
+            @endif
+        }
                                                             }
                                                         </style>
+                                                      
+                                                        
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <div class="card-box" style="min-height:initial !important;">
@@ -1407,11 +1369,15 @@
 
                                                                                 <p class="text-muted mb-0"><strong>Trạng
                                                                                         thái:</strong>
-                                                                                    <span class="ml-2"
-                                                                                        data-name="is_active"
-                                                                                        title="Trạng thái">{{
-                                                                                        $user->is_active ? 'Hoạt động' :
-                                                                                        'Không hoạt động' }}</span>
+                                                                                        <span 
+                                                                                        class="ml-2 btn btn-xs p-5 {{ $user->is_active ? 'btn-success' : 'btn-danger' }}" 
+                                                                                        style="padding: 0 10px !important;" 
+                                                                                        data-name="is_active" 
+                                                                                        title="Trạng thái">
+                                                                                        {{ $user->is_active ? 'Đang tìm việc' : 'Đã tắt tìm việc' }}
+                                                                                    </span>
+                                                                                    
+                                                                                   
                                                                                 </p>
                                                                                 @else
                                                                                 <p>Không có thông tin người dùng.</p>
@@ -1449,7 +1415,7 @@
                                                                     <p class="text-muted mb-2"><strong>Giới thiệu bản
                                                                             thân:</strong> <span class="ml-2 editable"
                                                                             data-type="textarea" data-name="short_bio"
-                                                                            title="Giới thiệu bản thân"></span></p>
+                                                                            title="Giới thiệu bản thân">{!!$resume->seekerProfile->introduction!!}</span></p>
                                                                     <div>
                                                                         @if ($user)
                                                                         @foreach ($resumes as $resume)
@@ -1462,12 +1428,7 @@
                                                                                     title="Số điện thoại">{{
                                                                                     $resume->seekerProfile->phone ??
                                                                                     'Chưa có' }}</span>
-                                                                                <button type="button"
-                                                                                    class="btn btn-warning btn-xs p-5"
-                                                                                    style="padding: 0 10px !important;"
-                                                                                    data-toggle="modal"
-                                                                                    data-target="#phoneAuthModal">Xác
-                                                                                    minh SĐT qua Zalo</button>
+                                                                               
                                                                             </p>
 
                                                                             <p class="text-muted mb-2">
@@ -1531,10 +1492,11 @@
                                                                             <p class="text-muted mb-2">
                                                                                 <strong>Mức lương hiện tại:</strong>
                                                                                 <span class="ml-2 editable"
-                                                                                    data-name="current_salary"
-                                                                                    title="Mức lương hiện tại">{{
-                                                                                    $resume->seekerProfile->current_salary
-                                                                                    ?? 'Chưa có' }}</span>
+                                                                                data-name="current_salary"
+                                                                                title="Mức lương hiện tại">
+                                                                                {{ isset($resume->seekerProfile->current_salary) ? number_format($resume->seekerProfile->current_salary, 0) . ' triệu' : 'Chưa có' }}
+                                                                          </span>
+                                                                          
                                                                             </p>
 
                                                                             <p class="text-muted mb-2">

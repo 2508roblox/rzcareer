@@ -2,7 +2,7 @@
     <div class="wrap">
         <div class="navbar-header">
             <a class="navbar-brand" href="/" title="Về trang chủ JobsGO">
-                <img width="134" height="40" src="/logo.png" alt="JobsGO">
+                <img width="134" height="40" src="/assets_livewire/logo-light.svg"  alt="JobsGO">
             </a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
@@ -21,11 +21,7 @@
         <div class="navbar-collapse collapse" id="navbar-mobile">
 
             <ul class="nav navbar-nav navbar-left">
-                <li class="hidden-xs"><a
-                        style="color: #fff !important;background-color: #ff5c35; padding: 5px 10px; margin-right: 10px; border-radius: 3px; position: relative; height: 30px; top: 16px;"
-                        href="/site/download?utm_source=web_ntv&amp;utm_medium=top_menu_tai_app"
-                        title="Tải App" target="_blank"><i class="glyphicon glyphicon-download-alt"></i> Tải
-                        App</a></li>
+              
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                         href="/viec-lam.html">
@@ -149,30 +145,7 @@
                         <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                        href="/blog/">
-                        <img src="/assets_livewire/img/career.svg" alt="job" loading="lazy"> Phát triển sự
-                        nghiệp
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/blog/">Kiến thức</a></li>
-                        <li><a class="dropdown-item" href="/hoi-dap-luat-lao-dong.html">Hỏi đáp Luật Lao
-                                Động</a></li>
-                        <li><a class="dropdown-item" href="/hoi-dap-bao-hiem-xa-hoi.html">Hỏi đáp Bảo Hiểm
-                                Xã Hội</a></li>
-                        <li><a class="dropdown-item" href="/tra-cuu-luong.html">Tra cứu lương</a></li>
-                        <li><a class="dropdown-item" href="/tinh-luong-gross-net.html">Đổi lương Gross -
-                                Net</a></li>
-                        <li><a class="dropdown-item" href="/la-ban-huong-nghiep.html">La Bàn Hướng
-                                Nghiệp</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-eq.html">Trắc nghiệm EQ</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-mbti.html">Trắc nghiệm
-                                tính cách MBTI</a></li>
-                        <li><a class="dropdown-item" href="/trac-nghiem-tinh-cach-enneagram.html">Trắc
-                                nghiệm tính cách Enneagram</a></li>
-                    </ul>
-                </li>
+            
             </ul>
 
             <ul class="nav navbar-nav navbar-right" style="float:right !important;">

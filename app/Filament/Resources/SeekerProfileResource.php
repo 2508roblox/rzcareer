@@ -56,7 +56,7 @@ class SeekerProfileResource extends Resource
                             ])
                             ->label('Giới tính'), // Dịch sang tiếng Việt
     
-                        Forms\Components\RichEditor::make('introduction')
+                        Forms\Components\Textarea::make('introduction')
                             ->maxLength(500)
                             ->label('Giới thiệu bản thân'), // Thêm trường Giới thiệu bản thân
                     ]),

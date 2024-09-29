@@ -64,7 +64,7 @@
 
     </head>
 
-    <body class=" access ">
+    <body class=" access " style="background-color: #050515">
         <!-- Google Tag Manager (noscript) -->
         <!--Start of Tawk.to Script--> <!--<div id="load-tawkto"><img src="https://jobsgo.vn/img/chat_icon.png"></div>--> <!-- Messenger Plugin chat Code -->
         <div id="fb-root"></div> <!-- Your Plugin chat code -->
@@ -159,8 +159,13 @@
                     </style>
 
                     <form wire:submit.prevent="login" class="login-form">
-                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="site-logo">
-                            <img src="/logo-new.png" alt="JobsGO" height="50px" style="width: 50px !important; ">
+                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
+    justify-content: center;
+    display: flex;
+">
+ <img src="/assets_livewire/logo-dark.svg" alt="">
+    
+                                
                         </a>
 
                         <div class="panel panel-body">
