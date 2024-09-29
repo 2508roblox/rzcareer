@@ -9,5 +9,8 @@ class CommonCity extends Model
 {
     use HasFactory;
     protected $fillable = ['name'];
-
+    public function jobPosts()
+    {
+        return $this->hasMany(JobPost::class, 'location_id'); // Assuming location_id references CommonLocation which references CommonCity
+    }
 }

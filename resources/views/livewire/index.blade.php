@@ -218,12 +218,12 @@
                                                 <div class="h6 text-muted">{{ $jobPost['company']['company_name'] }}</div>
                                                 <ul class="p-0">
                                                     <li class="list-group-item list-group-item-action">
-                                                        <i class='bx bx-money-no'></i>
+                                                        <i class="bx bx-money"></i>
                                                         {{ number_format($jobPost['salary_min'] / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost['salary_max'] / 1_000_000, 0, '.', ',') }} triệu VNĐ
                                                     </li>
 
                                                     <li class="list-group-item list-group-item-action">
-                                                        {{-- <i class='bx bx-map-no'></i> {{ $jobPost['location']['location_name'] }} --}}
+                                                        <i class="bx bx-map"></i> {{ $jobPost['city']['name'] }}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -347,9 +347,17 @@
                                                             <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5 text-danger tooltip" title="">{{ $hotJobPosts[$index + $i]->job_name }}</h3>
                                                             <div class="h6 text-muted">{{ $hotJobPosts[$index + $i]->company->company_name }}</div>
                                                             <ul class="p-0">
-                                                                <li class="list-group-item list-group-item-action"><i class='bx bx-money-no'></i> {{ number_format($hotJobPosts[$index + $i]->salary_min) }} - {{ number_format($hotJobPosts[$index + $i]->salary_max) }} VNĐ</li>
-                                                                <li class="list-group-item list-group-item-action"><i class='bx bx-map-no'></i> {{ $hotJobPosts[$index + $i]->location->name }}</li>
+                                                                <li class="list-group-item list-group-item-action">
+                                                                    <i class='bx bx-money'></i>
+                                                                    {{ number_format($hotJobPosts[$index + $i]->salary_min / 1_000_000, 0, '.', ',') }} -
+                                                                    {{ number_format($hotJobPosts[$index + $i]->salary_max / 1_000_000, 0, '.', ',') }} triệu VNĐ
+                                                                </li>
+                                                                <li class="list-group-item list-group-item-action">
+                                                                    <i class='bx bx-map'></i>
+                                                                    {{ $hotJobPosts[$index + $i]->city->name }}
+                                                                </li>
                                                             </ul>
+
                                                         </div>
                                                     </a>
                                                 </div>
@@ -462,140 +470,22 @@
                 <div class="carousel-inner pb-1">
                   <div class="carousel-item active">
                     <div class="row row-cols-2 row-cols-sm-4 g-2">
-                      <div class="col">
-                        <a href="/viec-lam-kinh-doanh-ban-hang.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/kinh-doanh-ban-hang.svg?v=234208153092" alt="Kinh Doanh/Bán Hàng">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Kinh Doanh</h3>
-                            <div class="h6 text-muted">8.9K Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-nhan-su.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/nhan-su-hanh-chinh.svg?v=234208153092" alt="Nhân sự/Hành chính">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Nhân Sự</h3>
-                            <div class="h6 text-muted">520+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-luat-phap-che.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/luat-phap-che.svg?v=234208153092" alt="Luật/Pháp Chế">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Luật</h3>
-                            <div class="h6 text-muted">210+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-cong-nghe-thong-tin.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/cong-nghe-thong-tin.svg?v=234208153092" alt="Công Nghệ Thông Tin">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Công Nghệ</h3>
-                            <div class="h6 text-muted">1.8K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-
-                      <div class="col">
-                        <a href="/viec-lam-ke-toan-kiem-toan.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/ke-toan-kiem-toan.svg?v=234208153092" alt="Kế toán/Kiểm toán">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Kế Toán</h3>
-                            <div class="h6 text-muted">2.2K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-quang-cao-marketing.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/quang-cao-marketing-pr.svg?v=234208153092" alt="Quảng cáo/Marketing">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Quảng Cáo</h3>
-                            <div class="h6 text-muted">1.7K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-van-hanh-san-xuat.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/san-xuat.svg?v=234208153092" alt="Vận Hành/Sản Xuất">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Sản Xuất</h3>
-                            <div class="h6 text-muted">1.5K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-tai-chinh-ngan-hang.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/tai-chinh-ngan-hang.svg?v=234208153092" alt="Tài chính/Ngân hàng">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Tài Chính</h3>
-                            <div class="h6 text-muted">1.5K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-thiet-ke.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/thiet-ke.svg?v=234208153092" alt="Thiết kế">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Thiết Kế</h3>
-                            <div class="h6 text-muted">1.1K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-kho-van.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/van-tai-giao-nhan.svg?v=234208153092" alt="Vận tải/Kho vận">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Kho Vận</h3>
-                            <div class="h6 text-muted">690+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-nha-hang-khach-san.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/khach-san-nha-hang.svg?v=234208153092" alt="Nhà Hàng/Khách Sạn">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Nhà Hàng</h3>
-                            <div class="h6 text-muted">1.1K+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="/viec-lam-y-te.html" class="d-flex align-items-center teks-item text-dark">
-                          <div class="flex-shrink-0">
-                            <img class="w-100" width="50" height="50" loading="lazy" src="/assets_livewire/teks/img/y-te.svg?v=234208153092" alt="Y tế">
-                          </div>
-                          <div class="flex-grow-1 ms-2">
-                            <h3 class="h5">Y Tế</h3>
-                            <div class="h6 text-muted">520+ Việc »</div>
-                          </div>
-                        </a>
-                      </div>
+                        @foreach ($careers as $career)
+                            <div class="col">
+                                <a href="/viec-lam-{{ Str::slug($career->name) }}.html" class="d-flex align-items-center teks-item text-dark">
+                                    <div class="flex-shrink-0">
+                                        <img class="w-100" width="50" height="50" loading="lazy" src="{{ Storage::url($career->icon_url) }}" alt="{{ $career->name }}">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h3 class="h5">{{ $career->name }}</h3>
+                                        <div class="h6 text-muted">{{ $career->job_posts_count ?? 0 }} Việc »</div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
+
+
                   </div>
 
                 </div>

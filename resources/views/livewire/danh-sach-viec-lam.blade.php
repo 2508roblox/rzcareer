@@ -691,25 +691,25 @@
                                                                     <li class="active"><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html"><img
-                                                                                src="/img/2024/ic18.svg"
+                                                                                src="{{asset('assets_livewire/img/2024/ic18.svg')}}"
                                                                                 alt="jobsgo" loading="lazy"> Phù hợp
                                                                             nhất</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=created"><img
-                                                                                src="/img/2024/ic17.svg"
+                                                                                src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
                                                                                 alt="jobsgo" loading="lazy"> Việc
                                                                             mới đăng</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=updated"><img
-                                                                                src="/img/2024/ic17.svg"
+                                                                                src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
                                                                                 alt="jobsgo" loading="lazy"> Mới cập
                                                                             nhật</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=salary"><img
-                                                                                src="/img/2024/ic17.svg"
+                                                                                src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
                                                                                 alt="jobsgo" loading="lazy"> Lương
                                                                             cao nhất</span></li>
                                                                 </ul>
@@ -962,7 +962,7 @@
 
                                                 <div>
                                                     <div class="d-flex box-summary-report industry_summary_report"
-                                                        title="Tài Chính/Ngân Hàng"><img src="/img/2024/ic31.svg"
+                                                        title="Tài Chính/Ngân Hàng"><img src="{{asset('assets_livewire/img/2024/ic31.svg')}}"
                                                             alt="jobsgo" width="42">
                                                         <div>
                                                             <p>Số tin đăng và lượt ứng tuyển theo tháng</p>

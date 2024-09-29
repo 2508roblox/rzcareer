@@ -31,7 +31,10 @@ class JobPost extends Model
     {
         return $this->belongsTo(User::class);
     }
-
+    public function city()
+    {
+        return $this->belongsTo(CommonCity::class, 'location_id');
+    }
     public function postActivities()
     {
         return $this->hasMany(PostActivity::class);

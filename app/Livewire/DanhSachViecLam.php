@@ -14,12 +14,15 @@ class DanhSachViecLam extends Component
     public $keyword = '';  // Initialize to empty
     public $location = ''; // Initialize to empty
     public $perPage = 50; // Number of items per page
+    public $career_id = ''; // Number of items per page
 
     // Capture keyword and location from the URL query string
     public function mount(Request $request)
     {
         $this->keyword = $request->query('keyword', '');
         $this->location = $request->query('location', '');
+        $this->career_id = $request->query('career_id', ''); // Capture career_id
+
     }
     public function searchJobs()
     {
@@ -40,6 +43,9 @@ class DanhSachViecLam extends Component
                     $q->where('name', 'like', '%' . $this->location . '%');
                 });
             })
+            ->when($this->career_id, function ($query) {
+                return $query->where('career_id', $this->career_id); // Filter by career_id
+            })
             ->paginate($this->perPage);
 
         $totalJobs = JobPost::count();
@@ -49,4 +55,5 @@ class DanhSachViecLam extends Component
             'totalJobs' => $totalJobs,
         ]);
     }
+
 }

@@ -9,5 +9,13 @@ class CommonCareer extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'icon_url', 'app_icon_name'];
+    public function jobPosts()
+    {
+        return $this->hasMany(JobPost::class, 'career_id');
+    }
+    public function companies()
+    {
+        return $this->hasMany(Company::class, 'field_operation', 'name'); // Adjust field names as necessary
+    }
 
 }
