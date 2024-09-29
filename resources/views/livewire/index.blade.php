@@ -483,18 +483,20 @@
                   <div class="carousel-item active">
                     <div class="row row-cols-2 row-cols-sm-4 g-2">
                         @foreach ($careers as $career)
-                            <div class="col">
-                                <a href="/viec-lam-{{ Str::slug($career->name) }}.html" class="d-flex align-items-center teks-item text-dark">
-                                    <div class="flex-shrink-0">
-                                        <img class="w-100" width="50" height="50" loading="lazy" src="{{ Storage::url($career->icon_url) }}" alt="{{ $career->name }}">
-                                    </div>
-                                    <div class="flex-grow-1 ms-2">
-                                        <h3 class="h5">{{ $career->name }}</h3>
-                                        <div class="h6 text-muted">{{ $career->job_posts_count ?? 0 }} Việc »</div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
+                        <div class="col">
+                            <a href="{{ route('danh-sach-viec-lam', ['career_id' => $career->id, 'keyword' => request('keyword'), 'location' => request('location')]) }}"
+                               class="d-flex align-items-center teks-item text-dark">
+                                <div class="flex-shrink-0">
+                                    <img class="w-100" width="50" height="50" loading="lazy" src="{{ Storage::url($career->icon_url) }}" alt="{{ $career->name }}">
+                                </div>
+                                <div class="flex-grow-1 ms-2">
+                                    <h3 class="h5">{{ $career->name }}</h3>
+                                    <div class="h6 text-muted">{{ $career->job_posts_count ?? 0 }} Việc »</div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+
                     </div>
 
 

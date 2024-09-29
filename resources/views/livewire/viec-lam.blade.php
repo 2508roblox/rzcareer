@@ -715,295 +715,48 @@
                                                                     target="_blank">Việc làm</a>
                                                                 liên quan </span>
                                                             </h2>
-                                                            <div class="heading-elements"><a
-                                                                    title="Xem thêm việc làm Kế Toán Tổng Hợp"
-                                                                    href="/viec-lam-ke-toan-tong-hop.html"
-                                                                    class="heading-text text-blue-700">Xem thêm <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 24 24" fill="currentColor"
-                                                                        class="size-6">
+                                                            <div class="heading-elements">
+                                                                <a title="Xem thêm việc làm {{ $jobPost->career->career_name }}"
+                                                                    href="{{ route('danh-sach-viec-lam', ['career_id' => $jobPost->career->id, 'keyword' => request('keyword'), 'location' => request('location')]) }}"
+                                                                    class="heading-text text-blue-700">
+                                                                    Xem thêm 
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                                                         <path fill-rule="evenodd"
-                                                                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                                                                            clip-rule="evenodd"></path>
-                                                                    </svg></a></div>
+                                                                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                                                              clip-rule="evenodd"></path>
+                                                                    </svg>
+                                                                 </a>
+                                                                 </div>
                                                         </div>
-                                                        <ul
-                                                            class="row media-list jobs collaboratives media-list-linked media-list-bordered">
-                                                            <li title="Kế Toán Viên" class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-vien-18783830700.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/31017-200x200.jpg?v=1567160872"
-                                                                            class="img-md" alt="31017"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán
-                                                                            Viên</span><small class="text-muted">Công
-                                                                            ty TNHH Xơ Tổng Hợp Hải Thiên</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Huyện Đức
-                                                                                Hoà</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 12 - 16
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp - Thu Nhập Upto 15 Triệu"
-                                                                class="col-sm-6 media standard"> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-thu-nhap-upto-15-trieu-18795413587.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/60479-200x200.jpg?v=1719564740"
-                                                                            class="img-md" alt="60479"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp -
-                                                                            Thu Nhập Upto 15 Triệu</span><small
-                                                                            class="text-muted">Công Ty TNHH Dệt May
-                                                                            Trung Quy</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Huyện Đức
-                                                                                Hòa</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 9 - 15
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp" class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-18860443418.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/234304-200x200.jpg?v=1722416899"
-                                                                            class="img-md" alt="234304"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng
-                                                                            Hợp</span><small class="text-muted">Công Ty
-                                                                            Cổ Phần Sản Xuất Thực Phẩm Ngọc Thơm
-                                                                            Foods</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Long
-                                                                                An</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 13 - 17
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Nhân Viên Kế Toán Tổng Hợp"
-                                                                class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/nhan-vien-ke-toan-tong-hop-18707394509.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/14402-200x200.jpg?v=1717033955"
-                                                                            class="img-md" alt="14402"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Nhân Viên Kế Toán
-                                                                            Tổng Hợp</span><small
-                                                                            class="text-muted">Công ty TNHH Công Nghệ
-                                                                            Tanixa</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Hồ Chí
-                                                                                Minh</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> Đến 13
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp - Làm Việc Tại Long An"
-                                                                class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-lam-viec-tai-long-an-18751308995.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/101237-200x200.jpg?v=1689844740"
-                                                                            class="img-md" alt="101237"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp -
-                                                                            Làm Việc Tại Long An</span><small
-                                                                            class="text-muted">Công Ty TNHH Khai Thác
-                                                                            Tài Nguyên Lợi Lộc</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Huyện Mang
-                                                                                Thít</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 9 - 15
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp (Đức Hoà - Long An)"
-                                                                class="col-sm-6 media standard"> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18789751144.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/89492-200x200.jpg?v=1655435656"
-                                                                            class="img-md" alt="89492"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp
-                                                                            (Đức Hoà - Long An)</span><small
-                                                                            class="text-muted">JobsGO Recruit</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Đức
-                                                                                Hòa</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> Thỏa thuận
-                                                                            </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp - Long An"
-                                                                class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-long-an-18892747859.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/107655-200x200.jpg?v=1679038362"
-                                                                            class="img-md" alt="107655"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp -
-                                                                            Long An</span><small
-                                                                            class="text-muted">Công Ty Cổ Phần Sợi An
-                                                                            Thịnh L.S</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Long
-                                                                                An</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 10 - 14
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp" class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-18892775017.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/36785-200x200.jpg?v=1575280410"
-                                                                            class="img-md" alt="36785"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng
-                                                                            Hợp</span><small class="text-muted">Công ty
-                                                                            TNHH Bao Bì Nhựa Million</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Long
-                                                                                An</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> Từ 12
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp - Đức Hòa Đông, Long An"
-                                                                class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-duc-hoa-dong-long-an-18926247252.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/73755-200x200.jpg?v=1631010645"
-                                                                            class="img-md" alt="73755"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp -
-                                                                            Đức Hòa Đông, Long An</span><small
-                                                                            class="text-muted">Công Ty TNHH MTV Thương
-                                                                            Mại Và Dịch Vụ Ngọc Thơm</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Long
-                                                                                An</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 12 - 15
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
-                                                            <li title="Kế Toán Tổng Hợp (Long An Có Xe Đưa Rước Hcm)"
-                                                                class="col-sm-6 media "> <a
-                                                                    href="/viec-lam/ke-toan-tong-hop-long-an-co-xe-dua-ruoc-hcm-18935929079.html?utm_source=&utm_medium=job_similar&utm_term=job_detail"
-                                                                    class="media-link">
-                                                                    <div class="media-left"><img width="69"
-                                                                            height="69"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            loading="lazy"
-                                                                            src="https://jobsgo.vn/media/img/employer/31017-200x200.jpg?v=1567160872"
-                                                                            class="img-md" alt="31017"></div>
-                                                                    <div class="media-body"><span
-                                                                            class="h6 media-heading">Kế Toán Tổng Hợp
-                                                                            (Long An Có Xe Đưa Rước Hcm)</span><small
-                                                                            class="text-muted">Công ty TNHH Xơ Tổng Hợp
-                                                                            Hải Thiên</small>
-                                                                        <p class="text-muted">
-                                                                            <span
-                                                                                class="btn text-uppercase btn-xs btn-default"><i
-                                                                                    class="bx bx-map"></i> Long
-                                                                                An</span>
-
-
-                                                                            <span class="btn btn-xs btn-default"><i
-                                                                                    class="fa fa-money"></i> 13 - 16
-                                                                                triệu VNĐ </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a> </li>
+                                                        <ul class="row media-list jobs collaboratives media-list-linked media-list-bordered">
+                                                            @foreach($relatedJobsFromCareer as $relatedJob)
+                                                                <li title="{{ $relatedJob->job_name }}" class="col-sm-6 media">
+                                                                    <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
+                                                                        <div class="media-left">
+                                                                            <img width="69" height="69"
+                                                                                 onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                                 loading="lazy"
+                                                                                 src="{{ $relatedJob->company->company_image_url ? Storage::url($relatedJob->company->company_image_url) : asset('img/default-company.svg') }}"
+                                                                                 class="img-md" alt="{{ $relatedJob->company->company_name }}">
+                                                                        </div>
+                                                                        <div class="media-body">
+                                                                            <span class="h6 media-heading">{{ $relatedJob->job_name }}</span>
+                                                                            <small class="text-muted">{{ $relatedJob->company->company_name }}</small>
+                                                                            <p class="text-muted">
+                                                                                <span class="btn text-uppercase btn-xs btn-default">
+                                                                                    <i class="bx bx-map"></i> {{ $relatedJob->company->city_name }}
+                                                                                </span>
+                                                                                <span class="btn btn-xs btn-default">
+                                                                                    <i class="fa fa-money"></i>
+                                                                                    {{ number_format($relatedJob->salary_min / 1000000, 0) }}tr - {{ number_format($relatedJob->salary_max / 1000000, 0) }}tr {{ $relatedJob->salary_type }}
+                                                                                </span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            @endforeach
                                                         </ul>
+
                                                     </div>
 
                                                 </div>
@@ -1025,15 +778,15 @@
                                                     <div class="panel-body">
                                                         <div class="profile-cover">
                                                             <div class="profile-cover-img"
-                                                                style="background-image: url(' {{ Storage::url($jobPost->company->company_cover_image_url) }}'  );">
-                                                            </div>
+                                                            style="background-image: url('{{ Storage::exists($jobPost->company->company_cover_image_url) ? Storage::url($jobPost->company->company_cover_image_url) : asset('assets_livewire/img/default-cover.png') }}');">
+                                                        </div>
                                                             <div class="media">
                                                                 <div class="media-left">
                                                                     <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
                                                                         class="profile-thumb">
                                                                         <img width="85" height="85"
-                                                                            onerror="this.src='/img/default-company.svg'"
-                                                                            data-src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : 'default-logo.jpg' }}"
+                                                                           onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                             src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
                                                                             class="img-md img-circle lazy"
                                                                             alt="{{ $jobPost->company->name }}">
                                                                     </a>
@@ -1097,28 +850,36 @@
                                                                             </svg>
                                                                         </a>
                                                                     </div>
+
                                                                 </div>
                                                                 <ul class="row media-list employer-jobs jobs media-list-linked media-list-bordered">
                                                                     @foreach($relatedJobs as $relatedJob)
-                                                                        <li title="{{ $relatedJob->title }}" class="col-sm-6 media standard">
-                                                                            <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
+                                                                    <li title="{{ $relatedJob->job_name }}" class="col-sm-6 media standard">
+                                                                        <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
+                                                                            <div class="media-left">
+                                                                                <img width="65" height="65"
+                                                                                     onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                                     loading="lazy"
+                                                                                     src="{{ Storage::url($relatedJob->company->company_image_url) }}"
+                                                                                     alt="{{ $relatedJob->company->company_name }}"
+                                                                                     class="img-responsive">
+                                                                            </div>
+                                                                            <div class="media-body">
+                                                                                <span class="h6 media-heading">{{ $relatedJob->job_name }}</span>
+                                                                                <small class="text-muted">{{ $relatedJob->company->company_name }}</small>
+                                                                                <p class="text-muted">
+                                                                                    <span class="btn text-uppercase btn-xs btn-default">
+                                                                                        <i class="bx bx-map"></i> {{ $relatedJob->company->city_name }}
+                                                                                    </span>
+                                                                                    <span class="btn btn-xs btn-default">
+                                                                                        <i class="fa fa-money"></i> {{ number_format($relatedJob->salary_min / 1000000, 0) }}tr - {{ number_format($relatedJob->salary_max / 1000000, 0) }}tr {{ $relatedJob->salary_type }}
+                                                                                    </span>
+                                                                                </p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                @endforeach
 
-                                                                                                                                                            <div class="media-left">
-                                                                                    <img width="69" height="69" onerror="this.src='/img/default-company.svg'"
-                                                                                         loading="lazy"
-                                                                                         src="{{ $relatedJob->company->logo_url }}" class="img-md" alt="{{ $relatedJob->company->name }}">
-                                                                                </div>
-                                                                                <div class="media-body">
-                                                                                    <span class="h6 media-heading">{{ $relatedJob->title }}</span>
-                                                                                    <small class="text-muted">{{ $relatedJob->company->name }}</small>
-                                                                                    <p class="text-muted">
-                                                                                        <span class="btn text-uppercase btn-xs btn-default"><i class="bx bx-map"></i> {{ $relatedJob->location->name }}</span>
-                                                                                        <span class="btn btn-xs btn-default"><i class="fa fa-money"></i>{{ $relatedJob->salary }}</span>
-                                                                                    </p>
-                                                                                </div>
-                                                                            </a>
-                                                                        </li>
-                                                                    @endforeach
                                                                 </ul>
 
                                                             </div>

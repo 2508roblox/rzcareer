@@ -9,6 +9,7 @@ class ViecLam extends Component
 {
     public $jobPost;
     public $relatedJobs; // Thêm biến để lưu việc làm liên quan
+    public  $relatedJobsFromCareer ; // Thêm biến để lưu việc làm liên quan
 
     public function mount($slug)
     {
@@ -24,6 +25,14 @@ class ViecLam extends Component
             ->take(3) // Lấy tối đa 3 việc làm
             ->with(['career', 'location']) // Eager load các quan hệ cần thiết
             ->get();
+
+            $this->relatedJobsFromCareer = JobPost::where('career_id', $this->jobPost->career_id)
+            ->where('slug', '!=', $slug) // Loại bỏ việc làm hiện tại
+            ->latest() // Sắp xếp theo thời gian tạo mới nhất
+            ->take(10) // Lấy tối đa 10 việc làm
+            ->with(['career', 'location'])
+            ->get();
+
     }
 
     public function render()
@@ -31,6 +40,7 @@ class ViecLam extends Component
         return view('livewire.viec-lam', [
             'jobPost' => $this->jobPost,
             'relatedJobs' => $this->relatedJobs, // Truyền dữ liệu việc làm liên quan vào view
+            'relatedJobsFromCareer' => $this->relatedJobsFromCareer, // Truyền dữ liệu việc làm liên quan vào view
         ]);
     }
 }

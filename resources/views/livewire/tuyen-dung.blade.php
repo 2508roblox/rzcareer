@@ -248,7 +248,8 @@
                     <div class="cover position-relative d-none d-sm-block">
                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                             width="100%" height="245" class="lazy"
-                            data-src="{{ Storage::url($company->company_cover_image_url) }}"
+
+                            data-src="{{ Storage::exists($company->company_cover_image_url) ? Storage::url($company->company_cover_image_url) : asset('assets_livewire/img/default-cover.png') }}"
                             alt="{{ $company->company_name }}">
                     </div>
                     <div class="box-top position-relative bg-white border shadow p-2 p-sm-3 rounded-4">
@@ -261,7 +262,7 @@
                             <div class="flex-shrink-0">
                                 <a href=" ">
                                     <img width="100" height="100" class="img-fluid logo lazy"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                        onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
                                         data-src="{{ Storage::url($company->company_image_url) }}"
                                         alt="{{ $company->company_name }}">
                                 </a>

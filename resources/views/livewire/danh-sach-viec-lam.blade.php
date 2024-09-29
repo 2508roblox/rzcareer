@@ -208,7 +208,7 @@
                                                             <div class="row">
                                                                 <div class="col-sm-12 col-sm-offset-1-bk">
                                                                     <div>
-                                                                        <form class="bt-form clearfix" wire:submit.prevent="searchJobs"> <!-- Prevent default submit -->
+                                                                        <form class="bt-form clearfix"  > <!-- Prevent default submit -->
                                                                             <div class="row no-mrg teks-search">
                                                                                 <div class="col-xs-5 padd0 colorgb-search">
                                                                                     <input type="search"
@@ -730,6 +730,7 @@
                                                                                 <div class="brows-job-company-img">
                                                                                     <a title="{{ $jobPost->job_name }}" href="{{ url('viec-lam/' . $jobPost->slug) }}">
                                                                                         <img width="65" height="65"
+                                                                                         onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
                                                                                              title="{{ $jobPost->job_name }} - {{ $jobPost->company->company_name }}"
                                                                                              loading="lazy"
                                                                                       src="{{ Storage::url($jobPost->company->company_image_url) }}"
@@ -739,12 +740,12 @@
                                                                                 </div>
                                                                                 <div class="brows-job-position">
                                                                                     <h3 class="h3 tooltip" title="{{ $jobPost->job_name }}">
-                                                                                        <a target="_blank" href="{{ url('job/' . $jobPost->slug) }}" title="{{ $jobPost->job_name }}">
+                                                                                        <a target="_blank" href="{{ url('viec-lam/' . $jobPost->slug) }}" title="{{ $jobPost->job_name }}">
                                                                                             {{ $jobPost->job_name }}
                                                                                         </a>
                                                                                     </h3>
                                                                                     <p class="font-13">
-                                                                                        <a title="{{ $jobPost->company->company_name }}" class="font-italic" href="{{ url('company/' . $jobPost->company->slug) }}">
+                                                                                        <a title="{{ $jobPost->company->company_name }}" class="font-italic" href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
                                                                                             {{ $jobPost->company->company_name }}
                                                                                         </a>
                                                                                     </p>
