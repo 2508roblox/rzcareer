@@ -18,7 +18,11 @@ class PostActivityResource extends Resource
     protected static ?string $model = PostActivity::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Danh sách ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form

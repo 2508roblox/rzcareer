@@ -39,8 +39,7 @@ class RecruiterPanelPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/RecruiterPanel/Widgets'), for: 'App\\Filament\\RecruiterPanel\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+          
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -54,7 +53,14 @@ class RecruiterPanelPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->authMiddleware([
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
                 RecruiterAuthenticate::class,
+            ])
+            ->brandLogo('/assets_livewire/admin.png')
+
+            ->plugins([
+                \Hasnayeen\Themes\ThemesPlugin::make(),
+                 
             ]);
     }
 }

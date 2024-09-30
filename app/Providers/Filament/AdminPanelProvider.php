@@ -64,7 +64,7 @@ class AdminPanelProvider extends PanelProvider
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
                 Authenticate::class,
             ])
-            ->brandLogo('/assets_livewire/logo-admin.svg')
+            ->brandLogo('/assets_livewire/admin.png')
 
             ->plugins([
                 \Hasnayeen\Themes\ThemesPlugin::make(),

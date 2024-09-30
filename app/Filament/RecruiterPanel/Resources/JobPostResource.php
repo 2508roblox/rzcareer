@@ -40,7 +40,8 @@ class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Quản lý đăng tuyển';
+    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+
     public static  ?string  $label = 'Danh sách tin đăng';
     public static  ?string  $subheading = 'Danh sách tin đăng';
 
