@@ -50,7 +50,7 @@ class PostActivityResource extends Resource
                 Forms\Components\TextInput::make('status')
                     ->required(),
                 Forms\Components\TextInput::make('is_sent_email')
-                    ->email()
+                  
                     ->required()
                     ->numeric()
                     ->default(0),
@@ -115,7 +115,10 @@ class PostActivityResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [

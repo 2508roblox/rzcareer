@@ -441,6 +441,9 @@ class JobPostResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id') // Thêm cột ID
+                ->numeric()
+                ->sortable(),
                 Tables\Columns\TextColumn::make('career_id')
                     ->numeric()
                     ->sortable(),
@@ -571,6 +574,10 @@ class JobPostResource extends Resource
         }
 
         return null;
+    }
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
     public static function getEloquentQuery(): Builder
 {
