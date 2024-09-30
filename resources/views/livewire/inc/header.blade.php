@@ -189,12 +189,17 @@
                 <img class="lazy rounded-1"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                   data-src="https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c" alt="avatar" width="32" height="32">
-                <span style="margin-left: 5px" class="">
-                  <div class="d-flex fw-bold text-capitalize">
-                    {{ Auth::user()->full_name }}</div>
-                  <div id="status_job_search"
-                    class="status_on">Đang tìm việc</div>
-                </span>
+                  @auth
+                  <span style="margin-left: 5px" class="">
+                      <div class="d-flex fw-bold text-capitalize">
+                          {{ Auth::user()->full_name }}
+                      </div>
+                      <div id="status_job_search" class="status_on">
+                          Đang tìm việc
+                      </div>
+                  </span>
+                  @endauth
+                  
               </a>
               <ul class="dropdown-menu text-small">
                 <style>
