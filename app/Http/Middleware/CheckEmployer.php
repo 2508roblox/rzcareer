@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckLoginCandidate
+class CheckEmployer
 {
     /**
      * Handle an incoming request.
@@ -20,14 +20,15 @@ class CheckLoginCandidate
             $user = Auth::user();
 
             // Kiểm tra xem user có has_company = 1 hay không
-            if ($user->has_company != 1) {
-                return $next($request);
+            if ($user->has_company == 1) {
+                return redirect('/employer');
             }else{
-            return redirect('/employer');
+                return $next($request);
             }
         } else {
             // Nếu người dùng chưa đăng nhập, chuyển hướng tới trang đăng nhập
-            return redirect('/site/login');
+            return $next($request);
+
         }
     }
 }

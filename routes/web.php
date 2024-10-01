@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CheckEmployer;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Middleware\CheckLoginCandidate;
 use App\Http\Middleware\CheckLoginEmployer;
@@ -30,13 +31,15 @@ use App\Livewire\ViecLam;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', action: HomeIndex::class)->name('index');
-Route::get('/viec-lam/{slug}', ViecLam::class);
-Route::get('/tuyen-dung/{slug}', TuyenDung::class);
-Route::get('/cong-ty', CongTy::class);
-Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
 
 
+Route::middleware(CheckEmployer::class)->group(function () {
+    Route::get('/', action: HomeIndex::class)->name('index');
+    Route::get('/viec-lam/{slug}', ViecLam::class);
+    Route::get('/tuyen-dung/{slug}', TuyenDung::class);
+    Route::get('/cong-ty', CongTy::class);
+    Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
+});
 Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class);
     Route::get('/candidate/manage-resume', ManageResume::class);
