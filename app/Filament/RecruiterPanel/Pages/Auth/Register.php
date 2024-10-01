@@ -51,11 +51,13 @@ class Register extends BaseRegister
                                                             ->required()
                                                             ->maxLength(255)
                                                             ->label('Full Name'),
-                                                        TextInput::make('email')
-                                                            ->email()
-                                                            ->required()
-                                                            ->maxLength(100)
-                                                            ->label('Email'),
+                                                            TextInput::make('email')
+                                                                ->email()
+                                                                ->required()
+                                                                ->maxLength(100)
+                                                                ->label('Email')
+                                                                ->unique('users', 'email'), // Kiểm tra tính duy nhất trong bảng users
+                                                            
                                                     ]),
                                                 FileUpload::make('avatar_url')
                                                     ->disk('public')
@@ -247,7 +249,7 @@ class Register extends BaseRegister
 
         try {
             DB::beginTransaction();
-
+        
             // Step 1: Create a new user
             $user = User::create([
                 'full_name' => $data['full_name'],
