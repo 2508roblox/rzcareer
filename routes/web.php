@@ -11,6 +11,12 @@ use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
 use App\Livewire\DocumentAttachment;
+use App\Livewire\Employer\CandidateList;
+use App\Livewire\Employer\Candidates;
+use App\Livewire\Employer\Homepage;
+use App\Livewire\Employer\Login as EmployerLogin;
+use App\Livewire\Employer\Order;
+use App\Livewire\EmployerHomePage;
 use App\Livewire\HomeIndex;
 use App\Livewire\Index;
 use App\Livewire\Site\Login;
@@ -46,3 +52,9 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
+
+Route::get('/employer', Homepage::class);
+Route::get('/employer/candidates', Candidates::class);
+Route::get('/employer/candidate/{id}', CandidateList::class);
+Route::get('/employer/login', EmployerLogin::class);
+Route::get('/employer/order', Order::class);
