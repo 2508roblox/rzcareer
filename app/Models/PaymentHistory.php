@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PaymentHistory extends Model
 {
     use HasFactory;
-    protected $fillable = [
+protected $fillable = [
         'user_id',
         'invoice_id',
         'balance',

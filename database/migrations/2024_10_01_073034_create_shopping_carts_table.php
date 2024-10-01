@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payment_history', function (Blueprint $table) {
+
+        Schema::create('shopping_carts', function (Blueprint $table) {
             $table->bigIncrements('id');  // PK id
             $table->foreignId('user_id')->constrained('users');  // FK user_id
-            $table->foreignId('invoice_id')->constrained('invoices');  // FK invoice_id
-            $table->decimal('balance', 10, 2);  // DECIMAL(10,2)
-            $table->enum('payment_method', ['credit_card', 'paypal', 'bank_transfer']);  // ENUM
-            $table->enum('status', ['pending', 'successful', 'failed']);  // ENUM
-            $table->date('payment_date');  // DATE
+            $table->foreignId('service_id')->constrained('services');  // FK service_id
+            $table->integer('quantity');  // INT
+            $table->decimal('total_price', 10, 2);  // DECIMAL(10,2)
             $table->timestamps();  // created_at, updated_at
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payment_history');
+        Schema::dropIfExists('shopping_cart');
     }
 };

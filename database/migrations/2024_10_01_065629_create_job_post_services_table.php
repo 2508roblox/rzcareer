@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job_post_service', function (Blueprint $table) {
+        Schema::create('job_post_services', function (Blueprint $table) {
             $table->bigIncrements('id');  // PK id - bigint
             $table->foreignId(column: 'job_id')->constrained('job_posts');  // FK job_id - bigint
             $table->foreignId('service_id')->constrained('services');  // FK service_id - bigint
