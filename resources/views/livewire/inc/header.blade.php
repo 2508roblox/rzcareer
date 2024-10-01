@@ -160,10 +160,8 @@
           <div class="d-none d-xl-block ms-sm-3 btn-group">
             <button type="button" class="btn rounded-2 text-capitalize dropdown-toggle text-primary border bg-f4f4f4" data-bs-toggle="dropdown">Nhà tuyển dụng</button>
             <ul class="dropdown-menu">
-              <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Đăng Tin Online</a></li>
-              <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/site/candidates">Tìm Hồ Sơ</a></li>
-              <!--<li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Headhunt</a></li>
-      <li><a target="_blank" class="dropdown-item" href="https://employer.jobsgo.vn/">Dịch Vụ Tuyển Mass</a></li>-->
+              <li><a target="_blank" class="dropdown-item" href="/employer/login">Đăng nhập</a></li>
+            
             </ul>
           </div>
         </div>

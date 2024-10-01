@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Middleware\CheckLogin;
+use App\Http\Middleware\CheckLoginCandidate;
+use App\Http\Middleware\CheckLoginEmployer;
 use App\Livewire\Candidate\ChangePassword;
 use App\Livewire\Candidate\CvGo;
 use App\Livewire\Candidate\Dashboard;
@@ -34,27 +37,32 @@ Route::get('/cong-ty', CongTy::class);
 Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
 
 
-Route::get('/candidate/dashboard', Dashboard::class);
-Route::get('/candidate/manage-resume', ManageResume::class);
-Route::get('/candidate/import-cv-data', ImportCvData::class);
-Route::get('/candidate/review', Review::class);
-Route::get('/candidate/cv-go', CvGo::class);
-Route::get('/candidate/change-password', ChangePassword::class);
-Route::get('/candidate/jobs-applied', JobsApplied::class);
-Route::get('/candidate/employers-viewed', EmployersViewed::class);
-Route::get('/candidate/document-attachment', DocumentAttachment::class);
-
-Route::get('/site/register', Register::class);
-Route::get('/site/login', Login::class);
+Route::middleware(CheckLoginCandidate::class)->group(function () {
+    Route::get('/candidate/dashboard', Dashboard::class);
+    Route::get('/candidate/manage-resume', ManageResume::class);
+    Route::get('/candidate/import-cv-data', ImportCvData::class);
+    Route::get('/candidate/review', Review::class);
+    Route::get('/candidate/cv-go', CvGo::class);
+    Route::get('/candidate/change-password', ChangePassword::class);
+    Route::get('/candidate/jobs-applied', JobsApplied::class);
+    Route::get('/candidate/employers-viewed', EmployersViewed::class);
+    Route::get('/candidate/document-attachment', DocumentAttachment::class);
+}); 
+Route::middleware(CheckLoginEmployer::class)->group(function () {
+    Route::get('/employer', Homepage::class);
+    Route::get('/employer/candidates', Candidates::class);
+    Route::get('/employer/candidate/{id}', CandidateList::class);
+    Route::get('/employer/order', Order::class);
+});
+Route::middleware(CheckLogin::class)->group(function () {
+    Route::get('/employer/login', EmployerLogin::class);
+    Route::get('/site/register', Register::class);
+    Route::get('/site/login', Login::class);
+ 
+});
 
 
 Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
-
-Route::get('/employer', Homepage::class);
-Route::get('/employer/candidates', Candidates::class);
-Route::get('/employer/candidate/{id}', CandidateList::class);
-Route::get('/employer/login', EmployerLogin::class);
-Route::get('/employer/order', Order::class);
