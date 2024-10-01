@@ -192,13 +192,7 @@
                             <nav>
                                 @livewire('inc.breadcrumb')
                             </nav>
-                            <div class="alert-candidate">
-                                <div class="alert alert-info"><i class="icon-file-upload2"></i> Tiết kiệm thời gian cập
-                                    nhật hồ sơ bằng cách tải
-                                    lên CV. <a href="/assets_livewire/phan-tich-cv.html" target="_blank"><u><b>Upload CV
-                                                ngay!</b></u></a>
-                                </div>
-                            </div>
+                        
                             <style>
                                 nav li {
                                     text-align: center;
@@ -801,8 +795,10 @@
                                                     <div id="imageDropAvatar" class="thumb thumb-slide">
 
                                                         <img onerror="this.src='/assets_livewire/bolt/assets/images/image.png'"
-                                                            src="/assets_livewire/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
-                                                            class="avatar img-responsive" alt="web developer">
+                                                        src="{{ Storage::url($user->avatar_url) }}"
+                                                        class="avatar img-responsive" 
+                                                        alt="web developer">
+                                                   
 
 
                                                         <div class="caption">
@@ -815,7 +811,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4><a href="/candidate/profile">web developer</a></h4>
+                                                <h4><a href="/candidate/profile">{{ $user->full_name }}</a></h4>
+
                                                 <h6 class="center-block">Nhân Viên/Chuyên Viên</h6>
                                             </div>
 
@@ -840,11 +837,11 @@
                                                     <span class="progress-right">
                                                         <span class="progress-bar"></span>
                                                     </span>
-                                                    <div class="progress-value">67%</div>
+                                                    <div class="progress-value">{{$a *25}}%</div>
 
                                                 </div>
 
-                                                <p class="mt-20 mb-0"><a href="/candidate/pre-profile"
+                                                <p class="mt-20 mb-0"><a wire:navigate href="/candidate/review"
                                                         class="btn btn-edit-profile"><i class="icofont-ui-edit"></i>
                                                         Cập nhật hồ sơ</a></p>
                                             </div>
@@ -1299,69 +1296,7 @@
          }
              })
             </script>
-            <!-- Modal -->
-            <div id="policyModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h5 class="modal-title text-center"><strong>THÔNG BÁO CẬP NHẬT QUY CHẾ HOẠT ĐỘNG WEBSITE
-                                    JOBSGO.VN</strong></h5>
-                        </div>
-                        <div class="modal-body pt-5">
-                            <p>JobsGO xin thông báo về việc Quy chế hoạt động của website JobsGO.vn đã được cập nhật để
-                                tuân thủ theo Nghị định 13/2023/NĐ-CP của Chính Phủ về Bảo vệ dữ liệu cá nhân, có hiệu
-                                lực thi hành kể từ ngày 01/07/2023.</p>
-                            <p>Các nội dung được cập nhật bao gồm:</p>
-                            <ul class="pl-10">
-                                <li>Phần VI. Chính sách xử lý dữ liệu cá nhân và bảo vệ thông tin người dùng;</li>
-                                <li>Phần IX. Quyền và trách nhiệm của Ban quản lý Sàn giao dịch TMĐT JobsGO.vn;</li>
-                                <li>Phần X. Quyền và trách nhiệm của Nhà tuyển dụng trên JobsGO.vn;</li>
-                                <li>Phần XI. Quyền và trách nhiệm của Ứng viên trên JobsGO.vn;</li>
-                                <li>Các nội dung khác có liên quan đến mục đích, phạm vi, cách thức, trách nhiệm của các
-                                    Bên liên quan đến hoạt động xử lý dữ liệu cá nhân trên JobsGO.vn;</li>
-                            </ul>
-                            <p>Vui lòng xem nội dung Quy chế hoạt động sau khi cập nhật <a target="_blank"
-                                    href="/assets_livewire/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">tại
-                                    đây</a></p>
-                            <p>JobsGO kính mong Quý Người dùng thấu hiểu rằng, hoạt động xử lý dữ liệu cá nhân là quan
-                                trọng và cần thiết để JobsGO kết nối Ứng viên với các Nhà Tuyển dụng. JobsGO đảm bảo
-                                những nội dung được cập nhật tại Quy chế tuân thủ đúng quy định về bảo vệ dữ liệu cá
-                                nhân theo Nghị định 13/2023/NĐ-CP và luôn nhằm mục đích bảo vệ quyền của Người dùng đối
-                                với những thông tin đã cung cấp trên hệ thống JobsGO.vn.</p>
-                            <p>Chúng tôi mong nhận được xác nhận từ Người dùng về việc đồng ý với Quy chế hoạt động sau
-                                khi cập nhật và tiếp tục sử dụng dịch vụ của JobsGO. </p>
-                            <p>JobsGO chân thành cảm ơn!</p>
-
-                            <div class="checkbox">
-                                <label><input id="agreement" checked type="checkbox"> <span class="text-default">Tôi đã
-                                        đọc, hiểu và đồng ý với các nội dung tại Quy chế hoạt động của website
-                                        JobsGO.vn</span></label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input id="save_cv" checked type="checkbox"> <span class="text-default">Tôi đồng
-                                        ý để JobsGO.vn xử lý các dữ liệu cá nhân của mình theo quy định tại <a
-                                            target="_blank"
-                                            href="/assets_livewire/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">Quy
-                                            chế hoạt động</a> và <a target="_blank"
-                                            href="/assets_livewire/pdf/viewer/?file=/media/pdf/chinh-sach.pdf">Chính
-                                            sách xử lý dữ liệu cá nhân</a></span> </label>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="button"
-                                    class="btn btn-policy btn-block bg-green btn-lg btn-ladda btn-ladda-spinner btn-ladda-progress text-uppercase"
-                                    data-style="zoom-out">Hoàn tất <b><i class="icon-circle-right2"></i></b></button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+       
 
             <script>
                 window.addEventListener('load', function () {
@@ -1434,10 +1369,50 @@
      });
             </script>
         </body>
-
+        <style>
+            @keyframes loading-1 {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+        
+                100% {
+                    @if ($a == 2 || $a == 3 || $a == 4  )
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); /* Full 180 degrees */
+    @elseif ($a == 1)
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); /* 90 degrees for a=3 */
+    @elseif ($a == 0)
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); /* 0 degrees for a=2 */
+    @endif
+                }
+            }
+        
+            @keyframes loading-2 {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+        
+                100% {
+    @if ($a == 4)
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); /* Full 180 degrees */
+    @elseif ($a == 3)
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); /* 90 degrees for a=3 */
+    @elseif ($a == 2)
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); /* 0 degrees for a=2 */
+    @endif
+    }
+            }
+        </style>
         </html>
 
 
     </div>
-
+   
 </div>

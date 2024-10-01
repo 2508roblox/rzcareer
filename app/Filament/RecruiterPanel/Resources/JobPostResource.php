@@ -40,7 +40,8 @@ class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Quản lý đăng tuyển';
+    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+
     public static  ?string  $label = 'Danh sách tin đăng';
     public static  ?string  $subheading = 'Danh sách tin đăng';
 
@@ -440,6 +441,9 @@ class JobPostResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id') // Thêm cột ID
+                ->numeric()
+                ->sortable(),
                 Tables\Columns\TextColumn::make('career_id')
                     ->numeric()
                     ->sortable(),
@@ -570,6 +574,10 @@ class JobPostResource extends Resource
         }
 
         return null;
+    }
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
     public static function getEloquentQuery(): Builder
 {

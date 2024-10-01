@@ -24,9 +24,8 @@
         "laravel/pulse": "^1.2",
         "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
-        "phpoffice/phpspreadsheet": "^1.29.1",
-
-        "naturalgroove/laravel-filament-image-generator-field": "^1.0"
+        "naturalgroove/laravel-filament-image-generator-field": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.29.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.13",

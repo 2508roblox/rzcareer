@@ -18,7 +18,11 @@ class PostActivityResource extends Resource
     protected static ?string $model = PostActivity::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Danh sách ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -46,7 +50,7 @@ class PostActivityResource extends Resource
                 Forms\Components\TextInput::make('status')
                     ->required(),
                 Forms\Components\TextInput::make('is_sent_email')
-                    ->email()
+                  
                     ->required()
                     ->numeric()
                     ->default(0),
@@ -111,7 +115,10 @@ class PostActivityResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [

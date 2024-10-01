@@ -675,68 +675,7 @@
             }
         })
     </script>
-    <!-- Modal -->
-    <div id="policyModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-    
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h5 class="modal-title text-center"><strong>THÔNG BÁO CẬP NHẬT QUY CHẾ HOẠT ĐỘNG WEBSITE
-                            JOBSGO.VN</strong></h5>
-                </div>
-                <div class="modal-body pt-5">
-                    <p>JobsGO xin thông báo về việc Quy chế hoạt động của website JobsGO.vn đã được cập nhật để tuân thủ
-                        theo Nghị định 13/2023/NĐ-CP của Chính Phủ về Bảo vệ dữ liệu cá nhân, có hiệu lực thi hành kể từ
-                        ngày 01/07/2023.</p>
-                    <p>Các nội dung được cập nhật bao gồm:</p>
-                    <ul class="pl-10">
-                        <li>Phần VI. Chính sách xử lý dữ liệu cá nhân và bảo vệ thông tin người dùng;</li>
-                        <li>Phần IX. Quyền và trách nhiệm của Ban quản lý Sàn giao dịch TMĐT JobsGO.vn;</li>
-                        <li>Phần X. Quyền và trách nhiệm của Nhà tuyển dụng trên JobsGO.vn;</li>
-                        <li>Phần XI. Quyền và trách nhiệm của Ứng viên trên JobsGO.vn;</li>
-                        <li>Các nội dung khác có liên quan đến mục đích, phạm vi, cách thức, trách nhiệm của các Bên liên
-                            quan đến hoạt động xử lý dữ liệu cá nhân trên JobsGO.vn;</li>
-                    </ul>
-                    <p>Vui lòng xem nội dung Quy chế hoạt động sau khi cập nhật <a target="_blank"
-                            href="/assets_livewire/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">tại
-                            đây</a></p>
-                    <p>JobsGO kính mong Quý Người dùng thấu hiểu rằng, hoạt động xử lý dữ liệu cá nhân là quan trọng và cần
-                        thiết để JobsGO kết nối Ứng viên với các Nhà Tuyển dụng. JobsGO đảm bảo những nội dung được cập nhật
-                        tại Quy chế tuân thủ đúng quy định
-                        về bảo vệ dữ liệu cá nhân theo Nghị định 13/2023/NĐ-CP và luôn nhằm mục đích bảo vệ quyền của Người
-                        dùng đối với những thông tin đã cung cấp trên hệ thống JobsGO.vn.</p>
-                    <p>Chúng tôi mong nhận được xác nhận từ Người dùng về việc đồng ý với Quy chế hoạt động sau khi cập nhật
-                        và tiếp tục sử dụng dịch vụ của JobsGO. </p>
-                    <p>JobsGO chân thành cảm ơn!</p>
-    
-                    <div class="checkbox">
-                        <label><input id="agreement" checked type="checkbox"> <span class="text-default">Tôi đã
-                                đọc, hiểu và đồng ý với các nội dung tại Quy chế hoạt động của website
-                                JobsGO.vn</span></label>
-                    </div>
-                    <div class="checkbox">
-                        <label><input id="save_cv" checked type="checkbox"> <span class="text-default">Tôi đồng
-                                ý để JobsGO.vn xử lý các dữ liệu cá nhân của mình theo quy định tại <a target="_blank"
-                                    href="/assets_livewire/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf">Quy
-                                    chế hoạt động</a> và <a target="_blank"
-                                    href="/assets_livewire/pdf/viewer/?file=/media/pdf/chinh-sach.pdf">Chính
-                                    sách xử lý dữ liệu cá nhân</a></span> </label>
-                    </div>
-    
-                    <div class="form-group">
-                        <button type="button"
-                            class="btn btn-policy btn-block bg-green btn-lg btn-ladda btn-ladda-spinner btn-ladda-progress text-uppercase"
-                            data-style="zoom-out">Hoàn tất <b><i class="icon-circle-right2"></i></b></button>
-                    </div>
-    
-                </div>
-    
-            </div>
-    
-        </div>
-    </div>
+ 
     
     <script>
         window.addEventListener('load', function() {

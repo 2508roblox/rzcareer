@@ -76,7 +76,11 @@ class User extends Authenticatable implements FilamentUser, HasName
     {
         return $this->belongsToMany(Permission::class, 'permission_roles', 'role_id', 'permission_id');
     }
-
+    public function company()
+    {
+        return $this->hasOne(Company::class);
+    }
+    
     /**
      * Get the attributes that should be cast.
      *

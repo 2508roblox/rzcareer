@@ -17,7 +17,11 @@ class Company extends Model
     {
         return $this->belongsTo(CommonLocation::class);
     }
-
+    public function reviews()
+    {
+        return $this->hasMany(CompanyReview::class);
+    }
+    
     public function user()
     {
         return $this->belongsTo(User::class);

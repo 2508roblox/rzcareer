@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Filament\RecruiterPanel\Pages\Auth\Register;
+use App\Filament\RecruiterPanel\Widgets\CompanyJobPostsWidget;
 use App\Http\Middleware\RecruiterAuthenticate;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -39,8 +40,7 @@ class RecruiterPanelPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/RecruiterPanel/Widgets'), for: 'App\\Filament\\RecruiterPanel\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                CompanyJobPostsWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -54,7 +54,14 @@ class RecruiterPanelPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->authMiddleware([
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
                 RecruiterAuthenticate::class,
+            ])
+            ->brandLogo('/assets_livewire/admin.png')
+
+            ->plugins([
+                \Hasnayeen\Themes\ThemesPlugin::make(),
+                 
             ]);
     }
 }
