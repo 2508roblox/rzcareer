@@ -6,8 +6,7 @@
                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span></button>
             <a href="/employer" class="navbar-brand logo"> <img
-                    src="https://employer.jobsgo.vn/media/img/logo.png" alt=""> <span class="slogan">Real-time
-                    Recruiting</span> </a>
+                    src="/assets_livewire/logo-dark.svg" alt="">  </a>
         </div>
         <!--Logo/-->
         <nav class="collapse navbar-collapse" id="primary-menu">
@@ -19,9 +18,12 @@
                         Tìm ứng viên</a></li>
               
            
-                <li><a href="/employer/login">Đăng nhập</a></li>
-                <li class="sign-in"><a href="/recruiter/register">Đăng ký</a></li>
-
+                        @if(Auth::check())
+                        <li class="dashboard"><a href="/recruiter">Bảng điều khiển</a></li>
+                    @else
+                        <li><a href="/employer/login">Đăng nhập</a></li>
+                        <li class="sign-in"><a href="/recruiter/register">Đăng ký</a></li>
+                    @endif
 
             </ul>
         </nav>

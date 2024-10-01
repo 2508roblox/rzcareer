@@ -23,6 +23,9 @@ class CheckLoginEmployer
             // Kiểm tra xem user có has_company = 1 hay không
             if ($user->has_company == 1) {
                 return $next($request);
+            }else{
+            return redirect('/');
+
             }
         } else {
             // Nếu người dùng chưa đăng nhập, chuyển hướng tới trang đăng nhập
