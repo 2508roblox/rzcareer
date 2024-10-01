@@ -7,19 +7,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="JobsGO - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
-    <meta name="title" content="JobsGO – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
+    <meta name="description" content="Rzcareer - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
+    <meta name="title" content="Rzcareer – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jobsgo.vn">
-    <meta property="og:image" itemprop="thumbnailUrl" content="https://jobsgo.vn/media/img/cover-share.jpg">
-    <meta property="og:description" content="JobsGO - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
-    <meta property="og:title" content="JobsGO – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
+    <meta property="og:url" content="https://Rzcareer.vn">
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://Rzcareer.vn/media/img/cover-share.jpg">
+    <meta property="og:description" content="Rzcareer - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
+    <meta property="og:title" content="Rzcareer – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
     <meta property="fb:app_id" content="1590841851212703">
     <meta property="al:android:package" content="vn.ca.hope.candidate">
-    <meta property="al:android:app_name" content="JobsGO">
+    <meta property="al:android:app_name" content="Rzcareer">
     <meta property="al:ios:app_store_id" content="1234120247">
-    <meta property="al:ios:app_name" content="JobsGO">
-    <title>JobsGO - Tìm việc làm mơ ước</title>
+    <meta property="al:ios:app_name" content="Rzcareer">
+    <title>Rzcareer - Tìm việc làm mơ ước</title>
     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font" type="font/woff2" crossorigin>
@@ -98,12 +98,12 @@
                       <div class="card border-primary w-100">
                         <div class="row g-0 align-items-center">
                           <div class="col-4 p-1 text-center">
-                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic1.svg?v=234208153092" alt="Đánh giá CV - JobsGO AI">
+                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic1.svg?v=234208153092" alt="Đánh giá CV - Rzcareer AI">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
-                              <h3 class="fs-6 card-title fw-bold">Đánh giá CV - JobsGO AI</h3>
-                              <p class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của JobsGO AI</p>
+                              <h3 class="fs-6 card-title fw-bold">Đánh giá CV - Rzcareer AI</h3>
+                              <p class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của Rzcareer AI</p>
                               <a href="/review-cv.html" class="btn btn-primary btn-sm"> Tải lên CV</a>
 
                             </div>
@@ -118,12 +118,12 @@
                         <div class="row g-0 align-items-center">
 
                           <div class="col-4 p-1 text-center">
-                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic2.svg?v=234208153092" alt="Tạo CV Online - JobsGO AI">
+                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic2.svg?v=234208153092" alt="Tạo CV Online - Rzcareer AI">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
                               <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
-                              <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với JobsGO</p>
+                              <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với Rzcareer</p>
                               <a href="/tao-cv-bang-ai.html" class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
                             </div>
                           </div>
@@ -138,7 +138,7 @@
             <div class="col-sm-5 col-md-4">
               <div class="teks-box-today text-light">
                 <h6>
-                  <img src="/assets_livewire/img/2024/ic3.svg?v=234208153092" width="16" loading="lazy" alt="jobsgo">
+                  <img src="/assets_livewire/img/2024/ic3.svg?v=234208153092" width="16" loading="lazy" alt="Rzcareer">
                   Thị trường làm việc hôm nay
                   <small class="float-end fw-normal">25/09/2024</small>
                   <div class="row my-3 mt-4 text-center">
@@ -155,12 +155,12 @@
                   <div class="row my-3 mt-4 text-center">
                     <h5 class="mb-3">Con số ấn tượng khác</h5>
                     <div class="col-6">
-                      <img src="/assets_livewire/img/2024/ic4.svg?v=234208153092" width="28" loading="lazy" alt="jobsgo">
+                      <img src="/assets_livewire/img/2024/ic4.svg?v=234208153092" width="28" loading="lazy" alt="Rzcareer">
                       <p>Nhà tuyển dụng uy tín</p>
                       <strong>120.000+</strong>
                     </div>
                     <div class="col-6">
-                      <img src="/assets_livewire/img/2024/ic5.svg?v=234208153092" width="20" loading="lazy" alt="jobsgo">
+                      <img src="/assets_livewire/img/2024/ic5.svg?v=234208153092" width="20" loading="lazy" alt="Rzcareer">
                       <p>Lượt tải ứng dụng</p>
                       <strong>1.200.000+</strong>
                     </div>
@@ -173,8 +173,8 @@
 
       </section>
       <section class="d-block d-lg-none text-center">
-        <a href="https://jobsgo.vn/site/download?utm_source=home_mobile">
-          <img height="117" width="400" class="w-100 h-auto" loading="lazy" src="/assets_livewire/teks/img/download-app.webp" alt="Download JobsGO">
+        <a href="https://Rzcareer.vn/site/download?utm_source=home_mobile">
+          <img height="117" width="400" class="w-100 h-auto" loading="lazy" src="/assets_livewire/teks/img/download-app.webp" alt="Download Rzcareer">
         </a>
       </section>
       <section class="bg-linear-gradient pt-2 py-sm-3 p-sm-4">
@@ -189,7 +189,7 @@
             <div class="teks-section-content teks-swiper">
               <div class="alert d-none d-sm-block alert-light alert-dismissible rounded-1 text-dark py-1 px-2 small shadow-sm">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <img src="/assets_livewire/img/2024/ic6.svg?v=234208153092" width="16" loading="lazy" alt="jobsgo"> <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
+                <img src="/assets_livewire/img/2024/ic6.svg?v=234208153092" width="16" loading="lazy" alt="Rzcareer"> <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
               </div>
               <div class="d-sm-block">
 
@@ -398,13 +398,13 @@
           </div>
           <div class="row my-3">
             <div class="col-4">
-              <a target="_blank" href="https://jobsgo.vn/review-cv.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn1.webp" alt="img"></a>
+              <a target="_blank" href="https://Rzcareer.vn/review-cv.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn1.webp" alt="img"></a>
             </div>
             <div class="col-4">
-              <a target="_blank" href="https://jobsgo.vn/phan-tich-cv.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn2.webp" alt="jobsgo"></a>
+              <a target="_blank" href="https://Rzcareer.vn/phan-tich-cv.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn2.webp" alt="Rzcareer"></a>
             </div>
             <div class="col-4">
-              <a target="_blank" href="https://jobsgo.vn/tao-cv-bang-ai.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn3.webp" alt="img"></a>
+              <a target="_blank" href="https://Rzcareer.vn/tao-cv-bang-ai.html"><img width="100%" loading="lazy" src="/assets_livewire/img/2024/bn3.webp" alt="img"></a>
             </div>
           </div>
         </div>
@@ -414,7 +414,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h2 class="mb-4 text-white text-center">Cùng JobsGO xây dựng hồ sơ ấn tượng </h2>
+              <h2 class="mb-4 text-white text-center">Cùng Rzcareer xây dựng hồ sơ ấn tượng </h2>
               <div class="row justify-content-center">
                 <div class="col-sm-7 col-md-8">
                   <div class="row row-cols-1 text-left row-cols-md-2 row-cols-auto mt-2 gx-4 d-flex justify-content-center">
@@ -423,12 +423,12 @@
                       <div class="card border-primary w-100">
                         <div class="row g-0 align-items-center">
                           <div class="col-4 p-1 text-center">
-                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic1.svg?v=234208153092" alt="Đánh giá CV - JobsGO AI">
+                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic1.svg?v=234208153092" alt="Đánh giá CV - Rzcareer AI">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
-                              <h3 class="fs-6 card-title fw-bold">Đánh giá CV - JobsGO AI</h3>
-                              <p class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của JobsGO AI</p>
+                              <h3 class="fs-6 card-title fw-bold">Đánh giá CV - Rzcareer AI</h3>
+                              <p class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của Rzcareer AI</p>
                               <a href="/review-cv.html" class="btn btn-primary btn-sm"> <i class='bx bx-upload'></i> Tải lên CV</a>
 
                             </div>
@@ -443,12 +443,12 @@
                         <div class="row g-0 align-items-center">
 
                           <div class="col-4 p-1 text-center">
-                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic2.svg?v=234208153092" alt="Phân tích CV - JobsGO AI">
+                            <img height="90" width="90" loading="lazy" src="/assets_livewire/img/2024/ic2.svg?v=234208153092" alt="Phân tích CV - Rzcareer AI">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
                               <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
-                              <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với JobsGO</p>
+                              <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với Rzcareer</p>
                               <a href="/tao-cv-bang-ai.html" class="btn btn-primary btn-sm"><i class='bx bx-plus'></i> Tạo CV ngay!</a>
                             </div>
                           </div>
@@ -521,7 +521,7 @@
               <div class="col-lg-3 teks-section-title ps-3 text-center text-lg-start">
                 <h2 class="text-white fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
                 <p class="w-100 mb-3">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
-                <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy" src="{{ asset('assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092') }}" alt="JobsGO">
+                <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy" src="{{ asset('assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092') }}" alt="Rzcareer">
 
               </div>
               <div class="col-lg-9">
@@ -630,8 +630,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/reviewers/tue_dan.png" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Tuệ Đan</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                JobsGO có App trên điện thoại dễ dùng, có thể nhận thông báo và chat với NTD. Phần nào không biết có thể chat với Support trên App, họ hướng dẫn chi tiết lắm. Tìm việc ở trên này cũng đơn giản. Có cái tính năng tìm việc xung quanh vị trí bạn đang đứng với bán kính bao nhiêu km cũng hay.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Rzcareer có App trên điện thoại dễ dùng, có thể nhận thông báo và chat với NTD. Phần nào không biết có thể chat với Support trên App, họ hướng dẫn chi tiết lắm. Tìm việc ở trên này cũng đơn giản. Có cái tính năng tìm việc xung quanh vị trí bạn đang đứng với bán kính bao nhiêu km cũng hay.
                               </p>
                             </div>
                           </div>
@@ -641,8 +641,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/reviewers/thuy_nga.png" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Thúy Nga</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình biết đến JobsGO qua sự giới thiệu của một người bạn nên cũng thử tìm việc trên đó xem thế nào. Với việc làm Content mà mình tìm kiếm thì có khá đa dạng các ngành nghề, lĩnh vực tuyển dụng nên mình cũng may mắn tìm được việc làm phù hợp. Tìm việc trên JobsGO thì mình có thể tạo CV online rồi apply trực tiếp nên cũng tiện lợi. Nhất là có cái tính năng phân tích CV, sửa lỗi CV, nó giúp mình biết CV cần chỉnh sửa những gì, cái đó mình thấy khá hay.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình biết đến Rzcareer qua sự giới thiệu của một người bạn nên cũng thử tìm việc trên đó xem thế nào. Với việc làm Content mà mình tìm kiếm thì có khá đa dạng các ngành nghề, lĩnh vực tuyển dụng nên mình cũng may mắn tìm được việc làm phù hợp. Tìm việc trên Rzcareer thì mình có thể tạo CV online rồi apply trực tiếp nên cũng tiện lợi. Nhất là có cái tính năng phân tích CV, sửa lỗi CV, nó giúp mình biết CV cần chỉnh sửa những gì, cái đó mình thấy khá hay.
                               </p>
                             </div>
                           </div>
@@ -652,8 +652,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/reviewers/quynh_anh.png" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Anh</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình đã có 1 trải nghiệm tốt khi tải ứng dụng, đăng ký tài khoản JobsGO. Sau khi hoàn thành hồ sơ cá nhân hệ thống đã chủ động tìm và gợi ý việc làm đến mình dựa theo những thông tin mà mình đã cung cấp. Ứng dụng có rất nhiều ưu điểm ví dụ như nộp hồ sơ nhanh, chat trực tiếp với nhà tuyển dụng & thông tin doanh nghiệp rõ ràng chi tiết. Mình rất an tâm và hài lòng khi sử dụng.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình đã có 1 trải nghiệm tốt khi tải ứng dụng, đăng ký tài khoản Rzcareer. Sau khi hoàn thành hồ sơ cá nhân hệ thống đã chủ động tìm và gợi ý việc làm đến mình dựa theo những thông tin mà mình đã cung cấp. Ứng dụng có rất nhiều ưu điểm ví dụ như nộp hồ sơ nhanh, chat trực tiếp với nhà tuyển dụng & thông tin doanh nghiệp rõ ràng chi tiết. Mình rất an tâm và hài lòng khi sử dụng.
                               </p>
                             </div>
                           </div>
@@ -663,8 +663,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/reviewers/thuy_anh.png" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Thuỳ Anh</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Tôi đã sử dụng nhiều ứng dụng khác nhau trước khi biết tới JobsGO, nhưng đây thực sự là một ứng dụng tuyệt vời. Tôi rất thích tính năng tạo CV online nhanh chóng, được phân tích và sửa lỗi CV hoàn toàn miễn phí từ JobsGO. Giao diện của ứng dụng cũng rất dễ sử dụng, tất cả đều được sắp xếp một cách rõ ràng và logic, giúp tôi dễ dàng tìm thấy những gì tôi cần mà không cần mất quá nhiều thời gian. JobsGO có đầy đủ ngành nghề tôi quan tâm với những mức offer tốt, hơn nữa tôi còn dễ dàng tìm kiếm việc gần khu vực tôi ở. Đánh giá 5 sao nhé!
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Tôi đã sử dụng nhiều ứng dụng khác nhau trước khi biết tới Rzcareer, nhưng đây thực sự là một ứng dụng tuyệt vời. Tôi rất thích tính năng tạo CV online nhanh chóng, được phân tích và sửa lỗi CV hoàn toàn miễn phí từ Rzcareer. Giao diện của ứng dụng cũng rất dễ sử dụng, tất cả đều được sắp xếp một cách rõ ràng và logic, giúp tôi dễ dàng tìm thấy những gì tôi cần mà không cần mất quá nhiều thời gian. Rzcareer có đầy đủ ngành nghề tôi quan tâm với những mức offer tốt, hơn nữa tôi còn dễ dàng tìm kiếm việc gần khu vực tôi ở. Đánh giá 5 sao nhé!
                               </p>
                             </div>
                           </div>
@@ -681,8 +681,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/2.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình sử dụng app JobsGO để tìm việc làm từ 3 năm trước và rất thích các tính năng của app như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm, không bị tình trạng tin đăng ảo rồi không ai gọi như một số bên khác.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình sử dụng app Rzcareer để tìm việc làm từ 3 năm trước và rất thích các tính năng của app như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm, không bị tình trạng tin đăng ảo rồi không ai gọi như một số bên khác.
                               </p>
                             </div>
                           </div>
@@ -692,8 +692,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/1.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Em mới ra trường, chưa biết cách làm CV như thế nào. May có một chị người quen bảo lên website JobsGO.vn tạo CV, được hướng dẫn chi tiết. Trên JobsGO còn có phần phân tích CV rất hữu ích, em có thể biết được mình đang thiếu thông tin gì và bổ sung.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Em mới ra trường, chưa biết cách làm CV như thế nào. May có một chị người quen bảo lên website Rzcareer.vn tạo CV, được hướng dẫn chi tiết. Trên Rzcareer còn có phần phân tích CV rất hữu ích, em có thể biết được mình đang thiếu thông tin gì và bổ sung.
                               </p>
                             </div>
                           </div>
@@ -704,8 +704,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/4.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                JobsGO giúp em tìm thấy công việc phù hợp với mình thông qua các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế trong lĩnh vực Marketing mà mình yêu thích.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Rzcareer giúp em tìm thấy công việc phù hợp với mình thông qua các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế trong lĩnh vực Marketing mà mình yêu thích.
                               </p>
                             </div>
                           </div>
@@ -715,8 +715,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/5.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
                               <p class="text-muted text-body small mxh-100">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó mình đã nhìn thấy quảng cáo của JobsGO và cập nhật CV lên website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc phục những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó mình đã nhìn thấy quảng cáo của Rzcareer và cập nhật CV lên website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc phục những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
                               </p>
                             </div>
                           </div>
@@ -746,8 +746,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/6.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Phương Thảo</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Tôi rất hài lòng với web JobsGO! Tôi nhận được phản hồi từ các NTD rất nhanh. Giao diện mới giúp tôi thực hiện các thao tác dễ dàng hơn và tôi đã nhận được nhiều lời mời phỏng vấn từ các công ty lớn.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Tôi rất hài lòng với web Rzcareer! Tôi nhận được phản hồi từ các NTD rất nhanh. Giao diện mới giúp tôi thực hiện các thao tác dễ dàng hơn và tôi đã nhận được nhiều lời mời phỏng vấn từ các công ty lớn.
                               </p>
                             </div>
                           </div>
@@ -756,8 +756,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/7.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Nguyễn Hạnh</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Tôi từng làm kế toán và sau đó chuyển sang Marketing. Sử dụng CV tự làm của mình, tôi đã nhận được phản hồi rất kém từ các NTD. Sau khi update CV của mình lên JobsGO AI, tôi đã được feedback rất chi tiết và đã nhận được nhiều cuộc phỏng vấn.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Tôi từng làm kế toán và sau đó chuyển sang Marketing. Sử dụng CV tự làm của mình, tôi đã nhận được phản hồi rất kém từ các NTD. Sau khi update CV của mình lên Rzcareer AI, tôi đã được feedback rất chi tiết và đã nhận được nhiều cuộc phỏng vấn.
                               </p>
                             </div>
                           </div>
@@ -771,8 +771,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/8.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Trung Kiên</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình đã luôn nghĩ rằng CV dài 3 trang A4 của bản thân thật hoàn hảo. Ôi, nhưng mình đã sai lầm! Từ khi biết đến tình năng JobsGO AI, mình đã có một CV ngắn gọn, chính xác, chuyên nghiệp và tự tin gửi cho các nhà tuyển dụng tiềm năng.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình đã luôn nghĩ rằng CV dài 3 trang A4 của bản thân thật hoàn hảo. Ôi, nhưng mình đã sai lầm! Từ khi biết đến tình năng Rzcareer AI, mình đã có một CV ngắn gọn, chính xác, chuyên nghiệp và tự tin gửi cho các nhà tuyển dụng tiềm năng.
                               </p>
                             </div>
                           </div>
@@ -781,8 +781,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/9.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Anh Quân</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Trước kia, khi tôi đăng CV lên các trang tuyển dụng, tôi nhận được rất ít phản hồi, thậm chí là không có. Kể từ khi tôi bắt đầu đăng CV lên JobsGO.vn, tôi đã nhận được ba phản hồi liên quan đến nghề nghiệp của mình chỉ trong 1 tuần.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Trước kia, khi tôi đăng CV lên các trang tuyển dụng, tôi nhận được rất ít phản hồi, thậm chí là không có. Kể từ khi tôi bắt đầu đăng CV lên Rzcareer.vn, tôi đã nhận được ba phản hồi liên quan đến nghề nghiệp của mình chỉ trong 1 tuần.
                               </p>
                             </div>
                           </div>
@@ -797,8 +797,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/10.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Thu Trang</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                JobsGO đã làm rất tốt và tôi chắc chắn giới thiệu app tìm việc này tới bạn bè của tôi. Nhân viên làm việc rất chuyên nghiệp. Tôi được hướng dẫn chi tiết từ A-Z, giao diện mới cũng giúp tôi thao tác nhanh chóng. Đồng thời, tỷ lệ phản hồi từ nhà tuyển dụng rất cao.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Rzcareer đã làm rất tốt và tôi chắc chắn giới thiệu app tìm việc này tới bạn bè của tôi. Nhân viên làm việc rất chuyên nghiệp. Tôi được hướng dẫn chi tiết từ A-Z, giao diện mới cũng giúp tôi thao tác nhanh chóng. Đồng thời, tỷ lệ phản hồi từ nhà tuyển dụng rất cao.
                               </p>
                             </div>
                           </div>
@@ -807,8 +807,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/1.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình sử dụng app JobsGO để tìm việc làm từ 3 năm trước và rất thích các tính năng của app như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm, không bị tình trạng tin đăng ảo rồi không ai gọi như một số bên khác.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình sử dụng app Rzcareer để tìm việc làm từ 3 năm trước và rất thích các tính năng của app như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng điện thoại. NTD cũng liên hệ sớm, không bị tình trạng tin đăng ảo rồi không ai gọi như một số bên khác.
                               </p>
                             </div>
                           </div>
@@ -822,8 +822,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/2.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Em mới ra trường, chưa biết cách làm CV như thế nào. May có một chị người quen bảo lên website JobsGO.vn tạo CV, được hướng dẫn chi tiết. Trên JobsGO còn có phần phân tích CV rất hữu ích, em có thể biết được mình đang thiếu thông tin gì và bổ sung.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Em mới ra trường, chưa biết cách làm CV như thế nào. May có một chị người quen bảo lên website Rzcareer.vn tạo CV, được hướng dẫn chi tiết. Trên Rzcareer còn có phần phân tích CV rất hữu ích, em có thể biết được mình đang thiếu thông tin gì và bổ sung.
                               </p>
                             </div>
                           </div>
@@ -832,8 +832,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/3.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Hồng Kim</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Tôi nghỉ việc để chăm sóc con cái cũng đã gần 2 năm. Nay ứng tuyển lại thực sự khó khăn, may nhờ app JobsGO gợi ý các danh sách việc làm phù hợp mà tôi đã giành được 2 cuộc phỏng vấn.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Tôi nghỉ việc để chăm sóc con cái cũng đã gần 2 năm. Nay ứng tuyển lại thực sự khó khăn, may nhờ app Rzcareer gợi ý các danh sách việc làm phù hợp mà tôi đã giành được 2 cuộc phỏng vấn.
                               </p>
                             </div>
                           </div>
@@ -847,8 +847,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/4.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                JobsGO giúp em tìm thấy công việc phù hợp với mình thông qua các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế trong lĩnh vực Marketing mà mình yêu thích.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Rzcareer giúp em tìm thấy công việc phù hợp với mình thông qua các đề xuất được cập nhật qua email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy tín để xây dựng kinh nghiệm thực tế trong lĩnh vực Marketing mà mình yêu thích.
                               </p>
                             </div>
                           </div>
@@ -857,8 +857,8 @@
                               <img class="rounded-circle w-50 my-2" loading="lazy" src="/assets_livewire/teks/img/avatar/5.jpg" alt="avatar" />
                               <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
                               <p class="text-muted text-body small mxh-100 p-1">
-                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="JobsGo">
-                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó mình đã nhìn thấy quảng cáo của JobsGO và cập nhật CV lên website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc phục những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
+                                <img class="d-block m-auto" loading="lazy" src="/assets_livewire/img/2024/ic16.svg?v=234208153092" alt="Rzcareer">
+                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối. Sau đó mình đã nhìn thấy quảng cáo của Rzcareer và cập nhật CV lên website. Nhờ tính năng phân tích CV mà mình biết CV cần khắc phục những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
                               </p>
                             </div>
                           </div>
@@ -918,11 +918,11 @@
           <div class="row">
             <div class="col-sm-12 col-md-4">
               <div class="footer-widget">
-                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN JOBSGO</div>
+                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN Rzcareer</div>
                 <div class="textwidget">
-                  <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a class="text-primary" title="JobsGO Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
-                  <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: <a class="text-primary" title="JobsGO Miền Nam" href="tel:0896557388">0896.557.388</a></p>
-                  <p><strong>Email:</strong> <a href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a><br /><strong title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a title="Chăm sóc ứng viên" class="text-primary" href="tel:0705052927">070.505.2927</a><br> <strong>Hotline:</strong> <a title="Hotline" class="text-primary" href="tel:0899.565.868">0899.565.868</a></p>
+                  <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a class="text-primary" title="Rzcareer Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
+                  <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: <a class="text-primary" title="Rzcareer Miền Nam" href="tel:0896557388">0896.557.388</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:contact@Rzcareer.vn">contact@Rzcareer.vn</a><br /><strong title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a title="Chăm sóc ứng viên" class="text-primary" href="tel:0705052927">070.505.2927</a><br> <strong>Hotline:</strong> <a title="Hotline" class="text-primary" href="tel:0899.565.868">0899.565.868</a></p>
                 </div>
 
               </div>
@@ -990,9 +990,9 @@
                     <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
                   </ul>
                   <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/" target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/RzcareerVN/" target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                     <li class="list-inline-item"><a href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -1005,41 +1005,41 @@
           <div class="row">
             <div class="col-12 col-sm-10">
               <ul class="list-inline list-unstyled mb-1 text-primary">
-                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới thiệu</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf" title="Chính sách"><u>Chính sách</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf" title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/giai-quyet-tranh-chap" title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li> <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả thuận sử dụng</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://employer.jobsgo.vn" title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển Dụng</u></a></li>
-                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq" title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank" title="Tin tức"><u>Blog</u></a></li>
-                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi" target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html" title="Sơ đồ trang web"><u>Sitemap</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/about-us" title="Về chúng tôi"><u>Giới thiệu</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf" title="Chính sách"><u>Chính sách</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf" title="Quy chế hoạt động"><u>Quy chế</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/giai-quyet-tranh-chap" title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li> <!--<li><a href="https://Rzcareer.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2FRzcareer.vn%2FRzcareer_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả thuận sử dụng</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" target="_blank" href="https://employer.Rzcareer.vn" title="Rzcareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển Dụng</u></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/faq" title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
+                <li class="list-inline-item"><a href="https://Rzcareer.vn/blog" target="_blank" title="Tin tức"><u>Blog</u></a></li>
+                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi" target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html" title="Sơ đồ trang web"><u>Sitemap</u></a></li>
               </ul>
             </div>
             <div class="col-12 col-sm-2">
               <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/JobsGOVN/" target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/RzcareerVN/" target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                 <li class="list-inline-item"><a rel="nofollow" href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                <li class="list-inline-item"><a rel="nofollow" href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
+                <li class="list-inline-item"><a rel="nofollow" href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
               </ul>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-10">
-              <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần JobsGO. All Rights Reserved.</p>
+              <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần Rzcareer. All Rights Reserved.</p>
             </div>
             <div class="col-sm-2">
               <div class="text-center">
                 <a target="_blank" rel="nofollow" href="http://online.gov.vn/Home/WebDetails/73770">
 
-                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="/assets_livewire/teks/img/online-gov.svg" alt="JobsGO" width="100" height="38">
+                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="/assets_livewire/teks/img/online-gov.svg" alt="Rzcareer" width="100" height="38">
 
                 </a>
-                <a target="_blank" rel="nofollow" href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2Fjobsgo.vn%2F" title="DMCA.com Protection Status" class="dmca-badge">
+                <a target="_blank" rel="nofollow" href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2FRzcareer.vn%2F" title="DMCA.com Protection Status" class="dmca-badge">
 
-                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO" width="100" height="21">
+                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="/assets_livewire/teks/img/dmca.svg" alt="Rzcareer" width="100" height="21">
 
                 </a>
                 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
@@ -1060,13 +1060,13 @@
       }
     </style>
     <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-      <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="jobsgo">
+      <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
     </a>
 
 
 
     <!--<div class="maintenance-banner">
-Để tăng chất lượng dịch vụ, JobsGO.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
+Để tăng chất lượng dịch vụ, Rzcareer.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
 </div>
 <style>
 .maintenance-banner {
@@ -1117,15 +1117,15 @@ html body {
         </div>
       </div>
     </div>
-    <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!" style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;" href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40" src="/assets_livewire/teks/img/jobsgo-ai-robot.svg?v=1.2" alt="JobsGO AI"> </a>
+    <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!" style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;" href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40" src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
     <script>
       window.addEventListener('load', function() {
         $(function() {
-          if (!getCookie('jobsgo-cv-ai')) {
+          if (!getCookie('Rzcareer-cv-ai')) {
             //$('#cv-modal').modal('show');
           }
           $('#cv-modal').on('shown.bs.modal', function() {
-            setCookie('jobsgo-cv-ai', 1, 365);
+            setCookie('Rzcareer-cv-ai', 1, 365);
             $('#cv-modal video').trigger('play');
           });
 
