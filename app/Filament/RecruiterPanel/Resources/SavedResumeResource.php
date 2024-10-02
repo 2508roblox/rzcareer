@@ -18,10 +18,11 @@ class SavedResumeResource extends Resource
     protected static ?string $model = SavedResume::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-bookmark';
-    protected static ?string $navigationGroup = 'Sơ yếu lý lịch & Mục đã lưu';
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+
     public static function getPluralModelLabel(): string
     {
-        return 'Các sơ yếu lý lịch đã lưu'; // Trả về tên số nhiều cho mô hình Company
+        return 'Hồ sơ đã lưu'; // Trả về tên số nhiều cho mô hình Company
     }
     public static function form(Form $form): Form
     {

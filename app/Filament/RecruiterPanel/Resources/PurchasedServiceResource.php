@@ -18,7 +18,12 @@ class PurchasedServiceResource extends Resource
 {
     protected static ?string $model = PurchasedService::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-credit-card'; // Hoặc 'heroicon-o-receipt'
+protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+public static function getPluralModelLabel(): string
+{
+    return 'Dịch vụ đã mua'; // Trả về tên số nhiều cho mô hình Purchased Service
+}
 
     public static function form(Form $form): Form
     {
@@ -73,5 +78,8 @@ class PurchasedServiceResource extends Resource
             'create' => Pages\CreatePurchasedService::route('/create'),
             'edit' => Pages\EditPurchasedService::route('/{record}/edit'),
         ];
+    }public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

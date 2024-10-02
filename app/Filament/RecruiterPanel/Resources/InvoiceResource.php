@@ -17,7 +17,13 @@ class InvoiceResource extends Resource
 {
     protected static ?string $model = Invoice::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document'; // Thay đổi biểu tượng
+protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+
+public static function getPluralModelLabel(): string
+{
+    return 'Hóa đơn'; // Trả về tên số nhiều cho mô hình Company
+}
 
     public static function form(Form $form): Form
     {
@@ -74,5 +80,8 @@ class InvoiceResource extends Resource
             'create' => Pages\CreateInvoice::route('/create'),
             'edit' => Pages\EditInvoice::route('/{record}/edit'),
         ];
+    }public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

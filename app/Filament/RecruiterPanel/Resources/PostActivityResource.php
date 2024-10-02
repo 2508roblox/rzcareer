@@ -17,11 +17,13 @@ class PostActivityResource extends Resource
 {
     protected static ?string $model = PostActivity::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-check'; // Hoặc 'heroicon-o-user-group'
+
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+
     public static function getPluralModelLabel(): string
     {
-        return 'Danh sách ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
+        return 'Ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
     }
     public static function form(Form $form): Form
     {
@@ -127,4 +129,5 @@ class PostActivityResource extends Resource
             'edit' => Pages\EditPostActivity::route('/{record}/edit'),
         ];
     }
+    
 }
