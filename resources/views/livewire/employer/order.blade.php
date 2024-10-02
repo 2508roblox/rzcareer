@@ -137,7 +137,7 @@
                         <div class="col-xs-12 col-md-9 col-lg-9">
                             <div class="table-responsive">
                                 <!-- <form method="post" id="order-form"> -->
-                                <form id="order-form" action="/order/pre-confirm?package=standard" method="post">
+                                <form id="order-form" action="/employer/order?package=standard" method="post">
                                     <input type="hidden" name="_csrf-colorgb-employer"
                                         value="jO059ocYYGz97noKiHmIbPYz6MPk6hpEWoo5U3xHroXan0uf4yEnIqyxHGLeJr8dx0TesrOIdzIs2lAlBQnA3Q==">
                                     <table class="table text-nowrap">
@@ -1215,7 +1215,7 @@
                                                         <td><span>12,510,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="12"
-                                                                href="/order/pre-confirm?package=ruby"><span
+                                                                href="/employer/order?package=ruby"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span class="icon-cart position-left"></span> Mua ngay</a>
@@ -1223,7 +1223,7 @@
                                                         <td><span>8,460,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="12"
-                                                                href="/order/pre-confirm?package=diamond"><span
+                                                                href="/employer/order?package=diamond"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span class="icon-cart position-left"></span> Mua ngay</a>
@@ -1231,7 +1231,7 @@
                                                         <td><span>6,210,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="11"
-                                                                href="/order/pre-confirm?package=platinum"><span
+                                                                href="/employer/order?package=platinum"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span class="icon-cart position-left"></span> Mua ngay</a>
@@ -1239,25 +1239,25 @@
                                                         <td><span>4,050,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="39"
-                                                                href="/order/pre-confirm?package=gold-plus"><span
+                                                                href="/employer/order?package=gold-plus"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span>3,060,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="10"
-                                                                href="/order/pre-confirm?package=gold"><span
+                                                                href="/employer/order?package=gold"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span>1,980,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="4"
-                                                                href="/order/pre-confirm?package=silver"><span
+                                                                href="/employer/order?package=silver"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                         <td><span>900,000₫ <br /><span
                                                                     class="text-success">(-10%)</span></span><br /> <a
                                                                 class="mb-5 btn btn-muangay btn-purchase" my-id="4"
-                                                                href="/order/pre-confirm?package=standard"><span
+                                                                href="/employer/order?package=standard"><span
                                                                     class="icon-cart position-left"></span> Mua ngay</a>
                                                         </td>
                                                     </tr>
@@ -1372,7 +1372,7 @@
                                                             <div>
                                                                 2.200.000₫ <br>
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=hot-job"><span
+                                                                    href="/employer/order?package=hot-job"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
                                                             </div>
@@ -1381,7 +1381,7 @@
                                                             <div>
                                                                 1.200.000₫<br />
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=top-uu-tien-nganh-nghe"><span
+                                                                    href="/employer/order?package=top-uu-tien-nganh-nghe"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
 
@@ -1391,7 +1391,7 @@
                                                             <div>
                                                                 600.000₫<br />
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=in-dam-va-boi-do"><span
+                                                                    href="/employer/order?package=in-dam-va-boi-do"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
 
@@ -1482,7 +1482,7 @@
                                                                 <span>1,900,000₫ <br /><span
                                                                         class="text-success">(-5%)</span></span><br />
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=gopoint-1000"><span
+                                                                    href="/employer/order?package=gopoint-1000"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
                                                             </div>
@@ -1492,7 +1492,7 @@
                                                                 <span>9,000,000₫ <br /><span
                                                                         class="text-success">(-10%)</span></span><br />
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=gopoint-5000"><span
+                                                                    href="/employer/order?package=gopoint-5000"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
 
@@ -1503,7 +1503,7 @@
                                                                 <span>18,000,000₫ <br /><span
                                                                         class="text-success">(-10%)</span></span><br />
                                                                 <a class="mb-5 btn btn-muangay btn-purchase"
-                                                                    href="/order/pre-confirm?package=gopoint-10000"><span
+                                                                    href="/employer/order?package=gopoint-10000"><span
                                                                         class="icon-cart position-left"></span> Mua
                                                                     ngay</a>
 

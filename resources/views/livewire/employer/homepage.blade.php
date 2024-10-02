@@ -315,7 +315,7 @@
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Tin tuyển dụng hiển thị đồng thời trên các kênh liên kết: Indeed, Jobstreet
                             </li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=standard">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=standard">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -332,7 +332,7 @@
                                     alt="">Gửi thông báo công việc (push notification) đến ứng viên phù hợp</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Ưu tiên hiển thị trên mobile app của ứng viên phù hợp</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=silver">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=silver">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
                                     alt="">Bao gồm tất cả các quyền lợi của gói Silver</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Hỗ trợ quảng cáo Facebook nếu không đạt số lượng CV cam kết</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=gold">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=gold">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                                 phương</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Hỗ trợ quảng cáo Facebook nếu không đạt số lượng CV cam kết</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=gold-plus">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=gold-plus">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -383,7 +383,7 @@
                                 ngày)</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=platinum">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=platinum">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -399,7 +399,7 @@
                                 ngày)</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=platinum">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=platinum">Mua ngay</a></p>
                         </ul>
                     </div>
                     <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
@@ -419,7 +419,7 @@
                                 ngày)</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Ưu tiên hiển thị trong tìm kiếm trang chủ/trang ngành</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=diamond">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=diamond">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -437,7 +437,7 @@
                                 tuần)</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Ưu tiên hiển thị trong tìm kiếm trang chủ/trang ngành</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=diamond">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=diamond">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -457,7 +457,7 @@
                                     alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Cam kết tối thiểu 3000 lượt Views</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=ruby">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=ruby">Mua ngay</a></p>
                         </ul>
                     </div>
                 </div>
@@ -475,7 +475,7 @@
                                     alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Cam kết tối thiểu 3000 lượt Views</li>
-                            <p><a class="btn btn-muangay" href="/order/pre-confirm?package=ruby">Mua ngay</a></p>
+                            <p><a class="btn btn-muangay" href="/employer/order?package=ruby">Mua ngay</a></p>
                         </ul>
                     </div>
                     <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
