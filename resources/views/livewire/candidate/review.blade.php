@@ -1884,13 +1884,16 @@
                                                                                                                                     data-toggle="modal"
                                                                                                                                     data-backdrop="static"
                                                                                                                                     data-target="#colorgbModal1"
+                                                                                                                                     wire:click="editWorkingExperience({{ $experience->id }})"
                                                                                                                                     class="btn btn-update-cjh btn-xs btn-default text-green">
                                                                                                                                 <i class="icon-pencil7 position-left"></i> Sửa
                                                                                                                             </button>
                                                                                                                             <button data-id="{{ $experience->id }}"
-                                                                                                                                    class="btn btn-del-cjh btn-xs btn-default text-warning">
+                                                                                                                                wire:click="deleteExperience({{ $experience->id }})"
+                                                                                                                                class="btn btn-del-cjh btn-xs btn-default text-warning">
                                                                                                                                 <i class="icon-trash position-left"></i> Xóa
                                                                                                                             </button>
+
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                     <div class="panel-body">
@@ -1914,6 +1917,12 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endforeach
+                                                                                                @if (session()->has('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+
                                                                                             @else
                                                                                                 <p class="text-muted">Chưa có kinh nghiệm làm việc nào cho hồ sơ này.</p>
                                                                                             @endif
@@ -1967,7 +1976,7 @@
                                                                                                 <div class="col-lg-12">
                                                                                                     <div class="panel panel-flat timeline-content">
                                                                                                         <div class="panel-heading">
-                                                                                                            <h5 class="panel-title">Tên trường: {{ $education->degree_name }}</h5>
+                                                                                                            <h5 class="panel-title">Tên trường: {{ $education->training_place }}</h5>
                                                                                                             <div class="btn-group heading-elements">
                                                                                                                 <button data-id="{{ $education->id }}"
                                                                                                                         data-i1="{{ $education->degree_name }}"
@@ -1976,6 +1985,7 @@
                                                                                                                         data-i4="{{ $education->training_place }}"
                                                                                                                         data-i5="{{ $education->description }}"
                                                                                                                         data-i6="0"
+                                                                                                                        wire:click="editEducation({{ $education->id }})"
                                                                                                                         data-toggle="modal"
                                                                                                                         data-backdrop="static"
                                                                                                                         data-target="#colorgbModal21"
@@ -1983,6 +1993,7 @@
                                                                                                                     <i class="icon-pencil7 position-left"></i> Sửa
                                                                                                                 </button>
                                                                                                                 <button data-id="{{ $education->id }}"
+                                                                                                                    wire:click="deleteEducation({{ $education->id }})"
                                                                                                                         class="btn btn-del btn-del-ce btn-xs btn-default text-warning">
                                                                                                                     <i class="icon-trash position-left"></i> Xóa
                                                                                                                 </button>
@@ -2063,9 +2074,10 @@
                                                                                         </div>
                                                                                         <h6 class="text-nowrap" style="text-align: center">{{ $skill->language }}</h6>
                                                                                     </a>
-                                                                                    <button title="Xóa bỏ" class="btn-del btn-del-css" data-id="{{ $skill->id }}" data-iid="{{ $skill->id }}">
+                                                                                    <button title="Xóa bỏ" class="btn-del btn-del-css" data-id="{{ $skill->id }}" wire:click="deleteLanguageSkill({{ $skill->id }})">
                                                                                         <i class="icon-close2"></i>
                                                                                     </button>
+
                                                                                 </div>
                                                                             @endforeach
 
@@ -2094,35 +2106,133 @@
                                                                     <h6 class="modal-title text-uppercase pull-left text-blue-800">
                                                                         Chứng chỉ <span style="color: red !important;">*</span>
                                                                     </h6>
-                                                                    <button data-id="0" type="button"
-                                                                            class="btn btn-add pull-right text-blue-800 btn-default"
-                                                                            data-toggle="modal"
-                                                                            data-backdrop="static"
-                                                                            data-target="#license">
+                                                                    <button data-id="0" type="button" class="btn btn-add pull-right text-blue-800 btn-default" data-toggle="modal" data-target="#colorgbModal222">
                                                                         <i class="icon-plus2"></i> Thêm mới chứng chỉ
                                                                     </button>
                                                                 </div>
                                                                 @foreach ($resumes as $resume)
+                                                                    @if ($resume->certificates->isNotEmpty())
+                                                                        <div class="certificate-container">
+                                                                            <!-- Container for certificates -->
+                                                                            @foreach ($resume->certificates as $certificate)
+                                                                                <div style="margin: 15px 0">
+                                                                                    <div class="media-left">
+                                                                                        <a href="#">
+                                                                                            <img src="/media/certificate_image/company.svg" width="50" alt="">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="media-body">
+                                                                                        <a href="#"><strong class="text-blue-800" style="font-size: 16px">{{ $certificate->name }}</strong></a>
+                                                                                        <div>
+                                                                                            <strong class="text-black-800" style="font-size: 14px"></strong>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Ngày phát hành: {{ \Carbon\Carbon::parse($certificate->start_date)->format('d/m/Y') }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Ngày hết hạn: {{ $certificate->expiration_date ? \Carbon\Carbon::parse($certificate->expiration_date)->format('d/m/Y') : 'Không xác định' }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Credential ID: {{ $certificate->id }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <a href="{{ $certificate->id }}" target="_blank" class="btn btn-default mt-5">
+                                                                                                <i class="fa fa-list-alt text-grey-300"></i>
+                                                                                                <span>Chi tiết chứng chỉ</span>
+                                                                                            </a>
+                                                                                            <a href="javascript:void(0)" wire:click="editCertificate({{ $certificate->id }})" class="btn btn-default mt-5 edit-certificate" data-toggle="modal" data-target="#colorgbModal222">
+                                                                                                <i class="fa fa-pencil text-grey-300"></i>
+                                                                                                <span>Sửa chứng chỉ</span>
+                                                                                            </a>
 
-                                                                @if ($resume->certificates->isNotEmpty())
-                                                                    <div class="certificate-container"> <!-- Container for certificates -->
-                                                                        @foreach ($resume->certificates as $certificate)
-                                                                            <div class="certificate-card"> <!-- Card for each certificate -->
-                                                                                <h5>Tên chứng chỉ: {{ $certificate->name }}</h5> <!-- Certificate name -->
-                                                                                <p><strong>Cơ sở cấp:</strong> {{ $certificate->training_place }}</p>
-                                                                                <p><strong>Ngày cấp:</strong> {{ \Carbon\Carbon::parse($certificate->start_date)->format('d/m/Y') }}</p>
-                                                                                <p><strong>Ngày hết hạn:</strong> {{ $certificate->expiration_date ? \Carbon\Carbon::parse($certificate->expiration_date)->format('d/m/Y') : 'Không xác định' }}</p>
-                                                                                <p><strong>Mô tả:</strong> {{ $certificate->description }}</p>
-                                                                            </div>
-                                                                        @endforeach
+                                                                                            <a href="javascript:void(0)" data-id="{{ $certificate->id }}" class="btn-delete-certificate btn btn-default mt-5" data-toggle="modal" data-target="#confirmDeleteModal">
+                                                                                                <i class="fa fa-trash text-grey-300"></i>
+                                                                                                <span>Xoá chứng chỉ</span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            @endforeach
+                                                                        </div>
+                                                                    @else
+                                                                        <p>No certificates available for this resume.</p>
+                                                                    @endif
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                        <div id="confirmDeleteModal" class="modal" role="dialog">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Xác nhận xóa</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                                     </div>
-                                                                @else
-                                                                    <p>No certificates available for this resume.</p>
-                                                                @endif
-                                                            @endforeach
+                                                                    <div class="modal-body">
+                                                                        <p>Bạn có chắc chắn muốn xóa chứng chỉ này?</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                                                        <button type="button" wire:click="deleteCertificate({{ $certificate->id ?? null }})" class="btn btn-danger">Xóa</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="colorgbModal222" class="modal" role="dialog">
+                                                            <div class="modal-dialog modal-md">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title text-default-800">Thêm chứng chỉ</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="panel panel-body border-top-blue">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_training_place">Cơ sở cấp</label>
+                                                                                        <input type="text" wire:model="cert_training_place" class="form-control" placeholder="Tên cơ sở cấp">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_name">Tên chứng chỉ</label>
+                                                                                        <input type="text" wire:model="cert_name" class="form-control" placeholder="Tên chứng chỉ">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="start_date">Ngày cấp</label>
+                                                                                        <input type="date" wire:model="cert_start_date" required class="form-control" title="Vui lòng chọn ngày cấp">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_expiration_date">Ngày hết hạn</label>
+                                                                                        <input type="date" wire:model="cert_expiration_date" class="form-control" title="Vui lòng chọn ngày hết hạn (nếu có)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="description">Mô tả</label>
+                                                                                <textarea wire:model="cert_description" class="form-control" placeholder="Mô tả chứng chỉ..."></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <button type="button" wire:click="{{ $isEdit ? 'updateCertificate' : 'saveCertificate' }}" class="btn btn-primary">
+                                                                                    <i class="icon-floppy-disk position-left"></i> Lưu lại
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
 
-                                                            </div> </div>
                                                             <style>
                                                             .certificate-container {
     display: flex;
@@ -4149,7 +4259,7 @@
                                             <div id="colorgbModal1" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-md">
 
-                                                    <!-- Modal content-->
+                                                    <!-- Experience Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" title="Đóng cửa sổ" class="close"
@@ -4157,498 +4267,90 @@
                                                             <h4 class="modal-title text-default-800">Kinh nghiệm làm
                                                                 việc</h4>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <div class="panel panel-body border-top-blue">
-                                                                <div class="row">
-
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-job_company required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-job_company">Tên công
-                                                                                ty</label>
-                                                                            <div class="easy-autocomplete"><input
-                                                                                    type="text"
-                                                                                    id="expinfoform-job_company"
-                                                                                    class="form-control"
-                                                                                    name="ExpInfoForm[job_company]"
-                                                                                    placeholder="Công ty đã làm việc"
-                                                                                    autocomplete="off">
-                                                                                <div class="easy-autocomplete-container"
-                                                                                    id="eac-container-expinfoform-job_company">
-                                                                                    <ul></ul>
+                                                        <form wire:submit.prevent="saveExperience">
+                                                            <div class="modal-body">
+                                                                <form wire:submit.prevent="saveExperience">
+                                                                    <div class="panel panel-body border-top-blue">
+                                                                        <!-- Company Name and Job Title -->
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tên công ty</label>
+                                                                                    <input type="text" wire:model="newCompany" class="form-control" placeholder="Nhập tên công ty" required>
                                                                                 </div>
                                                                             </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Chức vụ</label>
+                                                                                    <input type="text" wire:model="newJobTitle" class="form-control" placeholder="Nhập chức vụ" required>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-job_title required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-job_title">Chức
-                                                                                danh</label>
-                                                                            <div class="easy-autocomplete"><input
-                                                                                    type="text"
-                                                                                    id="expinfoform-job_title"
-                                                                                    class="form-control"
-                                                                                    name="ExpInfoForm[job_title]"
-                                                                                    placeholder="Vị trí công việc"
-                                                                                    autocomplete="off">
-                                                                                <div class="easy-autocomplete-container"
-                                                                                    id="eac-container-expinfoform-job_title">
-                                                                                    <ul></ul>
+
+                                                                        <!-- Start and End Date -->
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tháng bắt đầu</label>
+                                                                                    <input type="number" wire:model="newStartMonth" class="form-control" placeholder="MM" min="1" max="12" required>
                                                                                 </div>
                                                                             </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                            <div class="col-xs-3">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Năm bắt đầu</label>
+                                                                                    <input type="number" wire:model="newStartYear" class="form-control" placeholder="YYYY" min="1900" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-3" wire:ignore.self>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tháng kết thúc</label>
+                                                                                    <input type="number" wire:model="newEndMonth" class="form-control" placeholder="MM" min="1" max="12" {{ $currentJob ? 'disabled' : '' }}>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-3" wire:ignore.self>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Năm kết thúc</label>
+                                                                                    <input type="number" wire:model="newEndYear" class="form-control" placeholder="YYYY" min="1900" {{ $currentJob ? 'disabled' : '' }}>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
 
-
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-date_start required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-date_start">Thời gian
-                                                                                bắt đầu</label>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select
-                                                                                        id="expinfoform-date_start_1"
-                                                                                        class="form-control hide"
-                                                                                        name="ExpInfoForm[date_start_1]">
-                                                                                        <option value="">Tháng...
-                                                                                        </option>
-                                                                                        <option value="01">Tháng 01
-                                                                                        </option>
-                                                                                        <option value="02">Tháng 02
-                                                                                        </option>
-                                                                                        <option value="03">Tháng 03
-                                                                                        </option>
-                                                                                        <option value="04">Tháng 04
-                                                                                        </option>
-                                                                                        <option value="05">Tháng 05
-                                                                                        </option>
-                                                                                        <option value="06">Tháng 06
-                                                                                        </option>
-                                                                                        <option value="07">Tháng 07
-                                                                                        </option>
-                                                                                        <option value="08">Tháng 08
-                                                                                        </option>
-                                                                                        <option value="09">Tháng 09
-                                                                                        </option>
-                                                                                        <option value="10">Tháng 10
-                                                                                        </option>
-                                                                                        <option value="11">Tháng 11
-                                                                                        </option>
-                                                                                        <option value="12">Tháng 12
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select
-                                                                                        id="expinfoform-date_start_2"
-                                                                                        class="form-control"
-                                                                                        name="ExpInfoForm[date_start_2]">
-                                                                                        <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024
-                                                                                        </option>
-                                                                                        <option value="2023">Năm 2023
-                                                                                        </option>
-                                                                                        <option value="2022">Năm 2022
-                                                                                        </option>
-                                                                                        <option value="2021">Năm 2021
-                                                                                        </option>
-                                                                                        <option value="2020">Năm 2020
-                                                                                        </option>
-                                                                                        <option value="2019">Năm 2019
-                                                                                        </option>
-                                                                                        <option value="2018">Năm 2018
-                                                                                        </option>
-                                                                                        <option value="2017">Năm 2017
-                                                                                        </option>
-                                                                                        <option value="2016">Năm 2016
-                                                                                        </option>
-                                                                                        <option value="2015">Năm 2015
-                                                                                        </option>
-                                                                                        <option value="2014">Năm 2014
-                                                                                        </option>
-                                                                                        <option value="2013">Năm 2013
-                                                                                        </option>
-                                                                                        <option value="2012">Năm 2012
-                                                                                        </option>
-                                                                                        <option value="2011">Năm 2011
-                                                                                        </option>
-                                                                                        <option value="2010">Năm 2010
-                                                                                        </option>
-                                                                                        <option value="2009">Năm 2009
-                                                                                        </option>
-                                                                                        <option value="2008">Năm 2008
-                                                                                        </option>
-                                                                                        <option value="2007">Năm 2007
-                                                                                        </option>
-                                                                                        <option value="2006">Năm 2006
-                                                                                        </option>
-                                                                                        <option value="2005">Năm 2005
-                                                                                        </option>
-                                                                                        <option value="2004">Năm 2004
-                                                                                        </option>
-                                                                                        <option value="2003">Năm 2003
-                                                                                        </option>
-                                                                                        <option value="2002">Năm 2002
-                                                                                        </option>
-                                                                                        <option value="2001">Năm 2001
-                                                                                        </option>
-                                                                                        <option value="2000">Năm 2000
-                                                                                        </option>
-                                                                                        <option value="1999">Năm 1999
-                                                                                        </option>
-                                                                                        <option value="1998">Năm 1998
-                                                                                        </option>
-                                                                                        <option value="1997">Năm 1997
-                                                                                        </option>
-                                                                                        <option value="1996">Năm 1996
-                                                                                        </option>
-                                                                                        <option value="1995">Năm 1995
-                                                                                        </option>
-                                                                                        <option value="1994">Năm 1994
-                                                                                        </option>
-                                                                                        <option value="1993">Năm 1993
-                                                                                        </option>
-                                                                                        <option value="1992">Năm 1992
-                                                                                        </option>
-                                                                                        <option value="1991">Năm 1991
-                                                                                        </option>
-                                                                                        <option value="1990">Năm 1990
-                                                                                        </option>
-                                                                                        <option value="1989">Năm 1989
-                                                                                        </option>
-                                                                                        <option value="1988">Năm 1988
-                                                                                        </option>
-                                                                                        <option value="1987">Năm 1987
-                                                                                        </option>
-                                                                                        <option value="1986">Năm 1986
-                                                                                        </option>
-                                                                                        <option value="1985">Năm 1985
-                                                                                        </option>
-                                                                                        <option value="1984">Năm 1984
-                                                                                        </option>
-                                                                                        <option value="1983">Năm 1983
-                                                                                        </option>
-                                                                                        <option value="1982">Năm 1982
-                                                                                        </option>
-                                                                                        <option value="1981">Năm 1981
-                                                                                        </option>
-                                                                                        <option value="1980">Năm 1980
-                                                                                        </option>
-                                                                                        <option value="1979">Năm 1979
-                                                                                        </option>
-                                                                                        <option value="1978">Năm 1978
-                                                                                        </option>
-                                                                                        <option value="1977">Năm 1977
-                                                                                        </option>
-                                                                                        <option value="1976">Năm 1976
-                                                                                        </option>
-                                                                                        <option value="1975">Năm 1975
-                                                                                        </option>
-                                                                                        <option value="1974">Năm 1974
-                                                                                        </option>
-                                                                                        <option value="1973">Năm 1973
-                                                                                        </option>
-                                                                                        <option value="1972">Năm 1972
-                                                                                        </option>
-                                                                                        <option value="1971">Năm 1971
-                                                                                        </option>
-                                                                                        <option value="1970">Năm 1970
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                        <!-- Description -->
+                                                                        <div class="form-group">
+                                                                            <label class="control-label">Mô tả công việc</label>
+                                                                            <textarea wire:model="newDescription" class="form-control" placeholder="Mô tả công việc" rows="3" required></textarea>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-date_end">
-                                                                            <div class="row">
-                                                                                <div class="col-xs-6">
-                                                                                    <label
-                                                                                        class="control-label pull-left-bk"
-                                                                                        for="expinfoform-date_end">Thời
-                                                                                        gian kết thúc</label>
 
-                                                                                </div>
-                                                                                <div class="col-xs-6">
-                                                                                    <span class="pull-right-bk"><input
-                                                                                            id="current" type="checkbox"
-                                                                                            class="styled"> <label
-                                                                                            class="control-label text-grey"
-                                                                                            for="current"
-                                                                                            title="Tôi đang làm việc tại đây"><small>Đang
-                                                                                                làm
-                                                                                                việc</small></label></span>
-
-                                                                                </div>
-
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_1"
-                                                                                        class="form-control hide"
-                                                                                        name="ExpInfoForm[date_end_1]">
-                                                                                        <option value="">Tháng...
-                                                                                        </option>
-                                                                                        <option value="01">Tháng 01
-                                                                                        </option>
-                                                                                        <option value="02">Tháng 02
-                                                                                        </option>
-                                                                                        <option value="03">Tháng 03
-                                                                                        </option>
-                                                                                        <option value="04">Tháng 04
-                                                                                        </option>
-                                                                                        <option value="05">Tháng 05
-                                                                                        </option>
-                                                                                        <option value="06">Tháng 06
-                                                                                        </option>
-                                                                                        <option value="07">Tháng 07
-                                                                                        </option>
-                                                                                        <option value="08">Tháng 08
-                                                                                        </option>
-                                                                                        <option value="09">Tháng 09
-                                                                                        </option>
-                                                                                        <option value="10">Tháng 10
-                                                                                        </option>
-                                                                                        <option value="11">Tháng 11
-                                                                                        </option>
-                                                                                        <option value="12">Tháng 12
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_2"
-                                                                                        class="form-control"
-                                                                                        name="ExpInfoForm[date_end_2]">
-                                                                                        <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024
-                                                                                        </option>
-                                                                                        <option value="2023">Năm 2023
-                                                                                        </option>
-                                                                                        <option value="2022">Năm 2022
-                                                                                        </option>
-                                                                                        <option value="2021">Năm 2021
-                                                                                        </option>
-                                                                                        <option value="2020">Năm 2020
-                                                                                        </option>
-                                                                                        <option value="2019">Năm 2019
-                                                                                        </option>
-                                                                                        <option value="2018">Năm 2018
-                                                                                        </option>
-                                                                                        <option value="2017">Năm 2017
-                                                                                        </option>
-                                                                                        <option value="2016">Năm 2016
-                                                                                        </option>
-                                                                                        <option value="2015">Năm 2015
-                                                                                        </option>
-                                                                                        <option value="2014">Năm 2014
-                                                                                        </option>
-                                                                                        <option value="2013">Năm 2013
-                                                                                        </option>
-                                                                                        <option value="2012">Năm 2012
-                                                                                        </option>
-                                                                                        <option value="2011">Năm 2011
-                                                                                        </option>
-                                                                                        <option value="2010">Năm 2010
-                                                                                        </option>
-                                                                                        <option value="2009">Năm 2009
-                                                                                        </option>
-                                                                                        <option value="2008">Năm 2008
-                                                                                        </option>
-                                                                                        <option value="2007">Năm 2007
-                                                                                        </option>
-                                                                                        <option value="2006">Năm 2006
-                                                                                        </option>
-                                                                                        <option value="2005">Năm 2005
-                                                                                        </option>
-                                                                                        <option value="2004">Năm 2004
-                                                                                        </option>
-                                                                                        <option value="2003">Năm 2003
-                                                                                        </option>
-                                                                                        <option value="2002">Năm 2002
-                                                                                        </option>
-                                                                                        <option value="2001">Năm 2001
-                                                                                        </option>
-                                                                                        <option value="2000">Năm 2000
-                                                                                        </option>
-                                                                                        <option value="1999">Năm 1999
-                                                                                        </option>
-                                                                                        <option value="1998">Năm 1998
-                                                                                        </option>
-                                                                                        <option value="1997">Năm 1997
-                                                                                        </option>
-                                                                                        <option value="1996">Năm 1996
-                                                                                        </option>
-                                                                                        <option value="1995">Năm 1995
-                                                                                        </option>
-                                                                                        <option value="1994">Năm 1994
-                                                                                        </option>
-                                                                                        <option value="1993">Năm 1993
-                                                                                        </option>
-                                                                                        <option value="1992">Năm 1992
-                                                                                        </option>
-                                                                                        <option value="1991">Năm 1991
-                                                                                        </option>
-                                                                                        <option value="1990">Năm 1990
-                                                                                        </option>
-                                                                                        <option value="1989">Năm 1989
-                                                                                        </option>
-                                                                                        <option value="1988">Năm 1988
-                                                                                        </option>
-                                                                                        <option value="1987">Năm 1987
-                                                                                        </option>
-                                                                                        <option value="1986">Năm 1986
-                                                                                        </option>
-                                                                                        <option value="1985">Năm 1985
-                                                                                        </option>
-                                                                                        <option value="1984">Năm 1984
-                                                                                        </option>
-                                                                                        <option value="1983">Năm 1983
-                                                                                        </option>
-                                                                                        <option value="1982">Năm 1982
-                                                                                        </option>
-                                                                                        <option value="1981">Năm 1981
-                                                                                        </option>
-                                                                                        <option value="1980">Năm 1980
-                                                                                        </option>
-                                                                                        <option value="1979">Năm 1979
-                                                                                        </option>
-                                                                                        <option value="1978">Năm 1978
-                                                                                        </option>
-                                                                                        <option value="1977">Năm 1977
-                                                                                        </option>
-                                                                                        <option value="1976">Năm 1976
-                                                                                        </option>
-                                                                                        <option value="1975">Năm 1975
-                                                                                        </option>
-                                                                                        <option value="1974">Năm 1974
-                                                                                        </option>
-                                                                                        <option value="1973">Năm 1973
-                                                                                        </option>
-                                                                                        <option value="1972">Năm 1972
-                                                                                        </option>
-                                                                                        <option value="1971">Năm 1971
-                                                                                        </option>
-                                                                                        <option value="1970">Năm 1970
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                        <!-- Current Job Checkbox -->
+                                                                        <div class="form-group">
+                                                                            <label>
+                                                                                <input type="checkbox" wire:model="currentJob"> Đây là công việc hiện tại
+                                                                            </label>
                                                                         </div>
+
+                                                                        <!-- Submit Button -->
+                                                                        @if ($editingExperienceId)
+                                                                        <button type="submit" class="btn btn-primary">Cập nhật kinh nghiệm</button>
+                                                                    @else
+                                                                        <button type="submit" class="btn btn-primary">Lưu kinh nghiệm</button>
+                                                                    @endif
+
                                                                     </div>
-                                                                </div>
-
-                                                                <div
-                                                                    class="form-group field-expinfoform-job_description required">
-                                                                    <label class="control-label"
-                                                                        for="expinfoform-job_description">Mô tả công
-                                                                        việc</label>
-                                                                    <div class="small text-muted mb-15">
-                                                                        Sử dụng các gạch đầu dòng để ghi lại chi tiết và
-                                                                        thành tích của bạn ở vị trí này, thể hiện qua
-                                                                        các con số, cách làm rõ ràng.
-                                                                    </div>
-                                                                    <textarea id="expinfoform-job_description"
-                                                                        class="form-control myTextarea"
-                                                                        name="ExpInfoForm[job_description]"
-                                                                        placeholder="Bổ sung thông tin..."></textarea>
-
-                                                                    <div id="tagSuggestions"></div>
-
-                                                                    <script>
-                                                                        // sendGA4Event
-                                                                        function sendGA4Event(element) {
-                                                                            var eventLabel = element.textContent;
-                                                                            gtag('event', 'my_custom_event', {
-                                                                                'event_category': 'API gợi ý mô tả công việc',
-                                                                                'event_label': eventLabel
-                                                                            });
-                                                                        }
-                                                                        $(function() {
-                                                                            const bulletPointsTextarea = $("#expinfoform-job_description");
-                                                                            const tagSuggestionsDiv = $("#tagSuggestions");
-                                                                            tagSuggestionsDiv.html('');
-
-                                                                            const jobTitleInput = $('#expinfoform-job_title');
-
-                                                                            jobTitleInput.on("change", function() {
-                                                                                const enteredText = $(this).val();
-
-                                                                                if (enteredText) {
-
-                                                                                    // Gọi đến API và lấy dữ liệu với giá trị của trường job_title làm tham số
-                                                                                    $.post("/api/get-cv-bullet-points", {
-                                                                                            job_title: enteredText
-                                                                                        }, function(data) {
-                                                                                            tagSuggestionsDiv.empty();
-                                                                                            var data = JSON.parse(data);
-                                                                                            var bulletPoints = data.bullet_points;
-
-                                                                                            if (bulletPoints) {
-                                                                                                tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ JobsGO AI (nhấn vào nội dung bạn muốn thêm):</p>');
-                                                                                            }
-
-                                                                                            $.each(bulletPoints, function(index, tag) {
-                                                                                                const tagDiv = $("<div onclick='sendGA4Event(this)' title='Thêm vào mô tả công việc: " + tag + "' class='btn ga4Link bg-blue-700 mb-5 text-left btn-xs' style=\" font-size: 12px;text-align: left;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; \">").text('- ' + tag);
-
-                                                                                                tagDiv.on("click", function() {
-                                                                                                    const val = bulletPointsTextarea.val() + '- ' + tag + '\n';
-                                                                                                    bulletPointsTextarea.val(val);
-                                                                                                    tagDiv.remove(); // Xóa chỉ mục được chọn
-                                                                                                });
-
-                                                                                                tagSuggestionsDiv.append(tagDiv);
-                                                                                            });
-                                                                                        })
-                                                                                        .fail(function(error) {
-                                                                                            console.error("Lỗi khi gọi API:", error);
-                                                                                        });
-                                                                                }
-                                                                            });
-                                                                        });
-                                                                    </script>
-                                                                    <p class="small help-block"><u>Lưu ý:</u> viết mô tả
-                                                                        công việc đã làm của bạn trên 100 ký tự để tăng
-                                                                        cơ hội phỏng vấn</p>
-                                                                </div>
-
-                                                                <div class="form-group">
-                                                                    <span class="pull-left"><button type="button"
-                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                            data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i>
-                                                                            <span class="ladda-label">Lưu
-                                                                                lại</span><span
-                                                                                class="ladda-spinner"></span><span
-                                                                                class="ladda-spinner"></span></button></span>
-
-                                                                    <input type="hidden" class="form-control" id="id">
-
-                                                                </div>
-
+                                                                </form>
                                                             </div>
 
-                                                        </div>
+                                                            <!-- Danh sách các kinh nghiệm đã có -->
+                                                            {{-- <div class="panel panel-body">
+                                                                <h4>Kinh nghiệm làm việc</h4>
+                                                                <ul>
+                                                                    @foreach($experiences as $experience)
+                                                                    <li>{{ $experience['company_name'] }} - {{ $experience['job_name'] }} ({{ $experience['start_date'] }} đến {{ $experience['end_date'] ?? 'Hiện tại' }})</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div> --}}
+
+                                                        </form>
+
                                                     </div>
 
                                                 </div>
@@ -4880,187 +4582,90 @@
 
                                                 });
                                             </script>
-                                            <div id="colorgbModal21" class="modal" role="dialog">
-                                                <div class="modal-dialog modal-md">
+                                       <div>
+                                        @if (session()->has('message'))
+                                            <div class="alert alert-success">
+                                                {{ session('message') }}
+                                            </div>
+                                        @endif
 
-                                                    <!-- Modal content-->
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Quá trình học tập
-                                                            </h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="panel panel-body border-top-blue">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colorgbModal21">
+                                            Thêm mới quá trình học tập
+                                        </button>
 
-                                                                <div class="row">
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-school_name required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-school_name">Trường
-                                                                                học</label>
-                                                                            <input type="text"
-                                                                                id="eduinfoform-school_name"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[school_name]"
-                                                                                placeholder="Tên trường học">
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-specialization required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-specialization">Chuyên
-                                                                                ngành</label>
-                                                                            <input type="text"
-                                                                                id="eduinfoform-specialization"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[specialization]"
-                                                                                placeholder="Ngành học">
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
+                                        <!-- Modal -->
+                                        <div id="colorgbModal21" class="modal" role="dialog">
+                                            <div class="modal-dialog modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title text-default-800">Quá trình học tập</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="panel panel-body border-top-blue">
+                                                            <div class="row">
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="training_place">Trường học</label>
+                                                                        <input type="text" wire:model="training_place" class="form-control" placeholder="Tên trường học">
                                                                     </div>
                                                                 </div>
-
-
-                                                                <div class="row">
-
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-degree_id required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-degree_id">Bằng
-                                                                                cấp</label>
-                                                                            <select id="eduinfoform-degree_id"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[degree_id]">
-                                                                                <option value="">Chọn...</option>
-                                                                                <option value="1">Trung cấp - Nghề
-                                                                                </option>
-                                                                                <option value="2">Cao Đẳng</option>
-                                                                                <option value="3">Đại Học</option>
-                                                                                <option value="4">Thạc sỹ</option>
-                                                                                <option value="5">Tiến sỹ</option>
-                                                                                <option value="6">Chứng chỉ chuyên ngành
-                                                                                </option>
-                                                                            </select>
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="major">Chuyên ngành</label>
+                                                                        <input type="text" wire:model="major" class="form-control" placeholder="Ngành học">
                                                                     </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-date_end required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-date_end">Năm tốt
-                                                                                nghiệp</label>
-                                                                            <select id="eduinfoform-date_end"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[date_end]">
-                                                                                <option value="">Chọn...</option>
-                                                                                <option value="2024">Năm 2024</option>
-                                                                                <option value="2023">Năm 2023</option>
-                                                                                <option value="2022">Năm 2022</option>
-                                                                                <option value="2021">Năm 2021</option>
-                                                                                <option value="2020">Năm 2020</option>
-                                                                                <option value="2019">Năm 2019</option>
-                                                                                <option value="2018">Năm 2018</option>
-                                                                                <option value="2017">Năm 2017</option>
-                                                                                <option value="2016">Năm 2016</option>
-                                                                                <option value="2015">Năm 2015</option>
-                                                                                <option value="2014">Năm 2014</option>
-                                                                                <option value="2013">Năm 2013</option>
-                                                                                <option value="2012">Năm 2012</option>
-                                                                                <option value="2011">Năm 2011</option>
-                                                                                <option value="2010">Năm 2010</option>
-                                                                                <option value="2009">Năm 2009</option>
-                                                                                <option value="2008">Năm 2008</option>
-                                                                                <option value="2007">Năm 2007</option>
-                                                                                <option value="2006">Năm 2006</option>
-                                                                                <option value="2005">Năm 2005</option>
-                                                                                <option value="2004">Năm 2004</option>
-                                                                                <option value="2003">Năm 2003</option>
-                                                                                <option value="2002">Năm 2002</option>
-                                                                                <option value="2001">Năm 2001</option>
-                                                                                <option value="2000">Năm 2000</option>
-                                                                                <option value="1999">Năm 1999</option>
-                                                                                <option value="1998">Năm 1998</option>
-                                                                                <option value="1997">Năm 1997</option>
-                                                                                <option value="1996">Năm 1996</option>
-                                                                                <option value="1995">Năm 1995</option>
-                                                                                <option value="1994">Năm 1994</option>
-                                                                                <option value="1993">Năm 1993</option>
-                                                                                <option value="1992">Năm 1992</option>
-                                                                                <option value="1991">Năm 1991</option>
-                                                                                <option value="1990">Năm 1990</option>
-                                                                                <option value="1989">Năm 1989</option>
-                                                                                <option value="1988">Năm 1988</option>
-                                                                                <option value="1987">Năm 1987</option>
-                                                                                <option value="1986">Năm 1986</option>
-                                                                                <option value="1985">Năm 1985</option>
-                                                                                <option value="1984">Năm 1984</option>
-                                                                                <option value="1983">Năm 1983</option>
-                                                                                <option value="1982">Năm 1982</option>
-                                                                                <option value="1981">Năm 1981</option>
-                                                                                <option value="1980">Năm 1980</option>
-                                                                                <option value="1979">Năm 1979</option>
-                                                                                <option value="1978">Năm 1978</option>
-                                                                                <option value="1977">Năm 1977</option>
-                                                                                <option value="1976">Năm 1976</option>
-                                                                                <option value="1975">Năm 1975</option>
-                                                                                <option value="1974">Năm 1974</option>
-                                                                                <option value="1973">Năm 1973</option>
-                                                                                <option value="1972">Năm 1972</option>
-                                                                                <option value="1971">Năm 1971</option>
-                                                                                <option value="1970">Năm 1970</option>
-                                                                            </select>
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="form-group field-eduinfoform-hightlight required">
-                                                                    <label class="control-label"
-                                                                        for="eduinfoform-hightlight">Mô tả quá trình học
-                                                                        tập</label>
-                                                                    <p class="small">Dự án, nghiên cứu cá nhân, thành
-                                                                        tựu, kinh nghiệm đã tích lũy...</p>
-                                                                    <textarea id="eduinfoform-hightlight"
-                                                                        class="form-control"
-                                                                        name="EduInfoForm[hightlight]"
-                                                                        placeholder="Mô tả quá trình học tập..."></textarea>
-                                                                    <p class="help-block help-block-error"></p>
-                                                                </div>
-
-
-                                                                <div class="form-group">
-                                                                    <input type="hidden" class="form-control" id="id">
-                                                                    <span class="pull-left"><button type="button"
-                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                            data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i>
-                                                                            <span class="ladda-label">Lưu
-                                                                                lại</span><span
-                                                                                class="ladda-spinner"></span><span
-                                                                                class="ladda-spinner"></span></button></span>
-                                                                    <span class="pull-right"><input id="current"
-                                                                            type="checkbox" class="styled"> <label
-                                                                            class="control-label" for="current">Tôi đang
-                                                                            học tại đây</label></span>
                                                                 </div>
                                                             </div>
 
+                                                            <div class="row">
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="degree_name">Bằng cấp</label>
+                                                                        <input type="text" wire:model="degree_name" class="form-control" placeholder="Bằng cấp">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="start_date">Năm bắt đầu</label>
+                                                                        <input type="date" wire:model="start_date" required class="form-control" title="Vui lòng chọn năm bắt đầu">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="completed_date">Năm tốt nghiệp</label>
+                                                                        <input type="date" wire:model="completed_date" required class="form-control" title="Vui lòng chọn năm tốt nghiệp">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="description">Mô tả quá trình học tập</label>
+                                                                <textarea wire:model="education_description" class="form-control" placeholder="Mô tả quá trình học tập..."></textarea>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <button type="button" wire:click="saveEducation" class="btn btn-primary">
+                                                                    <i class="icon-floppy-disk position-left"></i> Lưu lại
+                                                                </button>
+                                                                <input id="current" type="checkbox" class="styled" wire:model="current">
+                                                                <label class="control-label" for="current">Tôi đang học tại đây</label>
+                                                            </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <h4>Danh sách quá trình học tập:</h4>
+                                        <ul>
+                                            @foreach($educations as $education)
+                                                <li>{{ $education->degree_name }} - {{ $education->major }} ({{ $education->completed_date }})</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
 
                                             <div id="colorgbModal23" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-sm">
@@ -5107,123 +4712,49 @@
                                             </div>
                                             <div id="colorgbModal24" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-lg">
-
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành
-                                                                thạo</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành thạo</h4>
                                                         </div>
                                                         <div class="modal-body">
-
                                                             <div class="row">
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Anh"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/England-Flag.png"
-                                                                        title="Tiếng Anh">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/England-Flag.png"
-                                                                            alt="Tiếng Anh" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Anh</h6>
-                                                                    </a>
+                                                                @foreach ([
+                                                                    ['id' => 1, 'title' => 'Tiếng Anh', 'img' => 'https://jobsgo.vn/media/icon_flag/England-Flag.png'],
+                                                                    ['id' => 2, 'title' => 'Tiếng Pháp', 'img' => 'https://jobsgo.vn/media/icon_flag/France-Flag.png'],
+                                                                    ['id' => 3, 'title' => 'Tiếng Việt', 'img' => 'https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png'],
+                                                                    ['id' => 4, 'title' => 'Tiếng Nhật', 'img' => 'https://jobsgo.vn/media/icon_flag/Japan-Flag.png'],
+                                                                    ['id' => 5, 'title' => 'Tiếng Hàn', 'img' => 'https://jobsgo.vn/media/icon_flag/Korea-Flag.png'],
+                                                                    ['id' => 6, 'title' => 'Tiếng Đức', 'img' => 'https://jobsgo.vn/media/icon_flag/Germany-Flag.png'],
+                                                                    ['id' => 7, 'title' => 'Tiếng Ý', 'img' => 'https://jobsgo.vn/media/icon_flag/Italy-Flag.png'],
+                                                                    ['id' => 8, 'title' => 'Tiếng Trung', 'img' => 'https://jobsgo.vn/media/icon_flag/China-Flag.png'],
+                                                                    ['id' => 9, 'title' => 'Tiếng Nga', 'img' => 'https://jobsgo.vn/media/icon_flag/Russia-Flag.png'],
+                                                                ] as $language)
+                                                                <div class="item-jcc col-sm-3 col-xs-6">
+                                                                    <label class="text-center">
+                                                                        <input type="radio" name="selectedLanguage" value="{{ $language['title'] }}" class="language-radio" data-title="{{ $language['title'] }}" wire:model="selectedLanguage">
+                                                                        <img src="{{ $language['img'] }}" alt="{{ $language['title'] }}" width="100">
+                                                                        <h6 class="text-nowrap">{{ $language['title'] }}</h6>
+                                                                    </label>
                                                                 </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Pháp"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/France-Flag.png"
-                                                                        title="Tiếng Pháp">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/France-Flag.png"
-                                                                            alt="Tiếng Pháp" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Pháp</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 hide">
-                                                                    <a href="javascript:void(0)" data-id="3"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Việt"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
-                                                                        title="Tiếng Việt">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
-                                                                            alt="Tiếng Việt" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Việt</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="4"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Nhật"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
-                                                                        title="Tiếng Nhật">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
-                                                                            alt="Tiếng Nhật" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Nhật</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="5"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Hàn"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
-                                                                        title="Tiếng Hàn">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
-                                                                            alt="Tiếng Hàn" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Hàn</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="6"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Đức"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
-                                                                        title="Tiếng Đức">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
-                                                                            alt="Tiếng Đức" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Đức</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="7"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Ý"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
-                                                                        title="Tiếng Ý">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
-                                                                            alt="Tiếng Ý" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Ý</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="8"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Trung"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/China-Flag.png"
-                                                                        title="Tiếng Trung">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/China-Flag.png"
-                                                                            alt="Tiếng Trung" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Trung</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="9"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Nga"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
-                                                                        title="Tiếng Nga">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
-                                                                            alt="Tiếng Nga" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Nga</h6>
-                                                                    </a>
-                                                                </div>
+                                                                @endforeach
+                                                            </div>
+
+                                                            <!-- Input cho Level -->
+                                                            <div class="form-group">
+                                                                <label for="language_level">Mức độ thành thạo:</label>
+                                                                <input type="text" id="language_level" wire:model="language_level" class="form-control" placeholder="Nhập mức độ">
                                                             </div>
                                                         </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" wire:click="createLanguageSkill">Lưu</button>
+                                                        </div>
                                                     </div>
-
                                                 </div>
                                             </div>
+
+
                                             <script>
                                                 $(function() {
 
