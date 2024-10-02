@@ -35,7 +35,7 @@ return new class extends Migration
             // Khóa ngoại
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('seeker_profile_id')->references('id')->on('seeker_profiles')->onDelete('cascade');
-            $table->foreign('city_id')->references('id')->on('common_cities')->onDelete('cascade');
+            $table->foreign('city_id')->references('id')->on('common_cities')->onDelete(action: 'cascade');
             $table->foreign('career_id')->references('id')->on('common_careers')->onDelete('cascade');
 
             $table->timestamps(); // Timestamps

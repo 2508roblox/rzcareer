@@ -9,10 +9,24 @@ class Resume extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', 'seeker_profile_id', 'city_id', 'career_id', 'title', 'slug',
-        'description', 'salary_min', 'position', 'experience', 'academic_level',
-        'type_of_workplace', 'job_type', 'is_active', 'image_url', 'file_url',
-        'public_id', 'type'
+        'user_id',
+        'seeker_profile_id',
+        'city_id',
+        'career_id',
+        'title',
+        'slug',
+        'description',
+        'salary_min',
+        'position',
+        'experience',
+        'academic_level',
+        'type_of_workplace',
+        'job_type',
+        'is_active',
+        'image_url',
+        'file_url',
+        'public_id',
+        'type'
     ];
 
     public function user()
@@ -71,5 +85,24 @@ class Resume extends Model
     public function savedResumes()
     {
         return $this->hasMany(SavedResume::class);
+    }
+    public static function createPrimaryResume($userId, $seekerProfileId)
+    {
+        // Kiểm tra xem đã có resume type primary chưa
+        $existingResume = self::where('user_id', $userId)
+            ->where('type', 'primary')
+            ->first();
+
+        // Nếu không có resume type primary, tạo mới
+        if (!$existingResume) {
+            return self::create([
+                'user_id' => $userId,
+                'seeker_profile_id' => $seekerProfileId,
+                'type' => 'primary',
+                // Thêm các trường khác nếu cần thiết
+            ]);
+        }
+
+        return null; // Hoặc có thể trả về existingResume nếu cần
     }
 }
