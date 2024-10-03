@@ -6,12 +6,12 @@
                 <img width="134" height="40" loading="lazy" src="/assets_livewire/logo-light.svg" src="/logo.png"
                     alt="JobsGO">
             </a>
-        
+
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
 
             <ul class="nav navbar-nav navbar-right navbar-left-1 pull-left" data-in="fadeInDown" data-out="fadeOutUp">
-           
+
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                         href="/viec-lam.html">
@@ -25,55 +25,68 @@
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                                         <ul class="list-unstyled">
                                             @foreach(
-                      App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
-                      ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
-                      ->limit(10) // Limit to top 10 careers
-                      ->get() as $career)
-                      <li>
-                        <a class="dropdown-item"
-                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
-                          Việc làm {{ $career->name }}
-                        </a>
-                      </li>
-                      @endforeach
+                                            App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                                            ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                                            ->limit(10) // Limit to top 10 careers
+                                            ->get() as $career)
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
+                                                    Việc làm {{ $career->name }}
+                                                </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-3 ps-sm-0">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                                         <ul class="list-unstyled">
                                             @foreach(
-                                                App\Models\CommonCity::withCount('jobPosts') // Count related job posts
-                                                ->orderBy('job_posts_count', 'desc') // Sort by job posts count
-                                                ->limit(10) // Limit to top 10 cities
-                                                ->get() as $city)
-                                                <li>
-                                                  <a class="dropdown-item"
+                                            App\Models\CommonCity::withCount('jobPosts') // Count related job posts
+                                            ->orderBy('job_posts_count', 'desc') // Sort by job posts count
+                                            ->limit(10) // Limit to top 10 cities
+                                            ->get() as $city)
+                                            <li>
+                                                <a class="dropdown-item"
                                                     href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}">
                                                     Việc làm tại {{ $city->name }}
-                                                  </a>
-                                                </li>
-                                                @endforeach
+                                                </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html"> Việc làm Tuyển
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_urgent' => true]) }}">
+                                                    Việc làm Tuyển
                                                     Gấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc làm Nổi
-                                                    Bật</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-lao-dong-pho-thong.html"> Việc
-                                                    làm Lao động phổ thông</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-khong-can-bang-cap.html"> Việc
-                                                    làm Không cần bằng cấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html"> Việc làm
-                                                    Online tại nhà</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-part-time.html"> Việc làm
-                                                    Part-time</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc làm Thời
-                                                    vụ</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc làm
-                                                    Remote</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_hot' => true]) }}">
+                                                    Việc làm Nổi bật</a></li>
+                                            @foreach(
+                                            App\Models\JobPost::select('job_type')
+                                            ->distinct()
+                                            ->get() as $jobType)
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'job_type' => $jobType->job_type ]) }}">
+                                                    Việc làm {{ $jobType->job_type }}
+                                                </a>
+                                            </li>
+                                            @endforeach
+                                            @foreach(
+                                            App\Models\JobPost::select('type_of_workplace')
+                                            ->distinct()
+                                            ->get() as $typeOfWorkplace)
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'type_of_workplace' => $typeOfWorkplace->type_of_workplace ]) }}">
+                                                    Việc làm {{ $typeOfWorkplace->type_of_workplace }}
+                                                </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>

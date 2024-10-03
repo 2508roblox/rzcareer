@@ -57,17 +57,32 @@
                   <div class="col-sm-4">
                     <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
                     <ul class="list-unstyled">
-                      <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html"> Việc làm Tuyển Gấp</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc làm Nổi Bật</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-lao-dong-pho-thong.html"> Việc làm Lao động phổ
-                          thông</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-khong-can-bang-cap.html"> Việc làm Không cần bằng
-                          cấp</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html"> Việc làm Online tại nhà</a>
+                      <li><a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_urgent' => true]) }}">
+                          Việc làm Tuyển
+                          Gấp</a></li>
+                      <li><a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_hot' => true]) }}">
+                          Việc làm Nổi bật</a></li>
+                      @foreach(App\Models\JobPost::select('job_type')->distinct()->get() as $jobType)
+                      <li>
+                        <a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'job_type' => $jobType->job_type ]) }}">
+                          Việc làm {{ $jobType->job_type }}
+                        </a>
                       </li>
-                      <li><a class="dropdown-item" href="/viec-lam-part-time.html"> Việc làm Part-time</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc làm Thời vụ</a></li>
-                      <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc làm Remote</a></li>
+                      @endforeach
+                      @foreach(
+                      App\Models\JobPost::select('type_of_workplace')
+                      ->distinct()
+                      ->get() as $typeOfWorkplace)
+                      <li>
+                        <a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'type_of_workplace' => $typeOfWorkplace->type_of_workplace ]) }}">
+                          Việc làm {{ $typeOfWorkplace->type_of_workplace }}
+                        </a>
+                      </li>
+                      @endforeach
                     </ul>
                   </div>
                 </div>

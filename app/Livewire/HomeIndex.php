@@ -67,6 +67,9 @@ class HomeIndex extends Component
 
     public function render()
     {
+        $urgentJobs = JobPost::where('is_urgent', true)
+        ->limit(10)
+        ->get();
         return view('livewire.index', [
             'hotJobPosts' => $this->hotJobPosts,
             'urgentJobPosts' => $this->urgentJobPosts,
