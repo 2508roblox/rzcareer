@@ -104,32 +104,7 @@
                     <script defer src="/assets_livewire/static/assets/js/javascript.min.js?v=234208153092"></script>
                     <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
-                    <script type="application/ld+json">
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebSite",
-                        "url": "https://jobsgo.vn/",
-                        "potentialAction": {
-                            "@type": "SearchAction",
-                            "target": "https://jobsgo.vn/viec-lam.html?k={search_term_string}",
-                            "query-input": "required name=search_term_string"
-                        }
-                    }
-                </script>
-
-
-                    <script>
-                        window.dataLayer = window.dataLayer || [];
-
-                        function gtag() {
-                            dataLayer.push(arguments);
-                        }
-
-                        gtag('js', new Date());
-                        gtag('config', 'G-EHD5KK9TRQ');
-                        gtag('config', 'AW-10876503189');
-                    </script>
-
+                  
 
                     <style>
                         .status_on {
@@ -307,89 +282,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <script>
-                                                        function onlyUnique(n, e, i) {
-                                                            return i.indexOf(n) === e
-                                                        }
-
-                                                        function cleanArray(actual) {
-                                                            var newArray = new Array();
-                                                            for (var i = 0; i < actual.length; i++) {
-                                                                if (actual[i]) {
-                                                                    newArray.push(actual[i]);
-                                                                }
-                                                            }
-                                                            return newArray;
-                                                        }
-
-                                                        function jobRoleSearch(t) {
-                                                            if (t.getAttribute('data-val').includes('tại')) {
-                                                                var a = t.getAttribute('data-val').split(" tại ");
-                                                                document.getElementById("jobRole").value = a[0];
-                                                                document.getElementById("jobPlace").value = a[1];
-                                                            } else {
-                                                                document.getElementById("jobRole").value = t.getAttribute('data-val');
-                                                            }
-                                                        }
-
-                                                        function jobPlaceSearch(t) {
-                                                            document.getElementById("jobPlace").value = t.getAttribute('data-val');
-                                                        }
-
-                                                        window.addEventListener('load', function() {
-                                                            $(function() {
-
-                                                                /**/
-                                                                $("#jobRole,#jobPlace").on("focus", function() {
-                                                                    $('.colorgb-search').addClass('show');
-                                                                    $('.colorgb-place').addClass('show');
-                                                                    $('.colorgb-salary').addClass('show');
-                                                                    $('.colorgb-submit').addClass('show');
-                                                                });
-                                                                var kws = JSON.parse(localStorage.getItem('jobsgo-candidate-skl'));
-                                                                kws = kws ? kws : [];
-                                                                if (kws.length > 0) {
-                                                                    var html =
-                                                                        '<div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20"><div class="mrg-bot-5 h4"> Tìm kiếm gần đây<a href="javascript:void(0)" class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div><ul class="sidebar-list expandible-bk">';
-                                                                    var count = kws.length > 20 ? 20 : kws.length; /**/
-                                                                    for (var i = 0; i < count; i++) {
-                                                                        html += '<li><a title="Việc làm ' + kws[i] + '" href="https://jobsgo.vn/viec-lam-' +
-                                                                            colorgbSlug(kws[i]) + '.html"> <h2 class="txt">' + kws[i] + '</h2> </a></li>';
-                                                                    }
-                                                                    html += '</ul></div>';
-                                                                    $('.blog-sidebar').prepend(html); /**/
-                                                                    $('#jobRole').focus(function() {
-                                                                        var kw = '';
-                                                                        var kws = JSON.parse(localStorage.getItem('jobsgo-candidate-skl'));
-                                                                        var count = kws.length > 10 ? 10 : kws.length;
-                                                                        for (var i = 0; i < count; i++) {
-                                                                            kw += '<li onclick="jobRoleSearch(this)" data-val="' + kws[i] +
-                                                                                '"><div class="eac-item">' + kws[i] + '</div></li>';
-                                                                        }
-                                                                        $('#eac-container-jobRole ul').html(kw).show();
-                                                                    });
-                                                                }
-
-                                                                var pl = JSON.parse(localStorage.getItem('jobsgo-candidate-search-place-log'));
-                                                                pl = pl ? pl : [];
-
-                                                                if (pl) {
-                                                                    var count = kws.length > 10 ? 10 : kws.length; /**/
-                                                                    $('#jobPlace').focus(function() {
-                                                                        var p = '';
-                                                                        var pl = JSON.parse(localStorage.getItem(
-                                                                            'jobsgo-candidate-search-place-log'));
-                                                                        var count = pl.length > 10 ? 10 : pl.length;
-                                                                        for (var i = 0; i < count; i++) {
-                                                                            p += '<li onclick="jobPlaceSearch(this)" data-val="' + pl[i] +
-                                                                                '"><div class="eac-item">' + pl[i] + '</div></li>';
-                                                                        }
-                                                                        $('#eac-container-jobPlace ul').html(p).show();
-                                                                    });
-                                                                }
-                                                            })
-                                                        });
-                                                    </script>
+                                               
 
                                                     <div class="page-header page-header-default mb-5">
                                                         <div class="breadcrumb-line mt-10">
@@ -468,25 +361,7 @@
                                                                         class="btn bg-blue btn-apply-now btn-apply "><i
                                                                             class="glyphicon glyphicon-send"></i> Ứng
                                                                         tuyển ngay</a>
-                                                                    <script>
-                                                                        function preApplyForm(jid) {
-
-                                                                            $.ajax({
-                                                                                url: "/api/save-applying",
-                                                                                type: "post",
-                                                                                data: {
-                                                                                    'jid': jid
-                                                                                },
-                                                                                success: function(response) {
-
-                                                                                },
-                                                                                error: function(jqXHR, textStatus, errorThrown) {
-                                                                                    console.log(textStatus, errorThrown);
-                                                                                }
-                                                                            })
-
-                                                                        }
-                                                                    </script>
+                                                                 
                                                                 </li>
 
 
@@ -760,16 +635,7 @@
                                                     </div>
 
                                                 </div>
-
-                                                <!--<div class="box-comment hidden-xs"></div>
-                 <script>
-                     if (navigator.userAgent.indexOf("Lighthouse") == -1) {
-                         window.addEventListener('load', function() {
-                             $('.box-comment').html(
-                                 '<iframe src="/comments?jid=&eid=" width="100%" height="400px" frameborder="0"></iframe>');
-                         });
-                     }
-                 </script>-->
+ 
                                             </div>
                                         </div>
                                         <div class="col-sm-4 job-detail-col-2">
@@ -1062,106 +928,43 @@
                             </div>
                         </div>
                     </section>
-                    <div id="reportForm" class="modal">
-                        <div class="modal-dialog modal-md">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Phản ánh tin đăng không chính xác ()</h5>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <form id="w0" class="bg-fffaf2"
-                                                action="/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html"
-                                                method="post">
-                                                <input type="hidden" name="_csrf-jobsgo-candidate"
-                                                    value="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
-                                                <div class="hide">
-                                                    <div class="form-group field-reportform-job_id required">
-                                                        <label class="control-label" for="reportform-job_id">Việc
-                                                            làm</label>
-                                                        <input type="hidden" id="reportform-job_id"
-                                                            class="form-control" name="ReportForm[job_id]"
-                                                            value="1378228">
-
-                                                        <p class="help-block help-block-error"></p>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group field-reportform-name required">
-                                                    <label class="control-label" for="reportform-name">Người phản
-                                                        ánh</label>
-                                                    <input type="text" id="reportform-name"
-                                                        class="form-control input-sm" name="ReportForm[name]"
-                                                        value="web developer (2509roblox@gmail.com)"
-                                                        placeholder="Nhập tên, email, SĐT của bạn..."
-                                                        aria-required="true">
-
-                                                    <p class="help-block help-block-error"></p>
-                                                </div>
-                                                <div class="form-group field-reportform-content required">
-                                                    <label class="control-label" for="reportform-content">Nội dung
-                                                        phản ánh</label>
-                                                    <textarea id="reportform-content" class="form-control input-sm" name="ReportForm[content]"
-                                                        placeholder="Nhập thông tin phản ánh..." aria-required="true"></textarea>
-
-                                                    <p class="help-block help-block-error"></p>
-                                                </div>
-                                                <div class="form-group field-reportform-verifycode required">
-                                                    <label class="control-label" for="reportform-verifycode">Mã xác
-                                                        thực</label>
-                                                    <img id="reportform-verifycode-image"
-                                                        src="/site/captcha?v=66f4cc658a0515.28674991" alt="">
-                                                    <input type="text" id="reportform-verifycode"
-                                                        class="form-control" name="ReportForm[verifyCode]"
-                                                        aria-required="true">
-
-                                                    <p class="help-block help-block-error"></p>
-                                                </div> <button type="submit"
-                                                    class="btn text-uppercase btn-block bg-orange btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                    data-style="zoom-out"><b><i
-                                                            class="glyphicon glyphicon-send"></i></b> Gửi phản
-                                                    ánh</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                
 
                     <div id="preApplyForm" class="modal">
                         <div class="modal-dialog modal-sm">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Hoàn thiện hồ sơ</h5>
+                                    <h5 class="modal-title">Ứng tuyển ngay</h5>
                                     <button onclick="teksAlert(this)" type="button" class="close"
-                                        data-dismiss="modal">&times;</button>
+                                            data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
-                                    <h5>Chờ một chút!</h5>
-                                    <p>CV của bạn đang sơ sài, bạn phải bổ sung hoặc tải lên CV để ứng tuyển: <b>Kế Toán
-                                            Tổng Hợp (Đức Hoà - Long An)</b></p>
+                                    <form wire:submit.prevent="apply">
+                                        <div class="form-group">
+                                            <label for="full_name">Họ và Tên</label>
+                                            <input type="text" wire:model="full_name" class="form-control" id="full_name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" wire:model="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Số điện thoại</label>
+                                            <input type="text" wire:model="phone" class="form-control" id="phone" required>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <!-- Button Group -->
                                     <div class="btn-group">
-                                        <a href="/candidate/apply-job?jid=1378228&utm_source=&utm_medium=&ref=%2Fviec-lam%2Fke-toan-tong-hop-duc-hoa-long-an-18748470984.html%3Futm_source%3D%26utm_medium%3D"
-                                            onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay');"
-                                            data-jid="1378228"
-                                            data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
-                                            class="btn btn-warning mrg-r-10"><i class='bx bx-edit'></i> Bổ sung
-                                            thông tin</a>
-                                        <a href="/candidate/document-attachment?jid=1378228&utm_source=&utm_medium=&ref=%2Fviec-lam%2Fke-toan-tong-hop-duc-hoa-long-an-18748470984.html%3Futm_source%3D%26utm_medium%3D"
-                                            class="btn btn-success mrg-r-10"><i class='bx bx-upload'></i> Tải lên
-                                            CV</a>
-
+                                        <button wire:click="apply" class="btn btn-success mrg-r-10">
+                                            <i class='bx bx-upload'></i> Ứng tuyển
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div id="confirmApplyForm" class="modal">
                         <div class="modal-dialog modal-md">
                             <div class="modal-content">
@@ -1206,17 +1009,7 @@
                             }
                         }
                     </style>
-
-                    <script>
-                        function teksAlert() {
-                            $('#teksCollaboratives').removeClass('hide').find('ul').html($('.jobs.collaboratives').html());
-                            $('.jobs-collaboratives').hide();
-                            $('#teksStatus').html(
-                                '<div class="alert alert-warning">Bạn chưa thể ứng tuyển vị trí này. Hãy hoàn thiện hồ sơ để tiếp tục!</div>'
-                            );
-                        }
-                    </script>
-
+ 
 
 
                     <div id="multiCvForm" class="modal">
@@ -1554,170 +1347,12 @@
                     </a>
 
 
-                    <script>
-                        if (!localStorage.getItem("tokenCvBuilder")) {
-                            localStorage.setItem("tokenCvBuilder",
-                                'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3MzE5MTQxLCJleHAiOjI0ODQxODMxNDEsInVpZCI6MjU5OTgzNX0.YZGCASeK8aUsWGQMOIqorpsr-SoF6jtky5UK_Pcr6EU'
-                            );
-                        }
-                        if (!localStorage.getItem("userCvBuilder")) {
-                            localStorage.setItem("userCvBuilder", (
-                                '{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/jobsgo.vn\/uploads\/avatar\/202409\/2599835_20240925210030.jpg","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"jobsgo","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTk4MzUsInN1YiI6MjU5OTgzNSwiaWF0IjoxNzI3MzA1ODYzLCJleHAiOjE3Mjc1NjUwNjN9.HQx8DpR-0z1LRLkPuOm3o2DZXfXG66xRmMfU_oWKd8zBhB5l5m-X8_AfOap-70yZHrhTFRXg7HTnyAbAeYa48fSOocAtlbH8x30HlXUJQl7TyWxL0zd2ZoI5xGWQ0cJ--o4feGOtkLsCEluuMEHIMc48gTSsKbC-YxqTg8mZudh92OFK_xq8RfSk4KqvfmNeQnv7q2vBI7PLuV99X3nhQ1f2CvVU_eJ5spbPB8G1TRGmVwWQk_g_57TkpbOKW77KipYLq58byMn31wkU-qmMXsNBpohOF52ojrnrK0pscqPrVcm3oRVYQiGvKMO2-VsmPcVbIoA9ZozQdgHcQ86NVQ","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"1","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":"53","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"2","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'
-                            ));
-                        }
-                    </script>
-
-                    <!--<div class="maintenance-banner">
-     Để tăng chất lượng dịch vụ, JobsGO.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
-   </div>
-   <style>
-     .maintenance-banner {
-       background-color: #1772bd;
-       color: #fff;
-       padding: 10px;
-       line-height: 1.4;
-       text-align: center;
-       position: fixed;
-       bottom:0;
-       left: 0;
-       right: 0;
-       z-index: 99999999;
-     }
-     html body {
-       padding-bottom: 60px !important;
-     }
-   </style>-->
+        
                     <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với JobsGO "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>
-                    <script>
-                        window.addEventListener('load', function() {
-                            window.fbAsyncInit = function() {
-                                FB.init({
-                                    appId: '392901714500257',
-                                    autoLogAppEvents: true,
-                                    xfbml: true,
-                                    version: 'v2.12'
-                                });
-                            };
-
-                        });
-                    </script> <!-- Messenger Plugin chat Code --> <!--<div id="fb-root"></div>-->
-                    <!-- Your Plugin chat code -->
-                    <!--<div id="fb-customer-chat" class="fb-customerchat"></div> <script>
-                        var chatbox = document.getElementById('fb-customer-chat');
-                        chatbox.setAttribute("page_id", "122685381212630");
-                        chatbox.setAttribute("attribution", "biz_inbox");
-                    </script>-->
-                    <!-- Your SDK code -->
-                    <!--<script>
-                        if (!navigator.userAgent.includes('Lighthouse')) {
-                            window.fbAsyncInit = function() {
-                                FB.init({
-                                    xfbml: true,
-                                    version: 'v13.0'
-                                });
-                            };
-                            (function(d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0];
-                                if (d.getElementById(id)) return;
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }(document, 'script', 'facebook-jssdk'));
-                        }
-                    </script>-->
-                    <script>
-                        window.addEventListener('load', function() {
-
-                            if (!getCookie('jobsgo-logged')) {
-                                $.ajax({
-                                    url: "/api/logged?utm_source=&utm_medium=",
-                                    success: function(result) {
-                                        setCookie('jobsgo-logged', 1, 1);
-                                        gtag('event', 'conversion', {
-                                            'send_to': 'AW-10876503189/UpnvCOeNqcQDEJWJqcIo'
-                                        });
-                                    }
-                                });
-
-                            }
-
-                            var Tawk_API = Tawk_API || {},
-                                Tawk_LoadStart = new Date();
-                            $('#tawkchat-container').css('z-index', '999999995 !important');
-                            $('#load-tawkto').click(function() {
-                                var s1 = document.createElement("script"),
-                                    s0 = document.getElementsByTagName("script")[0];
-                                s1.async = true;
-                                s1.src = 'https://embed.tawk.to/5817ea2dc7829d0cd36ed1ef/default';
-                                s1.charset = 'UTF-8';
-                                s1.setAttribute('crossorigin', '*');
-                                s0.parentNode.insertBefore(s1, s0);
-                                Tawk_API.onLoad = function() {
-                                    Tawk_API.toggle();
-                                };
-                                $('#load-tawkto img').attr("src", "https://jobsgo.vn/img/loading.gif");
-                                setTimeout(function() {
-                                    $('#load-tawkto').hide();
-                                }, 1e3);
-                            })
-                        });
-                    </script>
-                    <script>
-                        window.addEventListener('load', function() {
-
-                            $('.btn-get-link').click(function() {
-                                var phone = $('.input-get-link .phone');
-                                if (phone.val() == '') {
-                                    phone.focus();
-                                    return;
-                                }
-                                $.ajax({
-                                    url: "/ajax/request-sms",
-                                    type: "post",
-                                    data: {
-                                        'phone_number': phone.val()
-                                    },
-                                    success: function(response) {
-                                        var obj = JSON.parse(response);
-                                        if (obj.status == 1) {
-                                            phone.val('');
-                                        }
-
-                                        alert(obj.msg);
-                                    },
-                                    error: function(jqXHR, textStatus, errorThrown) {
-                                        console.log(textStatus, errorThrown);
-                                    }
-                                });
-                            });
-                            var url_string = window.location.href;
-                            var url = new URL(url_string);
-                            var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") : '';
-                            var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
-                            var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get("utm_campaign") : '';
-                            var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
-                            if (utmSource || utmMed || utmCampaign || utmTerm) {
-                                $('a').attr("href", function() {
-                                    var currUrl = $(this).attr('href');
-                                    if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !currUrl
-                                        .includes("tel:") && !currUrl.includes("mailto:")) {
-                                        if (currUrl && currUrl.indexOf("?") == -1) {
-                                            urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed +
-                                                "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
-                                        } else {
-                                            urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed +
-                                                "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
-                                        }
-                                        return urlWithParam;
-                                    }
-                                });
-                            }
-                        });
-                    </script>
+                
 
                 </body>
 

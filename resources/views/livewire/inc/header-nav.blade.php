@@ -3,25 +3,18 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
                 class="fa fa-bars"></i></button>
         <div class="navbar-header"><a class="navbar-brand" href="/">
-                <img width="134" height="40" loading="lazy" src="/assets_livewire/logo-light.svg"src="/logo.png" alt="JobsGO">
+                <img width="134" height="40" loading="lazy" src="/assets_livewire/logo-light.svg" src="/logo.png"
+                    alt="JobsGO">
             </a>
-            <div class="visible-xs"
-                style="position: absolute;right: 70px;top: 17px;padding: 4px 6px;border-radius: 4px;background-color: #ff5c35; padding: 4px 20px; border-radius: 3px; line-height: 22px;">
-                <a href="/site/download?utm_source=web_ntv&utm_medium=top_menu_tai_app" title="Tải App"
-                    target="_blank" style="color: #fff !important;"><i class="glyphicon glyphicon-download-alt"
-                        style="color: #fff !important;"></i> Tải
-                    App</a>
-            </div>
+        
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
 
             <ul class="nav navbar-nav navbar-right navbar-left-1 pull-left" data-in="fadeInDown" data-out="fadeOutUp">
-                <li class="hidden-xs"><a
-                        style="color: #fff !important;background-color: #ff5c35; padding: 5px 10px; margin-right: 10px; border-radius: 3px; position: relative; height: 30px; top: 16px;"
-                        href="/site/download?utm_source=web_ntv&utm_medium=top_menu_tai_app" title="Tải App"
-                        target="_blank"><i class="glyphicon glyphicon-download-alt"></i> Tải App</a></li>
+           
                 <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/viec-lam.html">
+                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
+                        href="/viec-lam.html">
                         <img src="/assets_livewire/img/job.svg" alt="job" loading="lazy"> Việc làm
                     </a>
                     <ul class="dropdown-menu pb-3">
@@ -31,40 +24,56 @@
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-chinh-ngan-hang.html"> Việc làm Tài Chính/Ngân Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-ke-toan-kiem-toan.html"> Việc làm Kế Toán/Kiểm Toán</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành Chính/Văn Phòng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-kinh-doanh-ban-hang.html"> Việc làm Kinh Doanh/Bán Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-marketing.html"> Việc làm Marketing</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-xay-dung.html"> Việc làm Xây dựng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-it-phan-mem.html"> Việc làm IT Phần Mềm</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html"> Việc làm Hành Chính/Văn Phòng</a></li>
+                                            @foreach(
+                      App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                      ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                      ->limit(10) // Limit to top 10 careers
+                      ->get() as $career)
+                      <li>
+                        <a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
+                          Việc làm {{ $career->name }}
+                        </a>
+                      </li>
+                      @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-3 ps-sm-0">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-ho-chi-minh.html"> Việc làm tại Hồ Chí Minh</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-ha-noi.html"> Việc làm tại Hà Nội</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-da-nang.html"> Việc làm tại Đà Nẵng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-can-tho.html"> Việc làm tại Cần Thơ</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-binh-duong.html"> Việc làm tại Bình Dương</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-hai-phong.html"> Việc làm tại Hải Phòng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-dong-nai.html"> Việc làm tại Đồng Nai</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-quang-ninh.html"> Việc làm tại Quảng Ninh</a></li>
+                                            @foreach(
+                                                App\Models\CommonCity::withCount('jobPosts') // Count related job posts
+                                                ->orderBy('job_posts_count', 'desc') // Sort by job posts count
+                                                ->limit(10) // Limit to top 10 cities
+                                                ->get() as $city)
+                                                <li>
+                                                  <a class="dropdown-item"
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}">
+                                                    Việc làm tại {{ $city->name }}
+                                                  </a>
+                                                </li>
+                                                @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html"> Việc làm Tuyển Gấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc làm Nổi Bật</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-lao-dong-pho-thong.html"> Việc làm Lao động phổ thông</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-khong-can-bang-cap.html"> Việc làm Không cần bằng cấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html"> Việc làm Online tại nhà</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-part-time.html"> Việc làm Part-time</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc làm Thời vụ</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc làm Remote</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html"> Việc làm Tuyển
+                                                    Gấp</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc làm Nổi
+                                                    Bật</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-lao-dong-pho-thong.html"> Việc
+                                                    làm Lao động phổ thông</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-khong-can-bang-cap.html"> Việc
+                                                    làm Không cần bằng cấp</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html"> Việc làm
+                                                    Online tại nhà</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-part-time.html"> Việc làm
+                                                    Part-time</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc làm Thời
+                                                    vụ</a></li>
+                                            <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc làm
+                                                    Remote</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -73,7 +82,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
+                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
+                        href="/cong-ty.html">
                         <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
                     </a>
                     <ul class="dropdown-menu">
@@ -92,23 +102,24 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/mau-cv-xin-viec.html">
+                    <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
+                        href="/mau-cv-xin-viec.html">
                         <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/review-cv.html">Đánh giá CV <small class="badge bg-warning">N</small></a></li>
+                        <li><a class="dropdown-item" href="/review-cv.html">Đánh giá CV <small
+                                    class="badge bg-warning">N</small></a></li>
                         <li><a class="dropdown-item" href="/tao-cv-bang-ai.html">Tạo CV bằng AI </a></li>
                         <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
                         <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
                 </li>
-             
+
             </ul>
             <ul class="nav teks-nav navbar-nav navbar-right navbar-left-2" data-in="fadeInDown" data-out="fadeOutUp">
 
                 <li class="dropdown dropdown-user">
-                    <a href="/candidate/index"
-                        style=" padding-top: 12px; display: flex !important; align-items:center;"
+                    <a href="/candidate/index" style=" padding-top: 12px; display: flex !important; align-items:center;"
                         class="dropdown-toggle" data-toggle="dropdown">
 
                         <img loading="lazy" width="32" onerror="this.src='/bolt/assets/images/image.png'"
@@ -116,9 +127,15 @@
                             alt="web developer" class="img-rounded">
                         <span style="margin-left: 5px">
                             <div class="d-flex text-bold" style="font-weight: bold;">
-                                {{ Auth::user()->full_name }} </div>
-                            <div id="status_job_search"
-                                class="status_on">Đang tìm việc</div>
+                                @if (Auth::check())
+                                <span>
+                                    {{ Auth::user()->full_name }}
+
+                                </span>
+                                @endif
+
+                            </div>
+                            <div id="status_job_search" class="status_on">Đang tìm việc</div>
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
@@ -191,28 +208,27 @@
                         </style>
                         <li><a href="/candidate/dashboard" wire:navigate title="Hồ sơ xin việc"><i
                                     class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
-                         
+
                         <li><a href="/candidate/change-password" title="Đổi mật khẩu"><i
                                     class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
                         <li class="divider"></li>
                         <li>
                             <a href="javascript: void(0)">
-                                <div class="switcher"><input type="checkbox" id="switch__input"
-                                        class="switch__input" checked> <label for="switch__input"
-                                        id="switch__label" class="switch__label status_on">Đang tìm
+                                <div class="switcher"><input type="checkbox" id="switch__input" class="switch__input"
+                                        checked> <label for="switch__input" id="switch__label"
+                                        class="switch__label status_on">Đang tìm
                                         việc</label></div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#" 
-                               class="btn-colorgb-jgd" 
-                               title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"
-                               wire:click.prevent="logout"> <!-- Gọi phương thức logout -->
+                            <a href="#" class="btn-colorgb-jgd" title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"
+                                wire:click.prevent="logout">
+                                <!-- Gọi phương thức logout -->
                                 <i class='bx bx-log-out-circle'></i> Đăng xuất
                             </a>
                         </li>
-                        
+
                         <script>
                             window.addEventListener('load', function() {
                                 $(function() {

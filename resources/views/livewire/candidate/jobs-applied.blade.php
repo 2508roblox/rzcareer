@@ -7,32 +7,44 @@
         <html lang="vi-VN">
 
         <head>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font" type="font/woff2" crossorigin>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font" type="font/woff2" crossorigin>
-            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font" type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
+                type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
+                type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font"
+                type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font"
+                type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font"
+                type="font/woff2" crossorigin>
+            <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
+                type="font/woff2" crossorigin>
             <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
             <meta charset="UTF-8">
             <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <meta name="viewport"
+                content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <meta name="robots" content="noindex, nofollow">
             <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-            <meta name="csrf-token" content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
+            <meta name="csrf-token"
+                content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
             <title>Bảng tin - JobsGO</title>
 
-            <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+            <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
+                type="text/css">
             <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/core.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/components.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/colors.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/extras/animate.min.css" rel="stylesheet" type="text/css">
-            <link href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-            <link href="/assets_livewire/cv_template/dist/css/introjs.css?v=234208153092" rel="stylesheet" type="text/css">
-            <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=234208153092" rel="stylesheet" type="text/css">
+            <link href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css"
+                rel="stylesheet" type="text/css">
+            <link href="/assets_livewire/cv_template/dist/css/introjs.css?v=234208153092" rel="stylesheet"
+                type="text/css">
+            <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=234208153092" rel="stylesheet"
+                type="text/css">
             <link href="/assets_livewire/css/v2.css?colorgb=234208153092" rel="stylesheet" type="text/css">
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js">
@@ -50,7 +62,8 @@
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_buttons.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js"></script>
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js">
@@ -60,7 +73,8 @@
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_select2.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=234208153092"></script>
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=234208153092"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js">
@@ -69,14 +83,18 @@
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092"></script>
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=234208153092">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=234208153092">
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092"></script>
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=234208153092">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/main.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js"></script>
+            <script type="text/javascript"
+                src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/cv_template/dist/js/intro.js?v=234208153092"></script>
 
 
@@ -102,17 +120,17 @@
                     position: absolute;
                     bottom: 10px;
                 }
-                
+
                 @media (min-width: 769px) {
                     .heading-elements .icons-list {
                         margin-top: 12px;
                     }
                 }
-                
+
                 .status_on {
                     color: #4CAF50 !important;
                 }
-                
+
                 .status_off {
                     color: #FF5722 !important;
                 }
@@ -152,25 +170,25 @@
                                 box-sizing: border-box;
                                 padding: 10px;
                             }
-                            
+
                             .media-list li:nth-child(1),
                             .media-list li:nth-child(2) {
                                 border-top: none;
                             }
-                            
+
                             #statusDropdown {
                                 min-width: 250px
                             }
-                            
+
                             #statusDropdown label {
                                 display: flex;
                                 align-items: center;
                             }
-                            
+
                             #statusDropdown span {
                                 margin-left: 10px !important
                             }
-                            
+
                             .clamp-text {
                                 display: -webkit-box;
                                 -webkit-line-clamp: 2;
@@ -178,7 +196,7 @@
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                             }
-                            
+
                             .clamp-text-place {
                                 display: -webkit-box;
                                 -webkit-line-clamp: 1;
@@ -195,70 +213,72 @@
                                     <li><a href="candidate/dashboard" "=" ">Bảng tin</a></li>
                             <li>Danh sách việc làm đã ứng tuyển</li>
                         </ul>
-                        <div class="heading-elements panel-nav ">
-                            <ul class="nav nav-pills ">
+                        <div class=" heading-elements panel-nav ">
+                            <ul class=" nav nav-pills ">
                 
-                                <li class="dropdown " id="dropdown-sort ">
-                                    <a href="javascript:void(0) " class="dropdown-toggle " data-toggle="dropdown ">
-                                        <i class="icon-sort "></i>
-                                        <span class="position-right ">Sắp xếp</span>
+                                <li class=" dropdown " id=" dropdown-sort ">
+                                    <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
+                                        <i class=" icon-sort "></i>
+                                        <span class=" position-right ">Sắp xếp</span>
                                     </a>
                 
-                                    <ul class="dropdown-menu dropdown-menu-right " id="dropdown-menu-sort ">
+                                    <ul class=" dropdown-menu dropdown-menu-right " id=" dropdown-menu-sort ">
                                         <li>
-                                            <a href="/candidate/jobs-applied?sort[date]=asc "><i class="icon-sort-time-asc "></i> Cũ nhất</a>
+                                            <a href=" /candidate/jobs-applied?sort[date]=asc "><i class="
+                                            icon-sort-time-asc "></i> Cũ nhất</a>
                                         </li>
                                         <li>
-                                            <a href="/candidate/jobs-applied?sort[date]=desc "><i class="icon-sort-time-desc "></i> Mới
+                                            <a href=" /candidate/jobs-applied?sort[date]=desc "><i class="
+                                            icon-sort-time-desc "></i> Mới
                                                 nhất</a>
                                         </li>
                                     </ul>
                                 </li>
                 
-                                <li class="dropdown " id="dropdown-filter ">
-                                    <a href="javascript:void(0) " class="dropdown-toggle " data-toggle="dropdown ">
-                                        <i class="fa fa-search "></i>
-                                        <span class="position-right ">Lọc</span>
+                                <li class=" dropdown " id=" dropdown-filter ">
+                                    <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
+                                        <i class=" fa fa-search "></i>
+                                        <span class=" position-right ">Lọc</span>
                                     </a>
                 
-                                    <ul class="dropdown-menu dropdown-menu-right " id="statusDropdown ">
+                                    <ul class=" dropdown-menu dropdown-menu-right " id=" statusDropdown ">
                                                                     <li>
-                                                <label><input type="checkbox " value="0 " data-id="0 ">
+                                                <label><input type=" checkbox " value=" 0 " data-id=" 0 ">
                                                     <span>Chỉ Mới Apply</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="2 " data-id="2 ">
+                                                <label><input type=" checkbox " value=" 2 " data-id=" 2 ">
                                                     <span>Từ Chối</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="6 " data-id="6 ">
+                                                <label><input type=" checkbox " value=" 6 " data-id=" 6 ">
                                                     <span>Liên Lạc</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="7 " data-id="7 ">
+                                                <label><input type=" checkbox " value=" 7 " data-id=" 7 ">
                                                     <span>Phỏng Vấn</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="8 " data-id="8 ">
+                                                <label><input type=" checkbox " value=" 8 " data-id=" 8 ">
                                                     <span>Gửi Offer</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="9 " data-id="9 ">
+                                                <label><input type=" checkbox " value=" 9 " data-id=" 9 ">
                                                     <span>Tuyển Thành Công</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="10 " data-id="10 ">
+                                                <label><input type=" checkbox " value=" 10 " data-id=" 10 ">
                                                     <span>Sàng Lọc Hồ Sơ</span>
                                                 </label>
                                             </li>
                                                                     <li>
-                                                <label><input type="checkbox " value="11 " data-id="11 ">
+                                                <label><input type=" checkbox " value=" 11 " data-id=" 11 ">
                                                     <span>Đặt Lịch Phỏng Vấn</span>
                                                 </label>
                                             </li>
@@ -270,91 +290,159 @@
                     </div>
                 </div>
                 <!-- Detached content -->
-                <div class="container-detached ">
-                    <div class="content-detached ">
+                <div class=" container-detached ">
+                    <div class=" content-detached ">
                 
                         <!-- Tab content -->
-                        <div class="tab-content ">
-                            <div class="tab-pane fade in active " id="profile ">
+                        <div class=" tab-content ">
+                            <div class=" tab-pane fade in active " id=" profile ">
                 
                                 <!-- Cards layout -->
-                                <div class="panel panel-white ">
+                                <div class=" panel panel-white ">
                 
-                                                            <ul class="media-list ">
-                
-                                            
-                                        </ul>
-                
-                                        <div class="text-center pb-20 ">  </div>
-                
-                                                    </div>
-                                <!-- /cards layout -->
+                                    <ul class="media-list">
+                                        @foreach($appliedJobs as $job)
+                                            @php
+                                                $jobPost = $job->jobPost; // Đối tượng JobPost
+                                            @endphp
+                                            <li class="media panel-body stack-media-on-mobile" title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}">
+                                                <div class="media-left">
+                                                    <a title="Xem chi tiết" href="{{ url('viec-lam/' . $jobPost->slug) }}" target="_blank">
+                                                        <img width="100"
+                                                            src="{{ Storage::url($jobPost->company->company_image_url) }}"
+                                                            class="img-rounded" alt=""
+                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'">
+                                                    </a>
+                                                </div>
+                                    
+                                                <div class="media-body">
+                                                    <h6 class="media-heading text-semibold" style="display: flex; justify-content: space-between">
+                                                        <div class="clamp-text">
+                                                            <a title="Xem chi tiết" target="_blank" href="{{ url('viec-lam/' . $jobPost->slug) }}">{{ $jobPost->job_name }}</a>
+                                                            <strong class="text-uppercase text-grey">- {{ $jobPost->company->company_name }}</strong>
+                                                        </div>
+                                                        <span title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}" class="text-blue-600">
+                                                            {{ $job->created_at->format('d/m/Y') }}
+                                                        </span>
+                                                    </h6>
+                                    
+                                                    <ul class="list-inline list-inline-separate text-muted mb-10">
+                                                        <li title="Địa điểm làm việc">
+                                                            <span class="clamp-text-place">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $jobPost->city->name }}
+                                                            </span>
+                                                        </li>
+                                                        <li title="Thời hạn kết thúc tuyển dụng">
+                                                            <span class="clamp-text-place">
+                                                                <i class="fa fa-clock-o" aria-hidden="true"></i> {{ $jobPost->created_at->format('d/m/Y') }}
+                                                            </span>
+                                                        </li>
+                                                        <li title="Mức lương">
+                                                            <span class="clamp-text-place">
+                                                                <i class="fa fa-money" aria-hidden="true"></i> 
+                                                                {{ number_format($jobPost->salary_min / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost->salary_max / 1_000_000, 0, '.', ',') }} triệu VNĐ
+                                                            </span>
+                                                        </li>
+                                                        <li title="Loại hình công việc">
+                                                            <span class="clamp-text-place">
+                                                                <i class="fa fa-star-o" aria-hidden="true"></i> {{ $jobPost->job_type }}
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                    
+                                                <div class="media-right text-nowrap" title="Trạng thái">
+                                                    <span class="label bg-primary">Mới ứng tuyển</span>
+                                                    <a wire:click="cancelApplication({{ $job->id }})" 
+                                                       class="text-uppercase hide btn btn-cancel btn-danger btn-xs"
+                                                      
+                                                     >
+                                                       <i class="icon-trash"></i> Hủy bỏ
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                    
+
+                                <div class="text-center pb-20 "> </div>
+
                             </div>
-                
+                            <!-- /cards layout -->
                         </div>
-                        <!-- /tab content -->
-                
+
                     </div>
+                    <!-- /tab content -->
+
                 </div>
-                <!-- /detached content -->
-                
-                <!-- Modal -->
-                <div id="myModal " class="modal fade " role="dialog ">
-                    <div class="modal-dialog ">
-                
-                        <!-- Modal content-->
-                        <div class="modal-content ">
-                            <div class="modal-header ">
-                                <button type="button " class="close " data-dismiss="modal ">×</button>
-                                <h5 class="modal-title "></h5>
-                            </div>
-                            <div class="modal-body p-15 ">
-                                <hr>
-                                <form class="form-horizontal " action=" " method="POST ">
-                                    <div class="form-group ">
-                                        <label class="control-label col-sm-3 ">Lý do hủy bỏ:</label>
-                                        <div class="col-sm-9 ">
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Đã tìm được việc mới "> <span class="ml-20 text-default ">Đã tìm được việc mới</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Mức lương không phù hợp "> <span class="ml-20 text-default ">Mức lương không phù hợp</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Yêu cầu không phù hợp "> <span class="ml-20 text-default ">Yêu cầu không phù hợp</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Địa điểm không phù hợp "> <span class="ml-20 text-default ">Địa điểm không phù hợp</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Nghi ngờ NTD lừa đảo "> <span class="ml-20 text-default ">Nghi ngờ NTD lừa đảo</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Ứng tuyển nhầm công việc "> <span class="ml-20 text-default ">Ứng tuyển nhầm công việc</span>
-                                            </label>
-                                            <label class="checkbox ">
-                                                <input type="checkbox " name="reason[] " value="Thay đổi hồ sơ "> <span class="ml-20 text-default ">Thay đổi hồ sơ</span>
-                                            </label>
-                                            <div class="checkbox ">
-                                                <textarea id="reason " name="reason[] " class="form-control mt-10 " placeholder="Lý do khác... "></textarea>
-                                            </div>
+            </div>
+            <!-- /detached content -->
+
+            <!-- Modal -->
+            <div id="myModal " class="modal fade " role="dialog ">
+                <div class="modal-dialog ">
+
+                    <!-- Modal content-->
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button " class="close " data-dismiss="modal ">×</button>
+                            <h5 class="modal-title "></h5>
+                        </div>
+                        <div class="modal-body p-15 ">
+                            <hr>
+                            <form class="form-horizontal " action=" " method="POST ">
+                                <div class="form-group ">
+                                    <label class="control-label col-sm-3 ">Lý do hủy bỏ:</label>
+                                    <div class="col-sm-9 ">
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Đã tìm được việc mới ">
+                                            <span class="ml-20 text-default ">Đã tìm được việc mới</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Mức lương không phù hợp ">
+                                            <span class="ml-20 text-default ">Mức lương không phù hợp</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Yêu cầu không phù hợp ">
+                                            <span class="ml-20 text-default ">Yêu cầu không phù hợp</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Địa điểm không phù hợp ">
+                                            <span class="ml-20 text-default ">Địa điểm không phù hợp</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Nghi ngờ NTD lừa đảo ">
+                                            <span class="ml-20 text-default ">Nghi ngờ NTD lừa đảo</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Ứng tuyển nhầm công việc ">
+                                            <span class="ml-20 text-default ">Ứng tuyển nhầm công việc</span>
+                                        </label>
+                                        <label class="checkbox ">
+                                            <input type="checkbox " name="reason[] " value="Thay đổi hồ sơ "> <span
+                                                class="ml-20 text-default ">Thay đổi hồ sơ</span>
+                                        </label>
+                                        <div class="checkbox ">
+                                            <textarea id="reason " name="reason[] " class="form-control mt-10 "
+                                                placeholder="Lý do khác... "></textarea>
                                         </div>
                                     </div>
-                                    <div class="form-group ">
-                                        <div class="col-sm-offset-3 col-sm-9 ">
-                                            <button type="button " class="btn btn-submit btn-danger ">Hủy bỏ ứng tuyển</button>
-                                        </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="col-sm-offset-3 col-sm-9 ">
+                                        <button type="button " class="btn btn-submit btn-danger ">Hủy bỏ ứng
+                                            tuyển</button>
                                     </div>
-                                </form>
-                            </div>
-                
+                                </div>
+                            </form>
                         </div>
-                
+
                     </div>
+
                 </div>
-                <script src="/js/custom.js "></script>
-                <script>
-                    $(function () {
+            </div>
+            <script>
+                $(function () {
                         $('.btn-cancel').click(function () {
                             var t = $(this);
                             var f = $('#myModal form');
@@ -439,66 +527,101 @@
                             });
                         });
                     });
-                </script>
-                
-                                  <!-- Detached sidebar -->
-                          <div class="sidebar-detached hide ">
-                            <div class="sidebar sidebar-default sidebar-separate ">
-                              <div class="sidebar-content ">
-                
-                                <!-- User details -->
-                                <div class="content-group ">
-                                  <div class="panel-body bg-blue-800 text-center ">
-                                    <div class="content-group-sm ">
-                                      <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng " data-fancybox=" " data-type="iframe " class="text-white " href="https://jobsgo.vn/candidate/detail?v=1727394586 " title="Hồ sơ xin việc của bạn
+            </script>
+
+            <!-- Detached sidebar -->
+            <div class="sidebar-detached hide ">
+                <div class="sidebar sidebar-default sidebar-separate ">
+                    <div class="sidebar-content ">
+
+                        <!-- User details -->
+                        <div class="content-group ">
+                            <div class="panel-body bg-blue-800 text-center ">
+                                <div class="content-group-sm ">
+                                    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng " data-fancybox=" "
+                                        data-type="iframe " class="text-white "
+                                        href="https://jobsgo.vn/candidate/detail?v=1727394586 " title="Hồ sơ xin việc của bạn
                                             trong mắt nhà tuyển dụng ">
                                         <h6 class="text-semibold no-margin-bottom ">
                                             web developer
                                         </h6>
                                         <span class="display-block ">
-                
-                                                                            N/A 49 tuổi <br> <span class="text-orange-300 text-uppercase "><i class="hide icon-eye8 "></i></span>
-                                                                </span>
-                
-                
-                                      </a>
-                
-                                                                  <div class="progress progress-striped active mt-10 " title="Hồ sơ xin việc đã hoàn thiện được 45% ">
-                                            <div class="progress-bar progress-bar-success " style="width: 45% ">
-                                              <span class="text-size-mini text-capitalize ">45%</span>
-                                            </div>
-                                          </div>
-                                        
+
+                                            N/A 49 tuổi <br> <span class="text-orange-300 text-uppercase "><i
+                                                    class="hide icon-eye8 "></i></span>
+                                        </span>
+
+
+                                    </a>
+
+                                    <div class="progress progress-striped active mt-10 "
+                                        title="Hồ sơ xin việc đã hoàn thiện được 45% ">
+                                        <div class="progress-bar progress-bar-success " style="width: 45% ">
+                                            <span class="text-size-mini text-capitalize ">45%</span>
+                                        </div>
                                     </div>
-                
-                                    <div class="display-inline-block content-group-sm ">
-                                      <!-- User thumbnail -->
-                
-                                      <!-- /user thumbnail -->
-                                    </div>
-                
-                                    <ul class="list-inline list-inline-condensed no-margin-bottom ">
-                                      <li><a href="javascript:void(0) " class="btn bg-blue-800 btn-rounded btn-icon editable editable-click " data-name="facebook " title="Cập nhật địa chỉ trang cá nhân của bạn trên Facebook "><span class="hide ">https://</span></a></li>
-                                      <li><a href="javascript:void(0) " class="btn bg-blue-800 btn-rounded btn-icon editable editable-click " data-name="google_plus " title="Cập nhật địa chỉ trang cá nhân của bạn trên Google+ "><span class="hide ">https://</span></a></li>
-                                      <li><a href="javascript:void(0) " class="btn bg-blue-800 btn-rounded btn-icon editable editable-click " data-name="twitter " title="Cập nhật địa chỉ trang cá nhân của bạn trên Twitter "><span class="hide ">https://</span></a></li>
-                                      <li><a href="javascript:void(0) " class="btn bg-blue-800 btn-rounded btn-icon editable editable-click " data-name="linkedin " title="Cập nhật địa chỉ trang cá nhân của bạn trên Linkedin "><span class="hide ">https://</span></a></li>
-                                      <li><a href="javascript:void(0) " class="btn bg-blue-800 btn-rounded btn-icon editable editable-click " data-name="skype " title="Cập nhật địa chỉ liên lạc của bạn qua Skype "><span class="hide ">live:</span></a></li>
-                                    </ul>
-                                  </div>
-                
-                                  <div class="panel no-border-top no-border-radius-top ">
-                                    <ul class="navigation ">
-                                      <li class="navigation-header ">Cá nhân</li>
-                                      <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin việc</a></li>
-                                      <li><a href="candidate/document-attachment "><i class="icon-file-media "></i> Đính kèm CV/chứng chỉ</a></li>
-                                      <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập thông tin từ LinkedIn</a></li>
-                                      <li data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4>
-                                        <p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width=&quot;200px&quot; src=&quot;/cv_template/assets/images/theme/cv3.png&quot; />"><a href="/candidate/pre-profile?tab=manage-resume"
-                                            target="_blank"><i class="icon-copy"></i>CV Go - Tạo CV cực chất<span class="badge badge-danger">Mới!</span></a></li>
+
+                                </div>
+
+                                <div class="display-inline-block content-group-sm ">
+                                    <!-- User thumbnail -->
+
+                                    <!-- /user thumbnail -->
+                                </div>
+
+                                <ul class="list-inline list-inline-condensed no-margin-bottom ">
+                                    <li><a href="javascript:void(0) "
+                                            class="btn bg-blue-800 btn-rounded btn-icon editable editable-click "
+                                            data-name="facebook "
+                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Facebook "><span
+                                                class="hide ">https://</span></a></li>
+                                    <li><a href="javascript:void(0) "
+                                            class="btn bg-blue-800 btn-rounded btn-icon editable editable-click "
+                                            data-name="google_plus "
+                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Google+ "><span
+                                                class="hide ">https://</span></a></li>
+                                    <li><a href="javascript:void(0) "
+                                            class="btn bg-blue-800 btn-rounded btn-icon editable editable-click "
+                                            data-name="twitter "
+                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Twitter "><span
+                                                class="hide ">https://</span></a></li>
+                                    <li><a href="javascript:void(0) "
+                                            class="btn bg-blue-800 btn-rounded btn-icon editable editable-click "
+                                            data-name="linkedin "
+                                            title="Cập nhật địa chỉ trang cá nhân của bạn trên Linkedin "><span
+                                                class="hide ">https://</span></a></li>
+                                    <li><a href="javascript:void(0) "
+                                            class="btn bg-blue-800 btn-rounded btn-icon editable editable-click "
+                                            data-name="skype "
+                                            title="Cập nhật địa chỉ liên lạc của bạn qua Skype "><span
+                                                class="hide ">live:</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="panel no-border-top no-border-radius-top ">
+                                <ul class="navigation ">
+                                    <li class="navigation-header ">Cá nhân</li>
+                                    <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin việc</a>
+                                    </li>
+                                    <li><a href="candidate/document-attachment "><i class="icon-file-media "></i> Đính
+                                            kèm CV/chứng chỉ</a></li>
+                                    <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
+                                            thông tin từ LinkedIn</a></li>
+                                    <li
+                                        data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4>
+                                        <p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width=&quot;200px&quot; src=&quot;/cv_template/assets/images/theme/cv3.png&quot; />">
+                                        <a href="/candidate/pre-profile?tab=manage-resume" target="_blank"><i
+                                                class="icon-copy"></i>CV Go - Tạo CV cực chất<span
+                                                class="badge badge-danger">Mới!</span></a>
+                                    </li>
                                     <li class="navigation-divider"></li>
-                                    <li class="active"><a href="candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
-                                    <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                    <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i> Việc làm phù hợp</a></li>
+                                    <li class="active"><a href="candidate/jobs-applied"
+                                            title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i>
+                                            Việc làm đã ứng tuyển</a></li>
+                                    <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                                class="icon-stack-star"></i> Việc làm đã lưu</a></li>
+                                    <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
+                                                class="icon-stack4"></i> Việc làm phù hợp</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -640,7 +763,9 @@
     })
 </script>
 <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-<a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+<a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+    href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
+    class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
 
 <script>
     $(function() {
@@ -655,7 +780,7 @@
         }
     })
 </script>
- 
+
 
 <script>
     window.addEventListener('load', function() {
