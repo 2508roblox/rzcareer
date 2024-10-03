@@ -35,4 +35,8 @@ class SeekerProfile extends Model
     {
         return $this->belongsTo(CommonLocation::class, 'location_id');
     }
+    public function getCityNameAttribute()
+    {
+        return $this->location ? $this->location->city->name : null;
+    }
 }

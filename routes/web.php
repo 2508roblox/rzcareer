@@ -50,18 +50,18 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
     Route::get('/candidate/document-attachment', DocumentAttachment::class);
-}); 
+});
 Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer', Homepage::class);
     Route::get('/employer/candidates', Candidates::class);
-    Route::get('/employer/candidate/{id}', CandidateList::class);
+    Route::get('/employer/candidate/{id}', CandidateList::class)->name('employer.candidate');
     Route::get('/employer/order', Order::class);
 });
 Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/employer/login', EmployerLogin::class);
     Route::get('/site/register', Register::class);
     Route::get('/site/login', Login::class);
- 
+
 });
 
 
