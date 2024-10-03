@@ -151,7 +151,9 @@
                                             <div class="career-info ms-3">
                                                 <h5 class="card-title">{{ $career->name }}</h5>
                                                 <p class="card-text">Số lượng hồ sơ: {{ $career->resumes_count }}</p>
-                                                <a href="{{ route('employer.candidate', ['id' => $career->id]) }}" class="btn btn-primary btn-sm">Xem chi tiết</a>
+                                                <a href="{{ route('employer.candidate', ['id' => $career->id]) }}" style="
+                                                    width: 100px;
+                                                " class="btn btn-primary btn-sm">Xem chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
