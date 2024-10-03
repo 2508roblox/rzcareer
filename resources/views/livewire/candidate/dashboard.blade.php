@@ -866,32 +866,25 @@
                                                             <span class="">Lượt xem</span>
                                                         </div>
                                                     </a>
-                                                    <a href="/chat/" data-caption="Tin nhắn từ nhà tuyển dụng"
-                                                        data-fancybox="" data-type="iframe"
-                                                        title="Tin nhắn từ nhà tuyển dụng" class="media">
-                                                        <div class="media-left"><i class="bg-tin_nhan"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h4>0</h4>
-                                                            <span class="">Tin nhắn</span>
-                                                        </div>
-                                                    </a>
+                                                
                                                     <a href="/candidate/jobs-applied" class="media">
-                                                        <div class="media-left"><i class="bg-ung_tuyen"></i>
-                                                        </div>
+                                                        <div class="media-left"><i class="bg-ung_tuyen"></i></div>
                                                         <div class="media-body">
-                                                            <h4>0</h4>
+                                                            <h4>{{ $appliedJobsCount }}</h4> <!-- Display the count of applied jobs -->
                                                             <span class="">Việc ứng tuyển</span>
                                                         </div>
                                                     </a>
+                                                    
                                                     <a href="/candidate/jobs-saved" class="media">
-                                                        <div class="media-left"><i class="bg-khoe_hoc"></i>
+                                                        <div class="media-left">
+                                                            <i class="bg-khoe_hoc"></i>
                                                         </div>
                                                         <div class="media-body">
-                                                            <h4>1</h4>
-                                                            <span class="">Việc đã lưu</span>
+                                                            <h4>{{ $savedJobsCount }}</h4> <!-- Display the number of saved jobs -->
+                                                            <span>Việc đã lưu</span> <!-- This translates to "Saved Jobs" -->
                                                         </div>
                                                     </a>
+                                                    
                                                 </div>
                                                 <div class="p-5">
 

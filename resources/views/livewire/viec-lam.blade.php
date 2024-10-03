@@ -366,18 +366,15 @@
 
 
 
-                                                                <li class="mt-5 save-job"> <a
-                                                                        class="btn-save-job btn btn-default "
-                                                                        data-saved-job="0"
-                                                                        onclick="ga('send', 'event', 'detail_job', 'save_job', 'lưu công việc');">
-                                                                        <i
-                                                                            class="glyphicon glyphicon-heart-empty position-left"></i>
-                                                                        Lưu lại </a>
-
+                                                                <li class="mt-5 save-job">
+                                                                    <a wire:click.prevent="saveJob" class="btn-save-job btn btn-default">
+                                                                        <i class="glyphicon glyphicon-heart-empty position-left"></i>
+                                                                        Lưu lại
+                                                                    </a>
                                                                 </li>
+                                                                
                                                                 <li class="mt-5 256138397"><a
-                                                                        onclick="ga('send', 'event', 'detail_job', 'chia_se_voi_facebook', 'chia sẻ với facebook');return colorgb_call_popup(this);"
-                                                                        href="https://www.facebook.com/sharer/sharer.php?u=https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html"
+                                                                        href="https://www.facebook.com/sharer/sharer.php?u={{ (url()->current()) }}"
                                                                         class="btn btn-default "
                                                                         title="Chia sẻ việc làm trên Facebook"> <i
                                                                             class='bx bxs-share-alt'></i> Chia sẻ </a>

@@ -4,12 +4,16 @@ namespace App\Livewire\Candidate;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use App\Models\PostActivity; // Import the PostActivity model
+use App\Models\SavedJobPost; // Import the SavedJobPost model
 
 class Dashboard extends Component
 {
     public $user; // Define a public property for the user
     public $resumes; // Store resumes of the user
     public $a; // Define a public property for the status variable
+    public $appliedJobsCount; // Property to hold the count of applied jobs
+    public $savedJobsCount; // Property to hold the count of saved jobs
 
     public function mount()
     {
@@ -57,6 +61,12 @@ class Dashboard extends Component
             })) {
                 $this->a += 1; // Increment a by 1
             }
+
+            // Count the number of applied jobs
+            $this->appliedJobsCount = PostActivity::where('user_id', $this->user->id)->count(); // Get count of applications
+            
+            // Count the number of saved jobs
+            $this->savedJobsCount = SavedJobPost::where('user_id', $this->user->id)->count(); // Get count of saved jobs
         }
     }
 
@@ -84,6 +94,8 @@ class Dashboard extends Component
             'user' => $this->user, // Pass the user to the view
             'a' => $this->a, // Pass the a variable to the view
             'resumes' => $this->resumes, // Pass resumes to the view if needed
+            'appliedJobsCount' => $this->appliedJobsCount, // Pass the count to the view
+            'savedJobsCount' => $this->savedJobsCount, // Pass saved jobs count to the view
         ]);
     }
 }

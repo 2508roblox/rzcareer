@@ -10,6 +10,7 @@ use App\Livewire\Candidate\Dashboard;
 use App\Livewire\Candidate\EmployersViewed;
 use App\Livewire\Candidate\ImportCvData;
 use App\Livewire\Candidate\JobsApplied;
+use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
@@ -50,6 +51,7 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
     Route::get('/candidate/document-attachment', DocumentAttachment::class);
+    Route::get('/candidate/jobs-saved', JobsSaved::class);
 }); 
 Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer', Homepage::class);
