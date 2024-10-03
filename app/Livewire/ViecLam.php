@@ -53,7 +53,9 @@ class ViecLam extends Component
     
         if ($existingApplication) {
             // Nếu đã ứng tuyển, hiển thị thông báo
-            $this->alert('info', 'Bạn đã ứng tuyển vào công việc này rồi!');
+            $this->alert('info', 'Bạn đã ứng tuyển vào công việc này rồi!', [
+                'position' => 'center',
+            ]);
             return; // Dừng phương thức nếu đã ứng tuyển
         }
     
@@ -64,7 +66,9 @@ class ViecLam extends Component
     
             // Kiểm tra xem bản lý lịch có tồn tại hay không
             if (!$resume) {
-                $this->alert('error', 'Bạn cần có một bản lý lịch hợp lệ để ứng tuyển!');
+                $this->alert('error', 'Bạn cần có một bản lý lịch hợp lệ để ứng tuyển!', [
+                    'position' => 'center',
+                ]);
                 return; // Dừng phương thức nếu không có bản lý lịch
             }
     
@@ -82,14 +86,16 @@ class ViecLam extends Component
             ]);
     
             // Thông báo thành công
-            $this->alert('success', 'Bạn đã ứng tuyển thành công!');
+            $this->alert('success', 'Bạn đã ứng tuyển thành công!', [
+                'position' => 'center',
+            ]);
         } catch (\Exception $e) {
-            $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.');
+            $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.', [
+                'position' => 'center',
+            ]);
         }
     }
     
-
-
     public function render()
     {
         return view('livewire.viec-lam', [

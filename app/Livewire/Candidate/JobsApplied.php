@@ -26,26 +26,29 @@ class JobsApplied extends Component
         $application = PostActivity::where('user_id', Auth::id())
             ->where('id', $jobId)
             ->first();
-
+    
         if ($application) {
             $application->delete(); // Xóa bản ghi ứng tuyển
             // Cập nhật lại danh sách công việc sau khi xóa
             $this->appliedJobs = PostActivity::where('user_id', Auth::id())
                 ->with('jobPost.company', 'jobPost.city')
                 ->get();
-
+    
             // Hiển thị thông báo thành công sau khi hủy ứng tuyển
-       
-            $this->alert('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
+            $this->alert('success', 'Hủy ứng tuyển thành công.', [
+                'position' => 'bottom-start', // Position the success alert at the bottom left
+            ]);
         } else {
             // Hiển thị thông báo lỗi nếu không tìm thấy ứng tuyển
             $this->alert('error', 'Không tìm thấy công việc đã ứng tuyển.', [
-                'position' => 'top-end',
+                'position' => 'bottom-start', // Position the error alert at the bottom left
                 'timer' => 3000,
                 'toast' => true,
             ]);
         }
     }
+    
+    
 
     public function render()
     {
