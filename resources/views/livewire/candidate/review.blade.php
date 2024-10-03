@@ -285,7 +285,7 @@
 
 
                                             <!-- The popup modal -->
-                                          
+
                                             <!-- The OTP verification modal -->
                                             <div class="modal fade" id="otpVerificationModal">
                                                 <div class="modal-dialog" role="document">
@@ -412,7 +412,7 @@
                                             <nav>
                                                 @livewire('inc.breadcrumb')
                                             </nav>
-                                        
+
                                             <style>
                                                 nav li {
                                                     text-align: center;
@@ -432,9 +432,9 @@
                                                 }
 
                                                 /* --------------------------------
-  
+
       Basic Style
-  
+
       -------------------------------- */
                                                 .cd-breadcrumb a {
                                                     font-weight: bold;
@@ -585,9 +585,9 @@
                                                 }
 
                                                 /* --------------------------------
-  
+
       Triangle breadcrumb
-  
+
       -------------------------------- */
                                                 @media only screen and (min-width: 168px) {
                                                     .cd-breadcrumb.triangle {
@@ -706,9 +706,9 @@
                                                 }
 
                                                 /* --------------------------------
-  
+
       Custom icons hover effects - breadcrumb and multi-steps
-  
+
       -------------------------------- */
                                                 @media only screen and (min-width: 168px) {
 
@@ -743,9 +743,9 @@
                                                 }
 
                                                 /* --------------------------------
-  
+
       Multi steps indicator
-  
+
       -------------------------------- */
                                                 @media only screen and (min-width: 168px) {
                                                     .cd-multi-steps {
@@ -905,9 +905,9 @@
                                                 }
 
                                                 /* --------------------------------
-  
+
       Add a counter to the multi-steps indicator
-  
+
       -------------------------------- */
                                                 .cd-multi-steps.count li {
                                                     counter-increment: steps;
@@ -1112,7 +1112,7 @@
                                                                     <div class="col-sm-12-bk text-center">
                                                                         <h6 style="margin-bottom: 0 !important;"
                                                                             class="text-bold">Hồ sơ gần hoàn thiện</h6>
-                                                                     
+
                                                                     </div>
                                                                 </div>
 
@@ -1146,7 +1146,7 @@
                                                                                             'expected_salary_max' => 'Mức lương tối đa đã hoàn thiện',
                                                                                         ];
                                                                                     @endphp
-                                                                        
+
                                                                                     @foreach ($attributes as $key => $message)
                                                                                         <li>
                                                                                             @if (data_get($resume->seekerProfile, $key))
@@ -1163,7 +1163,7 @@
                                                                                 <p>Không có thông tin seeker profile.</p>
                                                                             @endif
                                                                         </div>
-                                                                        
+
                                                                         @endforeach
                                                                         @else
                                                                         <p>Không có người dùng nào.</p>
@@ -1192,7 +1192,7 @@
                                                                                             @endif
                                                                                         </li>
                                                                                     @endforeach
-                                                                                
+
                                                                             </li>
                                                                         </ul>
                                                                     </a>
@@ -1213,7 +1213,7 @@
                                                                             </li>
                                                                         </ul>
                                                                     </a>
-                                                                    
+
                                                                     <a href="#s4" class="list-group-item">
                                                                         <h6 class="text-bold list-group-item-heading text-uppercase">
                                                                             <i class="fa fa-graduation-cap text-grey-300 pull-right"></i>
@@ -1231,7 +1231,7 @@
                                                                             </li>
                                                                         </ul>
                                                                     </a>
-                                                                    
+
                                                                     <a href="#s5" class="hide list-group-item">
                                                                         <h6
                                                                             class="text-bold list-group-item-heading text-uppercase">
@@ -1242,7 +1242,7 @@
                                                                         <p class="list-group-item-text text-size-small">
                                                                             Tải lên hồ sơ, chứng chỉ, bằng cấp...</p>
                                                                     </a>
-                                                                    
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1253,7 +1253,7 @@
                                                                     -webkit-transform: rotate(0deg);
                                                                     transform: rotate(0deg);
                                                                 }
-                                                        
+
                                                                 100% {
                                                                     @if ($a == 2 || $a == 3 || $a == 4  )
                 -webkit-transform: rotate(180deg);
@@ -1267,13 +1267,13 @@
             @endif
                                                                 }
                                                             }
-                                                        
+
                                                             @keyframes loading-2 {
                                                                 0% {
                                                                     -webkit-transform: rotate(0deg);
                                                                     transform: rotate(0deg);
                                                                 }
-                                                        
+
                                                                 100% {
             @if ($a == 4)
                 -webkit-transform: rotate(180deg);
@@ -1288,102 +1288,289 @@
         }
                                                             }
                                                         </style>
-                                                      
-                                                        
+
+
                                                     </div>
                                                     <div class="col-sm-8">
                                                         <div class="card-box" style="min-height:initial !important;">
                                                             <div class="row">
                                                                 <div class="col-sm-3">
                                                                     <div class="text-center">
-                                                                        <div class="thumbnail"
-                                                                            title="Cập nhật ảnh đại diện">
-                                                                            <div id="imageDropAvatar"
-                                                                                class="thumb thumb-slide">
+                                                                        <div class="thumbnail" title="Cập nhật ảnh đại diện">
+                                                                            <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                 @if ($user && $user->avatar_url)
-                                                                                <img onerror="this.src='/bolt/assets/images/image.png'"
-                                                                                    src="{{ Storage::url($user->avatar_url) }}"
-                                                                                    class="avatar img-responsive"
-                                                                                    alt="Avatar của {{ $user->full_name }}">
+                                                                                    <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                                         src="{{ Storage::url($user->avatar_url) }}"
+                                                                                         class="avatar img-responsive"
+                                                                                         alt="Avatar của {{ $user->full_name }}">
                                                                                 @else
-                                                                                <img src="/bolt/assets/images/image.png"
-                                                                                    class="avatar img-responsive"
-                                                                                    alt="Avatar mặc định">
+                                                                                    <img src="/bolt/assets/images/image.png"
+                                                                                         class="avatar img-responsive"
+                                                                                         alt="Avatar mặc định">
                                                                                 @endif
 
                                                                                 <div class="caption">
-                                                                                    <label for="changeAvatar"
-                                                                                        class="btn bg-success-400 btn-icon btn-xs"
-                                                                                        data-popup="lightbox"><i
-                                                                                            class="icon-plus2"></i>
-                                                                                        <input type="file"
-                                                                                            accept="image/*"
-                                                                                            id="changeAvatar"
-                                                                                            name="file"
-                                                                                            class="hide form-control">
+                                                                                    <label for="changeAvatar" class="btn bg-success-400 btn-icon btn-xs" data-popup="lightbox">
+                                                                                        <i class="icon-plus2"></i>
+                                                                                        <input type="file" accept="image/*" id="changeAvatar" wire:model="avatar" class="hide form-control" onchange="this.form.submit();">
                                                                                     </label>
+                                                                                    <button wire:click="uploadAvatar" class="btn btn-primary btn-xs">Cập nhật</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-9">
                                                                     <div class="box-jc box-ce box-1">
 
-                                                                        <div class="box-row">
+                                                                        <div class="box-row  " style="flex-direction: row;    align-items: baseline;">
                                                                             <div>
-                                                                            </div>
-                                                                            <div>
-                                                                                <h3>Thông Tin Người Dùng</h3>
+                                                                                <h6 style="width: 100%;" class="modal-title text-uppercase pull-left text-blue-800">
+                                                                                    Thông Tin Người Dùng <span style="color: red !important;">*</span>
+                                                                                </h6>
 
                                                                                 @if ($user)
-                                                                                <p class="text-muted mb-0"><strong>Họ
-                                                                                        tên:</strong>
-                                                                                    <span class="ml-2 editable"
-                                                                                        data-name="full_name"
-                                                                                        title="Họ tên">{{
-                                                                                        $user->full_name ?? 'Chưa có'
-                                                                                        }}</span>
-                                                                                </p>
-                                                                                <p class="text-muted mb-0">
-                                                                                    <strong>Email:</strong>
-                                                                                    <span class="ml-2 editable"
-                                                                                        data-name="email"
-                                                                                        title="Email">{{ $user->email ??
-                                                                                        'Chưa có' }}</span>
-                                                                                </p>
-                                                                                <p class="text-muted mb-0"><strong>Ngày
-                                                                                        tạo:</strong>
-                                                                                    <span class="ml-2"
-                                                                                        data-name="created_at"
-                                                                                        title="Ngày tạo">{{
-                                                                                        $user->created_at ?? 'Chưa có'
-                                                                                        }}</span>
-                                                                                </p>
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Họ tên:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('fullName')" title="Họ tên">
+                                                                                            {{ $user->full_name ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'fullName')
+                                                                                            <form wire:submit.prevent="editFullName">
+                                                                                                <input type="text" class="form-control" wire:model="fullName" />
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
 
-                                                                                <p class="text-muted mb-0"><strong>Trạng
-                                                                                        thái:</strong>
-                                                                                        <span 
-                                                                                        class="ml-2 btn btn-xs p-5 {{ $user->is_active ? 'btn-success' : 'btn-danger' }}" 
-                                                                                        style="padding: 0 10px !important;" 
-                                                                                        data-name="is_active" 
-                                                                                        title="Trạng thái">
-                                                                                        {{ $user->is_active ? 'Đang tìm việc' : 'Đã tắt tìm việc' }}
-                                                                                    </span>
-                                                                                    
-                                                                                   
-                                                                                </p>
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Email:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('email')" title="Email">
+                                                                                            {{ $user->email ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'email')
+                                                                                            <form wire:submit.prevent="editEmail">
+                                                                                                <input type="text" class="form-control" wire:model="email" />
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Trạng thái:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('is_active')" title="Trạng thái">
+                                                                                            {{ $user->is_active ? 'Đang tìm việc' : 'Đã tắt tìm việc' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'is_active')
+                                                                                            <form wire:submit.prevent="editStatus">
+                                                                                                <select class="form-control" wire:model="isActive">
+                                                                                                    <option value="1">Đang tìm việc</option>
+                                                                                                    <option value="0">Đã tắt tìm việc</option>
+                                                                                                </select>
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Tiêu đề công việc:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('title')" title="Tiêu đề công việc">
+                                                                                            {{ $title ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'title')
+                                                                                            <form wire:submit.prevent="editJobTitle">
+                                                                                                <input type="text" class="form-control" wire:model="title" />
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Slug:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('slug')" title="Slug">
+                                                                                            {{ $slug ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'slug')
+                                                                                            <form wire:submit.prevent="editSlug">
+                                                                                                <input type="text" class="form-control" wire:model="slug" />
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Mô tả:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('description')" title="Mô tả">
+                                                                                            {{ $description ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'description')
+                                                                                            <form wire:submit.prevent="editDescription">
+                                                                                                <textarea class="form-control" wire:model="description"></textarea>
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+                                                                                    <p class="text-muted mb-0">
+                                                                                        <strong>Thành phố:</strong>
+                                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('city_id')" title="Chọn thành phố">
+                                                                                            {{ App\Models\CommonCity::find($city_id)->name ?? 'Chưa có' }}
+                                                                                        </span>
+                                                                                        @if ($isEditing === 'city_id')
+                                                                                            <form wire:submit.prevent="editCityId">
+                                                                                                <select class="form-control" wire:model="city_id">
+                                                                                                    <option value="">Chọn thành phố</option>
+                                                                                                    @foreach ($cities as $city)
+                                                                                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                            </form>
+                                                                                        @endif
+                                                                                    </p>
+
+
+
                                                                                 @else
-                                                                                <p>Không có thông tin người dùng.</p>
+                                                                                    <p>Không có thông tin người dùng.</p>
                                                                                 @endif
 
+                                                                                @if (session()->has('message'))
+                                                                                    <div class="alert alert-success mt-3">
+                                                                                        {{ session('message') }}
+                                                                                    </div>
+                                                                                @endif
                                                                             </div>
-                                                                            <script>
-                                                                                $(document).ready(function() {
-                                                                                    $('[data-toggle="popover"]').popover();
-                                                                                });
-                                                                            </script>
+                                                                            <div>
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Lĩnh vực nghề nghiệp:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('career_id')" title="Chọn lĩnh vực nghề nghiệp">
+                                                                                        {{ App\Models\CommonCareer::find($career_id)->name ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'career_id')
+                                                                                        <form wire:submit.prevent="editCareerId">
+                                                                                            <select class="form-control" wire:model="career_id">
+                                                                                                <option value="">Chọn lĩnh vực nghề nghiệp</option>
+                                                                                                @foreach ($careers as $career)
+                                                                                                    <option value="{{ $career->id }}">{{ $career->name }}</option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Mức lương tối thiểu:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('salary_min')" title="Mức lương tối thiểu">
+                                                                                        {{ $salary_min ? number_format($salary_min / 1_000_000, 0, ',', '.') . 'Tr VNĐ' : 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'salary_min')
+                                                                                        <form wire:submit.prevent="editSalaryMin">
+                                                                                            <input type="number" class="form-control" wire:model="salary_min" />
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Vị trí:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('position')" title="Vị trí">
+                                                                                        {{ $position ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'position')
+                                                                                        <form wire:submit.prevent="editPosition">
+                                                                                            <input type="text" class="form-control" wire:model="position" />
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Kinh nghiệm:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('experience')" title="Kinh nghiệm">
+                                                                                        {{ $experience ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'experience')
+                                                                                        <form wire:submit.prevent="editExperience">
+                                                                                            <input type="text" class="form-control" wire:model="experience" />
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Trình độ học vấn:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('academic_level')" title="Trình độ học vấn">
+                                                                                        {{ $academic_level ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'academic_level')
+                                                                                        <form wire:submit.prevent="editAcademicLevel">
+                                                                                            <input type="text" class="form-control" wire:model="academic_level" />
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Loại nơi làm việc:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('type_of_workplace')" title="Loại nơi làm việc">
+                                                                                        {{ $type_of_workplace ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'type_of_workplace')
+                                                                                        <form wire:submit.prevent="editTypeOfWorkplace">
+                                                                                            <select class="form-control" wire:model="type_of_workplace">
+                                                                                                <option value="">Chọn loại nơi làm việc</option>
+                                                                                                <option value="remote">Remote</option>
+                                                                                                <option value="văn phòng">Văn phòng</option>
+                                                                                                <option value="hybrid">Hybrid</option>
+                                                                                                <option value="freelance">Freelance</option>
+                                                                                                <!-- Thêm các tùy chọn khác nếu cần -->
+                                                                                            </select>
+                                                                                            <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+
+
+                                                                                <p class="text-muted mb-0">
+                                                                                    <strong>Loại công việc:</strong>
+                                                                                    <span class="ml-2 editable editable-click" wire:click="toggleEdit('job_type')" title="Loại công việc">
+                                                                                        {{ $job_type ?? 'Chưa có' }}
+                                                                                    </span>
+                                                                                    @if ($isEditing === 'job_type')
+                                                                                        <form wire:submit.prevent="editJobType">
+
+                                                                                            <input type="text" class="form-control mt-2" placeholder="Nhập loại công việc khác" wire:model.defer="job_type" />
+                                                                                            <select class="form-control" wire:model.defer="job_type" id="job-type-select">
+                                                                                                <option value="">Chọn loại công việc</option>
+                                                                                                <option value="Toàn thời gian">Toàn thời gian</option>
+                                                                                                <option value="Bán thời gian">Bán thời gian</option>
+                                                                                                <option value="Freelance">Freelance</option>
+                                                                                                <option value="Thực tập">Thực tập</option>
+                                                                                                <!-- Thêm các tùy chọn khác nếu cần -->
+                                                                                            </select>
+                                                                                            <button type="submit" class="btn btn-primary btn-sm mt-2">Lưu</button>
+                                                                                            <button type="button" class="btn btn-secondary btn-sm mt-2" wire:click="toggleEdit('')">Hủy</button>
+                                                                                        </form>
+                                                                                    @endif
+                                                                                </p>
+                                                                            </div>
                                                                         </div>
+
 
                                                                     </div>
                                                                 </div>
@@ -1396,131 +1583,164 @@
 
                                                         <div class="card-box" id="s1">
                                                             <div class="box-jc box-ce box-1">
-
                                                                 <div class="clearfix">
-
-                                                                    <h6
-                                                                        class="modal-title text-uppercase pull-left text-blue-800">
-                                                                        Thông tin cơ bản <span
-                                                                            style="color: red !important;">*</span></h6>
-
+                                                                    <h6 class="modal-title text-uppercase pull-left text-blue-800">
+                                                                        Thông tin cơ bản <span style="color: red !important;">*</span>
+                                                                    </h6>
                                                                 </div>
-                                                                <div class="box-row">
-                                                                    <p class="text-muted mb-2"><strong>Giới thiệu bản
-                                                                            thân:</strong> <span class="ml-2 editable"
-                                                                            data-type="textarea" data-name="short_bio"
-                                                                            title="Giới thiệu bản thân">{!!$resume->seekerProfile->introduction!!}</span></p>
+                                                                <div class=" ">
+                                                                    <p class="text-muted mb-2">
+                                                                        <strong>Giới thiệu bản thân:</strong>
+                                                                        <span class="ml-2 editable editable-click" wire:click="toggleEdit('short_bio')" data-type="textarea" data-name="short_bio" title="Giới thiệu bản thân">
+                                                                            {!! $resume->seekerProfile->introduction ?? 'NULL' !!}
+                                                                        </span>
+                                                                        @if ($isEditing === 'short_bio')
+                                                                            <form wire:submit.prevent="editIntroduction">
+                                                                                <textarea class="form-control mt-2" wire:model="introduction" placeholder="Nhập giới thiệu bản thân" rows="4"></textarea>
+                                                                                <button type="submit" class="btn btn-primary btn-sm mt-2">Lưu</button>
+                                                                                <button type="button" class="btn btn-secondary btn-sm mt-2" wire:click="toggleEdit('')">Hủy</button>
+                                                                            </form>
+                                                                        @endif
+                                                                    </p>
+
                                                                     <div>
                                                                         @if ($user)
-                                                                        @foreach ($resumes as $resume)
-                                                                        <div class="resume-info">
-                                                                            @if ($resume->seekerProfile)
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Số điện thoại:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="tel"
-                                                                                    title="Số điện thoại">{{
-                                                                                    $resume->seekerProfile->phone ??
-                                                                                    'Chưa có' }}</span>
-                                                                               
-                                                                            </p>
+                                                                            @foreach ($resumes as $resume)
+                                                                                <div class="resume-info">
+                                                                                    @if ($resume->seekerProfile)
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Số điện thoại:</strong>
+                                                                                            <span class="ml-2 editable  editable-click"  wire:click="toggleEdit('tel')" data-name="tel" title="Số điện thoại">{{ $resume->seekerProfile->phone ?? 'Chưa có' }}</span>
+                                                                                            @if ($isEditing === 'phone')
+                                                                                                <form wire:submit.prevent="editPhone">
+                                                                                                    <input type="text" class="form-control" wire:model="phone" placeholder="Nhập số điện thoại" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Ngày sinh:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="birthday"
-                                                                                    title="Ngày sinh">{{
-                                                                                    $resume->seekerProfile->birthday ??
-                                                                                    'Chưa có' }}</span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Ngày sinh:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('birthday')" data-name="birthday" title="Ngày sinh">{{ $resume->seekerProfile->birthday ?? 'Chưa có' }}</span>
+                                                                                            @if ($isEditing === 'birthday')
+                                                                                                <form wire:submit.prevent="editBirthday">
+                                                                                                    <input type="date" class="form-control" wire:model="birthday" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Giới tính:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="gender"
-                                                                                    title="Giới tính">
-                                                                                    {{ $resume->seekerProfile->gender ==
-                                                                                    'F' ? 'Nữ' : 'Nam' }}
-                                                                                </span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Giới tính:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('gender')" data-name="gender" title="Giới tính">{{ $resume->seekerProfile->gender == 'F' ? 'Nữ' : 'Nam' }}</span>
+                                                                                            @if ($isEditing === 'gender')
+                                                                                                <form wire:submit.prevent="editGender">
+                                                                                                    <select class="form-control" wire:model="gender">
+                                                                                                        <option value="M">Nam</option>
+                                                                                                        <option value="F">Nữ</option>
+                                                                                                    </select>
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Tình trạng hôn nhân:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="marital_status"
-                                                                                    title="Tình trạng hôn nhân">
-                                                                                    {{
-                                                                                    $resume->seekerProfile->marital_status
-                                                                                    == 'M' ? 'Đã kết hôn' : 'Chưa kết
-                                                                                    hôn' }}
-                                                                                </span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Tình trạng hôn nhân:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('marital_status')" data-name="marital_status" title="Tình trạng hôn nhân">{{ $resume->seekerProfile->marital_status == 'M' ? 'Đã kết hôn' : 'Chưa kết hôn' }}</span>
+                                                                                            @if ($isEditing === 'marital_status')
+                                                                                                <form wire:submit.prevent="editMaritalStatus">
+                                                                                                    <select class="form-control" wire:model="marital_status">
+                                                                                                        <option value="M">Đã kết hôn</option>
+                                                                                                        <option value="S">Chưa kết hôn</option>
+                                                                                                    </select>
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Chỗ ở hiện tại:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="current_residence"
-                                                                                    title="Chỗ ở hiện tại">{{
-                                                                                    $resume->seekerProfile->current_residence
-                                                                                    ?? 'Chưa có' }}</span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Chỗ ở hiện tại:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('current_residence')" data-name="current_residence" title="Chỗ ở hiện tại">{{ $resume->seekerProfile->current_residence ?? 'Chưa có' }}</span>
+                                                                                            @if ($isEditing === 'current_residence')
+                                                                                                <form wire:submit.prevent="editCurrentResidence">
+                                                                                                    <input type="text" class="form-control" wire:model="current_residence" placeholder="Nhập chỗ ở hiện tại" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Tỉnh/thành làm việc:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="working_province"
-                                                                                    title="Tỉnh/thành làm việc">{{
-                                                                                    $resume->seekerProfile->working_province
-                                                                                    ?? 'Chưa có' }}</span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Tỉnh/thành làm việc:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('working_province')" data-name="working_province" title="Tỉnh/thành làm việc">{{ $resume->seekerProfile->working_province ?? 'Chưa có' }}</span>
+                                                                                            @if ($isEditing === 'working_province')
+                                                                                                <form wire:submit.prevent="editWorkingProvince">
+                                                                                                    <input type="text" class="form-control" wire:model="working_province" placeholder="Nhập tỉnh/thành làm việc" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Bằng cấp:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="degree"
-                                                                                    title="Bằng cấp">{{
-                                                                                    $resume->seekerProfile->degree ??
-                                                                                    'Chưa có' }}</span>
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Bằng cấp:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('degree')" data-name="degree" title="Bằng cấp">{{ $resume->seekerProfile->degree ?? 'Chưa có' }}</span>
+                                                                                            @if ($isEditing === 'degree')
+                                                                                                <form wire:submit.prevent="editDegree">
+                                                                                                    <input type="text" class="form-control" wire:model="degree" placeholder="Nhập bằng cấp" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Mức lương hiện tại:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                data-name="current_salary"
-                                                                                title="Mức lương hiện tại">
-                                                                                {{ isset($resume->seekerProfile->current_salary) ? number_format($resume->seekerProfile->current_salary, 0) . ' triệu' : 'Chưa có' }}
-                                                                          </span>
-                                                                          
-                                                                            </p>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Mức lương hiện tại:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('current_salary')" data-name="current_salary" title="Mức lương hiện tại">
+                                                                                                {{ isset($resume->seekerProfile->current_salary) ? number_format($resume->seekerProfile->current_salary / 1000000, 0) . ' triệu' : 'Chưa có' }}
+                                                                                            </span>
+                                                                                            @if ($isEditing === 'current_salary')
+                                                                                                <form wire:submit.prevent="editCurrentSalary">
+                                                                                                    <input type="number" class="form-control" wire:model="current_salary" placeholder="Nhập mức lương hiện tại" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
 
-                                                                            <p class="text-muted mb-2">
-                                                                                <strong>Mức lương mong muốn:</strong>
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="expected_salary_min"
-                                                                                    title="Mức lương mong muốn tối thiểu">{{
-                                                                                    $resume->seekerProfile->expected_salary_min
-                                                                                    ?? 'Chưa có' }} triệu</span> -
-                                                                                <span class="ml-2 editable"
-                                                                                    data-name="expected_salary_max"
-                                                                                    title="Mức lương mong muốn tối đa">{{
-                                                                                    $resume->seekerProfile->expected_salary_max
-                                                                                    ?? 'Chưa có' }} triệu</span>
-                                                                            </p>
-                                                                            @else
-                                                                            <p>Không có thông tin seeker profile.</p>
-                                                                            @endif
-                                                                        </div>
+                                                                                        <p class="text-muted mb-2">
+                                                                                            <strong>Mức lương mong muốn:</strong>
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('expected_salary_min')" data-name="expected_salary_min" title="Mức lương mong muốn tối thiểu">
 
-                                                                        @endforeach
-                                                                        @else
-                                                                        <p>Không có thông tin người dùng.</p>
+                                                                                                {{ isset($resume->seekerProfile->expected_salary_min) ? number_format($resume->seekerProfile->expected_salary_min / 1000000, 0) : 'Chưa có' }} triệu
+                                                                                            </span> -
+                                                                                            <span class="ml-2 editable  editable-click" wire:click="toggleEdit('expected_salary_max')" data-name="expected_salary_max" title="Mức lương mong muốn tối đa">
+
+                                                                                                {{ isset($resume->seekerProfile->expected_salary_max) ? number_format($resume->seekerProfile->expected_salary_max / 1000000, 0) : 'Chưa có' }} triệu
+                                                                                            </span>
+                                                                                            @if ($isEditing === 'expected_salary_min' || $isEditing === 'expected_salary_max')
+                                                                                                <form wire:submit.prevent="editExpectedSalary">
+                                                                                                    <input type="number" class="form-control" wire:model="expected_salary_min" placeholder="Nhập mức lương mong muốn tối thiểu" />
+                                                                                                    <input type="number" class="form-control mt-2" wire:model="expected_salary_max" placeholder="Nhập mức lương mong muốn tối đa" />
+                                                                                                    <button type="submit" class="btn btn-primary btn-sm mt-2">Lưu</button>
+                                                                                                    <button type="button" class="btn btn-secondary btn-sm mt-2" wire:click="toggleEdit('')">Hủy</button>
+                                                                                                </form>
+                                                                                            @endif
+                                                                                        </p>
+                                                                                    @else
+                                                                                        <p class="text-muted">Chưa có thông tin seeker.</p>
+                                                                                    @endif
+                                                                                </div>
+                                                                            @endforeach
                                                                         @endif
                                                                     </div>
-
-
                                                                 </div>
-
                                                             </div>
+
                                                         </div>
 
                                                         <div class="card-box" id="s2">
@@ -1602,10 +1822,10 @@
 
 
                                                                 </style>
-                                                                
+
                                                             </div>
                                                         </div>
-                                                   
+
                                                         <div class="card-box" id="s3">
 
 
@@ -1614,7 +1834,7 @@
                                                                 <div class="tab-pane show active">
 
                                                                     <div class="box-jc box-cj box-1">
-                                                                        
+
                                                                         <div class="box-row box-cjcs">
                                                                             <div class="clearfix">
                                                                                 <div class="pull-left">
@@ -1623,7 +1843,7 @@
                                                                                         <span style="color: red !important;">*</span>
                                                                                     </h6>
                                                                                 </div>
-                                                                            
+
                                                                                 <div class="pull-right">
                                                                                     <button data-id="0" type="button"
                                                                                             class="btn text-blue-800 pull-right btn-default"
@@ -1634,7 +1854,7 @@
                                                                                     </button>
                                                                                 </div>
                                                                             </div>
-                                                                            
+
                                                                             <div class="box-timeline">
                                                                                 <div class="timeline timeline-left mt-20">
                                                                                     <div class="timeline-container">
@@ -1664,13 +1884,16 @@
                                                                                                                                     data-toggle="modal"
                                                                                                                                     data-backdrop="static"
                                                                                                                                     data-target="#colorgbModal1"
+                                                                                                                                     wire:click="editWorkingExperience({{ $experience->id }})"
                                                                                                                                     class="btn btn-update-cjh btn-xs btn-default text-green">
                                                                                                                                 <i class="icon-pencil7 position-left"></i> Sửa
                                                                                                                             </button>
                                                                                                                             <button data-id="{{ $experience->id }}"
-                                                                                                                                    class="btn btn-del-cjh btn-xs btn-default text-warning">
+                                                                                                                                wire:click="deleteExperience({{ $experience->id }})"
+                                                                                                                                class="btn btn-del-cjh btn-xs btn-default text-warning">
                                                                                                                                 <i class="icon-trash position-left"></i> Xóa
                                                                                                                             </button>
+
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                     <div class="panel-body">
@@ -1679,7 +1902,7 @@
                                                                                                                                 <div class="panel-heading-bk pb-5">
                                                                                                                                     <div title="Công ty">Công ty: {{ $experience->company_name }}</div>
                                                                                                                                     <div class="text-muted mb-0">
-                                                                                                                                        <strong>Thời gian:</strong> {{ date('Y-m', strtotime($experience->start_date)) }} đến {{ date('Y-m', strtotime($experience->end_date)) }} 
+                                                                                                                                        <strong>Thời gian:</strong> {{ date('Y-m', strtotime($experience->start_date)) }} đến {{ date('Y-m', strtotime($experience->end_date)) }}
                                                                                                                                         ({{ \Carbon\Carbon::parse($experience->start_date)->diffInMonths($experience->end_date) }} tháng)
                                                                                                                                     </div>
                                                                                                                                 </div>
@@ -1694,6 +1917,12 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endforeach
+                                                                                                @if (session()->has('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+
                                                                                             @else
                                                                                                 <p class="text-muted">Chưa có kinh nghiệm làm việc nào cho hồ sơ này.</p>
                                                                                             @endif
@@ -1701,10 +1930,10 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            
-                                                                            
+
+
                                                                         </div>
-                                                                        
+
 
                                                                     </div>
 
@@ -1730,7 +1959,7 @@
                                                                         <i class="icon-plus2"></i> Thêm mới quá trình học tập
                                                                     </button>
                                                                 </div>
-                                                                
+
                                                                 <div class="box-timeline">
                                                                     <div class="timeline timeline-left mt-20">
                                                                         <div class="timeline-container">
@@ -1747,22 +1976,24 @@
                                                                                                 <div class="col-lg-12">
                                                                                                     <div class="panel panel-flat timeline-content">
                                                                                                         <div class="panel-heading">
-                                                                                                            <h5 class="panel-title">Tên trường: {{ $education->degree_name }}</h5>
+                                                                                                            <h5 class="panel-title">Tên trường: {{ $education->training_place }}</h5>
                                                                                                             <div class="btn-group heading-elements">
-                                                                                                                <button data-id="{{ $education->id }}" 
+                                                                                                                <button data-id="{{ $education->id }}"
                                                                                                                         data-i1="{{ $education->degree_name }}"
                                                                                                                         data-i2="{{ $education->completed_date }}"
                                                                                                                         data-i3="{{ $education->start_date }}"
                                                                                                                         data-i4="{{ $education->training_place }}"
                                                                                                                         data-i5="{{ $education->description }}"
-                                                                                                                        data-i6="0" 
-                                                                                                                        data-toggle="modal" 
-                                                                                                                        data-backdrop="static" 
-                                                                                                                        data-target="#colorgbModal21" 
+                                                                                                                        data-i6="0"
+                                                                                                                        wire:click="editEducation({{ $education->id }})"
+                                                                                                                        data-toggle="modal"
+                                                                                                                        data-backdrop="static"
+                                                                                                                        data-target="#colorgbModal21"
                                                                                                                         class="btn btn-update btn-xs btn-default text-green">
                                                                                                                     <i class="icon-pencil7 position-left"></i> Sửa
                                                                                                                 </button>
-                                                                                                                <button data-id="{{ $education->id }}" 
+                                                                                                                <button data-id="{{ $education->id }}"
+                                                                                                                    wire:click="deleteEducation({{ $education->id }})"
                                                                                                                         class="btn btn-del btn-del-ce btn-xs btn-default text-warning">
                                                                                                                     <i class="icon-trash position-left"></i> Xóa
                                                                                                                 </button>
@@ -1793,10 +2024,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
-                                                            
-                                                                
-                                                                
+
+
+
+
                                                             </div>
                                                         </div>
 
@@ -1833,7 +2064,7 @@
                                                                                     'Tiếng Nga' => 'https://jobsgo.vn/media/icon_flag/Russia-Flag.png',
                                                                                 ];
                                                                             @endphp
-                                                                            
+
                                                                             @foreach ($resume->languageSkills as $skill)
                                                                                 <div class="item-jcc col-md-2 col-sm-3 col-xs-4">
                                                                                     <a href="javascript:void(0)">
@@ -1843,12 +2074,13 @@
                                                                                         </div>
                                                                                         <h6 class="text-nowrap" style="text-align: center">{{ $skill->language }}</h6>
                                                                                     </a>
-                                                                                    <button title="Xóa bỏ" class="btn-del btn-del-css" data-id="{{ $skill->id }}" data-iid="{{ $skill->id }}">
+                                                                                    <button title="Xóa bỏ" class="btn-del btn-del-css" data-id="{{ $skill->id }}" wire:click="deleteLanguageSkill({{ $skill->id }})">
                                                                                         <i class="icon-close2"></i>
                                                                                     </button>
+
                                                                                 </div>
                                                                             @endforeach
-                                                                            
+
                                                                                 @else
                                                                                     <div class="col-md-12">
                                                                                         <p>Chưa có ngôn ngữ thành thạo nào cho hồ sơ này.</p>
@@ -1857,52 +2089,150 @@
                                                                             @endforeach
                                                                         </div>
                                                                     </div>
-                                                                    
-                                                                    
+
+
                                                                 </div>
 
                                                             </div>
                                                         </div>
 
 
-                                                  
 
-                                                        
+
+
                                                         <div id="section-certificate" class="card-box">
                                                             <div class="box-cjp box-132">
                                                                 <div class="clearfix">
                                                                     <h6 class="modal-title text-uppercase pull-left text-blue-800">
                                                                         Chứng chỉ <span style="color: red !important;">*</span>
                                                                     </h6>
-                                                                    <button data-id="0" type="button" 
-                                                                            class="btn btn-add pull-right text-blue-800 btn-default"
-                                                                            data-toggle="modal" 
-                                                                            data-backdrop="static" 
-                                                                            data-target="#license">
+                                                                    <button data-id="0" type="button" class="btn btn-add pull-right text-blue-800 btn-default" data-toggle="modal" data-target="#colorgbModal222">
                                                                         <i class="icon-plus2"></i> Thêm mới chứng chỉ
                                                                     </button>
                                                                 </div>
                                                                 @foreach ($resumes as $resume)
-                                                            
-                                                                @if ($resume->certificates->isNotEmpty())
-                                                                    <div class="certificate-container"> <!-- Container for certificates -->
-                                                                        @foreach ($resume->certificates as $certificate)
-                                                                            <div class="certificate-card"> <!-- Card for each certificate -->
-                                                                                <h5>Tên chứng chỉ: {{ $certificate->name }}</h5> <!-- Certificate name -->
-                                                                                <p><strong>Cơ sở cấp:</strong> {{ $certificate->training_place }}</p>
-                                                                                <p><strong>Ngày cấp:</strong> {{ \Carbon\Carbon::parse($certificate->start_date)->format('d/m/Y') }}</p>
-                                                                                <p><strong>Ngày hết hạn:</strong> {{ $certificate->expiration_date ? \Carbon\Carbon::parse($certificate->expiration_date)->format('d/m/Y') : 'Không xác định' }}</p>
-                                                                                <p><strong>Mô tả:</strong> {{ $certificate->description }}</p>
-                                                                            </div>
-                                                                        @endforeach
+                                                                    @if ($resume->certificates->isNotEmpty())
+                                                                        <div class="certificate-container">
+                                                                            <!-- Container for certificates -->
+                                                                            @foreach ($resume->certificates as $certificate)
+                                                                                <div style="margin: 15px 0">
+                                                                                    <div class="media-left">
+                                                                                        <a href="#">
+                                                                                            <img src="/media/certificate_image/company.svg" width="50" alt="">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="media-body">
+                                                                                        <a href="#"><strong class="text-blue-800" style="font-size: 16px">{{ $certificate->name }}</strong></a>
+                                                                                        <div>
+                                                                                            <strong class="text-black-800" style="font-size: 14px"></strong>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Ngày phát hành: {{ \Carbon\Carbon::parse($certificate->start_date)->format('d/m/Y') }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Ngày hết hạn: {{ $certificate->expiration_date ? \Carbon\Carbon::parse($certificate->expiration_date)->format('d/m/Y') : 'Không xác định' }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <span>Credential ID: {{ $certificate->id }}</span>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <a href="{{ $certificate->id }}" target="_blank" class="btn btn-default mt-5">
+                                                                                                <i class="fa fa-list-alt text-grey-300"></i>
+                                                                                                <span>Chi tiết chứng chỉ</span>
+                                                                                            </a>
+                                                                                            <a href="javascript:void(0)" wire:click="editCertificate({{ $certificate->id }})" class="btn btn-default mt-5 edit-certificate" data-toggle="modal" data-target="#colorgbModal222">
+                                                                                                <i class="fa fa-pencil text-grey-300"></i>
+                                                                                                <span>Sửa chứng chỉ</span>
+                                                                                            </a>
+
+                                                                                            <a href="javascript:void(0)" data-id="{{ $certificate->id }}" class="btn-delete-certificate btn btn-default mt-5" data-toggle="modal" data-target="#confirmDeleteModal">
+                                                                                                <i class="fa fa-trash text-grey-300"></i>
+                                                                                                <span>Xoá chứng chỉ</span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            @endforeach
+                                                                        </div>
+                                                                    @else
+                                                                        <p>No certificates available for this resume.</p>
+                                                                    @endif
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                        <div id="confirmDeleteModal" class="modal" role="dialog">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Xác nhận xóa</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                                     </div>
-                                                                @else
-                                                                    <p>No certificates available for this resume.</p>
-                                                                @endif
-                                                            @endforeach
-                                                            
-                                                            
-                                                            </div> </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Bạn có chắc chắn muốn xóa chứng chỉ này?</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                                                        <button type="button" wire:click="deleteCertificate({{ $certificate->id ?? null }})" class="btn btn-danger">Xóa</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="colorgbModal222" class="modal" role="dialog">
+                                                            <div class="modal-dialog modal-md">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title text-default-800">Thêm chứng chỉ</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="panel panel-body border-top-blue">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_training_place">Cơ sở cấp</label>
+                                                                                        <input type="text" wire:model="cert_training_place" class="form-control" placeholder="Tên cơ sở cấp">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_name">Tên chứng chỉ</label>
+                                                                                        <input type="text" wire:model="cert_name" class="form-control" placeholder="Tên chứng chỉ">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="start_date">Ngày cấp</label>
+                                                                                        <input type="date" wire:model="cert_start_date" required class="form-control" title="Vui lòng chọn ngày cấp">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="cert_expiration_date">Ngày hết hạn</label>
+                                                                                        <input type="date" wire:model="cert_expiration_date" class="form-control" title="Vui lòng chọn ngày hết hạn (nếu có)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="description">Mô tả</label>
+                                                                                <textarea wire:model="cert_description" class="form-control" placeholder="Mô tả chứng chỉ..."></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <button type="button" wire:click="{{ $isEdit ? 'updateCertificate' : 'saveCertificate' }}" class="btn btn-primary">
+                                                                                    <i class="icon-floppy-disk position-left"></i> Lưu lại
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
                                                             <style>
                                                             .certificate-container {
     display: flex;
@@ -1927,7 +2257,7 @@
 }
 
                                                             </style>
-                                                              
+
 
                                                         <div class="card-box hide">
                                                             <div class="clearfix">
@@ -3879,7 +4209,7 @@
                                           lat: latlng.lat(),
                                           lng: latlng.lng()
                                       });
-  
+
                                       $.ajax({
                                           url: baseUrl + '/ajax/company-profile',
                                           type: "post",
@@ -3889,11 +4219,11 @@
                                               value: latlng.lat()
                                           },
                                           success: function (response) {
-  
+
                                           }, error: function (response) {
                                           }
                                       });
-  
+
                                       $.ajax({
                                           url: baseUrl + '/ajax/company-profile',
                                           type: "post",
@@ -3903,14 +4233,14 @@
                                               value: latlng.lng()
                                           },
                                           success: function (response) {
-  
+
                                           }, error: function (response) {
                                           }
                                       });
-  
+
                                       $('#geo_latitude').val(latlng.lat());
                                       $('#geo_longitude').val(latlng.lng());
-  
+
                                   }
                               }
                           });
@@ -3929,7 +4259,7 @@
                                             <div id="colorgbModal1" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-md">
 
-                                                    <!-- Modal content-->
+                                                    <!-- Experience Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" title="Đóng cửa sổ" class="close"
@@ -3937,498 +4267,90 @@
                                                             <h4 class="modal-title text-default-800">Kinh nghiệm làm
                                                                 việc</h4>
                                                         </div>
-                                                        <div class="modal-body">
-                                                            <div class="panel panel-body border-top-blue">
-                                                                <div class="row">
-
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-job_company required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-job_company">Tên công
-                                                                                ty</label>
-                                                                            <div class="easy-autocomplete"><input
-                                                                                    type="text"
-                                                                                    id="expinfoform-job_company"
-                                                                                    class="form-control"
-                                                                                    name="ExpInfoForm[job_company]"
-                                                                                    placeholder="Công ty đã làm việc"
-                                                                                    autocomplete="off">
-                                                                                <div class="easy-autocomplete-container"
-                                                                                    id="eac-container-expinfoform-job_company">
-                                                                                    <ul></ul>
+                                                        <form wire:submit.prevent="saveExperience">
+                                                            <div class="modal-body">
+                                                                <form wire:submit.prevent="saveExperience">
+                                                                    <div class="panel panel-body border-top-blue">
+                                                                        <!-- Company Name and Job Title -->
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tên công ty</label>
+                                                                                    <input type="text" wire:model="newCompany" class="form-control" placeholder="Nhập tên công ty" required>
                                                                                 </div>
                                                                             </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Chức vụ</label>
+                                                                                    <input type="text" wire:model="newJobTitle" class="form-control" placeholder="Nhập chức vụ" required>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-job_title required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-job_title">Chức
-                                                                                danh</label>
-                                                                            <div class="easy-autocomplete"><input
-                                                                                    type="text"
-                                                                                    id="expinfoform-job_title"
-                                                                                    class="form-control"
-                                                                                    name="ExpInfoForm[job_title]"
-                                                                                    placeholder="Vị trí công việc"
-                                                                                    autocomplete="off">
-                                                                                <div class="easy-autocomplete-container"
-                                                                                    id="eac-container-expinfoform-job_title">
-                                                                                    <ul></ul>
+
+                                                                        <!-- Start and End Date -->
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tháng bắt đầu</label>
+                                                                                    <input type="number" wire:model="newStartMonth" class="form-control" placeholder="MM" min="1" max="12" required>
                                                                                 </div>
                                                                             </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                            <div class="col-xs-3">
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Năm bắt đầu</label>
+                                                                                    <input type="number" wire:model="newStartYear" class="form-control" placeholder="YYYY" min="1900" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-3" wire:ignore.self>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Tháng kết thúc</label>
+                                                                                    <input type="number" wire:model="newEndMonth" class="form-control" placeholder="MM" min="1" max="12" {{ $currentJob ? 'disabled' : '' }}>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-3" wire:ignore.self>
+                                                                                <div class="form-group">
+                                                                                    <label class="control-label">Năm kết thúc</label>
+                                                                                    <input type="number" wire:model="newEndYear" class="form-control" placeholder="YYYY" min="1900" {{ $currentJob ? 'disabled' : '' }}>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
 
-
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-date_start required">
-                                                                            <label class="control-label"
-                                                                                for="expinfoform-date_start">Thời gian
-                                                                                bắt đầu</label>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select
-                                                                                        id="expinfoform-date_start_1"
-                                                                                        class="form-control hide"
-                                                                                        name="ExpInfoForm[date_start_1]">
-                                                                                        <option value="">Tháng...
-                                                                                        </option>
-                                                                                        <option value="01">Tháng 01
-                                                                                        </option>
-                                                                                        <option value="02">Tháng 02
-                                                                                        </option>
-                                                                                        <option value="03">Tháng 03
-                                                                                        </option>
-                                                                                        <option value="04">Tháng 04
-                                                                                        </option>
-                                                                                        <option value="05">Tháng 05
-                                                                                        </option>
-                                                                                        <option value="06">Tháng 06
-                                                                                        </option>
-                                                                                        <option value="07">Tháng 07
-                                                                                        </option>
-                                                                                        <option value="08">Tháng 08
-                                                                                        </option>
-                                                                                        <option value="09">Tháng 09
-                                                                                        </option>
-                                                                                        <option value="10">Tháng 10
-                                                                                        </option>
-                                                                                        <option value="11">Tháng 11
-                                                                                        </option>
-                                                                                        <option value="12">Tháng 12
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select
-                                                                                        id="expinfoform-date_start_2"
-                                                                                        class="form-control"
-                                                                                        name="ExpInfoForm[date_start_2]">
-                                                                                        <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024
-                                                                                        </option>
-                                                                                        <option value="2023">Năm 2023
-                                                                                        </option>
-                                                                                        <option value="2022">Năm 2022
-                                                                                        </option>
-                                                                                        <option value="2021">Năm 2021
-                                                                                        </option>
-                                                                                        <option value="2020">Năm 2020
-                                                                                        </option>
-                                                                                        <option value="2019">Năm 2019
-                                                                                        </option>
-                                                                                        <option value="2018">Năm 2018
-                                                                                        </option>
-                                                                                        <option value="2017">Năm 2017
-                                                                                        </option>
-                                                                                        <option value="2016">Năm 2016
-                                                                                        </option>
-                                                                                        <option value="2015">Năm 2015
-                                                                                        </option>
-                                                                                        <option value="2014">Năm 2014
-                                                                                        </option>
-                                                                                        <option value="2013">Năm 2013
-                                                                                        </option>
-                                                                                        <option value="2012">Năm 2012
-                                                                                        </option>
-                                                                                        <option value="2011">Năm 2011
-                                                                                        </option>
-                                                                                        <option value="2010">Năm 2010
-                                                                                        </option>
-                                                                                        <option value="2009">Năm 2009
-                                                                                        </option>
-                                                                                        <option value="2008">Năm 2008
-                                                                                        </option>
-                                                                                        <option value="2007">Năm 2007
-                                                                                        </option>
-                                                                                        <option value="2006">Năm 2006
-                                                                                        </option>
-                                                                                        <option value="2005">Năm 2005
-                                                                                        </option>
-                                                                                        <option value="2004">Năm 2004
-                                                                                        </option>
-                                                                                        <option value="2003">Năm 2003
-                                                                                        </option>
-                                                                                        <option value="2002">Năm 2002
-                                                                                        </option>
-                                                                                        <option value="2001">Năm 2001
-                                                                                        </option>
-                                                                                        <option value="2000">Năm 2000
-                                                                                        </option>
-                                                                                        <option value="1999">Năm 1999
-                                                                                        </option>
-                                                                                        <option value="1998">Năm 1998
-                                                                                        </option>
-                                                                                        <option value="1997">Năm 1997
-                                                                                        </option>
-                                                                                        <option value="1996">Năm 1996
-                                                                                        </option>
-                                                                                        <option value="1995">Năm 1995
-                                                                                        </option>
-                                                                                        <option value="1994">Năm 1994
-                                                                                        </option>
-                                                                                        <option value="1993">Năm 1993
-                                                                                        </option>
-                                                                                        <option value="1992">Năm 1992
-                                                                                        </option>
-                                                                                        <option value="1991">Năm 1991
-                                                                                        </option>
-                                                                                        <option value="1990">Năm 1990
-                                                                                        </option>
-                                                                                        <option value="1989">Năm 1989
-                                                                                        </option>
-                                                                                        <option value="1988">Năm 1988
-                                                                                        </option>
-                                                                                        <option value="1987">Năm 1987
-                                                                                        </option>
-                                                                                        <option value="1986">Năm 1986
-                                                                                        </option>
-                                                                                        <option value="1985">Năm 1985
-                                                                                        </option>
-                                                                                        <option value="1984">Năm 1984
-                                                                                        </option>
-                                                                                        <option value="1983">Năm 1983
-                                                                                        </option>
-                                                                                        <option value="1982">Năm 1982
-                                                                                        </option>
-                                                                                        <option value="1981">Năm 1981
-                                                                                        </option>
-                                                                                        <option value="1980">Năm 1980
-                                                                                        </option>
-                                                                                        <option value="1979">Năm 1979
-                                                                                        </option>
-                                                                                        <option value="1978">Năm 1978
-                                                                                        </option>
-                                                                                        <option value="1977">Năm 1977
-                                                                                        </option>
-                                                                                        <option value="1976">Năm 1976
-                                                                                        </option>
-                                                                                        <option value="1975">Năm 1975
-                                                                                        </option>
-                                                                                        <option value="1974">Năm 1974
-                                                                                        </option>
-                                                                                        <option value="1973">Năm 1973
-                                                                                        </option>
-                                                                                        <option value="1972">Năm 1972
-                                                                                        </option>
-                                                                                        <option value="1971">Năm 1971
-                                                                                        </option>
-                                                                                        <option value="1970">Năm 1970
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                        <!-- Description -->
+                                                                        <div class="form-group">
+                                                                            <label class="control-label">Mô tả công việc</label>
+                                                                            <textarea wire:model="newDescription" class="form-control" placeholder="Mô tả công việc" rows="3" required></textarea>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <div
-                                                                            class="form-group field-expinfoform-date_end">
-                                                                            <div class="row">
-                                                                                <div class="col-xs-6">
-                                                                                    <label
-                                                                                        class="control-label pull-left-bk"
-                                                                                        for="expinfoform-date_end">Thời
-                                                                                        gian kết thúc</label>
 
-                                                                                </div>
-                                                                                <div class="col-xs-6">
-                                                                                    <span class="pull-right-bk"><input
-                                                                                            id="current" type="checkbox"
-                                                                                            class="styled"> <label
-                                                                                            class="control-label text-grey"
-                                                                                            for="current"
-                                                                                            title="Tôi đang làm việc tại đây"><small>Đang
-                                                                                                làm
-                                                                                                việc</small></label></span>
-
-                                                                                </div>
-
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_1"
-                                                                                        class="form-control hide"
-                                                                                        name="ExpInfoForm[date_end_1]">
-                                                                                        <option value="">Tháng...
-                                                                                        </option>
-                                                                                        <option value="01">Tháng 01
-                                                                                        </option>
-                                                                                        <option value="02">Tháng 02
-                                                                                        </option>
-                                                                                        <option value="03">Tháng 03
-                                                                                        </option>
-                                                                                        <option value="04">Tháng 04
-                                                                                        </option>
-                                                                                        <option value="05">Tháng 05
-                                                                                        </option>
-                                                                                        <option value="06">Tháng 06
-                                                                                        </option>
-                                                                                        <option value="07">Tháng 07
-                                                                                        </option>
-                                                                                        <option value="08">Tháng 08
-                                                                                        </option>
-                                                                                        <option value="09">Tháng 09
-                                                                                        </option>
-                                                                                        <option value="10">Tháng 10
-                                                                                        </option>
-                                                                                        <option value="11">Tháng 11
-                                                                                        </option>
-                                                                                        <option value="12">Tháng 12
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="col-sm-6 col-xs-6"
-                                                                                    style="margin-top: 0px">
-                                                                                    <select id="expinfoform-date_end_2"
-                                                                                        class="form-control"
-                                                                                        name="ExpInfoForm[date_end_2]">
-                                                                                        <option value="">Năm...</option>
-                                                                                        <option value="2024">Năm 2024
-                                                                                        </option>
-                                                                                        <option value="2023">Năm 2023
-                                                                                        </option>
-                                                                                        <option value="2022">Năm 2022
-                                                                                        </option>
-                                                                                        <option value="2021">Năm 2021
-                                                                                        </option>
-                                                                                        <option value="2020">Năm 2020
-                                                                                        </option>
-                                                                                        <option value="2019">Năm 2019
-                                                                                        </option>
-                                                                                        <option value="2018">Năm 2018
-                                                                                        </option>
-                                                                                        <option value="2017">Năm 2017
-                                                                                        </option>
-                                                                                        <option value="2016">Năm 2016
-                                                                                        </option>
-                                                                                        <option value="2015">Năm 2015
-                                                                                        </option>
-                                                                                        <option value="2014">Năm 2014
-                                                                                        </option>
-                                                                                        <option value="2013">Năm 2013
-                                                                                        </option>
-                                                                                        <option value="2012">Năm 2012
-                                                                                        </option>
-                                                                                        <option value="2011">Năm 2011
-                                                                                        </option>
-                                                                                        <option value="2010">Năm 2010
-                                                                                        </option>
-                                                                                        <option value="2009">Năm 2009
-                                                                                        </option>
-                                                                                        <option value="2008">Năm 2008
-                                                                                        </option>
-                                                                                        <option value="2007">Năm 2007
-                                                                                        </option>
-                                                                                        <option value="2006">Năm 2006
-                                                                                        </option>
-                                                                                        <option value="2005">Năm 2005
-                                                                                        </option>
-                                                                                        <option value="2004">Năm 2004
-                                                                                        </option>
-                                                                                        <option value="2003">Năm 2003
-                                                                                        </option>
-                                                                                        <option value="2002">Năm 2002
-                                                                                        </option>
-                                                                                        <option value="2001">Năm 2001
-                                                                                        </option>
-                                                                                        <option value="2000">Năm 2000
-                                                                                        </option>
-                                                                                        <option value="1999">Năm 1999
-                                                                                        </option>
-                                                                                        <option value="1998">Năm 1998
-                                                                                        </option>
-                                                                                        <option value="1997">Năm 1997
-                                                                                        </option>
-                                                                                        <option value="1996">Năm 1996
-                                                                                        </option>
-                                                                                        <option value="1995">Năm 1995
-                                                                                        </option>
-                                                                                        <option value="1994">Năm 1994
-                                                                                        </option>
-                                                                                        <option value="1993">Năm 1993
-                                                                                        </option>
-                                                                                        <option value="1992">Năm 1992
-                                                                                        </option>
-                                                                                        <option value="1991">Năm 1991
-                                                                                        </option>
-                                                                                        <option value="1990">Năm 1990
-                                                                                        </option>
-                                                                                        <option value="1989">Năm 1989
-                                                                                        </option>
-                                                                                        <option value="1988">Năm 1988
-                                                                                        </option>
-                                                                                        <option value="1987">Năm 1987
-                                                                                        </option>
-                                                                                        <option value="1986">Năm 1986
-                                                                                        </option>
-                                                                                        <option value="1985">Năm 1985
-                                                                                        </option>
-                                                                                        <option value="1984">Năm 1984
-                                                                                        </option>
-                                                                                        <option value="1983">Năm 1983
-                                                                                        </option>
-                                                                                        <option value="1982">Năm 1982
-                                                                                        </option>
-                                                                                        <option value="1981">Năm 1981
-                                                                                        </option>
-                                                                                        <option value="1980">Năm 1980
-                                                                                        </option>
-                                                                                        <option value="1979">Năm 1979
-                                                                                        </option>
-                                                                                        <option value="1978">Năm 1978
-                                                                                        </option>
-                                                                                        <option value="1977">Năm 1977
-                                                                                        </option>
-                                                                                        <option value="1976">Năm 1976
-                                                                                        </option>
-                                                                                        <option value="1975">Năm 1975
-                                                                                        </option>
-                                                                                        <option value="1974">Năm 1974
-                                                                                        </option>
-                                                                                        <option value="1973">Năm 1973
-                                                                                        </option>
-                                                                                        <option value="1972">Năm 1972
-                                                                                        </option>
-                                                                                        <option value="1971">Năm 1971
-                                                                                        </option>
-                                                                                        <option value="1970">Năm 1970
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <p class="help-block help-block-error"></p>
+                                                                        <!-- Current Job Checkbox -->
+                                                                        <div class="form-group">
+                                                                            <label>
+                                                                                <input type="checkbox" wire:model="currentJob"> Đây là công việc hiện tại
+                                                                            </label>
                                                                         </div>
+
+                                                                        <!-- Submit Button -->
+                                                                        @if ($editingExperienceId)
+                                                                        <button type="submit" class="btn btn-primary">Cập nhật kinh nghiệm</button>
+                                                                    @else
+                                                                        <button type="submit" class="btn btn-primary">Lưu kinh nghiệm</button>
+                                                                    @endif
+
                                                                     </div>
-                                                                </div>
-
-                                                                <div
-                                                                    class="form-group field-expinfoform-job_description required">
-                                                                    <label class="control-label"
-                                                                        for="expinfoform-job_description">Mô tả công
-                                                                        việc</label>
-                                                                    <div class="small text-muted mb-15">
-                                                                        Sử dụng các gạch đầu dòng để ghi lại chi tiết và
-                                                                        thành tích của bạn ở vị trí này, thể hiện qua
-                                                                        các con số, cách làm rõ ràng.
-                                                                    </div>
-                                                                    <textarea id="expinfoform-job_description"
-                                                                        class="form-control myTextarea"
-                                                                        name="ExpInfoForm[job_description]"
-                                                                        placeholder="Bổ sung thông tin..."></textarea>
-
-                                                                    <div id="tagSuggestions"></div>
-
-                                                                    <script>
-                                                                        // sendGA4Event
-                                                                        function sendGA4Event(element) {
-                                                                            var eventLabel = element.textContent;
-                                                                            gtag('event', 'my_custom_event', {
-                                                                                'event_category': 'API gợi ý mô tả công việc',
-                                                                                'event_label': eventLabel
-                                                                            });
-                                                                        }
-                                                                        $(function() {
-                                                                            const bulletPointsTextarea = $("#expinfoform-job_description");
-                                                                            const tagSuggestionsDiv = $("#tagSuggestions");
-                                                                            tagSuggestionsDiv.html('');
-
-                                                                            const jobTitleInput = $('#expinfoform-job_title');
-
-                                                                            jobTitleInput.on("change", function() {
-                                                                                const enteredText = $(this).val();
-
-                                                                                if (enteredText) {
-
-                                                                                    // Gọi đến API và lấy dữ liệu với giá trị của trường job_title làm tham số
-                                                                                    $.post("/api/get-cv-bullet-points", {
-                                                                                            job_title: enteredText
-                                                                                        }, function(data) {
-                                                                                            tagSuggestionsDiv.empty();
-                                                                                            var data = JSON.parse(data);
-                                                                                            var bulletPoints = data.bullet_points;
-
-                                                                                            if (bulletPoints) {
-                                                                                                tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ JobsGO AI (nhấn vào nội dung bạn muốn thêm):</p>');
-                                                                                            }
-
-                                                                                            $.each(bulletPoints, function(index, tag) {
-                                                                                                const tagDiv = $("<div onclick='sendGA4Event(this)' title='Thêm vào mô tả công việc: " + tag + "' class='btn ga4Link bg-blue-700 mb-5 text-left btn-xs' style=\" font-size: 12px;text-align: left;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; \">").text('- ' + tag);
-
-                                                                                                tagDiv.on("click", function() {
-                                                                                                    const val = bulletPointsTextarea.val() + '- ' + tag + '\n';
-                                                                                                    bulletPointsTextarea.val(val);
-                                                                                                    tagDiv.remove(); // Xóa chỉ mục được chọn
-                                                                                                });
-
-                                                                                                tagSuggestionsDiv.append(tagDiv);
-                                                                                            });
-                                                                                        })
-                                                                                        .fail(function(error) {
-                                                                                            console.error("Lỗi khi gọi API:", error);
-                                                                                        });
-                                                                                }
-                                                                            });
-                                                                        });
-                                                                    </script>
-                                                                    <p class="small help-block"><u>Lưu ý:</u> viết mô tả
-                                                                        công việc đã làm của bạn trên 100 ký tự để tăng
-                                                                        cơ hội phỏng vấn</p>
-                                                                </div>
-
-                                                                <div class="form-group">
-                                                                    <span class="pull-left"><button type="button"
-                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                            data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i>
-                                                                            <span class="ladda-label">Lưu
-                                                                                lại</span><span
-                                                                                class="ladda-spinner"></span><span
-                                                                                class="ladda-spinner"></span></button></span>
-
-                                                                    <input type="hidden" class="form-control" id="id">
-
-                                                                </div>
-
+                                                                </form>
                                                             </div>
 
-                                                        </div>
+                                                            <!-- Danh sách các kinh nghiệm đã có -->
+                                                            {{-- <div class="panel panel-body">
+                                                                <h4>Kinh nghiệm làm việc</h4>
+                                                                <ul>
+                                                                    @foreach($experiences as $experience)
+                                                                    <li>{{ $experience['company_name'] }} - {{ $experience['job_name'] }} ({{ $experience['start_date'] }} đến {{ $experience['end_date'] ?? 'Hiện tại' }})</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div> --}}
+
+                                                        </form>
+
                                                     </div>
 
                                                 </div>
@@ -4660,187 +4582,90 @@
 
                                                 });
                                             </script>
-                                            <div id="colorgbModal21" class="modal" role="dialog">
-                                                <div class="modal-dialog modal-md">
+                                       <div>
+                                        @if (session()->has('message'))
+                                            <div class="alert alert-success">
+                                                {{ session('message') }}
+                                            </div>
+                                        @endif
 
-                                                    <!-- Modal content-->
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Quá trình học tập
-                                                            </h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="panel panel-body border-top-blue">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colorgbModal21">
+                                            Thêm mới quá trình học tập
+                                        </button>
 
-                                                                <div class="row">
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-school_name required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-school_name">Trường
-                                                                                học</label>
-                                                                            <input type="text"
-                                                                                id="eduinfoform-school_name"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[school_name]"
-                                                                                placeholder="Tên trường học">
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-specialization required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-specialization">Chuyên
-                                                                                ngành</label>
-                                                                            <input type="text"
-                                                                                id="eduinfoform-specialization"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[specialization]"
-                                                                                placeholder="Ngành học">
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
+                                        <!-- Modal -->
+                                        <div id="colorgbModal21" class="modal" role="dialog">
+                                            <div class="modal-dialog modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title text-default-800">Quá trình học tập</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="panel panel-body border-top-blue">
+                                                            <div class="row">
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="training_place">Trường học</label>
+                                                                        <input type="text" wire:model="training_place" class="form-control" placeholder="Tên trường học">
                                                                     </div>
                                                                 </div>
-
-
-                                                                <div class="row">
-
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-degree_id required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-degree_id">Bằng
-                                                                                cấp</label>
-                                                                            <select id="eduinfoform-degree_id"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[degree_id]">
-                                                                                <option value="">Chọn...</option>
-                                                                                <option value="1">Trung cấp - Nghề
-                                                                                </option>
-                                                                                <option value="2">Cao Đẳng</option>
-                                                                                <option value="3">Đại Học</option>
-                                                                                <option value="4">Thạc sỹ</option>
-                                                                                <option value="5">Tiến sỹ</option>
-                                                                                <option value="6">Chứng chỉ chuyên ngành
-                                                                                </option>
-                                                                            </select>
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="major">Chuyên ngành</label>
+                                                                        <input type="text" wire:model="major" class="form-control" placeholder="Ngành học">
                                                                     </div>
-                                                                    <div class="col-xs-6">
-                                                                        <div
-                                                                            class="form-group field-eduinfoform-date_end required">
-                                                                            <label class="control-label"
-                                                                                for="eduinfoform-date_end">Năm tốt
-                                                                                nghiệp</label>
-                                                                            <select id="eduinfoform-date_end"
-                                                                                class="form-control"
-                                                                                name="EduInfoForm[date_end]">
-                                                                                <option value="">Chọn...</option>
-                                                                                <option value="2024">Năm 2024</option>
-                                                                                <option value="2023">Năm 2023</option>
-                                                                                <option value="2022">Năm 2022</option>
-                                                                                <option value="2021">Năm 2021</option>
-                                                                                <option value="2020">Năm 2020</option>
-                                                                                <option value="2019">Năm 2019</option>
-                                                                                <option value="2018">Năm 2018</option>
-                                                                                <option value="2017">Năm 2017</option>
-                                                                                <option value="2016">Năm 2016</option>
-                                                                                <option value="2015">Năm 2015</option>
-                                                                                <option value="2014">Năm 2014</option>
-                                                                                <option value="2013">Năm 2013</option>
-                                                                                <option value="2012">Năm 2012</option>
-                                                                                <option value="2011">Năm 2011</option>
-                                                                                <option value="2010">Năm 2010</option>
-                                                                                <option value="2009">Năm 2009</option>
-                                                                                <option value="2008">Năm 2008</option>
-                                                                                <option value="2007">Năm 2007</option>
-                                                                                <option value="2006">Năm 2006</option>
-                                                                                <option value="2005">Năm 2005</option>
-                                                                                <option value="2004">Năm 2004</option>
-                                                                                <option value="2003">Năm 2003</option>
-                                                                                <option value="2002">Năm 2002</option>
-                                                                                <option value="2001">Năm 2001</option>
-                                                                                <option value="2000">Năm 2000</option>
-                                                                                <option value="1999">Năm 1999</option>
-                                                                                <option value="1998">Năm 1998</option>
-                                                                                <option value="1997">Năm 1997</option>
-                                                                                <option value="1996">Năm 1996</option>
-                                                                                <option value="1995">Năm 1995</option>
-                                                                                <option value="1994">Năm 1994</option>
-                                                                                <option value="1993">Năm 1993</option>
-                                                                                <option value="1992">Năm 1992</option>
-                                                                                <option value="1991">Năm 1991</option>
-                                                                                <option value="1990">Năm 1990</option>
-                                                                                <option value="1989">Năm 1989</option>
-                                                                                <option value="1988">Năm 1988</option>
-                                                                                <option value="1987">Năm 1987</option>
-                                                                                <option value="1986">Năm 1986</option>
-                                                                                <option value="1985">Năm 1985</option>
-                                                                                <option value="1984">Năm 1984</option>
-                                                                                <option value="1983">Năm 1983</option>
-                                                                                <option value="1982">Năm 1982</option>
-                                                                                <option value="1981">Năm 1981</option>
-                                                                                <option value="1980">Năm 1980</option>
-                                                                                <option value="1979">Năm 1979</option>
-                                                                                <option value="1978">Năm 1978</option>
-                                                                                <option value="1977">Năm 1977</option>
-                                                                                <option value="1976">Năm 1976</option>
-                                                                                <option value="1975">Năm 1975</option>
-                                                                                <option value="1974">Năm 1974</option>
-                                                                                <option value="1973">Năm 1973</option>
-                                                                                <option value="1972">Năm 1972</option>
-                                                                                <option value="1971">Năm 1971</option>
-                                                                                <option value="1970">Năm 1970</option>
-                                                                            </select>
-
-                                                                            <p class="help-block help-block-error"></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div
-                                                                    class="form-group field-eduinfoform-hightlight required">
-                                                                    <label class="control-label"
-                                                                        for="eduinfoform-hightlight">Mô tả quá trình học
-                                                                        tập</label>
-                                                                    <p class="small">Dự án, nghiên cứu cá nhân, thành
-                                                                        tựu, kinh nghiệm đã tích lũy...</p>
-                                                                    <textarea id="eduinfoform-hightlight"
-                                                                        class="form-control"
-                                                                        name="EduInfoForm[hightlight]"
-                                                                        placeholder="Mô tả quá trình học tập..."></textarea>
-                                                                    <p class="help-block help-block-error"></p>
-                                                                </div>
-
-
-                                                                <div class="form-group">
-                                                                    <input type="hidden" class="form-control" id="id">
-                                                                    <span class="pull-left"><button type="button"
-                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                            data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i>
-                                                                            <span class="ladda-label">Lưu
-                                                                                lại</span><span
-                                                                                class="ladda-spinner"></span><span
-                                                                                class="ladda-spinner"></span></button></span>
-                                                                    <span class="pull-right"><input id="current"
-                                                                            type="checkbox" class="styled"> <label
-                                                                            class="control-label" for="current">Tôi đang
-                                                                            học tại đây</label></span>
                                                                 </div>
                                                             </div>
 
+                                                            <div class="row">
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="degree_name">Bằng cấp</label>
+                                                                        <input type="text" wire:model="degree_name" class="form-control" placeholder="Bằng cấp">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="start_date">Năm bắt đầu</label>
+                                                                        <input type="date" wire:model="start_date" required class="form-control" title="Vui lòng chọn năm bắt đầu">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="completed_date">Năm tốt nghiệp</label>
+                                                                        <input type="date" wire:model="completed_date" required class="form-control" title="Vui lòng chọn năm tốt nghiệp">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="description">Mô tả quá trình học tập</label>
+                                                                <textarea wire:model="education_description" class="form-control" placeholder="Mô tả quá trình học tập..."></textarea>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <button type="button" wire:click="saveEducation" class="btn btn-primary">
+                                                                    <i class="icon-floppy-disk position-left"></i> Lưu lại
+                                                                </button>
+                                                                <input id="current" type="checkbox" class="styled" wire:model="current">
+                                                                <label class="control-label" for="current">Tôi đang học tại đây</label>
+                                                            </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <h4>Danh sách quá trình học tập:</h4>
+                                        <ul>
+                                            @foreach($educations as $education)
+                                                <li>{{ $education->degree_name }} - {{ $education->major }} ({{ $education->completed_date }})</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
 
                                             <div id="colorgbModal23" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-sm">
@@ -4887,123 +4712,49 @@
                                             </div>
                                             <div id="colorgbModal24" class="modal" role="dialog">
                                                 <div class="modal-dialog modal-lg">
-
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành
-                                                                thạo</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title text-default-800">Chọn ngôn ngữ thành thạo</h4>
                                                         </div>
                                                         <div class="modal-body">
-
                                                             <div class="row">
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="1"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Anh"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/England-Flag.png"
-                                                                        title="Tiếng Anh">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/England-Flag.png"
-                                                                            alt="Tiếng Anh" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Anh</h6>
-                                                                    </a>
+                                                                @foreach ([
+                                                                    ['id' => 1, 'title' => 'Tiếng Anh', 'img' => 'https://jobsgo.vn/media/icon_flag/England-Flag.png'],
+                                                                    ['id' => 2, 'title' => 'Tiếng Pháp', 'img' => 'https://jobsgo.vn/media/icon_flag/France-Flag.png'],
+                                                                    ['id' => 3, 'title' => 'Tiếng Việt', 'img' => 'https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png'],
+                                                                    ['id' => 4, 'title' => 'Tiếng Nhật', 'img' => 'https://jobsgo.vn/media/icon_flag/Japan-Flag.png'],
+                                                                    ['id' => 5, 'title' => 'Tiếng Hàn', 'img' => 'https://jobsgo.vn/media/icon_flag/Korea-Flag.png'],
+                                                                    ['id' => 6, 'title' => 'Tiếng Đức', 'img' => 'https://jobsgo.vn/media/icon_flag/Germany-Flag.png'],
+                                                                    ['id' => 7, 'title' => 'Tiếng Ý', 'img' => 'https://jobsgo.vn/media/icon_flag/Italy-Flag.png'],
+                                                                    ['id' => 8, 'title' => 'Tiếng Trung', 'img' => 'https://jobsgo.vn/media/icon_flag/China-Flag.png'],
+                                                                    ['id' => 9, 'title' => 'Tiếng Nga', 'img' => 'https://jobsgo.vn/media/icon_flag/Russia-Flag.png'],
+                                                                ] as $language)
+                                                                <div class="item-jcc col-sm-3 col-xs-6">
+                                                                    <label class="text-center">
+                                                                        <input type="radio" name="selectedLanguage" value="{{ $language['title'] }}" class="language-radio" data-title="{{ $language['title'] }}" wire:model="selectedLanguage">
+                                                                        <img src="{{ $language['img'] }}" alt="{{ $language['title'] }}" width="100">
+                                                                        <h6 class="text-nowrap">{{ $language['title'] }}</h6>
+                                                                    </label>
                                                                 </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="2"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Pháp"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/France-Flag.png"
-                                                                        title="Tiếng Pháp">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/France-Flag.png"
-                                                                            alt="Tiếng Pháp" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Pháp</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 hide">
-                                                                    <a href="javascript:void(0)" data-id="3"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Việt"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
-                                                                        title="Tiếng Việt">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Vietnam-Flag.png"
-                                                                            alt="Tiếng Việt" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Việt</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="4"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Nhật"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
-                                                                        title="Tiếng Nhật">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Japan-Flag.png"
-                                                                            alt="Tiếng Nhật" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Nhật</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="5"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Hàn"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
-                                                                        title="Tiếng Hàn">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Korea-Flag.png"
-                                                                            alt="Tiếng Hàn" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Hàn</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="6"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Đức"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
-                                                                        title="Tiếng Đức">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Germany-Flag.png"
-                                                                            alt="Tiếng Đức" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Đức</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="7"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Ý"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
-                                                                        title="Tiếng Ý">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Italy-Flag.png"
-                                                                            alt="Tiếng Ý" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Ý</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="8"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Trung"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/China-Flag.png"
-                                                                        title="Tiếng Trung">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/China-Flag.png"
-                                                                            alt="Tiếng Trung" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Trung</h6>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="item-jcc col-sm-3 col-xs-6 ">
-                                                                    <a href="javascript:void(0)" data-id="9"
-                                                                        class="text-center" data-val="50"
-                                                                        data-title="Tiếng Nga"
-                                                                        data-img="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
-                                                                        title="Tiếng Nga">
-                                                                        <img src="https://jobsgo.vn/media/icon_flag/Russia-Flag.png"
-                                                                            alt="Tiếng Nga" width="100">
-                                                                        <h6 class="text-nowrap">Tiếng Nga</h6>
-                                                                    </a>
-                                                                </div>
+                                                                @endforeach
+                                                            </div>
+
+                                                            <!-- Input cho Level -->
+                                                            <div class="form-group">
+                                                                <label for="language_level">Mức độ thành thạo:</label>
+                                                                <input type="text" id="language_level" wire:model="language_level" class="form-control" placeholder="Nhập mức độ">
                                                             </div>
                                                         </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" wire:click="createLanguageSkill">Lưu</button>
+                                                        </div>
                                                     </div>
-
                                                 </div>
                                             </div>
+
+
                                             <script>
                                                 $(function() {
 
@@ -6556,7 +6307,7 @@
                                                     /*$('#colorgbModal2').on('hide.bs.modal', function () {
               f2();
           });
-  
+
           $('#colorgbModal3').on('hide.bs.modal', function () {
               f3();
           });*/
@@ -6627,807 +6378,109 @@
                                             </script>
 
 
-                                            <div id="colorgbModal61" class="modal" role="dialog">
-                                                <div class="modal-dialog modal-md">
+<div id="colorgbModal61" class="modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" title="Đóng cửa sổ" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-default-800">Kỹ năng chuyên môn</h4>
+            </div>
+            <div class="modal-body">
+                <form wire:submit.prevent="saveSkills"> <!-- Bọc trong thẻ form -->
+                    <div class="panel panel-body border-top-blue">
+                        <div class="row-cjc">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="form-group field-eduinfoform-school_name required">
+                                        <label class="control-label">Kỹ năng chuyên môn</label>
+                                        <input type="text" wire:model="newSkill" class="form-control" placeholder="Nhập kỹ năng chuyên môn" required>
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group field-eduinfoform-specialization required">
+                                        <label class="control-label">Số năm kinh nghiệm</label>
+                                        <select wire:model="newExperience" class="form-control" required>
+                                            <option value="">Chọn...</option>
+                                            <option value="1">1 năm</option>
+                                            <option value="2">2 năm</option>
+                                            <option value="3">3 năm</option>
+                                            <option value="4">4 năm</option>
+                                            <option value="5">5 năm</option>
+                                            <option value="6">6 năm</option>
+                                            <option value="7">7 năm</option>
+                                            <option value="8">8 năm</option>
+                                            <option value="9">9 năm</option>
+                                            <option value="10">10 năm</option>
+                                        </select>
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-xs btn-default btn-clone-row-cjc mb-20">
+                                    <i class="fa fa-plus-square" aria-hidden="true"></i> Thêm kỹ năng chuyên môn
+                                </button>
+                            </div>
+                        </div>
+
+                        <script>
+                            function getRandomNumber(min = 1, max = 1e9) {
+                                return Math.floor(Math.random() * (max - min + 1)) + min;
+                            }
+
+                            $(function() {
+                                $('.btn-clone-row-cjc').click(function() {
+                                    $('#colorgbModal61 .row-cjc select').select2('destroy');
+                                    var clonedDiv = $('#colorgbModal61 .row-cjc > .row:nth-child(1)').clone();
+                                    $("#colorgbModal61 .row-cjc").append(clonedDiv);
+                                    $('#colorgbModal61 .row-cjc select').select2();
+                                    $('#colorgbModal61 [name="cid[]"]:last').prop('disabled', false).attr('id', 'cid' + getRandomNumber()).select2({
+                                        placeholder: 'Tìm kiếm...',
+                                        ajax: {
+                                            url: '/api/job-categories',
+                                            dataType: 'json',
+                                            delay: 250,
+                                            processResults: function(data) {
+                                                return {
+                                                    results: $.map(data, function(item) {
+                                                        return {
+                                                            id: item.job_category_id,
+                                                            text: item.job_category_name_vn
+                                                        };
+                                                    })
+                                                };
+                                            },
+                                            cache: true
+                                        }
+                                    });
+                                    $('#colorgbModal61 [name="cexp[]"]:last').prop('disabled', false).attr('id', 'cexp' + getRandomNumber()).select2();
+                                });
+                            });
+                        </script>
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="id" wire:model="resumeId"> <!-- Resume ID nếu cần -->
+                            <span class="pull-left">
+                                <button type="submit" class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out">
+                                    <i class="icon-floppy-disk position-left"></i>
+                                    <span class="ladda-label">Lưu lại</span>
+                                    <span class="ladda-spinner"></span>
+                                    <span class="ladda-spinner"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form> <!-- Kết thúc thẻ form -->
+            </div>
+        </div>
+    </div>
+</div>
 
-                                                    <!-- Modal content-->
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" title="Đóng cửa sổ" class="close"
-                                                                data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title text-default-800">Kỹ năng chuyên môn
-                                                            </h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="panel panel-body border-top-blue">
-
-                                                                <div class="row-cjc">
-                                                                    <div class="row">
-                                                                        <div class="col-xs-8">
-                                                                            <div
-                                                                                class="form-group field-eduinfoform-school_name required">
-                                                                                <label class="control-label">Kỹ năng
-                                                                                    chuyên môn</label>
-
-                                                                                <select name="cid[]"
-                                                                                    class="form-control">
-                                                                                    <option value="">Chọn...</option>
-
-                                                                                    <optgroup label="Xây Dựng">
-
-                                                                                        <option value="143">Xây Dựng
-                                                                                        </option>
-                                                                                        <option value="252">Trắc Địa
-                                                                                        </option>
-                                                                                        <option value="253">Thi Công
-                                                                                        </option>
-                                                                                        <option value="254">Giám Sát
-                                                                                            Công Trình</option>
-                                                                                        <option value="255">Kết Cấu Công
-                                                                                            Trình</option>
-                                                                                        <option value="256">Vật Tư Xây
-                                                                                            Dựng</option>
-                                                                                        <option value="257">Dự Toán
-                                                                                        </option>
-                                                                                        <option value="258">Lái Xe Công
-                                                                                            Trường</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Tài Chính/Ngân Hàng">
-
-                                                                                        <option value="164">Giao Dịch
-                                                                                            Viên (Tại Quầy)</option>
-                                                                                        <option value="109">Môi Giới
-                                                                                            Chứng Khoán</option>
-                                                                                        <option value="211">Phân Tích
-                                                                                            Tài Chính</option>
-                                                                                        <option value="212">Xử Lý Nợ
-                                                                                        </option>
-                                                                                        <option value="213">Giao Dịch
-                                                                                            Viên Ngân Hàng</option>
-                                                                                        <option value="214">Quản Trị Rủi
-                                                                                            Ro</option>
-                                                                                        <option value="215">Quản Lý Tín
-                                                                                            Dụng</option>
-                                                                                        <option value="216">Thẩm Định
-                                                                                            Tín Dụng</option>
-                                                                                        <option value="217">Đầu Tư Dự Án
-                                                                                        </option>
-                                                                                        <option value="218">Quan Hệ
-                                                                                            Khách Hàng</option>
-                                                                                        <option value="219">CFA</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Du Lịch">
-
-                                                                                        <option value="233">Lái Xe Khách
-                                                                                        </option>
-                                                                                        <option value="453">Điều Hành
-                                                                                            Tour</option>
-                                                                                        <option value="115">Du Lịch
-                                                                                        </option>
-                                                                                        <option value="117">Hàng
-                                                                                            Không/Sân Bay</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Giáo Dục/Đào Tạo">
-
-                                                                                        <option value="397">Tâm lý học
-                                                                                        </option>
-                                                                                        <option value="398">Quản lý giáo
-                                                                                            dục</option>
-                                                                                        <option value="171">Đào Tạo
-                                                                                        </option>
-                                                                                        <option value="276">Giáo Dục Mầm
-                                                                                            Non</option>
-                                                                                        <option value="277">Giáo Dục Phổ
-                                                                                            Thông</option>
-                                                                                        <option value="278">Ngoại Ngữ
-                                                                                        </option>
-                                                                                        <option value="279">Trợ Giảng
-                                                                                        </option>
-                                                                                        <option value="280">Giảng Viên
-                                                                                        </option>
-                                                                                        <option value="281">Tuyển Sinh
-                                                                                        </option>
-                                                                                        <option value="282">Giáo Dục Đặc
-                                                                                            Biệt</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="In Ấn/Chế Bản">
-
-                                                                                        <option value="119">In Ấn/Xuất
-                                                                                            Bản</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Kế Toán/Kiểm Toán">
-
-                                                                                        <option value="183">Kiểm Soát
-                                                                                            Nội Bộ</option>
-                                                                                        <option value="177">Kế Toán Tổng
-                                                                                            Hợp</option>
-                                                                                        <option value="403">Kế toán
-                                                                                            thanh toán</option>
-                                                                                        <option value="175">Kế Toán Thuế
-                                                                                        </option>
-                                                                                        <option value="193">AccNet
-                                                                                        </option>
-                                                                                        <option value="192">FAST
-                                                                                        </option>
-                                                                                        <option value="189">Misa
-                                                                                        </option>
-                                                                                        <option value="188">CPA</option>
-                                                                                        <option value="187">ACCA
-                                                                                        </option>
-                                                                                        <option value="186">Kế Toán Xây
-                                                                                            Dựng</option>
-                                                                                        <option value="185">Thủ Quỹ
-                                                                                        </option>
-                                                                                        <option value="182">Kiểm Toán
-                                                                                        </option>
-                                                                                        <option value="181">Kế Toán Quản
-                                                                                            Trị</option>
-                                                                                        <option value="180">Kế Toán Bán
-                                                                                            Hàng</option>
-                                                                                        <option value="179">Kế Toán Sản
-                                                                                            Xuất</option>
-                                                                                        <option value="178">Kế Toán Công
-                                                                                            Nợ</option>
-                                                                                        <option value="176">Kế Toán Kho
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Kiến Trúc/Nội Thất">
-
-                                                                                        <option value="132">Thiết Kế Nội
-                                                                                            Thất</option>
-                                                                                        <option value="222">CAD/CAM
-                                                                                        </option>
-                                                                                        <option value="224">Họa Viên
-                                                                                            Kiến Trúc</option>
-                                                                                        <option value="121">Kiến Trúc
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Môi Trường">
-
-                                                                                        <option value="122">Môi
-                                                                                            Trường/Xử Lý Chất Thải
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Sản Xuất/Lắp Ráp/Chế Biến">
-
-                                                                                        <option value="114">Mộc/Đồ Gỗ
-                                                                                        </option>
-                                                                                        <option value="125">Vận Hành Sản
-                                                                                            Xuất</option>
-                                                                                        <option value="126">Quản Lý Chất
-                                                                                            Lượng (QA/QC)</option>
-                                                                                        <option value="127">Vật Tư Sản
-                                                                                            Xuất</option>
-                                                                                        <option value="142">Quản Lý Sản
-                                                                                            Xuất</option>
-                                                                                        <option value="146">Chế Biến
-                                                                                            Thực Phẩm</option>
-                                                                                        <option value="207">Giám Sát Sản
-                                                                                            Xuất</option>
-                                                                                        <option value="208">Kỹ Thuật
-                                                                                            Công Nghiệp</option>
-                                                                                        <option value="209">Nghiên Cứu
-                                                                                            Và Phát Triển (R&D)</option>
-                                                                                        <option value="300">Sơn</option>
-                                                                                        <option value="260">Công Nhân
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Nông/Lâm/Ngư Nghiệp">
-
-                                                                                        <option value="134">Thủy Hải Sản
-                                                                                        </option>
-                                                                                        <option value="286">Trồng Trọt
-                                                                                        </option>
-                                                                                        <option value="287">Chăn Nuôi
-                                                                                        </option>
-                                                                                        <option value="288">Lâm Nghiệp
-                                                                                        </option>
-                                                                                        <option value="290">Ngư Nghiệp
-                                                                                        </option>
-                                                                                        <option value="396">Quản lý đất
-                                                                                            đai</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Luật/Pháp Chế">
-
-                                                                                        <option value="129">Luật
-                                                                                        </option>
-                                                                                        <option value="170">Pháp Chế
-                                                                                        </option>
-                                                                                        <option value="291">Luật Hành
-                                                                                            Chính</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Kho Vận">
-
-                                                                                        <option value="458">Vận Tải
-                                                                                        </option>
-                                                                                        <option value="459">Hàng Hải
-                                                                                        </option>
-                                                                                        <option value="229">Thủ Kho
-                                                                                        </option>
-                                                                                        <option value="230">Phụ Kho
-                                                                                        </option>
-                                                                                        <option value="231">Lái Xe Tải
-                                                                                        </option>
-                                                                                        <option value="232">Lái Xe Nâng
-                                                                                        </option>
-                                                                                        <option value="234">Giao Nhận
-                                                                                            Hàng</option>
-                                                                                        <option value="235">Giám Sát Kho
-                                                                                        </option>
-                                                                                        <option value="154">Lái Xe
-                                                                                        </option>
-                                                                                        <option value="155">Giao
-                                                                                            Hàng(Shipper)</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Viễn Thông">
-
-                                                                                        <option value="106">Bưu Chính
-                                                                                            Viễn Thông</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Dệt May/Da Giày">
-
-                                                                                        <option value="461">Da Giày
-                                                                                        </option>
-                                                                                        <option value="147">Dệt May
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Chăm Sóc Khách Hàng">
-
-                                                                                        <option value="163">Tổng Đài
-                                                                                            Viên</option>
-                                                                                        <option value="165">IT Helpdesk
-                                                                                        </option>
-                                                                                        <option value="302">Chăm Sóc
-                                                                                            Khách Hàng</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Truyền Hình/Báo Chí">
-
-                                                                                        <option value="225">Dựng
-                                                                                            Phim/Hiệu Ứng Video</option>
-                                                                                        <option value="284">Nghệ Thuật
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Thu Mua">
-
-                                                                                        <option value="265">Thu Mua
-                                                                                        </option>
-                                                                                        <option value="266">Định Mức
-                                                                                        </option>
-                                                                                        <option value="267">Tìm Nguồn
-                                                                                            Hàng</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Quản Lý">
-
-                                                                                        <option value="401">Quản Lý Điều
-                                                                                            Hành</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Hoá Sinh">
-
-                                                                                        <option value="108">Công Nghệ
-                                                                                            Sinh Học</option>
-                                                                                        <option value="118">Hóa Học/Hóa
-                                                                                            Chất</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Vận Hành/Bảo Trì/Bảo Dưỡng">
-
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Khoa Học/Kỹ Thuật">
-
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Dược Phẩm/Mỹ Phẩm">
-
-                                                                                        <option value="454">Tư Vấn Dược
-                                                                                            Phẩm</option>
-                                                                                        <option value="96">Dược Phẩm
-                                                                                        </option>
-                                                                                        <option value="123">Mỹ Phẩm
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Sáng Tạo/Nghệ Thuật">
-
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Đấu Thầu/Dự Án">
-
-                                                                                        <option value="77">Đấu Thầu
-                                                                                        </option>
-                                                                                        <option value="130">Phi Chính
-                                                                                            Phủ/Phi Lợi Nhuận</option>
-                                                                                        <option value="268">Quản Lý Dự
-                                                                                            Án</option>
-                                                                                        <option value="269">Lập Kế Hoạch
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="IT Phần Mềm">
-
-                                                                                        <option value="21">PHP</option>
-                                                                                        <option value="200">Machine
-                                                                                            Learning</option>
-                                                                                        <option value="199">Cloud
-                                                                                            (AWS/Azure)</option>
-                                                                                        <option value="197">Data
-                                                                                            Warehouse</option>
-                                                                                        <option value="196">Kỹ Sư Cầu
-                                                                                            Nối</option>
-                                                                                        <option value="195">Triển Khai
-                                                                                            Phần Mềm</option>
-                                                                                        <option value="145">Frontend
-                                                                                            (HTML/CSS)</option>
-                                                                                        <option value="144">Javascript
-                                                                                        </option>
-                                                                                        <option value="32">SAP</option>
-                                                                                        <option value="27">Data
-                                                                                            Analytics</option>
-                                                                                        <option value="25">Big
-                                                                                            Data/Hadoop</option>
-                                                                                        <option value="24">Ruby</option>
-                                                                                        <option value="23">QA/Test
-                                                                                        </option>
-                                                                                        <option value="22">Python
-                                                                                        </option>
-                                                                                        <option value="2">Quản Lý Sản
-                                                                                            Phẩm</option>
-                                                                                        <option value="20">NodeJS
-                                                                                        </option>
-                                                                                        <option value="16">Full-stack
-                                                                                        </option>
-                                                                                        <option value="14">.NET/C#
-                                                                                        </option>
-                                                                                        <option value="13">ASP.NET
-                                                                                        </option>
-                                                                                        <option value="12">Oracle
-                                                                                        </option>
-                                                                                        <option value="10">SQL</option>
-                                                                                        <option value="9">C/C++</option>
-                                                                                        <option value="8">Java</option>
-                                                                                        <option value="7">Backend
-                                                                                        </option>
-                                                                                        <option value="6">Android
-                                                                                        </option>
-                                                                                        <option value="5">iOS</option>
-                                                                                        <option value="3">Quản Lý Dự Án
-                                                                                            (IT)</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="IT Phần Cứng">
-
-                                                                                        <option value="15">Hệ Nhúng
-                                                                                        </option>
-                                                                                        <option value="18">Phần Cứng Máy
-                                                                                            Tính/Điện Thoại</option>
-                                                                                        <option value="28">An Ninh Mạng
-                                                                                        </option>
-                                                                                        <option value="30">IT Support
-                                                                                        </option>
-                                                                                        <option value="33">Quản Trị Hệ
-                                                                                            Thống</option>
-                                                                                        <option value="34">Quản Trị Mạng
-                                                                                        </option>
-                                                                                        <option value="201">Thiết Kế Vi
-                                                                                            Mạch</option>
-                                                                                        <option value="202">Firmware
-                                                                                        </option>
-                                                                                        <option value="203">CCNA
-                                                                                        </option>
-                                                                                        <option value="204">CCNP
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Thiết Kế">
-
-                                                                                        <option value="29">UI/UX
-                                                                                        </option>
-                                                                                        <option value="101">Adobe
-                                                                                            Photoshop</option>
-                                                                                        <option value="220">Thiết Kế 3D
-                                                                                        </option>
-                                                                                        <option value="221">Thiết Kế 2D
-                                                                                        </option>
-                                                                                        <option value="223">Thiết Kế Sản
-                                                                                            Phẩm</option>
-                                                                                        <option value="226">Adobe
-                                                                                            Illustrator</option>
-                                                                                        <option value="227">Adobe
-                                                                                            Premier</option>
-                                                                                        <option value="228">Adobe After
-                                                                                            Effect</option>
-                                                                                        <option value="292">Hoạt Hình
-                                                                                            (Animation)</option>
-                                                                                        <option value="293">Thiết Kế
-                                                                                            Game</option>
-                                                                                        <option value="294">Thiết Kế
-                                                                                            Thời Trang</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Marketing">
-
-                                                                                        <option value="38">Nội Dung
-                                                                                        </option>
-                                                                                        <option value="39">Seeding
-                                                                                            (Forum/Facebook)</option>
-                                                                                        <option value="41">Media Buying
-                                                                                        </option>
-                                                                                        <option value="42">Media
-                                                                                            Planning</option>
-                                                                                        <option value="46">SEO</option>
-                                                                                        <option value="47">Facebook Ads
-                                                                                        </option>
-                                                                                        <option value="48">Google
-                                                                                            Ads(AdWords)</option>
-                                                                                        <option value="51">Offline
-                                                                                            Marketing (Báo/Đài/Truyền
-                                                                                            Hình)</option>
-                                                                                        <option value="56">Social
-                                                                                            Marketing</option>
-                                                                                        <option value="205">Digital
-                                                                                            Marketing</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Truyền Thông/PR/Quảng Cáo">
-
-                                                                                        <option value="50">Quản Trị
-                                                                                            Thương Hiệu (Branding)
-                                                                                        </option>
-                                                                                        <option value="52">Sự Kiện
-                                                                                        </option>
-                                                                                        <option value="206">Truyền
-                                                                                            Thông/Báo Chí</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Kinh Doanh/Bán Hàng">
-
-                                                                                        <option value="76">Tư Vấn Doanh
-                                                                                            Nghiệp (B2B)</option>
-                                                                                        <option value="79">Tư Vấn Bán
-                                                                                            Hàng</option>
-                                                                                        <option value="81">Bán Hàng Qua
-                                                                                            Điện Thoại (Telesale)
-                                                                                        </option>
-                                                                                        <option value="82">Đào Tạo Bán
-                                                                                            Hàng</option>
-                                                                                        <option value="83">Nghiên Cứu
-                                                                                            Thị Trường</option>
-                                                                                        <option value="160">Phát Triển
-                                                                                            Thị Trường</option>
-                                                                                        <option value="161">Kỹ Sư Bán
-                                                                                            Hàng (Sale Engineer)
-                                                                                        </option>
-                                                                                        <option value="303">Giám Sát Bán
-                                                                                            Hàng</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Nhân Sự">
-
-                                                                                        <option value="166">Quản Trị
-                                                                                            Nhân Sự (HR)</option>
-                                                                                        <option value="167">Tuyển Dụng
-                                                                                            (HR)</option>
-                                                                                        <option value="172">Bảo Hiểm Và
-                                                                                            Tiền Lương (C&B)</option>
-                                                                                        <option value="173">HRBP
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Hành Chính/Văn Phòng">
-
-                                                                                        <option value="62">Thư Ký
-                                                                                        </option>
-                                                                                        <option value="148">Hành chính
-                                                                                            Văn phòng</option>
-                                                                                        <option value="168">Lễ Tân
-                                                                                            (Receptionist)</option>
-                                                                                        <option value="169">Nhập Liệu
-                                                                                        </option>
-                                                                                        <option value="174">Văn Thư/Lưu
-                                                                                            Trữ</option>
-                                                                                        <option value="133">Thư Viện
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Lao Động Phổ Thông">
-
-                                                                                        <option value="63">Bảo Vệ
-                                                                                        </option>
-                                                                                        <option value="259">Lao Công/Tạp
-                                                                                            Vụ</option>
-                                                                                        <option value="261">Giúp Việc
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Bán Sỉ/Bán Lẻ/Cửa Hàng">
-
-                                                                                        <option value="75">Bán Lẻ
-                                                                                        </option>
-                                                                                        <option value="184">Thu Ngân
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Xuất Nhập Khẩu">
-
-                                                                                        <option value="78">Thương Mại
-                                                                                            Quốc Tế</option>
-                                                                                        <option value="138">Xuất Nhập
-                                                                                            Khẩu</option>
-                                                                                        <option value="263">Chứng Từ
-                                                                                        </option>
-                                                                                        <option value="264">Quản Lý Đơn
-                                                                                            Hàng</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Bảo Hiểm">
-
-                                                                                        <option value="84">Tư Vấn Bảo
-                                                                                            Hiểm</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Bất Động Sản">
-
-                                                                                        <option value="86">Bất Động Sản
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Nhà Hàng/Khách Sạn">
-
-                                                                                        <option value="236">Pha Chế Rượu
-                                                                                            (Bartender)</option>
-                                                                                        <option value="237">Pha Chế Cafe
-                                                                                            (Barista)</option>
-                                                                                        <option value="238">Bếp Trưởng
-                                                                                        </option>
-                                                                                        <option value="239">Phụ Bếp
-                                                                                        </option>
-                                                                                        <option value="240">Giám Sát
-                                                                                            Dịch Vụ</option>
-                                                                                        <option value="242">Buồng Phòng
-                                                                                        </option>
-                                                                                        <option value="243">Bàn</option>
-                                                                                        <option value="295">Điều Phối
-                                                                                            Viên</option>
-                                                                                        <option value="296">Hành Lý
-                                                                                        </option>
-                                                                                        <option value="262">Phục Vụ Bàn
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Cơ Khí/Ô Tô/Tự Động Hóa">
-
-                                                                                        <option value="92">Cơ Điện
-                                                                                        </option>
-                                                                                        <option value="110">Cơ Khí
-                                                                                        </option>
-                                                                                        <option value="136">Tự Động Hóa
-                                                                                        </option>
-                                                                                        <option value="244">Lắp Ráp
-                                                                                        </option>
-                                                                                        <option value="245">Vận Hành Máy
-                                                                                        </option>
-                                                                                        <option value="246">Chế Tạo Máy
-                                                                                        </option>
-                                                                                        <option value="247">Thang Máy
-                                                                                        </option>
-                                                                                        <option value="248">Vệ Sinh Công
-                                                                                            Nghiệp</option>
-                                                                                        <option value="249">Hàn Xì
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Spa/Làm Đẹp">
-
-                                                                                        <option value="210">Trang Sức
-                                                                                        </option>
-                                                                                        <option value="283">Thể Chất
-                                                                                        </option>
-                                                                                        <option value="94">Thời Trang
-                                                                                        </option>
-                                                                                        <option value="131">Spa/Làm Đẹp
-                                                                                        </option>
-                                                                                        <option value="285">Thể Hình
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Y Tế">
-
-                                                                                        <option value="271">Y Tá/Điều
-                                                                                            Dưỡng</option>
-                                                                                        <option value="272">Nội Khoa
-                                                                                        </option>
-                                                                                        <option value="273">Ngoại Khoa
-                                                                                        </option>
-                                                                                        <option value="274">Tai Mũi Họng
-                                                                                        </option>
-                                                                                        <option value="275">Nha Khoa
-                                                                                        </option>
-                                                                                        <option value="298">Thú Y
-                                                                                        </option>
-                                                                                        <option value="399">Đa khoa
-                                                                                        </option>
-                                                                                        <option value="400">Sản khoa
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Mỏ/Địa Chất">
-
-                                                                                        <option value="98">Dầu Khí
-                                                                                        </option>
-                                                                                        <option value="111">Địa Chất
-                                                                                        </option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="An Toàn Lao Động">
-
-                                                                                        <option value="103">An Toàn Lao
-                                                                                            Động</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup label="Biên Phiên Dịch">
-
-                                                                                        <option value="105">Biên/Phiên
-                                                                                            Dịch</option>
-                                                                                    </optgroup>
-
-                                                                                    <optgroup
-                                                                                        label="Điện/Điện Tử/Điện Lạnh">
-
-                                                                                        <option value="104">Bảo Trì -
-                                                                                            Sửa Chữa</option>
-                                                                                        <option value="112">Điện
-                                                                                            Lạnh/Nhiệt Lạnh</option>
-                                                                                        <option value="250">Kỹ Thuật
-                                                                                            Camera</option>
-                                                                                    </optgroup>
-
-
-                                                                                </select>
-
-                                                                                <p class="help-block help-block-error">
-                                                                                </p>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                        <div class="col-xs-4">
-                                                                            <div
-                                                                                class="form-group field-eduinfoform-specialization required">
-                                                                                <label class="control-label">Số năm kinh
-                                                                                    nghiệm</label>
-                                                                                <select name="cexp[]"
-                                                                                    class="form-control">
-                                                                                    <option value="">Chọn...</option>
-                                                                                    <option value="1">1 năm</option>
-                                                                                    <option value="2">2 năm</option>
-                                                                                    <option value="3">3 năm</option>
-                                                                                    <option value="4">4 năm</option>
-                                                                                    <option value="5">5 năm</option>
-                                                                                    <option value="6">6 năm</option>
-                                                                                    <option value="7">7 năm</option>
-                                                                                    <option value="8">8 năm</option>
-                                                                                    <option value="9">9 năm</option>
-                                                                                    <option value="10">10 năm</option>
-                                                                                    <option value="11">11 năm</option>
-                                                                                    <option value="12">12 năm</option>
-                                                                                    <option value="13">13 năm</option>
-                                                                                    <option value="14">14 năm</option>
-                                                                                    <option value="15">15 năm</option>
-                                                                                    <option value="16">16 năm</option>
-                                                                                    <option value="17">17 năm</option>
-                                                                                    <option value="18">18 năm</option>
-                                                                                    <option value="19">19 năm</option>
-                                                                                    <option value="20">20 năm</option>
-
-                                                                                </select>
-
-                                                                                <p class="help-block help-block-error">
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="row">
-                                                                    <div class="col-xs-12">
-                                                                        <button
-                                                                            class="btn btn-xs btn-default btn-clone-row-cjc mb-20"><i
-                                                                                class="fa fa-plus-square"
-                                                                                aria-hidden="true"></i> Thêm kỹ năng
-                                                                            chuyên môn</button>
-                                                                    </div>
-                                                                </div>
-
-                                                                <script>
-                                                                    function getRandomNumber(min = 1, max = 1e9) {
-                                                                        return Math.floor(Math.random() * (max - min + 1)) + min;
-                                                                    }
-
-                                                                    $(function() {
-                                                                        $('.btn-clone-row-cjc').click(function() {
-                                                                            $('#colorgbModal61 .row-cjc select').select2('destroy');
-                                                                            var clonedDiv = $('#colorgbModal61 .row-cjc > .row:nth-child(1)').clone();
-                                                                            $("#colorgbModal61 .row-cjc").append(clonedDiv);
-                                                                            $('#colorgbModal61 .row-cjc select').select2();
-                                                                            $('#colorgbModal61 [name="cid[]"]:last').prop('disabled', false).attr('id', 'cid' + getRandomNumber()).select2({
-                                                                                placeholder: 'Tìm kiếm...',
-                                                                                ajax: {
-                                                                                    url: '/api/job-categories', // Thay thế bằng URL của endpoint AJAX của bạn
-                                                                                    dataType: 'json',
-                                                                                    delay: 250, // Độ trễ trước khi gửi yêu cầu AJAX (nếu cần)
-                                                                                    processResults: function(data) {
-                                                                                        // Xử lý dữ liệu trả về từ endpoint AJAX
-                                                                                        return {
-                                                                                            results: $.map(data, function(item) {
-                                                                                                return {
-                                                                                                    id: item.job_category_id,
-                                                                                                    text: item.job_category_name_vn
-                                                                                                };
-                                                                                            })
-                                                                                        };
-                                                                                    },
-                                                                                    cache: true // Bật lưu cache nếu bạn muốn
-                                                                                }
-                                                                            });
-                                                                            $('#colorgbModal61 [name="cexp[]"]:last').prop('disabled', false).attr('id', 'cexp' + getRandomNumber()).select2();
-
-                                                                        })
-                                                                    })
-                                                                </script>
-
-
-                                                                <div class="form-group">
-                                                                    <input type="hidden" class="form-control" id="id">
-                                                                    <span class="pull-left"><button type="button"
-                                                                            class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                            data-style="zoom-out"><i
-                                                                                class="icon-floppy-disk position-left"></i>
-                                                                            <span class="ladda-label">Lưu
-                                                                                lại</span><span
-                                                                                class="ladda-spinner"></span><span
-                                                                                class="ladda-spinner"></span></button></span>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
                                             <script>
                                                 $(function() {
 
@@ -8702,7 +7755,7 @@
                     }
                 }
             });
-  
+
         },5000);*/
 
                                     $(function() {
@@ -8812,7 +7865,7 @@
                                         }
                                     })
                                 </script>
-                              
+
 
                                 <script>
                                     window.addEventListener('load', function() {
