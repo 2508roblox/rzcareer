@@ -28,34 +28,34 @@
 
         <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
         <meta http-equiv="content-language" content="vi" />
-        <link rel="alternate" href="https://jobsgo.vn/viec-lam-tai-chinh-ngan-hang.html" hreflang="x-default"
+        <link rel="alternate" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html" hreflang="x-default"
             hreflang="vi" />
-        <link rel="canonical" href="https://jobsgo.vn/viec-lam-tai-chinh-ngan-hang.html" />
+        <link rel="canonical" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html" />
 
-        <link rel="next" href="https://jobsgo.vn/viec-lam-tai-chinh-ngan-hang.html?page=2" />
+        <link rel="next" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html?page=2" />
 
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="author" content="JOBSGO.,JSC" />
-        <meta name="csrf-param" content="_csrf-jobsgo-candidate">
+        <meta name="author" content="Rzcareer.,JSC" />
+        <meta name="csrf-param" content="_csrf-Rzcareer-candidate">
         <meta name="csrf-token"
             content="wY2pSbLAbVdOYKnk7oQrrnT3Ugg3V9lQWPF7-jxiJRKe7-MI3oUDYApNx6OZyFnaHJkceV1jv2UHyT6VaiETUQ==">
-        <title>Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | JobsGO</title>
+        <title>Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-        <meta property="og:sitename" content="JobsGO - Tuyển dụng">
+        <meta property="og:sitename" content="Rzcareer - Tuyển dụng">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="vi_VN">
         <meta property="fb:app_id" content="1590841851212703">
         <meta name="description"
-            content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên JobsGO.">
-        <meta name="title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | JobsGO">
+            content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên Rzcareer.">
+        <meta name="title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer">
         <meta name="keywords" content="Tuyển dụng nhanh viec lam tai chinh ngan hang">
-        <meta property="og:image" itemprop="thumbnailUrl" content="https://jobsgo.vn/media/img/cover-share.png">
+        <meta property="og:image" itemprop="thumbnailUrl" content="https://Rzcareer.vn/media/img/cover-share.png">
         <meta property="og:description"
-            content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên JobsGO.">
-        <meta property="og:title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | JobsGO">
+            content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên Rzcareer.">
+        <meta property="og:title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer">
         <meta name="robots" content="index, follow">
         <meta name="geo.placename" content="Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội">
         <meta name="geo.position" content="21.0000650;105.8224070">
@@ -75,10 +75,10 @@
         <script type="application/ld+json"> {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "url": "https://jobsgo.vn/",
+                "url": "https://Rzcareer.vn/",
                 "potentialAction": {
                     "@type": "SearchAction",
-                    "target": "https://jobsgo.vn/viec-lam.html?k={search_term_string}",
+                    "target": "https://Rzcareer.vn/viec-lam.html?k={search_term_string}",
                     "query-input": "required name=search_term_string"
                 }
             } </script>
@@ -125,7 +125,7 @@
         <a class="hide smart-banner-bk" target="_blank"
             href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500" height="100"
                 style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
-                alt="Tải app JobsGO" src="/media/img/500x100-banner-1.gif" class="img-responsive lazy"></a>
+                alt="Tải app Rzcareer" src="/media/img/500x100-banner-1.gif" class="img-responsive lazy"></a>
                 @livewire('inc.header-nav')
 
         <style>
@@ -295,7 +295,7 @@
                                                                     $('.colorgb-salary').addClass('show');
                                                                     $('.colorgb-submit').addClass('show');
                                                                 });
-                                                                var kws = JSON.parse(localStorage.getItem('jobsgo-candidate-skl'));
+                                                                var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
                                                                 if (kws) {
                                                                     kws = kws.reverse();
                                                                 }
@@ -306,7 +306,7 @@
                                                                 kws = cleanArray(kws);
                                                                 kws = kws.reverse();
                                                                 kws = kws.slice(0, 6);
-                                                                localStorage.setItem('jobsgo-candidate-skl', JSON.stringify(kws));
+                                                                localStorage.setItem('Rzcareer-candidate-skl', JSON.stringify(kws));
 
                                                                 if (kws.length > 0) {
                                                                     var html =
@@ -314,14 +314,14 @@
                                                                     var count = kws.length > 6 ? 6 : kws.length; /**/
                                                                     for (var i = 0; i < count; i++) {
                                                                         html += '<li><a rel="nofollow" title="Việc làm ' + kws[i] +
-                                                                            '" href="https://jobsgo.vn/viec-lam-' + colorgbSlug(kws[i]) +
+                                                                            '" href="https://Rzcareer.vn/viec-lam-' + colorgbSlug(kws[i]) +
                                                                             '.html"> <h2 class="txt">' + kws[i] + '</h2> </a></li>';
                                                                     }
                                                                     html += '</ul></div>';
                                                                     $('.blog-sidebar').prepend(html); /**/
                                                                     $('#jobRole').focus(function() {
                                                                         var kw = '';
-                                                                        var kws = JSON.parse(localStorage.getItem('jobsgo-candidate-skl'));
+                                                                        var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
                                                                         var count = kws.length > 10 ? 10 : kws.length;
                                                                         for (var i = 0; i < count; i++) {
                                                                             kw += '<li onclick="jobRoleSearch(this)" data-val="' + kws[i] +
@@ -331,20 +331,20 @@
                                                                     });
                                                                 }
 
-                                                                var pl = JSON.parse(localStorage.getItem('jobsgo-candidate-search-place-log'));
+                                                                var pl = JSON.parse(localStorage.getItem('Rzcareer-candidate-search-place-log'));
                                                                 pl = pl ? pl : [];
                                                                 pl.push('');
                                                                 pl = pl.filter(onlyUnique);
                                                                 pl = cleanArray(pl);
                                                                 pl = pl.reverse();
-                                                                localStorage.setItem('jobsgo-candidate-search-place-log', JSON.stringify(pl));
+                                                                localStorage.setItem('Rzcareer-candidate-search-place-log', JSON.stringify(pl));
 
                                                                 if (pl) {
                                                                     var count = kws.length > 10 ? 10 : kws.length; /**/
                                                                     $('#jobPlace').focus(function() {
                                                                         var p = '';
                                                                         var pl = JSON.parse(localStorage.getItem(
-                                                                            'jobsgo-candidate-search-place-log'));
+                                                                            'Rzcareer-candidate-search-place-log'));
                                                                         var count = pl.length > 10 ? 10 : pl.length;
                                                                         for (var i = 0; i < count; i++) {
                                                                             p += '<li onclick="jobPlaceSearch(this)" data-val="' + pl[i] +
@@ -630,15 +630,15 @@
                                                                 content="ItemListOrderAscending">
                                                             <li itemprop="itemListElement" itemscope=""
                                                                 itemtype="https://schema.org/ListItem"><a
-                                                                    href="https://jobsgo.vn"
+                                                                    href="https://Rzcareer.vn"
                                                                     itemtype="https://schema.org/Thing"
                                                                     itemprop="item"> <span itemprop="name">
-                                                                        JobsGO</span> </a>
+                                                                        Rzcareer</span> </a>
                                                                 <meta itemprop="position" content="1">
                                                             </li>
                                                             <li itemprop="itemListElement" itemscope=""
                                                                 itemtype="https://schema.org/ListItem"><a
-                                                                    href="https://jobsgo.vn/viec-lam.html"
+                                                                    href="https://Rzcareer.vn/viec-lam.html"
                                                                     itemtype="https://schema.org/Thing"
                                                                     itemprop="item"> <span itemprop="name">Việc
                                                                         làm</span> </a>
@@ -649,7 +649,7 @@
                                                                 <span class="text-muted">
                                                                     <meta itemtype="https://schema.org/Thing"
                                                                         itemprop="item"
-                                                                        content="https://jobsgo.vn/viec-lam-tai-chinh-ngan-hang.html">
+                                                                        content="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html">
                                                                     <span itemprop="name">Việc làm Tài Chính/Ngân Hàng
                                                                     </span>
                                                                     <meta itemprop="position" content="3">
@@ -692,25 +692,25 @@
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html"><img
                                                                                 src="{{asset('assets_livewire/img/2024/ic18.svg')}}"
-                                                                                alt="jobsgo" loading="lazy"> Phù hợp
+                                                                                alt="Rzcareer" loading="lazy"> Phù hợp
                                                                             nhất</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=created"><img
                                                                                 src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
-                                                                                alt="jobsgo" loading="lazy"> Việc
+                                                                                alt="Rzcareer" loading="lazy"> Việc
                                                                             mới đăng</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=updated"><img
                                                                                 src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
-                                                                                alt="jobsgo" loading="lazy"> Mới cập
+                                                                                alt="Rzcareer" loading="lazy"> Mới cập
                                                                             nhật</span></li>
                                                                     <li class=""><span class="a"
                                                                             data-sort="true"
                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?sort=salary"><img
                                                                                 src="{{asset('assets_livewire/img/2024/ic17.svg')}}"
-                                                                                alt="jobsgo" loading="lazy"> Lương
+                                                                                alt="Rzcareer" loading="lazy"> Lương
                                                                             cao nhất</span></li>
                                                                 </ul>
                                                             </div>
@@ -932,12 +932,12 @@
                                                     style="position: relative;max-width:1000px;display:block;margin-top: 30px;background: #fff;border-radius: 4px;padding: 10px;box-shadow: 0 0 10px #eee">
                                                     <canvas id="jobsAppliesIndustryChart" width="800"
                                                         height="400"></canvas><img height="40"
-                                                        src="/assets_livewire/teks/img/jobsgo-logo.svg" id="watermark"
+                                                        src="/assets_livewire/teks/img/Rzcareer-logo.svg" id="watermark"
                                                         style="position: absolute;top: 115px;left: 150px;transform: translate(-50%, -50%);opacity: 0.2;">
 
 
                                                     <hr>
-                                                    <p>Dựa trên dữ liệu của JobsGO, ngành <strong>Tài Chính/Ngân
+                                                    <p>Dựa trên dữ liệu của Rzcareer, ngành <strong>Tài Chính/Ngân
                                                             Hàng</strong> đang trải qua một giai đoạn biến động đáng kể.
                                                         Trong khi số lượng việc làm trong quý 2 năm 2024 tăng nhẹ so với
                                                         cùng kỳ năm trước (2.21%) và so với quý trước (4.63%), thì số
@@ -964,7 +964,7 @@
                                                 <div>
                                                     <div class="d-flex box-summary-report industry_summary_report"
                                                         title="Tài Chính/Ngân Hàng"><img src="{{asset('assets_livewire/img/2024/ic31.svg')}}"
-                                                            alt="jobsgo" width="42">
+                                                            alt="Rzcareer" width="42">
                                                         <div>
                                                             <p>Số tin đăng và lượt ứng tuyển theo tháng</p>
                                                             <p><strong><i class="bx bx-info-square bx-sm"></i> Tài
@@ -984,19 +984,19 @@
                                             </div>
 
                                             <div class="mrg-bot-20"><a class="custom-banner"
-                                                    href="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html?utm_source=job_sidebar_1&utm_medium=banner"
+                                                    href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html?utm_source=job_sidebar_1&utm_medium=banner"
                                                     target="_blank"><img width="100" height="100"
                                                         style="margin: auto" loading="lazy"
-                                                        src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-58.png"
+                                                        src="https://Rzcareer.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-58.png"
                                                         width="100%" class="img-responsive"
-                                                        alt="banner-jobsgo" /></a></div>
+                                                        alt="banner-Rzcareer" /></a></div>
                                             <div class="mrg-bot-20"><a class="custom-banner"
-                                                    href="https://jobsgo.vn/viec-lam/nhan-vien-kinh-doanh-bds-ho-tro-luong-cung-thu-nhap-den-50-trieu-thang-18705914398.html?utm_source=job_sidebar_2&utm_medium=banner"
+                                                    href="https://Rzcareer.vn/viec-lam/nhan-vien-kinh-doanh-bds-ho-tro-luong-cung-thu-nhap-den-50-trieu-thang-18705914398.html?utm_source=job_sidebar_2&utm_medium=banner"
                                                     target="_blank"><img width="100" height="100"
                                                         style="margin: auto" loading="lazy"
-                                                        src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-52.png"
+                                                        src="https://Rzcareer.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-52.png"
                                                         width="100%" class="img-responsive"
-                                                        alt="banner-jobsgo" /></a></div>
+                                                        alt="banner-Rzcareer" /></a></div>
                                             <div class="blog-sidebar">
 
                                                 <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
@@ -1368,7 +1368,7 @@
         </section>
         <section class="gray-bg padd-top-15 hide padd-bot-15 brows-job-category job-list full">
             <div class="container">
-                <div class="row"><img width="100" height="100" src="https://jobsgo.vn/loading.gif"
+                <div class="row"><img width="100" height="100" src="https://Rzcareer.vn/loading.gif"
                         style="display: block;margin: auto;"></div>
             </div>
         </section>
@@ -2230,17 +2230,17 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4">
                             <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN JOBSGO</div>
+                                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN Rzcareer</div>
                                 <div class="textwidget">
                                     <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five
                                         Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a class="text-primary"
-                                            title="JobsGO Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
+                                            title="Rzcareer Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
                                     <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn
                                         Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: <a
-                                            class="text-primary" title="JobsGO Miền Nam"
+                                            class="text-primary" title="Rzcareer Miền Nam"
                                             href="tel:0896557388">0896.557.388</a></p>
                                     <p><strong>Email:</strong> <a
-                                            href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a><br /><strong
+                                            href="mailto:contact@Rzcareer.vn">contact@Rzcareer.vn</a><br /><strong
                                             title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
                                             title="Chăm sóc ứng viên" class="text-primary"
                                             href="tel:0705052927">070.505.2927</a><br> <strong>Hotline:</strong> <a
@@ -2340,12 +2340,12 @@
                                         <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
                                     </ul>
                                     <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                        <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
+                                        <li class="list-inline-item"><a href="https://www.facebook.com/RzcareerVN/"
                                                 target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                                         <li class="list-inline-item"><a
                                                 href="https://www.linkedin.com/company/josbgo.vn/"
                                                 target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
+                                        <li class="list-inline-item"><a href="https://www.instagram.com/Rzcareer_vn/"
                                                 target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
                                     </ul>
                                 </div>
@@ -2360,48 +2360,48 @@
                         <div class="col-12 col-sm-10">
                             <ul class="list-inline list-unstyled mb-1 text-primary">
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
+                                        href="https://Rzcareer.vn/site/about-us" title="Về chúng tôi"><u>Giới
                                             thiệu</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
+                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
                                         title="Chính sách"><u>Chính sách</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
+                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
                                         title="Quy chế hoạt động"><u>Quy chế</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
+                                        href="https://Rzcareer.vn/site/giai-quyet-tranh-chap"
                                         title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                                <!--<li><a href="https://Rzcareer.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
+                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2FRzcareer.vn%2FRzcareer_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
                                             thuận sử dụng</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/privacy-policy"
+                                        href="https://Rzcareer.vn/site/privacy-policy"
                                         title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://employer.jobsgo.vn"
-                                        title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
+                                        href="https://employer.Rzcareer.vn"
+                                        title="Rzcareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
                                             Dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq"
+                                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/faq"
                                         title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/blog" target="_blank"
                                         title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi"
                                         target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html"
                                         title="Sơ đồ trang web"><u>Sitemap</u></a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-2">
                             <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                        href="https://www.facebook.com/RzcareerVN/" target="_blank"><i
                                             class='bx bx-xs bxl-facebook'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
                                         href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
                                             class='bx bx-xs bxl-linkedin'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
+                                        href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i
                                             class='bx bx-xs bxl-instagram'></i></a></li>
                             </ul>
                         </div>
@@ -2411,7 +2411,7 @@
                             <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
                                 hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
                                 568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
-                                phần JobsGO. All Rights Reserved.</p>
+                                phần Rzcareer. All Rights Reserved.</p>
                         </div>
                         <div class="col-sm-2">
                             <div class="text-center">
@@ -2420,17 +2420,17 @@
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/teks/img/online-gov.svg" alt="JobsGO" width="100"
+                                        data-src="/teks/img/online-gov.svg" alt="Rzcareer" width="100"
                                         height="38">
 
                                 </a>
                                 <a target="_blank" rel="nofollow"
-                                    href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2Fjobsgo.vn%2Fviec-lam-tai-chinh-ngan-hang.html"
+                                    href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2FRzcareer.vn%2Fviec-lam-tai-chinh-ngan-hang.html"
                                     title="DMCA.com Protection Status" class="dmca-badge">
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/teks/img/dmca.svg" alt="JobsGO" width="100"
+                                        data-src="/teks/img/dmca.svg" alt="Rzcareer" width="100"
                                         height="21">
 
                                 </a>
@@ -2452,7 +2452,7 @@
             }
         </style>
         <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-            <img loading="lazy" src="/img/2024/zalo.svg" alt="jobsgo">
+            <img loading="lazy" src="/img/2024/zalo.svg" alt="Rzcareer">
         </a>
 
 
@@ -2464,13 +2464,13 @@
             }
             if (!localStorage.getItem("userCvBuilder")) {
                 localStorage.setItem("userCvBuilder", (
-                    '{"candidate_id":"2593317","user_name":"trangiangzxc@gmail.com","name":"Tr\u1ea7n L\u00ea Ho\u00e0ng Giang","avatar":"https:\/\/jobsgo.vn\/uploads\/avatar\/202409\/2593317_20240920203818.png","date_of_birth":"2004-05-13","current_city":"H\u1ed3 Ch\u00ed Minh","email":"Trangiangzxc@gmail.com","tel":"0337799453","short_bio":"","current_salary":null,"language":"","degree":"Trung h\u1ecdc ph\u1ed5 th\u00f4ng","degree_id":"7","min_expect_salary":null,"max_expect_salary":null,"job_type":"B\u00e1n th\u1eddi gian","job_type_id":"2","status":"0","created":"2024-09-20 14:47:25","updated":"2024-09-20 20:39:17","access_token":"jobsgo","gender":"male","fb_user_id":"","current_address":"Qu\u1eadn 12, H\u1ed3 Ch\u00ed Minh","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"Th\u1ef1c T\u1eadp Sinh","job_position_id":"1","main_cv_template_id":"1","set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"2","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2593317","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"q12","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"90","update_percent_time":"2024-09-23 11:26:51","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"1","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTMzMTcsInN1YiI6MjU5MzMxNywiaWF0IjoxNzI2OTYwMzM2LCJleHAiOjE3MjcyMTk1MzZ9.m1Yq22xtZdaRuO5MztmKIGwfGr9XjBWDSir9caw6ZHS5xSZDZkyk-eMrLtLKLJ83Xcbk4pXBsDQCrNehJ1jysPXDFV884YhpJRbnOizzRv-l-Xhv0w4KPJwmub2KssTmWbn1KXHRJOvgV62s_zc5zxNjPQz3UZP_j7IpuTxetl4hFV63PUcMusIpcjRr3T1HI-pzm9W7gSgisTinD3cuiS-l93rcA-O1GZDAEp6KFCqLBBcO7NlNbgAEpsHT166GzpBkZq4xmJ7nZeyEtJC_ObbUUp0TXlR2-yZV1eroHDwrkNqT8ogmu3c8Cx6xxlU20JOYQ8sjYlKPOLatf8fZ7A","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"110231117123356408959","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"2","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"2","admin_id":"1572","qr_code":"","level":"5","allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Nh\u00e2n Vi\u00ean Tuy\u1ec3n D\u1ee5ng","short_bio_html":"","cv_capacity":"8881","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"1","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"[{\"others_promise\":\"III.\\nC\u00f4ng ty TNHH DCSOFT \u0111\u00e3 t\u1ea1o ra m\u1ed9t m\u00f4i tr\u01b0\u1eddng th\u1ef1c t\u1eadp l\u00fd t\u01b0\u1edfng v\u1edbi \u0111\u1ed9i ng\u0169  nh\u00e2n s\u1ef1 t\u1eadn t\u00e2m, ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e0o t\u1ea1o b\u00e0i b\u1ea3n, v\u00e0 c\u01a1 h\u1ed9i tham gia c\u00e1c d\u1ef1 \u00e1n th\u1ef1c  t\u1ebf. T\u1ea5t c\u1ea3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0y \u0111\u00e3 mang l\u1ea1i tr\u1ea3i nghi\u1ec7m th\u1ef1c t\u1eadp tuy\u1ec7t v\u1eddi v\u00e0 kh\u00f4ng  c\u00f3 g\u00ec c\u1ea7n ki\u1ebfn ngh\u1ecb th\u00eam.\"}]","career_name_auto":"","create_source":""}'
+                    '{"candidate_id":"2593317","user_name":"trangiangzxc@gmail.com","name":"Tr\u1ea7n L\u00ea Ho\u00e0ng Giang","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2593317_20240920203818.png","date_of_birth":"2004-05-13","current_city":"H\u1ed3 Ch\u00ed Minh","email":"Trangiangzxc@gmail.com","tel":"0337799453","short_bio":"","current_salary":null,"language":"","degree":"Trung h\u1ecdc ph\u1ed5 th\u00f4ng","degree_id":"7","min_expect_salary":null,"max_expect_salary":null,"job_type":"B\u00e1n th\u1eddi gian","job_type_id":"2","status":"0","created":"2024-09-20 14:47:25","updated":"2024-09-20 20:39:17","access_token":"Rzcareer","gender":"male","fb_user_id":"","current_address":"Qu\u1eadn 12, H\u1ed3 Ch\u00ed Minh","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"Th\u1ef1c T\u1eadp Sinh","job_position_id":"1","main_cv_template_id":"1","set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"2","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2593317","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"q12","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"90","update_percent_time":"2024-09-23 11:26:51","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"1","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTMzMTcsInN1YiI6MjU5MzMxNywiaWF0IjoxNzI2OTYwMzM2LCJleHAiOjE3MjcyMTk1MzZ9.m1Yq22xtZdaRuO5MztmKIGwfGr9XjBWDSir9caw6ZHS5xSZDZkyk-eMrLtLKLJ83Xcbk4pXBsDQCrNehJ1jysPXDFV884YhpJRbnOizzRv-l-Xhv0w4KPJwmub2KssTmWbn1KXHRJOvgV62s_zc5zxNjPQz3UZP_j7IpuTxetl4hFV63PUcMusIpcjRr3T1HI-pzm9W7gSgisTinD3cuiS-l93rcA-O1GZDAEp6KFCqLBBcO7NlNbgAEpsHT166GzpBkZq4xmJ7nZeyEtJC_ObbUUp0TXlR2-yZV1eroHDwrkNqT8ogmu3c8Cx6xxlU20JOYQ8sjYlKPOLatf8fZ7A","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"110231117123356408959","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"2","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"2","admin_id":"1572","qr_code":"","level":"5","allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Nh\u00e2n Vi\u00ean Tuy\u1ec3n D\u1ee5ng","short_bio_html":"","cv_capacity":"8881","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"1","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"[{\"others_promise\":\"III.\\nC\u00f4ng ty TNHH DCSOFT \u0111\u00e3 t\u1ea1o ra m\u1ed9t m\u00f4i tr\u01b0\u1eddng th\u1ef1c t\u1eadp l\u00fd t\u01b0\u1edfng v\u1edbi \u0111\u1ed9i ng\u0169  nh\u00e2n s\u1ef1 t\u1eadn t\u00e2m, ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e0o t\u1ea1o b\u00e0i b\u1ea3n, v\u00e0 c\u01a1 h\u1ed9i tham gia c\u00e1c d\u1ef1 \u00e1n th\u1ef1c  t\u1ebf. T\u1ea5t c\u1ea3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0y \u0111\u00e3 mang l\u1ea1i tr\u1ea3i nghi\u1ec7m th\u1ef1c t\u1eadp tuy\u1ec7t v\u1eddi v\u00e0 kh\u00f4ng  c\u00f3 g\u00ec c\u1ea7n ki\u1ebfn ngh\u1ecb th\u00eam.\"}]","career_name_auto":"","create_source":""}'
                     ));
             }
         </script>
 
         <!--<div class="maintenance-banner">
-                         Để tăng chất lượng dịch vụ, JobsGO.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
+                         Để tăng chất lượng dịch vụ, Rzcareer.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
                                            </div>
                                            <style>
                                              .maintenance-banner {
@@ -2489,7 +2489,7 @@
                                                padding-bottom: 60px !important;
                                              }
                                            </style>-->
-                               <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với JobsGO "
+                               <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với Rzcareer "
             class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV / Resume</span>
         </a>
 

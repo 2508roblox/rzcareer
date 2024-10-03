@@ -10,18 +10,18 @@
         <meta name="title"
             content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
         <meta name="description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên JobsGO với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
+            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
         <meta property="og:url"
-            content="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html">
+            content="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html">
         <meta property="og:type" content="website">
         <meta property="fb:app_id" content="1590841851212703">
         <meta property="og:image" itemprop="thumbnailUrl"
-            content="https://jobsgo.vn/media/img/employer/39234-cover-app.jpg">
+            content="https://Rzcareer.vn/media/img/employer/39234-cover-app.jpg">
         <meta property="og:title"
             content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
         <meta property="og:description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên JobsGO với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <link href="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html" rel="canonical">
+            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
+        <link href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html" rel="canonical">
         <title>Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024
         </title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -61,10 +61,10 @@
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "url": "https://jobsgo.vn/",
+                "url": "https://Rzcareer.vn/",
                 "potentialAction": {
                     "@type": "SearchAction",
-                    "target": "https://jobsgo.vn/viec-lam.html?k={search_term_string}",
+                    "target": "https://Rzcareer.vn/viec-lam.html?k={search_term_string}",
                     "query-input": "required name=search_term_string"
                 }
             }
@@ -303,12 +303,12 @@
                         <ol class="breadcrumb my-3">
                             <li class="breadcrumb-item" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem"><a class="text-body small"
-                                    href="https://jobsgo.vn">JobsGO</a>
+                                    href="https://Rzcareer.vn">Rzcareer</a>
                                 <meta itemprop="position" content="1">
                             </li>
                             <li class="breadcrumb-item" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem"><a class="text-body small"
-                                    href="https://jobsgo.vn/cong-ty.html">Công ty</a>
+                                    href="https://Rzcareer.vn/cong-ty.html">Công ty</a>
                                 <meta itemprop="position" content="2">
                             </li>
                             <li class="breadcrumb-item active" aria-current="page"><span class="small">
@@ -509,40 +509,40 @@
                                 <div class="teks-section-content">
                                     <div class="img-container-grid">
                                         <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg">
+                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://jobsgo.vn/media/img/no-image.png'"
+                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
                                                 class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg" />
+                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg" />
                                         </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg">
+                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://jobsgo.vn/media/img/no-image.png'"
+                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
                                                 class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg" />
+                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg" />
                                         </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg">
+                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://jobsgo.vn/media/img/no-image.png'"
+                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
                                                 class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg" />
+                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg" />
                                         </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg">
+                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://jobsgo.vn/media/img/no-image.png'"
+                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
                                                 class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg" />
+                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg" />
                                         </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg">
+                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://jobsgo.vn/media/img/no-image.png'"
+                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
                                                 class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.jobsgo.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg" />
+                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg" />
                                         </a>
                                     </div>
                                 </div>
@@ -1063,17 +1063,17 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4">
                             <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN JOBSGO</div>
+                                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN Rzcareer</div>
                                 <div class="textwidget">
                                     <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five
                                         Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a class="text-primary"
-                                            title="JobsGO Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
+                                            title="Rzcareer Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
                                     <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn
                                         Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: <a
-                                            class="text-primary" title="JobsGO Miền Nam"
+                                            class="text-primary" title="Rzcareer Miền Nam"
                                             href="tel:0896557388">0896.557.388</a></p>
                                     <p><strong>Email:</strong> <a
-                                            href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a><br /><strong
+                                            href="mailto:contact@Rzcareer.vn">contact@Rzcareer.vn</a><br /><strong
                                             title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
                                             title="Chăm sóc ứng viên" class="text-primary"
                                             href="tel:0705052927">070.505.2927</a><br> <strong>Hotline:</strong> <a
@@ -1173,12 +1173,12 @@
                                         <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
                                     </ul>
                                     <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                        <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
+                                        <li class="list-inline-item"><a href="https://www.facebook.com/RzcareerVN/"
                                                 target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                                         <li class="list-inline-item"><a
                                                 href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
                                                     class='bx bx-xs bxl-linkedin'></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
+                                        <li class="list-inline-item"><a href="https://www.instagram.com/Rzcareer_vn/"
                                                 target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
                                     </ul>
                                 </div>
@@ -1192,48 +1192,48 @@
                     <div class="row">
                         <div class="col-12 col-sm-10">
                             <ul class="list-inline list-unstyled mb-1 text-primary">
-                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/about-us"
+                                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/about-us"
                                         title="Về chúng tôi"><u>Giới
                                             thiệu</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
+                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
                                         title="Chính sách"><u>Chính sách</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
+                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
                                         title="Quy chế hoạt động"><u>Quy chế</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
+                                        href="https://Rzcareer.vn/site/giai-quyet-tranh-chap"
                                         title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                                <!--<li><a href="https://Rzcareer.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
+                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2FRzcareer.vn%2FRzcareer_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
                                             thuận sử dụng</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo
+                                        href="https://Rzcareer.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo
                                             mật</u></a></li>
                                 <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://employer.jobsgo.vn"
-                                        title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
+                                        href="https://employer.Rzcareer.vn"
+                                        title="Rzcareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
                                             Dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq"
+                                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/faq"
                                         title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/blog" target="_blank"
                                         title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi" target="_blank"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi" target="_blank"
                                         title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html"
                                         title="Sơ đồ trang web"><u>Sitemap</u></a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-2">
                             <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/JobsGOVN/"
+                                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/RzcareerVN/"
                                         target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
                                         href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
                                             class='bx bx-xs bxl-linkedin'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
+                                        href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i
                                             class='bx bx-xs bxl-instagram'></i></a></li>
                             </ul>
                         </div>
@@ -1243,7 +1243,7 @@
                             <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
                                 hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
                                 568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
-                                phần JobsGO. All Rights Reserved.</p>
+                                phần Rzcareer. All Rights Reserved.</p>
                         </div>
                         <div class="col-sm-2">
                             <div class="text-center">
@@ -1251,17 +1251,17 @@
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/online-gov.svg" alt="JobsGO" width="100"
+                                        data-src="/assets_livewire/teks/img/online-gov.svg" alt="Rzcareer" width="100"
                                         height="38">
 
                                 </a>
                                 <a target="_blank" rel="nofollow"
-                                    href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2Fjobsgo.vn%2Ftuyen-dung%2Fcong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
+                                    href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2FRzcareer.vn%2Ftuyen-dung%2Fcong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
                                     title="DMCA.com Protection Status" class="dmca-badge">
 
                                     <img class="lazy"
                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO" width="100"
+                                        data-src="/assets_livewire/teks/img/dmca.svg" alt="Rzcareer" width="100"
                                         height="21">
 
                                 </a>
@@ -1283,7 +1283,7 @@
             }
         </style>
         <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-            <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="jobsgo">
+            <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
         </a>
 
 
@@ -1295,13 +1295,13 @@
             }
             if (!localStorage.getItem("userCvBuilder")) {
                 localStorage.setItem("userCvBuilder", (
-                    '{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/jobsgo.vn\/uploads\/avatar\/202409\/2599835_20240925210030.jpg","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"jobsgo","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTk4MzUsInN1YiI6MjU5OTgzNSwiaWF0IjoxNzI3MzA1ODYzLCJleHAiOjE3Mjc1NjUwNjN9.HQx8DpR-0z1LRLkPuOm3o2DZXfXG66xRmMfU_oWKd8zBhB5l5m-X8_AfOap-70yZHrhTFRXg7HTnyAbAeYa48fSOocAtlbH8x30HlXUJQl7TyWxL0zd2ZoI5xGWQ0cJ--o4feGOtkLsCEluuMEHIMc48gTSsKbC-YxqTg8mZudh92OFK_xq8RfSk4KqvfmNeQnv7q2vBI7PLuV99X3nhQ1f2CvVU_eJ5spbPB8G1TRGmVwWQk_g_57TkpbOKW77KipYLq58byMn31wkU-qmMXsNBpohOF52ojrnrK0pscqPrVcm3oRVYQiGvKMO2-VsmPcVbIoA9ZozQdgHcQ86NVQ","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"1","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":"53","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"2","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'
+                    '{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2599835_20240925210030.jpg","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"Rzcareer","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTk4MzUsInN1YiI6MjU5OTgzNSwiaWF0IjoxNzI3MzA1ODYzLCJleHAiOjE3Mjc1NjUwNjN9.HQx8DpR-0z1LRLkPuOm3o2DZXfXG66xRmMfU_oWKd8zBhB5l5m-X8_AfOap-70yZHrhTFRXg7HTnyAbAeYa48fSOocAtlbH8x30HlXUJQl7TyWxL0zd2ZoI5xGWQ0cJ--o4feGOtkLsCEluuMEHIMc48gTSsKbC-YxqTg8mZudh92OFK_xq8RfSk4KqvfmNeQnv7q2vBI7PLuV99X3nhQ1f2CvVU_eJ5spbPB8G1TRGmVwWQk_g_57TkpbOKW77KipYLq58byMn31wkU-qmMXsNBpohOF52ojrnrK0pscqPrVcm3oRVYQiGvKMO2-VsmPcVbIoA9ZozQdgHcQ86NVQ","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"1","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":"53","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"2","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'
                     ));
             }
         </script>
 
         <!--<div class="maintenance-banner">
-  Để tăng chất lượng dịch vụ, JobsGO.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
+  Để tăng chất lượng dịch vụ, Rzcareer.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!
 </div>
 <style>
   .maintenance-banner {
@@ -1337,11 +1337,11 @@
         <script>
             window.addEventListener('load', function() {
                 $(function() {
-                    if (!getCookie('jobsgo-logged')) {
+                    if (!getCookie('Rzcareer-logged')) {
                         $.ajax({
                             url: "/api/logged?utm_source=&utm_medium=",
                             success: function(result) {
-                                setCookie('jobsgo-logged', 1, 1);
+                                setCookie('Rzcareer-logged', 1, 1);
                                 gtag('event', 'conversion', {
                                     'send_to': 'AW-10876503189/UpnvCOeNqcQDEJWJqcIo'
                                 });
@@ -1402,15 +1402,15 @@
         <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
             style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
             href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40"
-                src="/assets_livewire/teks/img/jobsgo-ai-robot.svg?v=1.2" alt="JobsGO AI"> </a>
+                src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
         <script>
             window.addEventListener('load', function() {
                 $(function() {
-                    if (!getCookie('jobsgo-cv-ai')) {
+                    if (!getCookie('Rzcareer-cv-ai')) {
                         //$('#cv-modal').modal('show');
                     }
                     $('#cv-modal').on('shown.bs.modal', function() {
-                        setCookie('jobsgo-cv-ai', 1, 365);
+                        setCookie('Rzcareer-cv-ai', 1, 365);
                         $('#cv-modal video').trigger('play');
                     });
 

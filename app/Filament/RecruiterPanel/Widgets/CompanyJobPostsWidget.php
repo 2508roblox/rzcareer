@@ -4,6 +4,7 @@ namespace App\Filament\RecruiterPanel\Widgets;
 
 use App\Models\JobPost;
 use App\Models\PostActivity;
+use App\Models\CompanyReview; // Import thêm model CompanyReview
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,9 @@ class CompanyJobPostsWidget extends BaseWidget
             $query->whereIn('company_id', $companyIds);
         })->count();
 
+        // Đếm số lượt đánh giá của các công ty thuộc về người dùng
+        $reviewCount = CompanyReview::whereIn('company_id', $companyIds)->count();
+
         return [
             Stat::make('Số bài đăng công việc', $jobPostCount)
                 ->description('Bài đăng của các công ty thuộc về bạn')
@@ -36,6 +40,11 @@ class CompanyJobPostsWidget extends BaseWidget
                 ->description('Số lượng ứng viên đã ứng tuyển vào các bài đăng')
                 ->icon('heroicon-o-user-group')
                 ->color('primary'),
+
+            Stat::make('Số lượt đánh giá', $reviewCount) // Thêm số lượt đánh giá
+                ->description('Các đánh giá của công ty thuộc về bạn')
+                ->icon('heroicon-o-star')
+                ->color('warning'),
         ];
     }
 }

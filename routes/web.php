@@ -10,6 +10,7 @@ use App\Livewire\Candidate\Dashboard;
 use App\Livewire\Candidate\EmployersViewed;
 use App\Livewire\Candidate\ImportCvData;
 use App\Livewire\Candidate\JobsApplied;
+use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;

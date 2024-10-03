@@ -4,6 +4,8 @@ namespace App\Providers\Filament;
 
 use App\Filament\RecruiterPanel\Pages\Auth\Register;
 use App\Filament\RecruiterPanel\Widgets\CompanyJobPostsWidget;
+use App\Filament\RecruiterPanel\Widgets\CompanyReviewChart;
+use App\Filament\RecruiterPanel\Widgets\PostActivityChart;
 use App\Http\Middleware\RecruiterAuthenticate;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -41,6 +43,8 @@ class RecruiterPanelPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/RecruiterPanel/Widgets'), for: 'App\\Filament\\RecruiterPanel\\Widgets')
             ->widgets([
                 CompanyJobPostsWidget::class,
+                CompanyReviewChart::class,
+                PostActivityChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,
