@@ -2,7 +2,7 @@
       <div class="container d-none d-lg-block">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" title="Jobs on the GO" class="d-flex me-4 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-            <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
+            <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -104,7 +104,7 @@
                 <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
               </ul>
             </li>
-          
+
           </ul>
 
           <style>
@@ -161,7 +161,7 @@
             <button type="button" class="btn rounded-2 text-capitalize dropdown-toggle text-primary border bg-f4f4f4" data-bs-toggle="dropdown">Nhà tuyển dụng</button>
             <ul class="dropdown-menu">
               <li><a target="_blank" class="dropdown-item" href="/employer/login">Đăng nhập</a></li>
-            
+
             </ul>
           </div>
         </div>
@@ -197,7 +197,7 @@
                       </div>
                   </span>
                   @endauth
-                  
+
               </a>
               <ul class="dropdown-menu text-small">
                 <style>
@@ -422,7 +422,7 @@
                       <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
                   </li>
-              
+
                 </ul>
                 <div class="vr d-none d-xl-block"></div>
                 <div class="d-none d-xl-block ms-sm-3 btn-group">

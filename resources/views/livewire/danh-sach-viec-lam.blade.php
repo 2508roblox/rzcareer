@@ -2405,7 +2405,7 @@
                                             class='bx bx-xs bxl-instagram'></i></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>searchJobs
                     <div class="row">
                         <div class="col-sm-10">
                             <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế

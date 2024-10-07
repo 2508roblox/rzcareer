@@ -719,7 +719,7 @@
                                                                 <a title="Xem thêm việc làm {{ $jobPost->career->career_name }}"
                                                                     href="{{ route('danh-sach-viec-lam', ['career_id' => $jobPost->career->id, 'keyword' => request('keyword'), 'location' => request('location')]) }}"
                                                                     class="heading-text text-blue-700">
-                                                                    Xem thêm 
+                                                                    Xem thêm
                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                                                         <path fill-rule="evenodd"
                                                                               d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -762,14 +762,14 @@
                                                 </div>
 
                                                 <!--<div class="box-comment hidden-xs"></div>
-                 <script>
-                     if (navigator.userAgent.indexOf("Lighthouse") == -1) {
-                         window.addEventListener('load', function() {
-                             $('.box-comment').html(
-                                 '<iframe src="/comments?jid=&eid=" width="100%" height="400px" frameborder="0"></iframe>');
-                         });
-                     }
-                 </script>-->
+                    <script>
+                        if (navigator.userAgent.indexOf("Lighthouse") == -1) {
+                            window.addEventListener('load', function() {
+                                $('.box-comment').html(
+                                    '<iframe src="/comments?jid=&eid=" width="100%" height="400px" frameborder="0"></iframe>');
+                            });
+                        }
+                    </script>-->
                                             </div>
                                         </div>
                                         <div class="col-sm-4 job-detail-col-2">
