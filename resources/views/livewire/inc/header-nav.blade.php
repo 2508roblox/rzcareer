@@ -42,9 +42,12 @@
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                                         <ul class="list-unstyled">
                                             @foreach(
-                                            App\Models\CommonCity::withCount('jobPosts') // Count related job posts
-                                            ->orderBy('job_posts_count', 'desc') // Sort by job posts count
-                                            ->limit(10) // Limit to top 10 cities
+                                            App\Models\CommonCity::whereHas('locations.jobPosts') 
+                                            ->withCount(['locations as job_posts_count' => function ($query) {
+                                            $query->whereHas('jobPosts');
+                                            }])
+                                            ->orderBy('job_posts_count', 'desc')
+                                            ->limit(10)
                                             ->get() as $city)
                                             <li>
                                                 <a class="dropdown-item"
@@ -97,22 +100,27 @@
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                         href="/cong-ty.html">
-                        <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
+                        <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
                     </a>
+                    @if (Auth::check())
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a></li>
-                        <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                        <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động Sản</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a></li>
+                        @php
+                        // Get the top 10 careers with the most companies
+                        $careers = App\Models\CommonCareer::withCount('companies')
+                        ->orderBy('companies_count', 'desc')
+                        ->take(10)
+                        ->get();
+                        @endphp
+                        @foreach($careers as $career)
+                        <li>
+                            <a class="dropdown-item"
+                                href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
+                                {{ $career->name }} ({{ $career->companies_count }} công ty)
+                            </a>
+                        </li>
+                        @endforeach
                     </ul>
+                    @endif
                 </li>
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"

@@ -29,6 +29,7 @@ class DanhSachViecLam extends Component
     public $is_urgent = false;
     public $isListVisible = false;
 
+
     public $sortField = 'created_at';
     public $sortDirection = 'desc';
     public $activeSort = '';
@@ -96,12 +97,13 @@ class DanhSachViecLam extends Component
     {
         $this->emitSelf('refresh');
     }
-
     public function sortBy($field)
     {
         if ($this->sortField === $field) {
+            // Đảo ngược thứ tự sắp xếp nếu trường giống nhau
             $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
         } else {
+            // Đặt trường mới và sắp xếp theo asc
             $this->sortField = $field;
             $this->sortDirection = 'asc';
         }
@@ -191,11 +193,8 @@ class DanhSachViecLam extends Component
                 return $query->where('position', 'like', '%' . $this->position . '%');
             })
             ->when($this->salary, function ($query) {
-                list($minSalary, $maxSalary) = explode('-', $this->salary);
-                return $query->where(function ($q) use ($minSalary, $maxSalary) {
-                    $q->where('salary_min', '>=', (int)$minSalary)
-                        ->where('salary_max', '<=', (int)$maxSalary);
-                });
+                return $query->where('salary_min', '<=', $this->salary)
+                    ->where('salary_max', '>=', $this->salary);
             })
             ->when($this->is_hot, function ($query) {
                 return $query->where('is_hot', true);

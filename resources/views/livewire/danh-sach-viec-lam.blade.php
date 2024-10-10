@@ -450,7 +450,8 @@
 
                                                                         <div class="fillters clearfix">
                                                                             <div class="teks-category dropdown "
-                                                                                title="Ngành nghề"> <button
+                                                                                title="Ngành nghề">
+                                                                                {{-- <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
@@ -466,11 +467,7 @@
                                                                                     ->limit(45)
                                                                                     ->get() as $career)
                                                                                     <li>
-                                                                                        {{-- <span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-career="{{ $career->name }}">
-                                                                                            {{$career->name}}
-                                                                                        </span> --}}
+
                                                                                         <a class="a accordion-toggle"
                                                                                             href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
                                                                                             {{ $career->name }}
@@ -479,7 +476,22 @@
 
                                                                                     @endforeach
 
-                                                                                </ul>
+                                                                                </ul> --}}
+
+                                                                                <select wire:model="career_id"
+                                                                                    class="btn btn-xs dropdown-toggle">
+                                                                                    <option value="">
+                                                                                        <i class="bx bxs-category"></i>
+                                                                                        Tất cả ngành nghề
+                                                                                    </option>
+                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
+                                                                                    'desc')->get() as $career_item)
+                                                                                    <option
+                                                                                        value="{{ $career_item->id }}">
+                                                                                        {{
+                                                                                        $career_item->name }}</option>
+                                                                                    @endforeach
+                                                                                </select>
 
                                                                             </div>
                                                                             <style>
@@ -492,7 +504,8 @@
                                                                                     font-weight: inherit
                                                                                 }
                                                                             </style>
-                                                                            <div class="dropdown " title="Loại hình">
+                                                                            <div class="dropdown " title="Ngành Nghề">
+
                                                                                 {{-- <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
@@ -514,7 +527,8 @@
                                                                                 <select wire:model.live="job_type"
                                                                                     class="btn btn-xs dropdown-toggle">
                                                                                     <i class="bx bx-briefcase"></i>
-                                                                                    <option value=""> Loại hình</option>
+                                                                                    <option value=""> Tất cả loại hình
+                                                                                    </option>
 
                                                                                     @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
                                                                                     as $jobType_item)
@@ -523,12 +537,12 @@
                                                                                         {{$jobType_item->job_type}}
                                                                                     </option>
                                                                                     @endforeach
-                                                                                  
+
                                                                                 </select>
 
                                                                             </div>
                                                                             <div class="dropdown " title="Mức lương">
-                                                                                <button
+                                                                                {{-- <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
@@ -542,10 +556,33 @@
                                                                                             data-href="/viec-lam-tai-chinh-ngan-hang.html?salary=0-5">Danh
                                                                                             sách lương...</span></li>
 
-                                                                                </ul>
+                                                                                </ul> --}}
+
+                                                                                <select wire:model="salary"
+                                                                                    class="btn btn-xs dropdown-toggle">
+                                                                                    <option value=""><i
+                                                                                            class="bx bx-money"></i>
+                                                                                        Tất cả mức lương</option>
+                                                                                    <option value="2000000">
+                                                                                        > 2 triệu</option>
+                                                                                    <option value="5000000">
+                                                                                        > 5triệu
+                                                                                    </option>
+                                                                                    <option value="10000000 ">
+                                                                                        > 10 triệu
+                                                                                    </option>
+                                                                                    <option value="14000000 "> > 14
+                                                                                        triệu
+                                                                                    </option>
+                                                                                    <option value="20000000 "> > 20
+                                                                                        triệu
+                                                                                    </option>
+                                                                                </select>
+
                                                                             </div>
+
                                                                             <div class="dropdown " title="Chức vụ">
-                                                                                <button
+                                                                                {{-- <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
@@ -560,7 +597,23 @@
                                                                                             sách vị trí công việc</span>
                                                                                     </li>
 
-                                                                                </ul>
+                                                                                </ul> --}}
+
+                                                                                <select wire:model.live="position"
+                                                                                    class="btn btn-xs dropdown-toggle">
+                                                                                    <option value=""> <i
+                                                                                            class="bx bx-user"></i> Chọn
+                                                                                        chức vụ</option>
+
+                                                                                    @foreach(App\Models\JobPost::select('position')->distinct()->get()
+                                                                                    as $position_item)
+                                                                                    <option
+                                                                                        value="{{$position_item->position}}">
+                                                                                        {{$position_item->position}}
+                                                                                    </option>
+                                                                                    @endforeach
+                                                                                </select>
+
                                                                             </div>
                                                                             <div class="dropdown " title="Kinh nghiệm">
                                                                                 <button
@@ -585,52 +638,11 @@
 
 
 
-                                                                <select wire:model="career_id">
-                                                                    <option value="">Chọn ngành nghề</option>
-                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
-                                                                    'desc')->get() as $career_item)
-                                                                    <option value="{{ $career_item->id }}">{{
-                                                                        $career_item->name }}</option>
-                                                                    @endforeach
-                                                                </select>
-
-                                                                @if ($career_id)
-                                                                <p>Ngành: {{$career_id}}</p>
-                                                                @else
-                                                                <p>Ngành: Chưa có ngành</p>
-                                                                @endif
 
                                                                 <!-- Dropdown cho Mức lương -->
-                                                                <select wire:model="salary">
-                                                                    <option value="">Chọn mức lương</option>
-                                                                    <option value="0 - 5000000 ">
-                                                                        < 5 triệu</option>
-                                                                    <option value="5000000 - 8000000 ">5 - 8 triệu
-                                                                    </option>
-                                                                    <option value="8000000 - 10000000 ">8 - 10 triệu
-                                                                    </option>
-                                                                    <option value="10000000 - 14000000 ">10 - 14 triệu
-                                                                    </option>
-                                                                </select>
-                                                                @if ($salary)
-                                                                <p>Mức lương: {{$salary}}</p>
-                                                                @endif
-
-                                                                <select wire:model.live="job_type">
-                                                                    <option value="">Chọn loại hình làm việc</option>
-                                                                    {{-- <option value="Full-time">Full-time</option>
-                                                                    --}}
-                                                                    @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
-                                                                    as $jobType_item)
-                                                                    <option value="{{$jobType_item->job_type}}">
-                                                                        {{$jobType_item->job_type}}</option>
-                                                                    @endforeach
 
 
-                                                                </select>
-                                                                @if ($job_type)
-                                                                <p>Loại: {{$job_type ?? "Chưa có loại"}}</p>
-                                                                @endif
+
 
                                                                 <select wire:model.live="type_of_workplace">
                                                                     <option value="">Chọn nơi hình làm việc</option>
@@ -649,21 +661,7 @@
                                                                 <p>Loại: {{$type_of_workplace}}</p>
                                                                 @endif
 
-                                                                <select wire:model.live="position">
-                                                                    <option value="">Chọn chức vụ</option>
 
-                                                                    @foreach(App\Models\JobPost::select('position')->distinct()->get()
-                                                                    as $position_item)
-                                                                    <option value="{{$position_item->position}}">
-                                                                        {{$position_item->position}}
-                                                                    </option>
-                                                                    @endforeach
-
-
-                                                                </select>
-                                                                @if ($position)
-                                                                <p>Chức vụ: {{$position}}</p>
-                                                                @endif
 
 
 
@@ -740,6 +738,7 @@
                                                                             <ul class="list list-inline list-unstyled">
                                                                                 <li><strong class="text-muted">Hiển thị
                                                                                         theo:</strong></li>
+
                                                                                 <li class="">
                                                                                     <span
                                                                                         class="a {{ $activeSort === 'relevance' ? 'active' : '' }}"
@@ -751,6 +750,7 @@
                                                                                         Phù hợp nhất
                                                                                     </span>
                                                                                 </li>
+
                                                                                 <li class="">
                                                                                     <span
                                                                                         class="a {{ $activeSort === 'created_at' ? 'active' : '' }}"
@@ -762,6 +762,7 @@
                                                                                         Việc mới đăng
                                                                                     </span>
                                                                                 </li>
+
                                                                                 <li class="">
                                                                                     <span
                                                                                         class="a {{ $activeSort === 'updated_at' ? 'active' : '' }}"
@@ -773,6 +774,7 @@
                                                                                         Mới cập nhật
                                                                                     </span>
                                                                                 </li>
+
                                                                                 <li class="">
                                                                                     <span
                                                                                         class="a {{ $activeSort === 'salary_min' ? 'active' : '' }}"
@@ -785,6 +787,7 @@
                                                                                     </span>
                                                                                 </li>
                                                                             </ul>
+
                                                                         </div>
                                                                     </div>
 
