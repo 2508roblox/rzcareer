@@ -39,9 +39,12 @@
                     <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                     <ul class="list-unstyled">
                       @foreach(
-                      App\Models\CommonCity::withCount('jobPosts') // Count related job posts
-                      ->orderBy('job_posts_count', 'desc') // Sort by job posts count
-                      ->limit(10) // Limit to top 10 cities
+                      App\Models\CommonCity::whereHas('locations.jobPosts') // Lọc những thành phố có job_posts
+                      ->withCount(['locations as job_posts_count' => function ($query) {
+                      $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                      }])
+                      ->orderBy('job_posts_count', 'desc')
+                      ->limit(10)
                       ->get() as $city)
                       <li>
                         <a class="dropdown-item"

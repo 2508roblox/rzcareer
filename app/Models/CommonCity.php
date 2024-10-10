@@ -13,4 +13,8 @@ class CommonCity extends Model
     {
         return $this->hasMany(JobPost::class, 'location_id'); // Assuming location_id references CommonLocation which references CommonCity
     }
+    public function locations()
+    {
+        return $this->hasMany(CommonLocation::class, 'city_id');
+    }
 }
