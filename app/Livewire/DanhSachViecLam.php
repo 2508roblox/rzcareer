@@ -8,7 +8,6 @@ use App\Models\JobPost;
 use Illuminate\Support\Facades\DB;
 use App\Models\CommonLocation;
 use App\Models\CommonCity;
-use App\Models\User;
 use App\Models\CommonDistrict;
 use Illuminate\Http\Request;
 

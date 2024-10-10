@@ -82,40 +82,42 @@
 
                 <div class="col-sm-12">
                   <ul class="list-group pb-2 pb-sm-3 list-group-horizontal">
+                    {{-- 1 Thành phố có nhiều jobpost nhất --}}
+                    @php
+                    $cityWithMostJobPosts = App\Models\CommonCity::whereHas('locations.jobPosts')
+                    ->withCount(['locations as job_posts_count' => function ($query) {
+                    $query->whereHas('jobPosts'); // Lọc job posts cho các locations
+                    }])
+                    ->orderBy('job_posts_count', 'desc') // Sắp xếp theo số lượng job posts
+                    ->first(); // Lấy thành phố đầu tiên (nhiều job posts nhất)
+                    @endphp
+
                     <li class="list-group-item location">
-                      <a title="Việc làm tại Hà Nội" href="/viec-lam-tai-ha-noi.html" class="list-group-item-action"><i
-                          class="bx bx-map text-danger"></i> Việc tại Hà Nội</a>
+                      <a title="Việc làm tại{{ $cityWithMostJobPosts->name }}"
+                        href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $cityWithMostJobPosts->name, 'career_id' => '']) }}"
+                        class="list-group-item-action"><i class="bx bx-map text-danger"></i> Việc tại {{
+                        $cityWithMostJobPosts->name
+                        }}</a>
                     </li>
+
+                    {{-- top 5 career có nhiều jobpost và ứng tuyển --}}
+
+                    @foreach(
+                    App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                    ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                    ->limit(5) // Limit to top 10 careers
+                    ->get() as $career)
+
                     <li class="list-group-item">
-                      <a title="Việc làm Kinh Doanh" href="/viec-lam-kinh-doanh.html"
+                      <a title="Việc làm {{ $career->name }}"
+                        href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
                         class="list-group-item-action"><img height="15" width="15" loading="lazy"
-                          src="/assets_livewire/teks/img/ic-kinh-doanh.svg?v=234208153092" alt="Việc làm Kinh Doanh">
-                        Kinh Doanh</a>
+                          src="/assets_livewire/teks/img/ic-nhan-su.svg?v=234208153092"
+                          alt="Việc làm {{ $career->name }}"> {{ $career->name }}</a>
                     </li>
-                    <li class="list-group-item">
-                      <a title="Việc làm Kế Toán" href="/viec-lam-ke-toan.html" class="list-group-item-action"><img
-                          height="15" width="15" loading="lazy"
-                          src="/assets_livewire/teks/img/ic-ke-toan.svg?v=234208153092" alt="Việc làm Kế Toán"> Kế
-                        Toán</a>
-                    </li>
-                    <li class="list-group-item">
-                      <a title="Việc làm Công Nghệ Thông Tin" href="/viec-lam-cong-nghe-thong-tin.html"
-                        class="list-group-item-action"><img height="15" width="15" loading="lazy"
-                          src="/assets_livewire/teks/img/ic-cong-nghe-thong-tin.svg?v=234208153092"
-                          alt="Việc làm Công Nghệ Thông Tin"> Công Nghệ Thông Tin</a>
-                    </li>
-                    <li class="list-group-item">
-                      <a title="Việc làm Kỹ Thuật" href="/viec-lam-ky-thuat.html" class="list-group-item-action"><img
-                          height="15" width="15" loading="lazy"
-                          src="/assets_livewire/teks/img/ic-ky-thuat.svg?v=234208153092" alt="Việc làm Kỹ Thuật"> Kỹ
-                        Thuật</a>
-                    </li>
-                    <li class="list-group-item">
-                      <a title="Việc làm Nhân Sự" href="/viec-lam-nhan-su.html" class="list-group-item-action"><img
-                          height="15" width="15" loading="lazy"
-                          src="/assets_livewire/teks/img/ic-nhan-su.svg?v=234208153092" alt="Việc làm Nhân Sự"> Nhân
-                        Sự</a>
-                    </li>
+                    @endforeach
+
+
                   </ul>
 
                 </div>
@@ -539,8 +541,8 @@
     <div class="teks-section">
       <div class="teks-section-title">
         <h2 class="h3">Ngành nghề nổi bật</h2>
-        <a href="/nganh-nghe.html">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            fill="currentColor" class="size-6">
+        <a href="{{ route('danh-sach-nganh-nghe')}}">Xem thêm <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path fill-rule="evenodd"
               d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
               clip-rule="evenodd" />

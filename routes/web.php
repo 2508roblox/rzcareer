@@ -16,6 +16,7 @@ use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
+use App\Livewire\DanhSachNganhNghe;
 use App\Livewire\DocumentAttachment;
 use App\Livewire\Employer\CandidateList;
 use App\Livewire\Employer\Candidates;
@@ -41,6 +42,7 @@ Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/tuyen-dung/{slug}', TuyenDung::class);
     Route::get('/cong-ty', CongTy::class);
     Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
+    Route::get('/danh-sach-nganh-nghe', DanhSachNganhNghe::class)->name('danh-sach-nganh-nghe');
 });
 Route::middleware(CheckAuth::class)->group(function () {
     Route::get('/cong-ty', CongTy::class);
