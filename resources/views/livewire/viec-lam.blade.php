@@ -104,7 +104,7 @@
                     <script defer src="/assets_livewire/static/assets/js/javascript.min.js?v=234208153092"></script>
                     <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
-                  
+
 
                     <style>
                         .status_on {
@@ -282,7 +282,7 @@
                                                         </div>
                                                     </div>
 
-                                               
+
 
                                                     <div class="page-header page-header-default mb-5">
                                                         <div class="breadcrumb-line mt-10">
@@ -361,7 +361,7 @@
                                                                         class="btn bg-blue btn-apply-now btn-apply "><i
                                                                             class="glyphicon glyphicon-send"></i> Ứng
                                                                         tuyển ngay</a>
-                                                                 
+
                                                                 </li>
 
 
@@ -372,7 +372,7 @@
                                                                         Lưu lại
                                                                     </a>
                                                                 </li>
-                                                                
+
                                                                 <li class="mt-5 256138397"><a
                                                                         href="https://www.facebook.com/sharer/sharer.php?u={{ (url()->current()) }}"
                                                                         class="btn btn-default "
@@ -591,7 +591,7 @@
                                                                 <a title="Xem thêm việc làm {{ $jobPost->career->career_name }}"
                                                                     href="{{ route('danh-sach-viec-lam', ['career_id' => $jobPost->career->id, 'keyword' => request('keyword'), 'location' => request('location')]) }}"
                                                                     class="heading-text text-blue-700">
-                                                                    Xem thêm 
+                                                                    Xem thêm
                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                                                         <path fill-rule="evenodd"
                                                                               d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -632,7 +632,7 @@
                                                     </div>
 
                                                 </div>
- 
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4 job-detail-col-2">
@@ -925,7 +925,7 @@
                             </div>
                         </div>
                     </section>
-                
+
 
                     <div id="preApplyForm" class="modal">
                         <div class="modal-dialog modal-sm">
@@ -961,7 +961,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="confirmApplyForm" class="modal">
                         <div class="modal-dialog modal-md">
                             <div class="modal-content">
@@ -1006,7 +1006,7 @@
                             }
                         }
                     </style>
- 
+
 
 
                     <div id="multiCvForm" class="modal">
@@ -1344,12 +1344,12 @@
                     </a>
 
 
-        
+
                     <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với JobsGO "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>
-                
+
 
                 </body>
 

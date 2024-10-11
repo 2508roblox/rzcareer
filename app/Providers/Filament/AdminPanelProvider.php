@@ -69,7 +69,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 \Hasnayeen\Themes\ThemesPlugin::make(),
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
-                 
+
             ])
         ;
     }

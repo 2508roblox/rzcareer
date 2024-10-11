@@ -88,7 +88,7 @@
                     "target": "https://Rzcareer.vn/viec-lam.html?k={search_term_string}",
                     "query-input": "required name=search_term_string"
                 }
-            } 
+            }
                     </script>
 
 
@@ -2587,168 +2587,144 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                            title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế
-                                                            Toán</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                            title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                            title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                                    <li><a href="/viec-lam-marketing.html"
-                                                            title="Việc làm Marketing">Marketing</a></li>
-                                                    <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây
-                                                            Dựng</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài
-                                                            Xế</a></li>
-                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất
-                                                            cả
-                                                            <b>»</b></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-thuc-tap-sinh.html"
-                                                            title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
-                                                    <li><a href="/viec-lam-tro-ly-giam-doc.html"
-                                                            title="Việc làm Trợ Lý">Trợ
-                                                            Lý</a></li>
-                                                    <li><a href="/viec-lam-nhan-vien-van-phong.html"
-                                                            title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
-                                                    <li><a href="/viec-lam-truong-phong.html"
-                                                            title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
-                                                    <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám
-                                                            đốc</a>
-                                                    </li>
-                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem
-                                                            tất cả
-                                                            <b>»</b></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo loại hình">Việc theo loại hình</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-part-time.html"
-                                                            title="Việc làm Part-time">Part-time</a></li>
-                                                    <li><a href="/viec-lam-online.html"
-                                                            title="Việc làm Online">Online</a></li>
-                                                    <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời
-                                                            vụ</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-remote.html"
-                                                            title="Việc làm Remote">Remote</a></li>
-                                                </ul>
-                                                <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/RzcareerVN/"
-                                                            target="_blank"><i class='bx bx-xs bxl-facebook'></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.linkedin.com/company/josbgo.vn/"
-                                                            target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.instagram.com/Rzcareer_vn/"
-                                                            target="_blank"><i class='bx bx-xs bxl-instagram'></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                            <div class="footer-widget">
+                                <div class="widgettitle widget-title text-dark fw-bold"
+                                    title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
+                                <div class="textwidget">
+                                    <ul class="footer-navigation list-unstyled">
+                                        <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
+                                                title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a></li>
+                                        <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế Toán</a>
+                                        </li>
+                                        <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
+                                                title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a></li>
+                                        <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
+                                                title="Việc làm Kinh doanh">Kinh Doanh</a></li>
+                                        <li><a href="/viec-lam-marketing.html"
+                                                title="Việc làm Marketing">Marketing</a></li>
+                                        <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây Dựng</a>
+                                        </li>
+                                        <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài Xế</a></li>
+                                        <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất cả
+                                                <b>»</b></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="copyright">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-sm-10">
-                                        <ul class="list-inline list-unstyled mb-1 text-primary">
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://Rzcareer.vn/site/about-us"
-                                                    title="Về chúng tôi"><u>Giới
-                                                        thiệu</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
-                                                    title="Chính sách"><u>Chính sách</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
-                                                    title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://Rzcareer.vn/site/giai-quyet-tranh-chap"
-                                                    title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                            <!--<li><a href="https://Rzcareer.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2FRzcareer.vn%2FRzcareer_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
-                                                        thuận sử dụng</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://Rzcareer.vn/site/privacy-policy"
-                                                    title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://employer.Rzcareer.vn"
-                                                    title="Rzcareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
-                                                        cho Nhà Tuyển
-                                                        Dụng</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://Rzcareer.vn/site/faq"
-                                                    title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                            <li class="list-inline-item"><a href="https://Rzcareer.vn/blog"
-                                                    target="_blank" title="Tin tức"><u>Blog</u></a></li>
-                                            <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi"
-                                                    target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                            <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html"
-                                                    title="Sơ đồ trang web"><u>Sitemap</u></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-sm-2">
-                                        <ul
-                                            class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/RzcareerVN/" target="_blank"><i
-                                                        class='bx bx-xs bxl-facebook'></i></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.linkedin.com/company/josbgo.vn/"
-                                                    target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i
-                                                        class='bx bx-xs bxl-instagram'></i></a></li>
-                                        </ul>
-                                    </div>
+                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                            <div class="footer-widget">
+                                <div class="widgettitle widget-title text-dark fw-bold"
+                                    title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
+                                <div class="textwidget">
+                                    <ul class="footer-navigation list-unstyled">
+                                        <li><a href="/viec-lam-thuc-tap-sinh.html"
+                                                title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
+                                        <li><a href="/viec-lam-tro-ly-giam-doc.html" title="Việc làm Trợ Lý">Trợ
+                                                Lý</a></li>
+                                        <li><a href="/viec-lam-nhan-vien-van-phong.html"
+                                                title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
+                                        <li><a href="/viec-lam-truong-phong.html"
+                                                title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
+                                        <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám đốc</a>
+                                        </li>
+                                        <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem tất cả
+                                                <b>»</b></a></li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018
-                                            do Sở Kế
-                                            hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội
-                                            trên mạng số
-                                            568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> ©
-                                            2024 Công ty Cổ
-                                            phần Rzcareer. All Rights Reserved.</p>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="text-center">
-                                            <a target="_blank" rel="nofollow"
-                                                href="http://online.gov.vn/Home/WebDetails/73770">
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                            <div class="footer-widget">
+                                <div class="widgettitle widget-title text-dark fw-bold"
+                                    title="Việc làm theo loại hình">Việc theo loại hình</div>
+                                <div class="textwidget">
+                                    <ul class="footer-navigation list-unstyled">
+                                        <li><a href="/viec-lam-part-time.html"
+                                                title="Việc làm Part-time">Part-time</a></li>
+                                        <li><a href="/viec-lam-online.html" title="Việc làm Online">Online</a></li>
+                                        <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời vụ</a>
+                                        </li>
+                                        <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
+                                    </ul>
+                                    <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
+                                        <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
+                                                target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
+                                        <li class="list-inline-item"><a
+                                                href="https://www.linkedin.com/company/josbgo.vn/"
+                                                target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
+                                        <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
+                                                target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-10">
+                            <ul class="list-inline list-unstyled mb-1 text-primary">
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
+                                            thiệu</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
+                                        title="Chính sách"><u>Chính sách</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
+                                        title="Quy chế hoạt động"><u>Quy chế</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
+                                        title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
+                                <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
+                                            thuận sử dụng</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://jobsgo.vn/site/privacy-policy"
+                                        title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                        href="https://employer.jobsgo.vn"
+                                        title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
+                                            Dụng</u></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq"
+                                        title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
+                                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
+                                        title="Tin tức"><u>Blog</u></a></li>
+                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
+                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
+                                        title="Sơ đồ trang web"><u>Sitemap</u></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                            class='bx bx-xs bxl-facebook'></i></a></li>
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
+                                            class='bx bx-xs bxl-linkedin'></i></a></li>
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
+                                            class='bx bx-xs bxl-instagram'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
+                                hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
+                                568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
+                                phần JobsGO. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-center">
+                                <a target="_blank" rel="nofollow"
+                                    href="http://online.gov.vn/Home/WebDetails/73770">
 
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
