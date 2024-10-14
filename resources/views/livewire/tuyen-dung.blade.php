@@ -1057,7 +1057,9 @@
 
 
         </section>
-        <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+        @livewire('employer.inc.footer')
+
+        {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
             <div class="no-padding">
                 <div class="container">
                     <div class="row">
@@ -1271,7 +1273,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
         <style>
             .zalo-chat-widget {
                 left: initial !important;

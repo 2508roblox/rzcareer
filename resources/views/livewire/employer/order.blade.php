@@ -54,13 +54,13 @@
         <script src="/employer_assets/assets/layout/js/main.js?v=1.11"></script>
         <script type="text/javascript"
             src="https://employer.jobsgo.vn//bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
-      
+
         <meta name="title" content="Chọn mua gói dịch vụ">
     </head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF1S8QMFVR"></script>
     <script>
-        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FF1S8QMFVR'); 
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FF1S8QMFVR');
     </script>
     </head>
 
@@ -1739,7 +1739,9 @@
         </style>
         <!--end: content-->
         <!--begin: footer-->
-        <footer class="footer clearfix">
+        @livewire('employer.inc.footer')
+
+        {{-- <footer class="footer clearfix">
             <div class="footer-top">
                 <div class="container">
                     <div class="row row-2">
@@ -1846,7 +1848,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
         <script>
             $(document).ready(function(){
           var utmSource = '';

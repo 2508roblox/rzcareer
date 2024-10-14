@@ -10,16 +10,16 @@
                 <head>
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
                         type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
-                        type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font"
-                        type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font"
-                        type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font"
-                        type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
-                        type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2"
+                        as="font" type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2"
+                        as="font" type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2"
+                        as="font" type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2"
+                        as="font" type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2"
+                        as="font" type="font/woff2" crossorigin>
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font"
                         type="font/woff2" crossorigin>
                     <link href="/assets_livewire/teks/css/icons.min.css?v=2342081531001" rel="stylesheet">
@@ -72,9 +72,7 @@
                         href="/assets_livewire/static/assets/css/fonts/glyphicons-halflings-regular.woff2">
                     <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/style.min.css?v=2342081531001">
-                    <script defer
-                        src="/assets_livewire/static/assets/assets_livewire/js/javascript.min.js?v=2342081531001">
-                    </script>
+                    <script defer src="/assets_livewire/static/assets/assets_livewire/js/javascript.min.js?v=2342081531001"></script>
                     <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ">
                     </script>
 
@@ -95,13 +93,13 @@
                     <script>
                         window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
 
-            gtag('js', new Date());
-            gtag('config', 'G-EHD5KK9TRQ');
-            gtag('config', 'AW-10876503189');
+                        gtag('js', new Date());
+                        gtag('config', 'G-EHD5KK9TRQ');
+                        gtag('config', 'AW-10876503189');
                     </script>
 
                     <style>
@@ -116,14 +114,14 @@
                     <script>
                         window.addEventListener('load', function() {
 
-                $(function() {
+                            $(function() {
 
-                    if ($(window).width() < 768) {
-                        $('#jobRole').attr('placeholder', 'Từ khóa...');
-                        $('#jobPlace').attr('placeholder', 'Địa điểm...');
-                    }
-                })
-            });
+                                if ($(window).width() < 768) {
+                                    $('#jobRole').attr('placeholder', 'Từ khóa...');
+                                    $('#jobPlace').attr('placeholder', 'Địa điểm...');
+                                }
+                            })
+                        });
                     </script>
                     <link href="/assets_livewire/css/custom.css?v=1727433676" rel="stylesheet">
                 </head>
@@ -131,7 +129,8 @@
                 <body class="page-job-tagvn ">
 
                     <a class="hide smart-banner-bk" target="_blank"
-                        href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500" height="100"
+                        href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500"
+                            height="100"
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
                             alt="Tải app Rzcareer" src="/media/img/500x100-banner-1.gif"
                             class="img-responsive lazy"></a>
@@ -272,26 +271,25 @@
                                                                                                     id="jobPlace"
                                                                                                     placeholder="Tỉnh/thành, quận...">
                                                                                                 @if ($isListVisible)
-                                                                                                <div class="easy-autocomplete-container"
-                                                                                                    id="eac-container-jobPlace">
-                                                                                                    <ul
-                                                                                                        style="display : block">
-                                                                                                        @foreach($listLocation
-                                                                                                        as $loc)
-                                                                                                        <li wire:click="selectLocation('{{ $loc->district->name }} - {{ $loc->city->name }}')"
-                                                                                                            class="cursor-pointer">
-                                                                                                            <div
-                                                                                                                class="eac-item">
-                                                                                                                {{$loc->district->name}}
-                                                                                                                -
-                                                                                                                {{$loc->city->name}}
-                                                                                                            </div>
-                                                                                                        </li>
-                                                                                                        @endforeach
+                                                                                                    <div class="easy-autocomplete-container"
+                                                                                                        id="eac-container-jobPlace">
+                                                                                                        <ul
+                                                                                                            style="display : block">
+                                                                                                            @foreach ($listLocation as $loc)
+                                                                                                                <li wire:click="selectLocation('{{ $loc->district->name }} - {{ $loc->city->name }}')"
+                                                                                                                    class="cursor-pointer">
+                                                                                                                    <div
+                                                                                                                        class="eac-item">
+                                                                                                                        {{ $loc->district->name }}
+                                                                                                                        -
+                                                                                                                        {{ $loc->city->name }}
+                                                                                                                    </div>
+                                                                                                                </li>
+                                                                                                            @endforeach
 
-                                                                                                    </ul>
+                                                                                                        </ul>
 
-                                                                                                </div>
+                                                                                                    </div>
                                                                                                 @endif
                                                                                             </div>
 
@@ -313,7 +311,7 @@
 
                                                                                     <div>
                                                                                         <!-- Display job posts -->
-                                                                                        {{-- @foreach($jobPosts as $job)
+                                                                                        {{-- @foreach ($jobPosts as $job)
                                                                                         <div class="job-post">
                                                                                             <h4>{{ $job->job_name }}
                                                                                             </h4>
@@ -339,102 +337,102 @@
 
                                                                 <script>
                                                                     function onlyUnique(n, e, i) {
-                                                            return i.indexOf(n) === e
-                                                        }
-
-                                                        function cleanArray(actual) {
-                                                            var newArray = new Array();
-                                                            for (var i = 0; i < actual.length; i++) {
-                                                                if (actual[i]) {
-                                                                    newArray.push(actual[i]);
-                                                                }
-                                                            }
-                                                            return newArray;
-                                                        }
-
-                                                        function jobRoleSearch(t) {
-                                                            if (t.getAttribute('data-val').includes('tại')) {
-                                                                var a = t.getAttribute('data-val').split(" tại ");
-                                                                document.getElementById("jobRole").value = a[0];
-                                                                document.getElementById("jobPlace").value = a[1];
-                                                            } else {
-                                                                document.getElementById("jobRole").value = t.getAttribute('data-val');
-                                                            }
-                                                        }
-
-                                                        function jobPlaceSearch(t) {
-                                                            document.getElementById("jobPlace").value = t.getAttribute('data-val');
-                                                        }
-
-                                                        window.addEventListener('load', function() {
-                                                            $(function() {
-                                                                /**/
-                                                                $("#jobRole,#jobPlace").on("focus", function() {
-                                                                    $('.colorgb-search').addClass('show');
-                                                                    $('.colorgb-place').addClass('show');
-                                                                    $('.colorgb-salary').addClass('show');
-                                                                    $('.colorgb-submit').addClass('show');
-                                                                });
-                                                                var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
-                                                                if (kws) {
-                                                                    kws = kws.reverse();
-                                                                }
-                                                                kws = kws ? kws : [];
-
-                                                                kws.push('Tài Chính/Ngân Hàng');
-                                                                kws = kws.filter(onlyUnique);
-                                                                kws = cleanArray(kws);
-                                                                kws = kws.reverse();
-                                                                kws = kws.slice(0, 6);
-                                                                localStorage.setItem('Rzcareer-candidate-skl', JSON.stringify(kws));
-
-                                                                if (kws.length > 0) {
-                                                                    var html =
-                                                                        '<div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20"><div class="mrg-bot-5 h4"> Tìm kiếm gần đây<a href="javascript:void(0)" class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div><ul class="sidebar-list expandible-bk">';
-                                                                    var count = kws.length > 6 ? 6 : kws.length; /**/
-                                                                    for (var i = 0; i < count; i++) {
-                                                                        html += '<li><a rel="nofollow" title="Việc làm ' + kws[i] +
-                                                                            '" href="https://Rzcareer.vn/viec-lam-' + colorgbSlug(kws[i]) +
-                                                                            '.html"> <h2 class="txt">' + kws[i] + '</h2> </a></li>';
+                                                                        return i.indexOf(n) === e
                                                                     }
-                                                                    html += '</ul></div>';
-                                                                    $('.blog-sidebar').prepend(html); /**/
-                                                                    $('#jobRole').focus(function() {
-                                                                        var kw = '';
-                                                                        var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
-                                                                        var count = kws.length > 10 ? 10 : kws.length;
-                                                                        for (var i = 0; i < count; i++) {
-                                                                            kw += '<li onclick="jobRoleSearch(this)" data-val="' + kws[i] +
-                                                                                '"><div class="eac-item">' + kws[i] + '</div></li>';
-                                                                        }
-                                                                        $('#eac-container-jobRole ul').html(kw).show();
-                                                                    });
-                                                                }
 
-                                                                var pl = JSON.parse(localStorage.getItem('Rzcareer-candidate-search-place-log'));
-                                                                pl = pl ? pl : [];
-                                                                pl.push('');
-                                                                pl = pl.filter(onlyUnique);
-                                                                pl = cleanArray(pl);
-                                                                pl = pl.reverse();
-                                                                localStorage.setItem('Rzcareer-candidate-search-place-log', JSON.stringify(pl));
-
-                                                                if (pl) {
-                                                                    var count = kws.length > 10 ? 10 : kws.length; /**/
-                                                                    $('#jobPlace').focus(function() {
-                                                                        var p = '';
-                                                                        var pl = JSON.parse(localStorage.getItem(
-                                                                            'Rzcareer-candidate-search-place-log'));
-                                                                        var count = pl.length > 10 ? 10 : pl.length;
-                                                                        for (var i = 0; i < count; i++) {
-                                                                            p += '<li onclick="jobPlaceSearch(this)" data-val="' + pl[i] +
-                                                                                '"><div class="eac-item">' + pl[i] + '</div></li>';
+                                                                    function cleanArray(actual) {
+                                                                        var newArray = new Array();
+                                                                        for (var i = 0; i < actual.length; i++) {
+                                                                            if (actual[i]) {
+                                                                                newArray.push(actual[i]);
+                                                                            }
                                                                         }
-                                                                        $('#eac-container-jobPlace ul').html(p).show();
+                                                                        return newArray;
+                                                                    }
+
+                                                                    function jobRoleSearch(t) {
+                                                                        if (t.getAttribute('data-val').includes('tại')) {
+                                                                            var a = t.getAttribute('data-val').split(" tại ");
+                                                                            document.getElementById("jobRole").value = a[0];
+                                                                            document.getElementById("jobPlace").value = a[1];
+                                                                        } else {
+                                                                            document.getElementById("jobRole").value = t.getAttribute('data-val');
+                                                                        }
+                                                                    }
+
+                                                                    function jobPlaceSearch(t) {
+                                                                        document.getElementById("jobPlace").value = t.getAttribute('data-val');
+                                                                    }
+
+                                                                    window.addEventListener('load', function() {
+                                                                        $(function() {
+                                                                            /**/
+                                                                            $("#jobRole,#jobPlace").on("focus", function() {
+                                                                                $('.colorgb-search').addClass('show');
+                                                                                $('.colorgb-place').addClass('show');
+                                                                                $('.colorgb-salary').addClass('show');
+                                                                                $('.colorgb-submit').addClass('show');
+                                                                            });
+                                                                            var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
+                                                                            if (kws) {
+                                                                                kws = kws.reverse();
+                                                                            }
+                                                                            kws = kws ? kws : [];
+
+                                                                            kws.push('Tài Chính/Ngân Hàng');
+                                                                            kws = kws.filter(onlyUnique);
+                                                                            kws = cleanArray(kws);
+                                                                            kws = kws.reverse();
+                                                                            kws = kws.slice(0, 6);
+                                                                            localStorage.setItem('Rzcareer-candidate-skl', JSON.stringify(kws));
+
+                                                                            if (kws.length > 0) {
+                                                                                var html =
+                                                                                    '<div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20"><div class="mrg-bot-5 h4"> Tìm kiếm gần đây<a href="javascript:void(0)" class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div><ul class="sidebar-list expandible-bk">';
+                                                                                var count = kws.length > 6 ? 6 : kws.length; /**/
+                                                                                for (var i = 0; i < count; i++) {
+                                                                                    html += '<li><a rel="nofollow" title="Việc làm ' + kws[i] +
+                                                                                        '" href="https://Rzcareer.vn/viec-lam-' + colorgbSlug(kws[i]) +
+                                                                                        '.html"> <h2 class="txt">' + kws[i] + '</h2> </a></li>';
+                                                                                }
+                                                                                html += '</ul></div>';
+                                                                                $('.blog-sidebar').prepend(html); /**/
+                                                                                $('#jobRole').focus(function() {
+                                                                                    var kw = '';
+                                                                                    var kws = JSON.parse(localStorage.getItem('Rzcareer-candidate-skl'));
+                                                                                    var count = kws.length > 10 ? 10 : kws.length;
+                                                                                    for (var i = 0; i < count; i++) {
+                                                                                        kw += '<li onclick="jobRoleSearch(this)" data-val="' + kws[i] +
+                                                                                            '"><div class="eac-item">' + kws[i] + '</div></li>';
+                                                                                    }
+                                                                                    $('#eac-container-jobRole ul').html(kw).show();
+                                                                                });
+                                                                            }
+
+                                                                            var pl = JSON.parse(localStorage.getItem('Rzcareer-candidate-search-place-log'));
+                                                                            pl = pl ? pl : [];
+                                                                            pl.push('');
+                                                                            pl = pl.filter(onlyUnique);
+                                                                            pl = cleanArray(pl);
+                                                                            pl = pl.reverse();
+                                                                            localStorage.setItem('Rzcareer-candidate-search-place-log', JSON.stringify(pl));
+
+                                                                            if (pl) {
+                                                                                var count = kws.length > 10 ? 10 : kws.length; /**/
+                                                                                $('#jobPlace').focus(function() {
+                                                                                    var p = '';
+                                                                                    var pl = JSON.parse(localStorage.getItem(
+                                                                                        'Rzcareer-candidate-search-place-log'));
+                                                                                    var count = pl.length > 10 ? 10 : pl.length;
+                                                                                    for (var i = 0; i < count; i++) {
+                                                                                        p += '<li onclick="jobPlaceSearch(this)" data-val="' + pl[i] +
+                                                                                            '"><div class="eac-item">' + pl[i] + '</div></li>';
+                                                                                    }
+                                                                                    $('#eac-container-jobPlace ul').html(p).show();
+                                                                                });
+                                                                            }
+                                                                        })
                                                                     });
-                                                                }
-                                                            })
-                                                        });
                                                                 </script>
                                                             </div>
                                                         </div>
@@ -461,11 +459,7 @@
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    @foreach(
-                                                                                    App\Models\CommonCareer::withCount('jobPosts')
-                                                                                    ->orderBy('job_posts_count', 'desc')
-                                                                                    ->limit(45)
-                                                                                    ->get() as $career)
+                                                                                    @foreach (App\Models\CommonCareer::withCount('jobPosts')->orderBy('job_posts_count', 'desc')->limit(45)->get() as $career)
                                                                                     <li>
 
                                                                                         <a class="a accordion-toggle"
@@ -484,12 +478,11 @@
                                                                                         <i class="bx bxs-category"></i>
                                                                                         Tất cả ngành nghề
                                                                                     </option>
-                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
-                                                                                    'desc')->get() as $career_item)
-                                                                                    <option
-                                                                                        value="{{ $career_item->id }}">
-                                                                                        {{
-                                                                                        $career_item->name }}</option>
+                                                                                    @foreach (App\Models\CommonCareer::withCount('jobPosts')->orderBy('id', 'desc')->get() as $career_item)
+                                                                                        <option
+                                                                                            value="{{ $career_item->id }}">
+                                                                                            {{ $career_item->name }}
+                                                                                        </option>
                                                                                     @endforeach
                                                                                 </select>
 
@@ -527,15 +520,15 @@
                                                                                 <select wire:model.live="job_type"
                                                                                     class="btn btn-xs dropdown-toggle">
                                                                                     <i class="bx bx-briefcase"></i>
-                                                                                    <option value=""> Tất cả loại hình
+                                                                                    <option value=""> Tất cả loại
+                                                                                        hình
                                                                                     </option>
 
-                                                                                    @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
-                                                                                    as $jobType_item)
-                                                                                    <option
-                                                                                        value="{{$jobType_item->job_type}}">
-                                                                                        {{$jobType_item->job_type}}
-                                                                                    </option>
+                                                                                    @foreach (App\Models\JobPost::select('job_type')->distinct()->get() as $jobType_item)
+                                                                                        <option
+                                                                                            value="{{ $jobType_item->job_type }}">
+                                                                                            {{ $jobType_item->job_type }}
+                                                                                        </option>
                                                                                     @endforeach
 
                                                                                 </select>
@@ -602,20 +595,21 @@
                                                                                 <select wire:model.live="position"
                                                                                     class="btn btn-xs dropdown-toggle">
                                                                                     <option value=""> <i
-                                                                                            class="bx bx-user"></i> Chọn
+                                                                                            class="bx bx-user"></i>
+                                                                                        Chọn
                                                                                         chức vụ</option>
 
-                                                                                    @foreach(App\Models\JobPost::select('position')->distinct()->get()
-                                                                                    as $position_item)
-                                                                                    <option
-                                                                                        value="{{$position_item->position}}">
-                                                                                        {{$position_item->position}}
-                                                                                    </option>
+                                                                                    @foreach (App\Models\JobPost::select('position')->distinct()->get() as $position_item)
+                                                                                        <option
+                                                                                            value="{{ $position_item->position }}">
+                                                                                            {{ $position_item->position }}
+                                                                                        </option>
                                                                                     @endforeach
                                                                                 </select>
 
                                                                             </div>
-                                                                            <div class="dropdown " title="Kinh nghiệm">
+                                                                            <div class="dropdown "
+                                                                                title="Kinh nghiệm">
                                                                                 <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
@@ -645,20 +639,20 @@
 
 
                                                                 <select wire:model.live="type_of_workplace">
-                                                                    <option value="">Chọn nơi hình làm việc</option>
-
-                                                                    @foreach(App\Models\JobPost::select('type_of_workplace')->distinct()->get()
-                                                                    as $workplace_item)
-                                                                    <option
-                                                                        value="{{$workplace_item->type_of_workplace}}">
-                                                                        {{$workplace_item->type_of_workplace}}
+                                                                    <option value="">Chọn nơi hình làm việc
                                                                     </option>
+
+                                                                    @foreach (App\Models\JobPost::select('type_of_workplace')->distinct()->get() as $workplace_item)
+                                                                        <option
+                                                                            value="{{ $workplace_item->type_of_workplace }}">
+                                                                            {{ $workplace_item->type_of_workplace }}
+                                                                        </option>
                                                                     @endforeach
 
 
                                                                 </select>
                                                                 @if ($type_of_workplace)
-                                                                <p>Loại: {{$type_of_workplace}}</p>
+                                                                    <p>Loại: {{ $type_of_workplace }}</p>
                                                                 @endif
 
 
@@ -675,7 +669,8 @@
                                                                             itemtype="https://schema.org/ListItem"><a
                                                                                 href="https://Rzcareer.vn"
                                                                                 itemtype="https://schema.org/Thing"
-                                                                                itemprop="item"> <span itemprop="name">
+                                                                                itemprop="item"> <span
+                                                                                    itemprop="name">
                                                                                     Rzcareer</span> </a>
                                                                             <meta itemprop="position" content="1">
                                                                         </li>
@@ -699,7 +694,8 @@
                                                                                 <span itemprop="name">Việc làm Tài
                                                                                     Chính/Ngân Hàng
                                                                                 </span>
-                                                                                <meta itemprop="position" content="3">
+                                                                                <meta itemprop="position"
+                                                                                    content="3">
                                                                             </span>
                                                                         </li>
                                                                     </ol>
@@ -712,20 +708,21 @@
                                                             <div class="sidebar-widget-title mrg-bot-10">
                                                                 <h1>Tuyển dụng {{ $totalJobs }} việc làm</h1>
                                                                 <span class="pull-right">
-                                                                    <span class="hidden-xs">Việc</span> 1 - {{
-                                                                    $jobPosts->count() }} / {{ $totalJobs }}
+                                                                    <span class="hidden-xs">Việc</span> 1 -
+                                                                    {{ $jobPosts->count() }} / {{ $totalJobs }}
                                                                 </span>
                                                             </div>
 
-                                                            @if($keyword || $location)
-                                                            <div class="search-keyword">
-                                                                <p>Kết quả tìm kiếm cho từ khóa: <strong>{{ $keyword
-                                                                        }}</strong></p>
-                                                                @if($location)
-                                                                <p>Trong khu vực: <strong>{{ $location }}</strong></p>
-                                                                @endif
+                                                            @if ($keyword || $location)
+                                                                <div class="search-keyword">
+                                                                    <p>Kết quả tìm kiếm cho từ khóa:
+                                                                        <strong>{{ $keyword }}</strong></p>
+                                                                    @if ($location)
+                                                                        <p>Trong khu vực:
+                                                                            <strong>{{ $location }}</strong></p>
+                                                                    @endif
 
-                                                            </div>
+                                                                </div>
                                                             @endif
 
 
@@ -799,110 +796,93 @@
                                                             <div class="item-bk mrg-top-10">
                                                                 <div class="mrg-bot-20 clearfix">
                                                                     <div class="item">
-                                                                        @foreach($jobPosts as $jobPost)
-                                                                        <div class="item-click red ruby">
-                                                                            <article class="article">
-                                                                                <div class="brows-job-list">
-                                                                                    <div class="col-sm-12">
-                                                                                        <div
-                                                                                            class="item-fl-box clearfix">
+                                                                        @foreach ($jobPosts as $jobPost)
+                                                                            <div class="item-click red ruby">
+                                                                                <article class="article">
+                                                                                    <div class="brows-job-list">
+                                                                                        <div class="col-sm-12">
                                                                                             <div
-                                                                                                class="brows-job-company-img">
-                                                                                                <a title="{{ $jobPost->job_name }}"
-                                                                                                    href="{{ url('viec-lam/' . $jobPost->slug) }}">
-                                                                                                    <img width="65"
-                                                                                                        height="65"
-                                                                                                        onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                                                        title="{{ $jobPost->job_name }} - {{ $jobPost->company->company_name }}"
-                                                                                                        loading="lazy"
-                                                                                                        src="{{ Storage::url($jobPost->company->company_image_url) }}"
-                                                                                                        alt="{{ $jobPost->company->company_name }}"
-                                                                                                        class="img-responsive">
-                                                                                                </a>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="brows-job-position">
-                                                                                                <h3 class="h3 tooltip"
-                                                                                                    title="{{ $jobPost->job_name }}">
-                                                                                                    <a target="_blank"
-                                                                                                        href="{{ url('viec-lam/' . $jobPost->slug) }}"
+                                                                                                class="item-fl-box clearfix">
+                                                                                                <div
+                                                                                                    class="brows-job-company-img">
+                                                                                                    <a title="{{ $jobPost->job_name }}"
+                                                                                                        href="{{ url('viec-lam/' . $jobPost->slug) }}">
+                                                                                                        <img width="65"
+                                                                                                            height="65"
+                                                                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                                                            title="{{ $jobPost->job_name }} - {{ $jobPost->company->company_name }}"
+                                                                                                            loading="lazy"
+                                                                                                            src="{{ Storage::url($jobPost->company->company_image_url) }}"
+                                                                                                            alt="{{ $jobPost->company->company_name }}"
+                                                                                                            class="img-responsive">
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="brows-job-position">
+                                                                                                    <h3 class="h3 tooltip"
                                                                                                         title="{{ $jobPost->job_name }}">
-                                                                                                        {{
-                                                                                                        $jobPost->job_name
-                                                                                                        }}
-                                                                                                    </a>
-                                                                                                </h3>
-                                                                                                <p class="font-13">
-                                                                                                    <a title="{{ $jobPost->company->company_name }}"
-                                                                                                        class="font-italic"
-                                                                                                        href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
-                                                                                                        {{
-                                                                                                        $jobPost->company->company_name
-                                                                                                        }}
-                                                                                                    </a>
-                                                                                                </p>
+                                                                                                        <a target="_blank"
+                                                                                                            href="{{ url('viec-lam/' . $jobPost->slug) }}"
+                                                                                                            title="{{ $jobPost->job_name }}">
+                                                                                                            {{ $jobPost->job_name }}
+                                                                                                        </a>
+                                                                                                    </h3>
+                                                                                                    <p class="font-13">
+                                                                                                        <a title="{{ $jobPost->company->company_name }}"
+                                                                                                            class="font-italic"
+                                                                                                            href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}">
+                                                                                                            {{ $jobPost->company->company_name }}
+                                                                                                        </a>
+                                                                                                    </p>
 
-                                                                                                <p class="font-12">
-                                                                                                    <span
-                                                                                                        data-toggle="tooltip"
-                                                                                                        title="Địa điểm: {{ $jobPost->location->name }}">
-                                                                                                        <i
-                                                                                                            class="bx bx-map"></i>{{
-                                                                                                        $jobPost->company->city_name
-                                                                                                        }}
-                                                                                                    </span>
-                                                                                                    <span
-                                                                                                        data-toggle="tooltip"
-                                                                                                        title="Mức lương: {{ $jobPost->salary_min / 1000000 }} - {{ $jobPost->salary_max / 1000000 }} {{ $jobPost->salary_type }}">
-                                                                                                        <i
-                                                                                                            class="bx bx-money"></i>{{
-                                                                                                        number_format($jobPost->salary_min
-                                                                                                        / 1000000, 0)
-                                                                                                        }}tr - {{
-                                                                                                        number_format($jobPost->salary_max
-                                                                                                        / 1000000, 0)
-                                                                                                        }}tr {{
-                                                                                                        $jobPost->salary_type
-                                                                                                        }}
-                                                                                                    </span>
+                                                                                                    <p class="font-12">
+                                                                                                        <span
+                                                                                                            data-toggle="tooltip"
+                                                                                                            title="Địa điểm: {{ $jobPost->location->name }}">
+                                                                                                            <i
+                                                                                                                class="bx bx-map"></i>{{ $jobPost->company->city_name }}
+                                                                                                        </span>
+                                                                                                        <span
+                                                                                                            data-toggle="tooltip"
+                                                                                                            title="Mức lương: {{ $jobPost->salary_min / 1000000 }} - {{ $jobPost->salary_max / 1000000 }} {{ $jobPost->salary_type }}">
+                                                                                                            <i
+                                                                                                                class="bx bx-money"></i>{{ number_format($jobPost->salary_min / 1000000, 0) }}tr
+                                                                                                            -
+                                                                                                            {{ number_format($jobPost->salary_max / 1000000, 0) }}tr
+                                                                                                            {{ $jobPost->salary_type }}
+                                                                                                        </span>
 
-                                                                                                    <span
-                                                                                                        data-toggle="tooltip"
-                                                                                                        title="Loại hình: {{ $jobPost->type_of_workplace }}">
-                                                                                                        <i
-                                                                                                            class="bx bx-briefcase"></i>{{
-                                                                                                        $jobPost->type_of_workplace
-                                                                                                        }}
-                                                                                                    </span>
-                                                                                                </p>
+                                                                                                        <span
+                                                                                                            data-toggle="tooltip"
+                                                                                                            title="Loại hình: {{ $jobPost->type_of_workplace }}">
+                                                                                                            <i
+                                                                                                                class="bx bx-briefcase"></i>{{ $jobPost->type_of_workplace }}
+                                                                                                        </span>
+                                                                                                    </p>
 
-                                                                                                <p class="font-12">
-                                                                                                    <span
-                                                                                                        data-toggle="tooltip"
-                                                                                                        title="Yêu cầu kinh nghiệm: {{ $jobPost->experience }}">
-                                                                                                        <i
-                                                                                                            class="bx bx-star"></i>{{
-                                                                                                        $jobPost->experience
-                                                                                                        }}
-                                                                                                    </span>
-                                                                                                    <span
-                                                                                                        data-toggle="tooltip"
-                                                                                                        title="Thời gian cập nhật: {{ $jobPost->updated_at->diffForHumans() }}">
-                                                                                                        <i
-                                                                                                            class="bx bx-refresh"></i>{{
-                                                                                                        $jobPost->updated_at->diffForHumans()
-                                                                                                        }}
-                                                                                                    </span>
-                                                                                                </p>
+                                                                                                    <p class="font-12">
+                                                                                                        <span
+                                                                                                            data-toggle="tooltip"
+                                                                                                            title="Yêu cầu kinh nghiệm: {{ $jobPost->experience }}">
+                                                                                                            <i
+                                                                                                                class="bx bx-star"></i>{{ $jobPost->experience }}
+                                                                                                        </span>
+                                                                                                        <span
+                                                                                                            data-toggle="tooltip"
+                                                                                                            title="Thời gian cập nhật: {{ $jobPost->updated_at->diffForHumans() }}">
+                                                                                                            <i
+                                                                                                                class="bx bx-refresh"></i>{{ $jobPost->updated_at->diffForHumans() }}
+                                                                                                        </span>
+                                                                                                    </p>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div title="Tin RUBY"
-                                                                                    class="tg-themetag tg-featuretag ruby">
-                                                                                    ruby</div>
-                                                                            </article>
-                                                                        </div>
+                                                                                    <div title="Tin RUBY"
+                                                                                        class="tg-themetag tg-featuretag ruby">
+                                                                                        ruby</div>
+                                                                                </article>
+                                                                            </div>
                                                                         @endforeach
 
                                                                     </div>
@@ -924,12 +904,12 @@
                                                                             <a href="{{ $jobPosts->url($i) }}"
                                                                                 data-page="{{ $i }}">{{ $i }}</a>
                                                                         </li>
-                                                                        @endfor
-                                                                        <li
-                                                                            class="next {{ !$jobPosts->hasMorePages() ? 'disabled' : '' }}">
-                                                                            <a href="{{ $jobPosts->nextPageUrl() }}"
-                                                                                data-page="{{ $jobPosts->currentPage() + 1 }}">&raquo;</a>
-                                                                        </li>
+                                                                    @endfor
+                                                                    <li
+                                                                        class="next {{ !$jobPosts->hasMorePages() ? 'disabled' : '' }}">
+                                                                        <a href="{{ $jobPosts->nextPageUrl() }}"
+                                                                            data-page="{{ $jobPosts->currentPage() + 1 }}">&raquo;</a>
+                                                                    </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -939,125 +919,132 @@
 
                                                     <div id="report">
                                                         <div>
-                                                            <script rsync src="/assets_livewire/js/chart.min.js">
-                                                            </script>
+                                                            <script rsync src="/assets_livewire/js/chart.min.js"></script>
                                                             <script>
                                                                 function drawWatermark(ctx, text, x, y, fontSize, color, rotation) {
-                                                                              ctx.save();
-                                                                              ctx.translate(x, y);
-                                                                              ctx.rotate(rotation);
-                                                                              ctx.font = fontSize + "px Arial";
-                                                                              ctx.fillStyle = color;
-                                                                              ctx.globalAlpha = 0.5; // Điều chỉnh độ mờ của watermark
-                                                                              ctx.fillText(text, 0, 0);
-                                                                              ctx.restore();
-                                                                          }
-                                                        document.addEventListener('DOMContentLoaded', function() {
-                                                    const ctx = document.getElementById('jobsAppliesIndustryChart').getContext('2d');
+                                                                    ctx.save();
+                                                                    ctx.translate(x, y);
+                                                                    ctx.rotate(rotation);
+                                                                    ctx.font = fontSize + "px Arial";
+                                                                    ctx.fillStyle = color;
+                                                                    ctx.globalAlpha = 0.5; // Điều chỉnh độ mờ của watermark
+                                                                    ctx.fillText(text, 0, 0);
+                                                                    ctx.restore();
+                                                                }
+                                                                document.addEventListener('DOMContentLoaded', function() {
+                                                                    const ctx = document.getElementById('jobsAppliesIndustryChart').getContext('2d');
 
-                                                    const months = ['01/2023','02/2023','03/2023','04/2023','05/2023','06/2023','07/2023','08/2023','09/2023','10/2023','11/2023','12/2023','01/2024','02/2024','03/2024','04/2024','05/2024','06/2024','07/2024','08/2024'];
+                                                                    const months = ['01/2023', '02/2023', '03/2023', '04/2023', '05/2023', '06/2023', '07/2023', '08/2023',
+                                                                        '09/2023', '10/2023', '11/2023', '12/2023', '01/2024', '02/2024', '03/2024', '04/2024',
+                                                                        '05/2024', '06/2024', '07/2024', '08/2024'
+                                                                    ];
 
-                                                    const jobsData = [275,386,588,401,383,257,389,517,393,325,420,381,312,180,516,444,275,342,340,262,116,0,0,0];
-                                                    const appliesData = [1264,1572,1539,1237,1157,1181,1185,1627,1624,1434,1274,1510,1595,1188,1494,1688,1528,1987,1520,931,30,0,0,0];
+                                                                    const jobsData = [275, 386, 588, 401, 383, 257, 389, 517, 393, 325, 420, 381, 312, 180, 516, 444, 275,
+                                                                        342, 340, 262, 116, 0, 0, 0
+                                                                    ];
+                                                                    const appliesData = [1264, 1572, 1539, 1237, 1157, 1181, 1185, 1627, 1624, 1434, 1274, 1510, 1595, 1188,
+                                                                        1494, 1688, 1528, 1987, 1520, 931, 30, 0, 0, 0
+                                                                    ];
 
-                                                    const chart = new Chart(ctx, {
-                                                                type: 'bar', // Loại biểu đồ chính
-                                                                data: {
-                                                                    labels: months,
-                                                                    datasets: [
-                                                                        {
-                                                                            label: 'Số lượt ứng tuyển',
+                                                                    const chart = new Chart(ctx, {
+                                                                        type: 'bar', // Loại biểu đồ chính
+                                                                        data: {
+                                                                            labels: months,
+                                                                            datasets: [{
+                                                                                    label: 'Số lượt ứng tuyển',
 
-                                                                           borderColor: 'rgba(255, 197, 36, 1)',
-                                                                           backgroundColor: 'rgba(255, 197, 36, 1)',
-                                                                            data: appliesData,
-                                                                            borderWidth: 2,
-                                                                            yAxisID: 'y2', // Trục y phải
-                                                                            type: 'line' // Loại dữ liệu là đường
+                                                                                    borderColor: 'rgba(255, 197, 36, 1)',
+                                                                                    backgroundColor: 'rgba(255, 197, 36, 1)',
+                                                                                    data: appliesData,
+                                                                                    borderWidth: 2,
+                                                                                    yAxisID: 'y2', // Trục y phải
+                                                                                    type: 'line' // Loại dữ liệu là đường
+                                                                                },
+                                                                                {
+                                                                                    label: 'Số tin đăng tuyển',
+                                                                                    data: jobsData,
+
+                                                                                    borderColor: 'rgba(0, 139, 255, 1)',
+                                                                                    backgroundColor: 'rgba(0, 139, 255, .8)',
+                                                                                    borderWidth: 1,
+                                                                                    yAxisID: 'y1', // Trục y trái
+                                                                                    type: 'bar' // Loại dữ liệu là cột
+                                                                                },
+
+                                                                            ]
                                                                         },
-                                                                        {
-                                                                            label: 'Số tin đăng tuyển',
-                                                                            data: jobsData,
-
-                                                                            borderColor: 'rgba(0, 139, 255, 1)',
-                                                                            backgroundColor: 'rgba(0, 139, 255, .8)',
-                                                                            borderWidth: 1,
-                                                                            yAxisID: 'y1', // Trục y trái
-                                                                            type: 'bar' // Loại dữ liệu là cột
-                                                                        },
-
-                                                                    ]
-                                                                },
-                                                                options: {
-                                                                    responsive: true,
-                                                                    plugins: {
-                                                                        legend: {
-                                                                            position: 'top',
-                                                                        },
-                                                                        title: {
-                                                                            display: true,
-                                                                            text: 'Số tin đăng và lượt ứng tuyển theo tháng - Ngành nghề Tài Chính/Ngân Hàng',
-                                                                            font: {
-                                                                                size: 18
+                                                                        options: {
+                                                                            responsive: true,
+                                                                            plugins: {
+                                                                                legend: {
+                                                                                    position: 'top',
+                                                                                },
+                                                                                title: {
+                                                                                    display: true,
+                                                                                    text: 'Số tin đăng và lượt ứng tuyển theo tháng - Ngành nghề Tài Chính/Ngân Hàng',
+                                                                                    font: {
+                                                                                        size: 18
+                                                                                    }
+                                                                                },
+                                                                                tooltip: {
+                                                                                    mode: 'index',
+                                                                                    intersect: false,
+                                                                                }
+                                                                            },
+                                                                            scales: {
+                                                                                x: {
+                                                                                    title: {
+                                                                                        display: true,
+                                                                                        text: 'Tháng/Năm'
+                                                                                    }
+                                                                                },
+                                                                                y1: {
+                                                                                    type: 'linear',
+                                                                                    display: true,
+                                                                                    position: 'left',
+                                                                                    title: {
+                                                                                        display: true,
+                                                                                        text: 'Số tin đăng tuyển'
+                                                                                    },
+                                                                                    beginAtZero: true
+                                                                                },
+                                                                                y2: {
+                                                                                    type: 'linear',
+                                                                                    display: true,
+                                                                                    position: 'right',
+                                                                                    grid: {
+                                                                                        drawOnChartArea: false // Ngăn không vẽ lưới cho trục y2
+                                                                                    },
+                                                                                    title: {
+                                                                                        display: true,
+                                                                                        text: 'Số lượt ứng tuyển'
+                                                                                    },
+                                                                                    beginAtZero: true
+                                                                                }
                                                                             }
-                                                                        },
-                                                                        tooltip: {
-                                                                            mode: 'index',
-                                                                            intersect: false,
                                                                         }
-                                                                    },
-                                                                    scales: {
-                                                                        x: {
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Tháng/Năm'
-                                                                            }
-                                                                        },
-                                                                        y1: {
-                                                                            type: 'linear',
-                                                                            display: true,
-                                                                            position: 'left',
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Số tin đăng tuyển'
-                                                                            },
-                                                                            beginAtZero: true
-                                                                        },
-                                                                        y2: {
-                                                                            type: 'linear',
-                                                                            display: true,
-                                                                            position: 'right',
-                                                                            grid: {
-                                                                                drawOnChartArea: false // Ngăn không vẽ lưới cho trục y2
-                                                                            },
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Số lượt ứng tuyển'
-                                                                            },
-                                                                            beginAtZero: true
+                                                                    });
+
+                                                                    chart.canvas.onclick = function(evt) {
+                                                                        const points = chart.getElementsAtEventForMode(evt, 'nearest', {
+                                                                            intersect: true
+                                                                        }, true);
+                                                                        if (points.length) {
+                                                                            const firstPoint = points[0];
+                                                                            const label = chart.data.labels[firstPoint.index];
+                                                                            const value = chart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+                                                                            console.log(label, value);
                                                                         }
+                                                                    };
+
+                                                                    // Tạo hàm để vẽ watermark lên canvas
+                                                                    function drawWatermark() {
+                                                                        var watermark = document.getElementById('watermark');
+                                                                        ctx.drawImage(watermark, 0, 0, ctx.canvas.width, ctx.canvas.height);
                                                                     }
-                                                                }
-                                                            });
-
-                                                            chart.canvas.onclick = function(evt) {
-                                                                const points = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
-                                                                if (points.length) {
-                                                                    const firstPoint = points[0];
-                                                                    const label = chart.data.labels[firstPoint.index];
-                                                                    const value = chart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
-                                                                    console.log(label, value);
-                                                                }
-                                                            };
-
-                                                            // Tạo hàm để vẽ watermark lên canvas
-                                                                          function drawWatermark() {
-                                                                              var watermark = document.getElementById('watermark');
-                                                                              ctx.drawImage(watermark, 0, 0, ctx.canvas.width, ctx.canvas.height);
-                                                                          }
 
 
-                                                });
+                                                                });
                                                             </script>
 
                                                             <div
@@ -1108,7 +1095,7 @@
                                                             <div>
                                                                 <div class="d-flex box-summary-report industry_summary_report"
                                                                     title="Tài Chính/Ngân Hàng"><img
-                                                                        src="{{asset('assets_livewire/img/2024/ic31.svg')}}"
+                                                                        src="{{ asset('assets_livewire/img/2024/ic31.svg') }}"
                                                                         alt="Rzcareer" width="42">
                                                                     <div>
                                                                         <p>Số tin đăng và lượt ứng tuyển theo tháng</p>
@@ -1120,7 +1107,8 @@
                                                                                 href="javascript:void(0)">Xem chi tiết
                                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                                     viewBox="0 0 24 24"
-                                                                                    fill="currentColor" class="size-6">
+                                                                                    fill="currentColor"
+                                                                                    class="size-6">
                                                                                     <path fill-rule="evenodd"
                                                                                         d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                                                                                         clip-rule="evenodd"></path>
@@ -1149,13 +1137,14 @@
                                                             <div
                                                                 class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
                                                                 <div class="mrg-bot-5 h4"> Tìm theo chức danh <a
-                                                                        href="javascript:void(0)" class="pull-right"> <i
-                                                                            class="fa fa-angle-double-down"></i></a>
+                                                                        href="javascript:void(0)" class="pull-right">
+                                                                        <i class="fa fa-angle-double-down"></i></a>
                                                                 </div>
                                                                 <ul class="sidebar-list expandible-bk">
                                                                     <li><a title="Chuyên Viên Thanh Toán"
                                                                             href="/viec-lam-chuyen-vien-thanh-toan.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Thanh
                                                                                 Toán</div>
                                                                             <span
@@ -1163,7 +1152,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Xử Lý Nợ"
                                                                             href="/viec-lam-chuyen-vien-xu-ly-no.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Xử Lý Nợ
                                                                             </div>
                                                                             <span
@@ -1171,7 +1161,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Tài Chính"
                                                                             href="/viec-lam-chuyen-vien-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Tài Chính
                                                                             </div>
                                                                             <span
@@ -1195,7 +1186,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Tư Vấn Ngân Hàng"
                                                                             href="/viec-lam-chuyen-vien-tu-van-ngan-hang.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Tư Vấn
                                                                                 Ngân Hàng</div>
                                                                             <span
@@ -1211,7 +1203,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Tín Dụng"
                                                                             href="/viec-lam-chuyen-vien-tin-dung.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Tín Dụng
                                                                             </div>
                                                                             <span
@@ -1227,14 +1220,16 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Thẻ"
                                                                             href="/viec-lam-chuyen-vien-the.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Thẻ</div>
                                                                             <span
                                                                                 class="small text-muted padd-top-5"></span>
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Đầu Tư"
                                                                             href="/viec-lam-chuyen-vien-dau-tu.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Đầu Tư
                                                                             </div>
                                                                             <span
@@ -1242,7 +1237,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Khách Hàng Cá Nhân"
                                                                             href="/viec-lam-chuyen-vien-khach-hang-ca-nhan.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Khách
                                                                                 Hàng Cá Nhân</div>
                                                                             <span
@@ -1250,7 +1246,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Hoạch Định Tài Chính"
                                                                             href="/viec-lam-chuyen-vien-hoach-dinh-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Hoạch
                                                                                 Định Tài Chính</div>
                                                                             <span
@@ -1274,7 +1271,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Quản Trị Rủi Ro"
                                                                             href="/viec-lam-chuyen-vien-quan-tri-rui-ro.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Quản Trị
                                                                                 Rủi Ro</div>
                                                                             <span
@@ -1306,7 +1304,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Phân Tích Tài Chính"
                                                                             href="/viec-lam-chuyen-vien-phan-tich-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Phân Tích
                                                                                 Tài Chính</div>
                                                                             <span
@@ -1346,7 +1345,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Quản Lý Nợ"
                                                                             href="/viec-lam-chuyen-vien-quan-ly-no.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Quản Lý
                                                                                 Nợ</div>
                                                                             <span
@@ -1362,7 +1362,8 @@
                                                                         </a></li>
                                                                     <li><a title="Chuyên Viên Nguồn Vốn"
                                                                             href="/viec-lam-chuyen-vien-nguon-von.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
+                                                                            <div class="txt text-capitalize">Chuyên
+                                                                                Viên
                                                                                 Nguồn Vốn
                                                                             </div>
                                                                             <span
@@ -1373,8 +1374,8 @@
                                                             <div
                                                                 class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
                                                                 <div class="mrg-bot-5 h4"> Tìm theo địa điểm <a
-                                                                        href="javascript:void(0)" class="pull-right"> <i
-                                                                            class="fa fa-angle-double-down"></i></a>
+                                                                        href="javascript:void(0)" class="pull-right">
+                                                                        <i class="fa fa-angle-double-down"></i></a>
                                                                 </div>
                                                                 <ul class="sidebar-list expandible-bk">
                                                                     <li><a title="Tài Chính/Ngân Hàng tại Hồ Chí Minh"
@@ -1633,8 +1634,8 @@
                     </section>
                     <section class="gray-bg padd-top-15 hide padd-bot-15 brows-job-category job-list full">
                         <div class="container">
-                            <div class="row"><img width="100" height="100" src="https://Rzcareer.vn/loading.gif"
-                                    style="display: block;margin: auto;"></div>
+                            <div class="row"><img width="100" height="100"
+                                    src="https://Rzcareer.vn/loading.gif" style="display: block;margin: auto;"></div>
                         </div>
                     </section>
                     <section class="padd-top-5 teks-seo">
@@ -1729,7 +1730,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-tai-ba-ria-vung-tau.html" title="Bà Rịa - Vũng Tàu">
+                                                <a href="/viec-lam-tai-ba-ria-vung-tau.html"
+                                                    title="Bà Rịa - Vũng Tàu">
                                                     <div class="txt text-capitalize">Bà Rịa - Vũng Tàu</div>
                                                 </a>
                                             </li>
@@ -1763,8 +1765,9 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
+                                        <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a
+                                                href="javascript:void(0)" class="pull-right"> <i
+                                                    class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
                                             <li>
                                                 <a href="/viec-lam-dien-dien-tu-dien-lanh.html"
@@ -1816,7 +1819,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-lao-dong-pho-thong.html" title="Lao Động Phổ Thông">
+                                                <a href="/viec-lam-lao-dong-pho-thong.html"
+                                                    title="Lao Động Phổ Thông">
                                                     <div class="txt text-capitalize">Lao Động Phổ Thông</div>
                                                 </a>
                                             </li>
@@ -1847,7 +1851,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nha-hang-khach-san.html" title="Nhà Hàng/Khách Sạn">
+                                                <a href="/viec-lam-nha-hang-khach-san.html"
+                                                    title="Nhà Hàng/Khách Sạn">
                                                     <div class="txt text-capitalize">Nhà Hàng/Khách Sạn</div>
                                                 </a>
                                             </li>
@@ -1914,7 +1919,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-kien-truc-noi-that.html" title="Kiến Trúc/Nội Thất">
+                                                <a href="/viec-lam-kien-truc-noi-that.html"
+                                                    title="Kiến Trúc/Nội Thất">
                                                     <div class="txt text-capitalize">Kiến Trúc/Nội Thất</div>
                                                 </a>
                                             </li>
@@ -2009,8 +2015,9 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Chức danh <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
+                                        <div class="mrg-bot-5 h4"> Việc làm theo Chức danh <a
+                                                href="javascript:void(0)" class="pull-right"> <i
+                                                    class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
                                             <li>
                                                 <a href="/viec-lam-nhan-vien-kinh-doanh.html"
@@ -2021,7 +2028,8 @@
                                             <li>
                                                 <a href="/viec-lam-nhan-vien-cham-soc-khach-hang.html"
                                                     title="Nhân Viên Chăm Sóc Khách Hàng">
-                                                    <div class="txt text-capitalize">Nhân Viên Chăm Sóc Khách Hàng</div>
+                                                    <div class="txt text-capitalize">Nhân Viên Chăm Sóc Khách Hàng
+                                                    </div>
                                                 </a>
                                             </li>
                                             <li>
@@ -2041,12 +2049,14 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-ky-thuat.html" title="Nhân Viên Kỹ Thuật">
+                                                <a href="/viec-lam-nhan-vien-ky-thuat.html"
+                                                    title="Nhân Viên Kỹ Thuật">
                                                     <div class="txt text-capitalize">Nhân Viên Kỹ Thuật</div>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-telesale.html" title="Nhân Viên Telesale">
+                                                <a href="/viec-lam-nhan-vien-telesale.html"
+                                                    title="Nhân Viên Telesale">
                                                     <div class="txt text-capitalize">Nhân Viên Telesale</div>
                                                 </a>
                                             </li>
@@ -2086,7 +2096,8 @@
                                             <li>
                                                 <a href="/viec-lam-chuyen-vien-digital-marketing.html"
                                                     title="Chuyên Viên Digital Marketing">
-                                                    <div class="txt text-capitalize">Chuyên Viên Digital Marketing</div>
+                                                    <div class="txt text-capitalize">Chuyên Viên Digital Marketing
+                                                    </div>
                                                 </a>
                                             </li>
                                             <li>
@@ -2119,7 +2130,8 @@
                                             <li>
                                                 <a href="/viec-lam-chuyen-vien-content-marketing.html"
                                                     title="Chuyên Viên Content Marketing">
-                                                    <div class="txt text-capitalize">Chuyên Viên Content Marketing</div>
+                                                    <div class="txt text-capitalize">Chuyên Viên Content Marketing
+                                                    </div>
                                                 </a>
                                             </li>
                                             <li>
@@ -2193,7 +2205,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-van-hanh.html" title="Nhân Viên Vận Hành">
+                                                <a href="/viec-lam-nhan-vien-van-hanh.html"
+                                                    title="Nhân Viên Vận Hành">
                                                     <div class="txt text-capitalize">Nhân Viên Vận Hành</div>
                                                 </a>
                                             </li>
@@ -2203,7 +2216,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-quan-ly-kinh-doanh.html" title="Quản Lý Kinh Doanh">
+                                                <a href="/viec-lam-quan-ly-kinh-doanh.html"
+                                                    title="Quản Lý Kinh Doanh">
                                                     <div class="txt text-capitalize">Quản Lý Kinh Doanh</div>
                                                 </a>
                                             </li>
@@ -2215,7 +2229,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-lao-dong-pho-thong.html" title="Lao Động Phổ Thông">
+                                                <a href="/viec-lam-lao-dong-pho-thong.html"
+                                                    title="Lao Động Phổ Thông">
                                                     <div class="txt text-capitalize">Lao Động Phổ Thông</div>
                                                 </a>
                                             </li>
@@ -2276,12 +2291,14 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-mua-hang.html" title="Nhân Viên Mua Hàng">
+                                                <a href="/viec-lam-nhan-vien-mua-hang.html"
+                                                    title="Nhân Viên Mua Hàng">
                                                     <div class="txt text-capitalize">Nhân Viên Mua Hàng</div>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-phuc-vu.html" title="Nhân Viên Phục Vụ">
+                                                <a href="/viec-lam-nhan-vien-phuc-vu.html"
+                                                    title="Nhân Viên Phục Vụ">
                                                     <div class="txt text-capitalize">Nhân Viên Phục Vụ</div>
                                                 </a>
                                             </li>
@@ -2293,7 +2310,8 @@
                                             <li>
                                                 <a href="/viec-lam-nhan-vien-dich-vu-khach-hang.html"
                                                     title="Nhân Viên Dịch Vụ Khách Hàng">
-                                                    <div class="txt text-capitalize">Nhân Viên Dịch Vụ Khách Hàng</div>
+                                                    <div class="txt text-capitalize">Nhân Viên Dịch Vụ Khách Hàng
+                                                    </div>
                                                 </a>
                                             </li>
                                             <li>
@@ -2367,12 +2385,14 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-chung-tu.html" title="Nhân Viên Chứng Từ">
+                                                <a href="/viec-lam-nhan-vien-chung-tu.html"
+                                                    title="Nhân Viên Chứng Từ">
                                                     <div class="txt text-capitalize">Nhân Viên Chứng Từ</div>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/viec-lam-tro-ly-kinh-doanh.html" title="Trợ Lý Kinh Doanh">
+                                                <a href="/viec-lam-tro-ly-kinh-doanh.html"
+                                                    title="Trợ Lý Kinh Doanh">
                                                     <div class="txt text-capitalize">Trợ Lý Kinh Doanh</div>
                                                 </a>
                                             </li>
@@ -2497,8 +2517,9 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20 mrg-bot-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
+                                        <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a
+                                                href="javascript:void(0)" class="pull-right"> <i
+                                                    class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
                                             <li>
                                                 <a href="/viec-lam-part-time.html" title="Việc làm Part-time">
@@ -2522,8 +2543,9 @@
                         </div>
                     </section>
 
+                    @livewire('employer.inc.footer')
 
-                    <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+                    {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
                         <div class="no-padding">
                             <div class="container">
                                 <div class="row">
@@ -2532,13 +2554,15 @@
                                             <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN
                                                 Rzcareer</div>
                                             <div class="textwidget">
-                                                <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1
+                                                <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa
+                                                    G1
                                                     <br> Five
                                                     Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a
                                                         class="text-primary" title="Rzcareer Miền Bắc"
                                                         href="tel:0898579188">0898.579.188</a>
                                                 </p>
-                                                <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609
+                                                <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5,
+                                                    607-609
                                                     Nguyễn
                                                     Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại:
                                                     <a class="text-primary" title="Rzcareer Miền Nam"
@@ -2549,7 +2573,8 @@
                                                         title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
                                                         title="Chăm sóc ứng viên" class="text-primary"
                                                         href="tel:0705052927">070.505.2927</a><br>
-                                                    <strong>Hotline:</strong> <a title="Hotline" class="text-primary"
+                                                    <strong>Hotline:</strong> <a title="Hotline"
+                                                        class="text-primary"
                                                         href="tel:0899.565.868">0899.565.868</a>
                                                 </p>
                                             </div>
@@ -2587,149 +2612,175 @@
                                         </div>
                                     </div>
 
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a></li>
-                                        <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế Toán</a>
-                                        </li>
-                                        <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                        <li><a href="/viec-lam-marketing.html"
-                                                title="Việc làm Marketing">Marketing</a></li>
-                                        <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây Dựng</a>
-                                        </li>
-                                        <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài Xế</a></li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
+                                                            title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân
+                                                            Hàng</a></li>
+                                                    <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế
+                                                            Toán</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
+                                                            title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
+                                                            title="Việc làm Kinh doanh">Kinh Doanh</a></li>
+                                                    <li><a href="/viec-lam-marketing.html"
+                                                            title="Việc làm Marketing">Marketing</a></li>
+                                                    <li><a href="/viec-lam-xay-dung.html"
+                                                            title="Việc làm Xây Dựng">Xây Dựng</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài
+                                                            Xế</a></li>
+                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem
+                                                            tất cả
+                                                            <b>»</b></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-thuc-tap-sinh.html"
+                                                            title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
+                                                    <li><a href="/viec-lam-tro-ly-giam-doc.html"
+                                                            title="Việc làm Trợ Lý">Trợ
+                                                            Lý</a></li>
+                                                    <li><a href="/viec-lam-nhan-vien-van-phong.html"
+                                                            title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
+                                                    <li><a href="/viec-lam-truong-phong.html"
+                                                            title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
+                                                    <li><a href="/viec-lam-giam-doc.html"
+                                                            title="Việc làm Giám đốc">Giám đốc</a>
+                                                    </li>
+                                                    <li><a href="/nganh-nghe.html"
+                                                            title="Xem tất cả vị trí/chức vụ">Xem tất cả
+                                                            <b>»</b></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo loại hình">Việc theo loại hình</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-part-time.html"
+                                                            title="Việc làm Part-time">Part-time</a></li>
+                                                    <li><a href="/viec-lam-online.html"
+                                                            title="Việc làm Online">Online</a></li>
+                                                    <li><a href="/viec-lam-thoi-vu.html"
+                                                            title="Việc làm Thời vụ">Thời vụ</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-remote.html"
+                                                            title="Việc làm Remote">Remote</a></li>
+                                                </ul>
+                                                <ul
+                                                    class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.facebook.com/JobsGOVN/"
+                                                            target="_blank"><i
+                                                                class='bx bx-xs bxl-facebook'></i></a></li>
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.linkedin.com/company/josbgo.vn/"
+                                                            target="_blank"><i
+                                                                class='bx bx-xs bxl-linkedin'></i></a></li>
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.instagram.com/jobsgo_vn/"
+                                                            target="_blank"><i
+                                                                class='bx bx-xs bxl-instagram'></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-thuc-tap-sinh.html"
-                                                title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
-                                        <li><a href="/viec-lam-tro-ly-giam-doc.html" title="Việc làm Trợ Lý">Trợ
-                                                Lý</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-van-phong.html"
-                                                title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
-                                        <li><a href="/viec-lam-truong-phong.html"
-                                                title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
-                                        <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám đốc</a>
-                                        </li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
+                        <div class="copyright">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-10">
+                                        <ul class="list-inline list-unstyled mb-1 text-primary">
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/about-us"
+                                                    title="Về chúng tôi"><u>Giới
+                                                        thiệu</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
+                                                    title="Chính sách"><u>Chính sách</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
+                                                    title="Quy chế hoạt động"><u>Quy chế</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
+                                                    title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a>
+                                            </li>
+                                            <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
+                                                        thuận sử dụng</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/privacy-policy"
+                                                    title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://employer.jobsgo.vn"
+                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
+                                                        cho Nhà Tuyển
+                                                        Dụng</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/faq"
+                                                    title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/blog"
+                                                    target="_blank" title="Tin tức"><u>Blog</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
+                                                    target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
+                                                    title="Sơ đồ trang web"><u>Sitemap</u></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-2">
+                                        <ul
+                                            class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                        class='bx bx-xs bxl-facebook'></i></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.linkedin.com/company/josbgo.vn/"
+                                                    target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
+                                                        class='bx bx-xs bxl-instagram'></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo loại hình">Việc theo loại hình</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-part-time.html"
-                                                title="Việc làm Part-time">Part-time</a></li>
-                                        <li><a href="/viec-lam-online.html" title="Việc làm Online">Online</a></li>
-                                        <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời vụ</a>
-                                        </li>
-                                        <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
-                                    </ul>
-                                    <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                        <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
-                                                target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
-                                        <li class="list-inline-item"><a
-                                                href="https://www.linkedin.com/company/josbgo.vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-10">
-                            <ul class="list-inline list-unstyled mb-1 text-primary">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
-                                            thiệu</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
-                                        title="Chính sách"><u>Chính sách</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
-                                        title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
-                                        title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
-                                            thuận sử dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/privacy-policy"
-                                        title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://employer.jobsgo.vn"
-                                        title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
-                                            Dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq"
-                                        title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
-                                        title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
-                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
-                                        title="Sơ đồ trang web"><u>Sitemap</u></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-2">
-                            <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
-                                            class='bx bx-xs bxl-facebook'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-linkedin'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-instagram'></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
-                                hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
-                                568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
-                                phần JobsGO. All Rights Reserved.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="text-center">
-                                <a target="_blank" rel="nofollow"
-                                    href="http://online.gov.vn/Home/WebDetails/73770">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày
+                                            09/05/2018 do Sở Kế
+                                            hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội
+                                            trên mạng số
+                                            568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> ©
+                                            2024 Công ty Cổ
+                                            phần JobsGO. All Rights Reserved.</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="text-center">
+                                            <a target="_blank" rel="nofollow"
+                                                href="http://online.gov.vn/Home/WebDetails/73770">
 
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                    data-src="/teks/img/online-gov.svg" alt="Rzcareer" width="100"
-                                                    height="38">
+                                                    data-src="/teks/img/online-gov.svg" alt="Rzcareer"
+                                                    width="100" height="38">
 
                                             </a>
                                             <a target="_blank" rel="nofollow"
@@ -2742,14 +2793,13 @@
                                                     height="21">
 
                                             </a>
-                                            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
-                                            </script>
+                                            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </footer>
+                    </footer> --}}
                     <style>
                         .zalo-chat-widget {
                             left: initial !important;
@@ -2768,15 +2818,15 @@
 
                     <script>
                         if (!localStorage.getItem("tokenCvBuilder")) {
-                localStorage.setItem("tokenCvBuilder",
-                    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3NDMzNjc2LCJleHAiOjI0ODQyOTc2NzYsInVpZCI6MjU5MzMxN30.DmJMD7EmJF8RUS8lwY-I--b1xA_ksn-OXd903HNAxQA'
-                    );
-            }
-            if (!localStorage.getItem("userCvBuilder")) {
-                localStorage.setItem("userCvBuilder", (
-                    '{"candidate_id":"2593317","user_name":"trangiangzxc@gmail.com","name":"Tr\u1ea7n L\u00ea Ho\u00e0ng Giang","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2593317_20240920203818.png","date_of_birth":"2004-05-13","current_city":"H\u1ed3 Ch\u00ed Minh","email":"Trangiangzxc@gmail.com","tel":"0337799453","short_bio":"","current_salary":null,"language":"","degree":"Trung h\u1ecdc ph\u1ed5 th\u00f4ng","degree_id":"7","min_expect_salary":null,"max_expect_salary":null,"job_type":"B\u00e1n th\u1eddi gian","job_type_id":"2","status":"0","created":"2024-09-20 14:47:25","updated":"2024-09-20 20:39:17","access_token":"Rzcareer","gender":"male","fb_user_id":"","current_address":"Qu\u1eadn 12, H\u1ed3 Ch\u00ed Minh","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"Th\u1ef1c T\u1eadp Sinh","job_position_id":"1","main_cv_template_id":"1","set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"2","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2593317","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"q12","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"90","update_percent_time":"2024-09-23 11:26:51","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"1","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTMzMTcsInN1YiI6MjU5MzMxNywiaWF0IjoxNzI2OTYwMzM2LCJleHAiOjE3MjcyMTk1MzZ9.m1Yq22xtZdaRuO5MztmKIGwfGr9XjBWDSir9caw6ZHS5xSZDZkyk-eMrLtLKLJ83Xcbk4pXBsDQCrNehJ1jysPXDFV884YhpJRbnOizzRv-l-Xhv0w4KPJwmub2KssTmWbn1KXHRJOvgV62s_zc5zxNjPQz3UZP_j7IpuTxetl4hFV63PUcMusIpcjRr3T1HI-pzm9W7gSgisTinD3cuiS-l93rcA-O1GZDAEp6KFCqLBBcO7NlNbgAEpsHT166GzpBkZq4xmJ7nZeyEtJC_ObbUUp0TXlR2-yZV1eroHDwrkNqT8ogmu3c8Cx6xxlU20JOYQ8sjYlKPOLatf8fZ7A","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"110231117123356408959","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"2","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"2","admin_id":"1572","qr_code":"","level":"5","allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Nh\u00e2n Vi\u00ean Tuy\u1ec3n D\u1ee5ng","short_bio_html":"","cv_capacity":"8881","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"1","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"[{\"others_promise\":\"III.\\nC\u00f4ng ty TNHH DCSOFT \u0111\u00e3 t\u1ea1o ra m\u1ed9t m\u00f4i tr\u01b0\u1eddng th\u1ef1c t\u1eadp l\u00fd t\u01b0\u1edfng v\u1edbi \u0111\u1ed9i ng\u0169  nh\u00e2n s\u1ef1 t\u1eadn t\u00e2m, ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e0o t\u1ea1o b\u00e0i b\u1ea3n, v\u00e0 c\u01a1 h\u1ed9i tham gia c\u00e1c d\u1ef1 \u00e1n th\u1ef1c  t\u1ebf. T\u1ea5t c\u1ea3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0y \u0111\u00e3 mang l\u1ea1i tr\u1ea3i nghi\u1ec7m th\u1ef1c t\u1eadp tuy\u1ec7t v\u1eddi v\u00e0 kh\u00f4ng  c\u00f3 g\u00ec c\u1ea7n ki\u1ebfn ngh\u1ecb th\u00eam.\"}]","career_name_auto":"","create_source":""}'
-                    ));
-            }
+                            localStorage.setItem("tokenCvBuilder",
+                                'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3NDMzNjc2LCJleHAiOjI0ODQyOTc2NzYsInVpZCI6MjU5MzMxN30.DmJMD7EmJF8RUS8lwY-I--b1xA_ksn-OXd903HNAxQA'
+                            );
+                        }
+                        if (!localStorage.getItem("userCvBuilder")) {
+                            localStorage.setItem("userCvBuilder", (
+                                '{"candidate_id":"2593317","user_name":"trangiangzxc@gmail.com","name":"Tr\u1ea7n L\u00ea Ho\u00e0ng Giang","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2593317_20240920203818.png","date_of_birth":"2004-05-13","current_city":"H\u1ed3 Ch\u00ed Minh","email":"Trangiangzxc@gmail.com","tel":"0337799453","short_bio":"","current_salary":null,"language":"","degree":"Trung h\u1ecdc ph\u1ed5 th\u00f4ng","degree_id":"7","min_expect_salary":null,"max_expect_salary":null,"job_type":"B\u00e1n th\u1eddi gian","job_type_id":"2","status":"0","created":"2024-09-20 14:47:25","updated":"2024-09-20 20:39:17","access_token":"Rzcareer","gender":"male","fb_user_id":"","current_address":"Qu\u1eadn 12, H\u1ed3 Ch\u00ed Minh","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"Th\u1ef1c T\u1eadp Sinh","job_position_id":"1","main_cv_template_id":"1","set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"2","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2593317","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"q12","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"90","update_percent_time":"2024-09-23 11:26:51","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"1","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTMzMTcsInN1YiI6MjU5MzMxNywiaWF0IjoxNzI2OTYwMzM2LCJleHAiOjE3MjcyMTk1MzZ9.m1Yq22xtZdaRuO5MztmKIGwfGr9XjBWDSir9caw6ZHS5xSZDZkyk-eMrLtLKLJ83Xcbk4pXBsDQCrNehJ1jysPXDFV884YhpJRbnOizzRv-l-Xhv0w4KPJwmub2KssTmWbn1KXHRJOvgV62s_zc5zxNjPQz3UZP_j7IpuTxetl4hFV63PUcMusIpcjRr3T1HI-pzm9W7gSgisTinD3cuiS-l93rcA-O1GZDAEp6KFCqLBBcO7NlNbgAEpsHT166GzpBkZq4xmJ7nZeyEtJC_ObbUUp0TXlR2-yZV1eroHDwrkNqT8ogmu3c8Cx6xxlU20JOYQ8sjYlKPOLatf8fZ7A","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"110231117123356408959","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"2","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"2","admin_id":"1572","qr_code":"","level":"5","allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Nh\u00e2n Vi\u00ean Tuy\u1ec3n D\u1ee5ng","short_bio_html":"","cv_capacity":"8881","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"1","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"[{\"others_promise\":\"III.\\nC\u00f4ng ty TNHH DCSOFT \u0111\u00e3 t\u1ea1o ra m\u1ed9t m\u00f4i tr\u01b0\u1eddng th\u1ef1c t\u1eadp l\u00fd t\u01b0\u1edfng v\u1edbi \u0111\u1ed9i ng\u0169  nh\u00e2n s\u1ef1 t\u1eadn t\u00e2m, ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e0o t\u1ea1o b\u00e0i b\u1ea3n, v\u00e0 c\u01a1 h\u1ed9i tham gia c\u00e1c d\u1ef1 \u00e1n th\u1ef1c  t\u1ebf. T\u1ea5t c\u1ea3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0y \u0111\u00e3 mang l\u1ea1i tr\u1ea3i nghi\u1ec7m th\u1ef1c t\u1eadp tuy\u1ec7t v\u1eddi v\u00e0 kh\u00f4ng  c\u00f3 g\u00ec c\u1ea7n ki\u1ebfn ngh\u1ecb th\u00eam.\"}]","career_name_auto":"","create_source":""}'
+                            ));
+                        }
                     </script>
 
                     <!--<div class="maintenance-banner">
@@ -2799,7 +2849,8 @@
                                                padding-bottom: 60px !important;
                                              }
                                            </style>-->
-                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với Rzcareer "
+                    <a href="/mau-cv-xin-viec.html"
+                        title="Tạo CV / Resume Online nhanh chóng, miễn phí với Rzcareer "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>
