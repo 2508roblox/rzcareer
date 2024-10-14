@@ -348,7 +348,7 @@
 
 
         </div>
-        @livewire('employer.inc.footer')
+        {{-- @livewire('employer.inc.footer') --}}
 
     </body>
 

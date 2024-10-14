@@ -44,9 +44,9 @@ Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
     Route::get('/danh-sach-nganh-nghe', DanhSachNganhNghe::class)->name('danh-sach-nganh-nghe');
 });
-Route::middleware(CheckAuth::class)->group(function () {
-    Route::get('/cong-ty', CongTy::class);
-});
+// Route::middleware(CheckAuth::class)->group(function () {
+//     Route::get('/cong-ty', CongTy::class);
+// });
 Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class);
     Route::get('/candidate/manage-resume', ManageResume::class);

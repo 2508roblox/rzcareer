@@ -97,7 +97,7 @@
             <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty.html">
               <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
             </a>
-            @if (Auth::check())
+            {{-- @if (Auth::check()) --}}
             <ul class="dropdown-menu">
               @php
               // Get the top 10 careers with the most companies
@@ -115,7 +115,7 @@
               </li>
               @endforeach
             </ul>
-            @endif
+            {{-- @endif --}}
           </li>
 
           <li class="nav-item dropdown">
