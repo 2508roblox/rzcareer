@@ -17,8 +17,15 @@ class JobPostServiceResource extends Resource
 {
     protected static ?string $model = JobPostService::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
 
+
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Dịch vụ bài đăng'; // Trả về tên số nhiều cho mô hình Company
+    }
+    
     public static function form(Form $form): Form
     {
         return $form
@@ -76,5 +83,8 @@ class JobPostServiceResource extends Resource
             'create' => Pages\CreateJobPostService::route('/create'),
             'edit' => Pages\EditJobPostService::route('/{record}/edit'),
         ];
+    }public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

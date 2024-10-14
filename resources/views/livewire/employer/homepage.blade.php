@@ -83,7 +83,7 @@
 
     <body data-spy="scroll" data-target="#primary-menu">
 
-  
+
         @livewire('employer.inc.header')
         <header class="header-area overlay full-height relative v-center" id="home-page">
             <!--<div class="absolute anlge-bg"></div>-->
@@ -649,7 +649,7 @@
         <div class="zalo-chat-widget" data-oaid="2715936568206115822"
             data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height=""></div>
 
-            @livewire('employer.inc.footer')
+            {{-- @livewire('employer.inc.footer') --}}
 
         <script>
             window.addEventListener('load', function () {
@@ -672,7 +672,7 @@
                     });
                 }
             })
-        }); 
+        });
         </script>
     </body>
 

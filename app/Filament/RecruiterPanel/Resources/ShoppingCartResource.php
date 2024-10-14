@@ -17,8 +17,13 @@ class ShoppingCartResource extends Resource
 {
     protected static ?string $model = ShoppingCart::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-cart';
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Giỏ hàng'; // Trả về tên số nhiều cho mô hình Company
+    }
+    
     public static function form(Form $form): Form
     {
         return $form
@@ -77,5 +82,8 @@ class ShoppingCartResource extends Resource
             'create' => Pages\CreateShoppingCart::route('/create'),
             'edit' => Pages\EditShoppingCart::route('/{record}/edit'),
         ];
+    }public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

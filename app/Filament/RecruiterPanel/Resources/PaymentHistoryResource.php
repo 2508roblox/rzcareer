@@ -17,8 +17,14 @@ class PaymentHistoryResource extends Resource
 {
     protected static ?string $model = PaymentHistory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard';
 
+
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Lịch sử thanh toán'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -79,5 +85,8 @@ class PaymentHistoryResource extends Resource
             'create' => Pages\CreatePaymentHistory::route('/create'),
             'edit' => Pages\EditPaymentHistory::route('/{record}/edit'),
         ];
+    }public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

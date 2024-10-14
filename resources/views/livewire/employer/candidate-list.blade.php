@@ -220,7 +220,47 @@
                         <li class="active"><span class="text-muted">Ứng viên Thực Tập Sinh Đào Tạo </span></li>
                     </ol>
                     <div class="row padd-bot-15 clearfix" style="padding-bottom: 15px;">
+                        @foreach ($resumes as $resume)
                         <div class="col-sm-6">
+                            <div class="candidate-list-layout">
+                                <div class="cll-wrap">
+                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
+                                        <h4>
+                                            <strong class="text-capitalize text-info">
+                                                <a style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
+                                                    {{-- href="{{ route('candidate.details', ['id' => $resume->id]) }}" --}}>
+                                                    {{ $resume->seekerProfile->user->full_name }}
+                                                </a>
+                                            </strong>
+                                            <small> ({{ $resume->seekerProfile->birthday ? \Carbon\Carbon::parse($resume->seekerProfile->birthday)->format('Y-m-d') : 'N/A' }})</small>
+                                        </h4>
+
+                                        <ul class="mrg-bot-10">
+                                            <li><i class="glyphicon glyphicon-briefcase"></i> {{ $resume->position }}</li>
+                                            <li><i class="glyphicon glyphicon-map-marker"></i> {{ $resume->seekerProfile->city_name }}</li>
+                                            <li><i class="glyphicon glyphicon-paperclip"></i> {{ $resume->attachments_count }} file đính kèm</li>
+                                        </ul>
+
+                                        <p title="Các vị trí đã làm việc">
+                                            <u>Các vị trí đã làm việc:</u>
+                                            <span style="height: 56px; display: block; overflow: auto; margin-bottom: 1px; margin-top: 3px;">
+                                                @foreach ($resume->experienceDetails as $experience)
+                                                    <span style="background: #2b8fc0; padding: 3px 5px !important; margin-top: 2px; font-size: 11px;"
+                                                        class="label mrg-r-5">{{ $experience->job_name }}</span>
+                                                @endforeach
+                                            </span>
+                                        </p>
+
+
+                                        <i>Cập nhật hồ sơ: {{ $resume->updated_at }}</i>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                        {{-- <div class="col-sm-6">
                             <div class="candidate-list-layout">
                                 <div class="cll-wrap">
                                     <div class="cll-caption" style="overflow: auto;width: 100%;">
@@ -300,338 +340,19 @@
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DSGxhUTlHb2hWOG9SelNzNWQxd1FXQT09">Huỳnh
-                                                    Thị Phương Thanh</a></strong><small> (2000-04-22)</small></h4>
+                        </div> --}}
 
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> </li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hồ Chí Minh</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 3 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Business Analyst Software
-                                                    Specification</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Business Analyst</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Intern</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Business Analyst Intern</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Requirement Gathering</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DRHc1M3FrUWQ5SUxSamJ1enZ4czN5QT09">Liên
-                                                    Như Yến</a></strong><small> (2003-12-08)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> Nhân Viên/Chuyên
-                                                Viên</li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hồ Chí Minh</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 0 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Nhân Viên PG</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DQjd3eUpXdjY2UXUyVjNaRnJTdnpBdz09">Lê
-                                                    Duy Minh</a></strong><small> (2003-12-30)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> Nhân Viên/Chuyên
-                                                Viên</li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hồ Chí Minh</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 1 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DZnJ5U2FMeVJ0cDc5YXdlcVB0NGtWZz09">Nguyễn
-                                                    Minh Quân</a></strong><small> (2002-03-04)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> Nhân Viên/Chuyên
-                                                Viên</li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hà Nội</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 1 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title=""></span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Chuyên Viên Pháp Chế</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Nhân viên pháp chế</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DRDdSbHZCWTBXMGhRSlRzU2I1eFlRdz09">Nguyễn
-                                                    Đình Trung Hiếu</a></strong><small> (2003)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> </li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hồ Chí Minh</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 1 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Nhân viên Bán thời gian</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Part-time Staff</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Business Client Relationship
-                                                    Trainee</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DcWRDS2N2V0pYM1grRE9LUnRCZ0RyZz09">Phạm
-                                                    Thị Kim Quy</a></strong><small> (2005-07-15)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> Nhân Viên/Chuyên
-                                                Viên</li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> </li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 1 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DVXRBam9xL1VQZTZrcXFIZy9HOVlOdz09">Trần
-                                                    Hậu Phong</a></strong><small> (2001-09-24)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> Nhân Viên/Chuyên
-                                                Viên</li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> Hà Nội</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 0 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="candidate-list-layout">
-                                <div class="cll-wrap">
-                                    <div class="cll-caption" style="overflow: auto;width: 100%;">
-                                        <h4><strong class="text-capitalize text-info"><a
-                                                    style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    href="/site/login?ref=%2Fsearch-cv%2Findex%3FSearchCv%5Brole%5D%5B%5D%3DTh%E1%BB%B1c+T%E1%BA%ADp+Sinh+%C4%90%C3%A0o+T%E1%BA%A1o%26cid%3DRkJJKzlEUG5Cc2M5YnpNVFhNd2xSZz09">Lý
-                                                    Khang</a></strong><small> (2002-10-01)</small></h4>
-
-                                        <ul class="mrg-bot-10">
-                                            <li><i class="glyphicon glyphicon glyphicon-briefcase"></i> </li>
-                                            <li><i class="glyphicon glyphicon-map-marker"></i> </li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> 1 file đính kèm</li>
-                                        </ul>
-                                        <p title="Các vị trí đã làm việc">
-                                            <u>Các vị trí đã làm việc:</u>
-                                            <span
-                                                style="height: 56px; display: block; overflow: auto;margin-bottom: 1px;margin-top: 3px;">
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">Thực Tập Sinh Đào Tạo</span>
-
-                                                <span
-                                                    style="background: #2b8fc0;padding: 3px 5px !important; margin-top: 2px;font-size: 11px"
-                                                    class="label mrg-r-5" title="">NHÂN VIÊN BÁN HÀNG BÁN THỜI
-                                                    GIAN</span>
-
-                                            </span>
-                                            <i>
-                                                Cập nhật hồ sơ: 01/10/2024 </i>
-                                        </p>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
 
         </div>
+<<<<<<< HEAD
         @livewire('employer.inc.footer')
+=======
+        {{-- @livewire('employer.inc.footer') --}}
+>>>>>>> origin/develop
 
     </body>
 

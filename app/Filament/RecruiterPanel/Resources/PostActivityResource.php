@@ -17,11 +17,13 @@ class PostActivityResource extends Resource
 {
     protected static ?string $model = PostActivity::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-check'; // Hoặc 'heroicon-o-user-group'
+
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+
     public static function getPluralModelLabel(): string
     {
-        return 'Danh sách ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
+        return 'Ứng tuyển'; // Trả về tên số nhiều cho mô hình Company
     }
     public static function form(Form $form): Form
     {
@@ -64,43 +66,55 @@ class PostActivityResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('job_post_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('resume_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('full_name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('status'),
-                Tables\Columns\TextColumn::make('is_sent_email')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('is_deleted')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+        ->columns([
+            Tables\Columns\TextColumn::make('job_post_id')
+                ->label('ID Bài tuyển dụng')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('resume_id')
+                ->label('ID Hồ sơ')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('user_id')
+                ->label('ID Người dùng')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('full_name')
+                ->label('Họ và tên')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('email')
+                ->label('Email')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('phone')
+                ->label('Số điện thoại')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('status')
+                ->label('Trạng thái'),
+            Tables\Columns\TextColumn::make('is_sent_email')
+                ->label('Đã gửi email')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('is_deleted')
+                ->label('Đã xóa')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('created_at')
+                ->label('Ngày tạo')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            Tables\Columns\TextColumn::make('updated_at')
+                ->label('Ngày cập nhật')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ])
+        
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -127,4 +141,5 @@ class PostActivityResource extends Resource
             'edit' => Pages\EditPostActivity::route('/{record}/edit'),
         ];
     }
+    
 }

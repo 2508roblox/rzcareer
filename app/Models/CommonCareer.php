@@ -17,5 +17,10 @@ class CommonCareer extends Model
     {
         return $this->hasMany(Company::class, 'field_operation', 'name'); // Adjust field names as necessary
     }
+    public function resumes()
+    {
+        return $this->hasMany(Resume::class, 'career_id');
+    }
+
 
 }

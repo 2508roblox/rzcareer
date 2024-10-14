@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\CheckEmployer;
+use App\Http\Middleware\CheckAuth;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Middleware\CheckLoginCandidate;
 use App\Http\Middleware\CheckLoginEmployer;
@@ -10,10 +11,12 @@ use App\Livewire\Candidate\Dashboard;
 use App\Livewire\Candidate\EmployersViewed;
 use App\Livewire\Candidate\ImportCvData;
 use App\Livewire\Candidate\JobsApplied;
+use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
+use App\Livewire\DanhSachNganhNghe;
 use App\Livewire\DocumentAttachment;
 use App\Livewire\Employer\CandidateList;
 use App\Livewire\Employer\Candidates;
@@ -39,7 +42,11 @@ Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/tuyen-dung/{slug}', TuyenDung::class);
     Route::get('/cong-ty', CongTy::class);
     Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
+    Route::get('/danh-sach-nganh-nghe', DanhSachNganhNghe::class)->name('danh-sach-nganh-nghe');
 });
+// Route::middleware(CheckAuth::class)->group(function () {
+//     Route::get('/cong-ty', CongTy::class);
+// });
 Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class);
     Route::get('/candidate/manage-resume', ManageResume::class);
@@ -50,18 +57,17 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
     Route::get('/candidate/document-attachment', DocumentAttachment::class);
-}); 
+});
 Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer', Homepage::class);
     Route::get('/employer/candidates', Candidates::class);
-    Route::get('/employer/candidate/{id}', CandidateList::class);
+    Route::get('/employer/candidate/{id}', CandidateList::class)->name('employer.candidate');
     Route::get('/employer/order', Order::class);
 });
 Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/employer/login', EmployerLogin::class);
     Route::get('/site/register', Register::class);
     Route::get('/site/login', Login::class);
- 
 });
 
 

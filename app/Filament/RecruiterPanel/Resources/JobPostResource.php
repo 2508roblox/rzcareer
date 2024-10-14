@@ -39,11 +39,12 @@ use Illuminate\Support\Facades\Auth;
 class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Quản lý đăng tuyển & ứng tuyển';
-
-    public static  ?string  $label = 'Danh sách tin đăng';
-    public static  ?string  $subheading = 'Danh sách tin đăng';
+    protected static ?string $navigationIcon = 'heroicon-o-paper-airplane'; // Thay đổi biểu tượng
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+    
+    public static ?string $label = 'Bài tuyển dụng';
+    public static ?string $subheading = 'Bài tuyển dụng';
+    
 
     public static function form(Form $form): Form
     {
@@ -440,90 +441,126 @@ class JobPostResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('id') // Thêm cột ID
+        ->columns([
+            Tables\Columns\TextColumn::make('id')
+                ->label('ID') // Thêm tiêu đề tiếng Việt
                 ->numeric()
                 ->sortable(),
-                Tables\Columns\TextColumn::make('career_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('company_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('location_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('job_name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('deadline')
-                    ->date()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('quantity')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('gender_required')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('position')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('type_of_workplace')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('experience')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('academic_level')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('job_type')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('salary_min')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('salary_max')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('salary_type'),
-                Tables\Columns\TextColumn::make('is_hot')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('is_urgent')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('contact_person_name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('contact_person_phone')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('contact_person_email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('views')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('shares')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('status')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            Tables\Columns\TextColumn::make('career_id')
+                ->label('ID Nghề nghiệp')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('company_id')
+                ->label('ID Công ty')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('location_id')
+                ->label('ID Địa điểm')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('user_id')
+                ->label('ID Người dùng')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('job_name')
+                ->label('Tên Công việc')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('slug')
+                ->label('Slug')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('deadline')
+                ->label('Hạn cuối')
+                ->date()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('quantity')
+                ->label('Số lượng')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('gender_required')
+                ->label('Giới tính yêu cầu')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('position')
+                ->label('Vị trí')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('type_of_workplace')
+                ->label('Loại nơi làm việc')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('experience')
+                ->label('Kinh nghiệm')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('academic_level')
+                ->label('Trình độ học vấn')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('job_type')
+                ->label('Loại công việc')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('salary_min')
+                ->label('Mức lương tối thiểu')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('salary_max')
+                ->label('Mức lương tối đa')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('salary_type')
+                ->label('Loại lương'),
+            Tables\Columns\TextColumn::make('is_hot')
+                ->label('Nổi bật')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('is_urgent')
+                ->label('Khẩn cấp')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('contact_person_name')
+                ->label('Tên người liên hệ')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('contact_person_phone')
+                ->label('Số điện thoại người liên hệ')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('contact_person_email')
+                ->label('Email người liên hệ')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('views')
+                ->label('Số lượt xem')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('shares')
+                ->label('Số lượt chia sẻ')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('status')
+                ->label('Trạng thái')
+                ->numeric()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('created_at')
+                ->label('Ngày tạo')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            Tables\Columns\TextColumn::make('updated_at')
+                ->label('Ngày cập nhật')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make()
+                        ->label('Chỉnh sửa'),
+                    Tables\Actions\ViewAction::make()
+                        ->label('Xem'),
+                    Tables\Actions\DeleteAction::make()
+                        ->label('Xóa'),
+                ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->label('Xóa'),
                 ]),
             ]);
     }

@@ -21,9 +21,15 @@ class CompanyResource extends Resource
 {
     protected static ?string $model = Company::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    public static  ?string  $label = 'Thông tin công ty';
-    public static  ?string  $subheading = 'Thông tin công ty';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase'; // Thay đổi biểu tượng
+
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+    
+    public static function getPluralModelLabel(): string
+    {
+        return 'Thông tin công ty'; // Trả về tên số nhiều cho mô hình Company
+    }
+    
     public static function form(Form $form): Form
     {
         return $form

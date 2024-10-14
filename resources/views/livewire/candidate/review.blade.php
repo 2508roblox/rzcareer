@@ -1611,7 +1611,7 @@
                                                                                         <p class="text-muted mb-2">
                                                                                             <strong>Số điện thoại:</strong>
                                                                                             <span class="ml-2 editable  editable-click"  wire:click="toggleEdit('tel')" data-name="tel" title="Số điện thoại">{{ $resume->seekerProfile->phone ?? 'Chưa có' }}</span>
-                                                                                            @if ($isEditing === 'phone')
+                                                                                            @if ($isEditing === 'tel')
                                                                                                 <form wire:submit.prevent="editPhone">
                                                                                                     <input type="text" class="form-control" wire:model="phone" placeholder="Nhập số điện thoại" />
                                                                                                     <button type="submit" class="btn btn-primary btn-sm">Lưu</button>

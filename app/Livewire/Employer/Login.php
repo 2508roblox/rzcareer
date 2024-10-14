@@ -22,12 +22,11 @@ class Login extends Component
     public function login()
     {
         $this->validate();
-    
+
         // Thực hiện đăng nhập
         if (Auth::attempt(['email' => $this->user_name, 'password' => $this->password], $this->rememberMe)) {
             // Kiểm tra trường has_company
             $user = Auth::user();
-            
             if ($user->has_company == 1) {
                 // Đăng nhập thành công, hiển thị thông báo
                 $this->alert('success', 'Đăng nhập thành công!', [
@@ -36,7 +35,7 @@ class Login extends Component
                     'toast' => true,
                     'text' => 'Chào mừng bạn đã trở lại!',
                 ]);
-    
+
                 // Chuyển hướng sau khi đăng nhập
                 return redirect('/recruiter');
             } else {
@@ -59,7 +58,7 @@ class Login extends Component
             ]);
         }
     }
-    
+
 
     public function render()
     {

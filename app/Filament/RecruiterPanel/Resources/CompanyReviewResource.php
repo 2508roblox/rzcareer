@@ -19,8 +19,14 @@ class CompanyReviewResource extends Resource
 {
     protected static ?string $model = CompanyReview::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationIcon = 'heroicon-o-star'; // Thay đổi biểu tượng
+    protected static ?string $navigationGroup = 'Quản lý công ty';
+    
+    public static function getPluralModelLabel(): string
+    {
+        return 'Đánh giá'; // Trả về tên số nhiều cho mô hình Company
+    }
+    
     public static function form(Form $form): Form
     {
         return $form

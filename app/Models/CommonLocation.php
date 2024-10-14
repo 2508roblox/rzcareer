@@ -36,8 +36,7 @@ class CommonLocation extends Model
     }
     public function setLocationAttribute(?array $location): void
     {
-        if (is_array($location))
-        {
+        if (is_array($location)) {
             $this->attributes['lat'] = $location['lat'];
             $this->attributes['lng'] = $location['lng'];
             unset($this->attributes['location']);
@@ -53,5 +52,10 @@ class CommonLocation extends Model
     public static function getComputedLocation(): string
     {
         return 'location';
+    }
+
+    public function jobPosts()
+    {
+        return $this->hasMany(JobPost::class, 'location_id');
     }
 }
