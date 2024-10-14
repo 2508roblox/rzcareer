@@ -632,7 +632,7 @@
 
         </div>
         @livewire('employer.inc.footer')
-     
+
     </body>
 
     </html>
