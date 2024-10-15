@@ -169,6 +169,8 @@
                   </div>
                 </div>
               </div>
+
+
               <div class="col-sm-5 col-md-4">
                 <div class="teks-box-today text-light">
                   <h6>
@@ -176,14 +178,26 @@
                     Thị trường làm việc hôm nay
                     <small class="float-end fw-normal">25/09/2024</small>
                     <div class="row my-3 mt-4 text-center">
+                        @php
+                            $jobPostCount = App\Models\JobPost::where('status', 1)->count();
+                        @endphp
                       <div class="col-6">
                         <p>Việc làm đang tuyển</p>
-                        <strong><span class="loader"> <span class="dot"></span> <span class="circle"></span> </span>
-                          16,143</strong>
+                        <strong>
+                            <span class="loader">
+                                <span class="dot"></span>
+                                <span class="circle"></span>
+                            </span>
+                            {{ number_format($jobPostCount) }} <!-- Display the count -->
+                        </strong>
                       </div>
                       <div class="col-6">
+                        @php
+                        use Carbon\Carbon;
+                        $todayPosts = App\Models\JobPost::whereDate('created_at', Carbon::today())->count();
+                        @endphp
                         <p>Việc làm mới hôm nay</p>
-                        <strong>2,032</strong>
+                        <strong>{{ number_format($todayPosts) }}</strong>
                       </div>
                     </div>
                     <div class="hr"></div>
@@ -1255,9 +1269,9 @@
       height: 60px !important;
     }
   </style>
-  <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
+  {{-- <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
     <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
-  </a>
+  </a> --}}
 
 
 

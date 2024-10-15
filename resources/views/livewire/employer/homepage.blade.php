@@ -98,8 +98,8 @@
                     </div>
                     <div class="hidden-xs hidden-sm col-md-6 text-right">
                         <div class="screen-box">
-                            <div class="item"><img src="https://jobsgo.vn/loading.gif" class="lazy"
-                                    data-src="/media/img/screen-3.jpg" alt=""></div>
+                            <div class="item"><img src="/employer_assets/media/img/screen-3.jpg" class="lazy"
+                                    data-src="/employer_assets/media/img/screen-3.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -140,14 +140,14 @@
                     <div class="col-lg-3 col-md-3 col-xs-6">
                         <div class="box-taisao">
                             <h3>1.600.000+</h3>
-                            <p>Lượng ứng viên truy cập sử dụng hàng tháng</p> <img src="https://jobsgo.vn/loading.gif"
+                            <p>Lượng ứng viên truy cập sử dụng hàng tháng</p> <img src="/employer_assets/media/img/tai-sao4.png"
                                 data-src="media/img/tai-sao4.png" class="img-responsive lazy" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-xs-6">
                         <div class="box-taisao">
                             <h3>AI thông minh</h3>
-                            <p>Giúp tìm kiếm ứng viên phù hợp nhanh chóng </p> <img src="https://jobsgo.vn/loading.gif"
+                            <p>Giúp tìm kiếm ứng viên phù hợp nhanh chóng </p> <img src="/employer_assets/media/img/tai-sao1.png"
                                 data-src="media/img/tai-sao1.png" class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                         <div class="box-taisao">
                             <h3>Tuyển dụng đa kênh</h3>
                             <p>Kết nối thêm với nguồn ứng viên từ: Facebook, Indeed, Jobstreet…</p> <img
-                                src="https://jobsgo.vn/loading.gif" data-src="media/img/tai-sao2.png"
+                                src="/employer_assets/media/img/tai-sao2.png" data-src="media/img/tai-sao2.png"
                                 class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                         <div class="box-taisao">
                             <h3>Support 24/7</h3>
                             <p>Đội ngũ CSKH tận tình luôn sẵn sàng hỗ trợ Khách hàng</p> <img
-                                src="https://jobsgo.vn/loading.gif" data-src="media/img/tai-sao3.png"
+                                src="/employer_assets/media/img/tai-sao3.png" data-src="media/img/tai-sao3.png"
                                 class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -192,12 +192,12 @@
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/employer_assets/media/img/screen-3.jpg" class="lazy"
                                                     data-src="media/img/screen-3.jpg" alt=""></div>
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/employer_assets/media/img/screen-5.jpg" class="lazy"
                                                     data-src="media/img/screen-5.jpg" alt=""></div>
                                         </div>
                                     </div>
@@ -303,8 +303,42 @@
                         </div>
                     </div>
                 </div>
+                @foreach(App\Models\Service::orderBy('id', 'asc')->get() as $service)
+                    <div class="row box-goidv">
+                        <div class="col-lg-5">
+                            <img src="/employer_assets/media/img/standard.png"
+                                data-src="/media/img/standard.png"
+                                class="img-responsive lazy"
+                                alt="">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3>{{ $service->package_name }}</h3>
+                            <p class="text-bold text-danger">{{ $service->price }}</p>
+                            <ul>
+                                <li>
+                                    <img src="https://jobsgo.vn/loading.gif"
+                                        class="lazy"
+                                        data-src="media/img/check.png"
+                                        alt="">
+                                    Tin tuyển dụng online 30 ngày
+                                </li>
+                                <li>
+                                    <img src="https://jobsgo.vn/loading.gif"
+                                        class="lazy"
+                                        data-src="media/img/check.png"
+                                        alt="">
+                                    Tin tuyển dụng hiển thị đồng thời trên các kênh liên kết: Indeed, Jobstreet
+                                </li>
+                            </ul>
+                            <p>
+                                <a class="btn btn-muangay" href="/employer/order?package=standard">Mua ngay</a>
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+
                 <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/standard.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/standard.png" data-src="/media/img/standard.png"
                             class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7">
                         <h3>Gói Standard</h3>
@@ -320,7 +354,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
+                    <div class="col-lg-5 col-lg-push-7"><img src="/employer_assets/media/img/silver.png"
                             data-src="media/img/sliver.png" class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7 col-lg-pull-5">
                         <h3>Gói Silver</h3>
@@ -337,7 +371,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/gold.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/gold.png" data-src="media/img/gold.png"
                             class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7">
                         <h3>Gói Gold</h3>
@@ -352,7 +386,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
+                    <div class="col-lg-5 col-lg-push-7"><img src="/employer_assets/media/img/gold.png"
                             data-src="media/img/gold.png" class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7 col-lg-pull-5">
                         <h3>Gói Gold Plus</h3>
@@ -370,7 +404,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/platinum.png" data-src="media/img/platium.png"
                             class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7">
                         <h3>Gói Platinum 15 ngày</h3>
@@ -392,7 +426,7 @@
                         <h3>Gói Platinum</h3>
                         <p class="text-bold text-danger">6,900,000đ</p>
                         <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
+                            <li><img src="/employer_assets/media/img/check.png" class="lazy" data-src="media/img/check.png"
                                     alt="">Bao gồm tất cả các quyền lợi của gói Gold</li>
                             <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
                                     alt="">Chạy quảng cáo trả phí tin tuyển dụng trên các kênh Facebook, Indeed (30
@@ -402,11 +436,11 @@
                             <p><a class="btn btn-muangay" href="/employer/order?package=platinum">Mua ngay</a></p>
                         </ul>
                     </div>
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/platinum.png" data-src="media/img/platium.png"
                             class="img-responsive lazy" alt=""></div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/diamond.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/diamond.png" data-src="media/img/diamond.png"
                             class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7">
                         <h3>Gói Diamond 15 ngày</h3>
@@ -424,7 +458,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
+                    <div class="col-lg-5 col-lg-push-7"><img src="/employer_assets/media/img/diamond.png"
                             data-src="media/img/diamond.png" class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7 col-lg-pull-5">
                         <h3>Gói Diamond</h3>
@@ -442,7 +476,7 @@
                     </div>
                 </div>
                 <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/platinum.png" data-src="media/img/platium.png"
                             class="img-responsive lazy" alt=""></div>
                     <div class="col-lg-7">
                         <h3>Gói Ruby 15 ngày</h3>
@@ -478,7 +512,7 @@
                             <p><a class="btn btn-muangay" href="/employer/order?package=ruby">Mua ngay</a></p>
                         </ul>
                     </div>
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
+                    <div class="col-lg-5"><img src="/employer_assets/media/img/platinum.png" data-src="media/img/platium.png"
                             class="img-responsive lazy" alt=""></div>
                 </div>
             </div>

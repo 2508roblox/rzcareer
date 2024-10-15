@@ -32,9 +32,9 @@
     <meta property="og:description"
       content="Hệ thống tìm kiếm, chủ động gợi ý các ứng viên thích hợp đồng thời tự động hóa quy trình quản lý. Tìm kiếm nhân sự phù hợp thật nhanh và hiệu quả!">
     <meta property="og:title" content="Đăng nhập hệ thống - Dành cho nhà tuyển dụng - JobsGO">
-   
 
- 
+
+
     <link href="/employer_assets/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
     <link href="/employer_assets/bolt/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="/employer_assets/bolt/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -179,26 +179,26 @@
       ">
               <img src="/assets_livewire/logo-light.svg" alt="JobsGO">
           </a>
-      
+
           <div class="panel panel-body login-form">
               <div class="text-center">
                   <h2 class="content-group">Đăng nhập hệ thống
                       <small class="display-block">Dành cho nhà tuyển dụng</small>
                   </h2>
               </div>
-      
+
               <div class="form-group">
                   <label class="control-label" for="loginform-user_name">Tài khoản / Email</label>
                   <input type="text" id="loginform-user_name" class="form-control" wire:model="user_name" autofocus>
                   @error('user_name') <span class="error">{{ $message }}</span> @enderror
               </div>
-      
+
               <div class="form-group">
                   <label class="control-label" for="loginform-password">Mật khẩu</label>
                   <input type="password" id="loginform-password" class="form-control" wire:model="password">
                   @error('password') <span class="error">{{ $message }}</span> @enderror
               </div>
-      
+
               <div class="form-group">
                   <div class="checkbox">
                       <label for="loginform-rememberme">
@@ -206,20 +206,20 @@
                       </label>
                   </div>
               </div>
-      
+
               <div class="form-group">
                   <button type="submit" class="btn btn-primary">Đăng nhập</button>
               </div>
-      
+
               <div class="text-center">
                   <a href="/recruiter/register">Đăng ký thông tin Nhà tuyển dụng</a>
               </div>
           </div>
       </form>
-      
+
         </div>
         <!-- /main content -->
-      
+
       </div>
       <!-- /page content -->
       <!-- Footer -->
@@ -255,7 +255,7 @@
 
     <!--Start of Tawk.to Script-->
     <div class="hide" id="load-tawkto"><img src="https://jobsgo.vn/img/chat_icon.png"></div>
-     
+
     <style>
       .dropdown-user li.parent-menu {
         transition: background-color .2s ease;
@@ -345,7 +345,7 @@
     </style>
     <!--End of Tawk.to Script-->
 
-     
+
     <style>
       a .img-responsive {
         width: 100%;
@@ -375,7 +375,7 @@
     <div class="zalo-chat-widget" data-oaid="2715936568206115822" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
       data-autopopup="0" data-width="" data-height=""></div>
 
-    
+
   </body>
 
   </html>
