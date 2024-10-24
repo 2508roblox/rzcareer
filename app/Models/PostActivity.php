@@ -16,7 +16,10 @@ class PostActivity extends Model
     {
         return $this->belongsTo(JobPost::class);
     }
-
+    public function candidate()
+    {
+        return $this->belongsTo(Resume::class, 'resume_id'); // Sử dụng resume_id để liên kết
+    }
     public function resume()
     {
         return $this->belongsTo(Resume::class);
