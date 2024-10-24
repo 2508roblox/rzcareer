@@ -21,7 +21,8 @@
             content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
         <meta property="og:description"
             content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <link href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html" rel="canonical">
+        <link href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
+            rel="canonical">
         <title>Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024
         </title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -78,7 +79,7 @@
 
     <body class="">
 
-     @livewire('inc.header')
+        @livewire('inc.header')
         <main>
             <link rel="stylesheet" href="/assets_livewire/teks/css/employer.min.css?v=234208153092">
             <style>
@@ -248,7 +249,6 @@
                     <div class="cover position-relative d-none d-sm-block">
                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                             width="100%" height="245" class="lazy"
-
                             data-src="{{ Storage::exists($company->company_cover_image_url) ? Storage::url($company->company_cover_image_url) : asset('assets_livewire/img/default-cover.png') }}"
                             alt="{{ $company->company_name }}">
                     </div>
@@ -368,7 +368,7 @@
                                     <div
                                         class="teks-section mb-0 card pt-2 mb-lg-4 mb-2 rounded-4 pt-md-3 p-2 p-md-3 shadow mt-sm-3 border-0">
                                         <div class="teks-section-title">
-                                            <h2 class="h3">Việc đang tuyển (2)</h2>
+                                            <h2 class="h3">Việc đang tuyển ({{$jobPosts->count()}})</h2>
                                         </div>
                                         <div class="teks-section-content teks-swiper">
 
@@ -385,9 +385,9 @@
                                                                     class="d-flex teks-item text-dark">
                                                                     <div class="flex-shrink-0 position-relative">
                                                                         <img class="lazy" width="80" height="80"
-                                                                            onerror="this.src='/img/employer-logo.jpg'"
+                                                                            onerror="this.src='{{ Storage::exists($company->company_image_url) ? Storage::url($company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}'"
                                                                             src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                                            data-src="{{  Storage::url(optional($job->company)->company_image_url ?? 'img/employer-logo.jpg') }}"
+                                                                            data-src="{{  Storage::url(optional($job->company)->company_image_url ?? 'assets_livewire/img/default-company.svg') }}"
                                                                             alt="{{ $job->company->name }}">
                                                                     </div>
                                                                     <div class="flex-grow-1 ms-2">
@@ -406,7 +406,7 @@
                                                                             <li
                                                                                 class="list-group-item list-group-item-action">
                                                                                 <i class='bx bx-map'></i> {{
-                                                                                optional($job->location)->name }}
+                                                                                optional($job->location->city)->name }}
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -508,42 +508,18 @@
                                 </div>
                                 <div class="teks-section-content">
                                     <div class="img-container-grid">
+                                        @foreach ( $gallery as $imageCompany)
                                         <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg">
+                                            href="{{ Storage::exists($imageCompany->image_url) ? Storage::url($imageCompany->image_url) : asset('employer_assets/uploads/img/gallery_default.jpg') }}">
                                             <img width="100%" height="100%"
-                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
-                                                class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
+                                                onerror="this.src='{{ Storage::exists($imageCompany->image_url) ? Storage::url($imageCompany->image_url) : asset('employer_assets/uploads/img/gallery_default.jpg') }}'"
+                                                class="img-grid-c lazy" alt="{{$company->name}}"
                                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_7630.jpg" />
-                                        </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg">
-                                            <img width="100%" height="100%"
-                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
-                                                class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_4736.jpg" />
-                                        </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg">
-                                            <img width="100%" height="100%"
-                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
-                                                class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_9352.jpg" />
-                                        </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg">
-                                            <img width="100%" height="100%"
-                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
-                                                class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_2802.jpg" />
-                                        </a> <a data-fancybox="gallery" class="fancybox img-grid" rel="ligthbox"
-                                            href="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg">
-                                            <img width="100%" height="100%"
-                                                onerror="this.src='https://Rzcareer.vn/media/img/no-image.png'"
-                                                class="img-grid-c lazy" alt="Công Ty TNHH Chế Biến Nước Chấm Mekong"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                data-src="https://employer.Rzcareer.vn/uploads/media/img/202001/pictures_library_39234_20200110135328_5170.jpg" />
+                                                data-src="{{ Storage::exists($imageCompany->image_url) ? Storage::url($imageCompany->image_url) : asset('employer_assets/uploads/img/gallery_default.jpg') }}" />
                                         </a>
+                                        @endforeach
+
+
                                     </div>
                                 </div>
                             </div>
@@ -1219,16 +1195,17 @@
                                         title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
                                 <li class="list-inline-item"><a href="https://Rzcareer.vn/blog" target="_blank"
                                         title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi" target="_blank"
-                                        title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi"
+                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
                                 <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html"
                                         title="Sơ đồ trang web"><u>Sitemap</u></a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-2">
                             <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow" href="https://www.facebook.com/RzcareerVN/"
-                                        target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
+                                <li class="list-inline-item"><a rel="nofollow"
+                                        href="https://www.facebook.com/RzcareerVN/" target="_blank"><i
+                                            class='bx bx-xs bxl-facebook'></i></a></li>
                                 <li class="list-inline-item"><a rel="nofollow"
                                         href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
                                             class='bx bx-xs bxl-linkedin'></i></a></li>
