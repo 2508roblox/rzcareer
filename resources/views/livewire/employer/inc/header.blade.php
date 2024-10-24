@@ -5,7 +5,8 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu"><span
                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span></button>
-            <a href="/employer" class="navbar-brand logo employer-logo"> <img
+            <a href="/employer" class="navbar-brand logo employer-logo">
+                <img class="d-none"
                     src="/assets_livewire/logo-dark.svg" alt="">  </a>
         </div>
         <!--Logo/-->

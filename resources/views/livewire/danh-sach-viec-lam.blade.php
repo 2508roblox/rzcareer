@@ -1118,7 +1118,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="mrg-bot-20"><a class="custom-banner"
+                                                        {{-- <div class="mrg-bot-20"><a class="custom-banner"
                                                                 href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html?utm_source=job_sidebar_1&utm_medium=banner"
                                                                 target="_blank"><img width="100" height="100"
                                                                     style="margin: auto" loading="lazy"
@@ -1131,7 +1131,7 @@
                                                                     style="margin: auto" loading="lazy"
                                                                     src="https://Rzcareer.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-52.png"
                                                                     width="100%" class="img-responsive"
-                                                                    alt="banner-Rzcareer" /></a></div>
+                                                                    alt="banner-Rzcareer" /></a></div> --}}
                                                         <div class="blog-sidebar">
 
                                                             <div
