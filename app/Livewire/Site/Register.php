@@ -34,19 +34,20 @@ class Register extends Component
             'email' => 'required|email|unique:users,email',
             'full_name' => 'required|string|max:255',
         ]);
-    
+
         try {
+
             // Create a new user
             $user = User::create([
                 'password' => bcrypt($this->password),
                 'email' => $this->email,
                 'full_name' => $this->full_name,
             ]);
-        
             // Create a seeker profile for the user
             $seekerProfile = SeekerProfile::create([
                 'user_id' => $user->id,
-             
+                'location_id' => 13, // Đặt mẫu -> sửa sau
+
             ]);
 
             // Create a primary resume for the user
@@ -59,9 +60,10 @@ class Register extends Component
             $this->alert('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
         } catch (\Exception $e) {
             // Show error alert if registration fails
+            dd($e->getMessage());
             $this->alert('error', 'Đăng ký thất bại! Email đã tồn tại.');
         }
-        
+
         // Reset fields
         $this->reset();
     }
