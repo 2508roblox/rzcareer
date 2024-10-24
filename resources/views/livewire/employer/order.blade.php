@@ -54,7 +54,7 @@
         <script src="/employer_assets/assets/layout/js/main.js?v=1.11"></script>
         <script type="text/javascript"
             src="https://employer.jobsgo.vn//bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
-      
+
         <meta name="title" content="Chọn mua gói dịch vụ">
     </head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -110,8 +110,8 @@
             <div class="wrap-mark">
                 <div class="header-top clearfix">
                     <div class="container">
-                        <a href="" class="logo pull-left"><img src="/employer_assets/assets/layout/img/logo.png" class="img-responsive"
-                                alt="hope"><span class="slogan">Real-time Recruiting</span></a>
+                        <a href="" class="logo pull-left"><img src="/employer_assets/assets/layout/img/logo.png"
+                                class="img-responsive" alt="hope"><span class="slogan">Real-time Recruiting</span></a>
                         <a href="https://jobsgo.vn" class="pull-right link-ntv hide" target="_blank">Ứng dụng cho người
                             tìm việc</a>
                         <a href="site/login" class="btn-download btn-download-free pull-right"><i
@@ -126,20 +126,12 @@
             <div class="panel panel-flat">
                 <div class="panel-heading">
                     <h2 class=""><span class="glyphicon glyphicon-shopping-cart"></span> Chọn mua gói dịch vụ</h2>
-                    <div class="heading-elements">
-                        <ul class="icons-list hide">
-                            <li><a data-action="collapse"></a></li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-12 col-md-9 col-lg-9">
                             <div class="table-responsive">
-                                <!-- <form method="post" id="order-form"> -->
-                                <form id="order-form" action="/employer/order?package=standard" method="post">
-                                    <input type="hidden" name="_csrf-colorgb-employer"
-                                        value="jO059ocYYGz97noKiHmIbPYz6MPk6hpEWoo5U3xHroXan0uf4yEnIqyxHGLeJr8dx0TesrOIdzIs2lAlBQnA3Q==">
+                                <form id="order-form" wire:submit.prevent="submitOrder">
                                     <table class="table text-nowrap">
                                         <thead>
                                             <tr>
@@ -152,6 +144,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($services as $service)
                                             <tr>
                                                 <td>
                                                     <div class="btn bg-blue rounded-round btn-icon btn-sm">
@@ -160,553 +153,56 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Standard <a
+                                                        <div class="text-default font-weight-semibold">{{
+                                                            $service->package_name }} <a
                                                                 class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
+                                                                data-toggle="tooltip" title="Xem chi tiết các gói"><i
                                                                     class="fa fa-info-circle"></i></a>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <span class="text-muted">1,000,000₫</span>
+                                                    <span class="text-muted">{{ number_format($service->price)
+                                                        }}₫</span>
                                                 </td>
                                                 <td>
                                                     <span class="text-grey">
-                                                        <strong id="price-4">1,000,000</strong>₫ </span>
+                                                        <strong>{{ number_format($service->price) }}</strong>₫
                                                     </span>
                                                 </td>
                                                 <td>
-                                                    <input type="text" name="package_4" id="qty-4" package="4" value="0"
-                                                        class="touchspin-postfix form-control package-standard-qty"
-                                                        style="display: block;">
+                                                    <input type="number" wire:model="quantities.{{ $service->id }}"
+                                                        wire:change="updateQuantity({{ $service->id }}, $event.target.value)"
+                                                        class="form-control" min="0">
                                                 </td>
                                                 <td>
-                                                    <span class="text-warning-700 amount" id="amount-4">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px"
-                                                        src="https://admin.jobsgo.vn/media/img/goi_dang_tuyen/hot_job.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Hot Job <a
-                                                                class="text-grey-400 view-hotjob-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết gói Hot Job"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">2,100,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-5">2,100,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_5" id="qty-5" package="5" value="0"
-                                                        class="touchspin-postfix form-control package-hot-job-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-5">0</span><span
-                                                        class="text-warning-700"> ₫</span>
+                                                    <span class="text-warning-700 amount">{{
+                                                        number_format($service->price * $quantities[$service->id])
+                                                        }}</span>
+                                                    <span class="text-warning-700">₫</span>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn bg-blue-800 rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Silver <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">2,200,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-10">1,980,000</strong>₫ </span>
-                                                    <span class="text-success-600">(-10%)
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_10" id="qty-10" package="10"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-silver-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-10">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn bg-orange rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Gold <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">3,400,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-11">3,400,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_11" id="qty-11" package="11"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-gold-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-11">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn bg-pink rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Platinum <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">6,900,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-12">6,900,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_12" id="qty-12" package="12"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-platinum-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-12">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px" src="/media/img/gopoint/gopoint-1000.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">GoPoint 1.000
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">2,000,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-18">2,000,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_18" id="qty-18" package="18"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-gopoint-1000-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-18">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px" src="/media/img/gopoint/gopoint-5000.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">GoPoint 5.000
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">10,000,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-19">10,000,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_19" id="qty-19" package="19"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-gopoint-5000-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-19">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px" src="/media/img/gopoint/gopoint-10000.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">GoPoint 10.000
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">20,000,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-20">20,000,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_20" id="qty-20" package="20"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-gopoint-10000-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-20">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Diamond <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">9,400,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-22">9,400,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_22" id="qty-22" package="22"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-diamond-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-22">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px"
-                                                        src="https://admin.jobsgo.vn/media/img/goi_dang_tuyen/sponsored.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói top ưu tiên
-                                                            ngành nghề </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">1,200,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-28">1,200,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_28" id="qty-28" package="28"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-top-uu-tien-nganh-nghe-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-28">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Ruby <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">13,900,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-34">13,900,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_34" id="qty-34" package="34"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-ruby-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-34">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img width="34px"
-                                                        src="https://admin.jobsgo.vn/media/img/goi_dang_tuyen/sponsored.png">
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói in đậm và bôi
-                                                            đỏ </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">600,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-35">600,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_35" id="qty-35" package="35"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-in-dam-va-boi-do-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-35">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Gold Plus <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">4,500,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-39">4,500,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_39" id="qty-39" package="39"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-gold-plus-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-39">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Platinum 15
-                                                            ngày <a class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">3,450,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-46">3,450,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_46" id="qty-46" package="46"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-platinum-15-ngay-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-46">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Diamond 15
-                                                            ngày <a class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">4,700,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-47">4,700,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_47" id="qty-47" package="47"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-diamond-15-ngay-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-47">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="btn  rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">Gói Ruby 15 ngày
-                                                            <a class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title=""
-                                                                data-original-title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-muted">6,950,000₫</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-grey">
-                                                        <strong id="price-48">6,950,000</strong>₫ </span>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="text" name="package_48" id="qty-48" package="48"
-                                                        value="0"
-                                                        class="touchspin-postfix form-control package-ruby-15-ngay-qty"
-                                                        style="display: block;">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount" id="amount-48">0</span><span
-                                                        class="text-warning-700"> ₫</span>
-                                                </td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
-                                </form> <!-- </form> -->
+                                </form>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-3 col-lg-3 pull-buttom">
                             <div class="panel-heading">
                                 <h6 class="panel-title">Tổng tiền</h6>
-                                <div class="heading-elements">
-                                    <ul class="icons-list hide">
-                                        <li><a data-action="collapse"></a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="panel panel-flat">
                                 <div class="panel-body">
-                                    <h6><small>Tạm tính: </small> <span class="pull-right" my-value="0"
-                                            id="temporary-amount">0₫</span></h6>
-                                    <h4><small>Thành tiền: </small> <span class="pull-right text-danger" my-value="0"
-                                            id="total-amount">0₫</span></h4>
+                                    <h6><small>Tạm tính: </small> <span class="pull-right" id="temporary-amount">{{
+                                            number_format($totalAmount) }}₫</span></h6>
+                                    <h4><small>Thành tiền: </small> <span class="pull-right text-danger"
+                                            id="total-amount">{{ number_format($totalAmount) }}₫</span></h4>
                                     <div>
-                                        <button id="btn-purchase" class="btn btn-danger btn-block"
-                                            style="margin-top: 50px;"
-                                            data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang khởi tạo order">Tiếp
-                                            tục <i class="glyphicon glyphicon-chevron-right"></i></button>
+                                        <button type="submit" form="order-form" class="btn btn-danger btn-block"
+                                            style="margin-top: 50px;">
+                                            Tiếp tục <i class="glyphicon glyphicon-chevron-right"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -851,7 +347,8 @@
                                                 <tbody>
                                                     <tr>
                                                         <td colspan="11" style=" background: #57abd2; color: #fff; ">
-                                                            <strong>CÁCH THỨC HIỂN THỊ TRÊN WEBSITE</strong></td>
+                                                            <strong>CÁCH THỨC HIỂN THỊ TRÊN WEBSITE</strong>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-left text-bold"> Cam kết lượt Views</td>
@@ -1023,7 +520,8 @@
 
                                                     <tr>
                                                         <td colspan="11" style=" background: #57abd2; color: #fff; ">
-                                                            <strong>CÁCH THỨC HIỂN THỊ TRÊN MOBILE APP</strong></td>
+                                                            <strong>CÁCH THỨC HIỂN THỊ TRÊN MOBILE APP</strong>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-left text-bold"> Ưu tiên hiển thị trên mobile
@@ -1067,7 +565,8 @@
                                                     <tr>
                                                         <td colspan="11" style=" background: #57abd2; color: #fff; ">
                                                             <strong>CHẠY QUẢNG CÁO FACEBOOK/ INDEED/ EMAIL
-                                                                MARKETING</strong></td>
+                                                                MARKETING</strong>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-left text-bold"> Chạy quảng cáo tin đăng cao cấp
@@ -1126,7 +625,8 @@
                                                     <tr>
                                                         <td colspan="11" style=" background: #57abd2; color: #fff; ">
                                                             <strong>HỖ TRỢ ỨNG VIÊN TRONG SUỐT 30 NGÀY JOB
-                                                                ONLINE</strong></td>
+                                                                ONLINE</strong>
+                                                        </td>
                                                     </tr>
 
                                                     <tr>

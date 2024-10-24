@@ -19,43 +19,52 @@ class PurchasedServiceResource extends Resource
     protected static ?string $model = PurchasedService::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-credit-card'; // Hoặc 'heroicon-o-receipt'
-protected static ?string $navigationGroup = 'Quản lý dịch vụ';
-public static function getPluralModelLabel(): string
-{
-    return 'Dịch vụ đã mua'; // Trả về tên số nhiều cho mô hình Purchased Service
-}
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ';
+    public static function getPluralModelLabel(): string
+    {
+        return 'Dịch vụ đã mua'; // Trả về tên số nhiều cho mô hình Purchased Service
+    }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('user_id')
-                    ->relationship('user', 'full_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                    ->required(),
-                Forms\Components\Select::make('service_id')
-                    ->relationship('service', 'package_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                    ->required(),
-                Forms\Components\Select::make('invoice_id')
-                    ->relationship('invoice', 'invoice_code') // Điều chỉnh theo cách định nghĩa quan hệ
-                    ->required(),
-                Forms\Components\DatePicker::make('purchase_date')->required(),
+                Forms\Components\Section::make('Thông tin dịch vụ')
+                    ->description('Chi tiết về dịch vụ đã mua')
+                    ->schema([
+                        Forms\Components\Select::make('service_id')
+                            ->relationship('service', 'package_name')
+                            ->required()
+                            ->label('Tên dịch vụ'),
+                        Forms\Components\Select::make('invoice_id')
+                            ->relationship('invoice', 'invoice_code')
+                            ->required()
+                            ->label('Mã hóa đơn'),
+                        Forms\Components\DatePicker::make('purchase_date')
+                            ->required()
+                            ->label('Ngày mua'),
+                        Forms\Components\TextInput::make('quantity')
+                            ->required()
+                            ->numeric()
+                            ->label('Số lượng'),
+                    ]),
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('user.name'),
-            Tables\Columns\TextColumn::make('service.package_name'),
-            Tables\Columns\TextColumn::make('invoice.invoice_code'),
-            Tables\Columns\TextColumn::make('purchase_date')->date(),
-        ])
+            ->columns([
+                Tables\Columns\TextColumn::make('service.package_name')->label('Tên dịch vụ'),
+                Tables\Columns\TextColumn::make('invoice.invoice_code')->label('Mã hóa đơn'),
+                Tables\Columns\TextColumn::make('purchase_date')->date()->label('Ngày mua'),
+                Tables\Columns\TextColumn::make('quantity')->label('Số lượng'),
+            ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -75,10 +84,10 @@ public static function getPluralModelLabel(): string
     {
         return [
             'index' => Pages\ListPurchasedServices::route('/'),
-            'create' => Pages\CreatePurchasedService::route('/create'),
-            'edit' => Pages\EditPurchasedService::route('/{record}/edit'),
         ];
-    }public static function getNavigationBadge(): ?string
+    }
+
+    public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }

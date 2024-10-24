@@ -303,183 +303,63 @@
                         </div>
                     </div>
                 </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/standard.png"
-                            class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7">
-                        <h3>Gói Standard</h3>
-                        <p class="text-bold text-danger">1,000,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Tin tuyển dụng online 30 ngày</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Tin tuyển dụng hiển thị đồng thời trên các kênh liên kết: Indeed, Jobstreet
-                            </li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=standard">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
-                            data-src="media/img/sliver.png" class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7 col-lg-pull-5">
-                        <h3>Gói Silver</h3>
-                        <p class="text-bold text-danger">2,200,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Standard</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Gửi thông báo công việc (push notification) đến ứng viên phù hợp</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Ưu tiên hiển thị trên mobile app của ứng viên phù hợp</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=silver">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/gold.png"
-                            class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7">
-                        <h3>Gói Gold</h3>
-                        <p class="text-bold text-danger">3,400,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Silver</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hỗ trợ quảng cáo Facebook nếu không đạt số lượng CV cam kết</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=gold">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
-                            data-src="media/img/gold.png" class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7 col-lg-pull-5">
-                        <h3>Gói Gold Plus</h3>
-                        <p class="text-bold text-danger">4,500,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Gold</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hiển thị trong box Việc làm nổi bật ở trang chủ và trang việc làm theo địa
-                                phương</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hỗ trợ quảng cáo Facebook nếu không đạt số lượng CV cam kết</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=gold-plus">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
-                            class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7">
-                        <h3>Gói Platinum 15 ngày</h3>
-                        <p class="text-bold text-danger">3,450,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Gold</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Chạy quảng cáo trả phí tin tuyển dụng trên các kênh Facebook, Indeed (30
-                                ngày)</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=platinum">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-7">
-                        <h3>Gói Platinum</h3>
-                        <p class="text-bold text-danger">6,900,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Gold</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Chạy quảng cáo trả phí tin tuyển dụng trên các kênh Facebook, Indeed (30
-                                ngày)</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=platinum">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
-                            class="img-responsive lazy" alt=""></div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/diamond.png"
-                            class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7">
-                        <h3>Gói Diamond 15 ngày</h3>
-                        <p class="text-bold text-danger">4,700,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Platinum 15 ngày</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Xuất hiện ở vị trí nổi bật nhất trên trang chủ JobsGO.vn (vị trí HOT JOB/10
-                                ngày)</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Ưu tiên hiển thị trong tìm kiếm trang chủ/trang ngành</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=diamond">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5 col-lg-push-7"><img src="https://jobsgo.vn/loading.gif"
-                            data-src="media/img/diamond.png" class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7 col-lg-pull-5">
-                        <h3>Gói Diamond</h3>
-                        <p class="text-bold text-danger">9,400,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Platinum</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Xuất hiện ở vị trí nổi bật nhất trên trang chủ JobsGO.vn (vị trí HOT JOB/3
-                                tuần)</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Ưu tiên hiển thị trong tìm kiếm trang chủ/trang ngành</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=diamond">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
-                            class="img-responsive lazy" alt=""></div>
-                    <div class="col-lg-7">
-                        <h3>Gói Ruby 15 ngày</h3>
-                        <p class="text-bold text-danger">6,950,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Diamond 15 ngày</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Xuất hiện ở vị trí nổi bật nhất trên trang chủ JobsGO.vn (vị trí HOT JOB) 15
-                                ngày</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Cam kết tối thiểu 3000 lượt Views</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=ruby">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row box-goidv">
-                    <div class="col-lg-7">
-                        <h3>Gói Ruby</h3>
-                        <p class="text-bold text-danger">13,900,000đ</p>
-                        <ul>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Bao gồm tất cả các quyền lợi của gói Diamond</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Xuất hiện ở vị trí nổi bật nhất trên trang chủ JobsGO.vn (vị trí HOT JOB) 30
-                                ngày</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Hồ sơ NTD được đánh dấu xác thực & logo VIP</li>
-                            <li><img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="media/img/check.png"
-                                    alt="">Cam kết tối thiểu 3000 lượt Views</li>
-                            <p><a class="btn btn-muangay" href="/employer/order?package=ruby">Mua ngay</a></p>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5"><img src="https://jobsgo.vn/loading.gif" data-src="media/img/platium.png"
-                            class="img-responsive lazy" alt=""></div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ảnh minh họa</th>
+                                <th>Tên gói dịch vụ</th>
+                                <th>Giá</th>
+                                <th>Thời gian</th>
+                                <th>Số lượng tin</th>
+                                <th>Tính năng</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($services as $service)
+                            <tr>
+                                <td>
+                                    @if($service->illustration_image)
+                                        <img src="{{ Storage::url($service->illustration_image) }}" class="img-thumbnail" style="max-width: 100px;" alt="{{ $service->package_name }}">
+                                    @endif
+                                </td>
+                                <td>
+                                    <strong>{{ $service->package_name }}</strong>
+                                    <p class="text-muted">{{ $service->description }}</p>
+                                </td>
+                                <td>{{ number_format($service->price, 0, ',', '.') }}đ</td>
+                                <td>{{ $service->duration }} ngày</td>
+                                <td>{{ $service->job_post_count }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        @if($service->highlight_post)
+                                            <li><i class="fa fa-check-circle text-success"></i> Bài viết nổi bật</li>
+                                        @endif
+                                        @if($service->top_sector)
+                                            <li><i class="fa fa-check-circle text-success"></i> Vị trí top trong ngành</li>
+                                        @endif
+                                        @if($service->border_effect)
+                                            <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng viền</li>
+                                        @endif
+                                        @if($service->hot_effect)
+                                            <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng hot</li>
+                                        @endif
+                                        @if($service->highlight_logo)
+                                            <li><i class="fa fa-check-circle text-success"></i> Logo nổi bật</li>
+                                        @endif
+                                        @if($service->homepage_banner)
+                                            <li><i class="fa fa-check-circle text-success"></i> Banner trên trang chủ</li>
+                                        @endif
+                                    </ul>
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" href="/employer/order?package={{ strtolower($service->package_name) }}">Mua ngay</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <style>
@@ -678,3 +558,6 @@
 
     </html>
 </div>
+
+
+
