@@ -143,7 +143,7 @@ class ShoppingCartResource extends Resource
     private function generateUniqueInvoiceCode(): string
     {
         do {
-            $code = 'INV-' . strtoupper(Str::random(8));
+            $code = 'INV' . strtoupper(Str::random(8));
         } while (Invoice::where('invoice_code', $code)->exists());
 
         return $code;

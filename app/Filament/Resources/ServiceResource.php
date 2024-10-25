@@ -77,32 +77,32 @@ class ServiceResource extends Resource
                         ->schema([
                             Forms\Components\Checkbox::make('highlight_post')
                                 ->label('Bài viết nổi bật')
-                                ->default(false)
+                                
                                 ->helperText('Cho phép đánh dấu bài viết nổi bật'),
     
                             Forms\Components\Checkbox::make('top_sector')
                                 ->label('Vị trí top trong ngành')
-                                ->default(false)
+                                
                                 ->helperText('Cho phép bài viết xuất hiện ở vị trí cao trong ngành'),
     
                             Forms\Components\Checkbox::make('border_effect')
                                 ->label('Hiệu ứng viền')
-                                ->default(false)
+                                
                                 ->helperText('Thêm hiệu ứng viền nổi bật cho bài viết tuyển dụng'),
     
                             Forms\Components\Checkbox::make('hot_effect')
                                 ->label('Hiệu ứng hot')
-                                ->default(false)
+                                
                                 ->helperText('Thêm hiệu ứng "Hot" cho bài viết để thu hút ứng viên'),
     
                             Forms\Components\Checkbox::make('highlight_logo')
                                 ->label('Logo nổi bật')
-                                ->default(false)
+                                
                                 ->helperText('Cho phép logo của công ty được hiển thị nổi bật trên trang tuyển dụng'),
     
                             Forms\Components\Checkbox::make('homepage_banner')
                                 ->label('Banner trên trang chủ')
-                                ->default(false)
+                                
                                 ->helperText('Cho phép hiển thị banner của công ty trên trang chủ'),
                         ]),
                 ]),

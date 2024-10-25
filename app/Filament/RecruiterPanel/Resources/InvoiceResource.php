@@ -95,12 +95,16 @@ class InvoiceResource extends Resource
                     ->icon('heroicon-o-credit-card')
                     ->action(function (Invoice $record) {
                         // Xử lý logic thanh toán ở đây
+                        // Ví dụ: cập nhật trạng thái thanh toán
+                        // $record->status = 'successful';
+                        // $record->save();
                     })
                     ->modalContent(function (Invoice $record) {
                         return view('filament.resources.invoice.pay-modal', [
                             'qrCode' => '234234',
                             'totalPrice' => $record->total_price,
                             'invoiceCode' => $record->invoice_code,
+                            'status' => $record->status, // Thêm trạng thái thanh toán
                         ]);
                     })
                     ->modalButton('Xác nhận thanh toán')

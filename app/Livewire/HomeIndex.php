@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\CheckPayment;
 use App\Models\CommonCareer;
 use Livewire\Component;
 use App\Models\JobPost;
@@ -36,6 +37,7 @@ class HomeIndex extends Component
         ->orderBy('job_posts_count', 'desc')
         ->take(12)
         ->get();
+        CheckPayment::dispatch();
     }
 
     public function searchJobs()

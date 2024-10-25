@@ -971,7 +971,7 @@
                     Tawk_API.onLoad = function() {
                         Tawk_API.toggle();
                     };
-                    $('#load-tawkto img').attr("src", "https://Rzcareer.vn/img/loading.gif");
+                    $('#load-tawkto img').attr("src", "/img/loading.gif");
                     setTimeout(function() {
                         $('#load-tawkto').hide();
                     }, 1e3);

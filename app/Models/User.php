@@ -15,6 +15,7 @@ use Filament\Models\Contracts\HasName;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements FilamentUser, HasName
@@ -81,6 +82,13 @@ class User extends Authenticatable implements FilamentUser, HasName
         return $this->hasOne(Company::class);
     }
     
+    /**
+     * Get the URL to the user's avatar.
+     *
+     * @return string
+     */
+  
+
     /**
      * Get the attributes that should be cast.
      *

@@ -133,7 +133,7 @@
                     <a class="hide smart-banner-bk" target="_blank"
                         href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500" height="100"
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
-                            alt="Tải app Rzcareer" src="/media/img/500x100-banner-1.gif"
+                            alt="Tải app Rzcareer" src=""
                             class="img-responsive lazy"></a>
                     @livewire('inc.header-nav')
 
@@ -948,14 +948,14 @@
                                                                 href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html?utm_source=job_sidebar_1&utm_medium=banner"
                                                                 target="_blank"><img width="100" height="100"
                                                                     style="margin: auto" loading="lazy"
-                                                                    src="https://Rzcareer.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-58.png"
+                                                                    src=" "
                                                                     width="100%" class="img-responsive"
                                                                     alt="banner-Rzcareer" /></a></div>
                                                         <div class="mrg-bot-20"><a class="custom-banner"
                                                                 href="https://Rzcareer.vn/viec-lam/nhan-vien-kinh-doanh-bds-ho-tro-luong-cung-thu-nhap-den-50-trieu-thang-18705914398.html?utm_source=job_sidebar_2&utm_medium=banner"
                                                                 target="_blank"><img width="100" height="100"
                                                                     style="margin: auto" loading="lazy"
-                                                                    src="https://Rzcareer.vn/blog/wp-content/uploads/2024/09/What-uhat-tha-52.png"
+                                                                    src=" "
                                                                     width="100%" class="img-responsive"
                                                                     alt="banner-Rzcareer" /></a></div>
                                                         <div class="blog-sidebar">
@@ -1447,7 +1447,7 @@
                     </section>
                     <section class="gray-bg padd-top-15 hide padd-bot-15 brows-job-category job-list full">
                         <div class="container">
-                            <div class="row"><img width="100" height="100" src="https://Rzcareer.vn/loading.gif"
+                            <div class="row"><img width="100" height="100" src="/loading.gif"
                                     style="display: block;margin: auto;"></div>
                         </div>
                     </section>

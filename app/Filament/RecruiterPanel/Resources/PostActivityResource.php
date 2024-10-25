@@ -31,35 +31,43 @@ class PostActivityResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('job_post_id')
                     ->required()
-                    ->numeric(),
+                    ->numeric()
+                    ->disabled(),
                 Forms\Components\TextInput::make('resume_id')
                     ->required()
-                    ->numeric(),
+                    ->numeric()
+                    ->disabled(),
                 Forms\Components\TextInput::make('user_id')
                     ->required()
-                    ->numeric(),
+                    ->numeric()
+                    ->disabled(),
                 Forms\Components\TextInput::make('full_name')
                     ->required()
-                    ->maxLength(100),
+                    ->maxLength(100)
+                    ->disabled(),
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required()
-                    ->maxLength(100),
+                    ->maxLength(100)
+                    ->disabled(),
                 Forms\Components\TextInput::make('phone')
                     ->tel()
                     ->required()
-                    ->maxLength(15),
+                    ->maxLength(15)
+                    ->disabled(),
                 Forms\Components\TextInput::make('status')
-                    ->required(),
+                    ->required()
+                    ->disabled(),
                 Forms\Components\TextInput::make('is_sent_email')
-                  
                     ->required()
                     ->numeric()
-                    ->default(0),
+                    ->default(0)
+                    ->disabled(),
                 Forms\Components\TextInput::make('is_deleted')
                     ->required()
                     ->numeric()
-                    ->default(0),
+                    ->default(0)
+                    ->disabled(),
             ]);
     }
 
@@ -114,12 +122,13 @@ class PostActivityResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 
@@ -137,8 +146,8 @@ class PostActivityResource extends Resource
     {
         return [
             'index' => Pages\ListPostActivities::route('/'),
-            'create' => Pages\CreatePostActivity::route('/create'),
-            'edit' => Pages\EditPostActivity::route('/{record}/edit'),
+            // 'create' => Pages\CreatePostActivity::route('/create'),
+            // 'edit' => Pages\EditPostActivity::route('/{record}/edit'),
         ];
     }
     

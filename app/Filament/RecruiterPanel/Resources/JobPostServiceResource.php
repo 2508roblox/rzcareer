@@ -29,33 +29,32 @@ class JobPostServiceResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            Forms\Components\Select::make('job_id')
-                ->relationship('job', 'job_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                ->required(),
-            Forms\Components\Select::make('service_id')
-                ->relationship('service', 'package_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                ->required(),
-            Forms\Components\DatePicker::make('start_date')->required(),
-            Forms\Components\DatePicker::make('end_date')->required(),
-            Forms\Components\Checkbox::make('highlight_post')->default(false),
-            Forms\Components\Checkbox::make('top_sector')->default(false),
-            Forms\Components\Checkbox::make('border_effect')->default(false),
-            Forms\Components\Checkbox::make('hot_effect')->default(false),
-            Forms\Components\Checkbox::make('highlight_logo')->default(false),
-            Forms\Components\Checkbox::make('homepage_banner')->default(false),
-        ]);
+            ->schema([
+                Forms\Components\Select::make('purchased_service_id')
+                    ->relationship('purchasedService', 'id') // Adjust the relationship and display field as needed
+                    ->required(),
+                
+                Forms\Components\Textarea::make('list_jobs')
+                    ->label('List of Jobs')
+                    ->required(),
+                
+                Forms\Components\DatePicker::make('start_date')
+                    ->required(),
+                
+                Forms\Components\DatePicker::make('end_date')
+                    ->required(),
+            ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('job.package_name'),
-            Tables\Columns\TextColumn::make('service.package_name'),
-            Tables\Columns\TextColumn::make('start_date')->date(),
-            Tables\Columns\TextColumn::make('end_date')->date(),
-        ])
+            ->columns([
+                Tables\Columns\TextColumn::make('job.package_name'),
+                Tables\Columns\TextColumn::make('service.package_name'),
+                Tables\Columns\TextColumn::make('start_date')->date(),
+                Tables\Columns\TextColumn::make('end_date')->date(),
+            ])
             ->filters([
                 //
             ])

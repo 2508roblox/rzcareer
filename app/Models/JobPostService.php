@@ -9,7 +9,7 @@ class JobPostService extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['job_id', 'service_id', 'start_date', 'end_date', 'highlight_post', 'top_sector', 'border_effect', 'hot_effect', 'highlight_logo'];
+    protected $fillable = ['purchased_service_id', 'list_jobs', 'start_date', 'end_date'];
 
     public function job()
     {
@@ -19,5 +19,13 @@ class JobPostService extends Model
     public function service()
     {
         return $this->belongsTo(Service::class);
+    }
+
+    /**
+     * Get the purchased service associated with the JobPostService.
+     */
+    public function purchasedService()
+    {
+        return $this->belongsTo(PurchasedService::class);
     }
 }

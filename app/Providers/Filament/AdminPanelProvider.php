@@ -64,7 +64,7 @@ class AdminPanelProvider extends PanelProvider
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
                 Authenticate::class,
             ])
-            ->brandLogo('/assets_livewire/admin.png')
+            ->brandName('RZCAREER.SITE')
 
             ->plugins([
                 \Hasnayeen\Themes\ThemesPlugin::make(),

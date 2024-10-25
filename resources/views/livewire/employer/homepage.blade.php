@@ -98,7 +98,7 @@
                     </div>
                     <div class="hidden-xs hidden-sm col-md-6 text-right">
                         <div class="screen-box">
-                            <div class="item"><img src="https://jobsgo.vn/loading.gif" class="lazy"
+                            <div class="item"><img src="/loading.gif" class="lazy"
                                     data-src="/media/img/screen-3.jpg" alt=""></div>
                         </div>
                     </div>
@@ -123,8 +123,8 @@
             }
         </style>
         <div class="container">
-            <!--<a href="https://gohire.vn" target="_blank"> <img src="https://jobsgo.vn/loading.gif" class="lazy" data-src="/media/img/banner/16122021.png" class="img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
-            <!--<a href="/site/signup"> <img src="https://jobsgo.vn/loading.gif" data-src="https://jobsgo.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
+            <!--<a href="https://gohire.vn" target="_blank"> <img src="/loading.gif" class="lazy" data-src="/media/img/banner/16122021.png" class="img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
+            <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://jobsgo.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
         </div>
         <section class="section-padding gray-bg">
             <div class="container">
@@ -140,14 +140,14 @@
                     <div class="col-lg-3 col-md-3 col-xs-6">
                         <div class="box-taisao">
                             <h3>1.600.000+</h3>
-                            <p>Lượng ứng viên truy cập sử dụng hàng tháng</p> <img src="https://jobsgo.vn/loading.gif"
+                            <p>Lượng ứng viên truy cập sử dụng hàng tháng</p> <img src="/loading.gif"
                                 data-src="media/img/tai-sao4.png" class="img-responsive lazy" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-xs-6">
                         <div class="box-taisao">
                             <h3>AI thông minh</h3>
-                            <p>Giúp tìm kiếm ứng viên phù hợp nhanh chóng </p> <img src="https://jobsgo.vn/loading.gif"
+                            <p>Giúp tìm kiếm ứng viên phù hợp nhanh chóng </p> <img src="/loading.gif"
                                 data-src="media/img/tai-sao1.png" class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                         <div class="box-taisao">
                             <h3>Tuyển dụng đa kênh</h3>
                             <p>Kết nối thêm với nguồn ứng viên từ: Facebook, Indeed, Jobstreet…</p> <img
-                                src="https://jobsgo.vn/loading.gif" data-src="media/img/tai-sao2.png"
+                                src="/loading.gif" data-src="media/img/tai-sao2.png"
                                 class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                         <div class="box-taisao">
                             <h3>Support 24/7</h3>
                             <p>Đội ngũ CSKH tận tình luôn sẵn sàng hỗ trợ Khách hàng</p> <img
-                                src="https://jobsgo.vn/loading.gif" data-src="media/img/tai-sao3.png"
+                                src="/loading.gif" data-src="media/img/tai-sao3.png"
                                 class="img-responsive lazy" alt="">
                         </div>
                     </div>
@@ -192,12 +192,12 @@
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-3.jpg" alt=""></div>
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-5.jpg" alt=""></div>
                                         </div>
                                     </div>
@@ -218,12 +218,12 @@
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-1.jpg" alt=""></div>
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-3.jpg" alt=""></div>
                                         </div>
                                     </div>
@@ -243,12 +243,12 @@
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-1.jpg" alt=""></div>
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-2.jpg" alt=""></div>
                                         </div>
                                     </div>
@@ -268,12 +268,12 @@
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-3.jpg" alt=""></div>
                                         </div>
                                         <div class="col-xs-6 col-md-3">
                                             <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="https://jobsgo.vn/loading.gif" class="lazy"
+                                                    src="/loading.gif" class="lazy"
                                                     data-src="media/img/screen-6.jpg" alt=""></div>
                                         </div>
                                     </div>
