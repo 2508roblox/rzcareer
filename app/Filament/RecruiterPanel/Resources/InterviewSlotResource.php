@@ -24,7 +24,7 @@ class InterviewSlotResource extends Resource
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
 
 
-    public static ?string $label = 'Địa chỉ phỏng vấn'; // Nhãn hiển thị cho tài nguyên này
+    public static ?string $label = 'Lịch phỏng vấn'; // Nhãn hiển thị cho tài nguyên này
 
     public static function form(Form $form): Form
     {
@@ -44,14 +44,16 @@ class InterviewSlotResource extends Resource
                                     ->label('Địa điểm'), // Việt hóa label
                                 Forms\Components\Select::make('interviewer_id') // Sử dụng thành phần Select
                                     ->label('Người phỏng vấn') // Việt hóa label
-                                    ->options(PostActivity::query()->pluck('full_name', 'user_id')) // Lấy tùy chọn từ PostActivity
+                                    ->searchable()
+                                    ->preload()
+                                    ->options(Interviewer::query()->pluck('full_name', 'id')) // Lấy tùy chọn từ PostActivity
                                     ->required(), // Tùy chọn: làm cho trường này bắt buộc
                             ]),
                     ]),
             ]);
     }
-    
-    
+
+
     public static function table(Table $table): Table
     {
         return $table
@@ -90,7 +92,7 @@ class InterviewSlotResource extends Resource
                 ]),
             ]);
     }
-    
+
 
     public static function getRelations(): array
     {

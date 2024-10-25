@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class SavedResumeResource extends Resource
 {
@@ -36,7 +37,7 @@ class SavedResumeResource extends Resource
                         ->relationship('resume', 'id')
                         ->searchable(),
                 ]),
-                
+
             Forms\Components\Section::make('Thông tin công ty')
                 ->schema([
                     Forms\Components\Select::make('company_id')
@@ -45,38 +46,87 @@ class SavedResumeResource extends Resource
                         ->relationship('company', 'company_name')
                         ->searchable(),
                 ]),
-                
+
             // Bạn có thể thêm các section khác ở đây nếu cần
         ]);
 }
 
-    
+
 public static function table(Table $table): Table
 {
     return $table
         ->columns([
-            Tables\Columns\TextColumn::make('resume_id')
-                ->label('ID Hồ sơ') // Tiêu đề cột bằng tiếng Việt
-                ->numeric()
-                ->sortable()
+            // Cột 1: Ảnh đại diện của ứng viên
+            Tables\Columns\ImageColumn::make('user.avatar_url')
+                ->label('Ảnh đại diện')
+                ->size(50)
+                ->circular()
+                ->getStateUsing(function ($record) {
+                    return $record->resume->user->avatar_url ? asset(Storage::url($record->resume->user->avatar_url)) : null;
+                }),
+
+            // Cột 2: Thông tin cơ bản của ứng viên
+            Tables\Columns\TextColumn::make('resume.seekerProfile')
+                ->label('Thông tin cơ bản')
+                ->formatStateUsing(function ($state, SavedResume $record) {
+                    return $record->resume->seekerProfile ? // Giả sử bạn có quan hệ này
+                        "Tên: {$record->resume->seekerProfile->user->full_name}<br>" .
+                        "Năm sinh: {$record->resume->seekerProfile->birthday}<br>" .
+                        "Địa chỉ: {$record->resume->seekerProfile->current_residence}<br>" .
+                        "Lương mong muốn: {$record->resume->seekerProfile->expected_salary_min} - {$record->resume->seekerProfile->expected_salary_max} VNĐ"
+                        : 'Chưa có thông tin';
+                })
+                ->html() // Cho phép hiển thị HTML
                 ->searchable(),
-            Tables\Columns\TextColumn::make('company_id')
-                ->label('ID Công ty') // Tiêu đề cột bằng tiếng Việt
-                ->numeric()
-                ->sortable(),
+
+            // Cột 3: Học vấn (degree name)
+            Tables\Columns\TextColumn::make('resume.educationDetails')
+                ->label('Học vấn')
+                ->formatStateUsing(function ($state, SavedResume $record) {
+                    return $record->resume->educationDetails->pluck('degree_name')->implode('<br>');
+                })
+                ->html()
+                ->searchable(),
+
+            // Cột 4: Kinh nghiệm làm việc (company name)
+            Tables\Columns\TextColumn::make('resume.experienceDetails')
+                ->label('Kinh nghiệm làm việc')
+                ->formatStateUsing(function ($state, SavedResume $record) {
+                    return $record->resume->experienceDetails->pluck('company_name')->implode('<br>');
+                })
+                ->html()
+                ->searchable(),
+
+            // Cột 5: Kỹ năng (skill name)
+            Tables\Columns\TextColumn::make('resume.advancedSkills')
+                ->label('Kỹ năng chuyên môn')
+                ->formatStateUsing(function ($state, SavedResume $record) {
+                    return $record->resume->advancedSkills->pluck('name')->implode('<br>');
+                })
+                ->html()
+                ->searchable(),
+
+            // Cột 6: Ngôn ngữ (language name)
+            Tables\Columns\TextColumn::make('resume.languageSkills')
+                ->label('Ngôn ngữ')
+                ->formatStateUsing(function ($state, SavedResume $record) {
+                    return $record->resume->languageSkills->pluck('language')->implode('<br>');
+                })
+                ->html()
+                ->searchable(),
+
+            // Cột 7: Thời gian tạo
             Tables\Columns\TextColumn::make('created_at')
-                ->label('Thời gian tạo') // Tiêu đề cột bằng tiếng Việt
+                ->label('Thời gian tạo')
                 ->dateTime()
                 ->sortable(),
-       
         ])
         ->filters([
-            //
+            // Thêm bộ lọc nếu cần
         ])
         ->actions([
+            // Thêm các action cần thiết
             Tables\Actions\ActionGroup::make([
-                Tables\Actions\EditAction::make()
-                    ->label('Chỉnh sửa'),
                 Tables\Actions\ViewAction::make()
                     ->label('Xem'),
                 Tables\Actions\DeleteAction::make()
@@ -84,12 +134,11 @@ public static function table(Table $table): Table
             ]),
         ])
         ->bulkActions([
-            Tables\Actions\BulkActionGroup::make([
-                Tables\Actions\DeleteBulkAction::make()
-                    ->label('Xóa'),
-            ]),
+            Tables\Actions\DeleteBulkAction::make()
+                ->label('Xóa hồ sơ đã lưu'), // Nhãn cho bulk action
         ]);
 }
+
 
 
     public static function getRelations(): array

@@ -5,11 +5,13 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Company;
 use App\Models\JobPost;
+use App\Models\CompanyImage;
 
 class TuyenDung extends Component
 {
     public $company; // Thêm thuộc tính để lưu thông tin công ty
     public $jobPosts; // Thêm thuộc tính để lưu danh sách job của công ty
+    public $gallery; // thư viện ảnh
 
     public function mount($slug)
     {
@@ -22,13 +24,18 @@ class TuyenDung extends Component
         $this->jobPosts = JobPost::where('company_id', $this->company->id)
             ->with(['career', 'location']) // Load thêm các mối quan hệ nếu cần
             ->get();
+
+        $this->gallery = CompanyImage::where('company_id', $this->company->id)
+            ->get();
     }
 
     public function render()
     {
+
         return view('livewire.tuyen-dung', [
             'company' => $this->company, // Chuyển dữ liệu công ty vào view
             'jobPosts' => $this->jobPosts, // Chuyển danh sách job vào view
+            'gallery' => $this->gallery,
         ]);
     }
 }

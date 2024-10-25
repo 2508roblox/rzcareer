@@ -27,49 +27,74 @@ class InterviewerResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('full_name')
+                    ->label('Họ và tên') // Việt hóa
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->placeholder('Nhập họ và tên'), // Placeholder
+
                 Forms\Components\TextInput::make('email')
+                    ->label('Email') // Việt hóa
                     ->email()
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->placeholder('Nhập địa chỉ email'), // Placeholder
+
                 Forms\Components\TextInput::make('position')
+                    ->label('Vị trí công việc') // Việt hóa
                     ->required()
-                    ->maxLength(255),
-            ]);
+                    ->maxLength(255)
+                    ->placeholder('Nhập vị trí công việc'), // Placeholder
+            ])
+            ->columns(2) // Sử dụng 2 cột để tạo layout đẹp hơn
+            
+           ;
     }
+
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('full_name')
+                    ->label('Họ và tên') // Việt hóa
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('email')
+                    ->label('Email') // Việt hóa
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('position')
+                    ->label('Vị trí công việc') // Việt hóa
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Thời gian tạo') // Việt hóa
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Thời gian cập nhật') // Việt hóa
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                // Thêm bộ lọc nếu cần
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->label('Chỉnh sửa'), // Việt hóa
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->label('Xóa'), // Việt hóa
                 ]),
-            ]);
+            ])
+             ; // Tiêu đề section
     }
+
 
     public static function getRelations(): array
     {

@@ -1,9 +1,34 @@
+<?php
+   $jobPostForLocation = App\Models\CommonCity::whereHas('locations.jobPosts') // Lọc những thành phố có job_posts
+                      ->withCount(['locations as job_posts_count' => function ($query) {
+                      $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                      }])
+                      ->orderBy('job_posts_count', 'desc')
+                      ->limit(10)
+                      ->get();
+
+  $jobPostForCareer = App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                      ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                      ->limit(10) // Limit to top 10 careers
+                      ->get();
+
+ $jobTypes = App\Models\JobPost::select('job_type')->distinct()->get();
+ $typeOfWorkPlaces = App\Models\JobPost::select('type_of_workplace')
+                      ->distinct()
+                      ->get();
+
+ $companies = App\Models\CommonCareer::withCount('companies')
+            ->orderBy('companies_count', 'desc')
+            ->take(10)
+            ->get();
+
+?>
 <nav class="navbar navbar-default navbar-transparent">
     <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
                 class="fa fa-bars"></i></button>
         <div class="navbar-header"><a class="navbar-brand" href="/">
-            <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
+                <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
             </a>
 
         </div>
@@ -23,11 +48,7 @@
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                                         <ul class="list-unstyled">
-                                            @foreach(
-                                            App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
-                                            ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
-                                            ->limit(10) // Limit to top 10 careers
-                                            ->get() as $career)
+                                            @foreach($jobPostForCareer as $career)
                                             <li>
                                                 <a class="dropdown-item"
                                                     href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
@@ -36,18 +57,13 @@
                                             </li>
                                             @endforeach
                                         </ul>
+
+
                                     </div>
                                     <div class="col-sm-3 ps-sm-0">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                                         <ul class="list-unstyled">
-                                            @foreach(
-                                            App\Models\CommonCity::whereHas('locations.jobPosts')
-                                            ->withCount(['locations as job_posts_count' => function ($query) {
-                                            $query->whereHas('jobPosts');
-                                            }])
-                                            ->orderBy('job_posts_count', 'desc')
-                                            ->limit(10)
-                                            ->get() as $city)
+                                            @foreach($jobPostForLocation as $city)
                                             <li>
                                                 <a class="dropdown-item"
                                                     href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}">
@@ -67,10 +83,7 @@
                                             <li><a class="dropdown-item"
                                                     href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_hot' => true]) }}">
                                                     Việc làm Nổi bật</a></li>
-                                            @foreach(
-                                            App\Models\JobPost::select('job_type')
-                                            ->distinct()
-                                            ->get() as $jobType)
+                                            @foreach($jobTypes as $jobType)
                                             <li>
                                                 <a class="dropdown-item"
                                                     href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'job_type' => $jobType->job_type ]) }}">
@@ -78,14 +91,11 @@
                                                 </a>
                                             </li>
                                             @endforeach
-                                            @foreach(
-                                            App\Models\JobPost::select('type_of_workplace')
-                                            ->distinct()
-                                            ->get() as $typeOfWorkplace)
+                                            @foreach($typeOfWorkPlaces as $typeOfWorkPlace)
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'type_of_workplace' => $typeOfWorkplace->type_of_workplace ]) }}">
-                                                    Việc làm {{ $typeOfWorkplace->type_of_workplace }}
+                                                    href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'type_of_workplace' => $typeOfWorkPlace->type_of_workplace ]) }}">
+                                                    Việc làm {{ $typeOfWorkPlace->type_of_workplace }}
                                                 </a>
                                             </li>
                                             @endforeach
@@ -103,18 +113,11 @@
                     </a>
                     @if (Auth::check())
                     <ul class="dropdown-menu">
-                        @php
-                        // Get the top 10 careers with the most companies
-                        $careers = App\Models\CommonCareer::withCount('companies')
-                        ->orderBy('companies_count', 'desc')
-                        ->take(10)
-                        ->get();
-                        @endphp
-                        @foreach($careers as $career)
+                        @foreach($companies as $company)
                         <li>
                             <a class="dropdown-item"
-                                href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $career->name))) }}">
-                                {{ $career->name }} ({{ $career->companies_count }} công ty)
+                                href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $company->name))) }}">
+                                {{ $company->name }} ({{ $company->companies_count }} công ty)
                             </a>
                         </li>
                         @endforeach
@@ -137,7 +140,7 @@
 
             </ul>
             <ul class="nav teks-nav navbar-nav navbar-right navbar-left-2" data-in="fadeInDown" data-out="fadeOutUp">
-
+                @if (Auth::check())
                 <li class="dropdown dropdown-user">
                     <a href="/candidate/index" style=" padding-top: 12px; display: flex !important; align-items:center;"
                         class="dropdown-toggle" data-toggle="dropdown">
@@ -149,8 +152,7 @@
                             <div class="d-flex text-bold" style="font-weight: bold;">
                                 @if (Auth::check())
                                 <span>
-                                    {{ Auth::user()->full_name }}
-
+                                    <div class="d-flex fw-bold text-capitalize">{{ Auth::user()->full_name }}</div>
                                 </span>
                                 @endif
 
@@ -291,9 +293,17 @@
                         }
                     </style>
                 </li>
+                @else
+                <!-- If user is not authenticated -->
+                <div class="teks-btn-group d-none d-sm-inline-block">
+                    <a rel="nofollow" href="/site/register" class="btn rounded-2 btn-outline-primary me-2">Đăng ký</a>
+                    <a href="/site/login" class="btn rounded-2 me-3 btn-primary">Đăng nhập</a>
+                </div>
+                @endif
             </ul>
         </div>
     </div>
+
+    </div>
     
-  </div>
 </nav>

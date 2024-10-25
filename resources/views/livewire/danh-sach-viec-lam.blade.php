@@ -637,33 +637,7 @@
                                                                 </div>
 
 
-
-
                                                                 <!-- Dropdown cho Mức lương -->
-
-
-
-
-                                                                <select wire:model.live="type_of_workplace">
-                                                                    <option value="">Chọn nơi hình làm việc</option>
-
-                                                                    @foreach(App\Models\JobPost::select('type_of_workplace')->distinct()->get()
-                                                                    as $workplace_item)
-                                                                    <option
-                                                                        value="{{$workplace_item->type_of_workplace}}">
-                                                                        {{$workplace_item->type_of_workplace}}
-                                                                    </option>
-                                                                    @endforeach
-
-
-                                                                </select>
-                                                                @if ($type_of_workplace)
-                                                                <p>Loại: {{$type_of_workplace}}</p>
-                                                                @endif
-
-
-
-
 
                                                                 <div class="clearfix bg-bc">
 
@@ -934,166 +908,6 @@
                                                             </div>
                                                         </div>
 
-
-                                                    </div>
-
-                                                    <div id="report">
-                                                        <div>
-                                                            <script rsync src="/assets_livewire/js/chart.min.js">
-                                                            </script>
-                                                            <script>
-                                                                function drawWatermark(ctx, text, x, y, fontSize, color, rotation) {
-                                                                              ctx.save();
-                                                                              ctx.translate(x, y);
-                                                                              ctx.rotate(rotation);
-                                                                              ctx.font = fontSize + "px Arial";
-                                                                              ctx.fillStyle = color;
-                                                                              ctx.globalAlpha = 0.5; // Điều chỉnh độ mờ của watermark
-                                                                              ctx.fillText(text, 0, 0);
-                                                                              ctx.restore();
-                                                                          }
-                                                        document.addEventListener('DOMContentLoaded', function() {
-                                                    const ctx = document.getElementById('jobsAppliesIndustryChart').getContext('2d');
-
-                                                    const months = ['01/2023','02/2023','03/2023','04/2023','05/2023','06/2023','07/2023','08/2023','09/2023','10/2023','11/2023','12/2023','01/2024','02/2024','03/2024','04/2024','05/2024','06/2024','07/2024','08/2024'];
-
-                                                    const jobsData = [275,386,588,401,383,257,389,517,393,325,420,381,312,180,516,444,275,342,340,262,116,0,0,0];
-                                                    const appliesData = [1264,1572,1539,1237,1157,1181,1185,1627,1624,1434,1274,1510,1595,1188,1494,1688,1528,1987,1520,931,30,0,0,0];
-
-                                                    const chart = new Chart(ctx, {
-                                                                type: 'bar', // Loại biểu đồ chính
-                                                                data: {
-                                                                    labels: months,
-                                                                    datasets: [
-                                                                        {
-                                                                            label: 'Số lượt ứng tuyển',
-
-                                                                           borderColor: 'rgba(255, 197, 36, 1)',
-                                                                           backgroundColor: 'rgba(255, 197, 36, 1)',
-                                                                            data: appliesData,
-                                                                            borderWidth: 2,
-                                                                            yAxisID: 'y2', // Trục y phải
-                                                                            type: 'line' // Loại dữ liệu là đường
-                                                                        },
-                                                                        {
-                                                                            label: 'Số tin đăng tuyển',
-                                                                            data: jobsData,
-
-                                                                            borderColor: 'rgba(0, 139, 255, 1)',
-                                                                            backgroundColor: 'rgba(0, 139, 255, .8)',
-                                                                            borderWidth: 1,
-                                                                            yAxisID: 'y1', // Trục y trái
-                                                                            type: 'bar' // Loại dữ liệu là cột
-                                                                        },
-
-                                                                    ]
-                                                                },
-                                                                options: {
-                                                                    responsive: true,
-                                                                    plugins: {
-                                                                        legend: {
-                                                                            position: 'top',
-                                                                        },
-                                                                        title: {
-                                                                            display: true,
-                                                                            text: 'Số tin đăng và lượt ứng tuyển theo tháng - Ngành nghề Tài Chính/Ngân Hàng',
-                                                                            font: {
-                                                                                size: 18
-                                                                            }
-                                                                        },
-                                                                        tooltip: {
-                                                                            mode: 'index',
-                                                                            intersect: false,
-                                                                        }
-                                                                    },
-                                                                    scales: {
-                                                                        x: {
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Tháng/Năm'
-                                                                            }
-                                                                        },
-                                                                        y1: {
-                                                                            type: 'linear',
-                                                                            display: true,
-                                                                            position: 'left',
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Số tin đăng tuyển'
-                                                                            },
-                                                                            beginAtZero: true
-                                                                        },
-                                                                        y2: {
-                                                                            type: 'linear',
-                                                                            display: true,
-                                                                            position: 'right',
-                                                                            grid: {
-                                                                                drawOnChartArea: false // Ngăn không vẽ lưới cho trục y2
-                                                                            },
-                                                                            title: {
-                                                                                display: true,
-                                                                                text: 'Số lượt ứng tuyển'
-                                                                            },
-                                                                            beginAtZero: true
-                                                                        }
-                                                                    }
-                                                                }
-                                                            });
-
-                                                            chart.canvas.onclick = function(evt) {
-                                                                const points = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
-                                                                if (points.length) {
-                                                                    const firstPoint = points[0];
-                                                                    const label = chart.data.labels[firstPoint.index];
-                                                                    const value = chart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
-                                                                    console.log(label, value);
-                                                                }
-                                                            };
-
-                                                            // Tạo hàm để vẽ watermark lên canvas
-                                                                          function drawWatermark() {
-                                                                              var watermark = document.getElementById('watermark');
-                                                                              ctx.drawImage(watermark, 0, 0, ctx.canvas.width, ctx.canvas.height);
-                                                                          }
-
-
-                                                });
-                                                            </script>
-
-                                                            <div
-                                                                style="position: relative;max-width:1000px;display:block;margin-top: 30px;background: #fff;border-radius: 4px;padding: 10px;box-shadow: 0 0 10px #eee">
-                                                                <canvas id="jobsAppliesIndustryChart" width="800"
-                                                                    height="400"></canvas><img height="40"
-                                                                    src="/assets_livewire/teks/img/Rzcareer-logo.svg"
-                                                                    id="watermark"
-                                                                    style="position: absolute;top: 115px;left: 150px;transform: translate(-50%, -50%);opacity: 0.2;">
-
-
-                                                                <hr>
-                                                                <p>Dựa trên dữ liệu của Rzcareer, ngành <strong>Tài
-                                                                        Chính/Ngân
-                                                                        Hàng</strong> đang trải qua một giai đoạn biến
-                                                                    động đáng kể.
-                                                                    Trong khi số lượng việc làm trong quý 2 năm 2024
-                                                                    tăng nhẹ so với
-                                                                    cùng kỳ năm trước (2.21%) và so với quý trước
-                                                                    (4.63%), thì số
-                                                                    lượng ứng viên lại tăng mạnh (44.89% so với cùng kỳ
-                                                                    và 20.71% so
-                                                                    với quý trước), cho thấy sự quan tâm ngày càng tăng
-                                                                    của người
-                                                                    lao động đối với ngành này. Tuy nhiên, nhìn vào dữ
-                                                                    liệu tháng
-                                                                    8/2024, ta thấy có sự sụt giảm đáng kể cả về số
-                                                                    lượng việc làm
-                                                                    (-49.23% so với cùng kỳ) và số lượng ứng viên
-                                                                    (-42.48% so với
-                                                                    cùng kỳ), điều này có thể phản ánh một sự điều chỉnh
-                                                                    hoặc thách
-                                                                    thức mới trong ngành <strong>Tài Chính/Ngân
-                                                                        Hàng</strong>.</p>
-                                                            </div>
-                                                        </div>
 
                                                     </div>
 
@@ -1688,76 +1502,20 @@
                                         <div class="mrg-bot-5 h4"> Việc làm tại Địa điểm <a href="javascript:void(0)"
                                                 class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
+                                            @foreach(
+                                            App\Models\CommonCity::whereHas('locations.jobPosts')
+                                            ->withCount(['locations as job_posts_count' => function ($query) {
+                                            $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                                            }])
+                                            ->orderBy('job_posts_count', 'desc')
+                                            ->get() as $city)
                                             <li>
-                                                <a href="/viec-lam-tai-ho-chi-minh.html" title="Hồ Chí Minh">
-                                                    <div class="txt text-capitalize">Hồ Chí Minh</div>
+                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}"
+                                                    title="{{$city->name}}">
+                                                    <div class="txt text-capitalize">{{ $city->name }}</div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-ha-noi.html" title="Hà Nội">
-                                                    <div class="txt text-capitalize">Hà Nội</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-binh-duong.html" title="Bình Dương">
-                                                    <div class="txt text-capitalize">Bình Dương</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-dong-nai.html" title="Đồng Nai">
-                                                    <div class="txt text-capitalize">Đồng Nai</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-da-nang.html" title="Đà Nẵng">
-                                                    <div class="txt text-capitalize">Đà Nẵng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-bac-ninh.html" title="Bắc Ninh">
-                                                    <div class="txt text-capitalize">Bắc Ninh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-bac-giang.html" title="Bắc Giang">
-                                                    <div class="txt text-capitalize">Bắc Giang</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-hai-phong.html" title="Hải Phòng">
-                                                    <div class="txt text-capitalize">Hải Phòng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-ba-ria-vung-tau.html" title="Bà Rịa - Vũng Tàu">
-                                                    <div class="txt text-capitalize">Bà Rịa - Vũng Tàu</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-long-an.html" title="Long An">
-                                                    <div class="txt text-capitalize">Long An</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-hai-duong.html" title="Hải Dương">
-                                                    <div class="txt text-capitalize">Hải Dương</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-quang-ninh.html" title="Quảng Ninh">
-                                                    <div class="txt text-capitalize">Quảng Ninh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-kien-giang.html" title="Kiên Giang">
-                                                    <div class="txt text-capitalize">Kiên Giang</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-can-tho.html" title="Cần Thơ">
-                                                    <div class="txt text-capitalize">Cần Thơ</div>
-                                                </a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -1766,244 +1524,19 @@
                                         <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a href="javascript:void(0)"
                                                 class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
+
+
+                                            @foreach(
+                                            App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                                            ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                                            ->get() as $career)
                                             <li>
-                                                <a href="/viec-lam-dien-dien-tu-dien-lanh.html"
-                                                    title="Điện/Điện Tử/Điện Lạnh">
-                                                    <div class="txt text-capitalize">Điện/Điện Tử/Điện Lạnh</div>
+                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
+                                                    title="{{$career->name}}">
+                                                    <div class="txt text-capitalize">{{$career->name}}</div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="/viec-lam-it-phan-mem.html" title="IT Phần Mềm">
-                                                    <div class="txt text-capitalize">IT Phần Mềm</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-it-phan-cung.html" title="IT Phần Cứng">
-                                                    <div class="txt text-capitalize">IT Phần Cứng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thiet-ke.html" title="Thiết Kế">
-                                                    <div class="txt text-capitalize">Thiết Kế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-marketing.html" title="Marketing">
-                                                    <div class="txt text-capitalize">Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-truyen-thong-pr-quang-cao.html"
-                                                    title="Truyền Thông/PR/Quảng Cáo">
-                                                    <div class="txt text-capitalize">Truyền Thông/PR/Quảng Cáo</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-kinh-doanh-ban-hang.html"
-                                                    title="Kinh Doanh/Bán Hàng">
-                                                    <div class="txt text-capitalize">Kinh Doanh/Bán Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-su.html" title="Nhân Sự">
-                                                    <div class="txt text-capitalize">Nhân Sự</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-hanh-chinh-van-phong.html"
-                                                    title="Hành Chính/Văn Phòng">
-                                                    <div class="txt text-capitalize">Hành Chính/Văn Phòng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-lao-dong-pho-thong.html" title="Lao Động Phổ Thông">
-                                                    <div class="txt text-capitalize">Lao Động Phổ Thông</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ban-si-ban-le-cua-hang.html"
-                                                    title="Bán Sỉ/Bán Lẻ/Cửa Hàng">
-                                                    <div class="txt text-capitalize">Bán Sỉ/Bán Lẻ/Cửa Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-dau-thau-du-an.html" title="Đấu Thầu/Dự Án">
-                                                    <div class="txt text-capitalize">Đấu Thầu/Dự Án</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-xuat-nhap-khau.html" title="Xuất Nhập Khẩu">
-                                                    <div class="txt text-capitalize">Xuất Nhập Khẩu</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-bao-hiem.html" title="Bảo Hiểm">
-                                                    <div class="txt text-capitalize">Bảo Hiểm</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-bat-dong-san.html" title="Bất Động Sản">
-                                                    <div class="txt text-capitalize">Bất Động Sản</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nha-hang-khach-san.html" title="Nhà Hàng/Khách Sạn">
-                                                    <div class="txt text-capitalize">Nhà Hàng/Khách Sạn</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-co-khi-o-to-tu-dong-hoa.html"
-                                                    title="Cơ Khí/Ô Tô/Tự Động Hóa">
-                                                    <div class="txt text-capitalize">Cơ Khí/Ô Tô/Tự Động Hóa</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-spa-lam-dep.html" title="Spa/Làm Đẹp">
-                                                    <div class="txt text-capitalize">Spa/Làm Đẹp</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-y-te.html" title="Y Tế">
-                                                    <div class="txt text-capitalize">Y Tế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-mo-dia-chat.html" title="Mỏ/Địa Chất">
-                                                    <div class="txt text-capitalize">Mỏ/Địa Chất</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-an-toan-lao-dong.html" title="An Toàn Lao Động">
-                                                    <div class="txt text-capitalize">An Toàn Lao Động</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-bien-phien-dich.html" title="Biên Phiên Dịch">
-                                                    <div class="txt text-capitalize">Biên Phiên Dịch</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-vien-thong.html" title="Viễn Thông">
-                                                    <div class="txt text-capitalize">Viễn Thông</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                    title="Tài Chính/Ngân Hàng">
-                                                    <div class="txt text-capitalize">Tài Chính/Ngân Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-du-lich.html" title="Du Lịch">
-                                                    <div class="txt text-capitalize">Du Lịch</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-giao-duc-dao-tao.html" title="Giáo Dục/Đào Tạo">
-                                                    <div class="txt text-capitalize">Giáo Dục/Đào Tạo</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-in-an-che-ban.html" title="In Ấn/Chế Bản">
-                                                    <div class="txt text-capitalize">In Ấn/Chế Bản</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ke-toan-kiem-toan.html" title="Kế Toán/Kiểm Toán">
-                                                    <div class="txt text-capitalize">Kế Toán/Kiểm Toán</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-kien-truc-noi-that.html" title="Kiến Trúc/Nội Thất">
-                                                    <div class="txt text-capitalize">Kiến Trúc/Nội Thất</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-moi-truong.html" title="Môi Trường">
-                                                    <div class="txt text-capitalize">Môi Trường</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-san-xuat-lap-rap-che-bien.html"
-                                                    title="Sản Xuất/Lắp Ráp/Chế Biến">
-                                                    <div class="txt text-capitalize">Sản Xuất/Lắp Ráp/Chế Biến</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nong-lam-ngu-nghiep.html"
-                                                    title="Nông/Lâm/Ngư Nghiệp">
-                                                    <div class="txt text-capitalize">Nông/Lâm/Ngư Nghiệp</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-luat-phap-che.html" title="Luật/Pháp Chế">
-                                                    <div class="txt text-capitalize">Luật/Pháp Chế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-kho-van.html" title="Kho Vận">
-                                                    <div class="txt text-capitalize">Kho Vận</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-xay-dung.html" title="Xây Dựng">
-                                                    <div class="txt text-capitalize">Xây Dựng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-det-may-da-giay.html" title="Dệt May/Da Giày">
-                                                    <div class="txt text-capitalize">Dệt May/Da Giày</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-cham-soc-khach-hang.html"
-                                                    title="Chăm Sóc Khách Hàng">
-                                                    <div class="txt text-capitalize">Chăm Sóc Khách Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-truyen-hinh-bao-chi.html"
-                                                    title="Truyền Hình/Báo Chí">
-                                                    <div class="txt text-capitalize">Truyền Hình/Báo Chí</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thu-mua.html" title="Thu Mua">
-                                                    <div class="txt text-capitalize">Thu Mua</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-quan-ly.html" title="Quản Lý">
-                                                    <div class="txt text-capitalize">Quản Lý</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-hoa-sinh.html" title="Hoá Sinh">
-                                                    <div class="txt text-capitalize">Hoá Sinh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-van-hanh-bao-tri-bao-duong.html"
-                                                    title="Vận Hành/Bảo Trì/Bảo Dưỡng">
-                                                    <div class="txt text-capitalize">Vận Hành/Bảo Trì/Bảo Dưỡng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-khoa-hoc-ky-thuat.html" title="Khoa Học/Kỹ Thuật">
-                                                    <div class="txt text-capitalize">Khoa Học/Kỹ Thuật</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-duoc-pham-my-pham.html" title="Dược Phẩm/Mỹ Phẩm">
-                                                    <div class="txt text-capitalize">Dược Phẩm/Mỹ Phẩm</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-sang-tao-nghe-thuat.html"
-                                                    title="Sáng Tạo/Nghệ Thuật">
-                                                    <div class="txt text-capitalize">Sáng Tạo/Nghệ Thuật</div>
-                                                </a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -2012,486 +1545,18 @@
                                         <div class="mrg-bot-5 h4"> Việc làm theo Chức danh <a href="javascript:void(0)"
                                                 class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
+
+                                            @foreach(
+                                            App\Models\jobPost::select('position') // Count related job posts
+                                            ->distinct()
+                                            ->get() as $position)
                                             <li>
-                                                <a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                    title="Nhân Viên Kinh Doanh">
-                                                    <div class="txt text-capitalize">Nhân Viên Kinh Doanh</div>
+                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => $position->position, 'location' => '', 'career_id' => '']) }}"
+                                                    title="{{$position->position}}">
+                                                    <div class="txt text-capitalize">{{$position->position}}</div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-cham-soc-khach-hang.html"
-                                                    title="Nhân Viên Chăm Sóc Khách Hàng">
-                                                    <div class="txt text-capitalize">Nhân Viên Chăm Sóc Khách Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-tu-van.html" title="Nhân Viên Tư Vấn">
-                                                    <div class="txt text-capitalize">Nhân Viên Tư Vấn</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-ke-toan.html" title="Nhân Viên Kế Toán">
-                                                    <div class="txt text-capitalize">Nhân Viên Kế Toán</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-marketing.html"
-                                                    title="Chuyên Viên Marketing">
-                                                    <div class="txt text-capitalize">Chuyên Viên Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-ky-thuat.html" title="Nhân Viên Kỹ Thuật">
-                                                    <div class="txt text-capitalize">Nhân Viên Kỹ Thuật</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-telesale.html" title="Nhân Viên Telesale">
-                                                    <div class="txt text-capitalize">Nhân Viên Telesale</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-thiet-ke.html"
-                                                    title="Chuyên Viên Thiết Kế">
-                                                    <div class="txt text-capitalize">Chuyên Viên Thiết Kế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tro-ly.html" title="Trợ Lý">
-                                                    <div class="txt text-capitalize">Trợ Lý</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thuc-tap-sinh.html" title="Thực Tập Sinh">
-                                                    <div class="txt text-capitalize">Thực Tập Sinh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                    title="Nhân Viên Hành Chính Nhân Sự">
-                                                    <div class="txt text-capitalize">Nhân Viên Hành Chính Nhân Sự</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-qa-qc.html" title="Chuyên Viên QA/QC">
-                                                    <div class="txt text-capitalize">Chuyên Viên QA/QC</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-dao-tao.html"
-                                                    title="Chuyên Viên Đào Tạo">
-                                                    <div class="txt text-capitalize">Chuyên Viên Đào Tạo</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-digital-marketing.html"
-                                                    title="Chuyên Viên Digital Marketing">
-                                                    <div class="txt text-capitalize">Chuyên Viên Digital Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-sales-admin.html" title="Sales Admin">
-                                                    <div class="txt text-capitalize">Sales Admin</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-tuyen-dung.html"
-                                                    title="Nhân Viên Tuyển Dụng">
-                                                    <div class="txt text-capitalize">Nhân Viên Tuyển Dụng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-thu-mua.html" title="Nhân Viên Thu Mua">
-                                                    <div class="txt text-capitalize">Nhân Viên Thu Mua</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-le-tan.html" title="Nhân Viên Lễ Tân">
-                                                    <div class="txt text-capitalize">Nhân Viên Lễ Tân</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-tu-van-bao-hiem.html"
-                                                    title="Nhân Viên Tư Vấn Bảo Hiểm">
-                                                    <div class="txt text-capitalize">Nhân Viên Tư Vấn Bảo Hiểm</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-content-marketing.html"
-                                                    title="Chuyên Viên Content Marketing">
-                                                    <div class="txt text-capitalize">Chuyên Viên Content Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-hanh-chinh.html"
-                                                    title="Nhân Viên Hành Chính">
-                                                    <div class="txt text-capitalize">Nhân Viên Hành Chính</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-truong-phong-kinh-doanh.html"
-                                                    title="Trưởng Phòng Kinh Doanh">
-                                                    <div class="txt text-capitalize">Trưởng Phòng Kinh Doanh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-trinh-duoc-vien.html" title="Trình Dược Viên">
-                                                    <div class="txt text-capitalize">Trình Dược Viên</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-kho.html" title="Nhân Viên Kho">
-                                                    <div class="txt text-capitalize">Nhân Viên Kho</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-xuat-nhap-khau.html"
-                                                    title="Nhân Viên Xuất Nhập Khẩu">
-                                                    <div class="txt text-capitalize">Nhân Viên Xuất Nhập Khẩu</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-van-phong.html"
-                                                    title="Nhân Viên Văn Phòng">
-                                                    <div class="txt text-capitalize">Nhân Viên Văn Phòng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ke-toan-noi-bo.html" title="Kế Toán Nội Bộ">
-                                                    <div class="txt text-capitalize">Kế Toán Nội Bộ</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-quan-ly-san-xuat.html" title="Quản Lý Sản Xuất">
-                                                    <div class="txt text-capitalize">Quản Lý Sản Xuất</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-ke-hoach.html"
-                                                    title="Chuyên Viên Kế Hoạch">
-                                                    <div class="txt text-capitalize">Chuyên Viên Kế Hoạch</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-giao-vien.html" title="Giáo Viên">
-                                                    <div class="txt text-capitalize">Giáo Viên</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-bao-tri.html" title="Nhân Viên Bảo Trì">
-                                                    <div class="txt text-capitalize">Nhân Viên Bảo Trì</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-qc.html" title="Nhân Viên QC">
-                                                    <div class="txt text-capitalize">Nhân Viên QC</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-lap-trinh-vien.html" title="Lập Trình Viên">
-                                                    <div class="txt text-capitalize">Lập Trình Viên</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-van-hanh.html" title="Nhân Viên Vận Hành">
-                                                    <div class="txt text-capitalize">Nhân Viên Vận Hành</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ke-toan-truong.html" title="Kế Toán Trưởng">
-                                                    <div class="txt text-capitalize">Kế Toán Trưởng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-quan-ly-kinh-doanh.html" title="Quản Lý Kinh Doanh">
-                                                    <div class="txt text-capitalize">Quản Lý Kinh Doanh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-phat-trien-thi-truong.html"
-                                                    title="Nhân Viên Phát Triển Thị Trường">
-                                                    <div class="txt text-capitalize">Nhân Viên Phát Triển Thị Trường
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-lao-dong-pho-thong.html" title="Lao Động Phổ Thông">
-                                                    <div class="txt text-capitalize">Lao Động Phổ Thông</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-ky-thuat-dien-lanh.html"
-                                                    title="Nhân Viên Kỹ Thuật Điện Lạnh">
-                                                    <div class="txt text-capitalize">Nhân Viên Kỹ Thuật Điện Lạnh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-su-thiet-ke.html" title="Kỹ Sư Thiết Kế">
-                                                    <div class="txt text-capitalize">Kỹ Sư Thiết Kế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-cong-nghe-thong-tin.html"
-                                                    title="Chuyên Viên Công Nghệ Thông Tin">
-                                                    <div class="txt text-capitalize">Chuyên Viên Công Nghệ Thông Tin
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thu-kho.html" title="Thủ Kho">
-                                                    <div class="txt text-capitalize">Thủ Kho</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-truong-phong-marketing.html"
-                                                    title="Trưởng Phòng Marketing">
-                                                    <div class="txt text-capitalize">Trưởng Phòng Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-content-marketing.html" title="Content Marketing">
-                                                    <div class="txt text-capitalize">Content Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-video-editor.html" title="Video Editor">
-                                                    <div class="txt text-capitalize">Video Editor</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-kien-truc-su.html" title="Kiến Trúc Sư">
-                                                    <div class="txt text-capitalize">Kiến Trúc Sư</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-thiet-ke-do-hoa.html"
-                                                    title="Nhân Viên Thiết Kế Đồ Họa">
-                                                    <div class="txt text-capitalize">Nhân Viên Thiết Kế Đồ Họa</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-ky-thuat.html"
-                                                    title="Chuyên Viên Kỹ Thuật">
-                                                    <div class="txt text-capitalize">Chuyên Viên Kỹ Thuật</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-mua-hang.html" title="Nhân Viên Mua Hàng">
-                                                    <div class="txt text-capitalize">Nhân Viên Mua Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-phuc-vu.html" title="Nhân Viên Phục Vụ">
-                                                    <div class="txt text-capitalize">Nhân Viên Phục Vụ</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-dieu-duong.html" title="Điều Dưỡng">
-                                                    <div class="txt text-capitalize">Điều Dưỡng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-dich-vu-khach-hang.html"
-                                                    title="Nhân Viên Dịch Vụ Khách Hàng">
-                                                    <div class="txt text-capitalize">Nhân Viên Dịch Vụ Khách Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-su-xay-dung.html" title="Kỹ Sư Xây Dựng">
-                                                    <div class="txt text-capitalize">Kỹ Sư Xây Dựng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-van-hanh-may.html"
-                                                    title="Nhân Viên Vận Hành Máy">
-                                                    <div class="txt text-capitalize">Nhân Viên Vận Hành Máy</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-thuat-vien-dien-tu.html"
-                                                    title="Kỹ Thuật Viên Điện Tử">
-                                                    <div class="txt text-capitalize">Kỹ Thuật Viên Điện Tử</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-content-creator.html" title="Content Creator">
-                                                    <div class="txt text-capitalize">Content Creator</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-giao-vien-tieng-anh.html"
-                                                    title="Giáo Viên Tiếng Anh">
-                                                    <div class="txt text-capitalize">Giáo Viên Tiếng Anh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-su-ban-hang.html" title="Kỹ Sư Bán Hàng">
-                                                    <div class="txt text-capitalize">Kỹ Sư Bán Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-seo.html" title="Nhân Viên SEO">
-                                                    <div class="txt text-capitalize">Nhân Viên SEO</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-livestream.html"
-                                                    title="Nhân Viên Livestream">
-                                                    <div class="txt text-capitalize">Nhân Viên Livestream</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-sales-manager.html" title="Sales Manager">
-                                                    <div class="txt text-capitalize">Sales Manager</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-trinh-duoc-vien-otc.html"
-                                                    title="Trình Dược Viên OTC">
-                                                    <div class="txt text-capitalize">Trình Dược Viên OTC</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ke-toan-thue.html" title="Kế Toán Thuế">
-                                                    <div class="txt text-capitalize">Kế Toán Thuế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-su-co-khi.html" title="Kỹ Sư Cơ Khí">
-                                                    <div class="txt text-capitalize">Kỹ Sư Cơ Khí</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thu-ngan.html" title="Thu Ngân">
-                                                    <div class="txt text-capitalize">Thu Ngân</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-chung-tu.html" title="Nhân Viên Chứng Từ">
-                                                    <div class="txt text-capitalize">Nhân Viên Chứng Từ</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tro-ly-kinh-doanh.html" title="Trợ Lý Kinh Doanh">
-                                                    <div class="txt text-capitalize">Trợ Lý Kinh Doanh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ke-toan-kho.html" title="Kế Toán Kho">
-                                                    <div class="txt text-capitalize">Kế Toán Kho</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tro-ly-giam-doc.html" title="Trợ Lý Giám Đốc">
-                                                    <div class="txt text-capitalize">Trợ Lý Giám Đốc</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-lai-xe.html" title="Lái Xe">
-                                                    <div class="txt text-capitalize">Lái Xe</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-ky-su-dien.html" title="Kỹ Sư Điện">
-                                                    <div class="txt text-capitalize">Kỹ Sư Điện</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-nhan-su.html"
-                                                    title="Chuyên Viên Nhân Sự">
-                                                    <div class="txt text-capitalize">Chuyên Viên Nhân Sự</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-phap-che.html"
-                                                    title="Chuyên Viên Pháp Chế">
-                                                    <div class="txt text-capitalize">Chuyên Viên Pháp Chế</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-truong-nhom-kinh-doanh.html"
-                                                    title="Trưởng Nhóm Kinh Doanh">
-                                                    <div class="txt text-capitalize">Trưởng Nhóm Kinh Doanh</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-bao-ve.html" title="Nhân Viên Bảo Vệ">
-                                                    <div class="txt text-capitalize">Nhân Viên Bảo Vệ</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-it.html" title="Nhân Viên IT">
-                                                    <div class="txt text-capitalize">Nhân Viên IT</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-phien-dich-tieng-trung.html"
-                                                    title="Phiên Dịch Tiếng Trung">
-                                                    <div class="txt text-capitalize">Phiên Dịch Tiếng Trung</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-tester.html" title="Tester">
-                                                    <div class="txt text-capitalize">Tester</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-le-tan.html" title="Lễ Tân">
-                                                    <div class="txt text-capitalize">Lễ Tân</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-kinh-doanh-online.html"
-                                                    title="Nhân Viên Kinh Doanh Online">
-                                                    <div class="txt text-capitalize">Nhân Viên Kinh Doanh Online</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-quan-he-khach-hang.html"
-                                                    title="Chuyên Viên Quan Hệ Khách Hàng">
-                                                    <div class="txt text-capitalize">Chuyên Viên Quan Hệ Khách Hàng
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-quan-ly-cua-hang.html" title="Quản Lý Cửa Hàng">
-                                                    <div class="txt text-capitalize">Quản Lý Cửa Hàng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thuc-tap-sinh-nhan-su.html"
-                                                    title="Thực Tập Sinh Nhân Sự">
-                                                    <div class="txt text-capitalize">Thực Tập Sinh Nhân Sự</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-thuc-tap-sinh-marketing.html"
-                                                    title="Thực Tập Sinh Marketing">
-                                                    <div class="txt text-capitalize">Thực Tập Sinh Marketing</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-buong-phong.html"
-                                                    title="Nhân Viên Buồng Phòng">
-                                                    <div class="txt text-capitalize">Nhân Viên Buồng Phòng</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-nhan-vien-bep.html" title="Nhân Viên Bếp">
-                                                    <div class="txt text-capitalize">Nhân Viên Bếp</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-chuyen-vien-nghien-cuu.html"
-                                                    title="Chuyên Viên Nghiên Cứu">
-                                                    <div class="txt text-capitalize">Chuyên Viên Nghiên Cứu</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-cong-tac-vien.html" title="Cộng Tác Viên">
-                                                    <div class="txt text-capitalize">Cộng Tác Viên</div>
-                                                </a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -2500,21 +1565,18 @@
                                         <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a href="javascript:void(0)"
                                                 class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                         <ul class="sidebar-list expandible-bk">
+
+                                            @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
+                                            as $jobType_item)
+
                                             <li>
-                                                <a href="/viec-lam-part-time.html" title="Việc làm Part-time">
-                                                    <div class="txt text-capitalize">Việc làm Part-time</div>
+                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => $jobType_item->job_type, 'location' => '', 'career_id' => '']) }}"
+                                                    title="{{$jobType_item->job_type}}">
+                                                    <div class="txt text-capitalize">{{$jobType_item->job_type}}</div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">
-                                                    <div class="txt text-capitalize">Việc làm Thời vụ</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/viec-lam-remote.html" title="Việc làm Remote">
-                                                    <div class="txt text-capitalize">Việc làm Remote</div>
-                                                </a>
-                                            </li>
+                                            @endforeach
+
                                         </ul>
                                     </div>
                                 </div>
@@ -2587,144 +1649,166 @@
                                         </div>
                                     </div>
 
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a></li>
-                                        <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế Toán</a>
-                                        </li>
-                                        <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                        <li><a href="/viec-lam-marketing.html"
-                                                title="Việc làm Marketing">Marketing</a></li>
-                                        <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây Dựng</a>
-                                        </li>
-                                        <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài Xế</a></li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
+                                                            title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế
+                                                            Toán</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
+                                                            title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
+                                                            title="Việc làm Kinh doanh">Kinh Doanh</a></li>
+                                                    <li><a href="/viec-lam-marketing.html"
+                                                            title="Việc làm Marketing">Marketing</a></li>
+                                                    <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây
+                                                            Dựng</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài
+                                                            Xế</a></li>
+                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất
+                                                            cả
+                                                            <b>»</b></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-thuc-tap-sinh.html"
+                                                            title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
+                                                    <li><a href="/viec-lam-tro-ly-giam-doc.html"
+                                                            title="Việc làm Trợ Lý">Trợ
+                                                            Lý</a></li>
+                                                    <li><a href="/viec-lam-nhan-vien-van-phong.html"
+                                                            title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
+                                                    <li><a href="/viec-lam-truong-phong.html"
+                                                            title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
+                                                    <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám
+                                                            đốc</a>
+                                                    </li>
+                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem
+                                                            tất cả
+                                                            <b>»</b></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
+                                        <div class="footer-widget">
+                                            <div class="widgettitle widget-title text-dark fw-bold"
+                                                title="Việc làm theo loại hình">Việc theo loại hình</div>
+                                            <div class="textwidget">
+                                                <ul class="footer-navigation list-unstyled">
+                                                    <li><a href="/viec-lam-part-time.html"
+                                                            title="Việc làm Part-time">Part-time</a></li>
+                                                    <li><a href="/viec-lam-online.html"
+                                                            title="Việc làm Online">Online</a></li>
+                                                    <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời
+                                                            vụ</a>
+                                                    </li>
+                                                    <li><a href="/viec-lam-remote.html"
+                                                            title="Việc làm Remote">Remote</a></li>
+                                                </ul>
+                                                <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                                class='bx bx-xs bxl-facebook'></i></a></li>
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.linkedin.com/company/josbgo.vn/"
+                                                            target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item"><a
+                                                            href="https://www.instagram.com/jobsgo_vn/"
+                                                            target="_blank"><i class='bx bx-xs bxl-instagram'></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-thuc-tap-sinh.html"
-                                                title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
-                                        <li><a href="/viec-lam-tro-ly-giam-doc.html" title="Việc làm Trợ Lý">Trợ
-                                                Lý</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-van-phong.html"
-                                                title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
-                                        <li><a href="/viec-lam-truong-phong.html"
-                                                title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
-                                        <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám đốc</a>
-                                        </li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
+                        <div class="copyright">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-10">
+                                        <ul class="list-inline list-unstyled mb-1 text-primary">
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
+                                                        thiệu</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
+                                                    title="Chính sách"><u>Chính sách</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
+                                                    title="Quy chế hoạt động"><u>Quy chế</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
+                                                    title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
+                                            <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
+                                                        thuận sử dụng</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/privacy-policy"
+                                                    title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
+                                                    href="https://employer.jobsgo.vn"
+                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho
+                                                        Nhà Tuyển
+                                                        Dụng</u></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://jobsgo.vn/site/faq"
+                                                    title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/blog"
+                                                    target="_blank" title="Tin tức"><u>Blog</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
+                                                    target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
+                                            <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
+                                                    title="Sơ đồ trang web"><u>Sitemap</u></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-2">
+                                        <ul
+                                            class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                        class='bx bx-xs bxl-facebook'></i></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.linkedin.com/company/josbgo.vn/"
+                                                    target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
+                                            <li class="list-inline-item"><a rel="nofollow"
+                                                    href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
+                                                        class='bx bx-xs bxl-instagram'></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo loại hình">Việc theo loại hình</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-part-time.html"
-                                                title="Việc làm Part-time">Part-time</a></li>
-                                        <li><a href="/viec-lam-online.html" title="Việc làm Online">Online</a></li>
-                                        <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời vụ</a>
-                                        </li>
-                                        <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
-                                    </ul>
-                                    <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                        <li class="list-inline-item"><a href="https://www.facebook.com/JobsGOVN/"
-                                                target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
-                                        <li class="list-inline-item"><a
-                                                href="https://www.linkedin.com/company/josbgo.vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.instagram.com/jobsgo_vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-10">
-                            <ul class="list-inline list-unstyled mb-1 text-primary">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
-                                            thiệu</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
-                                        title="Chính sách"><u>Chính sách</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
-                                        title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
-                                        title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
-                                            thuận sử dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://jobsgo.vn/site/privacy-policy"
-                                        title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://employer.jobsgo.vn"
-                                        title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
-                                            Dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" href="https://jobsgo.vn/site/faq"
-                                        title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/blog" target="_blank"
-                                        title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
-                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
-                                        title="Sơ đồ trang web"><u>Sitemap</u></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-2">
-                            <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
-                                            class='bx bx-xs bxl-facebook'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-linkedin'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-instagram'></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
-                                hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
-                                568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
-                                phần JobsGO. All Rights Reserved.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="text-center">
-                                <a target="_blank" rel="nofollow"
-                                    href="http://online.gov.vn/Home/WebDetails/73770">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018
+                                            do Sở Kế
+                                            hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội
+                                            trên mạng số
+                                            568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> ©
+                                            2024 Công ty Cổ
+                                            phần JobsGO. All Rights Reserved.</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="text-center">
+                                            <a target="_blank" rel="nofollow"
+                                                href="http://online.gov.vn/Home/WebDetails/73770">
 
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
