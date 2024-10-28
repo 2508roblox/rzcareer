@@ -164,19 +164,19 @@
     display: flex;
 ">
  <img src="/assets_livewire/logo-dark.svg" alt="">
-    
-                                
+
+
                         </a>
 
                         <div class="panel panel-body">
                             <div class="content-divider text-uppercase text-muted form-group"><span>Đăng Nhập Với</span></div>
 
                             <div class="row mb-3">
-                              
+
                                 <div class="col-xs-3">
                                     <a href="{{ route('google.login', ['id' => 1]) }}" class="btn bg-pink-300 btn-google btn-block btn-flat btn-icon btn-rounded"><i class="icon-google"></i> Google</a>
                                 </div>
-                               
+
                             </div>
 
                             <div class="content-divider text-uppercase text-muted form-group"><span>Hoặc</span></div>

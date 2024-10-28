@@ -162,8 +162,8 @@
                         display: flex;
                     ">
                      <img src="/assets_livewire/logo-dark.svg" alt="">
-                        
-                                                    
+
+
                                             </a>
 
                         <div class="panel panel-body">
@@ -174,7 +174,7 @@
                                 @error('full_name') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
-                        
+
 
                             <div class="form-group">
                                 <label for="email">Email</label>

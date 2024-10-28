@@ -605,8 +605,8 @@
       <div class="teks-section py-4 py-sm-5">
         <div class="row align-items-center row-cols-lg-3">
           <div class="col-lg-3 teks-section-title ps-3 text-center text-lg-start">
-            <h2 class="text-white fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
-            <p class="w-100 mb-3">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
+            <h2 class="text-black fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
+            <p class="w-100 mb-3 text-black">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
             <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy"
               src="{{ asset('assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092') }}" alt="Rzcareer">
 

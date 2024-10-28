@@ -5,12 +5,14 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Company;
 use App\Models\JobPost;
+use Jantinnerezo\LivewireAlert\LivewireAlert; // Import the LivewireAlert trait
+use Illuminate\Support\Facades\Auth; // Import Auth facade
 
 class TuyenDung extends Component
 {
+    use LivewireAlert; // Use the LivewireAlert trait
     public $company; // Thêm thuộc tính để lưu thông tin công ty
     public $jobPosts; // Thêm thuộc tính để lưu danh sách job của công ty
-
     public function mount($slug)
     {
         // Lấy thông tin công ty dựa trên slug

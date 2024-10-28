@@ -6,8 +6,7 @@
                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span></button>
             <a href="/employer" class="navbar-brand logo employer-logo">
-                <img class="d-none"
-                    src="/assets_livewire/logo-dark.svg" alt="">  </a>
+                <img class="tf-logo" src="/assets_livewire/logo-dark.svg" alt="">  </a>
         </div>
         <!--Logo/-->
         <nav class="collapse navbar-collapse" id="primary-menu">
