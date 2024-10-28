@@ -14,6 +14,7 @@ use App\Livewire\Candidate\JobsApplied;
 use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
+use App\Livewire\Candidate\ReviewUploadResume;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
 use App\Livewire\DanhSachNganhNghe;
@@ -52,6 +53,8 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
     Route::get('/candidate/review', Review::class);
+    Route::get('/candidate/review{resume_id}', ReviewUploadResume::class)->name('candidate.review');
+
     Route::get('/candidate/cv-go', CvGo::class);
     Route::get('/candidate/change-password', ChangePassword::class);
     Route::get('/candidate/jobs-applied', JobsApplied::class);
