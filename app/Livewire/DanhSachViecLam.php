@@ -24,6 +24,7 @@ class DanhSachViecLam extends Component
     public $type_of_workplace = '';
     public $position = '';
     public $salary = '';
+    public $experience = '';
     public $is_hot = false;
     public $is_urgent = false;
     public $isListVisible = false;
@@ -33,11 +34,79 @@ class DanhSachViecLam extends Component
     public $sortDirection = 'desc';
     public $activeSort = '';
 
+    protected $queryString = ['job_type', 'salary', 'position', 'experience'];
+    protected $resetPageOnUpdate = ['job_type', 'salary', 'position', 'experience'];
 
+    public function updating($name, $value)
+    {
+        if (in_array($name, $this->resetPageOnUpdate)) {
+            $this->resetPage();
+        }
+    }
+    public function updateFilter($field, $value)
+    {
+        if (property_exists($this, $field)) {
+            $this->$field = $value === '' ? null : $value;
+            $this->resetPage();
+        }
+    }
+    // public function updatingKeyword()
+    // {
+    //     $this->resetPage();
+    // }
+
+    // public function updatingJobType()
+    // {
+    //     $this->resetPage();
+    // }
+
+    // public function updatingCareerId()
+    // {
+    //     $this->resetPage();
+    // }
+
+    // public function updatingSalaryRange()
+    // {
+    //     $this->resetPage();
+    // }
+
+    // public function updatingPosition()
+    // {
+    //     $this->resetPage();
+    // }
+    // public function updatingExperience()
+    // {
+    //     $this->resetPage();
+    // }
+
+    // public function updateJobType($type)
+    // {
+    //     $this->job_type = $type;
+    // }
+
+    // public function updateCareer($id)
+    // {
+    //     $this->career_id = $id;
+    // }
+
+    // public function updateSalaryRange($salary)
+    // {
+    //     $this->salary = $salary;
+    // }
+
+    // public function updatePosition($position)
+    // {
+    //     $this->position = $position;
+    // }
+    // public function updateExperience($experience)
+    // {
+    //     $this->experience = $experience;
+    // }
 
     protected $listeners = [
         'locationSelected',
         'refreshJobList' => 'updateJobList',
+        // 'setJobType' => 'updateJobType'
     ];
 
     public function mount(Request $request)
@@ -49,6 +118,7 @@ class DanhSachViecLam extends Component
         $this->type_of_workplace = $request->query('type_of_workplace', '');
         $this->position = $request->query('position', '');
         $this->salary = $request->query('salary', '');
+        $this->experience = $request->query('experience', '');
         $this->is_hot = $request->query('is_hot', false);
         $this->is_urgent = $request->query('is_urgent', false);
         $this->listLocation = collect();
@@ -94,7 +164,7 @@ class DanhSachViecLam extends Component
 
     public function updateJobList()
     {
-        $this->emitSelf('refresh');
+        $this->emit('refresh');
     }
     public function sortBy($field)
     {
@@ -122,8 +192,26 @@ class DanhSachViecLam extends Component
     //     ]);
     // }
 
+    public function search()
+    {
+        $this->resetPage();
+        $this->updateJobList();
+        $this->dispatchBrowserEvent('updateUrl', [
+            'keyword' => $this->keyword,
+            'location' => $this->location,
+        ]);
+    }
+
+
+
     public function render()
     {
+        $salaryRanges = [
+            '0-5000000' => 'Dưới 5 triệu',
+            '5000000-10000000' => '5 - 10 triệu',
+            '10000000-20000000' => '10 - 20 triệu',
+            '20000000-100000000' => 'Trên 20 triệu'
+        ];
         $keyword = !empty($this->keyword) ? trim($this->keyword) : '';
         $location = !empty($this->location) ? trim($this->location) : '';
 
@@ -195,6 +283,9 @@ class DanhSachViecLam extends Component
                 return $query->where('salary_min', '<=', $this->salary)
                     ->where('salary_max', '>=', $this->salary);
             })
+            ->when($this->experience, function ($query) {
+                return $query->where('experience', 'like', '%' . $this->experience . '%');
+            })
             ->when($this->is_hot, function ($query) {
                 return $query->where('is_hot', true);
             })
@@ -210,6 +301,9 @@ class DanhSachViecLam extends Component
         return view('livewire.danh-sach-viec-lam', [
             'jobPosts' => $jobPosts,
             'totalJobs' => $totalJobs,
+            'salaryRanges' => $salaryRanges,
+            'keyword' => $this->keyword,
+            'location' => $this->location,
         ]);
     }
 }
