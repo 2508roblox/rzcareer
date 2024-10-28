@@ -60,7 +60,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF1S8QMFVR"></script>
     <script>
-        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FF1S8QMFVR'); 
+        window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FF1S8QMFVR');
     </script>
     </head>
 
@@ -111,8 +111,8 @@
                 <div class="header-top clearfix">
                     <div class="container">
                         <a href="" class="logo pull-left"><img    src="/assets_livewire/logo-dark.svg"
-                                class="img-responsive" alt="hope"> 
-                        
+                                class="img-responsive" alt="hope">
+
                         <a href="/recruiter" class="btn-download btn-download-free pull-right"><i
                                 class="fa fa-sign-in"></i> Đăng nhập hệ thống</a>
                     </div>
@@ -131,7 +131,7 @@
                         <div class="col-xs-12 col-md-9 col-lg-9">
                             <div class="table-responsive">
                                 <form id="order-form" wire:submit.prevent="submitOrder">
-                                   
+
 
                                     <!-- Purchased Services Section -->
                                     <h6 class="panel-title">Dịch vụ đã mua</h6>
@@ -1231,140 +1231,6 @@
                 height: 36px;
             }
         </style>
-<<<<<<< HEAD
-=======
-        <!--end: content-->
-        <!--begin: footer-->
-        <footer class="footer clearfix">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row row-2">
-                        <div class="col-md-3">
-                            <h4>DÀNH CHO NHÀ TUYỂN DỤNG</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="https://employer.jobsgo.vn/site/employer-register-guide">Hướng dẫn đăng ký
-                                        mở tài khoản</a></li>
-                                <li><a href="https://employer.jobsgo.vn/site/manage-job-guide">Hướng dẫn quản lý việc
-                                        làm</a></li>
-                                <li><a href="https://employer.jobsgo.vn/site/manage-candidate-guide">Hướng dẫn quản lý
-                                        ứng viên</a></li>
-                                <li><a href="https://employer.jobsgo.vn/site/change-password-guide">Hướng dẫn đổi mật
-                                        khẩu</a></li>
-
-                            </ul>
-                        </div>
-
-                        <div class="col-md-2">
-                            <h4>THÔNG TIN</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="https://employer.jobsgo.vn/site/about-us">Điều khoản sử dụng</a></li>
-                                <li><a href="https://employer.jobsgo.vn/site/privacy-policy">Chính sách bảo mật</a></li>
-                                <li><a href="/site/quy-che-hoat-dong">Quy chế hoạt động</a></li>
-                                <li><a href="/site/giai-quyet-tranh-chap">Giải quyết tranh chấp</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <h4>TRỢ GIÚP</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="https://employer.jobsgo.vn/site/about-us">Về chúng tôi</a></li>
-                                <li><a href="https://employer.jobsgo.vn/site/faq">Câu hỏi thường gặp</a></li>
-                                <li><a target="_blank" href="https://jobsgo.vn/blog">RZcareer Blog</a></li>
-                                <li><a target="_blank" href="https://jobsgo.vn/">RZcareer Home</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-5">
-                            <h4>ĐĂNG KÝ NHẬN BẢN TIN</h4>
-                            <p>Đăng ký để nhận thông tin từ RZcareer</p>
-                            <form action="" method="post" id="mc-embedded-subscribe-form"
-                                name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div class="input-group">
-                                    <input type="text" placeholder="Email của bạn..." id="emailSubcribe"
-                                        class="form-control">
-                                    <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>
-                                    <div style="position: absolute; left: -5000px;"><input type="text" name=""
-                                            tabindex="-1" value=""></div>
-
-                                    <span class="input-group-btn">
-                                        <div class="btn btn-primary" id="btnMailSubcribe" type="submit"
-                                            onclick="ga('send', 'event', 'index', 'dang_ky_ban_tin', 'đăng ký bản tin');">
-                                            Đăng ký</div>
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="label label-danger mail-subcribe-error-response"
-                                        style='display: none'></span>
-                                    <span class="label label-success mail-subcribe-success-response"
-                                        style='display: none'></span>
-                                    <span class="label label-warning mail-subcribe-loading" style='display: none'> Đang
-                                        xử lý...</span>
-                                </div>
-                            </form>
-                            <script>
-                                var saveEmailUrl = 'http://jobsgo.vn/ajax/subcribe-email';
-                        var email = $('#emailSubcribe').val();
-                        var type = 'employer';
-                        $('#btnMailSubcribe').click(function () {
-                            email = $('#emailSubcribe').val();
-                            saveSubcribeEmail(saveEmailUrl, email, type);
-                        });
-                            </script>
-                        </div>
-                    </div>
-                    <!--/.row-2-->
-
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <p class="copyright pull-left">Copyright © 2024 RZcareer. All Rights Reserved.
-                        <span>
-                            <!--Giấy phép đăng ký kinh doanh số ******** - Cấp ngày 05/09/2016 - Tại Sở Kế hoạch và Đầu tư Hà Nội.
-             <br>-->Địa chỉ: Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội <br /> Văn phòng Miền Nam: Tầng 3,
-                            158A Đào Duy Anh, Phường 9, Quận Phú Nhuận, Thành phố Hồ Chí Minh - Email: <a
-                                href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a> - Hotline: <a
-                                href="tel:0899.565.868">0899.565.868</a>
-                        </span>
-
-                    </p>
-                    <div class="share pull-right">
-                        <ul class="list-inline list-unstyled">
-                            <li><a target="_blank" href="https://www.facebook.com/RZcareerVN/"><i
-                                        class="fa fa-facebook"></i></a></li>
-                            <li><a target="_blank"
-                                    href="https://plus.google.com/u/1/b/108837933198755086918/108837933198755086918"><i
-                                        class="fa fa-google-plus"></i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/company/josbgo.vn/"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script>
-            $(document).ready(function(){
-          var utmSource = '';
-          var utmMed = '';
-          var refCode = '';
-          if(utmSource || utmMed || refCode){
-              $('a').attr("href",
-                  function(){
-                      var currUrl = $(this).attr('href');
-                      if(currUrl.indexOf("?") == -1){
-                          urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed+ "&ref_code=" + refCode;
-                      }else{
-                          urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&ref_code=" + refCode;
-                      }
-                      return urlWithParam;
-                  });
-          }
-
-      })
-        </script>
-        <!--end: footer-->
->>>>>>> 80682c39dbac6fe36e2e9f961f43fae99db67b4f
     </body>
 
     </html>

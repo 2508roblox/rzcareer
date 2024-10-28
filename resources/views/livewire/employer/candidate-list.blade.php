@@ -21,6 +21,13 @@
             ::-webkit-scrollbar-track {
                 background-color: #eee;
             }
+
+            @media (max-width: 767px) {
+                .tf-logo{
+                    padding-left: 10px !important;
+                    width: 100px !important;
+                }
+            }
         </style>
         <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0">

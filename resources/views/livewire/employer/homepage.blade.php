@@ -98,8 +98,8 @@
                     </div>
                     <div class="hidden-xs hidden-sm col-md-6 text-right">
                         <div class="screen-box">
-                            <div class="item"><img src="/loading.gif" class="lazy"
-                                    data-src="/media/img/screen-3.jpg" alt=""></div>
+                            <div class="item"><img src="/employer_assets/media/img/screen-3.jpg" class="lazy"
+                                    data-src="/employer_assets/media/img/screen-3.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,6 @@
             <!--<a href="https://gohire.vn" target="_blank"> <img src="/loading.gif" class="lazy" data-src="/media/img/banner/16122021.png" class="img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
             <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://RZcareer.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
         </div>
-       
         <section class="section-padding white-bg">
             <div class="container">
                 <div class="row">
@@ -246,7 +245,7 @@
                 </div>
             </div>
         </section>
-  
+
 
         <style>
             a .img-responsive {

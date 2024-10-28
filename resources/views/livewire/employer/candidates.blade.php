@@ -21,13 +21,19 @@
             ::-webkit-scrollbar-track {
                 background-color: #eee;
             }
+
+            @media (max-width: 767px) {
+                .tf-logo{
+                    padding-left: 10px !important;
+                    width: 100px !important;
+                }
+            }
         </style>
         <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0">
         <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
             href="/employer_assets/plugins/fonts/themify.woff?-fvbane">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="HandheldFriendly" content="true">
         <meta name="description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
@@ -144,7 +150,7 @@
                             <h3 class="text-center">Danh sách ngành nghề và số lượng hồ sơ</h3>
                             <div class="row">
                                 @foreach ($careers as $career)
-                                <div class="col-md-6 col-lg-4 mb-3">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mb-3">
                                     <div class="card career-card">
                                         <div class="card-body d-flex align-items-center">
                                             <img class="career-icon" src="{{ Storage::url($career->icon_url) }}" alt="{{ $career->name }}">

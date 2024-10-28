@@ -12,6 +12,7 @@ class CompanyReview extends Model
     protected $fillable = [
         'company_id',
         'user_id',
+        'title',
         'content',
         'salary_benefit',
         'training_opportunity',

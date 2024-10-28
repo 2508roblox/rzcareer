@@ -54,8 +54,7 @@
         <link href="/assets_livewire/teks/css/base.min.css?v=234208153092" rel="stylesheet">
         <link href="/assets_livewire/css/custom.css?v=1727272320" rel="stylesheet">
 
-        <script defer src="/assets_livewire/teks/js/base.min.js?v=234208153092">
-        </script>
+        <script defer src="/assets_livewire/teks/js/base.min.js?v=234208153092"></script>
         <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ">
         </script>
 
@@ -115,8 +114,8 @@
                     <ol style="background: transparent;padding: 20px 0 5px; margin-bottom: 5px;" class="breadcrumb"
                         itemscope="" itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                            <a style="color:#000" href="/" itemtype="https://schema.org/Thing" itemprop="item"> <span
-                                    itemprop="name"> RZCareer</span> </a>
+                            <a style="color:#000" href="/" itemtype="https://schema.org/Thing"
+                                itemprop="item"> <span itemprop="name"> RZCareer</span> </a>
                             <meta itemprop="position" content="1">
                         </li>
                         <li class="active"><span class="text-muted" style="color:#888!important">Danh sách
@@ -129,24 +128,24 @@
                             <h3 class="text-center">Danh sách ngành nghề</h3>
                             <div class="row">
                                 @foreach ($careers as $career)
-                                <div class="col-md-6 col-lg-4 mb-3">
-                                    <div class="card career-card">
-                                        <div class="card-body d-flex align-items-center">
-                                            <img class="career-icon" src="{{ Storage::url($career->icon_url) }}"
-                                                alt="{{ $career->name }}">
-                                            <div class="career-info ms-3">
-                                                <h5 class="card-title">{{ $career->name }}</h5>
-                                                <p class="card-text">Số lượng bài đăng tuyển dụng: {{
-                                                    $career->job_posts_count ?? 0
-                                                    }}</p>
-                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
-                                                    style="
+                                    <div class="col-md-6 col-lg-4 mb-3">
+                                        <div class="card career-card">
+                                            <div class="card-body d-flex align-items-center">
+                                                <img class="career-icon" src="{{ Storage::url($career->icon_url) }}"
+                                                    alt="{{ $career->name }}">
+                                                <div class="career-info ms-3">
+                                                    <h5 class="card-title">{{ $career->name }}</h5>
+                                                    <p class="card-text">Số lượng bài đăng tuyển dụng:
+                                                        {{ $career->job_posts_count ?? 0 }}</p>
+                                                    <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
+                                                        style="
                                                                 width: 100px;
-                                                            " class="btn btn-primary btn-sm">Xem chi tiết</a>
+                                                            "
+                                                        class="btn btn-primary btn-sm">Xem chi tiết</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
@@ -241,8 +240,9 @@
 
         </div>
 
+        @livewire('employer.inc.footer')
 
-        <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+        {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
             <div class="no-padding">
                 <div class="container">
                     <div class="row">
@@ -489,7 +489,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
         <style>
             .zalo-chat-widget {
                 left: initial !important;
@@ -549,7 +549,8 @@
                         <h5 class="modal-title" id="cv-modal-label">Tính năng viết CV tự động bằng AI trong
                             vòng 2 phút!
                         </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
 
@@ -563,22 +564,22 @@
         </div>
         <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
             style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
-            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40"
-                src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI">
+            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40"
+                width="40" src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI">
         </a>
         <script>
             window.addEventListener('load', function() {
-        $(function() {
-          if (!getCookie('Rzcareer-cv-ai')) {
-            //$('#cv-modal').modal('show');
-          }
-          $('#cv-modal').on('shown.bs.modal', function() {
-            setCookie('Rzcareer-cv-ai', 1, 365);
-            $('#cv-modal video').trigger('play');
-          });
+                $(function() {
+                    if (!getCookie('Rzcareer-cv-ai')) {
+                        //$('#cv-modal').modal('show');
+                    }
+                    $('#cv-modal').on('shown.bs.modal', function() {
+                        setCookie('Rzcareer-cv-ai', 1, 365);
+                        $('#cv-modal video').trigger('play');
+                    });
 
-        });
-      });
+                });
+            });
         </script>
     </body>
 

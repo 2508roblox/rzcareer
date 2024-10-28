@@ -255,7 +255,7 @@
                     <div class="box-top position-relative bg-white border shadow p-2 p-sm-3 rounded-4">
                         <img class="position-absolute top-0 end-0 lazy" width="75" height="66"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                            data-src="{{asset('assets/teks/img/employer-verified.svg')}}"
+                            data-src="{{ asset('assets/teks/img/employer-verified.svg') }}"
                             alt="{{ $company->company_name }}">
 
                         <div class="d-flex align-items-center">
@@ -287,7 +287,8 @@
                         </div>
 
                         <div class="d-block border-top d-sm-none py-2">
-                            <button class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-2 mb-2"
+                            <button
+                                class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-2 mb-2"
                                 data-eid="{{ $company->id }}">
                                 <span><i class='bx bx-bell'></i> Theo dõi</span>
                             </button>
@@ -375,57 +376,66 @@
                                             <div id="carousel3" class="carousel slide" data-bs-interval="5000"
                                                 data-bs-ride="carousel">
                                                 <div class="carousel-inner">
-                                                    @foreach($jobPosts->chunk(2) as $index => $chunk) {{-- Chunk 2 jobs
+                                                    @foreach ($jobPosts->chunk(2) as $index => $chunk)
+                                                        {{-- Chunk 2 jobs
                                                     per carousel item --}}
-                                                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                                        <div class="row row-cols-1 row-cols-lg-2 g-2">
-                                                            @foreach($chunk as $job)
-                                                            <div class="col">
-                                                                <a href="{{ url('viec-lam/' .  $job->slug)   }}"
-                                                                    class="d-flex teks-item text-dark">
-                                                                    <div class="flex-shrink-0 position-relative">
-                                                                        <img class="lazy" width="80" height="80"
-                                                                            onerror="this.src='{{ Storage::exists($company->company_image_url) ? Storage::url($company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}'"
-                                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                                            data-src="{{  Storage::url(optional($job->company)->company_image_url ?? 'assets_livewire/img/default-company.svg') }}"
-                                                                            alt="{{ $job->company->name }}">
+                                                        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                                            <div class="row row-cols-1 row-cols-lg-2 g-2">
+                                                                @foreach ($chunk as $job)
+                                                                    <div class="col">
+                                                                        <a href="{{ url('viec-lam/' . $job->slug) }}"
+                                                                            class="d-flex teks-item text-dark">
+                                                                            <div
+                                                                                class="flex-shrink-0 position-relative">
+                                                                                <img class="lazy" width="80"
+                                                                                    height="80"
+                                                                                    onerror="this.src='/img/employer-logo.jpg'"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                                                    data-src="{{ Storage::url(optional($job->company)->company_image_url ?? 'img/employer-logo.jpg') }}"
+                                                                                    alt="{{ $job->company->name }}">
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-2">
+                                                                                <h3 class="h5 tooltip">
+                                                                                    {{ $job->job_name }}</h3>
+                                                                                <div class="h6 text-muted">
+                                                                                    {{ $job->company->name }}</div>
+                                                                                <ul class="p-0">
+                                                                                    <li
+                                                                                        class="list-group-item list-group-item-action">
+                                                                                        <i class='bx bx-money'></i>
+                                                                                        {{ $job->salary_min
+                                                                                            ? number_format($job->salary_min) .
+                                                                                                ' - ' .
+                                                                                                number_format($job->salary_max) .
+                                                                                                '
+                                                                                                                                                                                                                                                                                                                                                        VND'
+                                                                                            : 'Thỏa thuận' }}
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="list-group-item list-group-item-action">
+                                                                                        <i class='bx bx-map'></i>
+                                                                                        {{ optional($job->location)->name }}
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </a>
                                                                     </div>
-                                                                    <div class="flex-grow-1 ms-2">
-                                                                        <h3 class="h5 tooltip">{{ $job->job_name }}</h3>
-                                                                        <div class="h6 text-muted">{{
-                                                                            $job->company->name }}</div>
-                                                                        <ul class="p-0">
-                                                                            <li
-                                                                                class="list-group-item list-group-item-action">
-                                                                                <i class='bx bx-money'></i> {{
-                                                                                $job->salary_min ?
-                                                                                number_format($job->salary_min) . ' - '
-                                                                                . number_format($job->salary_max) . '
-                                                                                VND' : 'Thỏa thuận' }}
-                                                                            </li>
-                                                                            <li
-                                                                                class="list-group-item list-group-item-action">
-                                                                                <i class='bx bx-map'></i> {{
-                                                                                optional($job->location->city)->name }}
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </a>
+                                                                @endforeach
                                                             </div>
-                                                            @endforeach
                                                         </div>
-                                                    </div>
                                                     @endforeach
                                                 </div>
                                                 <!-- Add Carousel Controls if needed -->
                                                 <button class="carousel-control-prev" type="button"
                                                     data-bs-target="#carousel3" data-bs-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="carousel-control-prev-icon"
+                                                        aria-hidden="true"></span>
                                                     <span class="visually-hidden">Previous</span>
                                                 </button>
                                                 <button class="carousel-control-next" type="button"
                                                     data-bs-target="#carousel3" data-bs-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="carousel-control-next-icon"
+                                                        aria-hidden="true"></span>
                                                     <span class="visually-hidden">Next</span>
                                                 </button>
                                             </div>
@@ -441,13 +451,13 @@
                                         </div>
                                         <ul class="list-unstyled list-icon-box my-2">
                                             <li class="d-flex align-items-center">
-                                                <i class='bx bx-map'></i>
+                                                <i class='bx bx-map pb-3'></i>
                                                 <span>
                                                     <p>{{ $company->address ?? 'Địa chỉ chưa có thông tin.' }}</p>
                                                 </span>
                                             </li>
                                             <li class="d-flex align-items-center">
-                                                <i class='bx bx-globe'></i>
+                                                <i class='bx bx-globe pb-3'></i>
                                                 <span>
                                                     <a target="_blank" rel="dofollow"
                                                         href="{{ $company->website_url ?? '#' }}">
@@ -456,7 +466,7 @@
                                                 </span>
                                             </li>
                                             <li class="d-flex align-items-center">
-                                                <i class='bx bx-envelope'></i>
+                                                <i class='bx bx-envelope pb-3'></i>
                                                 <span>
                                                     <a href="mailto:{{ $company->company_email ?? '#' }}">
                                                         <p>{{ $company->company_email ?? 'Chưa có email.' }}</p>
@@ -464,7 +474,7 @@
                                                 </span>
                                             </li>
                                             <li class="d-flex align-items-center">
-                                                <i class='bx bx-phone'></i>
+                                                <i class='bx bx-phone pb-3'></i>
                                                 <span>
                                                     <p>{{ $company->company_phone ?? 'Chưa có số điện thoại.' }}</p>
                                                 </span>
@@ -472,20 +482,23 @@
                                         </ul>
 
                                         <ul class="list-unstyled list-group list-group-vertical my-3">
-                                            @if($company->facebook_url)
-                                            <li class="mb-2"><a target="_blank" rel="nofollow"
-                                                    href="{{ $company->facebook_url }}"><i class="bx bxl-facebook"></i>
-                                                    Facebook</a></li>
+                                            @if ($company->facebook_url)
+                                                <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                        href="{{ $company->facebook_url }}"><i
+                                                            class="bx bxl-facebook"></i>
+                                                        Facebook</a></li>
                                             @endif
-                                            @if($company->youtube_url)
-                                            <li class="mb-2"><a target="_blank" rel="nofollow"
-                                                    href="{{ $company->youtube_url }}"><i class="bx bxl-youtube"></i>
-                                                    YouTube</a></li>
+                                            @if ($company->youtube_url)
+                                                <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                        href="{{ $company->youtube_url }}"><i
+                                                            class="bx bxl-youtube"></i>
+                                                        YouTube</a></li>
                                             @endif
-                                            @if($company->linkedin_url)
-                                            <li class="mb-2"><a target="_blank" rel="nofollow"
-                                                    href="{{ $company->linkedin_url }}"><i class="bx bxl-linkedin"></i>
-                                                    LinkedIn</a></li>
+                                            @if ($company->linkedin_url)
+                                                <li class="mb-2"><a target="_blank" rel="nofollow"
+                                                        href="{{ $company->linkedin_url }}"><i
+                                                            class="bx bxl-linkedin"></i>
+                                                        LinkedIn</a></li>
                                             @endif
                                         </ul>
 
@@ -533,30 +546,32 @@
                                 <div class="col-sm-8">
                                     <div class="row mb-4">
                                         <div class="col-sm-6">
-                                            <div class="rating-block bg-primary shadow-sm mb-3 text-white rounded-4">
-                                                <p>Được đánh giá</p>
-                                                <p class="bold padding-bottom-7 fs-1"> 4.0 <small>/ 5</small></p>
-                                                <button type="button"
-                                                    style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                    class="btn btn-default btn-grey btn-sm"
-                                                    aria-label="Left Align"><span class="bx bxs-star"
-                                                        aria-hidden="true"></span></button> <button type="button"
-                                                    style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                    class="btn btn-default btn-grey btn-sm"
-                                                    aria-label="Left Align"><span class="bx bxs-star"
-                                                        aria-hidden="true"></span></button> <button type="button"
-                                                    style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                    class="btn btn-default btn-grey btn-sm"
-                                                    aria-label="Left Align"><span class="bx bxs-star"
-                                                        aria-hidden="true"></span></button> <button type="button"
-                                                    style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                    class="btn btn-default btn-grey btn-sm"
-                                                    aria-label="Left Align"><span class="bx bxs-star"
-                                                        aria-hidden="true"></span></button> <button type="button"
-                                                    style="background: linear-gradient(90deg, #f1c40f 0%, #d8d8d8 0%);"
-                                                    class="btn btn-default btn-grey btn-sm"
-                                                    aria-label="Left Align"><span class="bx bxs-star"
-                                                        aria-hidden="true"></span></button>
+                                            <div class="rating-block bg-secondary shadow-sm mt-3 text-white rounded-4">
+                                                <p class="ms-4 pt-3">Được đánh giá</p>
+                                                <p class="ms-4 bold padding-bottom-7 fs-1"> 4.0 <small>/ 5</small></p>
+                                                <div class="ms-4 pb-3">
+                                                    <button type="button"
+                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
+                                                        class="btn btn-default btn-grey btn-sm"
+                                                        aria-label="Left Align"><span class="bx bxs-star"
+                                                            aria-hidden="true"></span></button> <button type="button"
+                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
+                                                        class="btn btn-default btn-grey btn-sm"
+                                                        aria-label="Left Align"><span class="bx bxs-star"
+                                                            aria-hidden="true"></span></button> <button type="button"
+                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
+                                                        class="btn btn-default btn-grey btn-sm"
+                                                        aria-label="Left Align"><span class="bx bxs-star"
+                                                            aria-hidden="true"></span></button> <button type="button"
+                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
+                                                        class="btn btn-default btn-grey btn-sm"
+                                                        aria-label="Left Align"><span class="bx bxs-star"
+                                                            aria-hidden="true"></span></button> <button type="button"
+                                                        style="background: linear-gradient(90deg, #f1c40f 0%, #d8d8d8 0%);"
+                                                        class="btn btn-default btn-grey btn-sm"
+                                                        aria-label="Left Align"><span class="bx bxs-star"
+                                                            aria-hidden="true"></span></button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -566,7 +581,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning"
+                                                        <div class="progress-bar progress-bar-warning bg-secondary"
                                                             role="progressbar" style="width: 80%"> <span
                                                                 class="sr-only d-none">80% Complete (danger)</span>
                                                         </div>
@@ -579,7 +594,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning"
+                                                        <div class="progress-bar progress-bar-warning bg-secondary"
                                                             role="progressbar" style="width: 80%"> <span
                                                                 class="sr-only d-none">80% Complete (danger)</span>
                                                         </div>
@@ -592,7 +607,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning"
+                                                        <div class="progress-bar progress-bar-warning bg-secondary"
                                                             role="progressbar" style="width: 80%"> <span
                                                                 class="sr-only d-none">80% Complete (danger)</span>
                                                         </div>
@@ -605,7 +620,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning"
+                                                        <div class="progress-bar progress-bar-warning bg-secondary"
                                                             role="progressbar" style="width: 80%"> <span
                                                                 class="sr-only d-none">80% Complete (danger)</span>
                                                         </div>
@@ -618,7 +633,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning"
+                                                        <div class="progress-bar progress-bar-warning bg-secondary"
                                                             role="progressbar" style="width: 80%"> <span
                                                                 class="sr-only d-none">80% Complete (danger)</span>
                                                         </div>
@@ -657,306 +672,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="clearfix">
-                                        <div class="comments-form bg-white p-4 rounded-4 shadow my-3">
-                                            <div class="simple-tab">
-                                                <div class="panel-group comment" id="accordion" role="tablist"
-                                                    aria-multiselectable="true">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading" role="tab" id="work-process">
-                                                            <h6 class="fs-5 fw-bold text-dark">Viết đánh giá về công ty
-                                                            </h6>
-                                                        </div>
-                                                        <div id="button1" class="panel-collapse collapse show"
-                                                            role="tabpanel" aria-labelledby="work-process">
-                                                            <div class="panel-body">
-                                                                <script>
-                                                                    window.addEventListener("load", function() {
-                                                                        $(function() {
-                                                                            $('.review-block-rate .btn').click(function() {
-                                                                                var tv = $(this).data('val');
-                                                                                var btn = $(this).parent().find('.btn');
-                                                                                btn.each(function() {
-                                                                                    if ($(this).data('val') <= tv) {
-                                                                                        $(this).addClass('btn-warning').removeClass('btn-grey');
-                                                                                    } else {
-                                                                                        $(this).addClass('btn-grey').removeClass('btn-warning');
-                                                                                    }
-                                                                                })
-                                                                            });
-                                                                            $('.btn-comment').click(function() {
-                                                                                var rating_1 = $('.rating-1 .btn-warning').length;
-                                                                                var rating_2 = $('.rating-2 .btn-warning').length;
-                                                                                var rating_3 = $('.rating-3 .btn-warning').length;
-                                                                                var rating_4 = $('.rating-4 .btn-warning').length;
-                                                                                var rating_5 = $('.rating-5 .btn-warning').length;
-                                                                                var title = $('.rating-title').val();
-                                                                                var content = $('.rating-content').val();
-                                                                                var employer_id = '39234';
-                                                                                if (!rating_1 || !rating_2 || !rating_3 || !rating_4 || !rating_5) {
-                                                                                    alert('Vui lòng chọn đầy đủ các tiêu chí đánh giá');
-                                                                                } else if (!title || !content) {
-                                                                                    alert('Vui lòng nhập đầy đủ thông tin trước khi gửi đánh giá');
-                                                                                } else {
-                                                                                    $.ajax({
-                                                                                        url: "/api/employer-rating",
-                                                                                        method: "POST",
-                                                                                        data: {
-                                                                                            rating_1: rating_1,
-                                                                                            rating_2: rating_2,
-                                                                                            rating_3: rating_3,
-                                                                                            rating_4: rating_4,
-                                                                                            rating_5: rating_5,
-                                                                                            employer_id: employer_id,
-                                                                                            title: title,
-                                                                                            content: content,
-                                                                                        },
-                                                                                    }).done(function(response) {
-                                                                                        alert(
-                                                                                            'Thông tin đánh giá đã được gửi đi thành công và đang trong trạng thái chờ xét duyệt. Xin cảm ơn!');
-                                                                                        $('.comments-form').hide();
-                                                                                    }).fail(function(jqXHR, textStatus) {});
-                                                                                }
-                                                                            });
-                                                                        });
-                                                                    });
-                                                                </script>
-                                                                <form class="form">
-                                                                    <div class="col-sm-12 mb-2">
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div>Lương thưởng &amp; phúc lợi <span
-                                                                                        class="text-danger">*</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-sm-12">
-                                                                                <div class="review-block-rate rating-1">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="1"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="2"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="3"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="4"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="5"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div>Đào tạo &amp; học hỏi <span
-                                                                                        class="text-danger">*</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-sm-12">
-                                                                                <div class="review-block-rate rating-2">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="1"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="2"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="3"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="4"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="5"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div>Sự quan tâm đến nhân viên <span
-                                                                                        class="text-danger">*</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-sm-12">
-                                                                                <div class="review-block-rate rating-3">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="1"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="2"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="3"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="4"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="5"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div>Văn hoá công ty <span
-                                                                                        class="text-danger">*</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-sm-12">
-                                                                                <div class="review-block-rate rating-4">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="1"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="2"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="3"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="4"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="5"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12">
-                                                                                <div> Văn phòng làm việc <span
-                                                                                        class="text-danger">*</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-sm-12">
-                                                                                <div class="review-block-rate rating-5">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="1"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="2"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="3"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="4"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-default btn-grey btn-xs"
-                                                                                        data-val="5"
-                                                                                        aria-label="Left Align"><span
-                                                                                            class="bx bxs-star"
-                                                                                            aria-hidden="true"></span></button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-sm-12"><input type="text"
-                                                                            class="form-control mb-2 rating-title"
-                                                                            placeholder="Tiêu đề *"></div>
-                                                                    <div class="col-md-12 col-sm-12">
-                                                                        <textarea
-                                                                            class="form-control mb-2 rating-content"
-                                                                            placeholder="Nội dung *"></textarea>
-                                                                    </div>
-                                                                    <button class="thm-btn btn btn-primary btn-comment"
-                                                                        type="button"><i
-                                                                            class="fa fa-paper-plane-o"></i> Gửi đánh
-                                                                        giá</button>
-                                                                </form>
-                                                            </div>
-                                                            <hr>
-                                                            <ul class="small ps-3">
-                                                                <li>Đánh giá của bạn sẽ được ẩn danh</li>
-                                                                <li>Giúp cho các ứng viên tìm việc hiểu rõ hơn về công
-                                                                    ty</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                                {{-- REVIEW FORM --}}
+                                <livewire:company-review :company_id="$company->id" />
                             </div>
 
                         </div>
@@ -1033,7 +751,9 @@
 
 
         </section>
-        <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+        @livewire('employer.inc.footer')
+
+        {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
             <div class="no-padding">
                 <div class="container">
                     <div class="row">
@@ -1248,7 +968,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
         <style>
             .zalo-chat-widget {
                 left: initial !important;
@@ -1268,12 +988,12 @@
             if (!localStorage.getItem("tokenCvBuilder")) {
                 localStorage.setItem("tokenCvBuilder",
                     'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3MzE5OTQxLCJleHAiOjI0ODQxODM5NDEsInVpZCI6MjU5OTgzNX0.j7-YLCgk4Wxa0kkzvNmH5YpcNvXUIp3M1hk76AU6aZ0'
-                    );
+                );
             }
             if (!localStorage.getItem("userCvBuilder")) {
                 localStorage.setItem("userCvBuilder", (
                     '{"candidate_id":"2599835","user_name":"2509roblox@gmail.com","name":"web developer","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2599835_20240925210030.jpg","date_of_birth":"1975","current_city":"123","email":"2509roblox@gmail.com","tel":"","short_bio":null,"current_salary":null,"language":"","degree":"Trung c\u1ea5p - Ngh\u1ec1","degree_id":"1","min_expect_salary":null,"max_expect_salary":null,"job_type":"","job_type_id":"","status":"0","created":"2024-09-25 20:38:37","updated":"2024-09-25 20:45:40","access_token":"Rzcareer","gender":"","fb_user_id":"","current_address":"123","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"","job_position_id":null,"main_cv_template_id":null,"set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"0","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2599835","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"123","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"45","update_percent_time":"2024-09-25 20:45:40","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"0","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTk4MzUsInN1YiI6MjU5OTgzNSwiaWF0IjoxNzI3MzA1ODYzLCJleHAiOjE3Mjc1NjUwNjN9.HQx8DpR-0z1LRLkPuOm3o2DZXfXG66xRmMfU_oWKd8zBhB5l5m-X8_AfOap-70yZHrhTFRXg7HTnyAbAeYa48fSOocAtlbH8x30HlXUJQl7TyWxL0zd2ZoI5xGWQ0cJ--o4feGOtkLsCEluuMEHIMc48gTSsKbC-YxqTg8mZudh92OFK_xq8RfSk4KqvfmNeQnv7q2vBI7PLuV99X3nhQ1f2CvVU_eJ5spbPB8G1TRGmVwWQk_g_57TkpbOKW77KipYLq58byMn31wkU-qmMXsNBpohOF52ojrnrK0pscqPrVcm3oRVYQiGvKMO2-VsmPcVbIoA9ZozQdgHcQ86NVQ","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"113013226598621089024","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"0","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"1","admin_id":null,"qr_code":"","level":null,"allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Th\u1ef1c T\u1eadp Sinh Tuy\u1ec3n D\u1ee5ng","short_bio_html":null,"cv_capacity":"53","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"2","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"","career_name_auto":"","create_source":"pre-profile"}'
-                    ));
+                ));
             }
         </script>
 
@@ -1329,7 +1049,7 @@
                     var url_string = window.location.href;
                     var url = new URL(url_string);
                     var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") :
-                    '';
+                        '';
                     var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
                     var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get(
                         "utm_campaign") : '';
@@ -1362,7 +1082,8 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="cv-modal-label">Tính năng viết CV tự động bằng AI trong vòng 2
                             phút!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <video controls width="100%">
@@ -1378,8 +1099,8 @@
         </div>
         <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
             style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
-            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40"
-                src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
+            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40"
+                width="40" src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
         <script>
             window.addEventListener('load', function() {
                 $(function() {

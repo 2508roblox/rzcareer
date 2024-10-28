@@ -169,6 +169,8 @@
                   </div>
                 </div>
               </div>
+
+
               <div class="col-sm-5 col-md-4">
                 <div class="teks-box-today text-light">
                   <h6>
@@ -176,14 +178,26 @@
                     Thị trường làm việc hôm nay
                     <small class="float-end fw-normal">25/09/2024</small>
                     <div class="row my-3 mt-4 text-center">
+                        @php
+                            $jobPostCount = App\Models\JobPost::where('status', 1)->count();
+                        @endphp
                       <div class="col-6">
                         <p>Việc làm đang tuyển</p>
-                        <strong><span class="loader"> <span class="dot"></span> <span class="circle"></span> </span>
-                          16,143</strong>
+                        <strong>
+                            <span class="loader">
+                                <span class="dot"></span>
+                                <span class="circle"></span>
+                            </span>
+                            {{ number_format($jobPostCount) }} <!-- Display the count -->
+                        </strong>
                       </div>
                       <div class="col-6">
+                        @php
+                        use Carbon\Carbon;
+                        $todayPosts = App\Models\JobPost::whereDate('created_at', Carbon::today())->count();
+                        @endphp
                         <p>Việc làm mới hôm nay</p>
-                        <strong>2,032</strong>
+                        <strong>{{ number_format($todayPosts) }}</strong>
                       </div>
                     </div>
                     <div class="hr"></div>
@@ -591,8 +605,8 @@
       <div class="teks-section py-4 py-sm-5">
         <div class="row align-items-center row-cols-lg-3">
           <div class="col-lg-3 teks-section-title ps-3 text-center text-lg-start">
-            <h2 class="text-white fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
-            <p class="w-100 mb-3">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
+            <h2 class="text-black fs-5">Tra cứu lương <small class="badge bg-danger p-1 font-size-sm">Mới</small></h2>
+            <p class="w-100 mb-3 text-black">Tiện ích tra cứu & tìm hiểu mức lương <br> theo ngành nghề và vị trí công việc 2024</p>
             <img class="w-100 w-xs-25 mb-3 m-auto p-lg-4 d-block" loading="lazy"
               src="{{ asset('assets_livewire/teks/img/tra-cuu-luong.svg?v=234208153092') }}" alt="Rzcareer">
 
@@ -1067,8 +1081,8 @@
         </section> -->
 
   </main>
-
-  <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+  @livewire('employer.inc.footer')
+  {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
     <div class="no-padding">
       <div class="container">
         <div class="row">
@@ -1244,7 +1258,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> --}}
   <style>
     .zalo-chat-widget {
       left: initial !important;
@@ -1255,9 +1269,9 @@
       height: 60px !important;
     }
   </style>
-  <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
+  {{-- <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
     <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
-  </a>
+  </a> --}}
 
 
 
