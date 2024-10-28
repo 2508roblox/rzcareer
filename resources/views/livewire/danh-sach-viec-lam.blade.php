@@ -248,7 +248,8 @@
                                                                         <div class="row">
                                                                             <div class="col-sm-12 col-sm-offset-1-bk">
                                                                                 <div>
-                                                                                    <form class="bt-form clearfix">
+                                                                                    <form wire:submit.prevent="search"
+                                                                                        class="bt-form clearfix">
                                                                                         <!-- Prevent default submit -->
                                                                                         <div
                                                                                             class="row no-mrg teks-search">
@@ -447,51 +448,57 @@
                                                                 <div class="row inner-header-page"
                                                                     style=" padding: 0 !important; min-height: initial !important; ">
                                                                     <div class="mt-10 col-sm-12">
-
+                                                                        @php
+                                                                        $careerName = null;
+                                                                        if ($career_id) {
+                                                                        $career =
+                                                                        App\Models\CommonCareer::find($career_id);
+                                                                        $careerName = $career ? $career->name : null;
+                                                                        }
+                                                                        @endphp
                                                                         <div class="fillters clearfix">
                                                                             <div class="teks-category dropdown "
                                                                                 title="Ngành nghề">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
                                                                                         class="bx bxs-category"></i>
-                                                                                    Ngành nghề
+                                                                                    {{ $careerName?? "Ngành
+                                                                                    nghề" }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    @foreach(
-                                                                                    App\Models\CommonCareer::withCount('jobPosts')
-                                                                                    ->orderBy('job_posts_count', 'desc')
-                                                                                    ->limit(45)
-                                                                                    ->get() as $career)
-                                                                                    <li>
+                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
+                                                                                    'desc')->get() as $career_item)
 
-                                                                                        <a class="a accordion-toggle"
-                                                                                            href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
-                                                                                            {{ $career->name }}
+
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('career_id', '{{ $career_item->id }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $career_item->name
+                                                                                            }}
                                                                                         </a>
                                                                                     </li>
 
+
                                                                                     @endforeach
 
-                                                                                </ul> --}}
+                                                                                    @if ($career_id)
 
-                                                                                <select wire:model="career_id"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value="">
-                                                                                        <i class="bx bxs-category"></i>
-                                                                                        Tất cả ngành nghề
-                                                                                    </option>
-                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
-                                                                                    'desc')->get() as $career_item)
-                                                                                    <option
-                                                                                        value="{{ $career_item->id }}">
-                                                                                        {{
-                                                                                        $career_item->name }}</option>
-                                                                                    @endforeach
-                                                                                </select>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('career_id', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
 
                                                                             </div>
                                                                             <style>
@@ -506,115 +513,138 @@
                                                                             </style>
                                                                             <div class="dropdown " title="Ngành Nghề">
 
-                                                                                {{-- <button
+                                                                                <button id="jobTypeButton"
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown">
                                                                                     <i class="bx bx-briefcase"></i>
-                                                                                    Loại hình
+                                                                                    {{ $job_type ?: 'Loại hình' }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?type=full-time">Danh
-                                                                                            sách loại hình công
-                                                                                            việc...</span>
-                                                                                    </li>
-
-                                                                                </ul> --}}
-                                                                                <select wire:model.live="job_type"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <i class="bx bx-briefcase"></i>
-                                                                                    <option value=""> Tất cả loại hình
-                                                                                    </option>
-
                                                                                     @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
                                                                                     as $jobType_item)
-                                                                                    <option
-                                                                                        value="{{$jobType_item->job_type}}">
-                                                                                        {{$jobType_item->job_type}}
-                                                                                    </option>
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('job_type', '{{ $jobType_item->job_type }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $jobType_item->job_type
+                                                                                            }}
+                                                                                        </a>
+                                                                                    </li>
                                                                                     @endforeach
+                                                                                    @if ($job_type)
+                                                                                    <li class="divider"></li>
 
-                                                                                </select>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('job_type', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
+
+                                                                                {{-- <script>
+                                                                                    function selectJobType(jobType) {
+                                                                                        var button = document.getElementById("jobTypeButton");
+                                                                                        button.innerHTML = '<i class="bx bx-briefcase"></i> ' + (jobType || 'Tất cả loại hình') + ' <span class="caret"></span>';
+                                                                                        Livewire.emit('setJobType', jobType);
+                                                                                    }
+                                                                                </script> --}}
+
 
                                                                             </div>
                                                                             <div class="dropdown " title="Mức lương">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
-                                                                                        class="bx bx-money"></i> Mức
-                                                                                    lương <span class="caret"></span>
+                                                                                        class="bx bx-money"></i>
+                                                                                    @if($salary &&
+                                                                                    isset($salaryRanges[$salary]))
+                                                                                    {{ $salaryRanges[$salary] }}
+                                                                                    @else
+                                                                                    Mức lương
+                                                                                    @endif
+                                                                                    <span class="caret"></span>
                                                                                 </button>
+
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?salary=0-5">Danh
-                                                                                            sách lương...</span></li>
+                                                                                    @foreach($salaryRanges as $range =>
+                                                                                    $range_label)
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('salary', '{{ $range }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $range_label }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
+                                                                                    @if ($salary)
 
-                                                                                </ul> --}}
 
-                                                                                <select wire:model="salary"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value=""><i
-                                                                                            class="bx bx-money"></i>
-                                                                                        Tất cả mức lương</option>
-                                                                                    <option value="2000000">
-                                                                                        > 2 triệu</option>
-                                                                                    <option value="5000000">
-                                                                                        > 5triệu
-                                                                                    </option>
-                                                                                    <option value="10000000 ">
-                                                                                        > 10 triệu
-                                                                                    </option>
-                                                                                    <option value="14000000 "> > 14
-                                                                                        triệu
-                                                                                    </option>
-                                                                                    <option value="20000000 "> > 20
-                                                                                        triệu
-                                                                                    </option>
-                                                                                </select>
+                                                                                    <li class="divider"></li>
 
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('salary', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
                                                                             </div>
 
                                                                             <div class="dropdown " title="Chức vụ">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
-                                                                                        class="bx bx-user"></i> Chức vụ
+                                                                                        class="bx bx-user"></i>{{
+                                                                                    $position ?: 'Chức vụ' }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?position=1">Danh
-                                                                                            sách vị trí công việc</span>
-                                                                                    </li>
-
-                                                                                </ul> --}}
-
-                                                                                <select wire:model.live="position"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value=""> <i
-                                                                                            class="bx bx-user"></i> Chọn
-                                                                                        chức vụ</option>
-
                                                                                     @foreach(App\Models\JobPost::select('position')->distinct()->get()
                                                                                     as $position_item)
-                                                                                    <option
-                                                                                        value="{{$position_item->position}}">
-                                                                                        {{$position_item->position}}
-                                                                                    </option>
-                                                                                    @endforeach
-                                                                                </select>
 
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('position', '{{$position_item->position }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $position_item->position
+                                                                                            }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
+                                                                                    @if ($position)
+
+                                                                                    <li class="divider"></li>
+
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('position', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+
+                                                                                </ul>
                                                                             </div>
+
                                                                             <div class="dropdown " title="Kinh nghiệm">
                                                                                 <button
                                                                                     class="btn btn-xs dropdown-toggle"
@@ -623,13 +653,38 @@
                                                                                         class="bx bx-star"></i> Kinh
                                                                                     nghiệm <span class="caret"></span>
                                                                                 </button>
+                                                                                <?php
+                                                                                $experiences = [
+                                                                                '0-1 years' => 'Dưới 1 năm',
+                                                                                '2-3 years' => '2 - 3 năm',
+                                                                                '3-5 years' => '3 - 5 năm',
+                                                                                '5-10 years' => '5 - 10 năm'
+                                                                            ];?>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?exp=0-0">Danh
-                                                                                            sách kinh nghiệm</span></li>
+                                                                                    @foreach($experiences as $exp =>
+                                                                                    $exp_label)
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('experience','{{ $exp }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $exp_label }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
 
+                                                                                    @if ($experience)
+                                                                                    <li class="divider"></li>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('experience', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
