@@ -215,7 +215,7 @@
     <nav class="navbar bg-white p-0">
       <div class="container-fluid p-0">
         <a class="navbar-brand" href="/">
-          <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
+          <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
         </a>
         <style>
           .status_on {

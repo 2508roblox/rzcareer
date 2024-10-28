@@ -6,7 +6,7 @@
                     <div>
                         <div>
 
-                            <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+                            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
                             <!-- Please send your resume with cover letter to team@jobsgo.vn -->
                             <!DOCTYPE html>
                             <html lang="vi-VN">
@@ -40,7 +40,7 @@
                                 <meta name="csrf-token"
                                     content="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
 
-                                <title>JobsGO - Quản lý CV</title>
+                                <title>RZCareer - Quản lý CV</title>
 
                                 <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css"
                                     rel="stylesheet" type="text/css">
@@ -2087,7 +2087,7 @@
                                                                                         <p>Chưa có ngôn ngữ thành thạo nào cho hồ sơ này.</p>
                                                                                     </div>
                                                                                 @endif
-                                                                           
+
                                                                         </div>
                                                                     </div>
 
@@ -7688,7 +7688,7 @@
                                     <!-- Footer -->
                                     <div class="footer text-muted hidden-xs">
                                         <div class="mt-30">
-                                            &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                                            &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                                         </div>
 

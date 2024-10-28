@@ -1723,7 +1723,7 @@
                                                 </ul>
                                                 <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
                                                     <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                            href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                                 class='bx bx-xs bxl-facebook'></i></a></li>
                                                     <li class="list-inline-item"><a
                                                             href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1766,7 +1766,7 @@
                                                     title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                                     href="https://employer.jobsgo.vn"
-                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho
+                                                    title="RZCareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho
                                                         Nhà Tuyển
                                                         Dụng</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
@@ -1784,7 +1784,7 @@
                                         <ul
                                             class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
                                             <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                    href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                         class='bx bx-xs bxl-facebook'></i></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1803,7 +1803,7 @@
                                             trên mạng số
                                             568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> ©
                                             2024 Công ty Cổ
-                                            phần JobsGO. All Rights Reserved.</p>
+                                            phần RZCareer. All Rights Reserved.</p>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="text-center">

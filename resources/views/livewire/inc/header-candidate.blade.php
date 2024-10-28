@@ -1,8 +1,8 @@
 <div class="navbar navbar-default">
     <div class="wrap">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/" title="Về trang chủ JobsGO">
-                <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
+            <a class="navbar-brand" href="/" title="Về trang chủ RZCareer">
+                <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
             </a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">

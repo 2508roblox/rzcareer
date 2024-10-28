@@ -2,7 +2,7 @@
     <div>
         <div>
 
-            <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
             <!DOCTYPE html>
             <html lang="vi-VN">
 
@@ -20,7 +20,7 @@
                 <meta name="robots" content="noindex, nofollow">
                 <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                 <meta name="csrf-token" content="53RmGIq0YTwaOnTYEISScNnmAPBDfIEWdMkucMdlD8jUQRFd6-wpZmNDGJ5q5esJlbdtsQRF11oe-xkpsFRVkA==">
-             
+
                 <title>Tổng hợp mẫu CV xin việc online chuẩn 2024 cho mọi ngành nghề</title>
 
                 <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
@@ -342,7 +342,7 @@
                             <nav>
                              @livewire('inc.breadcrumb')
                             </nav>
-                           
+
                             <style>
                                 nav li {
                                     text-align: center;
@@ -1201,7 +1201,7 @@
                                         <div class="content-group">
                                             <!--    <div class="bd-example" id="unica-alert">-->
                                             <!--        <div class="alert alert-warning">-->
-                                            <!--            <h1 class="mt-5 content-group">Tạo CV xin việc Online chuẩn, đẹp miễn phí với JobsGO</h1>-->
+                                            <!--            <h1 class="mt-5 content-group">Tạo CV xin việc Online chuẩn, đẹp miễn phí với RZCareer</h1>-->
                                             <!--            <p class="text-muted text-size-small content-group">--><!--</p>-->
                                             <!--        </div>-->
                                             <!--    </div>-->
@@ -1220,7 +1220,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_42.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=42"
@@ -1248,7 +1248,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_41.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=41"
@@ -1276,7 +1276,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_31.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=31"
@@ -1304,7 +1304,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_30.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=30"
@@ -1332,7 +1332,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_29.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=29"
@@ -1360,7 +1360,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_28.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=28"
@@ -1388,7 +1388,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_27.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=27"
@@ -1416,7 +1416,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_26.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=26"
@@ -1444,7 +1444,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_25.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=25"
@@ -1472,7 +1472,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_24.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=24"
@@ -1500,7 +1500,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_23.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=23"
@@ -1528,7 +1528,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_22.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=22"
@@ -1556,7 +1556,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_21.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=21"
@@ -1584,7 +1584,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_20.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=20"
@@ -1612,7 +1612,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_19.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=19"
@@ -1640,7 +1640,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_17.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=17"
@@ -1668,7 +1668,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_16.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=16"
@@ -1696,7 +1696,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_15.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=15"
@@ -1724,7 +1724,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_14.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=14"
@@ -1752,7 +1752,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_12.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=12"
@@ -1780,7 +1780,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_11.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=11"
@@ -1808,7 +1808,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_10.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=10"
@@ -1836,7 +1836,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_9.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=9"
@@ -1864,7 +1864,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_8.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=8"
@@ -1892,7 +1892,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_7.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=7"
@@ -1920,7 +1920,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_6.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=6"
@@ -1948,7 +1948,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_5.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=5"
@@ -1976,7 +1976,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_4.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=4"
@@ -2004,7 +2004,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_3.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=3"
@@ -2032,7 +2032,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/theme_2.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=2"
@@ -2060,7 +2060,7 @@
                                                                         type="image/png">
                                                                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                                         data-src="/assets_livewire/cv_template/assets/images/theme/default.png" width="100%"
-                                                                        class="img-responsive lazy" alt="JobsGO CV">
+                                                                        class="img-responsive lazy" alt="RZCareer CV">
                                                                 </picture>
                                                                 <div class="caption-overflow"><span> <a
                                                                             href="https://jobsgo.vn/create-resume?theme=1"
@@ -2077,7 +2077,7 @@
                                                     </div>
                                                 </div>
 
-                                           
+
                                             </div>
                                         </div>
                                     </div>
@@ -3288,7 +3288,7 @@
                                                                             var bulletPoints = data.bullet_points;
 
                                                                             if (bulletPoints) {
-                                                                                tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ JobsGO AI (nhấn vào nội dung bạn muốn thêm):</p>');
+                                                                                tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ RZCareer AI (nhấn vào nội dung bạn muốn thêm):</p>');
                                                                             }
 
                                                                             $.each(bulletPoints, function(index, tag) {
@@ -5776,7 +5776,7 @@
                             <script>
                                 function updateCheckspellPanel() {
                                     loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-            Đang kiểm tra gợi ý từ JobsGO\n\
+            Đang kiểm tra gợi ý từ RZCareer\n\
             </div>';
                                     $('#panel').html(loading);
                                     $.ajax({
@@ -5790,7 +5790,7 @@
                                 function updateReviewPanel() {
                                     console.log('update review panel');
                                     loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-            Đang kiểm tra gợi ý từ JobsGO\n\
+            Đang kiểm tra gợi ý từ RZCareer\n\
             </div>';
                                     $('#panel').html(loading);
                                     $.ajax({
@@ -5818,7 +5818,7 @@
                                     $('select').val(null).trigger('change');
                                     upateSuggestPanelPosition('sticky');
                                     loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-            Đang kiểm tra gợi ý từ JobsGO\n\
+            Đang kiểm tra gợi ý từ RZCareer\n\
             </div>';
                                     $('#panel').html(loading);
                                     $.ajax({
@@ -6728,7 +6728,7 @@
                     <!-- Footer -->
                     <div class="footer text-muted hidden-xs">
                         <div class="mt-30">
-                            &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                            &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                         </div>
 
@@ -6863,7 +6863,7 @@
                         }
                     })
                 </script>
-          
+
 
                 <script>
                     window.addEventListener('load', function() {

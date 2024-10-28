@@ -1,7 +1,7 @@
 <div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
         <!-- Please send your resume with cover letter to team@jobsgo.vn -->
         <!DOCTYPE html>
         <html lang="vi-VN">
@@ -21,7 +21,7 @@
             <meta name="csrf-param" content="_csrf-jobsgo-candidate">
             <meta name="csrf-token" content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-            <title>Bảng tin - JobsGO</title>
+            <title>Bảng tin - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
             <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -874,19 +874,19 @@
                                                         <div class="carousel-inner">
                                                             <div class="item active">
                                                                 <a href="/candidate/video-clip">
-                                                                    <picture><img src="/media/home/4.png" width="100%" class="img-responsive" alt="JobsGO Banner">
+                                                                    <picture><img src="/media/home/4.png" width="100%" class="img-responsive" alt="RZCareer Banner">
                                                                     </picture>
                                                                 </a>
                                                             </div>
 
                                                             <!--<div class="item">
                                          <a href="/assets_livewire/blog/cuoc-thi-tu-tin-vi-toi-la-gen-z-jobsgo/" target="_blank">
-                                             <picture><img src="/media/home/5.jpg" width="100%" class="img-responsive" alt="JobsGO Banner"></picture>
+                                             <picture><img src="/media/home/5.jpg" width="100%" class="img-responsive" alt="RZCareer Banner"></picture>
                                          </a>
                                      </div>
                                      <div class="item">
                                          <a href="/assets_livewire/blog/cuoc-thi-tu-tin-vi-toi-la-gen-z-jobsgo/" target="_blank">
-                                             <picture><img src="/media/home/3.png" width="100%" class="img-responsive" alt="JobsGO Banner"></picture>
+                                             <picture><img src="/media/home/3.png" width="100%" class="img-responsive" alt="RZCareer Banner"></picture>
                                          </a>
                                      </div>-->
                                                         </div>
@@ -1399,7 +1399,7 @@ loadingTask.promise.then(function(pdf) {
                 <!-- Footer -->
                 <div class="footer text-muted hidden-xs">
                     <div class="mt-30">
-                        &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                        &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                     </div>
 

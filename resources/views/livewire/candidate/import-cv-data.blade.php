@@ -4,7 +4,7 @@
             <div>
                 <div>
 
-                    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+                    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
                     <!DOCTYPE html>
                     <html lang="vi-VN">
 
@@ -1131,7 +1131,7 @@
                                                                                                     <div class="alert alert-warning alert-dismissible fade in alert-suggest" role="alert">
                                                                                                         <i class="fa fa-lightbulb-o"></i>
                                                                                                         <span style="color: #333">
-                                                                                                            <strong>Gợi ý:</strong> Sau khi tải CV lên, bạn có thể chuyển thông tin từ CV cũ sang các mẫu CV mới chuyên nghiệp và hấp dẫn trên JobsGO
+                                                                                                            <strong>Gợi ý:</strong> Sau khi tải CV lên, bạn có thể chuyển thông tin từ CV cũ sang các mẫu CV mới chuyên nghiệp và hấp dẫn trên RZCareer
                                                                                                         </span>
                                                                                                     </div>
                                                                                                     <div class="form-group">
@@ -1294,7 +1294,7 @@
                                     <script type="text/javascript" src="https://s.cdpn.io/53148/requestAnimationFrame.js"></script>
                                     <div id="loading-parse" class="fancybox-container fancybox-show-toolbar fancybox-show-infobar fancybox-show-nav fancybox-show-caption fancybox-is-open fancybox-can-drag" style="display: none;">
                                         <canvas id="loading-animation" width="200" height="200"></canvas>
-                                        <p id="analytical_text">JobsGO AI đang phân tích CV của bạn</p>
+                                        <p id="analytical_text">RZCareer AI đang phân tích CV của bạn</p>
                                         <div class="fancybox-bg"></div>
                                     </div>
                                     <style>
@@ -1888,7 +1888,7 @@
                             <!-- Footer -->
                             <div class="footer text-muted hidden-xs">
                                 <div class="mt-30">
-                                    &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                                    &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                                 </div>
 

@@ -54,13 +54,13 @@
                     <meta name="viewport"
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
                     <meta name="HandheldFriendly" content="true" />
-                    <meta name="author" content="JOBSGO.,JSC" />
+                    <meta name="author" content="RZCareer.,JSC" />
                     <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                     <meta name="csrf-token"
                         content="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
                     <title>Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An) - Công ty Chế Biến Nước Chấm Mekong</title>
                     <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-                    <meta property="og:sitename" content="JobsGO - Tuyển dụng">
+                    <meta property="og:sitename" content="RZCareer - Tuyển dụng">
                     <meta property="og:type" content="website">
                     <meta property="og:locale" content="vi_VN">
                     <meta property="fb:app_id" content="1590841851212703">
@@ -84,11 +84,11 @@
                     <meta property="al:android:url"
                         content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
                     <meta property="al:android:package" content="vn.ca.hope.candidate">
-                    <meta property="al:android:app_name" content="JobsGO">
+                    <meta property="al:android:app_name" content="RZCareer">
                     <meta property="al:ios:url"
                         content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
                     <meta property="al:ios:app_store_id" content="1234120247">
-                    <meta property="al:ios:app_name" content="JobsGO">
+                    <meta property="al:ios:app_name" content="RZCareer">
                     <meta name="geo.placename" content="Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội">
                     <meta name="geo.position" content="21.0000650;105.8224070">
                     <meta name="geo.region" content="VN-Hà Nội">
@@ -136,7 +136,7 @@
                         href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500"
                             height="100"
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
-                            alt="Tải app JobsGO" src="/assets_livewire/media/img/500x100-banner-2.gif"
+                            alt="Tải app RZCareer" src="/assets_livewire/media/img/500x100-banner-2.gif"
                             class="img-responsive lazy"></a>
                     @livewire('inc.header-nav')
 
@@ -293,7 +293,7 @@
                                                                         href="https://jobsgo.vn/"
                                                                         itemtype="https://schema.org/Thing"
                                                                         itemprop="item"> <span itemprop="name">
-                                                                            JobsGO</span> </a>
+                                                                            RZCareer</span> </a>
                                                                     <meta itemprop="position" content="1">
                                                                 </li>
                                                                 <li itemprop="itemListElement" itemscope
@@ -388,7 +388,7 @@
                                                                 <div class="panel-heading-bk">
                                                                     <h6
                                                                         class="text-size-mini pt-10 pb-5 panel-title text-uppercase">
-                                                                        JobsGO còn rất nhiều công việc tương tự để bạn
+                                                                        RZCareer còn rất nhiều công việc tương tự để bạn
                                                                         tham khảo dưới đây </span></h6>
                                                                     <div class="heading-elements"><a
                                                                             title="Xem thêm việc làm Kế Toán Tổng Hợp"
@@ -1064,7 +1064,7 @@
                                 <div class="hidden-xs d-none d-sm-block theme-bg-shapes-left"></div>
                                 <div class="h2 mb-3 text-dark fw-bolder my-1">Tải miễn phí ứng dụng</div>
                                 <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu
-                                    quả bằng cách tải JobsGO về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!
+                                    quả bằng cách tải RZCareer về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!
                                 </div>
                                 <div class="row gx-1 justify-content-center pt-2">
                                     <div class="col-10 col-sm-5 col-xs-10 col-md-3 mt-2 mt-md-0">
@@ -1080,7 +1080,7 @@
                                                     <img class="lazy"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                         data-src="/assets_livewire/teks/img/download.svg?v=1.2"
-                                                        alt="JobsGO" width="220" height="83">
+                                                        alt="RZCareer" width="220" height="83">
 
                                                 </a></li>
 
@@ -1102,11 +1102,11 @@
                                             <div class="textwidget">
                                                 <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa
                                                     G1 <br> Five Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a
-                                                        class="text-primary" title="JobsGO Miền Bắc"
+                                                        class="text-primary" title="RZCareer Miền Bắc"
                                                         href="tel:0898579188">0898.579.188</a></p>
                                                 <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5,
                                                     607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh
-                                                    <br>Điện thoại: <a class="text-primary" title="JobsGO Miền Nam"
+                                                    <br>Điện thoại: <a class="text-primary" title="RZCareer Miền Nam"
                                                         href="tel:0896557388">0896.557.388</a>
                                                 </p>
                                                 <p><strong>Email:</strong> <a
@@ -1219,7 +1219,7 @@
                                                 <ul
                                                     class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
                                                     <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/JobsGOVN/"
+                                                            href="https://www.facebook.com/RZCareerVN/"
                                                             target="_blank"><i
                                                                 class='bx bx-xs bxl-facebook'></i></a></li>
                                                     <li class="list-inline-item"><a
@@ -1264,7 +1264,7 @@
                                                     title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                                     href="https://employer.jobsgo.vn"
-                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
+                                                    title="RZCareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
                                                         cho Nhà Tuyển Dụng</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://jobsgo.vn/site/faq"
@@ -1281,7 +1281,7 @@
                                         <ul
                                             class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
                                             <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                    href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                         class='bx bx-xs bxl-facebook'></i></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1297,7 +1297,7 @@
                                         <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày
                                             09/05/2018 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép
                                             thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin & Truyền
-                                            thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần JobsGO. All Rights
+                                            thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần RZCareer. All Rights
                                             Reserved.</p>
                                     </div>
                                     <div class="col-sm-2">
@@ -1308,7 +1308,7 @@
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                     data-src="/assets_livewire/teks/img/online-gov.svg"
-                                                    alt="JobsGO" width="100" height="38">
+                                                    alt="RZCareer" width="100" height="38">
 
                                             </a>
                                             <a target="_blank" rel="nofollow"
@@ -1317,7 +1317,7 @@
 
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                    data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO"
+                                                    data-src="/assets_livewire/teks/img/dmca.svg" alt="RZCareer"
                                                     width="100" height="21">
 
                                             </a>
@@ -1345,7 +1345,7 @@
 
 
 
-                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với JobsGO "
+                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với RZCareer "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>
