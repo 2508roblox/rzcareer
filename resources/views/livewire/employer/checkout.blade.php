@@ -16,11 +16,11 @@
 
         <meta property="og:description"
             content="Tìm kiếm việc làm nhanh, dễ dàng. Liên tục cập nhật những việc làm mới phù hợp với bạn. Tìm kiếm công việc hấp dẫn mọi lúc, mọi nơi!" />
-        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
+        <meta property="og:image" content="https://employer.jobsgo.vn/media/img/share-cover.png" />
+        <meta property="og:site_name" content="https://employer.jobsgo.vn" />
         <meta property="og:locale" content="vi_VN" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.RZcareer.vn" />
+        <meta property="og:url" content="https://employer.jobsgo.vn" />
         <meta property="og:title" content="Chọn mua gói dịch vụ" />
         <meta property="fb:app_id" content="1590841851212703" />
 
@@ -40,14 +40,11 @@
         <link rel="stylesheet" href="/employer_assets/assets/plugins/fancybox/source/jquery.fancybox.css">
         <link rel="stylesheet" href="/employer_assets/assets/layout/css/main.css?v=1.11">
         <link rel="stylesheet" href="/employer_assets/assets/layout/css/main.responsive.css?v=1.11">
-<<<<<<< HEAD
-=======
-        <link href="https://employer.RZcareer.vn//bolt/assets/css/colors.css" rel="stylesheet" type="text/css">
-        <link href="https://employer.RZcareer.vn//bolt/assets/css/icons/icomoon/styles.css" rel="stylesheet"
+        <link href="https://employer.jobsgo.vn//bolt/assets/css/colors.css" rel="stylesheet" type="text/css">
+        <link href="https://employer.jobsgo.vn//bolt/assets/css/icons/icomoon/styles.css" rel="stylesheet"
             type="text/css">
-        <link href="https://employer.RZcareer.vn//bolt/assets/css/main.css?colorgb=" rel="stylesheet" type="text/css">
-        <link href="https://employer.RZcareer.vn//css/custom.css?colorgb=" rel="stylesheet" type="text/css">
->>>>>>> 80682c39dbac6fe36e2e9f961f43fae99db67b4f
+        <link href="https://employer.jobsgo.vn//bolt/assets/css/main.css?colorgb=" rel="stylesheet" type="text/css">
+        <link href="https://employer.jobsgo.vn//css/custom.css?colorgb=" rel="stylesheet" type="text/css">
 
         <script src="/employer_assets/assets/plugins/jquery/jquery.min.js"></script>
         <script src="/employer_assets/assets/plugins/jquery/jquery-ui.min.js"></script>
@@ -55,6 +52,8 @@
         <script src="/employer_assets/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
         <script src="/employer_assets/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
         <script src="/employer_assets/assets/layout/js/main.js?v=1.11"></script>
+        <script type="text/javascript"
+            src="https://employer.jobsgo.vn//bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
 
         <meta name="title" content="Chọn mua gói dịch vụ">
     </head>
@@ -111,17 +110,10 @@
             <div class="wrap-mark">
                 <div class="header-top clearfix">
                     <div class="container">
-<<<<<<< HEAD
-                        <a href="" class="logo pull-left"><img  src="/assets_livewire/logo-dark.svg"
-                                class="img-responsive" alt="hope">
+                        <a href="" class="logo pull-left"><img    src="/assets_livewire/logo-dark.svg"
+                                class="img-responsive" alt="hope"> 
+                        
                         <a href="/recruiter" class="btn-download btn-download-free pull-right"><i
-=======
-                        <a href="" class="logo pull-left"><img src="/employer_assets/assets/layout/img/logo.png"
-                                class="img-responsive" alt="hope"><span class="slogan">Real-time Recruiting</span></a>
-                        <a href="https://RZcareer.vn" class="pull-right link-ntv hide" target="_blank">Ứng dụng cho người
-                            tìm việc</a>
-                        <a href="site/login" class="btn-download btn-download-free pull-right"><i
->>>>>>> 80682c39dbac6fe36e2e9f961f43fae99db67b4f
                                 class="fa fa-sign-in"></i> Đăng nhập hệ thống</a>
                     </div>
                 </div>
@@ -132,61 +124,40 @@
         <div class="container" id="page-content">
             <div class="panel panel-flat">
                 <div class="panel-heading">
-                    <h2 class=""><span class="glyphicon glyphicon-shopping-cart"></span> Chọn mua gói dịch vụ</h2>
+                    <h2 class=""><span class="glyphicon glyphicon-shopping-cart"></span> Thanh toán hóa đơn</h2>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-12 col-md-9 col-lg-9">
                             <div class="table-responsive">
                                 <form id="order-form" wire:submit.prevent="submitOrder">
+                                   
+
+                                    <!-- Purchased Services Section -->
+                                    <h6 class="panel-title">Dịch vụ đã mua</h6>
                                     <table class="table text-nowrap">
                                         <thead>
                                             <tr>
-                                                <th width="50px"></th>
                                                 <th>Gói dịch vụ</th>
-                                                <th>Giá niêm yết</th>
-                                                <th>Giá khuyến mại</th>
-                                                <th width="150px">Số lượng mua <span class="small">(gói)</span></th>
-                                                <th width="150px">Thành tiền</th>
+                                                <th>Số lượng</th>
+                                                <th>Số lượng đã sử dụng</th>
+                                                <th>Đơn giá</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($services as $service)
+                                            @foreach($purchasedServices as $purchasedService)
                                             <tr>
                                                 <td>
-                                                    <div class="btn bg-blue rounded-round btn-icon btn-sm">
-                                                        <span class="letter-icon"><i class="icon-package"></i></span>
-                                                    </div>
+                                                    {{ $purchasedService->service->package_name }}
                                                 </td>
                                                 <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="text-default font-weight-semibold">{{
-                                                            $service->package_name }} <a
-                                                                class="text-grey-400 view-package-detail-btn"
-                                                                data-toggle="tooltip" title="Xem chi tiết các gói"><i
-                                                                    class="fa fa-info-circle"></i></a>
-                                                        </div>
-                                                    </div>
+                                                    {{ $purchasedService->quantity }} gói
                                                 </td>
                                                 <td>
-                                                    <span class="text-muted">{{ number_format($service->price)
-                                                        }}₫</span>
+                                                    {{ $purchasedService->used_quantity }} gói
                                                 </td>
                                                 <td>
-                                                    <span class="text-grey">
-                                                        <strong>{{ number_format($service->price) }}</strong>₫
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <input type="number" wire:model="quantities.{{ $service->id }}"
-                                                        wire:change="updateQuantity({{ $service->id }}, $event.target.value)"
-                                                        class="form-control" min="0">
-                                                </td>
-                                                <td>
-                                                    <span class="text-warning-700 amount">{{
-                                                        number_format($service->price * $quantities[$service->id])
-                                                        }}</span>
-                                                    <span class="text-warning-700">₫</span>
+                                                    {{ number_format($purchasedService->service->price, 0, ',', '.') }}₫
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -197,14 +168,29 @@
                         </div>
                         <div class="col-xs-12 col-md-3 col-lg-3 pull-buttom">
                             <div class="panel-heading">
-                                <h6 class="panel-title">Tổng tiền</h6>
+                                <h6 class="panel-title">Thông tin hóa đơn</h6>
                             </div>
                             <div class="panel panel-flat">
                                 <div class="panel-body">
-                                    <h6><small>Tạm tính: </small> <span class="pull-right" id="temporary-amount">{{
-                                            number_format($totalAmount) }}₫</span></h6>
-                                    <h4><small>Thành tiền: </small> <span class="pull-right text-danger"
-                                            id="total-amount">{{ number_format($totalAmount) }}₫</span></h4>
+                                    <h6><small>Mã hóa đơn: </small> <span class="pull-right">{{ $invoice->invoice_code
+                                            }}</span></h6>
+                                    <h6><small>Tổng tiền: </small> <span class="pull-right">{{
+                                            number_format($invoice->total_price) }}₫</span></h6>
+                                    <h6><small>Trạng thái: </small> <span class="pull-right">{{
+                                            ucfirst($invoice->status) }}</span></h6>
+                                    <h6><small>Ngày tạo: </small> <span class="pull-right">{{
+                                            $invoice->created_at->format('d/m/Y H:i') }}</span></h6>
+                                    <h6><small>Cập nhật lần cuối: </small> <span class="pull-right">{{
+                                            $invoice->updated_at->format('d/m/Y H:i') }}</span></h6>
+
+                                    <!-- QR Code Section -->
+                                    <h6 class="panel-title">QR Thanh toán</h6>
+                                    <div class="text-center">
+                                        <img src="https://vietqr.co/api/generate/mb/104567890/VIETQR.CO/{{ (int)$invoice->total_price }}/{{ $invoice->invoice_code }}?style=2&logo=1&isMask=1&bg=61"
+                                            alt="QR Code" class="w-32 h-32" style="width: 100px; height: 100px;">
+
+                                    </div>
+
                                     <div>
                                         <button type="submit" form="order-form" class="btn btn-danger btn-block"
                                             style="margin-top: 50px;">
@@ -217,6 +203,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Modal package detail -->
             <div id="package-detail-modal" class="modal fade" role="dialog">
@@ -270,9 +257,6 @@
                                         z-index: 10;
                                     }
                                 </style>
-<<<<<<< HEAD
-                          
-=======
                                 <div class="tab-content pt-20">
                                     <div id="tab1" class="tab-pane fade in active">
                                         <div class="table-responsive">
@@ -1026,7 +1010,6 @@
                                         </div>
                                     </div>
                                 </div>
->>>>>>> 80682c39dbac6fe36e2e9f961f43fae99db67b4f
 
                             </div>
                             <style>
@@ -1259,13 +1242,13 @@
                         <div class="col-md-3">
                             <h4>DÀNH CHO NHÀ TUYỂN DỤNG</h4>
                             <ul class="list-unstyled">
-                                <li><a href="https://employer.RZcareer.vn/site/employer-register-guide">Hướng dẫn đăng ký
+                                <li><a href="https://employer.jobsgo.vn/site/employer-register-guide">Hướng dẫn đăng ký
                                         mở tài khoản</a></li>
-                                <li><a href="https://employer.RZcareer.vn/site/manage-job-guide">Hướng dẫn quản lý việc
+                                <li><a href="https://employer.jobsgo.vn/site/manage-job-guide">Hướng dẫn quản lý việc
                                         làm</a></li>
-                                <li><a href="https://employer.RZcareer.vn/site/manage-candidate-guide">Hướng dẫn quản lý
+                                <li><a href="https://employer.jobsgo.vn/site/manage-candidate-guide">Hướng dẫn quản lý
                                         ứng viên</a></li>
-                                <li><a href="https://employer.RZcareer.vn/site/change-password-guide">Hướng dẫn đổi mật
+                                <li><a href="https://employer.jobsgo.vn/site/change-password-guide">Hướng dẫn đổi mật
                                         khẩu</a></li>
 
                             </ul>
@@ -1274,8 +1257,8 @@
                         <div class="col-md-2">
                             <h4>THÔNG TIN</h4>
                             <ul class="list-unstyled">
-                                <li><a href="https://employer.RZcareer.vn/site/about-us">Điều khoản sử dụng</a></li>
-                                <li><a href="https://employer.RZcareer.vn/site/privacy-policy">Chính sách bảo mật</a></li>
+                                <li><a href="https://employer.jobsgo.vn/site/about-us">Điều khoản sử dụng</a></li>
+                                <li><a href="https://employer.jobsgo.vn/site/privacy-policy">Chính sách bảo mật</a></li>
                                 <li><a href="/site/quy-che-hoat-dong">Quy chế hoạt động</a></li>
                                 <li><a href="/site/giai-quyet-tranh-chap">Giải quyết tranh chấp</a></li>
                             </ul>
@@ -1283,10 +1266,10 @@
                         <div class="col-md-2">
                             <h4>TRỢ GIÚP</h4>
                             <ul class="list-unstyled">
-                                <li><a href="https://employer.RZcareer.vn/site/about-us">Về chúng tôi</a></li>
-                                <li><a href="https://employer.RZcareer.vn/site/faq">Câu hỏi thường gặp</a></li>
-                                <li><a target="_blank" href="https://RZcareer.vn/blog">RZcareer Blog</a></li>
-                                <li><a target="_blank" href="https://RZcareer.vn/">RZcareer Home</a></li>
+                                <li><a href="https://employer.jobsgo.vn/site/about-us">Về chúng tôi</a></li>
+                                <li><a href="https://employer.jobsgo.vn/site/faq">Câu hỏi thường gặp</a></li>
+                                <li><a target="_blank" href="https://jobsgo.vn/blog">RZcareer Blog</a></li>
+                                <li><a target="_blank" href="https://jobsgo.vn/">RZcareer Home</a></li>
                             </ul>
                         </div>
                         <div class="col-md-5">
@@ -1320,7 +1303,7 @@
                                 </div>
                             </form>
                             <script>
-                                var saveEmailUrl = 'http://RZcareer.vn/ajax/subcribe-email';
+                                var saveEmailUrl = 'http://jobsgo.vn/ajax/subcribe-email';
                         var email = $('#emailSubcribe').val();
                         var type = 'employer';
                         $('#btnMailSubcribe').click(function () {
@@ -1341,7 +1324,7 @@
                             <!--Giấy phép đăng ký kinh doanh số ******** - Cấp ngày 05/09/2016 - Tại Sở Kế hoạch và Đầu tư Hà Nội.
              <br>-->Địa chỉ: Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội <br /> Văn phòng Miền Nam: Tầng 3,
                             158A Đào Duy Anh, Phường 9, Quận Phú Nhuận, Thành phố Hồ Chí Minh - Email: <a
-                                href="mailto:contact@RZcareer.vn">contact@RZcareer.vn</a> - Hotline: <a
+                                href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a> - Hotline: <a
                                 href="tel:0899.565.868">0899.565.868</a>
                         </span>
 

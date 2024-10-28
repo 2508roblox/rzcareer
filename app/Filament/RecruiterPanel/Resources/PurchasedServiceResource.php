@@ -55,10 +55,13 @@ class PurchasedServiceResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')->label('Mã dịch vụ đã mua'),
                 Tables\Columns\TextColumn::make('service.package_name')->label('Tên dịch vụ'),
                 Tables\Columns\TextColumn::make('invoice.invoice_code')->label('Mã hóa đơn'),
                 Tables\Columns\TextColumn::make('purchase_date')->date()->label('Ngày mua'),
-                Tables\Columns\TextColumn::make('quantity')->label('Số lượng'),
+                Tables\Columns\TextColumn::make('quantity')->label('Số lượng bài đăng'),
+                Tables\Columns\TextColumn::make('expiration_date')->label('Ngày hết hạn'),
+                Tables\Columns\TextColumn::make('invoice.status')->label('Trạng thái thanh toán'),
             ])
             ->filters([
                 //

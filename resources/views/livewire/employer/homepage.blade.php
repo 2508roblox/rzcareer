@@ -1,12 +1,12 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
-    <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+    <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
+    <!-- Please send your resume with cover letter to team@RZcareer.vn -->
     <!DOCTYPE html>
     <html class="no-js" lang="vi">
 
     <head>
-        <link rel="canonical" href="https://employer.jobsgo.vn/" />
+        <link rel="canonical" href="https://employer.RZcareer.vn/" />
         <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
@@ -32,22 +32,22 @@
         <meta name="description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
         <meta name="robots" content="index,follow,noodp" />
-        <meta name="author" content="jobsgo.vn" />
+        <meta name="author" content="RZcareer.vn" />
         <meta http-equiv="refresh" content="3600" />
         <meta property="og:description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta property="og:image" content="https://employer.jobsgo.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.jobsgo.vn" />
+        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
+        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
         <meta property="og:locale" content="vi_VN" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.jobsgo.vn" />
-        <meta property="og:title" content="JobsGO - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên" />
+        <meta property="og:url" content="https://employer.RZcareer.vn" />
+        <meta property="og:title" content="RZcareer - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên" />
         <meta property="fb:app_id" content="1590841851212703" />
         <meta name="geo.placename" content="Ha Noi, Viet Nam" />
         <meta name="geo.region" content="VN-HN" />
         <meta name="geo.position" content="21.031965, 105.804934" />
         <meta name="ICBM" content="21.031965, 105.804934" /> <!-- Title -->
-        <title>JobsGO - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên</title> <!-- Font Awesome Icon -->
+        <title>RZcareer - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên</title> <!-- Font Awesome Icon -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/css/font-awesome.min.css?v=1.2"> <!-- Plugin-CSS -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
@@ -91,8 +91,8 @@
                 <div class="row v-center">
                     <div class="col-xs-12 col-md-5 header-text">
                         <h2>Tìm nhân sự <span>chất lượng</span> theo cách hoàn toàn mới!</h2>
-                        <p><strong>JobsGO</strong> giúp bạn tìm ứng viên phù hợp thật nhanh và hiệu quả. Hệ thống
-                            <strong>JobsGO</strong> tìm kiếm thông minh và chủ động gợi ý các ứng viên thích hợp, đồng
+                        <p><strong>RZcareer</strong> giúp bạn tìm ứng viên phù hợp thật nhanh và hiệu quả. Hệ thống
+                            <strong>RZcareer</strong> tìm kiếm thông minh và chủ động gợi ý các ứng viên thích hợp, đồng
                             thời tự động hoá quy trình quản lý ứng viên.
                         </p> <a href="#about-us" class="button white">Tìm hiểu thêm</a>
                     </div>
@@ -124,7 +124,7 @@
         </style>
         <div class="container">
             <!--<a href="https://gohire.vn" target="_blank"> <img src="/loading.gif" class="lazy" data-src="/media/img/banner/16122021.png" class="img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
-            <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://jobsgo.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
+            <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://RZcareer.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
         </div>
         <section class="section-padding gray-bg">
             <div class="container">
@@ -132,7 +132,7 @@
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                         <div class="page-title">
                             <h2 class="pb-0 mb-0"> Tại sao chọn <span>chúng tôi</span></h2>
-                            <p>Các doanh nghiệp lựa chọn JobsGO để tuyển dụng nhân sự</p>
+                            <p>Các doanh nghiệp lựa chọn RZcareer để tuyển dụng nhân sự</p>
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                                             </div>
                                             <div class="caption-desc" data-animation="animated fadeInUp">
                                                 <p>Từ việc phân tích & thấu hiểu profile doanh nghiệp và từng job đăng
-                                                    tuyển, JobsGO chủ động tìm kiếm & mang về cho bạn các ứng viên phù
+                                                    tuyển, RZcareer chủ động tìm kiếm & mang về cho bạn các ứng viên phù
                                                     hợp nhất. Mỗi khi có ứng viên tiềm năng gia nhập hệ thống, bạn sẽ
                                                     được thông báo ngay lập tức.</p>
                                             </div>
@@ -261,7 +261,7 @@
                                             </div>
                                             <div class="caption-desc" data-animation="animated fadeInUp">
                                                 <p> Thương hiệu doanh nghiệp bạn được xây dựng qua profile ấn tượng trên
-                                                    JobsGO. <br> Hàng nghìn ứng viên biết đến môi trường làm việc, văn
+                                                    RZcareer. <br> Hàng nghìn ứng viên biết đến môi trường làm việc, văn
                                                     hoá, cũng như business của doanh nghiệp bạn.</p>
                                             </div>
                                             <div class="caption-button" data-animation="animated fadeInUp"></div>
@@ -297,7 +297,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                         <div class="page-title">
-                            <h2 class="pb-0 mb-0"> BÁO GIÁ DỊCH VỤ ĐĂNG TIN TUYỂN DỤNG CỦA <span>JobsGO</span></h2>
+                            <h2 class="pb-0 mb-0"> BÁO GIÁ DỊCH VỤ ĐĂNG TIN TUYỂN DỤNG CỦA <span>RZcareer</span></h2>
                             <p>Chúng tôi cung cấp nhiều dịch vụ giúp doanh nghiệp kết nối với ứng viên phù hợp hiệu quả
                                 & tối ưu chi phí</p>
                         </div>
@@ -417,10 +417,10 @@
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                         <div class="page-title">
                             <h2>VỀ CHÚNG TÔI</h2>
-                            <p>JobsGO - Kênh thông tin tuyển dụng và việc làm dành cho mọi Doanh nghiệp và Ứng viên.
+                            <p>RZcareer - Kênh thông tin tuyển dụng và việc làm dành cho mọi Doanh nghiệp và Ứng viên.
                                 Chúng tôi tin tưởng sẽ đem lại “HY VỌNG” cho Doanh nghiệp tìm kiếm nhân tài và cho Ứng
                                 viên tìm kiếm cơ hội nghề nghiệp. Với 2 hệ thống: Website dành cho Nhà Tuyển Dụng và Ứng
-                                dụng (Application) dành cho Người Tìm Việc, JobsGO sẽ mang lại những trải nghiệm mới mẻ,
+                                dụng (Application) dành cho Người Tìm Việc, RZcareer sẽ mang lại những trải nghiệm mới mẻ,
                                 thú vị; kết nối ước mơ chinh phục công việc của mọi nhân tài và giúp doanh nghiệp xây
                                 dựng đội ngũ nhân sự vững mạnh.</p>
                         </div>
@@ -499,7 +499,7 @@
                             data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body text-center" style="padding: 0;"><a href="/site/signup?utm_source=banner">
-                            <img src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/banner-thang-9.png"
+                            <img src="https://RZcareer.vn/blog/wp-content/uploads/2024/09/banner-thang-9.png"
                                 class="img-responsive" alt=""> </a></div>
                 </div>
             </div>

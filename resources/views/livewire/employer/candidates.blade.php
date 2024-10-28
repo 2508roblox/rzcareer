@@ -1,12 +1,12 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
-    <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+    <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
+    <!-- Please send your resume with cover letter to team@RZcareer.vn -->
     <!DOCTYPE html>
     <html class="no-js" lang="vi">
 
     <head>
-        <link rel="canonical" href="https://employer.jobsgo.vn/" />
+        <link rel="canonical" href="https://employer.RZcareer.vn/" />
         <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
@@ -32,15 +32,15 @@
         <meta name="description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
         <meta name="robots" content="index,follow,noodp" />
-        <meta name="author" content="jobsgo.vn" />
+        <meta name="author" content="RZcareer.vn" />
         <meta http-equiv="refresh" content="3600" />
         <meta property="og:description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta property="og:image" content="https://employer.jobsgo.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.jobsgo.vn" />
+        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
+        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
         <meta property="og:locale" content="vi_VN" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.jobsgo.vn" />
+        <meta property="og:url" content="https://employer.RZcareer.vn" />
         <meta property="og:title" content="Ứng viên theo ngành nghề" />
         <meta property="fb:app_id" content="1590841851212703" />
         <meta name="geo.placename" content="Ha Noi, Viet Nam" />
@@ -132,7 +132,7 @@
                         itemscope="" itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a
                                 style="color:#000" href="/" itemtype="https://schema.org/Thing"
-                                itemprop="item"> <span itemprop="name"> JobsGO</span> </a>
+                                itemprop="item"> <span itemprop="name"> RZcareer</span> </a>
                             <meta itemprop="position" content="1">
                         </li>
                         <li class="active"><span class="text-muted" style="color:#888!important">Ứng viên theo ngành
