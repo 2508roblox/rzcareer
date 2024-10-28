@@ -389,9 +389,10 @@
                                                                                 class="flex-shrink-0 position-relative">
                                                                                 <img class="lazy" width="80"
                                                                                     height="80"
-                                                                                    onerror="this.src='/img/employer-logo.jpg'"
-                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                                                    data-src="{{ Storage::url(optional($job->company)->company_image_url ?? 'img/employer-logo.jpg') }}"
+
+                                                                                    src="{{   asset('assets_livewire/img/default-company.svg') }}"
+                                                                                    data-src="{{   asset('assets_livewire/img/default-company.svg') }}"
+
                                                                                     alt="{{ $job->company->name }}">
                                                                             </div>
                                                                             <div class="flex-grow-1 ms-2">
