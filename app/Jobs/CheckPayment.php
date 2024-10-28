@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Helpers\NotificationHelper;
 use App\Models\Invoice;
 use App\Models\PaymentHistory;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -63,7 +64,7 @@ class CheckPayment implements ShouldQueue
                                 // Update the payment status
                                 $order->status = 'successful';
                                 $order->save();
-
+                                $livewireMessage = "Thanh toán thành công " . $order->total_price;
                                 // Create PaymentHistory record
                                 PaymentHistory::create([
                                     'user_id'        => $order->user_id,
@@ -73,6 +74,7 @@ class CheckPayment implements ShouldQueue
                                     'status'         => $order->status,
                                     'payment_date'   => now(),
                                 ]);
+                                NotificationHelper::sendLivewireEventNotification('success', $livewireMessage, $order->user_id);
                             });
 
                             Log::info('Updated order status and created PaymentHistory for order code: ' . $orderCode);

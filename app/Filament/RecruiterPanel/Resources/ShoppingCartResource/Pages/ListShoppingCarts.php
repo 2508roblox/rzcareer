@@ -10,6 +10,7 @@ use App\Models\ShoppingCart;
 use Illuminate\Support\Str;
 use Filament\Notifications\Notification;
 use App\Models\PurchasedService;
+use App\Models\Service;
 use Illuminate\Support\Facades\DB;
 
 class ListShoppingCarts extends ListRecords
@@ -48,17 +49,24 @@ class ListShoppingCarts extends ListRecords
                         ]);
 
                         foreach ($cartItems as $cartItem) {
-                            PurchasedService::create([
-                                'user_id' => $user->id,
-                                'service_id' => $cartItem->service_id,
-                                'invoice_id' => $invoice->id,
-                                'status' => 'pending',
-                                'quantity' => $cartItem->quantity,
-                                'used_quantity' => 0,
-                                'purchase_date' => now(),
-                            ]);
+                            // Retrieve the Service model instance
+                            $service = Service::find($cartItem->service_id);
+
+                            if ($service) { // Check if the service exists
+                                PurchasedService::create([
+                                    'user_id' => $user->id,
+                                    'service_id' => $service->id,
+                                    'invoice_id' => $invoice->id,
+                                    'status' => 'pending',
+                                    'quantity' => $cartItem->quantity * $service->job_post_count,
+                                    'used_quantity' => 0,
+                                    'purchase_date' => now(),
+                                    'expiration_date' => now()->addDays($service->duration), // Adjusted for clarity
+                                ]);
+                            }
                         }
 
+                        // Clear the shopping cart after invoice creation
                         ShoppingCart::where('user_id', $user->id)->delete();
                     });
 

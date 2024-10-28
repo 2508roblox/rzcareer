@@ -30,7 +30,9 @@ class InvoiceResource extends Resource
                             ->required(),
                         Forms\Components\Select::make('user_id')
                             ->relationship('user', 'full_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                            ->label('Người dùng') // Tiêu đề cột bằng tiếng Việt
+                            
+                            ->label(
+                                'Người dùng') // Tiêu đề cột bằng tiếng Việt
                             ->required(),
                     ]),
                 Forms\Components\Section::make('Chi tiết thanh toán') // Tiêu đề section khác

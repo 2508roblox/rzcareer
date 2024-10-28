@@ -149,6 +149,7 @@ class DanhSachViecLam extends Component
 
         // Truy vấn job posts
         $jobPosts = JobPost::with(['career', 'company', 'location', 'location.city', 'location.district'])
+          
             ->when($keyword, function ($query) {
                 return $query->where('job_name', 'like', '%' . $this->keyword . '%');
             })
@@ -181,7 +182,6 @@ class DanhSachViecLam extends Component
             ->when($this->career_id, function ($query) {
                 return $query->where('career_id', $this->career_id);
             })
-
             ->when($this->job_type, function ($query) {
                 return $query->where('job_type', 'like', '%' . $this->job_type . '%');
             })
@@ -204,6 +204,7 @@ class DanhSachViecLam extends Component
             ->orderBy($this->sortField, $this->sortDirection)
             ->paginate($this->perPage);
 
+        // Đếm tổng số việc làm
         $totalJobs = JobPost::count();
 
         return view('livewire.danh-sach-viec-lam', [
