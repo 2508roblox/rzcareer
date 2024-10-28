@@ -1,7 +1,7 @@
 <div>
 
-  <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
-  <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+  <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
+  <!-- Please send your resume with cover letter to team@RZcareer.vn -->
   <!DOCTYPE html>
   <html lang="vi-VN" ng-app="angularBolt">
 
@@ -25,13 +25,13 @@
     <meta name="csrf-param" content="_csrf-colorgb-employer">
     <meta name="csrf-token"
       content="hYya_6mtE8FawUn6pDYhRmMDTG_nD_MxFSsVA-tlml_T_uiWzZRUjwueL5LyaRY3UnR6HrBtnkdje3x1kiv0Bw==">
-    <title>Đăng nhập hệ thống - Dành cho nhà tuyển dụng - JobsGO</title>
+    <title>Đăng nhập hệ thống - Dành cho nhà tuyển dụng - RZcareer</title>
     <meta name="description"
       content="Hệ thống tìm kiếm, chủ động gợi ý các ứng viên thích hợp đồng thời tự động hóa quy trình quản lý. Tìm kiếm nhân sự phù hợp thật nhanh và hiệu quả!">
-    <meta name="title" content="Đăng nhập hệ thống - Dành cho nhà tuyển dụng - JobsGO">
+    <meta name="title" content="Đăng nhập hệ thống - Dành cho nhà tuyển dụng - RZcareer">
     <meta property="og:description"
       content="Hệ thống tìm kiếm, chủ động gợi ý các ứng viên thích hợp đồng thời tự động hóa quy trình quản lý. Tìm kiếm nhân sự phù hợp thật nhanh và hiệu quả!">
-    <meta property="og:title" content="Đăng nhập hệ thống - Dành cho nhà tuyển dụng - JobsGO">
+    <meta property="og:title" content="Đăng nhập hệ thống - Dành cho nhà tuyển dụng - RZcareer">
    
 
  
@@ -171,13 +171,13 @@
             }
           </style>
         <form wire:submit.prevent="login" id="w0" method="post">
-          <a title="JobsGO - Trang chủ" href="/employer" class="site-logo" style="
+          <a title="RZcareer - Trang chủ" href="/employer" class="site-logo" style="
           width: 100vw !important;
           display: flex;
           text-align: center;
           justify-content: center;
       ">
-              <img src="/assets_livewire/logo-light.svg" alt="JobsGO">
+              <img src="/assets_livewire/logo-light.svg" alt="RZcareer">
           </a>
       
           <div class="panel panel-body login-form">
@@ -224,7 +224,7 @@
       <!-- /page content -->
       <!-- Footer -->
       <div class="footer text-muted hide">
-        &copy; 2024 Copyright JobsGO.vn
+        &copy; 2024 Copyright RZcareer.vn
 
       </div>
       <!-- /footer -->
@@ -254,7 +254,7 @@
     </div><!-- /.modal -->
 
     <!--Start of Tawk.to Script-->
-    <div class="hide" id="load-tawkto"><img src="https://jobsgo.vn/img/chat_icon.png"></div>
+    <div class="hide" id="load-tawkto"><img src="https://RZcareer.vn/img/chat_icon.png"></div>
      
     <style>
       .dropdown-user li.parent-menu {
