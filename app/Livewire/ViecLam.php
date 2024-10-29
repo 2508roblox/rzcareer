@@ -20,7 +20,9 @@ class ViecLam extends Component
     public $full_name;
     public $email;
     public $phone;
-
+    public $resumes = []; // Thêm biến để lưu danh sách các bản lý lịch
+    public $selectedResumeId; // Thêm biến để lưu ID của resume được chọn
+    public $hasApplied = false;
     public function mount($slug)
     {
         // Lấy thông tin JobPost dựa trên slug
@@ -43,6 +45,10 @@ class ViecLam extends Component
             ->take(10)
             ->with(['career', 'location'])
             ->get();
+        $this->resumes = Resume::where('user_id', Auth::id())->get();
+        $this->hasApplied = PostActivity::where('job_post_id', $this->jobPost->id)
+        ->where('user_id', Auth::id())
+        ->exists();
     }
     public function saveJob()
     {
@@ -95,45 +101,42 @@ class ViecLam extends Component
 
     public function apply()
     {
+
+         $this->hasApplied = true;
         // Kiểm tra xem người dùng đã ứng tuyển vào công việc này chưa
         $existingApplication = PostActivity::where('job_post_id', $this->jobPost->id)
             ->where('user_id', Auth::id())
             ->first();
 
         if ($existingApplication) {
-            // Nếu đã ứng tuyển, hiển thị thông báo
             $this->alert('info', 'Bạn đã ứng tuyển vào công việc này rồi!', [
                 'position' => 'center',
-                'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
-
+                'timer' => 3000,
             ]);
             return; // Dừng phương thức nếu đã ứng tuyển
         }
 
         try {
-            // Lấy bản lý lịch chính của người dùng
-            $resume = Resume::where('user_id', Auth::id())
-                ->first();
-
             // Kiểm tra xem bản lý lịch có tồn tại hay không
-            if (!$resume) {
-                $this->alert('error', 'Bạn cần có một bản lý lịch hợp lệ để ứng tuyển!', [
-                    'position' => 'center',
-                    'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
+            $resume = Resume::find($this->selectedResumeId);
 
+            if (!$resume) {
+                $this->alert('error', 'Bạn cần chọn một bản lý lịch hợp lệ để ứng tuyển!', [
+                    'position' => 'center',
+                    'timer' => 3000,
                 ]);
                 return; // Dừng phương thức nếu không có bản lý lịch
             }
 
             // Tạo PostActivity để ghi nhận hoạt động ứng tuyển
-            $newPostActivity = PostActivity::create([
+            PostActivity::create([
                 'job_post_id' => $this->jobPost->id,
-                'resume_id' => $resume->id, // Sử dụng resume_id từ bản lý lịch
-                'user_id' => Auth::id(), // ID người dùng đang đăng nhập
+                'resume_id' => $resume->id, // Sử dụng resume_id từ bản lý lịch được chọn
+                'user_id' => Auth::id(),
                 'full_name' => $this->full_name,
                 'email' => $this->email,
                 'phone' => $this->phone,
-                'status' => 'Chờ xác nhận', // Trạng thái ứng tuyển
+                'status' => 'Chờ xác nhận',
                 'is_sent_email' => false,
                 'is_deleted' => false,
             ]);
@@ -141,17 +144,16 @@ class ViecLam extends Component
             // Thông báo thành công
             $this->alert('success', 'Bạn đã ứng tuyển thành công!', [
                 'position' => 'center',
-                'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
-
+                'timer' => 3000,
             ]);
         } catch (\Exception $e) {
             $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.', [
                 'position' => 'center',
-                'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
-
+                'timer' => 3000,
             ]);
         }
     }
+
 
     public function render()
     {

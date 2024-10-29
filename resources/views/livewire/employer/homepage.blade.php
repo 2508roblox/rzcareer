@@ -292,6 +292,7 @@
         <style>
             .modal-backdrop {
                 z-index: 999999999;
+                display: none;
             }
 
             .modal {

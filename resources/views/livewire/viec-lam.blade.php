@@ -353,17 +353,24 @@
                                                         <div class="media-right media-middle text-nowrap">
                                                             <ul class="list-inline no-margin ">
 
-                                                                <li class="mt-5"><a onclick="preApplyForm(1378228)"
-                                                                        data-toggle="modal" data-target="#preApplyForm"
-                                                                        onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay');window.location.hash = 'form';"
-                                                                        data-jid="1378228"
-                                                                        data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
-                                                                        id="btn-apply"
-                                                                        class="btn bg-blue btn-apply-now btn-apply "><i
-                                                                            class="glyphicon glyphicon-send"></i> Ứng
-                                                                        tuyển ngay</a>
-
+                                                                <li class="mt-5">
+                                                                    @if($hasApplied)
+                                                                        <button class="btn bg-blue btn-apply-now btn-apply" disabled>
+                                                                            <i class="glyphicon glyphicon-check"></i> Đã ứng tuyển
+                                                                        </button>
+                                                                    @else
+                                                                        <a onclick="preApplyForm(1378228)"
+                                                                           data-toggle="modal" data-target="#preApplyForm"
+                                                                           onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay'); window.location.hash = 'form';"
+                                                                           data-jid="1378228"
+                                                                           data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
+                                                                           id="btn-apply"
+                                                                           class="btn bg-blue btn-apply-now btn-apply">
+                                                                            <i class="glyphicon glyphicon-send"></i> Ứng tuyển ngay
+                                                                        </a>
+                                                                    @endif
                                                                 </li>
+
 
 
 
@@ -969,38 +976,88 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Ứng tuyển ngay</h5>
-                                    <button onclick="teksAlert(this)" type="button" class="close"
-                                        data-dismiss="modal">&times;</button>
+                                    <button onclick="teksAlert(this)" type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <form wire:submit.prevent="apply">
                                         <div class="form-group">
                                             <label for="full_name">Họ và Tên</label>
-                                            <input type="text" wire:model="full_name" class="form-control"
-                                                id="full_name" required>
+                                            <input type="text" wire:model="full_name" class="form-control" id="full_name" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" wire:model="email" class="form-control" id="email"
-                                                required>
+                                            <input type="email" wire:model="email" class="form-control" id="email" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="phone">Số điện thoại</label>
-                                            <input type="text" wire:model="phone" class="form-control" id="phone"
-                                                required>
+                                            <input type="text" wire:model="phone" class="form-control" id="phone" required>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="resume">Chọn bản lý lịch</label>
+                                            <div id="resume" required>
+                                                @foreach($resumes as $resume)
+                                                    <div class="form-check" style="margin-bottom: 15px;">
+                                                        <input class="form-check-input" type="radio" wire:model="selectedResumeId" id="resume{{ $resume->id }}" value="{{ $resume->id }}" style="display: none;">
+                                                        <label class="form-check-label" for="resume{{ $resume->id }}" style="
+                                                            display: flex;
+                                                            align-items: center;
+                                                            padding: 10px;
+                                                            border: 1px solid #ccc;
+                                                            border-radius: 5px;
+                                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                            cursor: pointer;
+                                                            transition: all 0.3s ease;
+                                                            width: 100%;
+                                                        ">
+                                                            <span style="flex-grow: 1;">{{ $resume->title }}</span>
+                                                            <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}" target="_blank" class="btn btn-link">Xem</a>
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        <style>
+                                            /* Hover effect */
+                                            .form-check-label:hover {
+                                                border-color: #007bff; /* Màu border khi hover */
+                                                box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+                                            }
+
+                                            /* Checked effect */
+                                            .form-check-input:checked + .form-check-label {
+                                                border-color: #007bff; /* Màu border khi được chọn */
+                                                background-color: rgba(0, 123, 255, 0.1); /* Màu nền khi được chọn */
+                                            }
+                                        </style>
+
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="btn-group">
-                                        <button wire:click="apply" class="btn btn-success mrg-r-10">
-                                            <i class='bx bx-upload'></i> Ứng tuyển
+                                        <button type="submit" wire:click="apply" id="applyButton" class="btn btn-success mrg-r-10">
+                                            <i class="bx bx-upload"></i> Ứng tuyển
                                         </button>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('applyButton').addEventListener('click', function () {
+        // Ẩn thằng modal-backdrop in
+        const backdrop = document.querySelector('.modal-backdrop.in');
+        if (backdrop) {
+            backdrop.style.display = 'none'; // Ẩn backdrop
+        }
+    });
+});
+
+
+                    </script>
 
                     <div id="confirmApplyForm" class="modal">
                         <div class="modal-dialog modal-md">

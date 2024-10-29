@@ -53,7 +53,7 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class);
     Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
-    Route::get('/candidate/review', Review::class);
+    Route::get('/candidate/review', Review::class)->name('candidate.show');
     Route::get('/candidate/review{resume_id}', ReviewUploadResume::class)->name('candidate.review');
 
     Route::get('/candidate/cv-go', CvGo::class);
