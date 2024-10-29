@@ -42,16 +42,14 @@ class ImportCvData extends Component
         $fileUrl = Storage::url($path);
 
         // Cập nhật hoặc tạo mới bản ghi Resume với type là 'secondary'
-        $resume = Resume::updateOrCreate(
-            [
-                'user_id' => $user->id,
-                'seeker_profile_id' => $seekerProfile->id,
-                'type' => 'secondary'
-            ],
-            [
-                'file_url' => $fileUrl
-            ]
-        );
+        $resume = Resume::create([
+            'user_id' => $user->id,
+            'seeker_profile_id' => $seekerProfile->id,
+            'type' => 'secondary',
+            'file_url' => $fileUrl
+        ]);
+
+
 
         session()->flash('success', 'Tải CV thành công.');
 

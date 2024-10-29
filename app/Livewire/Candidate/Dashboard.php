@@ -43,7 +43,7 @@ class Dashboard extends Component
              $this->secondaryResumes = Resume::where('user_id', $this->user->id)
             ->where('type', 'secondary')
             ->get();
-             
+
             // Check advancedSkills
             if ($this->resumes->contains(function ($resume) {
                 return $resume->advancedSkills->isNotEmpty();
@@ -77,6 +77,27 @@ class Dashboard extends Component
 
             // Count the number of saved jobs
             $this->savedJobsCount = SavedJobPost::where('user_id', $this->user->id)->count(); // Get count of saved jobs
+        }
+    }
+    public function deleteResume($resumeId)
+    {
+        // Find the resume by ID
+        $resume = Resume::find($resumeId);
+
+        if ($resume && $resume->user_id === $this->user->id) {
+            // Delete the resume
+            $resume->delete();
+
+            // Optionally, you can add a success message or refresh the resumes
+            session()->flash('message', 'Resume deleted successfully.');
+
+            // Refresh the resumes list
+            $this->secondaryResumes = Resume::where('user_id', $this->user->id)
+                                             ->where('type', 'secondary')
+                                             ->get();
+        } else {
+            // Optionally, you can add an error message if the resume was not found
+            session()->flash('error', 'Resume not found or you do not have permission to delete it.');
         }
     }
 

@@ -185,29 +185,28 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
             $seekerProfile = SeekerProfile::where('user_id', $userId)->first();
 
             // Kiểm tra xem đã có resume type primary chưa
-            $primaryResume = Resume::where('user_id', $userId)
-                ->where('type', 'primary')
-                ->first();
+            $secondary = Resume::find($resume_id);
 
-            if ($primaryResume) {
+
+            if ($secondary) {
                 // Nếu đã có resume, gán giá trị cho các trường
-                $this->title = $primaryResume->title;
-                $this->slug = $primaryResume->slug;
-                $this->city_id = $primaryResume->city_id;
-                $this->career_id = $primaryResume->career_id;
-                $this->description = $primaryResume->description;
-                $this->salary_min = $primaryResume->salary_min;
-                $this->position = $primaryResume->position;
-                $this->experience = $primaryResume->experience;
-                $this->academic_level = $primaryResume->academic_level;
-                $this->type_of_workplace = $primaryResume->type_of_workplace;
-                $this->job_type = $primaryResume->job_type;
+                $this->title = $secondary->title;
+                $this->slug = $secondary->slug;
+                $this->city_id = $secondary->city_id;
+                $this->career_id = $secondary->career_id;
+                $this->description = $secondary->description;
+                $this->salary_min = $secondary->salary_min;
+                $this->position = $secondary->position;
+                $this->experience = $secondary->experience;
+                $this->academic_level = $secondary->academic_level;
+                $this->type_of_workplace = $secondary->type_of_workplace;
+                $this->job_type = $secondary->job_type;
 
             } else {
                 // Nếu không có resume, tạo mới
             $seekerProfile = SeekerProfile::where('user_id', $userId)->first();
 
-                $primaryResume = Resume::createPrimaryResume($userId, $seekerProfile->id);
+                $secondary = Resume::createsecondary($userId, $seekerProfile->id);
 
                 // Gán giá trị mặc định cho các trường nếu cần
                 $this->title = ''; // Gán giá trị mặc định
@@ -306,9 +305,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
         $this->validate(['city_id' => 'required|integer']); // Đảm bảo city_id là một số nguyên
 
         // Tìm kiếm resume của seeker profile có user_id hiện tại
-        $resume = Resume::where('user_id', auth()->id())
-            ->where('type', 'primary')
-            ->first();
+        $resume = Resume::find( $this->resume_id);
 
         if ($resume) {
             // Nếu resume đã tồn tại, cập nhật city_id
@@ -325,9 +322,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
         $this->validate(['career_id' => 'required|integer']); // Đảm bảo career_id là một số nguyên
 
         // Tìm kiếm resume của seeker profile có user_id hiện tại
-        $resume = Resume::where('user_id', auth()->id())
-            ->where('type', 'primary')
-            ->first();
+        $resume = Resume::find( $this->resume_id);
 
         if ($resume) {
             // Nếu resume đã tồn tại, cập nhật career_id
@@ -342,7 +337,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editJobTitle()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['title' => 'required|string|max:255']);
         $resume->update(['title' => $this->title]);
@@ -351,7 +346,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editSlug()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['slug' => 'required|string|max:255']);
         $resume->update(['slug' => $this->slug]);
@@ -360,7 +355,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editDescription()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['description' => 'required|string']);
         $resume->update(['description' => $this->description]);
@@ -371,13 +366,24 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
     {
 
         $this->validate(['salary_min' => 'required|numeric']); // Đảm bảo salary_min là một số
-        $this->user->update(['salary_min' => $this->salary_min]);
-        session()->flash('message', 'Cập nhật mức lương tối thiểu thành công!');
+        $resume = Resume::find($this->resume_id);
+
+        // Kiểm tra xem resume có tồn tại không
+        if ($resume) {
+            // Cập nhật mức lương tối thiểu
+            $resume->update(['salary_min' => $this->salary_min]);
+
+            // Thông báo thành công
+            session()->flash('message', 'Cập nhật mức lương tối thiểu thành công!');
+        } else {
+            // Thông báo nếu không tìm thấy resume
+            session()->flash('error', 'Không tìm thấy thông tin hồ sơ!');
+        }
     }
 
     public function editPosition()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['position' => 'required|string|max:255']);
         $resume->update(['position' => $this->position]);
@@ -386,7 +392,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editExperience()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['experience' => 'required|string|max:255']);
         $resume->update(['experience' => $this->experience]);
@@ -395,7 +401,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editAcademicLevel()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['academic_level' => 'required|string|max:255']);
         $resume->update(['academic_level' => $this->academic_level]);
@@ -404,7 +410,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editTypeOfWorkplace()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
 
         $this->validate(['type_of_workplace' => 'required|string|max:255']);
         $resume->update(['type_of_workplace' => $this->type_of_workplace]);
@@ -413,7 +419,7 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
 
     public function editJobType()
     {
-        $resume = Resume::where('user_id', auth()->id());
+        $resume = Resume::find( $this->resume_id);
         $this->validate(['job_type' => 'required|string|max:255']);
         $resume->update(['job_type' => $this->job_type]);
         session()->flash('message', 'Cập nhật loại công việc thành công!');

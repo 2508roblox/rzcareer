@@ -600,7 +600,7 @@
 
 
 
-  <section class="text-white teks-box-research-salary">
+  {{-- <section class="text-white teks-box-research-salary">
     <div class="container">
       <div class="teks-section py-4 py-sm-5">
         <div class="row align-items-center row-cols-lg-3">
@@ -692,7 +692,7 @@
       </div>
 
     </div>
-  </section>
+  </section> --}}
 
   <section class="bg-white teks-newspaper py-4 py-sm-5">
     <div class="container">

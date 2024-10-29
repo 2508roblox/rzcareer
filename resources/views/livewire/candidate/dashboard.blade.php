@@ -1117,105 +1117,84 @@
                                                                             <i class="icon-file-media"></i> Tài liệu chứng chỉ đã tải lên
                                                                         </h6>
                                                                     </div>
-                                                                    <canvas id="the-canvas"></canvas>
-                                                                    <script>
-                                                                        // If absolute URL from the remote server is provided, configure the CORS
-// header on that server.
-var url = '//cdn.mozilla.net/pdfjs/helloworld.pdf';
 
-// Loaded via <script> tag, create shortcut to access PDF.js exports.
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            @foreach ($secondaryResumes as $secondaryResume)
+                                                                            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
+                                                                                <div class="card shadow-sm file-preview-frame">
+                                                                                    <iframe src="{{ asset($secondaryResume->file_url) }}" type="application/pdf" class="pdf-preview" style="width:100%; height:250px;"></iframe>
+                                                                                    <div class="card-body">
+                                                                                        <h5 class="card-title">{{ $secondaryResume->title ?? 'Untitled' }}</h5>
+                                                                                        <div class="d-flex align-items-center gap-2" style="margin-top: 10px;">
+                                                                                            <!-- Nút phóng to với icon -->
+                                                                                            <button type="button" class="btn btn-primary btn-icon" onclick="window.open('{{ asset($secondaryResume->file_url) }}' )">
+                                                                                                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11ZM11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2Z" fill="#ffffff" />
+                                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 14C10 14.5523 10.4477 15 11 15C11.5523 15 12 14.5523 12 14V12H14C14.5523 12 15 11.5523 15 11C15 10.4477 14.5523 10 14 10H12V8C12 7.44772 11.5523 7 11 7C10.4477 7 10 7.44772 10 8V10H8C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H10V14Z" fill="#ffffff" />
+                                                                                                </svg>
+                                                                                            </button>
 
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
-
-// Asynchronous download of PDF
-var loadingTask = pdfjsLib.getDocument(url);
-loadingTask.promise.then(function(pdf) {
-  console.log('PDF loaded');
-
-  // Fetch the first page
-  var pageNumber = 1;
-  pdf.getPage(pageNumber).then(function(page) {
-    console.log('Page loaded');
-
-    var scale = 1.5;
-    var viewport = page.getViewport(scale);
-
-    // Prepare canvas using PDF page dimensions
-    var canvas = document.getElementById('the-canvas');
-    var context = canvas.getContext('2d');
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    // Render PDF page into canvas context
-    var renderContext = {
-      canvasContext: context,
-      viewport: viewport
-    };
-    var renderTask = page.render(renderContext);
-    renderTask.then(function () {
-      console.log('Page rendered');
-    });
-  });
-}, function (reason) {
-  // PDF loading error
-  console.error(reason);
-});
-
-                                                                    </script>
-
-                                                                    <div class="form-group">
-                                                                        <div class="clearfix file-no-sortable">
-                                                                            <div class="file-input">
-                                                                                <div class="file-preview ">
-                                                                                    <div class="file-drop-disabled">
-                                                                                        <div class="file-preview-thumbnails">
-
-                                                                                            @foreach ($secondaryResumes as $secondaryResume)
-                                                                                            <div class="file-preview-frame krajee-default file-preview-initial file-sortable kv-preview-thumb" id="preview-{{ $secondaryResume->id }}" title="{{ $secondaryResume->title }}">
-                                                                                                <div class="kv-file-content">
-                                                                                                    {{-- <iframe class="kv-preview-data file-preview-pdf" src="{{ asset($secondaryResume->file_url) }}" type="application/pdf" style="width:213px;height:160px;" frameborder="0"></iframe> --}}
+                                                                                            <!-- Nút xóa với icon -->
+                                                                                            <button type="button" class="btn btn-danger btn-icon" wire:click="deleteResume({{ $secondaryResume->id }})">
+                                                                                                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                                                                    <path d="M6 7V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6ZM10 17H8V9H10V17ZM14 17H16V9H14V17ZM15 4L14 3H10L9 4H4V6H20V4H15Z" />
+                                                                                                </svg>
+                                                                                            </button>
 
 
-                                                                                                </div>
-                                                                                                <div class="file-thumbnail-footer">
-                                                                                                    <div class="file-footer-caption" title="{{ $secondaryResume["title"] }}">
-                                                                                                        <div class="file-caption-info">{{ $secondaryResume["title"] }}</div>
-                                                                                                        <div class="file-size-info"></div>
-                                                                                                    </div>
-                                                                                                    <div class="file-actions">
-                                                                                                        <div class="file-footer-buttons">
-                                                                                                            <button type="button" class="kv-file-remove btn btn-kv btn-default btn-outline-secondary" title="Gỡ bỏ" data-url="" data-key="{{ $secondaryResume->id }}">
-                                                                                                                <i class="glyphicon glyphicon-trash"></i>
-                                                                                                            </button>
-                                                                                                            <button type="button" class="kv-file-zoom btn btn-kv btn-default btn-outline-secondary" title="Phóng lớn">
-                                                                                                                <i class="glyphicon glyphicon-zoom-in"></i>
-                                                                                                            </button>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <span class="file-drag-handle drag-handle-init text-info" title="Di chuyển / Sắp xếp lại"><i class="glyphicon glyphicon-move"></i></span>
-                                                                                                    <div class="clearfix"></div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        @endforeach
+                                                                                            <!-- Nút chỉnh sửa với icon -->
+                                                                                            <a href="{{ route('candidate.review', ['resume_id' => $secondaryResume->id]) }}" style="background: #222230;" class="btn btn-secondary btn-icon flex-grow-1 text-center">
+                                                                                                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                                                                                    <path d="M21.1213 2.70705C19.9497 1.53548 18.0503 1.53547 16.8787 2.70705L15.1989 4.38685L7.29289 12.2928C7.16473 12.421 7.07382 12.5816 7.02986 12.7574L6.02986 16.7574C5.94466 17.0982 6.04451 17.4587 6.29289 17.707C6.54127 17.9554 6.90176 18.0553 7.24254 17.9701L11.2425 16.9701C11.4184 16.9261 11.5789 16.8352 11.7071 16.707L19.5556 8.85857L21.2929 7.12126C22.4645 5.94969 22.4645 4.05019 21.2929 2.87862L21.1213 2.70705Z" fill="#ffffff" />
+                                                                                                </svg>
 
+
+                                                                                            </a>
                                                                                         </div>
 
-                                                                                        <div class="clearfix"></div>
-                                                                                        <div class="file-preview-status text-center text-success"></div>
-                                                                                        <div class="kv-fileinput-error"></div>
+
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="kv-upload-progress kv-hidden"></div>
-                                                                                <div class="clearfix"></div>
-
-                                                                                <button type="button" tabindex="500" title="Hủy upload" class="btn btn-default btn-secondary kv-hidden fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i> <span class="hidden-xs">Hủy</span></button>
-
-                                                                                <div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; <span class="hidden-xs">Duyệt …</span><input type="file" class="colorgb-file-input" multiple="multiple" id="1730088412288_78"></div>
                                                                             </div>
+                                                                            @endforeach
                                                                         </div>
+                                                                        @if (session()->has('message'))
+                                                                        <div class="alert alert-success">
+                                                                            {{ session('message') }}
+                                                                        </div>
+                                                                        @endif
+
+                                                                        @if (session()->has('error'))
+                                                                        <div class="alert alert-danger">
+                                                                            {{ session('error') }}
+                                                                        </div>
+                                                                        @endif
+
                                                                     </div>
+                                                                    <style>
+                                                                        .file-preview-frame {
+                                                                            display: flex;
+                                                                            flex-direction: column;
+                                                                            justify-content: space-between;
+                                                                            border: 1px solid #ddd;
+                                                                            border-radius: 8px;
+                                                                            overflow: hidden;
+                                                                        }
+
+                                                                        .pdf-preview {
+                                                                            border: none;
+                                                                        }
+
+                                                                        .file-preview-frame,
+                                                                        .file-preview-image,
+                                                                        .file-preview-other {
+                                                                            height: auto !important;
+                                                                        }
+
+                                                                    </style>
+
+
                                                                 </div>
 
                                                             </div>
@@ -1611,52 +1590,12 @@ loadingTask.promise.then(function(pdf) {
 
             </script>
         </body>
-        <style>
-            @keyframes loading-1 {
-                0% {
-                    -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                }
 
-                100% {
-                    @if ($a==2 || $a==3 || $a==4) -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
-                    /* Full 180 degrees */
-                    @elseif ($a==1) -webkit-transform: rotate(90deg);
-                    transform: rotate(90deg);
-                    /* 90 degrees for a=3 */
-                    @elseif ($a==0) -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    /* 0 degrees for a=2 */
-                    @endif
-                }
-            }
-
-            @keyframes loading-2 {
-                0% {
-                    -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    @if ($a==4) -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
-                    /* Full 180 degrees */
-                    @elseif ($a==3) -webkit-transform: rotate(90deg);
-                    transform: rotate(90deg);
-                    /* 90 degrees for a=3 */
-                    @elseif ($a==2) -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    /* 0 degrees for a=2 */
-                    @endif
-                }
-            }
-
-        </style>
         </html>
 
 
     </div>
 
+</div>
 </div>
 
