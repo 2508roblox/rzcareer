@@ -1123,7 +1123,7 @@
                                                                                                         <label class="control-label text-default" for="fileCv">
                                                                                                             Upload CV của bạn (vui lòng tải lên định dạng pdf, doc, docx)
                                                                                                         </label>
-                                                                                                        <input type="file" id="fileCv" accept=".pdf, .doc, .docx" class="form-control" wire:model="fileCv">
+                                                                                                        <input type="file" id="fileCv"   class="form-control" wire:model="fileCv">
                                                                                                         <p id="help-block-error" class="help-block help-block-error text-danger">
                                                                                                             @error('fileCv') {{ $message }} @enderror
                                                                                                         </p>

@@ -1241,64 +1241,7 @@
                         <script src="/assets_livewire/js/cropper.js"></script>
                         <script src="/assets_livewire/js/crop.js"></script>
                         <script src="/assets_livewire/v3/layout/main.js"></script>
-                        <script>
-                            var cjs = false;
-
-                            function f1(index) {
-
-                                $('.lds-ripple').show();
-                                $.ajax({
-                                    url: "/api/candidate-job-suggest?index=" + index
-                                    , success: function(result) {
-                                        var obj = JSON.parse(result);
-                                        if (obj.html) {
-                                            $(".candidate-job-suggest").append(obj.html);
-
-                                        } else {
-                                            $(".candidate-job-suggest").html('<div class="alert alert-warning"> <strong>Lưu ý!</strong> Bạn cần <a href="/candidate/profile"><u>hoàn thiện hồ sơ</u></a> để tìm kiếm việc làm phù hợp </div>');
-
-                                        }
-                                        $('.lds-ripple').hide();
-                                        cjs = obj.html ? false : true;
-                                        localStorage.setItem('candidate-job-suggest-index', obj.index);
-
-                                    }
-                                });
-
-
-                            }
-
-                            function f2(id) {
-                                $.ajax({
-                                    url: "/api/set-job-love?id=" + id
-                                    , success: function(result) {
-                                        var obj = JSON.parse(result);
-                                        $('a.icon-heart[data-id="' + id + '"]').html(obj.heart);
-                                        $('.ntv-profile-flexcenter-sc1 > a:nth-child(4) h4').html(obj.total);
-                                        colorgbJGrowl('bg-green', 'Thao tác thành công');
-                                    }
-                                , });
-
-                            }
-
-
-                            $(function() {
-
-                                f1(0);
-
-                                $(window).scroll(function() {
-                                    if (cjs) return false;
-                                    if ($(window).scrollTop() >= ($(document).height() - $(window).height()) - 50) {
-                                        cjs = true;
-                                        var index = localStorage.getItem('candidate-job-suggest-index');
-                                        f1(index);
-
-                                    }
-                                });
-
-                            })
-
-                        </script>
+                      
 
                         <!-- Detached sidebar -->
                         <div class="sidebar-detached hide">
@@ -1501,94 +1444,10 @@
             <script src="/assets_livewire/event/min.js?v=1727321539"></script>
             <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
 
-            <script>
-                $(function() {
-                    if (!getCookie('jobsgo-logged')) {
-                        $.ajax({
-                            url: "/api/logged?utm_source=&utm_medium="
-                            , success: function(result) {
-                                setCookie('jobsgo-logged', 1, 1);
-                            }
-                        });
-
-                    }
-                })
-
-            </script>
 
 
-            <script>
-                window.addEventListener('load', function() {
-                    $(function() {
 
-                        $('.btn-policy').click(function() {
-                            $.post("/api/policy", {
-                                    agreement: ($('#agreement').is(":checked") ? 1 : 0)
-                                    , save_cv: ($('#save_cv').is(":checked") ? 1 : 0)
-                                }
-                                , function(data, status) {
-                                    $('#policyModal').modal('hide');
-                                });
-                        });
 
-                        $('#policyModal').modal('show');
-
-                    })
-                });
-
-            </script>
-            <script>
-                const textareas = document.querySelectorAll('.myTextarea');
-
-                textareas.forEach(textarea => {
-                    const message = document.createElement('p');
-                    message.classList.add('message');
-                    message.classList.add('small');
-                    message.classList.add('text-danger');
-                    textarea.parentNode.insertBefore(message, textarea.nextSibling);
-
-                    textarea.addEventListener('input focus', function() {
-                        const minLength = 50;
-                        const currentLength = textarea.value.length;
-                        const messageElement = textarea.nextElementSibling;
-
-                        if (currentLength >= minLength) {
-                            messageElement.textContent = ``;
-                        } else {
-                            messageElement.textContent = `Cần tối thiểu ${minLength - currentLength} ký tự nữa`;
-                        }
-                    });
-                });
-
-            </script>
-
-            <script>
-                window.addEventListener('load', function() {
-                    $(function() {
-
-                        var url_string = window.location.href;
-                        var url = new URL(url_string);
-                        var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") : '';
-                        var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
-                        var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get("utm_campaign") : '';
-                        var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
-                        if (utmSource || utmMed || utmCampaign || utmTerm) {
-                            $('a').attr("href", function() {
-                                var currUrl = $(this).attr('href');
-                                if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
-                                    if (currUrl && currUrl.indexOf("?") == -1) {
-                                        urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
-                                    } else {
-                                        urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
-                                    }
-                                    return urlWithParam;
-                                }
-                            });
-                        }
-                    });
-                });
-
-            </script>
         </body>
 
         </html>

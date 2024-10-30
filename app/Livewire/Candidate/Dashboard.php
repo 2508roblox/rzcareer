@@ -71,7 +71,6 @@ class Dashboard extends Component
             })) {
                 $this->a += 1; // Increment a by 1
             }
-
             // Count the number of applied jobs
             $this->appliedJobsCount = PostActivity::where('user_id', $this->user->id)->count(); // Get count of applications
 
