@@ -18,7 +18,7 @@ class InvoiceResource extends Resource
     protected static ?string $model = Invoice::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Công ty & Công việc'; // Nếu cần thiết, thêm nhóm navigation
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ'; // Nếu cần thiết, thêm nhóm navigation
 
     public static function getPluralModelLabel(): string
     {

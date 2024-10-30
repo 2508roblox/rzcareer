@@ -81,13 +81,13 @@ class User extends Authenticatable implements FilamentUser, HasName
     {
         return $this->hasOne(Company::class);
     }
-    
+
     /**
      * Get the URL to the user's avatar.
      *
      * @return string
      */
-  
+
 
     /**
      * Get the attributes that should be cast.
@@ -115,6 +115,11 @@ class User extends Authenticatable implements FilamentUser, HasName
         // });
 
     }
+    public function getFilamentAvatarUrl(): ?string
+{
+    return asset('storage/'.$this->avatar_url);//replace with $this->photo
+}
+
     protected function casts(): array
     {
         return [

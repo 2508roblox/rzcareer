@@ -554,10 +554,30 @@ class JobPostResource extends Resource
                     ->sortable()
                     ->label('Lượt Chia Sẻ'),
 
-                Tables\Columns\TextColumn::make('status')
-                    ->numeric()
+                    Tables\Columns\SelectColumn::make('status')
+                    ->label('Trạng Thái')
                     ->sortable()
-                    ->label('Trạng Thái'),
+                    ->options([
+                        0 => 'Đang chờ xem xét',
+                        1 => 'Được chấp thuận',
+                        2 => 'Bị từ chối',
+                        3 => 'Đã đăng',
+                        4 => 'Đã đóng',
+                        5 => 'Đã hết hạn',
+                        6 => 'Đang xem xét',
+                        7 => 'Đang phỏng vấn',
+                        8 => 'Đã thuê',
+                        9 => 'Đã lưu trữ',
+                        10 => 'Đã hủy',
+                        11 => 'Đang tạm dừng',
+                        12 => 'Đã lấp đầy',
+                        13 => 'Nháp',
+                        14 => 'Đã mở lại',
+                    ])
+                    ->searchable() // Nếu muốn cho phép tìm kiếm
+                    ->extraAttributes(['style' => 'width: 250px;'])
+                    ->default(0) // Giá trị mặc định nếu cần
+                     ,// Thêm quy tắc kiểm tra khi cập nhật
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

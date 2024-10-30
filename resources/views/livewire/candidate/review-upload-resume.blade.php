@@ -276,10 +276,7 @@
                                                     color: #FF5722 !important;
                                                 }
                                             </style>
-                                            <script type="text/javascript"
-                                                src="/bolt/assets/js/plugins/sliders/ion_rangeslider.min.js"></script>
-                                            <script type="text/javascript"
-                                                src="/bolt/assets/js/plugins/ui/moment/moment_locales.min.js"></script>
+
 
 
 
@@ -1300,7 +1297,7 @@
                                                                         <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                             <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                 @if ($user && $user->avatar_url)
-                                                                                    <img 
+                                                                                    <img
                                                                                          src="{{ Storage::url($user->avatar_url) }}"
                                                                                          class="avatar img-responsive"
                                                                                          alt="Avatar của {{ $user->full_name }}">
@@ -2721,15 +2718,7 @@
                                                                 }
                                                             }
                                                         </style>
-                                                        <link
-                                                            href="/bolt/assets/js/plugins/bootstrap-fileinput-master/css/fileinput.css"
-                                                            rel="stylesheet" type="text/css">
-                                                        <script type="text/javascript"
-                                                            src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/fileinput.js">
-                                                        </script>
-                                                        <script type="text/javascript"
-                                                            src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/locales/vi.js">
-                                                        </script>
+
                                                         <script type="text/javascript">
                                                             $(document).ready(function() {
                                                                 $('[data-toggle="popover"]').popover();
@@ -3431,10 +3420,7 @@
                                                     margin: 0;
                                                 }
                                             </style>
-                                            <link rel="stylesheet" href="/css/cropper.css">
-                                            <link rel="stylesheet" href="/css/crop.css?v=2342081531001">
-                                            <script src="/js/cropper.js"></script>
-                                            <script src="/js/crop.js"></script>
+
 
                                             <script>
                                                 $(function() {
@@ -7396,10 +7382,7 @@
 
                                     })
                                 </script>
-                                <script src="/event/min.js?v=1727349985"></script>
-                                <script src="/assets/2878b065/yii.js"></script>
-                                <script src="/assets/2878b065/yii.validation.js"></script>
-                                <script src="/assets/2878b065/yii.activeForm.js"></script>
+                            
                                 <script>
                                     jQuery(function($) {
                                         jQuery('#w0').yiiActiveForm([{
