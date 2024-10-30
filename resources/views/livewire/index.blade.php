@@ -282,6 +282,27 @@
                                   data-src="{{ Storage::url($jobPost['company']['company_image_url']) }}" lazy>
                               </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              
                               <div class="flex-grow-1 ms-2">
                                 <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name']
                                   }}</h3>

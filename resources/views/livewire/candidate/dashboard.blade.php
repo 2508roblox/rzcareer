@@ -929,72 +929,7 @@
                                                                     </div>
                                                                 </div>
                                                             </article>
-                                                            <!-- Job Card 2 (copy the above and change content as needed) -->
-                                                            <article class="job-card">
-                                                                <div class="ntv-profile-flexcenter-job-item">
-                                                                    <div class="brows-job-list">
-                                                                        <div class="media">
-                                                                            <div class="media-left">
-                                                                                <a class="avatar-job" target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">
-                                                                                    <img style="width: 80px !important" src="http://localhost:8000/assets_livewire/img/default-company.svg" alt="VNPT-EPAY., JSC">
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="media-body">
-                                                                                <h5 class="mt-0"><a target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">Cộng Tác Viên Kinh Doanh - Mở Điểm QR</a></h5>
-                                                                                <p><span>VNPT-EPAY., JSC</span></p>
-                                                                                <ul>
-                                                                                    <li><i class="icofont-google-map"></i> Hà Nội</li>
-                                                                                    <li><i class="icofont-money"></i> 15 - 30 triệu VNĐ</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Job Card 3 (if needed) -->
-                                                            <article class="job-card">
-                                                                <div class="ntv-profile-flexcenter-job-item">
-                                                                    <div class="brows-job-list">
-                                                                        <div class="media">
-                                                                            <div class="media-left">
-                                                                                <a class="avatar-job" target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">
-                                                                                    <img style="width: 80px !important" src="http://localhost:8000/assets_livewire/img/default-company.svg" alt="VNPT-EPAY., JSC">
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="media-body">
-                                                                                <h5 class="mt-0"><a target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">Cộng Tác Viên Kinh Doanh - Mở Điểm QR</a></h5>
-                                                                                <p><span>VNPT-EPAY., JSC</span></p>
-                                                                                <ul>
-                                                                                    <li><i class="icofont-google-map"></i> Hà Nội</li>
-                                                                                    <li><i class="icofont-money"></i> 15 - 30 triệu VNĐ</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Job Card 4 (if needed) -->
-                                                            <article class="job-card">
-                                                                <div class="ntv-profile-flexcenter-job-item">
-                                                                    <div class="brows-job-list">
-                                                                        <div class="media">
-                                                                            <div class="media-left">
-                                                                                <a class="avatar-job" target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">
-                                                                                    <img style="width: 80px !important" src="http://localhost:8000/assets_livewire/img/default-company.svg" alt="VNPT-EPAY., JSC">
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="media-body">
-                                                                                <h5 class="mt-0"><a target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">Cộng Tác Viên Kinh Doanh - Mở Điểm QR</a></h5>
-                                                                                <p><span>VNPT-EPAY., JSC</span></p>
-                                                                                <ul>
-                                                                                    <li><i class="icofont-google-map"></i> Hà Nội</li>
-                                                                                    <li><i class="icofont-money"></i> 15 - 30 triệu VNĐ</li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </article>
+                                                          
                                                         </div>
                                                     </div>
                                                     <style>
@@ -1241,7 +1176,7 @@
                         <script src="/assets_livewire/js/cropper.js"></script>
                         <script src="/assets_livewire/js/crop.js"></script>
                         <script src="/assets_livewire/v3/layout/main.js"></script>
-                      
+
 
                         <!-- Detached sidebar -->
                         <div class="sidebar-detached hide">
