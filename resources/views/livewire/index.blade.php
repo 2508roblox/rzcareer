@@ -278,8 +278,8 @@
                             <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" class="d-flex teks-item text-dark">
                               <div class="flex-shrink-0 position-relative">
                                 <img class="lazy" width="80" height="80"
-                                  onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                  data-src="{{ Storage::url($jobPost['company']['company_image_url']) }}" lazy>
+                                data-src="{{ Storage::exists($jobPost['company']['company_image_url']) ? Storage::url($jobPost['company']['company_image_url']) : asset('assets_livewire/img/default-company.svg') }}" lazy>
+
                               </div>
 
 
@@ -302,7 +302,7 @@
 
 
 
-                              
+
                               <div class="flex-grow-1 ms-2">
                                 <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name']
                                   }}</h3>
