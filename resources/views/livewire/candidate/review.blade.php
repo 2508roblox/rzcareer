@@ -1299,7 +1299,7 @@
                                                                         <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                             <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                 @if ($user && $user->avatar_url)
-                                                                                    <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                                    <img 
                                                                                          src="{{ Storage::url($user->avatar_url) }}"
                                                                                          class="avatar img-responsive"
                                                                                          alt="Avatar của {{ $user->full_name }}">

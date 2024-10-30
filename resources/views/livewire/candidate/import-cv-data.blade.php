@@ -1182,7 +1182,7 @@
                                                                     <div class="card-body">
                                                                         <div class="info-basic">
                                                                             <div class="avatar">
-                                                                                <img class="img-circle" onerror="this.src='https://jobsgo.vn/bolt/assets/images/image.png'" id="cand-new-avatar-src" src="https://jobsgo.vn/bolt/assets/images/image.png" width="150px" height="150px" alt="Ảnh đại diện">
+                                                                                <img class="img-circle"  id="cand-new-avatar-src" src="https://jobsgo.vn/bolt/assets/images/image.png" width="150px" height="150px" alt="Ảnh đại diện">
                                                                             </div>
                                                                             <div class="info-name form-input">
                                                                                 <label>Họ và tên</label>

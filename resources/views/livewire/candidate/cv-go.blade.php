@@ -3476,7 +3476,7 @@
 
                                 }
                             </script>
-                            <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                      
                             <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                             <script>
                                 $(function() {
@@ -4028,7 +4028,7 @@
                             </script>
 
 
-                            <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                      
                             <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                             <script>
                                 $(function() {

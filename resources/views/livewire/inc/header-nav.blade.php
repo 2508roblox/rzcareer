@@ -145,7 +145,7 @@
                     <a href="/candidate/index" style=" padding-top: 12px; display: flex !important; align-items:center;"
                         class="dropdown-toggle" data-toggle="dropdown">
 
-                        <img loading="lazy" width="32" onerror="this.src='/bolt/assets/images/image.png'"
+                        <img loading="lazy" width="32" 
                             src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                             alt="web developer" class="img-rounded">
                         <span style="margin-left: 5px">

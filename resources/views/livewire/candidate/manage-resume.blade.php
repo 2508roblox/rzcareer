@@ -1024,7 +1024,7 @@ Add a counter to the multi-steps indicator
                                                                 <div class="text-center">
                                                                     <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                         <div id="imageDropAvatar" class="thumb thumb-slide">
-                                                                            <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                            <img 
                                                                                 src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                                                                                 class="avatar img-responsive" alt="web developer">
                                                                             <div class="caption">
@@ -2292,7 +2292,7 @@ Add a counter to the multi-steps indicator
                                                                                                                 <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                                                                     <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                                                         <a href="/candidate/pre-profile">
-                                                                                                                            <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                                                                            <img 
                                                                                                                                 src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                                                                                                                                 class="avatar img-responsive" alt="web developer">
                                                                                                                         </a>
@@ -4708,7 +4708,7 @@ Add a counter to the multi-steps indicator
 
                                             }
                                         </script>
-                                        <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                  
                                         <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                                         <script>
                                             $(function() {
@@ -5260,7 +5260,7 @@ Add a counter to the multi-steps indicator
                                         </script>
 
 
-                                        <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                  
                                         <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                                         <script>
                                             $(function() {

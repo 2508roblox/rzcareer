@@ -776,7 +776,7 @@
                                                 <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                     <div id="imageDropAvatar" class="thumb thumb-slide">
 
-                                                        <img onerror="this.src='/assets_livewire/bolt/assets/images/image.png'" src="{{ Storage::url($user->avatar_url) }}" class="avatar img-responsive" alt="web developer">
+                                                        <img  src="{{ Storage::url($user->avatar_url) }}" class="avatar img-responsive" alt="web developer">
 
 
 

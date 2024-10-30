@@ -156,7 +156,7 @@
 
                     <a href="candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
                         class="dropdown-toggle" data-toggle="dropdown">
-                        <img onerror="this.src='/assets_livewire/bolt/assets/images/image.png'"
+                        <img 
                             src="/assets_livewire/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                             class="avatar" alt="web developer">
                         @if (Auth::check())
