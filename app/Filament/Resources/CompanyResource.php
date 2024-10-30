@@ -174,46 +174,47 @@ class CompanyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('location_id')
+                Tables\Columns\TextColumn::make('id')
                     ->numeric()
                     ->sortable()
-                    ->label('Mã Địa Điểm'),
+                    ->label('ID'),
+                    // Tables\Columns\ImageColumn::make('company_image_url')
+                    // ->label('Hình Ảnh Công Ty'),
 
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable()
-                    ->label('Mã Người Dùng'),
 
                 Tables\Columns\TextColumn::make('company_name')
                     ->searchable()
                     ->label('Tên Công Ty'),
 
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable()
-                    ->label('Slug'),
 
-                Tables\Columns\ImageColumn::make('company_image_url')
-                    ->label('Hình Ảnh Công Ty'),
+
+
 
                 Tables\Columns\ImageColumn::make('company_image_public_id')
+                ->toggleable(isToggledHiddenByDefault: true)
                     ->label('ID Hình Ảnh Công Ty'),
 
                 Tables\Columns\ImageColumn::make('company_cover_image_url')
+                 ->toggleable(isToggledHiddenByDefault: true)
                     ->label('Hình Ảnh Bìa Công Ty'),
 
                 Tables\Columns\ImageColumn::make('company_cover_image_public_id')
+                 ->toggleable(isToggledHiddenByDefault: true)
                     ->label('ID Hình Ảnh Bìa Công Ty'),
 
                 Tables\Columns\TextColumn::make('facebook_url')
                     ->searchable()
+                     ->toggleable(isToggledHiddenByDefault: true)
                     ->label('URL Facebook'),
 
                 Tables\Columns\TextColumn::make('youtube_url')
                     ->searchable()
+                     ->toggleable(isToggledHiddenByDefault: true)
                     ->label('URL YouTube'),
 
                 Tables\Columns\TextColumn::make('linkedin_url')
                     ->searchable()
+                     ->toggleable(isToggledHiddenByDefault: true)
                     ->label('URL LinkedIn'),
 
                 Tables\Columns\TextColumn::make('company_email')

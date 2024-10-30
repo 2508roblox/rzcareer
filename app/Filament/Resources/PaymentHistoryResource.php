@@ -18,6 +18,12 @@ class PaymentHistoryResource extends Resource
     protected static ?string $model = PaymentHistory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Công ty & Công việc'; // Nếu cần thiết, thêm nhóm navigation
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Lịch sử Thanh toán'; // Trả về tên số nhiều cho mô hình PaymentHistory
+    }
 
     public static function form(Form $form): Form
     {
