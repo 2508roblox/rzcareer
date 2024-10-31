@@ -1,6 +1,6 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
     <!DOCTYPE html>
     <html lang="vi-VN">
 
@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="csrf-param" content="_csrf-jobsgo-candidate">
         <meta name="csrf-token" content="m6GRiXQWcMY8qu3uDTSc9bDmAMOWGrPBm51IfnaZQi-olObMFU44nEXTgah3VeWM_LdtgtEj5Y3xr38nAagYdw==">
-        <title>Đăng nhập hệ thống - Dành cho người tìm việc - JobsGO</title>
+        <title>Đăng nhập hệ thống - Dành cho người tìm việc - RZCareer</title>
 
         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -157,13 +157,13 @@
                     </style>
 
                     <form wire:submit.prevent="register" class="login-form">
-                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
+                        <a title="RZCareer - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
                         justify-content: center;
                         display: flex;
                     ">
                      <img src="/assets_livewire/logo-dark.svg" alt="">
-                        
-                                                    
+
+
                                             </a>
 
                         <div class="panel panel-body">
@@ -174,7 +174,7 @@
                                 @error('full_name') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
-                        
+
 
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -248,7 +248,7 @@
             <!-- /page content -->
             <!-- Footer -->
             <div class="footer text-muted hide">
-                &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
             </div>
             <!-- /footer -->

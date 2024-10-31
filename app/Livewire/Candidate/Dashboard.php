@@ -5,6 +5,7 @@ namespace App\Livewire\Candidate;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PostActivity; // Import the PostActivity model
+use App\Models\Resume;
 use App\Models\SavedJobPost; // Import the SavedJobPost model
 
 class Dashboard extends Component
@@ -14,6 +15,7 @@ class Dashboard extends Component
     public $a; // Define a public property for the status variable
     public $appliedJobsCount; // Property to hold the count of applied jobs
     public $savedJobsCount; // Property to hold the count of saved jobs
+    public $secondaryResumes; // Property to hold the count of saved jobs
 
     public function mount()
     {
@@ -25,6 +27,7 @@ class Dashboard extends Component
 
         // Load resumes and their relationships
         if ($this->user) {
+
             $this->resumes = $this->user->resumes()->with([
                 'educationDetails',
                 'certificates',
@@ -33,6 +36,13 @@ class Dashboard extends Component
                 'languageSkills',
                 'seekerProfile',
             ])->get();
+
+
+
+
+             $this->secondaryResumes = Resume::where('user_id', $this->user->id)
+            ->where('type', 'secondary')
+            ->get();
 
             // Check advancedSkills
             if ($this->resumes->contains(function ($resume) {
@@ -61,12 +71,32 @@ class Dashboard extends Component
             })) {
                 $this->a += 1; // Increment a by 1
             }
-
             // Count the number of applied jobs
             $this->appliedJobsCount = PostActivity::where('user_id', $this->user->id)->count(); // Get count of applications
-            
+
             // Count the number of saved jobs
             $this->savedJobsCount = SavedJobPost::where('user_id', $this->user->id)->count(); // Get count of saved jobs
+        }
+    }
+    public function deleteResume($resumeId)
+    {
+        // Find the resume by ID
+        $resume = Resume::find($resumeId);
+
+        if ($resume && $resume->user_id === $this->user->id) {
+            // Delete the resume
+            $resume->delete();
+
+            // Optionally, you can add a success message or refresh the resumes
+            session()->flash('message', 'Resume deleted successfully.');
+
+            // Refresh the resumes list
+            $this->secondaryResumes = Resume::where('user_id', $this->user->id)
+                                             ->where('type', 'secondary')
+                                             ->get();
+        } else {
+            // Optionally, you can add an error message if the resume was not found
+            session()->flash('error', 'Resume not found or you do not have permission to delete it.');
         }
     }
 

@@ -15,7 +15,8 @@ class PurchasedService extends Model
         'status',
         'quantity',
         'used_quantity',
-        'purchase_date'
+        'purchase_date',
+        'expiration_date'
     ];
 
     // Quan hệ với bảng User

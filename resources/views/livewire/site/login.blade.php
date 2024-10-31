@@ -2,7 +2,7 @@
     <!-- <div>{{Auth::logout()}}</div> -->
     <!-- <div>{{Auth::user()}}</div> -->
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
     <!DOCTYPE html>
     <html lang="vi-VN">
 
@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="csrf-param" content="_csrf-jobsgo-candidate">
         <meta name="csrf-token" content="m6GRiXQWcMY8qu3uDTSc9bDmAMOWGrPBm51IfnaZQi-olObMFU44nEXTgah3VeWM_LdtgtEj5Y3xr38nAagYdw==">
-        <title>Đăng nhập hệ thống - Dành cho người tìm việc - JobsGO</title>
+        <title>Đăng nhập hệ thống - Dành cho người tìm việc - RZCareer</title>
 
         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -159,24 +159,24 @@
                     </style>
 
                     <form wire:submit.prevent="login" class="login-form">
-                        <a title="JobsGO - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
+                        <a title="RZCareer - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
     justify-content: center;
     display: flex;
 ">
  <img src="/assets_livewire/logo-dark.svg" alt="">
-    
-                                
+
+
                         </a>
 
                         <div class="panel panel-body">
                             <div class="content-divider text-uppercase text-muted form-group"><span>Đăng Nhập Với</span></div>
 
                             <div class="row mb-3">
-                              
+
                                 <div class="col-xs-3">
                                     <a href="{{ route('google.login', ['id' => 1]) }}" class="btn bg-pink-300 btn-google btn-block btn-flat btn-icon btn-rounded"><i class="icon-google"></i> Google</a>
                                 </div>
-                               
+
                             </div>
 
                             <div class="content-divider text-uppercase text-muted form-group"><span>Hoặc</span></div>
@@ -266,7 +266,7 @@
             <!-- /page content -->
             <!-- Footer -->
             <div class="footer text-muted hide">
-                &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
             </div>
             <!-- /footer -->

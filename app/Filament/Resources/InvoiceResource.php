@@ -18,7 +18,12 @@ class InvoiceResource extends Resource
     protected static ?string $model = Invoice::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Quản lý dịch vụ'; // Nếu cần thiết, thêm nhóm navigation
 
+    public static function getPluralModelLabel(): string
+    {
+        return 'Hóa đơn'; // Trả về tên số nhiều cho mô hình Invoice
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -30,7 +35,9 @@ class InvoiceResource extends Resource
                             ->required(),
                         Forms\Components\Select::make('user_id')
                             ->relationship('user', 'full_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                            ->label('Người dùng') // Tiêu đề cột bằng tiếng Việt
+
+                            ->label(
+                                'Người dùng') // Tiêu đề cột bằng tiếng Việt
                             ->required(),
                     ]),
                 Forms\Components\Section::make('Chi tiết thanh toán') // Tiêu đề section khác
@@ -50,7 +57,7 @@ class InvoiceResource extends Resource
                     ]),
             ]);
     }
-    
+
 
     public static function table(Table $table): Table
     {
@@ -71,7 +78,7 @@ class InvoiceResource extends Resource
                 ->label('Ngày cập nhật') // Tiêu đề bằng tiếng Việt
                 ->toggleable(isToggledHiddenByDefault: true), // Cho phép ẩn/hiện cột này
         ])
-        
+
             ->filters([
                 //
             ])

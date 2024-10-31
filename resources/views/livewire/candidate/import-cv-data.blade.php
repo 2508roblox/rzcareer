@@ -4,7 +4,7 @@
             <div>
                 <div>
 
-                    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+                    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
                     <!DOCTYPE html>
                     <html lang="vi-VN">
 
@@ -22,7 +22,7 @@
                         <meta name="robots" content="noindex, nofollow">
                         <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                         <meta name="csrf-token" content="3aIMpL9gEVG9znrqqTw_khQIFAWNLtg9EAkxKRWLTjrul3vh3jhZC8S3FqzTXUbrWFl5RMoXjnF6OwZwYroUYg==">
-                      
+
                         <title>Nhập dữ liệu từ CV của bạn</title>
                         <link href="/assets/141550af/css/bootstrap-datepicker3.min.css" rel="stylesheet">
                         <link href="/assets/141550af/css/datepicker-kv.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                                 "language": "vi"
                             };
                         </script>
-                     
+
                         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
                         <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
                         <link href="/assets_livewire/bolt/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -474,7 +474,7 @@
                                     <nav>
                                         @livewire('inc.breadcrumb')
                                     </nav>
-                                 
+
                                     <style>
                                         nav li {
                                             text-align: center;
@@ -494,9 +494,9 @@
                                         }
 
                                         /* --------------------------------
-  
+
       Basic Style
-  
+
       -------------------------------- */
                                         .cd-breadcrumb a {
                                             font-weight: bold;
@@ -647,9 +647,9 @@
                                         }
 
                                         /* --------------------------------
-  
+
       Triangle breadcrumb
-  
+
       -------------------------------- */
                                         @media only screen and (min-width: 168px) {
                                             .cd-breadcrumb.triangle {
@@ -768,9 +768,9 @@
                                         }
 
                                         /* --------------------------------
-  
+
       Custom icons hover effects - breadcrumb and multi-steps
-  
+
       -------------------------------- */
                                         @media only screen and (min-width: 168px) {
 
@@ -805,9 +805,9 @@
                                         }
 
                                         /* --------------------------------
-  
+
       Multi steps indicator
-  
+
       -------------------------------- */
                                         @media only screen and (min-width: 168px) {
                                             .cd-multi-steps {
@@ -967,9 +967,9 @@
                                         }
 
                                         /* --------------------------------
-  
+
       Add a counter to the multi-steps indicator
-  
+
       -------------------------------- */
                                         .cd-multi-steps.count li {
                                             counter-increment: steps;
@@ -1093,75 +1093,62 @@
                                             <!-- Tab content -->
                                             <div class="tab-content">
                                                 <div class="tab-pane fade in active" id="profile">
-
                                                     <!-- Cards layout -->
                                                     <div class="panel panel-white">
 
-                                                        <div class="panel-body">
+                                                        <div class="panel-body" id="panel-upload-cv">
+                                                            <div class="overlay"></div>
                                                             <!-- All contents should be shown here -->
                                                             <div class="panel-content">
                                                                 <div class="container-fluid">
                                                                     <div class="panel-flat">
                                                                         <div class="panel-heading">
-                                                                            <h4 class="text-center">Tải file CV có sẵn của bạn để tiết kiệm thời gian nhập lại thông tin.</h4>
+                                                                            <div class="content clearfix text-center">
+                                                                                <img id="loadingImage" src="/media/img/2024/candidate/import-data.svg" alt="">
+                                                                                <h5 class="loading-text text-white">Đang phân tích...</h5>
+                                                                                <h4 class="title">Tải file CV có sẵn</h4>
+                                                                                <p class="text-center" style="color: #716e6e">Tiết kiệm thời gian nhập lại thông tin!</p>
+                                                                            </div>
                                                                         </div>
 
                                                                         <div class="panel-body-bk">
-
                                                                             <div class="steps-basic wizard clearfix" role="application" id="steps-uid-0">
-
-                                                                                <div class="steps clearfix">
-                                                                                    <ul role="tablist">
-                                                                                        <li role="tab" class="first current" aria-disabled="false" aria-selected="true"><a id="steps-uid-0-t-0" href="javascript:void(0)"><span class="number">1</span><span class="hidden-xs">Upload</span> CV </a>
-                                                                                        </li>
-                                                                                        <li role="tab" class="disabled st2" aria-disabled="true"><a id="steps-uid-0-t-1" href="javascript:void(0)"><span class="number">2</span> Hoàn Thiện <span class="hidden-xs">Hồ Sơ</span></a></li>
-
-                                                                                    </ul>
-                                                                                </div>
-
                                                                                 <div class="content clearfix">
                                                                                     <div class="row">
-                                                                                        <div class="col-sm-6 col-sm-offset-3">
+                                                                                        <div class="col-sm-12">
                                                                                             <!-- Step 1 -->
-                                                                                            <fieldset id="steps-uid-0-p-0" role="tabpanel" aria-labelledby="steps-uid-0-h-0" class="body current" aria-hidden="true">
-                                                                                                <div class="form-group">
-                                                                                                    <label class="control-label" for="fileCv">Upload CV của bạn (vui lòng tải lên định dạng pdf, doc, docx)</label>
-                                                                                                    <input type="file" id="fileCv" accept=".pdf, .doc, .docx" class="form-control" name="fileCv">
-                                                                                                    <script>
-                                                                                                        $(document).ready(function() {
-                                                                                                            $('#fileCv').on('change', function() {
-                                                                                                                var allowedExtensions = [".pdf", ".doc", ".docx"];
-                                                                                                                var fileName = $(this).val();
+                                                                                            <form wire:submit.prevent="uploadCv" enctype="multipart/form-data">
+                                                                                                <fieldset id="steps-uid-0-p-0" role="tabpanel" class="body current" aria-hidden="true">
+                                                                                                    <div class="form-group">
+                                                                                                        <label class="control-label text-default" for="fileCv">
+                                                                                                            Upload CV của bạn (vui lòng tải lên định dạng pdf, doc, docx)
+                                                                                                        </label>
+                                                                                                        <input type="file" id="fileCv"   class="form-control" wire:model="fileCv">
+                                                                                                        <p id="help-block-error" class="help-block help-block-error text-danger">
+                                                                                                            @error('fileCv') {{ $message }} @enderror
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="alert alert-warning alert-dismissible fade in alert-suggest" role="alert">
+                                                                                                        <i class="fa fa-lightbulb-o"></i>
+                                                                                                        <span style="color: #333">
+                                                                                                            <strong>Gợi ý:</strong> Sau khi tải CV lên, bạn có thể chuyển thông tin từ CV cũ sang các mẫu CV mới chuyên nghiệp và hấp dẫn trên RZCareer
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                    <div class="form-group">
+                                                                                                        <div class="text-center mt-20">
+                                                                                                            <button type="submit" class="btn btn-primary btn-ladda" data-style="zoom-out">
+                                                                                                                <span class="ladda-label">Tiếp tục</span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                            </form>
 
-                                                                                                                if (fileName) {
-                                                                                                                    var fileExtension = fileName.split('.').pop().toLowerCase();
-
-                                                                                                                    if ($.inArray("." + fileExtension, allowedExtensions) == -1) {
-                                                                                                                        $('#help-block-error').text("Vui lòng tải lên file với định dạng .pdf, .doc, .docx");
-                                                                                                                        // Clear the input field
-                                                                                                                        $(this).val('');
-                                                                                                                    } else {
-                                                                                                                        $('#help-block-error').text("");
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            });
-                                                                                                        });
-                                                                                                    </script>
-                                                                                                    <p id="help-block-error" class="help-block help-block-error text-danger"></p>
-                                                                                                </div>
-
-                                                                                                <div class="form-group">
-                                                                                                    <div class="text-center mt-20"><button type="submit" id="submitUploadCvBtn" class="btn btn-success  btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-arrow-right16 position-left"></i> <span class="ladda-label text-uppercase">Tiếp tục</span></button> </div>
-                                                                                                </div>
-                                                                                            </fieldset>
                                                                                             <!-- End Step 1 -->
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="">
-                                                                            <p class="text-center text-italic">Gợi ý : Sau khi tải CV lên, bạn có thể chuyển thông tin từ CV cũ sang các mẫu CV mới chuyên nghiệp và hấp dẫn trên JobsGO.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1173,193 +1160,130 @@
                                                     <div class="info-candidate-change">
                                                         <!-- Step 2 -->
                                                         <fieldset id="steps-uid-0-p-1" role="tabpanel" aria-labelledby="steps-uid-0-h-1" class="body current" aria-hidden="false">
+                                                            <div class="info-cv-name">
+                                                                <img src="/media/img/2024/candidate/import-data.svg" width="60" alt="">
+                                                                <span id="cv-file-name" style="font-weight: 600; font-size: 16px"></span>
+                                                            </div>
                                                             <form id="w0" action="/candidate/import-cv-data" method="post">
-                                                                <input type="hidden" name="_csrf-jobsgo-candidate" value="3aIMpL9gEVG9znrqqTw_khQIFAWNLtg9EAkxKRWLTjrul3vh3jhZC8S3FqzTXUbrWFl5RMoXjnF6OwZwYroUYg==">
-                                                                <div class="hide">
-                                                                    <div class="form-group field-xcrawlcandidateformparsecv-avatar">
+                                    <input type="hidden" name="_csrf-jobsgo-candidate" value="JgM5I81sEDmYaYTFx9tp5OHDdWNmM3XLOPL6CVV8QGhcTUgT9DtEVNsv6YaTkwSgsbU7Mkt2TZ5AuM9gBDd0WA==">                        <div class="hide">
+                                                                <div class="form-group field-xcrawlcandidateformparsecv-avatar">
 
-                                                                        <input type="hidden" id="xcrawlcandidateformparsecv-avatar" class="form-control" name="XCrawlCandidateFormParseCv[avatar]">
+                                    <input type="hidden" id="xcrawlcandidateformparsecv-avatar" class="form-control" name="XCrawlCandidateFormParseCv[avatar]">
 
-                                                                        <p class="help-block help-block-error"></p>
-                                                                    </div>
-                                                                    <div class="form-group field-xcrawlcandidateformparsecv-linkedin">
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                            <div class="form-group field-xcrawlcandidateformparsecv-linkedin">
 
-                                                                        <input type="hidden" id="xcrawlcandidateformparsecv-linkedin" class="form-control" name="XCrawlCandidateFormParseCv[linkedin]">
+                                    <input type="hidden" id="xcrawlcandidateformparsecv-linkedin" class="form-control" name="XCrawlCandidateFormParseCv[linkedin]">
 
-                                                                        <p class="help-block help-block-error"></p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="card-box-info info-candidate">
-                                                                    <div class="card info-old">
-                                                                        <div class="card-body">
-                                                                            <div class="info-basic">
-                                                                                <div class="avatar">
-                                                                                    <img class="img-circle" onerror="this.src='/assets_livewire/bolt/assets/images/image.png'" id="cand-old-avatar-src" src="" width="150px" height="150px" alt="Ảnh đại diện">
-                                                                                </div>
-                                                                                <div class="info-head">
-                                                                                    <div class="info-name form-input">
-                                                                                        <label>Họ và tên</label>
-                                                                                        <input type="text" class="form-control" readonly value="web developer">
-                                                                                    </div>
-                                                                                    <div class="info-birthday form-input">
-                                                                                        <label>Ngày sinh</label>
-                                                                                        <input type="text" class="form-control" readonly value="1975">
-                                                                                    </div>
-                                                                                    <div class="job_position form-input">
-                                                                                        <label>Vị trí / Chức vụ</label>
-                                                                                        <input type="text" class="form-control" readonly value="">
-                                                                                    </div>
-                                                                                </div>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                        </div>
+                                                            <div class="card-box">
+                                                                <div class="card info-new">
+                                                                    <div class="card-body">
+                                                                        <div class="info-basic">
+                                                                            <div class="avatar">
+                                                                                <img class="img-circle"  id="cand-new-avatar-src" src="https://jobsgo.vn/bolt/assets/images/image.png" width="150px" height="150px" alt="Ảnh đại diện">
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="card-body">
-                                                                            <h5 class="title-info-bk">Thông tin cơ bản</h5>
-                                                                            <div class="info-email form-input">
-                                                                                <label>Email</label>
-                                                                                <input type="text" class="form-control" readonly value="2509roblox@gmail.com">
-                                                                            </div>
-                                                                            <div class="info-phone form-input">
-                                                                                <label>Số điện thoại</label>
-                                                                                <input type="text" class="form-control" readonly value="">
-                                                                            </div>
-                                                                            <div class="info-address form-input">
-                                                                                <label>Địa chỉ</label>
-                                                                                <input type="text" class="form-control" readonly value="123">
-                                                                            </div>
-                                                                            <div class="short_bio form-input">
-                                                                                <label>Giới thiệu bản thân</label>
-                                                                                <textarea class="form-control" readonly></textarea>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="radio-option">
-                                                                            <input type="radio" name="radio-info-candidate" value="old-info" id="radio-info-old" data-url="old-info">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="info-tranfer">
-                                                                        <i class="fa fa-exchange"></i>
-                                                                    </div>
-                                                                    <div class="card info-new">
-                                                                        <div class="card-body">
-                                                                            <div class="info-basic">
-                                                                                <div class="avatar">
-                                                                                    <img class="img-circle" onerror="this.src='/assets_livewire/bolt/assets/images/image.png'" id="cand-new-avatar-src" src="" width="150px" height="150px" alt="Ảnh đại diện">
-                                                                                </div>
-                                                                                <div class="info-name form-input">
-                                                                                    <label>Họ và tên</label>
-                                                                                    <div class="form-group field-xcrawlcandidateformparsecv-name">
+                                                                            <div class="info-name form-input">
+                                                                                <label>Họ và tên</label>
+                                                                                <div class="form-group field-xcrawlcandidateformparsecv-name">
 
-                                                                                        <input type="text" id="xcrawlcandidateformparsecv-name" class="form-control" name="XCrawlCandidateFormParseCv[name]">
+                                    <input type="text" id="xcrawlcandidateformparsecv-name" class="form-control" name="XCrawlCandidateFormParseCv[name]">
 
-                                                                                        <p class="help-block help-block-error"></p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="info-birthday form-input">
-                                                                                    <label>Ngày sinh</label>
-                                                                                    <div class="form-group field-xcrawlcandidateformparsecv-date_of_birth">
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
+                                                                            <div class="info-birthday form-input">
+                                                                                <label>Ngày sinh</label>
+                                                                                <div class="form-group field-xcrawlcandidateformparsecv-date_of_birth">
 
-                                                                                        <input type="text" id="xcrawlcandidateformparsecv-date_of_birth" class="form-control krajee-datepicker" name="XCrawlCandidateFormParseCv[date_of_birth]" data-datepicker-source="xcrawlcandidateformparsecv-date_of_birth" data-datepicker-type="1" data-krajee-kvDatepicker="kvDatepicker_aaa474cd">
+                                    <input type="text" id="xcrawlcandidateformparsecv-date_of_birth" class="form-control krajee-datepicker" name="XCrawlCandidateFormParseCv[date_of_birth]" data-datepicker-source="xcrawlcandidateformparsecv-date_of_birth" data-datepicker-type="1" data-krajee-kvdatepicker="kvDatepicker_aaa474cd">
 
-                                                                                        <p class="help-block help-block-error"></p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="job_position form-input">
-                                                                                    <label>Vị trí / Chức vụ</label>
-                                                                                    <div class="form-group field-xcrawlcandidateformparsecv-job_position_id">
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
+                                                                            <div class="job_position form-input">
+                                                                                <label>Vị trí / Chức vụ</label>
+                                                                                <div class="form-group field-xcrawlcandidateformparsecv-job_position_id">
 
-                                                                                        <select id="xcrawlcandidateformparsecv-job_position_id" class="form-control" name="XCrawlCandidateFormParseCv[job_position_id]" value="">
-                                                                                            <option value="">Chọn vị trí / chức vụ</option>
-                                                                                            <option value="1">Thực Tập Sinh</option>
-                                                                                            <option value="2">Nhân Viên/Chuyên Viên</option>
-                                                                                            <option value="3">Trưởng Nhóm/Trưởng Phòng</option>
-                                                                                            <option value="4">Giám Đốc Và Cấp Cao Hơn</option>
-                                                                                        </select>
+                                    <select id="xcrawlcandidateformparsecv-job_position_id" class="form-control select2-hidden-accessible" name="XCrawlCandidateFormParseCv[job_position_id]" value="Thực Tập Sinh" tabindex="-1" aria-hidden="true">
+                                    <option value="">Chọn vị trí / chức vụ</option>
+                                    <option value="1">Thực Tập Sinh</option>
+                                    <option value="2">Nhân Viên/Chuyên Viên</option>
+                                    <option value="3">Trưởng Nhóm/Trưởng Phòng</option>
+                                    <option value="4">Giám Đốc Và Cấp Cao Hơn</option>
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-xcrawlcandidateformparsecv-job_position_id-container"><span class="select2-selection__rendered" id="select2-xcrawlcandidateformparsecv-job_position_id-container" title="Chọn vị trí / chức vụ">Chọn vị trí / chức vụ</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
 
-                                                                                        <p class="help-block help-block-error"></p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="card-body">
-                                                                            <h5 class="title-info-bk">Thông tin cơ bản</h5>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
                                                                             <div class="info-email form-input">
                                                                                 <label>Email</label>
                                                                                 <div class="form-group field-xcrawlcandidateformparsecv-email">
 
-                                                                                    <input type="text" id="xcrawlcandidateformparsecv-email" class="form-control" name="XCrawlCandidateFormParseCv[email]">
+                                    <input type="text" id="xcrawlcandidateformparsecv-email" class="form-control" name="XCrawlCandidateFormParseCv[email]">
 
-                                                                                    <p class="help-block help-block-error"></p>
-                                                                                </div>
-                                                                            </div>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
                                                                             <div class="info-phone form-input">
                                                                                 <label>Số điện thoại</label>
                                                                                 <div class="form-group field-xcrawlcandidateformparsecv-tel">
 
-                                                                                    <input type="text" id="xcrawlcandidateformparsecv-tel" class="form-control" name="XCrawlCandidateFormParseCv[tel]" maxlength="10" minlength="10">
+                                    <input type="text" id="xcrawlcandidateformparsecv-tel" class="form-control" name="XCrawlCandidateFormParseCv[tel]" maxlength="10" minlength="10">
 
-                                                                                    <p class="help-block help-block-error"></p>
-                                                                                </div>
-                                                                            </div>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
                                                                             <div class="info-address form-input">
                                                                                 <label>Địa chỉ</label>
                                                                                 <div class="form-group field-xcrawlcandidateformparsecv-current_address">
 
-                                                                                    <input type="text" id="xcrawlcandidateformparsecv-current_address" class="form-control" name="XCrawlCandidateFormParseCv[current_address]">
+                                    <input type="text" id="xcrawlcandidateformparsecv-current_address" class="form-control" name="XCrawlCandidateFormParseCv[current_address]">
 
-                                                                                    <p class="help-block help-block-error"></p>
-                                                                                </div>
-                                                                            </div>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
                                                                             <div class="short-bio form-input">
                                                                                 <label>Giới thiệu bản thân</label>
                                                                                 <div class="form-group field-xcrawlcandidateformparsecv-short_bio">
 
-                                                                                    <textarea id="xcrawlcandidateformparsecv-short_bio" class="form-control" name="XCrawlCandidateFormParseCv[short_bio]"></textarea>
+                                    <textarea id="xcrawlcandidateformparsecv-short_bio" class="form-control" name="XCrawlCandidateFormParseCv[short_bio]"></textarea>
 
-                                                                                    <p class="help-block help-block-error"></p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="radio-option">
-                                                                            <input type="radio" name="radio-info-candidate" value="new-info-candidate" id="radio-info-candidate" data-url="old-info-candidate" checked>
+                                    <p class="help-block help-block-error"></p>
+                                    </div>                                        </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card-box card-box-education">
-                                                                    <div class="box-jc box-ce box-1">
-                                                                        <div class="clearfix">
-                                                                            <div class="modal-title text-uppercase pull-left text-blue-800">Quá trình học tập <span style="color: red !important;">*</span></div>
+                                                            </div>
+                                                            <div class="card-box card-box-job_history">
+                                                                <div class="tab-content-bk">
+                                                                    <div class="tab-pane show active">
+                                                                        <div class="box-jc box-cj box-1">
+                                                                            <div class="clearfix">
+                                                                                <div class="pull-left">
+                                                                                    <div class="modal-title text-uppercase text-default">Kinh nghiệm làm việc
+                                                                                        <span style="color: red !important;">*</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="box-timeline">
+                                                                                <div class="timeline timeline-left mt-20" id="job_history">
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="box-timeline">
-                                                                            <div class="timeline timeline-left mt-20" id="edu_history">
+                                                                        <div class="box-jc box-ce box-1">
+                                                                            <div class="clearfix">
+                                                                                <div class="modal-title text-uppercase pull-left text-default">Quá trình học tập <span style="color: red !important;">*</span></div>
+                                                                            </div>
+                                                                            <div class="box-timeline">
+                                                                                <div class="timeline timeline-left mt-20" id="edu_history">
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="card-box card-box-job_history">
-                                                                    <div class="tab-content-bk">
-                                                                        <div class="tab-pane show active">
-                                                                            <div class="box-jc box-cj box-1">
-                                                                                <div class="clearfix">
-                                                                                    <div class="pull-left">
-                                                                                        <div class="modal-title text-uppercase text-blue-800">Kinh nghiệm làm việc
-                                                                                            <span style="color: red !important;">*</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="box-timeline">
-                                                                                    <div class="timeline timeline-left mt-20" id="job_history">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end timeline content-->
-                                                                    </div> <!-- end tab-content -->
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="text-center mt-20"><button type="submit" id="sendPersonalInfoBtn" class="btn btn-primary  btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out"><i class="icon-arrow-right16 position-left"></i> <span class="ladda-label text-uppercase">Hoàn Thành</span></button> </div>
-                                                                </div>
+                                                                    <!-- end timeline content-->
+                                                                </div> <!-- end tab-content -->
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="text-center mt-20"><button type="submit" id="sendPersonalInfoBtn" class="btn btn-primary  btn-ladda btn-ladda-spinner btn-ladda-progress w-100" data-style="zoom-out"><span class="ladda-label text-uppercase">Cập nhật hồ sơ</span><span class="ladda-spinner"></span><span class="ladda-spinner"></span></button>                            </div>
+                                                            </div>
 
-                                                            </form>
-                                                        </fieldset>
+                                                            </form>                    </fieldset>
                                                         <!-- End step 2 -->
                                                     </div>
                                                 </div>
@@ -1370,7 +1294,7 @@
                                     <script type="text/javascript" src="https://s.cdpn.io/53148/requestAnimationFrame.js"></script>
                                     <div id="loading-parse" class="fancybox-container fancybox-show-toolbar fancybox-show-infobar fancybox-show-nav fancybox-show-caption fancybox-is-open fancybox-can-drag" style="display: none;">
                                         <canvas id="loading-animation" width="200" height="200"></canvas>
-                                        <p id="analytical_text">JobsGO AI đang phân tích CV của bạn</p>
+                                        <p id="analytical_text">RZCareer AI đang phân tích CV của bạn</p>
                                         <div class="fancybox-bg"></div>
                                     </div>
                                     <style>
@@ -1438,7 +1362,7 @@
                                                 vx2, vy2;
                                             point.x = Math.random() * boundaryX;
                                             point.y = Math.random() * boundaryY;
-                                            // random vx 
+                                            // random vx
                                             point.vx = (Math.floor(Math.random()) * 2 - 1) * Math.random();
                                             vx2 = Math.pow(point.vx, 2);
                                             // vy^2 = velocity^2 - vx^2
@@ -1964,7 +1888,7 @@
                             <!-- Footer -->
                             <div class="footer text-muted hidden-xs">
                                 <div class="mt-30">
-                                    &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                                    &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                                 </div>
 
@@ -2029,7 +1953,7 @@
                     }
                 }
             });
-  
+
         },5000);*/
 
                             $(function() {
@@ -2231,7 +2155,7 @@
                             })
                         </script>
                         <!-- Modal -->
-                
+
 
                         <script>
                             window.addEventListener('load', function() {

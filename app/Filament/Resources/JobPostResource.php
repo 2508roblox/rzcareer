@@ -12,6 +12,7 @@ use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Forms\Form;
 use App\Models\CommonCity;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use App\Models\CommonCareer;
@@ -427,10 +428,14 @@ class JobPostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('career_id')
+                Tables\Columns\TextColumn::make('id')
                     ->numeric()
                     ->sortable()
-                    ->label('Mã Nghề'),
+                    ->label('ID'),
+                Tables\Columns\TextColumn::make('career.name')
+                    ->numeric()
+                    ->sortable()
+                    ->label('Ngành nghề'),
 
                 Tables\Columns\TextColumn::make('company_id')
                     ->numeric()
@@ -439,11 +444,13 @@ class JobPostResource extends Resource
 
                 Tables\Columns\TextColumn::make('location_id')
                     ->numeric()
+                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable()
                     ->label('Mã Địa Điểm'),
 
                 Tables\Columns\TextColumn::make('user_id')
                     ->numeric()
+                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable()
                     ->label('Mã Người Dùng'),
 
@@ -452,6 +459,7 @@ class JobPostResource extends Resource
                     ->label('Tên Công Việc'),
 
                 Tables\Columns\TextColumn::make('slug')
+                ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable()
                     ->label('Slug'),
 
@@ -473,7 +481,7 @@ class JobPostResource extends Resource
                         0 => 'Không',
                         1 => 'Nam',
                         2 => 'Nữ',
-                        default => 'Không xác định',
+                        default => 'Không yêu cầu',
                     }),
 
                 Tables\Columns\TextColumn::make('position')
@@ -509,17 +517,20 @@ class JobPostResource extends Resource
                 Tables\Columns\TextColumn::make('salary_type')
                     ->label('Loại Lương'),
 
-                Tables\Columns\TextColumn::make('is_hot')
-                    ->numeric()
-                    ->sortable()
-                    ->label('Nổi Bật')
-                    ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
 
-                Tables\Columns\TextColumn::make('is_urgent')
-                    ->numeric()
-                    ->sortable()
-                    ->label('Khẩn Cấp')
-                    ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
+
+                    BadgeColumn::make('is_hot')
+                        ->sortable()
+                        ->label('Nổi Bật')
+                        ->color(fn($state) => $state ? 'success' : 'danger') // Màu sắc tùy theo giá trị
+                        ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
+
+                    BadgeColumn::make('is_urgent')
+                        ->sortable()
+                        ->label('Khẩn Cấp')
+                        ->color(fn($state) => $state ? 'success' : 'danger') // Màu sắc tùy theo giá trị
+                        ->formatStateUsing(fn($state) => $state ? 'Có' : 'Không'),
+
 
                 Tables\Columns\TextColumn::make('contact_person_name')
                     ->searchable()
@@ -543,10 +554,30 @@ class JobPostResource extends Resource
                     ->sortable()
                     ->label('Lượt Chia Sẻ'),
 
-                Tables\Columns\TextColumn::make('status')
-                    ->numeric()
+                    Tables\Columns\SelectColumn::make('status')
+                    ->label('Trạng Thái')
                     ->sortable()
-                    ->label('Trạng Thái'),
+                    ->options([
+                        0 => 'Đang chờ xem xét',
+                        1 => 'Được chấp thuận',
+                        2 => 'Bị từ chối',
+                        3 => 'Đã đăng',
+                        4 => 'Đã đóng',
+                        5 => 'Đã hết hạn',
+                        6 => 'Đang xem xét',
+                        7 => 'Đang phỏng vấn',
+                        8 => 'Đã thuê',
+                        9 => 'Đã lưu trữ',
+                        10 => 'Đã hủy',
+                        11 => 'Đang tạm dừng',
+                        12 => 'Đã lấp đầy',
+                        13 => 'Nháp',
+                        14 => 'Đã mở lại',
+                    ])
+                    ->searchable() // Nếu muốn cho phép tìm kiếm
+                    ->extraAttributes(['style' => 'width: 250px;'])
+                    ->default(0) // Giá trị mặc định nếu cần
+                     ,// Thêm quy tắc kiểm tra khi cập nhật
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -7,16 +7,16 @@
 
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
                         type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2"
-                        as="font" type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2"
-                        as="font" type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2"
-                        as="font" type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2"
-                        as="font" type="font/woff2" crossorigin>
-                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2"
-                        as="font" type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
+                        type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font"
+                        type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font"
+                        type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font"
+                        type="font/woff2" crossorigin>
+                    <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
+                        type="font/woff2" crossorigin>
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font"
                         type="font/woff2" crossorigin>
                     <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
@@ -54,18 +54,17 @@
                     <meta name="viewport"
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
                     <meta name="HandheldFriendly" content="true" />
-                    <meta name="author" content="JOBSGO.,JSC" />
+                    <meta name="author" content="RZCareer.,JSC" />
                     <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                     <meta name="csrf-token"
                         content="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
                     <title>Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An) - Công ty Chế Biến Nước Chấm Mekong</title>
                     <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-                    <meta property="og:sitename" content="JobsGO - Tuyển dụng">
+                    <meta property="og:sitename" content="RZCareer - Tuyển dụng">
                     <meta property="og:type" content="website">
                     <meta property="og:locale" content="vi_VN">
                     <meta property="fb:app_id" content="1590841851212703">
-                    <meta name="description"
-                        content="(Mức lương: Thỏa thuận) ✅ . Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An).
+                    <meta name="description" content="(Mức lương: Thỏa thuận) ✅ . Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An).
    Thu thập và xử lý các chứng số liệu, chứng từ kế toán thông qua các nghiệp vụ kinh tế.
    Theo dõi và quản lý công nợ/doanh số, đối chiếu sổ sách và h... #18748470984">
                     <meta name="title"
@@ -84,11 +83,11 @@
                     <meta property="al:android:url"
                         content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
                     <meta property="al:android:package" content="vn.ca.hope.candidate">
-                    <meta property="al:android:app_name" content="JobsGO">
+                    <meta property="al:android:app_name" content="RZCareer">
                     <meta property="al:ios:url"
                         content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
                     <meta property="al:ios:app_store_id" content="1234120247">
-                    <meta property="al:ios:app_name" content="JobsGO">
+                    <meta property="al:ios:app_name" content="RZCareer">
                     <meta name="geo.placename" content="Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội">
                     <meta name="geo.position" content="21.0000650;105.8224070">
                     <meta name="geo.region" content="VN-Hà Nội">
@@ -102,7 +101,8 @@
                     <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/style.min.css?v=234208153092">
                     <script defer src="/assets_livewire/static/assets/js/javascript.min.js?v=234208153092"></script>
-                    <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
+                    <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ">
+                    </script>
 
 
 
@@ -133,10 +133,9 @@
                 <body class="page-job-detail ">
 
                     <a class="hide smart-banner-bk" target="_blank"
-                        href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500"
-                            height="100"
+                        href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500" height="100"
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
-                            alt="Tải app JobsGO" src="/assets_livewire/media/img/500x100-banner-2.gif"
+                            alt="Tải app RZCareer" src="/assets_livewire/media/img/500x100-banner-2.gif"
                             class="img-responsive lazy"></a>
                     @livewire('inc.header-nav')
 
@@ -145,14 +144,16 @@
                     <link rel="stylesheet" type="text/css"
                         href="/assets_livewire/static/assets/css/list.min.css?v=234208153092">
                     <link href="/assets_livewire/static/assets/css/detail.min.css?v=234208153092" rel="stylesheet"
-                        type="text/css"> <!--<script>
+                        type="text/css">
+                    <!--<script>
                             if (navigator.userAgent.indexOf("Chrome-Lighthouse") == -1) {
                                 var script = document.createElement('script');
                                 script.type = 'text/javascript';
                                 script.src = '';
                                 document.getElementsByTagName('head')[0].appendChild(script);
                             }
-                        </script>--> <!--<script src="/assets_livewire/static/assets/js/detail.min.js?v=<? /*=$v*/ ?>" defer></script>-->
+                        </script>-->
+                    <!--<script src="/assets_livewire/static/assets/js/detail.min.js?v=<? /*=$v*/ ?>" defer></script>-->
                     <style>
                         @media (min-width: 769px) {
                             .modal-dialog {
@@ -293,7 +294,7 @@
                                                                         href="https://jobsgo.vn/"
                                                                         itemtype="https://schema.org/Thing"
                                                                         itemprop="item"> <span itemprop="name">
-                                                                            JobsGO</span> </a>
+                                                                            RZCareer</span> </a>
                                                                     <meta itemprop="position" content="1">
                                                                 </li>
                                                                 <li itemprop="itemListElement" itemscope
@@ -313,8 +314,8 @@
                                                                     <a href="{{ url('viec-lam/' . $jobPost->slug) }}"
                                                                         itemtype="https://schema.org/Thing"
                                                                         itemprop="item">
-                                                                        <span
-                                                                            itemprop="name">{{ $jobPost->job_name }}</span>
+                                                                        <span itemprop="name">{{ $jobPost->job_name
+                                                                            }}</span>
                                                                     </a>
 
                                                                 </li>
@@ -334,15 +335,16 @@
                                                                 <li>
                                                                     <i class="bx bx-time-five"></i> <span>Hết hạn
                                                                         trong</span>
-                                                                    <span
-                                                                        class="deadline">{{ round(\Carbon\Carbon::parse($jobPost->deadline)->diffInDays(now())) }}
+                                                                    <span class="deadline">{{
+                                                                        round(\Carbon\Carbon::parse($jobPost->deadline)->diffInDays(now()))
+                                                                        }}
                                                                     </span>
                                                                     <span>ngày nữa</span>
                                                                 </li>
                                                                 <li>
                                                                     <i class="bx bx-money"></i> <span>Mức lương</span>
-                                                                    <span
-                                                                        class="salary">{{ round(($jobPost->salary_min + $jobPost->salary_max) / 1000000, 2) }}
+                                                                    <span class="salary">{{ round(($jobPost->salary_min
+                                                                        + $jobPost->salary_max) / 1000000, 2) }}
                                                                         triệu</span>
                                                                 </li>
                                                             </ul>
@@ -351,24 +353,32 @@
                                                         <div class="media-right media-middle text-nowrap">
                                                             <ul class="list-inline no-margin ">
 
-                                                                <li class="mt-5"><a onclick="preApplyForm(1378228)"
-                                                                        data-toggle="modal"
-                                                                        data-target="#preApplyForm"
-                                                                        onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay');window.location.hash = 'form';"
-                                                                        data-jid="1378228"
-                                                                        data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
-                                                                        id="btn-apply"
-                                                                        class="btn bg-blue btn-apply-now btn-apply "><i
-                                                                            class="glyphicon glyphicon-send"></i> Ứng
-                                                                        tuyển ngay</a>
-
+                                                                <li class="mt-5">
+                                                                    @if($hasApplied)
+                                                                        <button class="btn bg-blue btn-apply-now btn-apply" disabled>
+                                                                            <i class="glyphicon glyphicon-check"></i> Đã ứng tuyển
+                                                                        </button>
+                                                                    @else
+                                                                        <a onclick="preApplyForm(1378228)"
+                                                                           data-toggle="modal" data-target="#preApplyForm"
+                                                                           onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay'); window.location.hash = 'form';"
+                                                                           data-jid="1378228"
+                                                                           data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
+                                                                           id="btn-apply"
+                                                                           class="btn bg-blue btn-apply-now btn-apply">
+                                                                            <i class="glyphicon glyphicon-send"></i> Ứng tuyển ngay
+                                                                        </a>
+                                                                    @endif
                                                                 </li>
 
 
 
+
                                                                 <li class="mt-5 save-job">
-                                                                    <a wire:click.prevent="saveJob" class="btn-save-job btn btn-default">
-                                                                        <i class="glyphicon glyphicon-heart-empty position-left"></i>
+                                                                    <a wire:click.prevent="saveJob"
+                                                                        class="btn-save-job btn btn-default">
+                                                                        <i
+                                                                            class="glyphicon glyphicon-heart-empty position-left"></i>
                                                                         Lưu lại
                                                                     </a>
                                                                 </li>
@@ -388,15 +398,15 @@
                                                                 <div class="panel-heading-bk">
                                                                     <h6
                                                                         class="text-size-mini pt-10 pb-5 panel-title text-uppercase">
-                                                                        JobsGO còn rất nhiều công việc tương tự để bạn
+                                                                        RZCareer còn rất nhiều công việc tương tự để bạn
                                                                         tham khảo dưới đây </span></h6>
                                                                     <div class="heading-elements"><a
                                                                             title="Xem thêm việc làm Kế Toán Tổng Hợp"
                                                                             href="/viec-lam-ke-toan-tong-hop.html"
                                                                             class="heading-text text-blue-700">Xem thêm
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                viewBox="0 0 24 24"
-                                                                                fill="currentColor" class="size-6">
+                                                                                viewBox="0 0 24 24" fill="currentColor"
+                                                                                class="size-6">
                                                                                 <path fill-rule="evenodd"
                                                                                     d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                                                                                     clip-rule="evenodd"></path>
@@ -467,7 +477,9 @@
                                                                     src="/assets_livewire/img/2024/ic27.svg"
                                                                     alt="JobsGo">
                                                                 <p class="h5 text-semibold">Ngày đăng tuyển</p>
-                                                                <p>{{ \Carbon\Carbon::parse($jobPost->created_at)->format('d/m/Y') }}
+                                                                <p>{{
+                                                                    \Carbon\Carbon::parse($jobPost->created_at)->format('d/m/Y')
+                                                                    }}
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -483,24 +495,30 @@
                                                                 <p class="h5 text-semibold">Ngành nghề</p>
                                                                 <div class="list">
                                                                     <a title="Xem thêm các việc làm với ngành nghề {{ $jobPost->career->name }}"
-                                                                        href="/viec-lam-{{ strtolower(str_replace(' ', '-', $jobPost->career->name)) }}.html">{{ $jobPost->career->name }}</a>
+                                                                        href="/viec-lam-{{ strtolower(str_replace(' ', '-', $jobPost->career->name)) }}.html">{{
+                                                                        $jobPost->career->name }}</a>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         {{-- <div class="col-sm-12">
-                                                        <div class="content-group">
-                                                            <img class="pull-left" width="44" height="44" loading="lazy" src="/assets_livewire/img/2024/ic25.svg" alt="JobsGo">
-                                                            <p class="h5 text-semibold">Kĩ năng</p>
-                                                            <div class="list">
-                                                                @dd($jobPost->skills )
-                                                                @foreach ($jobPost->skills as $skill)
+                                                            <div class="content-group">
+                                                                <img class="pull-left" width="44" height="44"
+                                                                    loading="lazy"
+                                                                    src="/assets_livewire/img/2024/ic25.svg"
+                                                                    alt="JobsGo">
+                                                                <p class="h5 text-semibold">Kĩ năng</p>
+                                                                <div class="list">
+                                                                    @dd($jobPost->skills )
+                                                                    @foreach ($jobPost->skills as $skill)
                                                                     <a title="Xem thêm các việc làm với kĩ năng {{ $skill->name }}"
-                                                                       href="/viec-lam-{{ strtolower(str_replace(' ', '-', $skill->name)) }}.html">{{ $skill->name }}</a>{{ !$loop->last ? ', ' : '' }}
-                                                                @endforeach
+                                                                        href="/viec-lam-{{ strtolower(str_replace(' ', '-', $skill->name)) }}.html">{{
+                                                                        $skill->name }}</a>{{ !$loop->last ? ', ' : ''
+                                                                    }}
+                                                                    @endforeach
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div> --}}
+                                                        </div> --}}
                                                     </div>
 
 
@@ -592,40 +610,55 @@
                                                                     href="{{ route('danh-sach-viec-lam', ['career_id' => $jobPost->career->id, 'keyword' => request('keyword'), 'location' => request('location')]) }}"
                                                                     class="heading-text text-blue-700">
                                                                     Xem thêm
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24" fill="currentColor"
+                                                                        class="size-6">
                                                                         <path fill-rule="evenodd"
-                                                                              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                                                                              clip-rule="evenodd"></path>
+                                                                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                                                            clip-rule="evenodd"></path>
                                                                     </svg>
-                                                                 </a>
-                                                                 </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                        <ul class="row media-list jobs collaboratives media-list-linked media-list-bordered">
+                                                        <ul
+                                                            class="row media-list jobs collaboratives media-list-linked media-list-bordered">
                                                             @foreach($relatedJobsFromCareer as $relatedJob)
-                                                                <li title="{{ $relatedJob->job_name }}" class="col-sm-6 media">
-                                                                    <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
-                                                                        <div class="media-left">
-                                                                            <img width="69" height="69"
-                                                                                 onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                                 loading="lazy"
-                                                                                 src="{{ $relatedJob->company->company_image_url ? Storage::url($relatedJob->company->company_image_url) : asset('img/default-company.svg') }}"
-                                                                                 class="img-md" alt="{{ $relatedJob->company->company_name }}">
-                                                                        </div>
-                                                                        <div class="media-body">
-                                                                            <span class="h6 media-heading">{{ $relatedJob->job_name }}</span>
-                                                                            <small class="text-muted">{{ $relatedJob->company->company_name }}</small>
-                                                                            <p class="text-muted">
-                                                                                <span class="btn text-uppercase btn-xs btn-default">
-                                                                                    <i class="bx bx-map"></i> {{ $relatedJob->company->city_name }}
-                                                                                </span>
-                                                                                <span class="btn btn-xs btn-default">
-                                                                                    <i class="fa fa-money"></i>
-                                                                                    {{ number_format($relatedJob->salary_min / 1000000, 0) }}tr - {{ number_format($relatedJob->salary_max / 1000000, 0) }}tr {{ $relatedJob->salary_type }}
-                                                                                </span>
-                                                                            </p>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
+                                                            <li title="{{ $relatedJob->job_name }}"
+                                                                class="col-sm-6 media">
+                                                                <a href="{{ url('viec-lam/' . $relatedJob->slug) }}"
+                                                                    class="media-link">
+                                                                    <div class="media-left">
+                                                                        <img width="69" height="69"
+                                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                            loading="lazy"
+                                                                            src="{{ $relatedJob->company->company_image_url ? Storage::url($relatedJob->company->company_image_url) : asset('img/default-company.svg') }}"
+                                                                            class="img-md"
+                                                                            alt="{{ $relatedJob->company->company_name }}">
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <span class="h6 media-heading">{{
+                                                                            $relatedJob->job_name }}</span>
+                                                                        <small class="text-muted">{{
+                                                                            $relatedJob->company->company_name
+                                                                            }}</small>
+                                                                        <p class="text-muted">
+                                                                            <span
+                                                                                class="btn text-uppercase btn-xs btn-default">
+                                                                                <i class="bx bx-map"></i> {{
+                                                                                $relatedJob->company->city_name }}
+                                                                            </span>
+                                                                            <span class="btn btn-xs btn-default">
+                                                                                <i class="fa fa-money"></i>
+                                                                                {{ number_format($relatedJob->salary_min
+                                                                                / 1000000, 0) }}tr - {{
+                                                                                number_format($relatedJob->salary_max /
+                                                                                1000000, 0) }}tr {{
+                                                                                $relatedJob->salary_type }}
+                                                                            </span>
+                                                                        </p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
                                                             @endforeach
                                                         </ul>
 
@@ -641,15 +674,15 @@
                                                     <div class="panel-body">
                                                         <div class="profile-cover">
                                                             <div class="profile-cover-img"
-                                                            style="background-image: url('{{ Storage::exists($jobPost->company->company_cover_image_url) ? Storage::url($jobPost->company->company_cover_image_url) : asset('assets_livewire/img/default-cover.png') }}');">
-                                                        </div>
+                                                                style="background-image: url('{{ Storage::exists($jobPost->company->company_cover_image_url) ? Storage::url($jobPost->company->company_cover_image_url) : asset('assets_livewire/img/default-cover.png') }}');">
+                                                            </div>
                                                             <div class="media">
                                                                 <div class="media-left">
                                                                     <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
                                                                         class="profile-thumb">
                                                                         <img width="85" height="85"
-                                                                           onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                             src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
+                                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                            src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
                                                                             class="img-md img-circle lazy"
                                                                             alt="{{ $jobPost->company->name }}">
                                                                     </a>
@@ -677,12 +710,14 @@
                                                                 <div>
                                                                     <div><i class="bx bx-sm bx-briefcase"></i> Lĩnh
                                                                         vực:</div>
-                                                                    <span>{{ $jobPost->career->name ?? 'Chưa có thông tin' }}</span>
+                                                                    <span>{{ $jobPost->career->name ?? 'Chưa có thông
+                                                                        tin' }}</span>
                                                                     <!-- Kiểm tra null -->
                                                                 </div>
                                                                 <div>
                                                                     <div><i class='bx bx-sm bx-map'></i> Địa chỉ:</div>
-                                                                    <span>{{ $jobPost->location->address ?? 'Chưa có thông tin' }}</span>
+                                                                    <span>{{ $jobPost->location->address ?? 'Chưa có
+                                                                        thông tin' }}</span>
                                                                     <!-- Kiểm tra null -->
                                                                 </div>
                                                             </div>
@@ -706,7 +741,9 @@
                                                                         <a title="Xem thêm việc làm"
                                                                             href="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html?tab=jobs"
                                                                             class="heading-text text-blue-700">Xem thêm
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 24 24" fill="currentColor"
+                                                                                class="size-6">
                                                                                 <path fill-rule="evenodd"
                                                                                     d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
                                                                                     clip-rule="evenodd"></path>
@@ -715,44 +752,58 @@
                                                                     </div>
 
                                                                 </div>
-                                                                <ul class="row media-list employer-jobs jobs media-list-linked media-list-bordered">
+                                                                <ul
+                                                                    class="row media-list employer-jobs jobs media-list-linked media-list-bordered">
                                                                     @foreach($relatedJobs as $relatedJob)
-                                                                    <li title="{{ $relatedJob->job_name }}" class="col-sm-6 media standard">
-                                                                        <a href="{{ url('viec-lam/' . $relatedJob->slug) }}" class="media-link">
+                                                                    <li title="{{ $relatedJob->job_name }}"
+                                                                        class="col-sm-6 media standard">
+                                                                        <a href="{{ url('viec-lam/' . $relatedJob->slug) }}"
+                                                                            class="media-link">
                                                                             <div class="media-left">
                                                                                 <img width="65" height="65"
-                                                                                     onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                                     loading="lazy"
-                                                                                     src="{{ Storage::url($relatedJob->company->company_image_url) }}"
-                                                                                     alt="{{ $relatedJob->company->company_name }}"
-                                                                                     class="img-responsive">
+                                                                                    onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                                    loading="lazy"
+                                                                                    src="{{ Storage::url($relatedJob->company->company_image_url) }}"
+                                                                                    alt="{{ $relatedJob->company->company_name }}"
+                                                                                    class="img-responsive">
                                                                             </div>
                                                                             <div class="media-body">
-                                                                                <span class="h6 media-heading">{{ $relatedJob->job_name }}</span>
-                                                                                <small class="text-muted">{{ $relatedJob->company->company_name }}</small>
+                                                                                <span class="h6 media-heading">{{
+                                                                                    $relatedJob->job_name }}</span>
+                                                                                <small class="text-muted">{{
+                                                                                    $relatedJob->company->company_name
+                                                                                    }}</small>
                                                                                 <p class="text-muted">
-                                                                                    <span class="btn text-uppercase btn-xs btn-default">
-                                                                                        <i class="bx bx-map"></i> {{ $relatedJob->company->city_name }}
+                                                                                    <span
+                                                                                        class="btn text-uppercase btn-xs btn-default">
+                                                                                        <i class="bx bx-map"></i> {{
+                                                                                        $relatedJob->company->city_name
+                                                                                        }}
                                                                                     </span>
-                                                                                    <span class="btn btn-xs btn-default">
-                                                                                        <i class="fa fa-money"></i> {{ number_format($relatedJob->salary_min / 1000000, 0) }}tr - {{ number_format($relatedJob->salary_max / 1000000, 0) }}tr {{ $relatedJob->salary_type }}
+                                                                                    <span
+                                                                                        class="btn btn-xs btn-default">
+                                                                                        <i class="fa fa-money"></i> {{
+                                                                                        number_format($relatedJob->salary_min
+                                                                                        / 1000000, 0) }}tr - {{
+                                                                                        number_format($relatedJob->salary_max
+                                                                                        / 1000000, 0) }}tr {{
+                                                                                        $relatedJob->salary_type }}
                                                                                     </span>
                                                                                 </p>
                                                                             </div>
                                                                         </a>
                                                                     </li>
-                                                                @endforeach
+                                                                    @endforeach
 
                                                                 </ul>
 
                                                             </div>
                                                             <div class="mrg-top-10"><a rel="nofollow"
                                                                     href="https://tcg.metro.tokyo.lg.jp/portal/Vietnam2024?utm_source=detail_sidebar"
-                                                                    target="_blank"><img width="100"
-                                                                        height="100" loading="lazy"
+                                                                    target="_blank"><img width="100" height="100"
+                                                                        loading="lazy"
                                                                         src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/Banner-external-link_-Social-post-2.jpg"
-                                                                        width="100%"
-                                                                        class="img-responsive hidden-xs"
+                                                                        width="100%" class="img-responsive hidden-xs"
                                                                         alt="banner-1727319141" /></a> </div>
                                                         </div>
                                                     </div>
@@ -778,8 +829,7 @@
                                                 </div>
 
                                                 <ul class="media-list media-list-linked media-list-bordered clearfix">
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-truong.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-truong.html"
                                                             title="Kế Toán Trưởng" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kế Toán
@@ -805,15 +855,13 @@
                                                                     class="h6 media-heading text-capitalize">Kế Toán
                                                                     Tiền Lương</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-chi-phi.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-chi-phi.html"
                                                             title="Kế Toán Chi Phí" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kế Toán
                                                                     Chi Phí</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-cong-no.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-cong-no.html"
                                                             title="Kế Toán Công Nợ" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kế Toán
@@ -839,8 +887,7 @@
                                                                     class="h6 media-heading text-capitalize">Kế Toán
                                                                     Kho</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-vat-tu.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-vat-tu.html"
                                                             title="Kế Toán Vật Tư" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kế Toán
@@ -860,8 +907,7 @@
                                                                     class="h6 media-heading text-capitalize">Quản Lý
                                                                     Nguồn Thu</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-quan-ly-chi-phi.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-quan-ly-chi-phi.html"
                                                             title="Quản Lý Chi Phí" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Quản Lý
@@ -888,15 +934,13 @@
                                                                     class="h6 media-heading text-capitalize">Chuyên
                                                                     Viên Kiểm Soát Nội Bộ</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-kiem-toan-vien.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-kiem-toan-vien.html"
                                                             title="Kiểm Toán Viên" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kiểm Toán
                                                                     Viên</span> </div>
                                                         </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-kiem-soat-vien.html"
+                                                    <li class="media col-sm-3"> <a href="/viec-lam-kiem-soat-vien.html"
                                                             title="Kiểm Soát Viên" class="media-link clearfix">
                                                             <div class="media-body pl-10"> <span
                                                                     class="h6 media-heading text-capitalize">Kiểm Soát
@@ -932,8 +976,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Ứng tuyển ngay</h5>
-                                    <button onclick="teksAlert(this)" type="button" class="close"
-                                            data-dismiss="modal">&times;</button>
+                                    <button onclick="teksAlert(this)" type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <form wire:submit.prevent="apply">
@@ -949,18 +992,72 @@
                                             <label for="phone">Số điện thoại</label>
                                             <input type="text" wire:model="phone" class="form-control" id="phone" required>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="resume">Chọn bản lý lịch</label>
+                                            <div id="resume" required>
+                                                @foreach($resumes as $resume)
+                                                    <div class="form-check" style="margin-bottom: 15px;">
+                                                        <input class="form-check-input" type="radio" wire:model="selectedResumeId" id="resume{{ $resume->id }}" value="{{ $resume->id }}" style="display: none;">
+                                                        <label class="form-check-label" for="resume{{ $resume->id }}" style="
+                                                            display: flex;
+                                                            align-items: center;
+                                                            padding: 10px;
+                                                            border: 1px solid #ccc;
+                                                            border-radius: 5px;
+                                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                            cursor: pointer;
+                                                            transition: all 0.3s ease;
+                                                            width: 100%;
+                                                        ">
+                                                            <span style="flex-grow: 1;">{{ $resume->title }}</span>
+                                                            <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}" target="_blank" class="btn btn-link">Xem</a>
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        <style>
+                                            /* Hover effect */
+                                            .form-check-label:hover {
+                                                border-color: #007bff; /* Màu border khi hover */
+                                                box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+                                            }
+
+                                            /* Checked effect */
+                                            .form-check-input:checked + .form-check-label {
+                                                border-color: #007bff; /* Màu border khi được chọn */
+                                                background-color: rgba(0, 123, 255, 0.1); /* Màu nền khi được chọn */
+                                            }
+                                        </style>
+
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="btn-group">
-                                        <button wire:click="apply" class="btn btn-success mrg-r-10">
-                                            <i class='bx bx-upload'></i> Ứng tuyển
+                                        <button type="submit" wire:click="apply" id="applyButton" class="btn btn-success mrg-r-10">
+                                            <i class="bx bx-upload"></i> Ứng tuyển
                                         </button>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('applyButton').addEventListener('click', function () {
+        // Ẩn thằng modal-backdrop in
+        const backdrop = document.querySelector('.modal-backdrop.in');
+        if (backdrop) {
+            backdrop.style.display = 'none'; // Ẩn backdrop
+        }
+    });
+});
+
+
+                    </script>
 
                     <div id="confirmApplyForm" class="modal">
                         <div class="modal-dialog modal-md">
@@ -1023,17 +1120,16 @@
                                                 method="post" enctype="multipart/form-data">
                                                 <input type="hidden" name="_csrf-jobsgo-candidate"
                                                     value="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
-                                                <div class="radio"><label><input type="radio" name="cv"
-                                                            data-theme="42" value="886874"
-                                                            checked="checked"><strong>CV mới</strong> <span
-                                                            class="text-muted">(Mẫu CV Sale Manager)</span></label>
+                                                <div class="radio"><label><input type="radio" name="cv" data-theme="42"
+                                                            value="886874" checked="checked"><strong>CV mới</strong>
+                                                        <span class="text-muted">(Mẫu CV Sale Manager)</span></label>
                                                 </div>
-                                                <div class="radio"><label><input type="radio" name="cv"
-                                                            data-theme="30" value="886875"><strong>CV mới</strong>
+                                                <div class="radio"><label><input type="radio" name="cv" data-theme="30"
+                                                            value="886875"><strong>CV mới</strong>
                                                         <span class="text-muted">(Mẫu CV Hiện Đại 2)</span></label>
                                                 </div>
-                                                <div class="radio"><label><input type="radio" name="cv"
-                                                            data-theme="1" value="886882"><strong>CV mặc
+                                                <div class="radio"><label><input type="radio" name="cv" data-theme="1"
+                                                            value="886882"><strong>CV mặc
                                                             định</strong> <span class="text-muted">(Mẫu CV Tiêu Chuẩn
                                                             1)</span></label></div> <button type="button"
                                                     class="btn text-uppercase btn-block bg-orange btn-ladda btn-ladda-spinner btn-ladda-progress"
@@ -1064,7 +1160,7 @@
                                 <div class="hidden-xs d-none d-sm-block theme-bg-shapes-left"></div>
                                 <div class="h2 mb-3 text-dark fw-bolder my-1">Tải miễn phí ứng dụng</div>
                                 <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu
-                                    quả bằng cách tải JobsGO về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!
+                                    quả bằng cách tải RZCareer về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!
                                 </div>
                                 <div class="row gx-1 justify-content-center pt-2">
                                     <div class="col-10 col-sm-5 col-xs-10 col-md-3 mt-2 mt-md-0">
@@ -1080,7 +1176,7 @@
                                                     <img class="lazy"
                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                         data-src="/assets_livewire/teks/img/download.svg?v=1.2"
-                                                        alt="JobsGO" width="220" height="83">
+                                                        alt="RZCareer" width="220" height="83">
 
                                                 </a></li>
 
@@ -1091,7 +1187,9 @@
 
                         </div>
                     </section>
-                    <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
+                    @livewire('employer.inc.footer')
+
+                    {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
                         <div class="no-padding">
                             <div class="container">
                                 <div class="row">
@@ -1102,11 +1200,11 @@
                                             <div class="textwidget">
                                                 <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa
                                                     G1 <br> Five Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a
-                                                        class="text-primary" title="JobsGO Miền Bắc"
+                                                        class="text-primary" title="RZCareer Miền Bắc"
                                                         href="tel:0898579188">0898.579.188</a></p>
                                                 <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5,
                                                     607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh
-                                                    <br>Điện thoại: <a class="text-primary" title="JobsGO Miền Nam"
+                                                    <br>Điện thoại: <a class="text-primary" title="RZCareer Miền Nam"
                                                         href="tel:0896557388">0896.557.388</a>
                                                 </p>
                                                 <p><strong>Email:</strong> <a
@@ -1168,8 +1266,8 @@
                                                             title="Việc làm Kinh doanh">Kinh Doanh</a></li>
                                                     <li><a href="/viec-lam-marketing.html"
                                                             title="Việc làm Marketing">Marketing</a></li>
-                                                    <li><a href="/viec-lam-xay-dung.html"
-                                                            title="Việc làm Xây Dựng">Xây Dựng</a></li>
+                                                    <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây
+                                                            Dựng</a></li>
                                                     <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài
                                                             Xế</a></li>
                                                     <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem
@@ -1192,10 +1290,10 @@
                                                             title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
                                                     <li><a href="/viec-lam-truong-phong.html"
                                                             title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
-                                                    <li><a href="/viec-lam-giam-doc.html"
-                                                            title="Việc làm Giám đốc">Giám đốc</a></li>
-                                                    <li><a href="/nganh-nghe.html"
-                                                            title="Xem tất cả vị trí/chức vụ">Xem tất cả <b>»</b></a>
+                                                    <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám
+                                                            đốc</a></li>
+                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem
+                                                            tất cả <b>»</b></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1211,25 +1309,24 @@
                                                             title="Việc làm Part-time">Part-time</a></li>
                                                     <li><a href="/viec-lam-online.html"
                                                             title="Việc làm Online">Online</a></li>
-                                                    <li><a href="/viec-lam-thoi-vu.html"
-                                                            title="Việc làm Thời vụ">Thời vụ</a></li>
+                                                    <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời
+                                                            vụ</a></li>
                                                     <li><a href="/viec-lam-remote.html"
                                                             title="Việc làm Remote">Remote</a></li>
                                                 </ul>
-                                                <ul
-                                                    class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
+                                                <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
                                                     <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/JobsGOVN/"
+                                                            href="https://www.facebook.com/RZCareerVN/"
                                                             target="_blank"><i
                                                                 class='bx bx-xs bxl-facebook'></i></a></li>
                                                     <li class="list-inline-item"><a
                                                             href="https://www.linkedin.com/company/josbgo.vn/"
-                                                            target="_blank"><i
-                                                                class='bx bx-xs bxl-linkedin'></i></a></li>
+                                                            target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a>
+                                                    </li>
                                                     <li class="list-inline-item"><a
                                                             href="https://www.instagram.com/jobsgo_vn/"
-                                                            target="_blank"><i
-                                                                class='bx bx-xs bxl-instagram'></i></a></li>
+                                                            target="_blank"><i class='bx bx-xs bxl-instagram'></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1243,8 +1340,8 @@
                                     <div class="col-12 col-sm-10">
                                         <ul class="list-inline list-unstyled mb-1 text-primary">
                                             <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://jobsgo.vn/site/about-us"
-                                                    title="Về chúng tôi"><u>Giới thiệu</u></a></li>
+                                                    href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
+                                                        thiệu</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                                     href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
                                                     title="Chính sách"><u>Chính sách</u></a></li>
@@ -1264,7 +1361,7 @@
                                                     title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                                     href="https://employer.jobsgo.vn"
-                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
+                                                    title="RZCareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
                                                         cho Nhà Tuyển Dụng</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://jobsgo.vn/site/faq"
@@ -1281,7 +1378,7 @@
                                         <ul
                                             class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
                                             <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                    href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                         class='bx bx-xs bxl-facebook'></i></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1297,7 +1394,7 @@
                                         <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày
                                             09/05/2018 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép
                                             thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin & Truyền
-                                            thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần JobsGO. All Rights
+                                            thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần RZCareer. All Rights
                                             Reserved.</p>
                                     </div>
                                     <div class="col-sm-2">
@@ -1308,7 +1405,7 @@
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
                                                     data-src="/assets_livewire/teks/img/online-gov.svg"
-                                                    alt="JobsGO" width="100" height="38">
+                                                    alt="RZCareer" width="100" height="38">
 
                                             </a>
                                             <a target="_blank" rel="nofollow"
@@ -1317,17 +1414,18 @@
 
                                                 <img class="lazy"
                                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                    data-src="/assets_livewire/teks/img/dmca.svg" alt="JobsGO"
+                                                    data-src="/assets_livewire/teks/img/dmca.svg" alt="RZCareer"
                                                     width="100" height="21">
 
                                             </a>
-                                            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                                            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+                                            </script>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </footer>
+                    </footer> --}}
                     <style>
                         .zalo-chat-widget {
                             left: initial !important;
@@ -1345,7 +1443,7 @@
 
 
 
-                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với JobsGO "
+                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với RZCareer "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>

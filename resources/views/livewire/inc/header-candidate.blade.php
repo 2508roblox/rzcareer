@@ -1,8 +1,34 @@
+<?php
+   $jobPostForLocation = App\Models\CommonCity::whereHas('locations.jobPosts') // Lọc những thành phố có job_posts
+                      ->withCount(['locations as job_posts_count' => function ($query) {
+                      $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                      }])
+                      ->orderBy('job_posts_count', 'desc')
+                      ->limit(10)
+                      ->get();
+
+  $jobPostForCareer = App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                      ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                      ->limit(10) // Limit to top 10 careers
+                      ->get();
+
+ $jobTypes = App\Models\JobPost::select('job_type')->distinct()->get();
+ $typeOfWorkPlaces = App\Models\JobPost::select('type_of_workplace')
+                      ->distinct()
+                      ->get();
+
+ $companies = App\Models\CommonCareer::withCount('companies')
+            ->orderBy('companies_count', 'desc')
+            ->take(10)
+            ->get();
+
+?>
+
 <div class="navbar navbar-default">
     <div class="wrap">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/" title="Về trang chủ JobsGO">
-                <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
+            <a class="navbar-brand" href="/" title="Về trang chủ RZCareer">
+                <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
             </a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
@@ -34,76 +60,56 @@
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo ngành nghề</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-chinh-ngan-hang.html"> Việc
-                                                    làm Tài
-                                                    Chính/Ngân Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-ke-toan-kiem-toan.html"> Việc
-                                                    làm Kế
-                                                    Toán/Kiểm Toán</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html">
-                                                    Việc làm
-                                                    Hành Chính/Văn Phòng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-kinh-doanh-ban-hang.html"> Việc
-                                                    làm Kinh
-                                                    Doanh/Bán Hàng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-marketing.html">
-                                                    Việc làm Marketing</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-xay-dung.html">
-                                                    Việc làm Xây dựng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-it-phan-mem.html">
-                                                    Việc làm IT Phần Mềm</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-hanh-chinh-van-phong.html">
-                                                    Việc làm
-                                                    Hành Chính/Văn Phòng</a></li>
+                                            @foreach($jobPostForCareer as $career)
+                                            <li>
+                                              <a class="dropdown-item"
+                                                href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
+                                                Việc làm {{ $career->name }}
+                                              </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-3 ps-sm-0">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo địa điểm</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-ho-chi-minh.html"> Việc làm
-                                                    tại Hồ
-                                                    Chí Minh</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-ha-noi.html">
-                                                    Việc làm tại Hà Nội</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-da-nang.html">
-                                                    Việc làm tại Đà Nẵng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-can-tho.html">
-                                                    Việc làm tại Cần Thơ</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-binh-duong.html"> Việc làm
-                                                    tại Bình
-                                                    Dương</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-hai-phong.html"> Việc làm
-                                                    tại Hải
-                                                    Phòng</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-dong-nai.html">
-                                                    Việc làm tại Đồng Nai</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-tai-quang-ninh.html"> Việc làm
-                                                    tại Quảng
-                                                    Ninh</a></li>
+                                              @foreach($jobPostForLocation as $city)
+                      <li>
+                        <a class="dropdown-item"
+                          href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}">
+                          Việc làm tại {{ $city->name }}
+                        </a>
+                      </li>
+                      @endforeach
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="fw-bolder pt-2 pb-1 ps-3">Việc theo nhu cầu</div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="/viec-lam-tuyen-gap.html">
-                                                    Việc làm Tuyển Gấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-noi-bat.html"> Việc
-                                                    làm Nổi Bật</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-lao-dong-pho-thong.html"> Việc
-                                                    làm Lao
-                                                    động phổ thông</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-khong-can-bang-cap.html"> Việc
-                                                    làm Không
-                                                    cần bằng cấp</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-online-tai-nha.html"> Việc làm
-                                                    Online
-                                                    tại nhà</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-part-time.html">
-                                                    Việc làm Part-time</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-thoi-vu.html"> Việc
-                                                    làm Thời vụ</a></li>
-                                            <li><a class="dropdown-item" href="/viec-lam-remote.html"> Việc
-                                                    làm Remote</a></li>
+
+                                            <li><a class="dropdown-item"
+                                                href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_urgent' => true]) }}">
+                                                Việc làm Tuyển
+                                                Gấp</a></li>
+                                            <li><a class="dropdown-item"
+                                                href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'is_hot' => true]) }}">
+                                                Việc làm Nổi bật</a></li>
+                                            @foreach($jobTypes as $jobType)
+                                            <li>
+                                              <a class="dropdown-item"
+                                                href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'job_type' => $jobType->job_type ]) }}">
+                                                Việc làm {{ $jobType->job_type }}
+                                              </a>
+                                            </li>
+                                            @endforeach
+                                            @foreach($typeOfWorkPlaces as $typeOfWorkPlace)
+                                            <li>
+                                              <a class="dropdown-item"
+                                                href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '', 'type_of_workplace' => $typeOfWorkPlace->type_of_workplace ]) }}">
+                                                Việc làm {{ $typeOfWorkPlace->type_of_workplace }}
+                                              </a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -116,23 +122,20 @@
                         href="/cong-ty.html">
                         <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
                     </a>
+                    @if (Auth::check())
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/cong-ty-tieu-bieu.html">Tiêu Biểu</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-ban-le.html">Bán Lẻ</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-tai-chinh-ngan-hang.html">Ngân Hàng</a>
-                        </li>
-                        <li><a class="dropdown-item" href="/cong-ty-bao-hiem.html">Bảo Hiểm</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-cong-nghe.html">Công Nghệ</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-xay-dung.html">Xây Dựng</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-san-xuat.html">Sản Xuất</a></li>
-                        <li><a class="dropdown-item" href="/nha-hang.html">Nhà Hàng</a></li>
-                        <li><a class="dropdown-item" href="/khach-san.html">Khách Sạn</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-y-te.html">Y Tế</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-bat-dong-san.html">Bất Động Sản</a></li>
-                        <li><a class="dropdown-item" href="/cong-ty-giao-duc.html">Giáo Dục</a></li>
+                      @foreach($companies as $company)
+                      <li>
+                        <a class="dropdown-item"
+                          href="{{ url('/cong-ty?field_operation=' . strtolower(str_replace(' ', '-', $company->name))) }}">
+                          {{ $company->name }} ({{ $company->companies_count }} công ty)
+                        </a>
+                      </li>
+                      @endforeach
                     </ul>
+                    @endif
                 </li>
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                         href="/mau-cv-xin-viec.html">
                         <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -144,7 +147,7 @@
                         <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
                         <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
 
@@ -156,9 +159,11 @@
 
                     <a href="candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
                         class="dropdown-toggle" data-toggle="dropdown">
-                        <img onerror="this.src='/assets_livewire/bolt/assets/images/image.png'"
-                            src="/assets_livewire/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
-                            class="avatar" alt="web developer">
+                        <img class="lazy rounded-1"
+                        src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+                        data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+                        alt="avatar" width="32" height="32">
+
                         @if (Auth::check())
                         <span>
                             {{ Auth::user()->full_name }}
@@ -259,41 +264,7 @@
                             </a>
                         </li>
 
-                        <script>
-                            window.addEventListener('load', function() {
-                                $(function() {
 
-                                    $('#switch__input').on('change', function() {
-                                        $.ajax({
-                                            url: '/api/profile',
-                                            data: {
-                                                pk: 1,
-                                                name: 'status',
-                                                value: $(this).is(':checked') ? 0 : 2
-                                            },
-                                            success: function(response) {
-                                                response = $.parseJSON(response);
-                                                let statusClass = response.mess === 'on' ? 'status_on' : 'status_off';
-                                                let statusText = response.mess === 'on' ? 'Đang tìm việc' : 'Đã tắt tìm việc';
-                                                $('#switch__input').prop('checked', response.mess === 'on');
-                                                $('#status_job_search').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                                                $('#switch__label').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                                                $('.status').removeClass('status_on status_off').addClass(statusClass);
-                                                $('.status').text(statusText);
-                                            },
-                                            error: function() {
-                                                let statusClass = 'status_off';
-                                                let statusText = 'Đã tắt tìm việc';
-                                                $('#switch__input').prop('checked', false);
-                                                $('#status_job_search').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                                                $('#switch__label').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                                                $('.status').removeClass('status_on status_off').addClass(statusClass);
-                                            }
-                                        });
-                                    });
-                                });
-                            });
-                        </script>
                     </ul>
                     <style>
                         .dropdown-user .dropdown-menu>li>a {

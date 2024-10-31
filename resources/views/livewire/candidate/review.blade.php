@@ -6,7 +6,7 @@
                     <div>
                         <div>
 
-                            <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+                            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
                             <!-- Please send your resume with cover letter to team@jobsgo.vn -->
                             <!DOCTYPE html>
                             <html lang="vi-VN">
@@ -40,7 +40,7 @@
                                 <meta name="csrf-token"
                                     content="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
 
-                                <title>JobsGO - Quản lý CV</title>
+                                <title>RZCareer - Quản lý CV</title>
 
                                 <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css"
                                     rel="stylesheet" type="text/css">
@@ -276,10 +276,10 @@
                                                     color: #FF5722 !important;
                                                 }
                                             </style>
-                                            <script type="text/javascript"
+                                            {{-- <script type="text/javascript"
                                                 src="/bolt/assets/js/plugins/sliders/ion_rangeslider.min.js"></script>
                                             <script type="text/javascript"
-                                                src="/bolt/assets/js/plugins/ui/moment/moment_locales.min.js"></script>
+                                                src="/bolt/assets/js/plugins/ui/moment/moment_locales.min.js"></script> --}}
 
 
 
@@ -1299,7 +1299,7 @@
                                                                         <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                             <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                 @if ($user && $user->avatar_url)
-                                                                                    <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                                    <img
                                                                                          src="{{ Storage::url($user->avatar_url) }}"
                                                                                          class="avatar img-responsive"
                                                                                          alt="Avatar của {{ $user->full_name }}">
@@ -2586,7 +2586,7 @@
                                                                 }
                                                             </style>
 
-                                                            <div class="row no-mrg mb-10">
+                                                            {{-- <div class="row no-mrg mb-10">
                                                                 <div class="col-sm-12">
                                                                     <div
                                                                         class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
@@ -2824,179 +2824,13 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                             <div class="row no-mrg">
                                                                 <div class="col-sm-12">
                                                                     <div
                                                                         class="sidebar-widget brows-job-category job-list list-view padd-top-0 padd-bot-0">
                                                                         <!-- Detached content -->
-                                                                        <div class="container-detached mt-10">
-                                                                            <div class="content-detached">
-                                                                                <div class="tab-pane fade in active"
-                                                                                    id="profile">
-                                                                                    <!-- Profile info -->
-                                                                                    <div class="panel panel-flat">
-                                                                                        <div class="panel-body">
-                                                                                            <h4 class="panel-title">
-                                                                                                <span>Danh sách CV đã
-                                                                                                    tải lên</span>
-                                                                                                <a class="pull-right text-capitalize font-13 text-white btn btn-primary"
-                                                                                                    id="toggleButton_"
-                                                                                                    title="Tải CV mới"
-                                                                                                    href="/candidate/import-cv-data"><span
-                                                                                                        class="glyphicon glyphicon-upload"></span>
-                                                                                                    Tải
-                                                                                                    CV lên</a>
-                                                                                            </h4>
-                                                                                            <div class="steps-basic wizard clearfix"
-                                                                                                role="application"
-                                                                                                id="steps-uid-0">
-                                                                                                <div
-                                                                                                    class="content clearfix">
-                                                                                                    <div
-                                                                                                        id="elementToToggle">
-                                                                                                        <fieldset
-                                                                                                            id="steps-uid-0-p-0"
-                                                                                                            role="tabpanel"
-                                                                                                            aria-labelledby="steps-uid-0-h-0"
-                                                                                                            class="body current"
-                                                                                                            aria-hidden="false">
-                                                                                                            <form
-                                                                                                                id="w0"
-                                                                                                                class="form-horizontal"
-                                                                                                                action="/candidate/pre-profile?tab=review"
-                                                                                                                method="post"
-                                                                                                                enctype="multipart/form-data">
-                                                                                                                <input
-                                                                                                                    type="hidden"
-                                                                                                                    name="_csrf-jobsgo-candidate"
-                                                                                                                    value="bFJ3Hn6uhxc0g1Lcpvd9SXOKO4aQQ_w4Bgdz6vmE7OFfZwBbH_bPTU36PprclgQwP9tWx9d6qnRsNUSzjrW2uQ==">
 
-
-
-
-                                                                                                                <div
-                                                                                                                    class="form-group field-cvresumeform-title required">
-                                                                                                                    <label
-                                                                                                                        class="control-label col-sm-4 text-right"
-                                                                                                                        for="cvresumeform-title">Tiêu
-                                                                                                                        đề</label>
-                                                                                                                    <div
-                                                                                                                        class="col-sm-4">
-                                                                                                                        <input
-                                                                                                                            type="text"
-                                                                                                                            id="cvresumeform-title"
-                                                                                                                            class="form-control"
-                                                                                                                            name="CvResumeForm[title]"
-                                                                                                                            value="Tài liệu chứng chỉ - web developer"
-                                                                                                                            aria-required="true">
-
-                                                                                                                        <p
-                                                                                                                            class="help-block help-block-error ">
-                                                                                                                        </p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="form-group field-cvresumeform-description">
-                                                                                                                    <label
-                                                                                                                        class="control-label col-sm-4 text-right"
-                                                                                                                        for="cvresumeform-description">Mô
-                                                                                                                        tả</label>
-                                                                                                                    <div
-                                                                                                                        class="col-sm-4">
-                                                                                                                        <textarea
-                                                                                                                            id="cvresumeform-description"
-                                                                                                                            class="form-control"
-                                                                                                                            name="CvResumeForm[description]">Cập nhật ngày: 26/09/2024</textarea>
-
-                                                                                                                        <p
-                                                                                                                            class="help-block help-block-error ">
-                                                                                                                        </p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="form-group field-cvresumeform-file_upload">
-                                                                                                                    <label
-                                                                                                                        class="control-label col-sm-4 text-right"
-                                                                                                                        for="cvresumeform-file_upload">Tài
-                                                                                                                        liệu
-                                                                                                                        tải
-                                                                                                                        lên</label>
-                                                                                                                    <div
-                                                                                                                        class="col-sm-4">
-                                                                                                                        <input
-                                                                                                                            type="hidden"
-                                                                                                                            name="CvResumeForm[file_upload]"
-                                                                                                                            value=""><input
-                                                                                                                            type="file"
-                                                                                                                            id="cvresumeform-file_upload"
-                                                                                                                            class="file-styled"
-                                                                                                                            name="CvResumeForm[file_upload]">
-
-                                                                                                                        <p
-                                                                                                                            class="help-block help-block-error ">
-                                                                                                                        </p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="hide">
-                                                                                                                    <input
-                                                                                                                        type="hidden"
-                                                                                                                        name="CvResumeForm[jid]"
-                                                                                                                        value="">
-                                                                                                                </div>
-                                                                                                                <div
-                                                                                                                    class="form-group">
-                                                                                                                    <div
-                                                                                                                        class="col-sm-offset-4 col-sm-4">
-                                                                                                                        <button
-                                                                                                                            type="submit"
-                                                                                                                            class="btn btn-primary  btn-ladda btn-ladda-spinner btn-ladda-progress"
-                                                                                                                            data-style="zoom-out"><i
-                                                                                                                                class="icon-file-upload position-left"></i>
-                                                                                                                            <span
-                                                                                                                                class="ladda-label">Tải
-                                                                                                                                tài
-                                                                                                                                liệu
-                                                                                                                                lên</span></button>
-                                                                                                                    </div>
-                                                                                                                </div>
-
-                                                                                                            </form>
-                                                                                                        </fieldset>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="clearfix">
-                                                                                                        <h6
-                                                                                                            class="modal-title text-uppercase pull-left text-orange-700 mb-20">
-                                                                                                            <i
-                                                                                                                class="icon-file-media"></i>
-                                                                                                            Tài liệu
-                                                                                                            chứng chỉ đã
-                                                                                                            tải lên
-                                                                                                        </h6>
-                                                                                                    </div>
-
-                                                                                                    <div
-                                                                                                        class="form-group">
-                                                                                                        <div
-                                                                                                            class="clearfix file-no-sortable">
-                                                                                                            <input
-                                                                                                                type="file"
-                                                                                                                class="colorgb-file-input"
-                                                                                                                multiple="multiple">
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-
-                                                                                            </div>
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <!-- /profile info -->
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                         <!-- /detached content -->
                                                                     </div>
                                                                 </div>
@@ -3134,15 +2968,15 @@
                                                                 }
                                                             }
                                                         </style>
-                                                        <link
+                                                        {{-- <link
                                                             href="/bolt/assets/js/plugins/bootstrap-fileinput-master/css/fileinput.css"
                                                             rel="stylesheet" type="text/css">
                                                         <script type="text/javascript"
                                                             src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/fileinput.js">
-                                                        </script>
-                                                        <script type="text/javascript"
+                                                        </script> --}}
+                                                        {{-- <script type="text/javascript"
                                                             src="/bolt/assets/js/plugins/bootstrap-fileinput-master/js/locales/vi.js">
-                                                        </script>
+                                                        </script> --}}
                                                         <script type="text/javascript">
                                                             $(document).ready(function() {
                                                                 $('[data-toggle="popover"]').popover();
@@ -3844,10 +3678,10 @@
                                                     margin: 0;
                                                 }
                                             </style>
-                                            <link rel="stylesheet" href="/css/cropper.css">
+                                            {{-- <link rel="stylesheet" href="/css/cropper.css">
                                             <link rel="stylesheet" href="/css/crop.css?v=2342081531001">
                                             <script src="/js/cropper.js"></script>
-                                            <script src="/js/crop.js"></script>
+                                            <script src="/js/crop.js"></script> --}}
 
                                             <script>
                                                 $(function() {
@@ -4499,11 +4333,11 @@
 
                                                 }
                                             </script>
-                                            <link rel="stylesheet"
+                                            {{-- <link rel="stylesheet"
                                                 href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
                                             <script
                                                 src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js">
-                                            </script>
+                                            </script> --}}
                                             <script>
                                                 $(function() {
 
@@ -4988,11 +4822,11 @@
                                             </script>
 
 
-                                            <link rel="stylesheet"
+                                            {{-- <link rel="stylesheet"
                                                 href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
                                             <script
                                                 src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js">
-                                            </script>
+                                            </script> --}}
                                             <script>
                                                 $(function() {
 
@@ -7687,7 +7521,7 @@
                                     <!-- Footer -->
                                     <div class="footer text-muted hidden-xs">
                                         <div class="mt-30">
-                                            &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                                            &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                                         </div>
 
@@ -7810,9 +7644,9 @@
                                     })
                                 </script>
                                 <script src="/event/min.js?v=1727349985"></script>
-                                <script src="/assets/2878b065/yii.js"></script>
+                                {{-- <script src="/assets/2878b065/yii.js"></script>
                                 <script src="/assets/2878b065/yii.validation.js"></script>
-                                <script src="/assets/2878b065/yii.activeForm.js"></script>
+                                <script src="/assets/2878b065/yii.activeForm.js"></script> --}}
                                 <script>
                                     jQuery(function($) {
                                         jQuery('#w0').yiiActiveForm([{

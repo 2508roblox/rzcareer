@@ -152,9 +152,11 @@
           class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
           aria-expanded="false">
           <img class="lazy rounded-1"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-            data-src="https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c"
-            alt="avatar" width="32" height="32">
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+          alt="avatar" width="32" height="32">
+        
+
           <span style="margin-left: 5px">
             @if (Auth::check())
             <span>
@@ -215,7 +217,7 @@
     <nav class="navbar bg-white p-0">
       <div class="container-fluid p-0">
         <a class="navbar-brand" href="/">
-          <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="JobsGO">
+          <img width="134" height="40" src="/assets_livewire/logo-light.svg" alt="RZCareer">
         </a>
         <style>
           .status_on {

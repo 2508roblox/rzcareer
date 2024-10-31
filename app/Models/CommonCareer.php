@@ -21,6 +21,6 @@ class CommonCareer extends Model
     {
         return $this->hasMany(Resume::class, 'career_id');
     }
-
+   
 
 }

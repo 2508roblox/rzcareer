@@ -22,7 +22,7 @@
                             <meta name="robots" content="noindex, nofollow">
                             <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                             <meta name="csrf-token" content="TzKlrrmsUX2Rllu_QX-_RzHbfUuwYoT9rxFpvAnLQQR8B9Lr2PQZJ-jvN_k7HsY-fYoQCvdb0rHFI17lfvobXA==">
-                            <title>JobsGO - Quản lý CV</title>
+                            <title>RZCareer - Quản lý CV</title>
 
                             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
                             <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -343,7 +343,7 @@
                                         <nav>
                                            @livewire('inc.breadcrumb')
                                         </nav>
-                                     
+
                                         <style>
                                             nav li {
                                                 text-align: center;
@@ -1024,7 +1024,7 @@ Add a counter to the multi-steps indicator
                                                                 <div class="text-center">
                                                                     <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                         <div id="imageDropAvatar" class="thumb thumb-slide">
-                                                                            <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                            <img 
                                                                                 src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                                                                                 class="avatar img-responsive" alt="web developer">
                                                                             <div class="caption">
@@ -1049,7 +1049,7 @@ Add a counter to the multi-steps indicator
                                                                         <p class="text-muted mb-0 "><strong>Giới tính:</strong> <span class="ml-2 gender" data-type="select" data-value="" data-name="gender" title="Giới tính"></span></p>
                                                                         <p class="text-muted mb-0 "><strong>Vị trí mong muốn: <a data-toggle="popover" data-placement="bottom" data-content="Thông tin này giúp NTD đưa ra quyết định với CV của bạn nhanh hơn 50%" href="#"><i class="fa fa-info-circle"></i></a> </strong> <span class="ml-2 career_name" data-type="typeaheadjs" data-name="career_name" title="Vị trí/chức vụ mong muốn">Thực Tập Sinh Tuyển Dụng</span></p>
                                                                         <p class="text-muted mb-0"><strong>Chức vụ:</strong> <span class="ml-2" data-name="job_position" data-value="" title="Vị trí / chức vụ"></span></p>
-                                                                        <p class="text-muted mb-0 "><strong>Trạng thái tìm việc: <a data-toggle="popover" data-placement="bottom" data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống JobsGO." href="#"><i class="fa fa-info-circle"></i></a> </strong> <span class="ml-2 status status_on" data-type="select" data-value="0" data-name="status" title="Trạng thái tìm việc">Đang tìm việc</span></p>
+                                                                        <p class="text-muted mb-0 "><strong>Trạng thái tìm việc: <a data-toggle="popover" data-placement="bottom" data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống RZCareer." href="#"><i class="fa fa-info-circle"></i></a> </strong> <span class="ml-2 status status_on" data-type="select" data-value="0" data-name="status" title="Trạng thái tìm việc">Đang tìm việc</span></p>
                                                                         <script>
                                                                             $(document).ready(function() {
                                                                                 $('[data-toggle="popover"]').popover();
@@ -2292,7 +2292,7 @@ Add a counter to the multi-steps indicator
                                                                                                                 <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                                                                                     <div id="imageDropAvatar" class="thumb thumb-slide">
                                                                                                                         <a href="/candidate/pre-profile">
-                                                                                                                            <img onerror="this.src='/bolt/assets/images/image.png'"
+                                                                                                                            <img 
                                                                                                                                 src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
                                                                                                                                 class="avatar img-responsive" alt="web developer">
                                                                                                                         </a>
@@ -2350,7 +2350,7 @@ Add a counter to the multi-steps indicator
                                                                                                                         <strong>Trạng thái tìm việc:
                                                                                                                             <a data-toggle="popover"
                                                                                                                                 data-placement="bottom"
-                                                                                                                                data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống JobsGO."
+                                                                                                                                data-content="Khi chọn trạng thái tắt tìm việc bạn vẫn có thể ứng tuyển, tuy nhiên Nhà tuyển dụng sẽ không thể tìm kiếm hoặc xem thông tin liên hệ của bạn trên hệ thống RZCareer."
                                                                                                                                 href="#">
                                                                                                                                 <i class="fa fa-info-circle"></i>
                                                                                                                             </a>
@@ -2691,7 +2691,7 @@ Add a counter to the multi-steps indicator
                                                         <script>
                                                             function updateCheckspellPanelStatictis() {
                                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                                 $('#panel-statistic').html(loading);
                                                                 $.ajax({
@@ -2709,7 +2709,7 @@ Add a counter to the multi-steps indicator
 
                                                             function updateReviewPanelStatistic() {
                                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                                 $('#panel').html(loading);
                                                                 $.ajax({
@@ -2740,7 +2740,7 @@ Add a counter to the multi-steps indicator
                                                             function updateSuggestPanelStatistic() {
                                                                 upateSuggestPanelPosition('sticky');
                                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                                 $('#panel-statistic').html(loading);
                                                                 $.ajax({
@@ -4520,7 +4520,7 @@ Add a counter to the multi-steps indicator
                                                                                         var bulletPoints = data.bullet_points;
 
                                                                                         if (bulletPoints) {
-                                                                                            tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ JobsGO AI (nhấn vào nội dung bạn muốn thêm):</p>');
+                                                                                            tagSuggestionsDiv.append('<p class="help-block text-bold">Chọn các gợi ý từ RZCareer AI (nhấn vào nội dung bạn muốn thêm):</p>');
                                                                                         }
 
                                                                                         $.each(bulletPoints, function(index, tag) {
@@ -4708,7 +4708,7 @@ Add a counter to the multi-steps indicator
 
                                             }
                                         </script>
-                                        <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                  
                                         <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                                         <script>
                                             $(function() {
@@ -5260,7 +5260,7 @@ Add a counter to the multi-steps indicator
                                         </script>
 
 
-                                        <link rel="stylesheet" href="/bolt/assets/js/plugins/easy-autocomplete/easy-autocomplete.min.css">
+                                  
                                         <script src="/bolt/assets/js/plugins/easy-autocomplete/jquery.easy-autocomplete.min.js"></script>
                                         <script>
                                             $(function() {
@@ -7008,7 +7008,7 @@ Add a counter to the multi-steps indicator
                                         <script>
                                             function updateCheckspellPanel() {
                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                 $('#panel').html(loading);
                                                 $.ajax({
@@ -7022,7 +7022,7 @@ Add a counter to the multi-steps indicator
                                             function updateReviewPanel() {
                                                 console.log('update review panel');
                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                 $('#panel').html(loading);
                                                 $.ajax({
@@ -7050,7 +7050,7 @@ Add a counter to the multi-steps indicator
                                                 $('select').val(null).trigger('change');
                                                 upateSuggestPanelPosition('sticky');
                                                 loading = '<div class="card-box" style="min-height:auto"><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> \n\
-        Đang kiểm tra gợi ý từ JobsGO\n\
+        Đang kiểm tra gợi ý từ RZCareer\n\
         </div>';
                                                 $('#panel').html(loading);
                                                 $.ajax({
@@ -7960,7 +7960,7 @@ Add a counter to the multi-steps indicator
                                 <!-- Footer -->
                                 <div class="footer text-muted hidden-xs">
                                     <div class="mt-30">
-                                        &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                                        &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                                     </div>
 
@@ -8133,7 +8133,7 @@ Add a counter to the multi-steps indicator
                                 })
                             </script>
                             <!-- Modal -->
-                        
+
 
                             <script>
                                 window.addEventListener('load', function() {

@@ -2,10 +2,7 @@
 
 namespace App\Providers\Filament;
 
-use App\Filament\Widgets\CompanyStatsWidget;
-use App\Filament\Widgets\JobPostStatsWidget;
 use App\Filament\Widgets\StatsOverviewWidget;
-use App\Filament\Widgets\UserStatsWidget;
 use Dashboard;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -45,9 +42,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 StatsOverviewWidget::class,
-                CompanyStatsWidget::class,
-                JobPostStatsWidget::class,
-                UserStatsWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

@@ -54,8 +54,7 @@
                         content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên Rzcareer.">
                     <meta name="title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer">
                     <meta name="keywords" content="Tuyển dụng nhanh viec lam tai chinh ngan hang">
-                    <meta property="og:image" itemprop="thumbnailUrl"
-                        content="https://Rzcareer.vn/media/img/cover-share.png">
+
                     <meta property="og:description"
                         content="1365 tin tuyển dụng việc làm Tài Chính/Ngân Hàng mới nhất ☑️Lương hấp dẫn ☑️Doanh nghiệp hàng đầu ☑️Phúc lợi tốt. Tìm việc nhanh &amp; ứng tuyển ngay trên Rzcareer.">
                     <meta property="og:title" content="Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer">
@@ -75,66 +74,20 @@
                     <script defer
                         src="/assets_livewire/static/assets/assets_livewire/js/javascript.min.js?v=2342081531001">
                     </script>
-                    <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ">
-                    </script>
-
-                    <script type="application/ld+json">
-                        {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "url": "https://Rzcareer.vn/",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://Rzcareer.vn/viec-lam.html?k={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            }
-                    </script>
 
 
-                    <script>
-                        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
 
-            gtag('js', new Date());
-            gtag('config', 'G-EHD5KK9TRQ');
-            gtag('config', 'AW-10876503189');
-                    </script>
-
-                    <style>
-                        .status_on {
-                            color: #4CAF50 !important;
-                        }
-
-                        .status_off {
-                            color: #FF5722 !important;
-                        }
-                    </style>
-                    <script>
-                        window.addEventListener('load', function() {
-
-                $(function() {
-
-                    if ($(window).width() < 768) {
-                        $('#jobRole').attr('placeholder', 'Từ khóa...');
-                        $('#jobPlace').attr('placeholder', 'Địa điểm...');
-                    }
-                })
-            });
-                    </script>
                     <link href="/assets_livewire/css/custom.css?v=1727433676" rel="stylesheet">
                 </head>
 
                 <body class="page-job-tagvn ">
 
-                    <a class="hide smart-banner-bk" target="_blank"
+                    {{-- <a class="hide smart-banner-bk" target="_blank"
                         href="/site/download?utm_source=web_ntv&utm_medium=mobile_banner"><img width="500" height="100"
                             style="border-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); margin: auto; display: block; max-width: 100% !important;"
-                            alt="Tải app Rzcareer" src=""
-                            class="img-responsive lazy"></a>
+                            alt="Tải app Rzcareer" src="/media/img/500x100-banner-1.gif"
+                            class="img-responsive lazy"></a> --}}
                     @livewire('inc.header-nav')
 
                     <style>
@@ -248,7 +201,8 @@
                                                                         <div class="row">
                                                                             <div class="col-sm-12 col-sm-offset-1-bk">
                                                                                 <div>
-                                                                                    <form class="bt-form clearfix">
+                                                                                    <form wire:submit.prevent="search"
+                                                                                        class="bt-form clearfix">
                                                                                         <!-- Prevent default submit -->
                                                                                         <div
                                                                                             class="row no-mrg teks-search">
@@ -447,51 +401,57 @@
                                                                 <div class="row inner-header-page"
                                                                     style=" padding: 0 !important; min-height: initial !important; ">
                                                                     <div class="mt-10 col-sm-12">
-
+                                                                        @php
+                                                                        $careerName = null;
+                                                                        if ($career_id) {
+                                                                        $career =
+                                                                        App\Models\CommonCareer::find($career_id);
+                                                                        $careerName = $career ? $career->name : null;
+                                                                        }
+                                                                        @endphp
                                                                         <div class="fillters clearfix">
                                                                             <div class="teks-category dropdown "
                                                                                 title="Ngành nghề">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
                                                                                         class="bx bxs-category"></i>
-                                                                                    Ngành nghề
+                                                                                    {{ $careerName?? "Ngành
+                                                                                    nghề" }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    @foreach(
-                                                                                    App\Models\CommonCareer::withCount('jobPosts')
-                                                                                    ->orderBy('job_posts_count', 'desc')
-                                                                                    ->limit(45)
-                                                                                    ->get() as $career)
-                                                                                    <li>
+                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
+                                                                                    'desc')->get() as $career_item)
 
-                                                                                        <a class="a accordion-toggle"
-                                                                                            href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}">
-                                                                                            {{ $career->name }}
+
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('career_id', '{{ $career_item->id }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $career_item->name
+                                                                                            }}
                                                                                         </a>
                                                                                     </li>
 
+
                                                                                     @endforeach
 
-                                                                                </ul> --}}
+                                                                                    @if ($career_id)
 
-                                                                                <select wire:model="career_id"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value="">
-                                                                                        <i class="bx bxs-category"></i>
-                                                                                        Tất cả ngành nghề
-                                                                                    </option>
-                                                                                    @foreach(App\Models\CommonCareer::withCount('jobPosts')->orderBy('id',
-                                                                                    'desc')->get() as $career_item)
-                                                                                    <option
-                                                                                        value="{{ $career_item->id }}">
-                                                                                        {{
-                                                                                        $career_item->name }}</option>
-                                                                                    @endforeach
-                                                                                </select>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('career_id', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
 
                                                                             </div>
                                                                             <style>
@@ -506,115 +466,138 @@
                                                                             </style>
                                                                             <div class="dropdown " title="Ngành Nghề">
 
-                                                                                {{-- <button
+                                                                                <button id="jobTypeButton"
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown">
                                                                                     <i class="bx bx-briefcase"></i>
-                                                                                    Loại hình
+                                                                                    {{ $job_type ?: 'Loại hình' }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?type=full-time">Danh
-                                                                                            sách loại hình công
-                                                                                            việc...</span>
-                                                                                    </li>
-
-                                                                                </ul> --}}
-                                                                                <select wire:model.live="job_type"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <i class="bx bx-briefcase"></i>
-                                                                                    <option value=""> Tất cả loại hình
-                                                                                    </option>
-
                                                                                     @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
                                                                                     as $jobType_item)
-                                                                                    <option
-                                                                                        value="{{$jobType_item->job_type}}">
-                                                                                        {{$jobType_item->job_type}}
-                                                                                    </option>
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('job_type', '{{ $jobType_item->job_type }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $jobType_item->job_type
+                                                                                            }}
+                                                                                        </a>
+                                                                                    </li>
                                                                                     @endforeach
+                                                                                    @if ($job_type)
+                                                                                    <li class="divider"></li>
 
-                                                                                </select>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('job_type', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
+
+                                                                                {{-- <script>
+                                                                                    function selectJobType(jobType) {
+                                                                                        var button = document.getElementById("jobTypeButton");
+                                                                                        button.innerHTML = '<i class="bx bx-briefcase"></i> ' + (jobType || 'Tất cả loại hình') + ' <span class="caret"></span>';
+                                                                                        Livewire.emit('setJobType', jobType);
+                                                                                    }
+                                                                                </script> --}}
+
 
                                                                             </div>
                                                                             <div class="dropdown " title="Mức lương">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
-                                                                                        class="bx bx-money"></i> Mức
-                                                                                    lương <span class="caret"></span>
+                                                                                        class="bx bx-money"></i>
+                                                                                    @if($salary &&
+                                                                                    isset($salaryRanges[$salary]))
+                                                                                    {{ $salaryRanges[$salary] }}
+                                                                                    @else
+                                                                                    Mức lương
+                                                                                    @endif
+                                                                                    <span class="caret"></span>
                                                                                 </button>
+
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?salary=0-5">Danh
-                                                                                            sách lương...</span></li>
+                                                                                    @foreach($salaryRanges as $range =>
+                                                                                    $range_label)
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('salary', '{{ $range }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $range_label }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
+                                                                                    @if ($salary)
 
-                                                                                </ul> --}}
 
-                                                                                <select wire:model="salary"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value=""><i
-                                                                                            class="bx bx-money"></i>
-                                                                                        Tất cả mức lương</option>
-                                                                                    <option value="2000000">
-                                                                                        > 2 triệu</option>
-                                                                                    <option value="5000000">
-                                                                                        > 5triệu
-                                                                                    </option>
-                                                                                    <option value="10000000 ">
-                                                                                        > 10 triệu
-                                                                                    </option>
-                                                                                    <option value="14000000 "> > 14
-                                                                                        triệu
-                                                                                    </option>
-                                                                                    <option value="20000000 "> > 20
-                                                                                        triệu
-                                                                                    </option>
-                                                                                </select>
+                                                                                    <li class="divider"></li>
 
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('salary', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+                                                                                </ul>
                                                                             </div>
 
                                                                             <div class="dropdown " title="Chức vụ">
-                                                                                {{-- <button
+                                                                                <button
                                                                                     class="btn btn-xs dropdown-toggle"
                                                                                     type="button"
                                                                                     data-toggle="dropdown"><i
-                                                                                        class="bx bx-user"></i> Chức vụ
+                                                                                        class="bx bx-user"></i>{{
+                                                                                    $position ?: 'Chức vụ' }}
                                                                                     <span class="caret"></span>
                                                                                 </button>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?position=1">Danh
-                                                                                            sách vị trí công việc</span>
-                                                                                    </li>
-
-                                                                                </ul> --}}
-
-                                                                                <select wire:model.live="position"
-                                                                                    class="btn btn-xs dropdown-toggle">
-                                                                                    <option value=""> <i
-                                                                                            class="bx bx-user"></i> Chọn
-                                                                                        chức vụ</option>
-
                                                                                     @foreach(App\Models\JobPost::select('position')->distinct()->get()
                                                                                     as $position_item)
-                                                                                    <option
-                                                                                        value="{{$position_item->position}}">
-                                                                                        {{$position_item->position}}
-                                                                                    </option>
-                                                                                    @endforeach
-                                                                                </select>
 
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('position', '{{$position_item->position }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $position_item->position
+                                                                                            }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
+                                                                                    @if ($position)
+
+                                                                                    <li class="divider"></li>
+
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('position', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
+
+                                                                                </ul>
                                                                             </div>
+
                                                                             <div class="dropdown " title="Kinh nghiệm">
                                                                                 <button
                                                                                     class="btn btn-xs dropdown-toggle"
@@ -623,13 +606,38 @@
                                                                                         class="bx bx-star"></i> Kinh
                                                                                     nghiệm <span class="caret"></span>
                                                                                 </button>
+                                                                                <?php
+                                                                                $experiences = [
+                                                                                '0-1 years' => 'Dưới 1 năm',
+                                                                                '2-3 years' => '2 - 3 năm',
+                                                                                '3-5 years' => '3 - 5 năm',
+                                                                                '5-10 years' => '5 - 10 năm'
+                                                                            ];?>
                                                                                 <ul
                                                                                     class="dropdown-menu dropdown-menu-left">
-                                                                                    <li><span
-                                                                                            class="a accordion-toggle "
-                                                                                            data-href="/viec-lam-tai-chinh-ngan-hang.html?exp=0-0">Danh
-                                                                                            sách kinh nghiệm</span></li>
+                                                                                    @foreach($experiences as $exp =>
+                                                                                    $exp_label)
+                                                                                    <li>
+                                                                                        <a wire:click.prevent="updateFilter('experience','{{ $exp }}')"
+                                                                                            class="dropdown-item">
+                                                                                            {{ $exp_label }}
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    @endforeach
 
+                                                                                    @if ($experience)
+                                                                                    <li class="divider"></li>
+                                                                                    <li>
+                                                                                        <a href="#"
+                                                                                            wire:click.prevent="updateFilter('experience', '')"
+                                                                                            class="dropdown-item text-warning">Bỏ
+                                                                                            chọn
+                                                                                            <i
+                                                                                                class="bx bx-x-circle"></i>
+                                                                                        </a>
+
+                                                                                    </li>
+                                                                                    @endif
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
@@ -944,20 +952,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="mrg-bot-20"><a class="custom-banner"
-                                                                href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-bao-hiem-nhan-tho-mb-ageas-life-150333109.html?utm_source=job_sidebar_1&utm_medium=banner"
-                                                                target="_blank"><img width="100" height="100"
-                                                                    style="margin: auto" loading="lazy"
-                                                                    src=" "
-                                                                    width="100%" class="img-responsive"
-                                                                    alt="banner-Rzcareer" /></a></div>
-                                                        <div class="mrg-bot-20"><a class="custom-banner"
-                                                                href="https://Rzcareer.vn/viec-lam/nhan-vien-kinh-doanh-bds-ho-tro-luong-cung-thu-nhap-den-50-trieu-thang-18705914398.html?utm_source=job_sidebar_2&utm_medium=banner"
-                                                                target="_blank"><img width="100" height="100"
-                                                                    style="margin: auto" loading="lazy"
-                                                                    src=" "
-                                                                    width="100%" class="img-responsive"
-                                                                    alt="banner-Rzcareer" /></a></div>
+
                                                         <div class="blog-sidebar">
 
                                                             <div
@@ -1445,12 +1440,12 @@
                             </div>
                         </div>
                     </section>
-                    <section class="gray-bg padd-top-15 hide padd-bot-15 brows-job-category job-list full">
+                    {{-- <section class="gray-bg padd-top-15 hide padd-bot-15 brows-job-category job-list full">
                         <div class="container">
-                            <div class="row"><img width="100" height="100" src="/loading.gif"
+                            <div class="row"><img width="100" height="100" src="https://Rzcareer.vn/loading.gif"
                                     style="display: block;margin: auto;"></div>
                         </div>
-                    </section>
+                    </section> --}}
                     <section class="padd-top-5 teks-seo">
                         <div class="container">
 
@@ -1723,7 +1718,7 @@
                                                 </ul>
                                                 <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
                                                     <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                            href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                                 class='bx bx-xs bxl-facebook'></i></a></li>
                                                     <li class="list-inline-item"><a
                                                             href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1766,7 +1761,7 @@
                                                     title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow" target="_blank"
                                                     href="https://employer.jobsgo.vn"
-                                                    title="JobsGO dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho
+                                                    title="RZCareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho
                                                         Nhà Tuyển
                                                         Dụng</u></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
@@ -1784,7 +1779,7 @@
                                         <ul
                                             class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
                                             <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/JobsGOVN/" target="_blank"><i
+                                                    href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
                                                         class='bx bx-xs bxl-facebook'></i></a></li>
                                             <li class="list-inline-item"><a rel="nofollow"
                                                     href="https://www.linkedin.com/company/josbgo.vn/"
@@ -1803,7 +1798,7 @@
                                             trên mạng số
                                             568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> ©
                                             2024 Công ty Cổ
-                                            phần JobsGO. All Rights Reserved.</p>
+                                            phần RZCareer. All Rights Reserved.</p>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="text-center">
@@ -1844,13 +1839,13 @@
                             height: 60px !important;
                         }
                     </style>
-                    <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow"
+                    {{-- <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow"
                         class="zalo-chat-widget">
                         <img loading="lazy" src="/img/2024/zalo.svg" alt="Rzcareer">
-                    </a>
+                    </a> --}}
 
 
-                    <script>
+                    {{-- <script>
                         if (!localStorage.getItem("tokenCvBuilder")) {
                 localStorage.setItem("tokenCvBuilder",
                     'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hZG1pbi5qb2JzZ28udm4iLCJzdWIiOiJjYW5kaWRhdGVfYXBpIiwiaWF0IjoxNzI3NDMzNjc2LCJleHAiOjI0ODQyOTc2NzYsInVpZCI6MjU5MzMxN30.DmJMD7EmJF8RUS8lwY-I--b1xA_ksn-OXd903HNAxQA'
@@ -1861,7 +1856,7 @@
                     '{"candidate_id":"2593317","user_name":"trangiangzxc@gmail.com","name":"Tr\u1ea7n L\u00ea Ho\u00e0ng Giang","avatar":"https:\/\/Rzcareer.vn\/uploads\/avatar\/202409\/2593317_20240920203818.png","date_of_birth":"2004-05-13","current_city":"H\u1ed3 Ch\u00ed Minh","email":"Trangiangzxc@gmail.com","tel":"0337799453","short_bio":"","current_salary":null,"language":"","degree":"Trung h\u1ecdc ph\u1ed5 th\u00f4ng","degree_id":"7","min_expect_salary":null,"max_expect_salary":null,"job_type":"B\u00e1n th\u1eddi gian","job_type_id":"2","status":"0","created":"2024-09-20 14:47:25","updated":"2024-09-20 20:39:17","access_token":"Rzcareer","gender":"male","fb_user_id":"","current_address":"Qu\u1eadn 12, H\u1ed3 Ch\u00ed Minh","current_geo_lat":"","current_geo_long":"","complete_pre_profile":"2","skype":"","linkedin":"","twitter":"","google_plus":"","referal_id":"","hash_tag":"","job_position":"Th\u1ef1c T\u1eadp Sinh","job_position_id":"1","main_cv_template_id":"1","set_cv_template":"0","has_modify":"0","eng_translated":"0","welcome_notification":"0","demo_job":"0","review_date":null,"review_complete":"2","translate_date":null,"translate_complete":"0","accept_email":"1","is_test":"0","chat_username":"c_2593317","subemployer_id":null,"employer_id":null,"video_upload":"","video_upload_preview":"","hide_tel":"0","ward":"","district":"q12","province":"H\u1ed3 Ch\u00ed Minh","percent_complete":"90","update_percent_time":"2024-09-23 11:26:51","request_update_field":"","request_update_status":"0","no_job_history":"0","upload_cv":"1","is_fake":"0","check_fake_time":null,"fake_in_date":null,"rating_app":"0","os":"","contest_register":"0","hrtalent_id":null,"create_type":"web","login_type":"google","fb_messenger_id":"","email_fb":"","is_updated_email":"0","need_reset_matching":"0","auth_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOjI1OTMzMTcsInN1YiI6MjU5MzMxNywiaWF0IjoxNzI2OTYwMzM2LCJleHAiOjE3MjcyMTk1MzZ9.m1Yq22xtZdaRuO5MztmKIGwfGr9XjBWDSir9caw6ZHS5xSZDZkyk-eMrLtLKLJ83Xcbk4pXBsDQCrNehJ1jysPXDFV884YhpJRbnOizzRv-l-Xhv0w4KPJwmub2KssTmWbn1KXHRJOvgV62s_zc5zxNjPQz3UZP_j7IpuTxetl4hFV63PUcMusIpcjRr3T1HI-pzm9W7gSgisTinD3cuiS-l93rcA-O1GZDAEp6KFCqLBBcO7NlNbgAEpsHT166GzpBkZq4xmJ7nZeyEtJC_ObbUUp0TXlR2-yZV1eroHDwrkNqT8ogmu3c8Cx6xxlU20JOYQ8sjYlKPOLatf8fZ7A","password_reset_token":"","facebook":"","facebook_link":null,"google_user_id":"110231117123356408959","account_kit_user_name":"","account_kit_access_token":"","account_kit_user_id":"","gender_auto":"0","tel_verified":"0","email_verified":"1","fill_cv_level":"2","is_checked_avatar":"0","backup_avatar":null,"confirm_find_job":"0","last_confirm_find_job":null,"approve_status":"2","admin_id":"1572","qr_code":"","level":"5","allow_call":"1","allow_app_call":"1","allow_phone_call":"1","career_name":"Nh\u00e2n Vi\u00ean Tuy\u1ec3n D\u1ee5ng","short_bio_html":"","cv_capacity":"8881","username_nologin":"","signed_in":"1","created_by":null,"approve_cv":"1","total_year_of_exp":null,"ip":null,"index_search":"0","others_info":"[{\"others_promise\":\"III.\\nC\u00f4ng ty TNHH DCSOFT \u0111\u00e3 t\u1ea1o ra m\u1ed9t m\u00f4i tr\u01b0\u1eddng th\u1ef1c t\u1eadp l\u00fd t\u01b0\u1edfng v\u1edbi \u0111\u1ed9i ng\u0169  nh\u00e2n s\u1ef1 t\u1eadn t\u00e2m, ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e0o t\u1ea1o b\u00e0i b\u1ea3n, v\u00e0 c\u01a1 h\u1ed9i tham gia c\u00e1c d\u1ef1 \u00e1n th\u1ef1c  t\u1ebf. T\u1ea5t c\u1ea3 nh\u1eefng y\u1ebfu t\u1ed1 n\u00e0y \u0111\u00e3 mang l\u1ea1i tr\u1ea3i nghi\u1ec7m th\u1ef1c t\u1eadp tuy\u1ec7t v\u1eddi v\u00e0 kh\u00f4ng  c\u00f3 g\u00ec c\u1ea7n ki\u1ebfn ngh\u1ecb th\u00eam.\"}]","career_name_auto":"","create_source":""}'
                     ));
             }
-                    </script>
+                    </script> --}}
 
                     <!--<div class="maintenance-banner">
                          Để tăng chất lượng dịch vụ, Rzcareer.vn tiến hành bảo trì hệ thống từ <b>21h45 đến 23h45</b> ngày 13/04/2024. Trân trọng!

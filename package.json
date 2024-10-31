@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "dev2": "concurrently \"php artisan serve\" \"npm run dev\""
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
@@ -43,6 +44,7 @@
     "color-name": "^1.1.4",
     "combined-stream": "^1.0.8",
     "commander": "^4.1.1",
+    "concurrently": "^9.0.1",
     "cross-spawn": "^7.0.3",
     "cssesc": "^3.0.0",
     "delayed-stream": "^1.0.0",

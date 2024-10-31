@@ -145,7 +145,8 @@ class Review extends Component
                 'advancedSkills',
                 'languageSkills',
                 'seekerProfile',
-            ])->get();
+            ])
+            ->where('type', 'primary')->get();
 
             // Check advancedSkills
             if (

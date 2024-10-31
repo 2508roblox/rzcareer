@@ -1,7 +1,7 @@
 <div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
         <!-- Please send your resume with cover letter to team@jobsgo.vn -->
         <!DOCTYPE html>
         <html lang="vi-VN">
@@ -29,7 +29,7 @@
             <meta name="csrf-token"
                 content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-            <title>Bảng tin - JobsGO</title>
+            <title>Bảng tin - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                 type="text/css">
@@ -215,13 +215,13 @@
                         </ul>
                         <div class=" heading-elements panel-nav ">
                             <ul class=" nav nav-pills ">
-                
+
                                 <li class=" dropdown " id=" dropdown-sort ">
                                     <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
                                         <i class=" icon-sort "></i>
                                         <span class=" position-right ">Sắp xếp</span>
                                     </a>
-                
+
                                     <ul class=" dropdown-menu dropdown-menu-right " id=" dropdown-menu-sort ">
                                         <li>
                                             <a href=" /candidate/jobs-applied?sort[date]=asc "><i class="
@@ -234,13 +234,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                
+
                                 <li class=" dropdown " id=" dropdown-filter ">
                                     <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
                                         <i class=" fa fa-search "></i>
                                         <span class=" position-right ">Lọc</span>
                                     </a>
-                
+
                                     <ul class=" dropdown-menu dropdown-menu-right " id=" statusDropdown ">
                                                                     <li>
                                                 <label><input type=" checkbox " value=" 0 " data-id=" 0 ">
@@ -286,20 +286,20 @@
                                 </li>
                             </ul>
                         </div>
-                
+
                     </div>
                 </div>
                 <!-- Detached content -->
                 <div class=" container-detached ">
                     <div class=" content-detached ">
-                
+
                         <!-- Tab content -->
                         <div class=" tab-content ">
                             <div class=" tab-pane fade in active " id=" profile ">
-                
+
                                 <!-- Cards layout -->
                                 <div class=" panel panel-white ">
-                
+
                                     <ul class="media-list">
                                         @foreach($appliedJobs as $job)
                                             @php
@@ -314,7 +314,7 @@
                                                             onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'">
                                                     </a>
                                                 </div>
-                                    
+
                                                 <div class="media-body">
                                                     <h6 class="media-heading text-semibold" style="display: flex; justify-content: space-between">
                                                         <div class="clamp-text">
@@ -325,7 +325,7 @@
                                                             {{ $job->created_at->format('d/m/Y') }}
                                                         </span>
                                                     </h6>
-                                    
+
                                                     <ul class="list-inline list-inline-separate text-muted mb-10">
                                                         <li title="Địa điểm làm việc">
                                                             <span class="clamp-text-place">
@@ -339,7 +339,7 @@
                                                         </li>
                                                         <li title="Mức lương">
                                                             <span class="clamp-text-place">
-                                                                <i class="fa fa-money" aria-hidden="true"></i> 
+                                                                <i class="fa fa-money" aria-hidden="true"></i>
                                                                 {{ number_format($jobPost->salary_min / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost->salary_max / 1_000_000, 0, '.', ',') }} triệu VNĐ
                                                             </span>
                                                         </li>
@@ -350,12 +350,12 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                    
+
                                                 <div class="media-right text-nowrap" title="Trạng thái">
                                                     <span class="label bg-primary">Mới ứng tuyển</span>
-                                                    <a wire:click="cancelApplication({{ $job->id }})" 
+                                                    <a wire:click="cancelApplication({{ $job->id }})"
                                                        class="text-uppercase hide btn btn-cancel btn-danger btn-xs"
-                                                      
+
                                                      >
                                                        <i class="icon-trash"></i> Hủy bỏ
                                                     </a>
@@ -363,7 +363,7 @@
                                             </li>
                                         @endforeach
                                     </ul>
-                                    
+
 
                                 <div class="text-center pb-20 "> </div>
 
@@ -450,14 +450,14 @@
                             f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
                             $('.btn-submit').click(function () {
                                 var r = $('#reason');
-                
+
                                 var is_checked = false;
                                 $('.checkbox').each(function () {
                                     if ($(this).find('input[name="reason[] "]').is(":checked ") || r.val() != '') {
                                         is_checked = true;
                                     }
                                 });
-                
+
                                 if (is_checked == false) {
                                     r.focus();
                                 } else {
@@ -465,35 +465,35 @@
                                 }
                             });
                         });
-                
+
                         const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
-                
+
                         const updateUrlAndCheckbox = () => {
                             const checkedStatusValues = Array.from(checkboxes)
                                 .filter(checkbox => checkbox.checked)
                                 .map(checkbox => checkbox.getAttribute('data-id'));
                             window.location.href = updateUrlParams('status', checkedStatusValues);
                         };
-                
+
                         checkboxes.forEach(checkbox => {
                             checkbox.addEventListener('click', () => {
                                 updateUrlAndCheckbox();
                             });
                         });
-                
+
                         const urlParams = new URLSearchParams(window.location.search);
                         const checkboxGroups = ['statusDropdown'];
-                
+
                         checkboxGroups.forEach(group => {
                             const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
                             const statusValues = urlParams.get('status');
-                
+
                             if (statusValues) {
                                 const statusArray = statusValues.split(',');
-                
+
                                 checkboxes.forEach(checkbox => {
                                     const dataId = checkbox.getAttribute('data-id');
-                
+
                                     if (statusArray.includes(dataId)) {
                                         checkbox.checked = true;
                                     }
@@ -501,7 +501,7 @@
                             }
                         });
                     });
-                
+
                     $(document).ready(function () {
                         $("#dropdown-sort ").hover(function () {
                             $(this).addClass("open ");
@@ -514,7 +514,7 @@
                                 $(this).closest("#dropdown-sort ").removeClass("open ");
                             });
                         });
-                
+
                         $("#dropdown-filter ").hover(function () {
                             $(this).addClass("open ");
                             $("#dropdown-sort ").removeClass("open ")
@@ -640,7 +640,7 @@
 <!-- Footer -->
 <div class="footer text-muted hidden-xs">
     <div class="mt-30">
-        &copy; 2024 Copyright JobsGO. All Rights Reserved.
+        &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
     </div>
 
@@ -708,7 +708,7 @@
                    }
                }
            });
- 
+
        },5000);*/
 
     $(function() {

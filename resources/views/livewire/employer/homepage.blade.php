@@ -1,12 +1,12 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
-    <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+    <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
+    <!-- Please send your resume with cover letter to team@RZcareer.vn -->
     <!DOCTYPE html>
     <html class="no-js" lang="vi">
 
     <head>
-        <link rel="canonical" href="https://employer.jobsgo.vn/" />
+        <link rel="canonical" href="https://employer.RZcareer.vn/" />
         <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
@@ -32,22 +32,22 @@
         <meta name="description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
         <meta name="robots" content="index,follow,noodp" />
-        <meta name="author" content="jobsgo.vn" />
+        <meta name="author" content="RZcareer.vn" />
         <meta http-equiv="refresh" content="3600" />
         <meta property="og:description"
             content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta property="og:image" content="https://employer.jobsgo.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.jobsgo.vn" />
+        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
+        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
         <meta property="og:locale" content="vi_VN" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.jobsgo.vn" />
-        <meta property="og:title" content="JobsGO - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên" />
+        <meta property="og:url" content="https://employer.RZcareer.vn" />
+        <meta property="og:title" content="RZcareer - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên" />
         <meta property="fb:app_id" content="1590841851212703" />
         <meta name="geo.placename" content="Ha Noi, Viet Nam" />
         <meta name="geo.region" content="VN-HN" />
         <meta name="geo.position" content="21.031965, 105.804934" />
         <meta name="ICBM" content="21.031965, 105.804934" /> <!-- Title -->
-        <title>JobsGO - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên</title> <!-- Font Awesome Icon -->
+        <title>RZcareer - Đăng tin tuyển dụng &amp; tiếp cận 2.5 triệu ứng viên</title> <!-- Font Awesome Icon -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/css/font-awesome.min.css?v=1.2"> <!-- Plugin-CSS -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
@@ -91,15 +91,15 @@
                 <div class="row v-center">
                     <div class="col-xs-12 col-md-5 header-text">
                         <h2>Tìm nhân sự <span>chất lượng</span> theo cách hoàn toàn mới!</h2>
-                        <p><strong>JobsGO</strong> giúp bạn tìm ứng viên phù hợp thật nhanh và hiệu quả. Hệ thống
-                            <strong>JobsGO</strong> tìm kiếm thông minh và chủ động gợi ý các ứng viên thích hợp, đồng
+                        <p><strong>RZcareer</strong> giúp bạn tìm ứng viên phù hợp thật nhanh và hiệu quả. Hệ thống
+                            <strong>RZcareer</strong> tìm kiếm thông minh và chủ động gợi ý các ứng viên thích hợp, đồng
                             thời tự động hoá quy trình quản lý ứng viên.
                         </p> <a href="#about-us" class="button white">Tìm hiểu thêm</a>
                     </div>
                     <div class="hidden-xs hidden-sm col-md-6 text-right">
                         <div class="screen-box">
-                            <div class="item"><img src="/loading.gif" class="lazy"
-                                    data-src="/media/img/screen-3.jpg" alt=""></div>
+                            <div class="item"><img src="/employer_assets/media/img/screen-3.jpg" class="lazy"
+                                    data-src="/employer_assets/media/img/screen-3.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -124,180 +124,14 @@
         </style>
         <div class="container">
             <!--<a href="https://gohire.vn" target="_blank"> <img src="/loading.gif" class="lazy" data-src="/media/img/banner/16122021.png" class="img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
-            <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://jobsgo.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
+            <!--<a href="/site/signup"> <img src="/loading.gif" data-src="https://RZcareer.vn/blog/wp-content/uploads/2022/06/imgpsh_fullsize_anim-10-1.png" class="lazy img-responsive mt-20 mb-20" alt="banner-1200x100"> </a>-->
         </div>
-        <section class="section-padding gray-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-                        <div class="page-title">
-                            <h2 class="pb-0 mb-0"> Tại sao chọn <span>chúng tôi</span></h2>
-                            <p>Các doanh nghiệp lựa chọn JobsGO để tuyển dụng nhân sự</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="box-taisao">
-                            <h3>1.600.000+</h3>
-                            <p>Lượng ứng viên truy cập sử dụng hàng tháng</p> <img src="/loading.gif"
-                                data-src="media/img/tai-sao4.png" class="img-responsive lazy" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="box-taisao">
-                            <h3>AI thông minh</h3>
-                            <p>Giúp tìm kiếm ứng viên phù hợp nhanh chóng </p> <img src="/loading.gif"
-                                data-src="media/img/tai-sao1.png" class="img-responsive lazy" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="box-taisao">
-                            <h3>Tuyển dụng đa kênh</h3>
-                            <p>Kết nối thêm với nguồn ứng viên từ: Facebook, Indeed, Jobstreet…</p> <img
-                                src="/loading.gif" data-src="media/img/tai-sao2.png"
-                                class="img-responsive lazy" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="box-taisao">
-                            <h3>Support 24/7</h3>
-                            <p>Đội ngũ CSKH tận tình luôn sẵn sàng hỗ trợ Khách hàng</p> <img
-                                src="/loading.gif" data-src="media/img/tai-sao3.png"
-                                class="img-responsive lazy" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="angle-bg sky-bg section-padding" id="about-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div id="caption_slide" class="carousel slide caption-slider" data-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active row">
-                                    <div class="v-center">
-                                        <div class="col-xs-12 col-md-6">
-                                            <div class="caption-title mb-30" data-animation="animated fadeInUp">
-                                                <h3>Hệ thống chủ động tìm & gợi ý ứng viên</h3>
-                                            </div>
-                                            <div class="caption-desc" data-animation="animated fadeInUp">
-                                                <p>Từ việc phân tích & thấu hiểu profile doanh nghiệp và từng job đăng
-                                                    tuyển, JobsGO chủ động tìm kiếm & mang về cho bạn các ứng viên phù
-                                                    hợp nhất. Mỗi khi có ứng viên tiềm năng gia nhập hệ thống, bạn sẽ
-                                                    được thông báo ngay lập tức.</p>
-                                            </div>
-                                            <div class="caption-button" data-animation="animated fadeInUp"></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-3.jpg" alt=""></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-5.jpg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item row">
-                                    <div class="v-center">
-                                        <div class="col-xs-12 col-md-6">
-                                            <div class="caption-title mb-30" data-animation="animated fadeInUp">
-                                                <h3>Tự động hoá quy trình quản lý ứng viên</h3>
-                                            </div>
-                                            <div class="caption-desc" data-animation="animated fadeInUp">
-                                                <p>Cho phép bạn quản lý toàn bộ các job đăng tuyển và ứng viên rất chi
-                                                    tiết và hiệu quả. <br> Tự động hoá việc chăm sóc ứng viên, từ việc
-                                                    gửi các thông báo kết quả, cho đến việc yêu cầu thêm thông tin hồ
-                                                    sơ.</p>
-                                            </div>
-                                            <div class="caption-button" data-animation="animated fadeInUp"></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-1.jpg" alt=""></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-3.jpg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item row">
-                                    <div class="v-center">
-                                        <div class="col-xs-12 col-md-6">
-                                            <div class="caption-title mb-30" data-animation="animated fadeInUp">
-                                                <h3>Chat trực tiếp với ứng viên</h3>
-                                            </div>
-                                            <div class="caption-desc" data-animation="animated fadeInUp">
-                                                <p>Bạn có thể mở & khoá kênh giao tiếp với ứng viên để có được thông tin
-                                                    nhanh gọn. <br> Chức năng chat được thiết kế thông minh để ứng viên
-                                                    không thể làm phiền đến bạn khi chưa được cho phép. </p>
-                                            </div>
-                                            <div class="caption-button" data-animation="animated fadeInUp"></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-1.jpg" alt=""></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-2.jpg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item row">
-                                    <div class="v-center">
-                                        <div class="col-xs-12 col-md-6">
-                                            <div class="caption-title mb-30" data-animation="animated fadeInUp">
-                                                <h3>Xây dựng thương hiệu hiệu quả</h3>
-                                            </div>
-                                            <div class="caption-desc" data-animation="animated fadeInUp">
-                                                <p> Thương hiệu doanh nghiệp bạn được xây dựng qua profile ấn tượng trên
-                                                    JobsGO. <br> Hàng nghìn ứng viên biết đến môi trường làm việc, văn
-                                                    hoá, cũng như business của doanh nghiệp bạn.</p>
-                                            </div>
-                                            <div class="caption-button" data-animation="animated fadeInUp"></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo one" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-3.jpg" alt=""></div>
-                                        </div>
-                                        <div class="col-xs-6 col-md-3">
-                                            <div class="caption-photo two" data-animation="animated fadeInRight"><img
-                                                    src="/loading.gif" class="lazy"
-                                                    data-src="media/img/screen-6.jpg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- Indicators -->
-                            <ol class="carousel-indicators caption-indector">
-                                <li data-target="#caption_slide" data-slide-to="0" class="active"> Hệ thống chủ động tìm
-                                    & gợi ý ứng viên</li>
-                                <li data-target="#caption_slide" data-slide-to="1"> Tự động hoá quy trình quản lý ứng
-                                    viên</li>
-                                <li data-target="#caption_slide" data-slide-to="2"> Chat trực tiếp với ứng viên</li>
-                                <li data-target="#caption_slide" data-slide-to="3"> Xây dựng thương hiệu hiệu quả</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="section-padding white-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                         <div class="page-title">
-                            <h2 class="pb-0 mb-0"> BÁO GIÁ DỊCH VỤ ĐĂNG TIN TUYỂN DỤNG CỦA <span>JobsGO</span></h2>
+                            <h2 class="pb-0 mb-0"> BÁO GIÁ DỊCH VỤ ĐĂNG TIN TUYỂN DỤNG CỦA <span>RZcareer</span></h2>
                             <p>Chúng tôi cung cấp nhiều dịch vụ giúp doanh nghiệp kết nối với ứng viên phù hợp hiệu quả
                                 & tối ưu chi phí</p>
                         </div>
@@ -411,58 +245,7 @@
                 </div>
             </div>
         </section>
-        <section class="gray-bg section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-                        <div class="page-title">
-                            <h2>VỀ CHÚNG TÔI</h2>
-                            <p>JobsGO - Kênh thông tin tuyển dụng và việc làm dành cho mọi Doanh nghiệp và Ứng viên.
-                                Chúng tôi tin tưởng sẽ đem lại “HY VỌNG” cho Doanh nghiệp tìm kiếm nhân tài và cho Ứng
-                                viên tìm kiếm cơ hội nghề nghiệp. Với 2 hệ thống: Website dành cho Nhà Tuyển Dụng và Ứng
-                                dụng (Application) dành cho Người Tìm Việc, JobsGO sẽ mang lại những trải nghiệm mới mẻ,
-                                thú vị; kết nối ước mơ chinh phục công việc của mọi nhân tài và giúp doanh nghiệp xây
-                                dựng đội ngũ nhân sự vững mạnh.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="box">
-                            <div class="box-icon"><i class="fa fa-desktop"></i></div>
-                            <h4>Website</h4>
-                            <p>Website hỗ trợ Nhà Tuyển Dụng tìm kiếm nhân sự, quản lý công việc, ứng viên, xây dựng
-                                nguồn dữ liệu phong phú.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="box">
-                            <div class="box-icon"><i class="fa fa-mobile"></i></div>
-                            <h4>Mobile</h4>
-                            <p>Ứng dụng tìm kiếm việc làm giúp Người Tìm Việc tiếp cận được công việc phù hợp nhất ở mọi
-                                nơi và mọi thời điểm.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="box">
-                            <div class="box-icon"><i class="fa fa-suitcase"></i></div>
-                            <h4>Ngành nghề tập trung</h4>
-                            <p class="more"> Với việc chuyên sâu vào mảng tuyển dụng và tìm kiếm việc làm của 3 lĩnh
-                                vực: Công nghệ thông tin, Quảng cáo trực tuyến, PR - Marketing, Người Tìm việc hay Nhà
-                                Tuyển dụng sẽ kết nối được đúng với đối tượng, phù hợp với nhu cầu. </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="box">
-                            <div class="box-icon"><i class="fa fa-bookmark"></i></div>
-                            <h4>Tiết kiệm chi phí</h4>
-                            <p>Tiết kiệm chi phí, thời gian, đạt được hiệu quả, đáp ứng được mọi nhu cầu tìm việc và tìm
-                                nhân tài.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <style>
             a .img-responsive {
@@ -499,7 +282,7 @@
                             data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body text-center" style="padding: 0;"><a href="/site/signup?utm_source=banner">
-                            <img src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/banner-thang-9.png"
+                            <img src="https://RZcareer.vn/blog/wp-content/uploads/2024/09/banner-thang-9.png"
                                 class="img-responsive" alt=""> </a></div>
                 </div>
             </div>
@@ -509,6 +292,7 @@
         <style>
             .modal-backdrop {
                 z-index: 999999999;
+                display: none;
             }
 
             .modal {

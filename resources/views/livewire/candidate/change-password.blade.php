@@ -126,33 +126,33 @@
                                                     <div class="form-group field-changepasswordform-new_password required">
                                                         <label class="control-label col-sm-4 text-right" for="new_password">Mật khẩu mới</label>
                                                         <div class="col-sm-4">
-                                                            <input type="password" id="new_password" class="form-control" 
-                                                                wire:model.defer="new_password" 
+                                                            <input type="password" id="new_password" class="form-control"
+                                                                wire:model.defer="new_password"
                                                                 placeholder="Nhập mật khẩu mới" aria-required="true">
-                                                
+
                                                             <p class="help-block help-block-error"></p>
                                                         </div>
                                                     </div>
                                                     <div class="form-group field-changepasswordform-confirm_password required">
                                                         <label class="control-label col-sm-4 text-right" for="confirm_password">Xác nhận mật khẩu</label>
                                                         <div class="col-sm-4">
-                                                            <input type="password" id="confirm_password" class="form-control" 
-                                                                wire:model.defer="confirm_password" 
+                                                            <input type="password" id="confirm_password" class="form-control"
+                                                                wire:model.defer="confirm_password"
                                                                 placeholder="Nhập lại mật khẩu mới" aria-required="true">
-                                                
+
                                                             <p class="help-block help-block-error"></p>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="col-sm-offset-4 col-sm-5">
                                                             <button type="submit" class="btn btn-primary btn-ladda btn-ladda-spinner btn-ladda-progress" data-style="zoom-out">
-                                                                <i class="icon-floppy-disk position-left"></i> 
+                                                                <i class="icon-floppy-disk position-left"></i>
                                                                 <span class="ladda-label">Lưu lại</span>
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </form>
-                                                
+
                                             </div>
                                         </div>
                                         <!-- /profile info -->
@@ -277,7 +277,7 @@
                 <!-- Footer -->
                 <div class="footer text-muted hidden-xs">
                     <div class="mt-30">
-                        &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                        &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                     </div>
 
@@ -310,7 +310,7 @@
             </div><!-- /.modal -->
 
             <!-- Modal -->
-        
+
         </body>
 
         </html>

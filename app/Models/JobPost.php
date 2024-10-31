@@ -39,4 +39,8 @@ class JobPost extends Model
     {
         return $this->hasMany(PostActivity::class);
     }
+    public function jobPostServices()
+    {
+        return $this->hasMany(JobPostService::class, );
+    }
 }

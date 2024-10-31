@@ -10,7 +10,9 @@ class JobPostService extends Model
     use HasFactory;
 
     protected $fillable = ['purchased_service_id', 'list_jobs', 'start_date', 'end_date'];
-
+    protected $casts = [
+        'list_jobs' => 'json', // Đảm bảo list_jobs được cast thành mảng
+    ];
     public function job()
     {
         return $this->belongsTo(JobPost::class);

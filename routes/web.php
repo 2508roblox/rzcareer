@@ -14,12 +14,14 @@ use App\Livewire\Candidate\JobsApplied;
 use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
+use App\Livewire\Candidate\ReviewUploadResume;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
 use App\Livewire\DanhSachNganhNghe;
 use App\Livewire\DocumentAttachment;
 use App\Livewire\Employer\CandidateList;
 use App\Livewire\Employer\Candidates;
+use App\Livewire\Employer\Checkout;
 use App\Livewire\Employer\Homepage;
 use App\Livewire\Employer\Login as EmployerLogin;
 use App\Livewire\Employer\Order;
@@ -51,7 +53,9 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class);
     Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
-    Route::get('/candidate/review', Review::class);
+    Route::get('/candidate/review', Review::class)->name('candidate.show');
+    Route::get('/candidate/review{resume_id}', ReviewUploadResume::class)->name('candidate.review');
+
     Route::get('/candidate/cv-go', CvGo::class);
     Route::get('/candidate/change-password', ChangePassword::class);
     Route::get('/candidate/jobs-applied', JobsApplied::class);
@@ -63,6 +67,7 @@ Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer/candidates', Candidates::class);
     Route::get('/employer/candidate/{id}', CandidateList::class)->name('employer.candidate');
     Route::get('/employer/order', Order::class);
+    Route::get('/employer/order/{code}', Checkout::class);
 });
 Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/employer/login', EmployerLogin::class);

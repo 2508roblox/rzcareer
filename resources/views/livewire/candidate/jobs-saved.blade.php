@@ -1,7 +1,7 @@
 <div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by JobsGO Team -->
+        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
         <!-- Please send your resume with cover letter to team@jobsgo.vn -->
         <!DOCTYPE html>
         <html lang="vi-VN">
@@ -29,7 +29,7 @@
             <meta name="csrf-token"
                 content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-            <title>Bảng tin - JobsGO</title>
+            <title>Bảng tin - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                 type="text/css">
@@ -305,7 +305,7 @@
 
 
                                             @if($savedJobs->isEmpty())
-                                     
+
                                             @else
                                             <ul class="media-list">
                                                 @foreach($savedJobs as $savedJob)
@@ -458,14 +458,14 @@
                             f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
                             $('.btn-submit').click(function () {
                                 var r = $('#reason');
-                
+
                                 var is_checked = false;
                                 $('.checkbox').each(function () {
                                     if ($(this).find('input[name="reason[] "]').is(":checked ") || r.val() != '') {
                                         is_checked = true;
                                     }
                                 });
-                
+
                                 if (is_checked == false) {
                                     r.focus();
                                 } else {
@@ -473,35 +473,35 @@
                                 }
                             });
                         });
-                
+
                         const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
-                
+
                         const updateUrlAndCheckbox = () => {
                             const checkedStatusValues = Array.from(checkboxes)
                                 .filter(checkbox => checkbox.checked)
                                 .map(checkbox => checkbox.getAttribute('data-id'));
                             window.location.href = updateUrlParams('status', checkedStatusValues);
                         };
-                
+
                         checkboxes.forEach(checkbox => {
                             checkbox.addEventListener('click', () => {
                                 updateUrlAndCheckbox();
                             });
                         });
-                
+
                         const urlParams = new URLSearchParams(window.location.search);
                         const checkboxGroups = ['statusDropdown'];
-                
+
                         checkboxGroups.forEach(group => {
                             const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
                             const statusValues = urlParams.get('status');
-                
+
                             if (statusValues) {
                                 const statusArray = statusValues.split(',');
-                
+
                                 checkboxes.forEach(checkbox => {
                                     const dataId = checkbox.getAttribute('data-id');
-                
+
                                     if (statusArray.includes(dataId)) {
                                         checkbox.checked = true;
                                     }
@@ -509,7 +509,7 @@
                             }
                         });
                     });
-                
+
                     $(document).ready(function () {
                         $("#dropdown-sort ").hover(function () {
                             $(this).addClass("open ");
@@ -522,7 +522,7 @@
                                 $(this).closest("#dropdown-sort ").removeClass("open ");
                             });
                         });
-                
+
                         $("#dropdown-filter ").hover(function () {
                             $(this).addClass("open ");
                             $("#dropdown-sort ").removeClass("open ")
@@ -653,7 +653,7 @@
                 <!-- Footer -->
                 <div class="footer text-muted hidden-xs">
                     <div class="mt-30">
-                        &copy; 2024 Copyright JobsGO. All Rights Reserved.
+                        &copy; 2024 Copyright RZCareer. All Rights Reserved.
 
                     </div>
 
@@ -722,7 +722,7 @@
                    }
                }
            });
- 
+
        },5000);*/
 
     $(function() {
