@@ -19,7 +19,8 @@
 
 
                         @if(Auth::check())
-                        <li class="dashboard"><a href="/recruiter">Bảng điều khiển</a></li>
+                        <li class="dashboard"><a target="_blank"href="/recruiter">Bảng điều khiển</a></li>
+                        <li class="dashboard" ><a wire:click='logout' >Đăng xuất </a></li>
                     @else
                         <li><a href="/employer/login">Đăng nhập</a></li>
                         <li class="sign-in"><a href="/recruiter/register">Đăng ký</a></li>
