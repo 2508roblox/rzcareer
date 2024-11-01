@@ -10,6 +10,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -61,7 +62,22 @@ class PurchasedServiceResource extends Resource
                 Tables\Columns\TextColumn::make('purchase_date')->date()->label('Ngày mua'),
                 Tables\Columns\TextColumn::make('quantity')->label('Số lượng bài đăng'),
                 Tables\Columns\TextColumn::make('expiration_date')->label('Ngày hết hạn'),
-                Tables\Columns\TextColumn::make('invoice.status')->label('Trạng thái thanh toán'),
+
+
+                BadgeColumn::make('invoice.status')
+                    ->label('Trạng thái thanh toán')
+                    ->formatStateUsing(fn (string $state) => match ($state) {
+                        'successful' => 'Thành công',
+                        'pending' => 'Chờ xử lý',
+                        default => $state,
+                    })
+                    ->colors([
+                        'success' => 'successful',
+                        'warning' => 'pending',
+                    ]),
+
+
+
             ])
             ->filters([
                 //

@@ -51,13 +51,36 @@ class PaymentHistoryResource extends Resource
     {
         return $table
         ->columns([
-            Tables\Columns\TextColumn::make('user.full_name'),
-            Tables\Columns\TextColumn::make('invoice.invoice_code'), // Điều chỉnh theo quan hệ
-            Tables\Columns\TextColumn::make('balance')->money('usd'),
-            Tables\Columns\TextColumn::make('payment_method'),
-            Tables\Columns\TextColumn::make('status'),
-            Tables\Columns\TextColumn::make('payment_date')->date(),
+            Tables\Columns\TextColumn::make('user.full_name')
+                ->label('Tên người dùng'),
+
+            Tables\Columns\TextColumn::make('invoice.invoice_code')
+                ->label('Mã hóa đơn'),
+
+            Tables\Columns\TextColumn::make('balance')
+                ->label('Số dư')
+                ->money('vnd', true), // Đơn vị VNĐ với hiển thị dạng tiền tệ
+
+            Tables\Columns\TextColumn::make('payment_method')
+                ->label('Phương thức thanh toán'),
+
+            Tables\Columns\BadgeColumn::make('status')
+                ->label('Trạng thái thanh toán')
+                ->formatStateUsing(fn (string $state) => match ($state) {
+                    'successful' => 'Thành công',
+                    'pending' => 'Chờ xử lý',
+                    default => $state,
+                })
+                ->colors([
+                    'success' => 'successful',
+                    'warning' => 'pending',
+                ]),
+
+            Tables\Columns\TextColumn::make('payment_date')
+                ->label('Ngày thanh toán')
+                ->date(),
         ])
+
             ->filters([
                 //
             ])
