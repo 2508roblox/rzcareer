@@ -30,4 +30,5 @@ class JobPostService extends Model
     {
         return $this->belongsTo(PurchasedService::class);
     }
+    
 }

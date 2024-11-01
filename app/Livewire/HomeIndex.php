@@ -23,13 +23,25 @@ class HomeIndex extends Component
     {
         // Lấy danh sách các JobPost có is_hot = 1
         $this->hotJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
-            ->where('is_hot', 1)
-            ->get();
+        ->where('is_hot', 1)
+         ->orderBy('id', 'asc')
+         ->limit(100)
+        ->get()
+        ->map(function ($jobPost) {
+            // Giả sử bạn muốn lấy dịch vụ dựa vào id của job post hiện tại
+            $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+            return $jobPost;
+        });
+
 
         // Lấy danh sách các JobPost có is_urgent = 1
         $this->urgentJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
             ->where('is_urgent', 1)
-            ->get();
+            ->get()  ->map(function ($jobPost) {
+                // Giả sử bạn muốn lấy dịch vụ dựa vào id của job post hiện tại
+                $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+                return $jobPost;
+            });
 
         // Lấy danh sách các công ty
         $this->companies = Company::all();
