@@ -72,11 +72,21 @@ class InvoiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('invoice_code')
                     ->label('Mã hóa đơn'), // Tiêu đề bằng tiếng Việt
-                Tables\Columns\TextColumn::make('total_price')
-                    ->money('usd')
+                    Tables\Columns\TextColumn::make('total_price')
+                    ->money('vnd') // Đổi từ 'usd' thành 'vnd'
                     ->label('Tổng giá'), // Tiêu đề bằng tiếng Việt
-                Tables\Columns\TextColumn::make('status')
-                    ->label('Trạng thái'), // Tiêu đề bằng tiếng Việt
+
+                    Tables\Columns\BadgeColumn::make('status')
+                    ->label('Trạng thái thanh toán')
+                    ->formatStateUsing(fn (string $state) => match ($state) {
+                        'successful' => 'Thành công',
+                        'pending' => 'Chờ xử lý',
+                        default => $state,
+                    })
+                    ->colors([
+                        'success' => 'successful',
+                        'warning' => 'pending',
+                    ]),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date()
                     ->label('Ngày tạo'), // Tiêu đề bằng tiếng Việt

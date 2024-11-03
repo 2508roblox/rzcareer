@@ -907,31 +907,42 @@
                                                     </p>
                                                     <div class="candidate-job-suggest">
                                                         <div class="job-grid">
-                                                            <!-- Job Card 1 -->
+                                                            @foreach ($suggestedJobs as $job) <!-- Loop through suggested jobs -->
                                                             <article class="job-card">
                                                                 <div class="ntv-profile-flexcenter-job-item">
                                                                     <div class="brows-job-list">
                                                                         <div class="media">
                                                                             <div class="media-left">
-                                                                                <a class="avatar-job" target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">
-                                                                                    <img style="width: 80px !important" src="http://localhost:8000/assets_livewire/img/default-company.svg" alt="VNPT-EPAY., JSC">
+                                                                                <a class="avatar-job" target="_blank" href="{{ url('viec-lam/' . $job['slug']) }}">
+                                                                                    <img style="width: 80px !important" src="{{ asset('assets_livewire/img/default-company.svg') }}" alt="{{ $job['company']['company_name'] ?? 'Company' }}">
                                                                                 </a>
                                                                             </div>
                                                                             <div class="media-body">
-                                                                                <h5 class="mt-0"><a target="_blank" href="/viec-lam/cong-tac-vien-kinh-doanh-mo-diem-qr-18978594297.html">Cộng Tác Viên Kinh Doanh - Mở Điểm QR</a></h5>
-                                                                                <p><span>VNPT-EPAY., JSC</span></p>
+                                                                                <h5 class="mt-0">
+                                                                                    <a target="_blank" href="{{ url('viec-lam/' . $job['slug']) }}">{{ $job['job_name'] }}</a>
+                                                                                </h5>
+                                                                                <p>
+                                                                                    <span>{{ $job['company']['company_name'] ?? 'Company Name' }}</span>
+                                                                                </p>
                                                                                 <ul>
-                                                                                    <li><i class="icofont-google-map"></i> Hà Nội</li>
-                                                                                    <li><i class="icofont-money"></i> 15 - 30 triệu VNĐ</li>
+                                                                                    <li>
+                                                                                        <i class="bx bx-map"></i> {{ $job['city']['name'] ?? 'Chưa có tên' }}
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <i class="bx bx-money"></i>
+                                                                                        {{ number_format($job['salary_min'] / 1_000_000, 0, '.', ',') }} - {{ number_format($job['salary_max'] / 1_000_000, 0, '.', ',') }} triệu VNĐ
+                                                                                    </li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </article>
-                                                          
+
+                                                            @endforeach
                                                         </div>
                                                     </div>
+
                                                     <style>
                                                         .candidate-job-suggest {
                                                             display: flex;

@@ -43,7 +43,12 @@
       <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
 
+        <style>
 
+.carousel-inner {
+    padding-top: 1rem;
+}
+        </style>
 
 
 
@@ -250,7 +255,7 @@
                 </div>
                 <div class="d-sm-block">
 
-                  <div id="carousel1" class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel">
+                  <div id="carousel1" class="carousel slide" data-bs-interval="222000" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       @php
                       $totalPages = ceil(count($urgentJobPosts) / 15); // Tính tổng số trang
@@ -269,40 +274,104 @@
                       // Lấy tối đa 150 công việc
                       $limitedJobPosts = $urgentJobPosts->take(150);
                       @endphp
-
                       @foreach (array_chunk($limitedJobPosts->toArray(), 15) as $index => $jobChunk)
                       <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                         <div class="row row-cols-1 row-cols-lg-3 g-2">
                           @foreach ($jobChunk as $jobPost)
                           <div class="col">
-                            <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" class="d-flex teks-item text-dark">
-                              <div class="flex-shrink-0 position-relative">
-                                <img class="lazy" width="80" height="80"
+                            <a href="{{ url('viec-lam/' . $jobPost['slug']) }}" style="position: relative;" class="d-flex teks-item text-dark  {{ (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['border_effect'] === 1) ? 'border border-danger' : '' }}">
+                                <div class="flex-shrink-0 position-relative">
+                                <img  class="lazy {{ (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['highlight_logo'] === 1) ? 'image-container-holo' : '' }}" width="80" height="80"
                                 data-src="{{ Storage::exists($jobPost['company']['company_image_url']) ? Storage::url($jobPost['company']['company_image_url']) : asset('assets_livewire/img/default-company.svg') }}" lazy>
+                                    <style>
 
+
+    .image-container-holo   {
+    width: 250px;
+    aspect-ratio: 1;
+    transition: .5s;
+    cursor: pointer;
+    -webkit-mask:
+        linear-gradient(135deg, rgba(156, 8, 255, 0.8) 40%, #ff1313, rgba(0, 255, 179, 0.8) 60%)
+        100% 100% / 250% 250%;
+    animation: shimmer 1.3s infinite linear; /* Thêm animation */
+}
+
+
+
+
+@keyframes shimmer {
+    0% {
+        -webkit-mask-position: 0 0; /* Bắt đầu ở vị trí 0 */
+    }
+    100% {
+        -webkit-mask-position: 100% 100%; /* Kết thúc ở vị trí 100% */
+    }
+}
+
+                                    </style>
                               </div>
+                              @if (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['hot_effect'] === 1)
+                              <div class="hot_badge ribbon">
+                                  <img src="{{ asset('assets_livewire/img/job_badge/hot.svg') }}" alt="">
+                                  {{-- <span>HOT</span> --}}
+                              </div>
+                          @endif
 
 
+                              <style>
+                     .ribbon {
+  --c: #d81a14;
+  --r: 20%; /* control the cutout part */
 
+  padding: .6em 1.3em; /* you may need to adjust this based on your content */
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.ribbon:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 60% 20% -40%;
+  background: color-mix(in srgb, var(--c), #000 35%);
+  clip-path: polygon(5% 0,95% 0,100% 100%,50% calc(100% - var(--r)),0 100%);
+}
+.ribbon:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(35% 35%,#0000 96%,#0003 97% 99%,#0000) var(--c);
+  clip-path: polygon(100.00% 50.00%,89.66% 55.22%,98.30% 62.94%,86.96% 65.31%,93.30% 75.00%,81.73% 74.35%,85.36% 85.36%,74.35% 81.73%,75.00% 93.30%,65.31% 86.96%,62.94% 98.30%,55.22% 89.66%,50.00% 100.00%,44.78% 89.66%,37.06% 98.30%,34.69% 86.96%,25.00% 93.30%,25.65% 81.73%,14.64% 85.36%,18.27% 74.35%,6.70% 75.00%,13.04% 65.31%,1.70% 62.94%,10.34% 55.22%,0.00% 50.00%,10.34% 44.78%,1.70% 37.06%,13.04% 34.69%,6.70% 25.00%,18.27% 25.65%,14.64% 14.64%,25.65% 18.27%,25.00% 6.70%,34.69% 13.04%,37.06% 1.70%,44.78% 10.34%,50.00% 0.00%,55.22% 10.34%,62.94% 1.70%,65.31% 13.04%,75.00% 6.70%,74.35% 18.27%,85.36% 14.64%,81.73% 25.65%,93.30% 25.00%,86.96% 34.69%,98.30% 37.06%,89.66% 44.78%); /* from https://css-generators.com/starburst-shape/ */
+}
 
+.hot_badge {
+  position: absolute; /* Thay đổi thành relative để có thể định vị ribbon chính xác */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  border-radius: .3rem;
+  padding: 0.3rem;
+}
 
+.hot_badge img {
+  width: 20px;
+}
 
+.hot_badge span {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, .9);
+  font-weight: bold;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                              </style>
                               <div class="flex-grow-1 ms-2">
                                 <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name']
                                   }}</h3>
@@ -440,17 +509,18 @@
                 <!-- Mỗi nhóm 8 công việc -->
                 <div class="carousel-item @if ($index === 0) active @endif">
                   <div class="row row-cols-1 row-cols-lg-3 g-2">
-                    @for ($i = 0; $i < 8; $i++) @if (isset($hotJobPosts[$index + $i])) <div class="col">
+                    @for ($i = 0; $i < 8; $i++) @if (isset($hotJobPosts[$index + $i])) <div class="col ">
                       <a href="{{ url('viec-lam/' . $hotJobPosts[$index + $i]['slug']) }}"
-                        class="d-flex teks-item text-dark">
+                        class="d-flex teks-item text-dark {{ (isset($hotJobPosts[$index + $i]->activeServices[0]) && $hotJobPosts[$index + $i]->activeServices[0]['border_effect'] === 1) ? 'border border-danger' : '' }}">
                         <div class="flex-shrink-0 position-relative">
                           <img class="lazy" width="80" height="80"
                             onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
                             data-src="{{ Storage::url($hotJobPosts[$index + $i]->company->company_image_url)  }}" alt="">
                         </div>
-                        <div class="flex-grow-1 ms-2">
-                          <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5 text-danger tooltip" title="">{{
-                            $hotJobPosts[$index + $i]->job_name }}</h3>
+                        <div class="flex-grow-1 ms-2 ">
+
+                          <h3 class="tooltip_job_{{ $hotJobPosts[$index + $i]->id }} h5   tooltip" title="">{{
+                            $hotJobPosts[$index + $i]->job_name }} - {{ $hotJobPosts[$index + $i]['id']}}</h3>
                           <div class="h6 text-muted">{{ $hotJobPosts[$index + $i]->company->company_name }}</div>
                           <ul class="p-0">
                             <li class="list-group-item list-group-item-action">
@@ -466,6 +536,13 @@
                           </ul>
 
                         </div>
+                        @if (isset($jobPost[$index + $i]->activeServices[0]) && $hotJobPosts[$index + $i]->activeServices[0]['hot_effect'] === 1)
+                        <div class="hot_badge">
+                            <img src="{{ asset('assets_livewire/img/job_badge/hot.svg') }}" alt="">
+                            <span>HOT</span>
+                        </div>
+                    @endif
+
                       </a>
                   </div>
                   @else
@@ -478,7 +555,12 @@
               @endif
               @endforeach
             </div>
+            <style>
+                .border-danger {
+    border: 2px solid red !important; /* Hoặc màu khác tùy ý */
+}
 
+            </style>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>

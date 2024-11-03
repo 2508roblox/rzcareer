@@ -35,29 +35,37 @@ class JobPostServiceResource extends Resource
                 Forms\Components\Section::make('Thông tin dịch vụ') // Tên section
                     ->schema([
                         Forms\Components\Select::make('purchased_service_id')
-                            ->relationship('purchasedService', 'id', function ($query) {
-                                $query->whereHas('invoice', function ($query) {
+                            ->options(function () {
+                                return PurchasedService::whereHas('invoice', function ($query) {
                                     $query->where('status', 'successful');
-                                });
+                                })
+                                    ->with('service')
+                                    ->get()
+                                    ->mapWithKeys(function ($purchasedService) {
+                                        $label = $purchasedService->service->package_name . ' - ' . $purchasedService->id ?? 'Unknown';
+                                        return [$purchasedService->id => $label];
+                                    });
                             })
                             ->required()
                             ->unique()
-                            ->label('Purchased Service') // Thêm nhãn cho rõ ràng
+                            ->label('Dịch vụ đã mua')
                             ->afterStateUpdated(function ($state, callable $set) {
-                                $purchasedService = PurchasedService::find($state); // Lấy dịch vụ đã mua
-    
+                                $purchasedService = PurchasedService::find($state);
+
                                 if ($purchasedService) {
-                                    $set('max_jobs', $purchasedService->quantity); // Giả sử bạn có thuộc tính quantity trong purchased_service
+                                    $set('max_jobs', $purchasedService->quantity);
                                 }
                             }),
                     ]),
-                    
+
                 Forms\Components\Section::make('Danh sách công việc') // Tên section thứ hai
                     ->schema([
                         Forms\Components\Select::make('list_jobs')
                             ->multiple()
                             ->label('Danh sách công việc') // Điều chỉnh nhãn nếu cần
                             ->required()
+                            ->searchable()
+                            ->preload()
                             ->options(function () {
                                 return JobPost::all()->pluck('job_name', 'id'); // Điều chỉnh 'job_name' cho trường hiển thị phù hợp
                             })

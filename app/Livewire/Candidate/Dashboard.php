@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Candidate;
 
+use App\Models\JobPost;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PostActivity; // Import the PostActivity model
@@ -16,7 +17,7 @@ class Dashboard extends Component
     public $appliedJobsCount; // Property to hold the count of applied jobs
     public $savedJobsCount; // Property to hold the count of saved jobs
     public $secondaryResumes; // Property to hold the count of saved jobs
-
+    public $suggestedJobs; // New property for suggested jobs
     public function mount()
     {
         // Retrieve the authenticated user
@@ -76,6 +77,9 @@ class Dashboard extends Component
 
             // Count the number of saved jobs
             $this->savedJobsCount = SavedJobPost::where('user_id', $this->user->id)->count(); // Get count of saved jobs
+            $this->suggestedJobs = JobPost::whereIn('job_name', $this->resumes->pluck('title'))
+            ->limit(4) // Limit to 4 jobs
+            ->get();
         }
     }
     public function deleteResume($resumeId)

@@ -16626,7 +16626,7 @@ section:not(.bg-white) .teks-swiper .teks-item:hover .h5 {
 .teks-swiper .teks-item {
     min-height: 110px;
     background: #fff;
-    border: 1px solid transparent !important;
+    border: 1px solid transparent ;
     box-shadow: 0 1px 12px 0 rgb(0 0 0 / 5%);
 }
 
