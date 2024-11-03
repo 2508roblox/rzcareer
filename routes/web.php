@@ -14,6 +14,8 @@ use App\Livewire\Candidate\JobsApplied;
 use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
+use App\Livewire\Chat\Index as ChatIndex;
+use App\Livewire\Chat\Chat as Chat;
 use App\Livewire\CongTy;
 use App\Livewire\DanhSachViecLam;
 use App\Livewire\DanhSachNganhNghe;
@@ -75,3 +77,6 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
+
+Route::get('chat', [ChatIndex::class, 'render'])->name('chat.index');
+Route::get('chat/{query}', [Chat::class, 'render'])->name('chat');

@@ -42,12 +42,6 @@
       <script defer src="/assets_livewire/teks/js/base.min.js?v=234208153092"></script>
       <script data-type="lazy" data-src="https://www.googletagmanager.com/gtag/js?id=G-EHD5KK9TRQ"></script>
 
-
-
-
-
-
-
     </head>
 
     <body class="">
