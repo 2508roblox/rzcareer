@@ -73,7 +73,12 @@ class UserResource extends Resource
                                 Forms\Components\TextInput::make('password')
                                     ->password()
                                     ->maxLength(128)
-                                    ->dehydrateStateUsing(fn($state) => filled($state) ? Hash::make($state) : $state)
+                                    ->dehydrateStateUsing(function ($state, $record) {
+                                        if (empty($state)) {
+                                            return $record?->password;
+                                        }
+                                        return Hash::make($state);
+                                    })
                                     ->required(fn($livewire) => $livewire instanceof \Filament\Resources\Pages\CreateRecord)
                                     ->label('Mật Khẩu'),
                                 Forms\Components\DateTimePicker::make('last_login')

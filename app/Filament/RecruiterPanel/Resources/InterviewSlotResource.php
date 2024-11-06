@@ -35,9 +35,11 @@ class InterviewSlotResource extends Resource
                         Forms\Components\Grid::make(2) // Chia thành 2 cột
                             ->schema([
                                 Forms\Components\DateTimePicker::make('start_time')
-                                    ->label('Thời gian bắt đầu'), // Việt hóa label
+                                    ->label('Thời gian bắt đầu') // Việt hóa label
+                                    ->default(now()),
                                 Forms\Components\DateTimePicker::make('end_time')
-                                    ->label('Thời gian kết thúc'), // Việt hóa label
+                                    ->label('Thời gian kết thúc') // Việt hóa label
+                                    ->default(now()->addHour()),
                                 Forms\Components\TextInput::make('location')
                                     ->maxLength(255)
                                     ->default(null)
@@ -69,11 +71,11 @@ class InterviewSlotResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->label('Ngày cập nhật'), // Việt hóa label
                 Tables\Columns\TextColumn::make('start_time')
-                    ->dateTime()
+                    ->dateTime('d-m-Y H:i')
                     ->sortable()
                     ->label('Thời gian bắt đầu'), // Việt hóa label
                 Tables\Columns\TextColumn::make('end_time')
-                    ->dateTime()
+                    ->dateTime('d-m-Y H:i')
                     ->sortable()
                     ->label('Thời gian kết thúc'), // Việt hóa label
                 Tables\Columns\TextColumn::make('location')

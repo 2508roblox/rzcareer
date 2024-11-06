@@ -11,6 +11,7 @@ use App\Models\Interview;
 use App\Models\InterviewSlot;
 use App\Models\JobPost;
 use App\Models\User;
+use App\Models\PostActivity;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
@@ -89,7 +90,22 @@ class InterviewResource extends Resource
                                 'completed' => 'Hoàn Thành',
                                 'canceled' => 'Đã Hủy',
                             ])
-                            ->required(),
+                            ->required()
+                            ->reactive()
+                            ->afterStateUpdated(function ($state, $record) {
+                                if ($record) {
+                                    // Update PostActivity status
+                                    PostActivity::where([
+                                        'user_id' => $record->candidate_id,
+                                        'job_post_id' => $record->job_post_id
+                                    ])->update([
+                                        'status' => $this->mapStatusToPostActivity($state)
+                                    ]);
+
+                                    // Send email notification
+                                    $this->sendInterviewStatusEmail($record, $state);
+                                }
+                            }),
                     ]),
             ]);
     }
@@ -168,4 +184,32 @@ class InterviewResource extends Resource
         ];
     }
     
+    private function mapStatusToPostActivity($status)
+    {
+        return match ($status) {
+            'scheduled' => 'Đã lên lịch phỏng vấn',
+            'completed' => 'Đã phỏng vấn',
+            'canceled' => 'Đã hủy phỏng vấn',
+            default => 'Chờ xác nhận',
+        };
+    }
+
+    private function sendInterviewStatusEmail($interview, $status)
+    {
+        try {
+            $candidate = $interview->candidate;
+            $jobPost = $interview->jobPost;
+            $slot = $interview->slot;
+
+            Mail::to($candidate->email)->send(new InterviewConfirmationMail(
+                $candidate->full_name,
+                $jobPost->job_name,
+                $slot->start_time,
+                $slot->interviewer->full_name,
+                $status
+            ));
+        } catch (\Exception $e) {
+            \Log::error('Failed to send interview status email: ' . $e->getMessage());
+        }
+    }
 }

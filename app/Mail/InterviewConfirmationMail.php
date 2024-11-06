@@ -37,26 +37,26 @@ class InterviewConfirmationMail extends Mailable
 
     public function build()
     {
-        // Xác định màu sắc và tiêu đề dựa trên trạng thái
         $statusColors = [
-            'scheduled' => '#4A90E2',  // Màu cho đã lên lịch
-            'completed' => '#28A745',   // Màu cho đã hoàn thành
-            'canceled' => '#DC3545',    // Màu cho đã hủy
+            'scheduled' => '#4A90E2',  // Blue for scheduled
+            'completed' => '#28A745',  // Green for completed
+            'canceled' => '#DC3545',   // Red for canceled
         ];
 
         $statusTitles = [
-            'scheduled' => 'Lịch Phỏng Vấn Đã Được Xác Nhận',
-            'completed' => 'Phỏng Vấn Đã Hoàn Thành',
-            'canceled' => 'Phỏng Vấn Đã Bị Hủy',
+            'scheduled' => 'Thông Báo Lịch Phỏng Vấn',
+            'completed' => 'Xác Nhận Hoàn Thành Phỏng Vấn',
+            'canceled' => 'Thông Báo Hủy Phỏng Vấn',
         ];
 
         $currentColor = $statusColors[$this->status] ?? '#333';
         $currentTitle = $statusTitles[$this->status] ?? 'Thông Tin Phỏng Vấn';
+
         return $this->view('emails.interview_confirmation')
                     ->subject($currentTitle)
                     ->with([
                         'statusColor' => $currentColor,
-                        'currentTitle' =>  $currentTitle,
+                        'currentTitle' => $currentTitle,
                     ]);
     }
 

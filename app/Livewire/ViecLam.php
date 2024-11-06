@@ -9,6 +9,8 @@ use App\Models\Resume;
 use App\Models\SavedJobPost;
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert; // Import LivewireAlert trait
+use Illuminate\Support\Facades\Mail;
+use App\Mail\JobApplicationMail;
 
 class ViecLam extends Component
 {
@@ -146,6 +148,18 @@ class ViecLam extends Component
                 'position' => 'center',
                 'timer' => 3000,
             ]);
+
+            // Add email sending after creating PostActivity
+            try {
+                Mail::to($this->email)->send(new JobApplicationMail(
+                    $this->full_name,
+                    $this->jobPost->job_name,
+                    $this->jobPost->company->company_name
+                ));
+            } catch (\Exception $e) {
+                // Log email sending error
+                \Log::error('Failed to send application confirmation email: ' . $e->getMessage());
+            }
         } catch (\Exception $e) {
             $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.', [
                 'position' => 'center',
