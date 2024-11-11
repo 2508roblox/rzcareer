@@ -464,8 +464,7 @@ class Review extends Component
 
     public function editGender()
     {
-        $this->validate(['gender' => 'required|string|in:M,F']);
-       $this->resumes->first()->seekerProfile->gender = $this->gender;
+       $this->resumes->first()->seekerProfile->gender = $this->gender ?? 'M';
         $this->resumes->first()->seekerProfile->save();
         $this->isEditing = '';
         session()->flash('message', 'Cập nhật giới tính thành công.');
@@ -473,7 +472,6 @@ class Review extends Component
 
     public function editMaritalStatus()
     {
-        $this->validate(['marital_status' => 'required|string|in:M,S']);
         $this->resumes->first()->seekerProfile->marital_status = $this->marital_status;
         $this->resumes->first()->seekerProfile->save();
         $this->isEditing = '';

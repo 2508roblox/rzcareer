@@ -1060,7 +1060,7 @@
                                                                     </div>
                                                                     <div class="clearfix">
                                                                         <h6 class="modal-title text-uppercase pull-left text-orange-700 mb-20">
-                                                                            <i class="icon-file-media"></i> Tài liệu chứng chỉ đã tải lên
+                                                                            <i class="icon-file-media"></i> Danh sách cv đã tải lên
                                                                         </h6>
                                                                     </div>
 

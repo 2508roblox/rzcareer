@@ -53,6 +53,7 @@ class Register extends Component
             // Create a primary resume for the user
             Resume::create([
                 'user_id' => $user->id,
+                'type' => 'primary',
                 'seeker_profile_id' => $seekerProfile->id, // Assuming you want to link it to the seeker profile
             ]);
 
