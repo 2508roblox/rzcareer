@@ -7,6 +7,7 @@ use App\Models\CommonCareer;
 use Livewire\Component;
 use App\Models\JobPost;
 use App\Models\Company;
+use Illuminate\Support\Facades\Cache;
 
 class HomeIndex extends Component
 {
@@ -22,33 +23,41 @@ class HomeIndex extends Component
     public function mount()
     {
         // Lấy danh sách các JobPost có is_hot = 1
-        $this->hotJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
-        ->where('is_hot', 1)
-         ->orderBy('id', 'asc')
-         ->limit(100)
-        ->get()
-        ->map(function ($jobPost) {
-            // Giả sử bạn muốn lấy dịch vụ dựa vào id của job post hiện tại
-            $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
-            return $jobPost;
+        $this->hotJobPosts = Cache::remember('hot_job_posts', now()->addMinutes(10), function () {
+            return JobPost::with(['career', 'company', 'location', 'city'])
+                ->where('is_hot', 1)
+                ->orderBy('id', 'asc')
+                ->limit(100)
+                ->get()
+                ->map(function ($jobPost) {
+                    $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+                    return $jobPost;
+                });
         });
 
+        // Cache urgent job posts
+        $this->urgentJobPosts = Cache::remember('urgent_job_posts', now()->addMinutes(10), function () {
+            return JobPost::with(['career', 'company', 'location', 'city'])
+                ->where('is_urgent', 1)
+                ->get()
+                ->map(function ($jobPost) {
+                    $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+                    return $jobPost;
+                });
+        });
 
-        // Lấy danh sách các JobPost có is_urgent = 1
-        $this->urgentJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
-            ->where('is_urgent', 1)
-            ->get()  ->map(function ($jobPost) {
-                // Giả sử bạn muốn lấy dịch vụ dựa vào id của job post hiện tại
-                $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
-                return $jobPost;
-            });
+        // Cache companies
+        $this->companies = Cache::remember('companies', now()->addMinutes(10), function () {
+            return Company::limit(100)->get();
+        });
 
-        // Lấy danh sách các công ty
-        $this->companies = Company::all();
-        $this->careers = CommonCareer::withCount('jobPosts')
-        ->orderBy('job_posts_count', 'desc')
-        ->take(12)
-        ->get();
+        // Cache careers with job post counts
+        $this->careers = Cache::remember('careers_with_counts', now()->addMinutes(10), function () {
+            return CommonCareer::withCount('jobPosts')
+                ->orderBy('job_posts_count', 'desc')
+                ->take(12)
+                ->get();
+        });
         CheckPayment::dispatch();
     }
 
