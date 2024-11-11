@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\CommonLocation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Cache;
 
 class Company extends Model
 {
@@ -21,7 +22,7 @@ class Company extends Model
     {
         return $this->hasMany(CompanyReview::class);
     }
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -58,4 +59,15 @@ public function getDistrictNameAttribute()
 {
     return $this->location ? $this->location->district->name : null;
 }
+protected static function booted()
+    {
+        // Clear cache when a company is created, updated, or deleted
+        static::saved(function () {
+            Cache::forget('companies');
+        });
+
+        static::deleted(function () {
+            Cache::forget('companies');
+        });
+    }
 }

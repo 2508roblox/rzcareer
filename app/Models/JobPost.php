@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class JobPost extends Model
 {
@@ -73,9 +74,21 @@ class JobPost extends Model
 
         return $activeServices;
     }
-    
 
 
 
+    protected static function booted()
+    {
+        // Clear cache when a job post is created, updated, or deleted
+        static::saved(function () {
+            Cache::forget('hot_job_posts');
+            Cache::forget('urgent_job_posts');
+        });
+
+        static::deleted(function () {
+            Cache::forget('hot_job_posts');
+            Cache::forget('urgent_job_posts');
+        });
+    }
 
 }

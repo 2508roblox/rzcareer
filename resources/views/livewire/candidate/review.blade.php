@@ -1638,7 +1638,7 @@
                                                                                             @if ($isEditing === 'gender')
                                                                                                 <form wire:submit.prevent="editGender">
                                                                                                     <select class="form-control" wire:model="gender">
-                                                                                                        <option value="M">Nam</option>
+                                                                                                        <option value="M" selected>Nam</option>
                                                                                                         <option value="F">Nữ</option>
                                                                                                     </select>
                                                                                                     <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
@@ -1903,7 +1903,8 @@
                                                                                                                                     <div title="Công ty">Công ty: {{ $experience->company_name }}</div>
                                                                                                                                     <div class="text-muted mb-0">
                                                                                                                                         <strong>Thời gian:</strong> {{ date('Y-m', strtotime($experience->start_date)) }} đến {{ date('Y-m', strtotime($experience->end_date)) }}
-                                                                                                                                        ({{ \Carbon\Carbon::parse($experience->start_date)->diffInMonths($experience->end_date) }} tháng)
+                                                                                                                                        ({{ round(\Carbon\Carbon::parse($experience->start_date)->diffInMonths($experience->end_date)) }} tháng)
+
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                                 <p style="font-size:14px;" class="pb-15" title="Mô tả công việc">
@@ -4492,12 +4493,12 @@
                                             </div>
                                         </div>
 
-                                        <h4>Danh sách quá trình học tập:</h4>
+                                        {{-- <h4>Danh sách quá trình học tập:</h4>
                                         <ul>
                                             @foreach($educations as $education)
                                                 <li>{{ $education->degree_name }} - {{ $education->major }} ({{ $education->completed_date }})</li>
                                             @endforeach
-                                        </ul>
+                                        </ul> --}}
                                     </div>
 
 
