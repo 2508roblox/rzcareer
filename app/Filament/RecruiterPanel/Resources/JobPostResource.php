@@ -41,10 +41,10 @@ class JobPostResource extends Resource
     protected static ?string $model = JobPost::class;
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane'; // Thay đổi biểu tượng
     protected static ?string $navigationGroup = 'Quản lý công ty';
-    
+
     public static ?string $label = 'Bài tuyển dụng';
     public static ?string $subheading = 'Bài tuyển dụng';
-    
+
 
     public static function form(Form $form): Form
     {
@@ -614,8 +614,13 @@ class JobPostResource extends Resource
     }
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        $user = Auth::user(); // Get the currently authenticated user
+        $companyIds = Company::where('user_id', $user->id)->pluck('id');
+
+        // Return the count based on the filtered query
+        return static::getModel()::whereIn('company_id', $companyIds)->count();
     }
+
     public static function getEloquentQuery(): Builder
 {
     $user = Auth::user(); // Lấy người dùng hiện tại
