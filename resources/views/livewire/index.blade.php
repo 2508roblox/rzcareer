@@ -1254,10 +1254,6 @@
       </div>
     </div>
   </div>
-  <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
-    style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
-    href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40" width="40"
-      src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
   <script>
     window.addEventListener('load', function() {
           $(function() {

@@ -384,9 +384,7 @@
                                         <div class="sidebar-widget padd-top-0 mrg-bot-0">
                                             <div class="colorgb-container">
                                                 <div class="clearfix">
-                                                    <h4 class="mrg-bot-0"> <span>{{ $companies->count() }} công ty tuyển
-                                                            dụng T09/2024
-                                                        </span></h4>
+                                                   
                                                 </div>
                                                 <style>
                                                     .grid-view.brows-job-list {
