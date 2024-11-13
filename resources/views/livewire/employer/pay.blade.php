@@ -223,6 +223,26 @@
                 }
             });
    });
+   // Function to make the HTTP request
+function fetchCronData() {
+    fetch('http://localhost:8000/cron', {
+        method: 'GET', // HTTP method
+        headers: {
+            'Content-Type': 'application/json' // Optional, depending on your backend requirements
+        }
+    })
+    .then(response => response.json()) // Assuming the response is JSON
+    .then(data => {
+        console.log('Data from cron endpoint:', data);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+
+// Call fetchCronData every 1000ms (1 second)
+setInterval(fetchCronData, 1000);
+
         </script>
     </body>
 
