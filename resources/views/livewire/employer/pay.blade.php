@@ -200,8 +200,6 @@
         <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
         <script src="https://fastly.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-       
-
             // Enable pusher logging - don't include this in production
    Pusher.logToConsole = true;
 
@@ -224,8 +222,8 @@
             });
    });
    // Function to make the HTTP request
-function fetchCronData() {
-    fetch('http://localhost:8000/cron', {
+   function fetchCronData() {
+    fetch('/cron', {
         method: 'GET', // HTTP method
         headers: {
             'Content-Type': 'application/json' // Optional, depending on your backend requirements
@@ -234,14 +232,28 @@ function fetchCronData() {
     .then(response => response.json()) // Assuming the response is JSON
     .then(data => {
         console.log('Data from cron endpoint:', data);
+
+        // If no invoice was updated, still continue fetching
+        if (!data.invoiceUpdated) {
+            console.log('No invoices updated, will try again...');
+        } else {
+            console.log('Invoices updated.');
+        }
+
+        // Always fetch again after the response (continuous polling)
+        fetchCronData(); 
     })
     .catch(error => {
         console.error('Error fetching data:', error);
+
+        // Handle errors if needed, continue fetching in case of failure
+        fetchCronData();
     });
 }
 
-// Call fetchCronData every 1000ms (1 second)
-setInterval(fetchCronData, 1000);
+// Call fetchCronData once to start the process
+fetchCronData();
+
 
         </script>
     </body>
