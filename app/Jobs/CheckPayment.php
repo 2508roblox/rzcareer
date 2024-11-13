@@ -25,6 +25,7 @@ class CheckPayment implements ShouldQueue
      */
     public function handle()
     {
+ 
         // Retrieve all unpaid invitations
         $unpaidInvitations = Invoice::where('status', 'pending')->get();
         // Call API to get the transaction list
@@ -47,11 +48,13 @@ class CheckPayment implements ShouldQueue
                 // Loop through each unpaid invitation
                 foreach ($unpaidInvitations as $invitation) {
                     // Format the total amount to match the format used in transactions
-                    $formattedAmount = number_format($invitation->total_amount, 0, ',', '');
+                    $formattedAmount = number_format($invitation->total_price, 0, ',', '');
 
                     // Check each transaction
                     foreach ($transactions as $transaction) {
+             
                         // If transaction matches the amount and contains the invitation code, mark as paid
+                 
                         if (
                             $transaction['amount_in'] == $formattedAmount &&
                             strpos($transaction['transaction_content'], $invitation->invoice_code) !== false
@@ -70,7 +73,6 @@ class CheckPayment implements ShouldQueue
             }
         }
 
-        // Retry the job if no successful transactions were found
-        self::dispatch()->delay(now()->addSeconds(1));
+        self::dispatch()->delay(now()->addSeconds(5));  
     }
 }
