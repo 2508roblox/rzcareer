@@ -15,7 +15,6 @@ class CheckPaymentCommand extends Command
 
     public function handle()
     {
-        try {
             // Retrieve all unpaid invoices
             $unpaidInvoices = Invoice::where('status', 'pending')->get();
 
@@ -57,9 +56,7 @@ class CheckPaymentCommand extends Command
                     }
                 }
             }
-        } catch (\Exception $e) {
-            Log::error('CheckPayment command failed: ' . $e->getMessage());
-        }
+    
 
         return 0;
     }
