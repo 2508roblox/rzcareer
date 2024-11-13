@@ -151,7 +151,7 @@
                             href="/assets_livewire/static/assets/css/employer.min.css?v=234208153092">
                         <section class="inner-header-page inner-header-page video-sec dark">
                             <div class="container">
-                                <form class="bt-form">
+                                <form class="bt-form" action="/cong-ty" method="get">
                                     <div class="padd-top-15 padd-bot-15 text-left">
                                         <h1>Danh sách công ty tuyển dụng 2024 </h1>
                                         <p>Các công ty hàng đầu đang tuyển dụng</p>
@@ -159,19 +159,31 @@
                                     <div class="row no-mrg-bk">
                                         <div class="col-sm-3">
                                             <input style="height: 52px;" type="text" id="employerName"
-                                                class="form-control mrg-bot-10" value="" placeholder="Tên công ty...">
+                                                class="form-control mrg-bot-10"  name="companyName"  placeholder="Tên công ty...">
                                         </div>
-                                        <div class="col-sm-3"><select id="employerName" class="select2 form-control">
+                                        <div class="col-sm-3">
+                                            <select id="employerName" name="careerName" class="select2 form-control" >
                                                 <option value="">Chọn ngành nghề</option>
-
-                                            </select></div>
-                                        <div class="col-sm-3"><select id="employerPlace" class="select2 form-control">
+                                                @foreach($topCareers as $career)
+                                                    <option value="{{ $career->name }}">{{ $career->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-sm-3">
+                                            <select id="employerPlace" class="select2 form-control" name="companyLocation" >
                                                 <option value="">Chọn địa điểm</option>
-
-                                            </select></div>
+                                                @foreach($locations as $location)
+                                                    <option value="{{ $location->id }}">
+                                                        {{ $location->address }} - {{ $location->district->name ?? '' }}, {{ $location->city->name ?? '' }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        
 
                                         <div class="col-sm-3 col-md-2">
-                                            <button id="searchEmployer" type="submit"
+                                            <button   type="submit"
                                                 class="btn btn-warning btn-block text-uppercase"><i
                                                     class="fa fa-binoculars"></i> Tìm
                                                 công ty</button>
@@ -358,6 +370,7 @@
 
                                     </div>
                                 </div>
+
                             </div>
                         </section>
 
