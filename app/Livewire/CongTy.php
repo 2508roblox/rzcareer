@@ -14,20 +14,19 @@ class CongTy extends Component
 
     public $perPage = 20; // Số lượng công ty trên mỗi trang
     public $field_operation; // To store the filtering field
-
+    public $careerName; // To store the selected career
     public function mount()
     {
         // Get the field_operation from query parameters
         $this->field_operation = request()->query('field_operation');
+        $this->careerName = request()->query('careerName');
     }
-    public function filterByCareer($careerName)
-{
-    $this->field_operation = Str::lower(str_replace(' ', '-', $careerName)); // Normalize and format the name
-    $this->resetPage(); // Reset pagination to the first page
-}
-
+ 
+ 
     public function render()
     {
+        $this->field_operation = Str::lower(str_replace(' ', '-', $this->careerName)); // Normalize and format the name
+
         // Normalize the field_operation by replacing hyphens with spaces and converting to lowercase
         $normalizedFieldOperation = Str::lower(str_replace('-', ' ', $this->field_operation));
 
