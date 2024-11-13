@@ -27,7 +27,6 @@ class CheckPayment implements ShouldQueue
     {
         // Retrieve all unpaid invitations
         $unpaidInvitations = Invoice::where('status', 'pending')->get();
-
         // Call API to get the transaction list
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',

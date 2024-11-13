@@ -22,6 +22,10 @@ class MessageSent implements ShouldBroadcastNow
     {
         $this->invitation_code = $data['invitation_code'];
         $this->customer_id = $data['customer_id'];
+        dd([
+            $this->invitation_code,
+            $this->customer_id
+        ]);
     }
 
     /**
