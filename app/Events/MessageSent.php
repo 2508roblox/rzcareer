@@ -7,24 +7,23 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class PaymentNotification
+class MessageSent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-    public $data;
-    /**
-     * Create a new event instance.
-     */
+
+    public $invitation_code;
+    public $customer_id;
+
     public function __construct($data)
     {
-        $this->data = $data;
+        $this->invitation_code = $data['invitation_code'];
+        $this->customer_id = $data['customer_id'];
     }
-    public function broadcastAs()
-    {
-        return 'user.' . $this->data['user'];
-    }
+
     /**
      * Get the channels the event should broadcast on.
      *
@@ -32,10 +31,18 @@ class PaymentNotification
      */
     public function broadcastOn()
     {
-        return new Channel('banknotification');
+        return new Channel('notification');
     }
+    public function broadcastAs()
+    {
+        return 'notification.' . $this->customer_id;
+    }
+
     public function broadcastWith(): array
     {
-        return $this->data;
+        return [
+            'invitation_code' => $this->invitation_code,
+            'customer_id' => $this->customer_id
+        ];
     }
 }
