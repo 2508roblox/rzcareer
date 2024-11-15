@@ -1196,9 +1196,7 @@
       height: 60px !important;
     }
   </style>
-  {{-- <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-    <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
-  </a> --}}
+ 
 
 
 

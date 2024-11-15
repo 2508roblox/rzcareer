@@ -30,4 +30,10 @@ class CompanyReview extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function showReviews($companyId)
+{
+    $reviews = CompanyReview::where('company_id', $companyId)->get();
+return $reviews;
+    
+}
 }

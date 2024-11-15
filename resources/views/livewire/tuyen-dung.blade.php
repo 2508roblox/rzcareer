@@ -1,29 +1,8 @@
 <div>
 
-    <!DOCTYPE html>
-    <html lang="vi-VN">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="robots" content="index, follow">
-        <meta name="title"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
-        <meta name="description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <meta property="og:url"
-            content="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html">
-        <meta property="og:type" content="website">
-        <meta property="fb:app_id" content="1590841851212703">
-        <meta property="og:image" itemprop="thumbnailUrl"
-            content="https://Rzcareer.vn/media/img/employer/39234-cover-app.jpg">
-        <meta property="og:title"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
-        <meta property="og:description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <link href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
-            rel="canonical">
-        <title>Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024
+        <title>{{ $company->company_name }}
         </title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
             type="font/woff2" crossorigin>
@@ -143,17 +122,7 @@
                 });
             </script>
 
-            <div class="container mb-2">
-                <div class="input-group input-group-search">
-                    <input type="search" id="keyword" onfocus="this.select()" autocomplete="off"
-                        class="auto-complete form-control" placeholder="Từ khóa...">
-                    <input type="search" id="location" onfocus="this.select()" autocomplete="off"
-                        class="auto-complete form-control" placeholder="Tỉnh/thành...">
-                    <button class="btn btn-primary teks-btn-g" type="button" id="search"><i
-                            class="bx bx-search-alt fs-6 text-white"></i> <span
-                            class="d-none d-sm-inline-block fw-bold">Tìm việc</span></button>
-                </div>
-            </div>
+        
             <style>
                 .input-group-search {
                     border: 2px solid #1772bd !important;
@@ -273,16 +242,7 @@
                                 </h1>
                                 <h2 class="d-block fw-normal fs-5 my-1">{{ $company->company_name }}</h2>
 
-                                <div class="designation d-none d-sm-block">
-                                    <button
-                                        class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-4 mb-4"
-                                        data-eid="{{ $company->id }}">
-                                        <span><i class='bx bx-bell'></i> Theo dõi</span>
-                                    </button>
-                                    <a target="_blank" href="">
-                                        <span class="text-capitalize text-dark">{{ $company->field_operation }}</span>
-                                    </a>
-                                </div>
+                               
                             </div>
                         </div>
 
@@ -309,7 +269,7 @@
                             </li>
                             <li class="breadcrumb-item" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem"><a class="text-body small"
-                                    href="https://Rzcareer.vn/cong-ty.html">Công ty</a>
+                                    href="/cong-ty">Công ty</a>
                                 <meta itemprop="position" content="2">
                             </li>
                             <li class="breadcrumb-item active" aria-current="page"><span class="small">
@@ -545,134 +505,54 @@
 
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <div class="row mb-4">
-                                        <div class="col-sm-6">
-                                            <div class="rating-block bg-secondary shadow-sm mt-3 text-white rounded-4">
-                                                <p class="ms-4 pt-3">Được đánh giá</p>
-                                                <p class="ms-4 bold padding-bottom-7 fs-1"> 4.0 <small>/ 5</small></p>
-                                                <div class="ms-4 pb-3">
-                                                    <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 0%, #d8d8d8 0%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button>
+                                    @foreach ($reviews as $review)
+                                        <div class="row mb-4">
+                                            <div class="col-sm-6">
+                                                <div class="rating-block bg-secondary shadow-sm mt-3 text-white rounded-4">
+                                                    <p class="ms-4 pt-3">Được đánh giá</p>
+                                                    <p class="ms-4 bold padding-bottom-7 fs-1">
+                                                        {{ round(($review->salary_benefit + $review->training_opportunity + $review->employee_care + $review->company_culture + $review->workplace_environment) / 5, 1) }}
+                                                        <small>/ 5</small>
+                                                    </p>
+                                                    <div class="ms-4 pb-3">
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align" style="background: linear-gradient(90deg, {{ $i <= round(($review->salary_benefit + $review->training_opportunity + $review->employee_care + $review->company_culture + $review->workplace_environment) / 5) ? '#f1c40f' : '#d8d8d8' }} 100%);">
+                                                                <span class="bx bxs-star" aria-hidden="true"></span>
+                                                            </button>
+                                                        @endfor
+                                                    </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                @php
+                                                    $fields = [
+                                                        'Lương thưởng & phúc lợi' => $review->salary_benefit,
+                                                        'Đào tạo & học hỏi' => $review->training_opportunity,
+                                                        'Sự quan tâm đến nhân viên' => $review->employee_care,
+                                                        'Văn hoá công ty' => $review->company_culture,
+                                                        'Văn phòng làm việc' => $review->workplace_environment,
+                                                    ];
+                                                @endphp
+                                
+                                                @foreach ($fields as $label => $value)
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div>{{ $label }}</div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-warning bg-secondary" role="progressbar" style="width: {{ $value * 20 }}%">
+                                                                    <span class="sr-only d-none">{{ $value * 20 }}% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Lương thưởng &amp; phúc lợi</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Đào tạo &amp; học hỏi</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Sự quan tâm đến nhân viên</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Văn hoá công ty</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div> Văn phòng làm việc</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="review-block bg-light shadow-sm p-3 d-none">
-                                                <div class="list"></div>
-                                                <script>
-                                                    window.addEventListener("load", function() {
-                                                        function f1(id) {
-                                                            $.get("/ajax/get-rating?employer_id=39234&last_id=" + id, function(res) {
-                                                                var obj = JSON.parse(res);
-                                                                $('.review-block .list').append(obj.list);
-                                                                $('.view-more').html(obj.more);
-                                                                $('.btn-view-more').click(function() {
-                                                                    var id = $(this).data('last-id');
-                                                                    if (id) {
-                                                                        f1(id);
-                                                                    }
-                                                                });
-                                                            });
-                                                        }
-
-                                                        $(function() {
-                                                            f1(0);
-                                                        });
-                                                    });
-                                                </script>
-                                                <div class="text-center view-more"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
+                                
 
                                 {{-- REVIEW FORM --}}
                                 <livewire:company-review :company_id="$company->id" />
@@ -765,9 +645,7 @@
                 height: 60px !important;
             }
         </style>
-        <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-            <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
-        </a>
+     
 
 
         <script>
@@ -878,7 +756,7 @@
                         </video>
                     </div>
                     <div class="modal-footer">
-                        <a class="btn btn-primary m-auto d-block" href="/tao-cv-bang-ai.html">Tạo CV ngay</a>
+                        <a class="btn btn-primary m-auto d-block" href="/">Tạo CV ngay</a>
                     </div>
                 </div>
             </div>
@@ -900,6 +778,5 @@
         </script>
     </body>
 
-    </html>
 
 </div>
