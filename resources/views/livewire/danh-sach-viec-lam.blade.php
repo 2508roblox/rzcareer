@@ -42,7 +42,7 @@
                     <meta name="csrf-param" content="_csrf-Rzcareer-candidate">
                     <meta name="csrf-token"
                         content="wY2pSbLAbVdOYKnk7oQrrnT3Ugg3V9lQWPF7-jxiJRKe7-MI3oUDYApNx6OZyFnaHJkceV1jv2UHyT6VaiETUQ==">
-                    <title>Tuyển dụng 1365 việc làm Tài Chính/Ngân Hàng T9/2024 | Rzcareer</title>
+                    <title>Danh sách việc làm | Rzcareer</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
@@ -741,7 +741,7 @@
                                                                                         <img src="{{ $activeSort === 'salary_min' ? asset('assets_livewire/img/2024/ic18.svg') : asset('assets_livewire/img/2024/ic17.svg') }}"
                                                                                             alt="Rzcareer"
                                                                                             loading="lazy">
-                                                                                        Lương cao nhất
+                                                                                        Lương thấp tới cao
                                                                                     </span>
                                                                                 </li>
                                                                             </ul>
@@ -938,221 +938,18 @@
                                                                             class="fa fa-angle-double-down"></i></a>
                                                                 </div>
                                                                 <ul class="sidebar-list expandible-bk">
-                                                                    <li><a title="Chuyên Viên Thanh Toán"
-                                                                            href="/viec-lam-chuyen-vien-thanh-toan.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Thanh
-                                                                                Toán</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Xử Lý Nợ"
-                                                                            href="/viec-lam-chuyen-vien-xu-ly-no.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Xử Lý Nợ
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Tài Chính"
-                                                                            href="/viec-lam-chuyen-vien-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Tài Chính
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Tư Vấn Trả Góp"
-                                                                            href="/viec-lam-nhan-vien-tu-van-tra-gop.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Tư Vấn Trả
-                                                                                Góp</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Tư Vấn Tài Chính"
-                                                                            href="/viec-lam-nhan-vien-tu-van-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Tư Vấn Tài
-                                                                                Chính</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Tư Vấn Ngân Hàng"
-                                                                            href="/viec-lam-chuyen-vien-tu-van-ngan-hang.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Tư Vấn
-                                                                                Ngân Hàng</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Thu Nợ"
-                                                                            href="/viec-lam-nhan-vien-thu-no.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Thu Nợ
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Tín Dụng"
-                                                                            href="/viec-lam-chuyen-vien-tin-dung.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Tín Dụng
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Tư Vấn Tín Dụng"
-                                                                            href="/viec-lam-nhan-vien-tu-van-tin-dung.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Tư Vấn Tín
-                                                                                Dụng</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Thẻ"
-                                                                            href="/viec-lam-chuyen-vien-the.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Thẻ</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Đầu Tư"
-                                                                            href="/viec-lam-chuyen-vien-dau-tu.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Đầu Tư
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Khách Hàng Cá Nhân"
-                                                                            href="/viec-lam-chuyen-vien-khach-hang-ca-nhan.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Khách
-                                                                                Hàng Cá Nhân</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Hoạch Định Tài Chính"
-                                                                            href="/viec-lam-chuyen-vien-hoach-dinh-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Hoạch
-                                                                                Định Tài Chính</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Thu Hồi Nợ"
-                                                                            href="/viec-lam-nhan-vien-thu-hoi-no.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Thu Hồi Nợ
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Tư Vấn Thẻ"
-                                                                            href="/viec-lam-nhan-vien-tu-van-the.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Tư Vấn Thẻ
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Quản Trị Rủi Ro"
-                                                                            href="/viec-lam-chuyen-vien-quan-tri-rui-ro.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Quản Trị
-                                                                                Rủi Ro</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Trưởng Phòng Tài Chính"
-                                                                            href="/viec-lam-truong-phong-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Trưởng
-                                                                                Phòng Tài
-                                                                                Chính</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Nhắc Phí"
-                                                                            href="/viec-lam-nhan-vien-nhac-phi.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Nhắc Phí
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Môi Giới Chứng Khoán"
-                                                                            href="/viec-lam-nhan-vien-moi-gioi-chung-khoan.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Môi Giới
-                                                                                Chứng Khoán</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Phân Tích Tài Chính"
-                                                                            href="/viec-lam-chuyen-vien-phan-tich-tai-chinh.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Phân Tích
-                                                                                Tài Chính</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Trưởng Phòng Khách Hàng Cá Nhân"
-                                                                            href="/viec-lam-truong-phong-khach-hang-ca-nhan.html">
-                                                                            <div class="txt text-capitalize">Trưởng
-                                                                                Phòng Khách
-                                                                                Hàng Cá Nhân</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Nhân Viên Tư Vấn Đầu Tư"
-                                                                            href="/viec-lam-nhan-vien-tu-van-dau-tu.html">
-                                                                            <div class="txt text-capitalize">Nhân Viên
-                                                                                Tư Vấn Đầu
-                                                                                Tư</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Trưởng Phòng Thu Nợ"
-                                                                            href="/viec-lam-truong-phong-thu-no.html">
-                                                                            <div class="txt text-capitalize">Trưởng
-                                                                                Phòng Thu Nợ
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Trưởng Phòng Đầu Tư"
-                                                                            href="/viec-lam-truong-phong-dau-tu.html">
-                                                                            <div class="txt text-capitalize">Trưởng
-                                                                                Phòng Đầu Tư
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Quản Lý Nợ"
-                                                                            href="/viec-lam-chuyen-vien-quan-ly-no.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Quản Lý
-                                                                                Nợ</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Trưởng Phòng Thanh Toán"
-                                                                            href="/viec-lam-truong-phong-thanh-toan.html">
-                                                                            <div class="txt text-capitalize">Trưởng
-                                                                                Phòng Thanh
-                                                                                Toán</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Chuyên Viên Nguồn Vốn"
-                                                                            href="/viec-lam-chuyen-vien-nguon-von.html">
-                                                                            <div class="txt text-capitalize">Chuyên Viên
-                                                                                Nguồn Vốn
-                                                                            </div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
+
+                                                                    @foreach(
+                                                                    App\Models\jobPost::select('position') // Count related job posts
+                                                                    ->distinct()
+                                                                    ->get() as $position)
+                                                                    <li>
+                                                                        <a href="{{ route('danh-sach-viec-lam', ['keyword' => $position->position, 'location' => '', 'career_id' => '']) }}"
+                                                                            title="{{$position->position}}">
+                                                                            <div class="txt text-capitalize">{{$position->position}}</div>
+                                                                        </a>
+                                                                    </li>
+                                                                    @endforeach
                                                                 </ul>
                                                             </div>
                                                             <div
@@ -1162,247 +959,60 @@
                                                                             class="fa fa-angle-double-down"></i></a>
                                                                 </div>
                                                                 <ul class="sidebar-list expandible-bk">
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hồ Chí Minh"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-ho-chi-minh.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hồ Chí Minh</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hà Nội"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-ha-noi.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hà Nội</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Sóc Trăng"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-soc-trang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Sóc Trăng</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Bình Dương"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-binh-duong.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Bình Dương</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Thủ Đức"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-thu-duc.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Thủ Đức</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Quảng Nam"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-quang-nam.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Quảng Nam</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Phú Thọ"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-phu-tho.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Phú Thọ</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Thừa Thiên Huế"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-thua-thien-hue.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Thừa Thiên Huế</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Đà Nẵng"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-da-nang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Đà Nẵng</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hoà Bình"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-hoa-binh.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hoà Bình</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Tây Ninh"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-tay-ninh.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Tây Ninh</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Đồng Nai"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-dong-nai.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Đồng Nai</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hải Phòng"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-hai-phong.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hải Phòng</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Long An"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-long-an.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Long An</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Khánh Hòa"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-khanh-hoa.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Khánh Hòa</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Cần Thơ"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-can-tho.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Cần Thơ</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hậu Giang"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-hau-giang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hậu Giang</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Cà Mau"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-ca-mau.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Cà Mau</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Kiên Giang"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-kien-giang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Kiên Giang</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Bà Rịa - Vũng Tàu"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-ba-ria-vung-tau.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Bà Rịa - Vũng Tàu</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Nghệ An"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-nghe-an.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Nghệ An</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Bắc Ninh"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-bac-ninh.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Bắc Ninh</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Ninh Bình"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-ninh-binh.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Ninh Bình</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Phú Yên"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-phu-yen.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Phú Yên</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Quảng Ngãi"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-quang-ngai.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Quảng Ngãi</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Thanh Hóa"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-thanh-hoa.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Thanh Hóa</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Tuyên Quang"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-tuyen-quang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Tuyên Quang</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại An Giang"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-an-giang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại An Giang</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Bắc Giang"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-bac-giang.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Bắc Giang</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
-                                                                    <li><a title="Tài Chính/Ngân Hàng tại Hải Dương"
-                                                                            href="/viec-lam-viec-lam-tai-chinh-ngan-hang-tai-hai-duong.html">
-                                                                            <div class="txt text-capitalize">Tài
-                                                                                Chính/Ngân Hàng
-                                                                                tại Hải Dương</div>
-                                                                            <span
-                                                                                class="small text-muted padd-top-5"></span>
-                                                                        </a></li>
+                                                                    @foreach(
+                                                                    App\Models\CommonCity::whereHas('locations.jobPosts')
+                                                                    ->withCount(['locations as job_posts_count' => function ($query) {
+                                                                    $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                                                                    }])
+                                                                    ->orderBy('job_posts_count', 'desc')
+                                                                    ->get() as $city)
+                                                                    <li>
+                                                                        <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}"
+                                                                            title="{{$city->name}}">
+                                                                            <div class="txt text-capitalize">{{ $city->name }}</div>
+                                                                        </a>
+                                                                    </li>
+                                                                    @endforeach
                                                                 </ul>
+                                                            </div>
+                                                            <div
+                                                                class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
+                                                                <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a href="javascript:void(0)"
+                                                                    class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
+                                                            <ul class="sidebar-list expandible-bk">
+                    
+                                                                @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
+                                                                as $jobType_item)
+                    
+                                                                <li>
+                                                                    <a href="{{ route('danh-sach-viec-lam', ['keyword' => $jobType_item->job_type, 'location' => '', 'career_id' => '']) }}"
+                                                                        title="{{$jobType_item->job_type}}">
+                                                                        <div class="txt text-capitalize">{{$jobType_item->job_type}}</div>
+                                                                    </a>
+                                                                </li>
+                                                                @endforeach
+                    
+                                                            </ul>
+                                                            </div>
+                                                            <div
+                                                                class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
+                                                                <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a href="javascript:void(0)"
+                                                                    class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
+                                                            <ul class="sidebar-list expandible-bk">
+                    
+                    
+                                                                @foreach(
+                                                                App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                                                                ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                                                                ->get() as $career)
+                                                                <li>
+                                                                    <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
+                                                                        title="{{$career->name}}">
+                                                                        <div class="txt text-capitalize">{{$career->name}}</div>
+                                                                    </a>
+                                                                </li>
+                                                                @endforeach
+                                                            </ul>
                                                             </div>
 
 
@@ -1422,138 +1032,7 @@
                                     style="display: block;margin: auto;"></div>
                         </div>
                     </section> --}}
-                    <section class="padd-top-5 teks-seo">
-                        <div class="container">
-
-                            <div class="txt-seo-mrg-top-5">
-                                <style>
-                                    .txt-seo {
-                                        background: #fff;
-                                    }
-
-                                    .txt-seo>div {
-                                        margin-bottom: 10px;
-                                    }
-
-                                    .txt-seo h2 {
-                                        font-size: 18px !important;
-                                        font-weight: bold;
-                                        line-height: 1.3;
-                                        margin-top: 10px;
-                                    }
-
-                                    body .txt-seo p,
-                                    body .txt-seo span {
-                                        font-size: 13px !important;
-                                    }
-
-                                    .txt-seo h3 {
-                                        font-size: 15px !important;
-                                        font-weight: bold;
-                                        line-height: 1.3;
-                                        overflow: hidden;
-                                    }
-
-                                    .list-employer li {
-                                        list-style: none;
-                                        width: 33%;
-                                        float: left;
-                                        border: 1px solid #eee;
-                                        margin: 20px 0 15px;
-                                    }
-                                </style>
-
-
-
-                                <div class="mt-10"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm tại Địa điểm <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
-                                        <ul class="sidebar-list expandible-bk">
-                                            @foreach(
-                                            App\Models\CommonCity::whereHas('locations.jobPosts')
-                                            ->withCount(['locations as job_posts_count' => function ($query) {
-                                            $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
-                                            }])
-                                            ->orderBy('job_posts_count', 'desc')
-                                            ->get() as $city)
-                                            <li>
-                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}"
-                                                    title="{{$city->name}}">
-                                                    <div class="txt text-capitalize">{{ $city->name }}</div>
-                                                </a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
-                                        <ul class="sidebar-list expandible-bk">
-
-
-                                            @foreach(
-                                            App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
-                                            ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
-                                            ->get() as $career)
-                                            <li>
-                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
-                                                    title="{{$career->name}}">
-                                                    <div class="txt text-capitalize">{{$career->name}}</div>
-                                                </a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Chức danh <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
-                                        <ul class="sidebar-list expandible-bk">
-
-                                            @foreach(
-                                            App\Models\jobPost::select('position') // Count related job posts
-                                            ->distinct()
-                                            ->get() as $position)
-                                            <li>
-                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => $position->position, 'location' => '', 'career_id' => '']) }}"
-                                                    title="{{$position->position}}">
-                                                    <div class="txt text-capitalize">{{$position->position}}</div>
-                                                </a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="sidebar-widget padd-top-0 padd-bot-0 mrg-top-20 mrg-bot-20">
-                                        <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a href="javascript:void(0)"
-                                                class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
-                                        <ul class="sidebar-list expandible-bk">
-
-                                            @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
-                                            as $jobType_item)
-
-                                            <li>
-                                                <a href="{{ route('danh-sach-viec-lam', ['keyword' => $jobType_item->job_type, 'location' => '', 'career_id' => '']) }}"
-                                                    title="{{$jobType_item->job_type}}">
-                                                    <div class="txt text-capitalize">{{$jobType_item->job_type}}</div>
-                                                </a>
-                                            </li>
-                                            @endforeach
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+              
 
 
                     @livewire('employer.inc.footer')

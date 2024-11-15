@@ -43,55 +43,15 @@
 
                     <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
                     <meta http-equiv="content-language" content="vi" />
-                    <link rel="alternate"
-                        href="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html"
-                        hreflang="x-default" hreflang="vi" />
-                    <link rel="canonical"
-                        href="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html" />
+
 
 
                     <meta charset="UTF-8">
                     <meta name="viewport"
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-                    <meta name="HandheldFriendly" content="true" />
-                    <meta name="author" content="RZCareer.,JSC" />
-                    <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                     <meta name="csrf-token"
                         content="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
-                    <title>Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An) - Công ty Chế Biến Nước Chấm Mekong</title>
-                    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-                    <meta property="og:sitename" content="RZCareer - Tuyển dụng">
-                    <meta property="og:type" content="website">
-                    <meta property="og:locale" content="vi_VN">
-                    <meta property="fb:app_id" content="1590841851212703">
-                    <meta name="description" content="(Mức lương: Thỏa thuận) ✅ . Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An).
-   Thu thập và xử lý các chứng số liệu, chứng từ kế toán thông qua các nghiệp vụ kinh tế.
-   Theo dõi và quản lý công nợ/doanh số, đối chiếu sổ sách và h... #18748470984">
-                    <meta name="title"
-                        content="Việc làm Kế Toán Tổng Hợp (Đức Hoà - Long An) - Công ty Chế Biến Nước Chấm Mekong">
-                    <meta name="keywords" content="Tuyển dụng nhanh Kế Toán Tổng Hợp (Đức Hoà - Long An)">
-                    <meta property="og:type" content="website">
-                    <meta property="og:url" content="/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html">
-                    <meta property="og:image" itemprop="thumbnailUrl"
-                        content="https://jobsgo.vn/media/img/employer/39234-cover-app.jpg?v=1623656960">
-                    <meta property="og:description" content="(Mức lương: Thỏa thuận) ✅  Ứng tuyển ngay!">
-                    <meta property="og:title" content="Kế Toán Tổng Hợp (Đức Hoà - Long An)">
-                    <meta property="og:image:type" content="image/jpeg">
-                    <meta property="og:image:width" content="600">
-                    <meta property="og:image:height" content="300">
-                    <meta property="fb:app_id" content="1590841851212703">
-                    <meta property="al:android:url"
-                        content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
-                    <meta property="al:android:package" content="vn.ca.hope.candidate">
-                    <meta property="al:android:app_name" content="RZCareer">
-                    <meta property="al:ios:url"
-                        content="hope://job/1378228?job_id=1378228&amp;referal_id=&amp;transaction_id=7053142539031728&amp;action_type=view_job">
-                    <meta property="al:ios:app_store_id" content="1234120247">
-                    <meta property="al:ios:app_name" content="RZCareer">
-                    <meta name="geo.placename" content="Tầng 3 tòa G1, Five Star Garden, Thanh Xuân, Hà Nội">
-                    <meta name="geo.position" content="21.0000650;105.8224070">
-                    <meta name="geo.region" content="VN-Hà Nội">
-                    <meta name="google-play-app" content="app-id=vn.ca.hope.candidate">
+                    <title>{{$jobPost->job_name}}</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
@@ -290,8 +250,7 @@
                                                             <ol class="breadcrumb" itemscope
                                                                 itemtype="http://schema.org/BreadcrumbList">
                                                                 <li itemprop="itemListElement" itemscope
-                                                                    itemtype="https://schema.org/ListItem"><a
-                                                                        href="https://jobsgo.vn/"
+                                                                    itemtype="https://schema.org/ListItem"><a href="/"
                                                                         itemtype="https://schema.org/Thing"
                                                                         itemprop="item"> <span itemprop="name">
                                                                             RZCareer</span> </a>
@@ -299,7 +258,7 @@
                                                                 </li>
                                                                 <li itemprop="itemListElement" itemscope
                                                                     itemtype="https://schema.org/ListItem"><a
-                                                                        href="https://jobsgo.vn/viec-lam.html"
+                                                                        href="/danh-sach-viec-lam"
                                                                         itemtype="https://schema.org/Thing"
                                                                         itemprop="item"> <span itemprop="name">Việc
                                                                             làm</span> </a>
@@ -355,19 +314,20 @@
 
                                                                 <li class="mt-5">
                                                                     @if($hasApplied)
-                                                                        <button class="btn bg-blue btn-apply-now btn-apply" disabled>
-                                                                            <i class="glyphicon glyphicon-check"></i> Đã ứng tuyển
-                                                                        </button>
+                                                                    <button class="btn bg-blue btn-apply-now btn-apply"
+                                                                        disabled>
+                                                                        <i class="glyphicon glyphicon-check"></i> Đã ứng
+                                                                        tuyển
+                                                                    </button>
                                                                     @else
-                                                                        <a onclick="preApplyForm(1378228)"
-                                                                           data-toggle="modal" data-target="#preApplyForm"
-                                                                           onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay'); window.location.hash = 'form';"
-                                                                           data-jid="1378228"
-                                                                           data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
-                                                                           id="btn-apply"
-                                                                           class="btn bg-blue btn-apply-now btn-apply">
-                                                                            <i class="glyphicon glyphicon-send"></i> Ứng tuyển ngay
-                                                                        </a>
+                                                                    <a onclick="preApplyForm(1378228)"
+                                                                        data-toggle="modal" data-target="#preApplyForm"
+                                                                        onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay'); window.location.hash = 'form';"
+                                                                        data-jid="1378228" id="btn-apply"
+                                                                        class="btn bg-blue btn-apply-now btn-apply">
+                                                                        <i class="glyphicon glyphicon-send"></i> Ứng
+                                                                        tuyển ngay
+                                                                    </a>
                                                                     @endif
                                                                 </li>
 
@@ -402,7 +362,7 @@
                                                                         tham khảo dưới đây </span></h6>
                                                                     <div class="heading-elements"><a
                                                                             title="Xem thêm việc làm Kế Toán Tổng Hợp"
-                                                                            href="/viec-lam-ke-toan-tong-hop.html"
+                                                                            href="/danh-sach-viec-lam"
                                                                             class="heading-text text-blue-700">Xem thêm
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                                 viewBox="0 0 24 24" fill="currentColor"
@@ -495,7 +455,7 @@
                                                                 <p class="h5 text-semibold">Ngành nghề</p>
                                                                 <div class="list">
                                                                     <a title="Xem thêm các việc làm với ngành nghề {{ $jobPost->career->name }}"
-                                                                        href="/viec-lam-{{ strtolower(str_replace(' ', '-', $jobPost->career->name)) }}.html">{{
+                                                                        href="/danh-sach-viec-lam?keyword=&location=&career_id={{ strtolower(str_replace(' ', '-', $jobPost->career->id)) }}">{{
                                                                         $jobPost->career->name }}</a>
                                                                 </div>
                                                             </div>
@@ -523,48 +483,7 @@
 
 
 
-                                                    <div class="content-group">
-                                                        <div class="box-jobs-info"
-                                                            style="display:flex;align-items: center;">
-                                                            <div><img class="pull-left" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic23.svg"
-                                                                    alt="JobsGo"></div>
-                                                            <div class="div">
-                                                                <p class="h5 text-semibold">Địa điểm làm việc</p>
-                                                                <div class="margin-top-10">
-                                                                    <div class="data giaphv">
-                                                                        <p>
-
-
-                                                                            - Công Ty TNHH Chế Biến Nước Chấm Mekong,
-                                                                            Tỉnh Lộ 10, Xã Đức Hòa Hạ, Huyện Đức Hòa,
-                                                                            Đức Hòa Hạ, Đức Hòa, Long An <br>
-                                                                        </p>
-
-
-                                                                        <p>
-
-                                                                            <a class="mrg-r-10"
-                                                                                title="Xem thêm các việc làm tại Long An"
-                                                                                href="/viec-lam-tai-long-an.html"> <i
-                                                                                    class="bx bx-map"></i> <span> Việc
-                                                                                    làm Long An</span> </a>
-
-
-                                                                            <a class="mrg-r-10"
-                                                                                title="Xem thêm các việc làm tại Đức Hòa"
-                                                                                href="/viec-lam-tai-duc-hoa.html"> <i
-                                                                                    class="bx bx-map"></i> <span> Việc
-                                                                                    làm Đức Hòa</span> </a>
-
-                                                                        </p>
-
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                          
                                                     <div class="content-group mrg-top-25">
                                                         <h2 class="h5 text-semibold">Mô tả công việc</h2>
                                                         <div class="clearfix">
@@ -601,7 +520,7 @@
                                                         <div class="panel-heading-bk">
                                                             <h2
                                                                 class="h6 text-size-mini pt-10 pb-5 panel-title text-uppercase">
-                                                                <a href="https://jobsgo.vn/viec-lam.html#tim_viec_nhanh"
+                                                                <a href="/danh-sach-viec-lam"
                                                                     target="_blank">Việc làm</a>
                                                                 liên quan </span>
                                                             </h2>
@@ -733,13 +652,13 @@
                                                                 <div class="panel-heading-bk">
                                                                     <h2 class="h6 text-size-mini pt-10 pb-5 panel-title text-uppercase"
                                                                         title="Công Ty TNHH Chế Biến Nước Chấm Mekong cũng đang tuyển">
-                                                                        <a href="https://jobsgo.vn/viec-lam.html#việc_làm"
+                                                                        <a href="/danh-sach-viec-lam"
                                                                             target="_blank">Việc làm</a> khác cùng công
                                                                         ty
                                                                     </h2>
                                                                     <div class="heading-elements">
                                                                         <a title="Xem thêm việc làm"
-                                                                            href="https://jobsgo.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html?tab=jobs"
+                                                                            href="/danh-sach-viec-lam"
                                                                             class="heading-text text-blue-700">Xem thêm
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                                 viewBox="0 0 24 24" fill="currentColor"
@@ -798,13 +717,7 @@
                                                                 </ul>
 
                                                             </div>
-                                                            <div class="mrg-top-10"><a rel="nofollow"
-                                                                    href="https://tcg.metro.tokyo.lg.jp/portal/Vietnam2024?utm_source=detail_sidebar"
-                                                                    target="_blank"><img width="100" height="100"
-                                                                        loading="lazy"
-                                                                        src="https://jobsgo.vn/blog/wp-content/uploads/2024/09/Banner-external-link_-Social-post-2.jpg"
-                                                                        width="100%" class="img-responsive hidden-xs"
-                                                                        alt="banner-1727319141" /></a> </div>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -814,11 +727,11 @@
                                             <div class="panel panel-flat">
                                                 <div class="panel-heading">
                                                     <h2 class="h6 panel-title text-uppercase"><a
-                                                            href="https://jobsgo.vn/viec-lam.html#tìm_việc_làm">Tìm
+                                                            href="/danh-sach-viec-lam">Tìm
                                                             việc làm</a> <span class="text-blue-700-bk"
                                                             style="position:relative;font-size: 13px;top:3px">liên
                                                             quan</span></h2>
-                                                    <div class="heading-elements"><a href="/viec-lam.html"
+                                                    <div class="heading-elements"><a href="/danh-sach-viec-lam"
                                                             class="heading-text text-blue-700">Xem thêm <svg
                                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                                 fill="currentColor" class="size-6">
@@ -829,139 +742,22 @@
                                                 </div>
 
                                                 <ul class="media-list media-list-linked media-list-bordered clearfix">
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-truong.html"
-                                                            title="Kế Toán Trưởng" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Trưởng</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-thue.html"
-                                                            title="Kế Toán Thuế" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Thuế</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-gia-thanh.html"
-                                                            title="Kế Toán Giá Thành" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Giá Thành</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-tien-luong.html"
-                                                            title="Kế Toán Tiền Lương" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Tiền Lương</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-chi-phi.html"
-                                                            title="Kế Toán Chi Phí" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Chi Phí</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-cong-no.html"
-                                                            title="Kế Toán Công Nợ" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Công Nợ</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-ban-hang.html"
-                                                            title="Kế Toán Bán Hàng" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Bán Hàng</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-ke-toan-quan-tri.html"
-                                                            title="Kế Toán Quản Trị" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Quản Trị</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-kho.html"
-                                                            title="Kế Toán Kho" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Kho</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-ke-toan-vat-tu.html"
-                                                            title="Kế Toán Vật Tư" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kế Toán
-                                                                    Vật Tư</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-nhan-vien-ke-toan.html"
-                                                            title="Nhân Viên Kế Toán" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Nhân Viên
-                                                                    Kế Toán</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-quan-ly-nguon-thu.html"
-                                                            title="Quản Lý Nguồn Thu" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Quản Lý
-                                                                    Nguồn Thu</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-quan-ly-chi-phi.html"
-                                                            title="Quản Lý Chi Phí" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Quản Lý
-                                                                    Chi Phí</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-thu-quy.html"
-                                                            title="Thủ Quỹ" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Thủ
-                                                                    Quỹ</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-kiem-toan-noi-bo.html"
-                                                            title="Kiểm Toán Nội Bộ" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kiểm Toán
-                                                                    Nội Bộ</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-chuyen-vien-kiem-soat-noi-bo.html"
-                                                            title="Chuyên Viên Kiểm Soát Nội Bộ"
-                                                            class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Chuyên
-                                                                    Viên Kiểm Soát Nội Bộ</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-kiem-toan-vien.html"
-                                                            title="Kiểm Toán Viên" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kiểm Toán
-                                                                    Viên</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a href="/viec-lam-kiem-soat-vien.html"
-                                                            title="Kiểm Soát Viên" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Kiểm Soát
-                                                                    Viên</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-nhan-vien-kiem-soat-chi-phi.html"
-                                                            title="Nhân Viên Kiểm Soát Chi Phí"
-                                                            class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Nhân Viên
-                                                                    Kiểm Soát Chi Phí</span> </div>
-                                                        </a> </li>
-                                                    <li class="media col-sm-3"> <a
-                                                            href="/viec-lam-thuc-tap-sinh-ke-toan.html"
-                                                            title="Thực Tập Sinh Kế Toán" class="media-link clearfix">
-                                                            <div class="media-body pl-10"> <span
-                                                                    class="h6 media-heading text-capitalize">Thực Tập
-                                                                    Sinh Kế Toán</span> </div>
-                                                        </a> </li>
+                                                    @foreach(
+                                                    App\Models\CommonCareer::withCount('jobPosts') // Count related job
+                                                    ->orderBy('job_posts_count', 'desc') // Sort by the number of job
+                                                    ->get() as $career)
+                                                    <li class="media col-sm-3">
+                                                        <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
+                                                            title="{{ $career->name }}" class="media-link clearfix">
+                                                            <div class="media-body pl-10">
+                                                                <span class="h6 media-heading text-capitalize">{{
+                                                                    $career->name }}</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    @endforeach
                                                 </ul>
+
                                             </div>
                                         </div>
                                     </div>
@@ -976,29 +772,35 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Ứng tuyển ngay</h5>
-                                    <button onclick="teksAlert(this)" type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <button onclick="teksAlert(this)" type="button" class="close"
+                                        data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <form wire:submit.prevent="apply">
                                         <div class="form-group">
                                             <label for="full_name">Họ và Tên</label>
-                                            <input type="text" wire:model="full_name" class="form-control" id="full_name" required>
+                                            <input type="text" wire:model="full_name" class="form-control"
+                                                id="full_name" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" wire:model="email" class="form-control" id="email" required>
+                                            <input type="email" wire:model="email" class="form-control" id="email"
+                                                required>
                                         </div>
                                         <div class="form-group">
                                             <label for="phone">Số điện thoại</label>
-                                            <input type="text" wire:model="phone" class="form-control" id="phone" required>
+                                            <input type="text" wire:model="phone" class="form-control" id="phone"
+                                                required>
                                         </div>
                                         <div class="form-group">
                                             <label for="resume">Chọn bản lý lịch</label>
                                             <div id="resume" required>
                                                 @foreach($resumes as $resume)
-                                                    <div class="form-check" style="margin-bottom: 15px;">
-                                                        <input class="form-check-input" type="radio" wire:model="selectedResumeId" id="resume{{ $resume->id }}" value="{{ $resume->id }}" style="display: none;">
-                                                        <label class="form-check-label" for="resume{{ $resume->id }}" style="
+                                                <div class="form-check" style="margin-bottom: 15px;">
+                                                    <input class="form-check-input" type="radio"
+                                                        wire:model="selectedResumeId" id="resume{{ $resume->id }}"
+                                                        value="{{ $resume->id }}" style="display: none;">
+                                                    <label class="form-check-label" for="resume{{ $resume->id }}" style="
                                                             display: flex;
                                                             align-items: center;
                                                             padding: 10px;
@@ -1009,10 +811,11 @@
                                                             transition: all 0.3s ease;
                                                             width: 100%;
                                                         ">
-                                                            <span style="flex-grow: 1;">{{ $resume->title }}</span>
-                                                            <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}" target="_blank" class="btn btn-link">Xem</a>
-                                                        </label>
-                                                    </div>
+                                                        <span style="flex-grow: 1;">{{ $resume->title }}</span>
+                                                        <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}"
+                                                            target="_blank" class="btn btn-link">Xem</a>
+                                                    </label>
+                                                </div>
                                                 @endforeach
                                             </div>
                                         </div>
@@ -1020,14 +823,17 @@
                                         <style>
                                             /* Hover effect */
                                             .form-check-label:hover {
-                                                border-color: #007bff; /* Màu border khi hover */
+                                                border-color: #007bff;
+                                                /* Màu border khi hover */
                                                 box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
                                             }
 
                                             /* Checked effect */
-                                            .form-check-input:checked + .form-check-label {
-                                                border-color: #007bff; /* Màu border khi được chọn */
-                                                background-color: rgba(0, 123, 255, 0.1); /* Màu nền khi được chọn */
+                                            .form-check-input:checked+.form-check-label {
+                                                border-color: #007bff;
+                                                /* Màu border khi được chọn */
+                                                background-color: rgba(0, 123, 255, 0.1);
+                                                /* Màu nền khi được chọn */
                                             }
                                         </style>
 
@@ -1036,7 +842,8 @@
                                 </div>
                                 <div class="modal-footer">
                                     <div class="btn-group">
-                                        <button type="submit" wire:click="apply" id="applyButton" class="btn btn-success mrg-r-10">
+                                        <button type="submit" wire:click="apply" id="applyButton"
+                                            class="btn btn-success mrg-r-10">
                                             <i class="bx bx-upload"></i> Ứng tuyển
                                         </button>
 
@@ -1046,7 +853,7 @@
                         </div>
                     </div>
                     <script>
-                 document.addEventListener('DOMContentLoaded', function () {
+                        document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('applyButton').addEventListener('click', function () {
         // Ẩn thằng modal-backdrop in
         const backdrop = document.querySelector('.modal-backdrop.in');
@@ -1079,12 +886,7 @@
                                     <!-- Button Group -->
                                     <div class="btn-group">
 
-                                        <a href="/candidate/update-contact?field=gender&jid=1378228&utm_source=&utm_medium=&ref=%2Fviec-lam%2Fke-toan-tong-hop-duc-hoa-long-an-18748470984.html%3Futm_source%3D%26utm_medium%3D"
-                                            onclick="ga('send', 'event', 'apply_job', 'ung_tuyen_ngay', 'ứng tuyển ngay');"
-                                            data-jid="1378228"
-                                            data-ref="https://jobsgo.vn/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html?action=apply"
-                                            class="btn btn-warning mrg-r-10"><i class='bx bx-edit'></i> Bổ sung
-                                            thông tin</a>
+
 
                                         <button onclick="teksAlert(this)" type="button" class="btn btn-default"
                                             data-dismiss="modal">Hủy bỏ</button>
@@ -1116,7 +918,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <form id="w1" class="bg-fffaf2"
-                                                action="/viec-lam/ke-toan-tong-hop-duc-hoa-long-an-18748470984.html"
+                                                action="/danh-sach-viec-lam"
                                                 method="post" enctype="multipart/form-data">
                                                 <input type="hidden" name="_csrf-jobsgo-candidate"
                                                     value="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
@@ -1152,280 +954,10 @@
 
 
 
-                    <section class="section-download cta-section bg-white pt-4 text-center position-relative">
 
-                        <div class="container">
-                            <div class="bg-e4faff position-relative shadow rounded-4 py-4">
-                                <div class="hidden-xs d-none d-sm-block theme-bg-shapes-right"></div>
-                                <div class="hidden-xs d-none d-sm-block theme-bg-shapes-left"></div>
-                                <div class="h2 mb-3 text-dark fw-bolder my-1">Tải miễn phí ứng dụng</div>
-                                <div class="section-intro px-3 text-dark mb-1 single-col-max mx-auto">Tìm việc hiệu
-                                    quả bằng cách tải RZCareer về di động của bạn và sẵn sàng nhận việc làm ngay hôm nay!
-                                </div>
-                                <div class="row gx-1 justify-content-center pt-2">
-                                    <div class="col-10 col-sm-5 col-xs-10 col-md-3 mt-2 mt-md-0">
-                                        <div class="input-group input-get-link mb-3">
-                                            <input type="tel" class="form-control phone"
-                                                placeholder="Nhập SĐT để lấy link tải App">
-                                            <button class="btn btn-outline-light text-uppercase btn-get-link"
-                                                type="button">Gửi đi</button>
-                                        </div>
-                                        <ul class="app-stores list-unstyled list-inline mx-auto d-inline-block">
-                                            <li class="list-inline-item"><a target="_blank"
-                                                    href="https://jobsgo.vn/site/download">
-                                                    <img class="lazy"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                        data-src="/assets_livewire/teks/img/download.svg?v=1.2"
-                                                        alt="RZCareer" width="220" height="83">
-
-                                                </a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
                     @livewire('employer.inc.footer')
 
-                    {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
-                        <div class="no-padding">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN
-                                                JOBSGO</div>
-                                            <div class="textwidget">
-                                                <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa
-                                                    G1 <br> Five Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a
-                                                        class="text-primary" title="RZCareer Miền Bắc"
-                                                        href="tel:0898579188">0898.579.188</a></p>
-                                                <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5,
-                                                    607-609 Nguyễn Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh
-                                                    <br>Điện thoại: <a class="text-primary" title="RZCareer Miền Nam"
-                                                        href="tel:0896557388">0896.557.388</a>
-                                                </p>
-                                                <p><strong>Email:</strong> <a
-                                                        href="mailto:contact@jobsgo.vn">contact@jobsgo.vn</a><br /><strong
-                                                        title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
-                                                        title="Chăm sóc ứng viên" class="text-primary"
-                                                        href="tel:0705052927">070.505.2927</a><br>
-                                                    <strong>Hotline:</strong> <a title="Hotline" class="text-primary"
-                                                        href="tel:0899.565.868">0899.565.868</a>
-                                                </p>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo địa điểm">Việc theo địa điểm</div>
-                                            <div class="textwidget">
-                                                <div class="textwidget">
-                                                    <ul class="footer-navigation list-unstyled">
-                                                        <li><a href="/viec-lam-tai-ho-chi-minh.html"
-                                                                title="Việc làm tại Hồ Chí Minh">TPHCM</a></li>
-                                                        <li><a href="/viec-lam-tai-ha-noi.html"
-                                                                title="Việc làm tại Hà Nội">Hà Nội</a></li>
-                                                        <li><a href="/viec-lam-tai-da-nang.html"
-                                                                title="Việc làm tại Đà Nẵng">Đà Nẵng</a></li>
-                                                        <li><a href="/viec-lam-tai-can-tho.html"
-                                                                title="Việc làm tại Cần Thơ">Cần Thơ</a></li>
-                                                        <li><a href="/viec-lam-tai-binh-duong.html"
-                                                                title="Việc làm tại Bình Dương">Bình Dương</a></li>
-                                                        <li><a href="/viec-lam-tai-hai-phong.html"
-                                                                title="Việc làm tại Hải Phòng">Hải Phòng</a></li>
-                                                        <li><a href="/viec-lam-tai-dong-nai.html"
-                                                                title="Việc làm tại Đồng Nai">Đồng Nai</a></li>
-                                                        <li><a href="/viec-lam-tai-quang-ninh.html"
-                                                                title="Việc làm tại Quảng Ninh">Quảng Ninh</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                            title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân
-                                                            Hàng</a></li>
-                                                    <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế
-                                                            Toán</a></li>
-                                                    <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                            title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a>
-                                                    </li>
-                                                    <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                            title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                                    <li><a href="/viec-lam-marketing.html"
-                                                            title="Việc làm Marketing">Marketing</a></li>
-                                                    <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây
-                                                            Dựng</a></li>
-                                                    <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài
-                                                            Xế</a></li>
-                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem
-                                                            tất cả <b>»</b></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-thuc-tap-sinh.html"
-                                                            title="Việc làm Thực Tập Sinh">Thực Tập Sinh</a></li>
-                                                    <li><a href="/viec-lam-tro-ly-giam-doc.html"
-                                                            title="Việc làm Trợ Lý">Trợ Lý</a></li>
-                                                    <li><a href="/viec-lam-nhan-vien-van-phong.html"
-                                                            title="Việc làm Tài Xế">Nhân Viên Văn Phòng</a></li>
-                                                    <li><a href="/viec-lam-truong-phong.html"
-                                                            title="Việc làm Trưởng Phòng">Trưởng Phòng</a></li>
-                                                    <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám
-                                                            đốc</a></li>
-                                                    <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem
-                                                            tất cả <b>»</b></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                                        <div class="footer-widget">
-                                            <div class="widgettitle widget-title text-dark fw-bold"
-                                                title="Việc làm theo loại hình">Việc theo loại hình</div>
-                                            <div class="textwidget">
-                                                <ul class="footer-navigation list-unstyled">
-                                                    <li><a href="/viec-lam-part-time.html"
-                                                            title="Việc làm Part-time">Part-time</a></li>
-                                                    <li><a href="/viec-lam-online.html"
-                                                            title="Việc làm Online">Online</a></li>
-                                                    <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời
-                                                            vụ</a></li>
-                                                    <li><a href="/viec-lam-remote.html"
-                                                            title="Việc làm Remote">Remote</a></li>
-                                                </ul>
-                                                <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.facebook.com/RZCareerVN/"
-                                                            target="_blank"><i
-                                                                class='bx bx-xs bxl-facebook'></i></a></li>
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.linkedin.com/company/josbgo.vn/"
-                                                            target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item"><a
-                                                            href="https://www.instagram.com/jobsgo_vn/"
-                                                            target="_blank"><i class='bx bx-xs bxl-instagram'></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="copyright">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-sm-10">
-                                        <ul class="list-inline list-unstyled mb-1 text-primary">
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://jobsgo.vn/site/about-us" title="Về chúng tôi"><u>Giới
-                                                        thiệu</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
-                                                    title="Chính sách"><u>Chính sách</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://jobsgo.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
-                                                    title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://jobsgo.vn/site/giai-quyet-tranh-chap"
-                                                    title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a>
-                                            </li>
-                                            <!--<li><a href="https://jobsgo.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fjobsgo.vn%2Fjobsgo_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
-                                                        thuận sử dụng</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://jobsgo.vn/site/privacy-policy"
-                                                    title="Chính sách bảo mật"><u>Bảo mật</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                                    href="https://employer.jobsgo.vn"
-                                                    title="RZCareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành
-                                                        cho Nhà Tuyển Dụng</u></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://jobsgo.vn/site/faq"
-                                                    title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                            <li class="list-inline-item"><a href="https://jobsgo.vn/blog"
-                                                    target="_blank" title="Tin tức"><u>Blog</u></a></li>
-                                            <li class="list-inline-item"><a href="https://jobsgo.vn/hoi-dap/cau-hoi"
-                                                    target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                            <li class="list-inline-item"><a href="https://jobsgo.vn/sitemap.html"
-                                                    title="Sơ đồ trang web"><u>Sitemap</u></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-sm-2">
-                                        <ul
-                                            class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.facebook.com/RZCareerVN/" target="_blank"><i
-                                                        class='bx bx-xs bxl-facebook'></i></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.linkedin.com/company/josbgo.vn/"
-                                                    target="_blank"><i class='bx bx-xs bxl-linkedin'></i></a></li>
-                                            <li class="list-inline-item"><a rel="nofollow"
-                                                    href="https://www.instagram.com/jobsgo_vn/" target="_blank"><i
-                                                        class='bx bx-xs bxl-instagram'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày
-                                            09/05/2018 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép
-                                            thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin & Truyền
-                                            thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần RZCareer. All Rights
-                                            Reserved.</p>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="text-center">
-                                            <a target="_blank" rel="nofollow"
-                                                href="http://online.gov.vn/Home/WebDetails/73770">
-
-                                                <img class="lazy"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                    data-src="/assets_livewire/teks/img/online-gov.svg"
-                                                    alt="RZCareer" width="100" height="38">
-
-                                            </a>
-                                            <a target="_blank" rel="nofollow"
-                                                href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2Fjobsgo.vn%2Fviec-lam%2Fke-toan-tong-hop-duc-hoa-long-an-18748470984.html"
-                                                title="DMCA.com Protection Status" class="dmca-badge">
-
-                                                <img class="lazy"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                                    data-src="/assets_livewire/teks/img/dmca.svg" alt="RZCareer"
-                                                    width="100" height="21">
-
-                                            </a>
-                                            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
-                                            </script>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer> --}}
                     <style>
                         .zalo-chat-widget {
                             left: initial !important;
@@ -1443,7 +975,7 @@
 
 
 
-                    <a href="/mau-cv-xin-viec.html" title="Tạo CV / Resume Online nhanh chóng, miễn phí với RZCareer "
+                    <a href="/" title="Tạo CV / Resume Online nhanh chóng, miễn phí với RZCareer "
                         class="btn-colorgb-float"> <i class="fa fa-user-plus icon-float"></i> <span>Tạo CV /
                             Resume</span>
                     </a>
