@@ -159,7 +159,7 @@
                     </style>
 
                     <form wire:submit.prevent="login" class="login-form">
-                        <a title="RZCareer - Trang chủ" href="https://jobsgo.vn" class="site-logo" style="
+                        <a title="RZCareer - Trang chủ" href="/" class="site-logo" style="
     justify-content: center;
     display: flex;
 ">

@@ -391,7 +391,7 @@
                                                         itemprop="name">Công ty</span> </a>
                                                 <meta itemprop="position" content="2">
                                             </li>
-                                            <li class="active"><span class="text-muted">Công ty Bảo hiểm đang tuyển
+                                            <li class="active"><span class="text-muted">Công ty {{$careerName}} đang tuyển
                                                     dụng</span></li>
                                         </ol>
                                         <div class="sidebar-widget padd-top-0 mrg-bot-0">
@@ -486,18 +486,18 @@
                                                             <li
                                                                 class="prev {{ $companies->onFirstPage() ? 'disabled' : '' }}">
                                                                 <a
-                                                                    href="{{ $companies->previousPageUrl() }}">&laquo;</a>
+                                                                    href="{{ $companies->previousPageUrl() }}&careerName={{$careerName}}">&laquo;</a>
                                                             </li>
                                                             @for ($i = 1; $i <= $companies->lastPage(); $i++)
                                                                 <li
                                                                     class="{{ $companies->currentPage() == $i ? 'active' : '' }}">
-                                                                    <a href="{{ $companies->url($i) }}">{{ $i }}</a>
+                                                                    <a href="{{ $companies->url($i) }}&careerName={{$careerName}}">{{ $i }}</a>
                                                                 </li>
                                                                 @endfor
                                                                 <li
                                                                     class="next {{ $companies->hasMorePages() ? '' : 'disabled' }}">
                                                                     <a
-                                                                        href="{{ $companies->nextPageUrl() }}">&raquo;</a>
+                                                                        href="{{ $companies->nextPageUrl() }}&careerName={{$careerName}}">&raquo;</a>
                                                                 </li>
                                                         </ul>
 

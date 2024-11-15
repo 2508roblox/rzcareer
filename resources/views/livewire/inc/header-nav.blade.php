@@ -108,10 +108,9 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
-                        href="/cong-ty.html">
+                        href="/cong-ty">
                         <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
                     </a>
-                    @if (Auth::check())
                     <ul class="dropdown-menu">
                         @foreach($companies as $company)
                         <li>
@@ -122,7 +121,6 @@
                         </li>
                         @endforeach
                     </ul>
-                    @endif
                 </li>
                 <li class="nav-item dropdown">
                     <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"

@@ -163,7 +163,7 @@
                               <div class="card-body">
                                 <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
                                 <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với Rzcareer</p>
-                                <a href="/tao-cv-bang-ai.html" class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
+                                <a href="/candidate/import-cv-data" class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
                               </div>
                             </div>
                           </div>
@@ -239,7 +239,7 @@
             <div class="teks-section">
               <div class="teks-section-title">
                 <h2 class="h3">Việc tuyển gấp</h2>
-                <a href="/viec-lam-tuyen-gap.html">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                <a href="/danh-sach-viec-lam">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     fill="currentColor" class="size-6">
                     <path fill-rule="evenodd"
                       d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -485,7 +485,7 @@
       <div class="teks-section">
         <div class="teks-section-title">
           <h2 class="h3">Việc nổi bật</h2>
-          <a href="/viec-lam-noi-bat.html">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          <a href="/danh-sach-viec-lam">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
               fill="currentColor" class="size-6">
               <path fill-rule="evenodd"
                 d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -575,15 +575,15 @@
     </div>
     <div class="row my-3">
       <div class="col-4">
-        <a target="_blank" href="https://Rzcareer.vn/review-cv.html"><img width="100%" loading="lazy"
+        <a target="_blank" href="#"><img width="100%" loading="lazy"
             src="/assets_livewire/img/2024/bn1.webp" alt="img"></a>
       </div>
       <div class="col-4">
-        <a target="_blank" href="https://Rzcareer.vn/phan-tich-cv.html"><img width="100%" loading="lazy"
+        <a target="_blank" href="#"><img width="100%" loading="lazy"
             src="/assets_livewire/img/2024/bn2.webp" alt="Rzcareer"></a>
       </div>
       <div class="col-4">
-        <a target="_blank" href="https://Rzcareer.vn/tao-cv-bang-ai.html"><img width="100%" loading="lazy"
+        <a target="_blank" href="#"><img width="100%" loading="lazy"
             src="/assets_livewire/img/2024/bn3.webp" alt="img"></a>
       </div>
     </div>
@@ -611,7 +611,7 @@
                           <h3 class="fs-6 card-title fw-bold">Đánh giá CV - Rzcareer AI</h3>
                           <p class="card-text small">Bạn đã có sẵn CV? Tải lên để nhận phân tích và gợi ý của Rzcareer AI
                           </p>
-                          <a href="/review-cv.html" class="btn btn-primary btn-sm"> <i class='bx bx-upload'></i> Tải lên
+                          <a href="/candidate/import-cv-data" class="btn btn-primary btn-sm"> <i class='bx bx-upload'></i> Tải lên
                             CV</a>
 
                         </div>
@@ -633,7 +633,7 @@
                         <div class="card-body">
                           <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2 phút</h3>
                           <p class="card-text small">Tạo CV xin việc Online chuẩn, đẹp miễn phí với Rzcareer</p>
-                          <a href="/tao-cv-bang-ai.html" class="btn btn-primary btn-sm"><i class='bx bx-plus'></i> Tạo CV
+                          <a href="/candidate/import-cv-data" class="btn btn-primary btn-sm"><i class='bx bx-plus'></i> Tạo CV
                             ngay!</a>
                         </div>
                       </div>
@@ -1249,7 +1249,7 @@
 
         </div>
         <div class="modal-footer">
-          <a class="btn btn-primary m-auto d-block" href="/tao-cv-bang-ai.html">Tạo CV ngay</a>
+          <a class="btn btn-primary m-auto d-block" href="/candidate/import-cv-data">Tạo CV ngay</a>
         </div>
       </div>
     </div>
