@@ -120,7 +120,7 @@
         
         </li>
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
             href="/mau-cv-xin-viec.html">
             <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -132,7 +132,7 @@
             <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
             <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
           </ul>
-        </li>
+        </li> -->
 
       </ul>
 
@@ -497,7 +497,7 @@
             
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                   href="/mau-cv-xin-viec.html">
                   <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -509,7 +509,7 @@
                   <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
                   <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                 </ul>
-              </li>
+              </li> -->
 
             </ul>
             <div class="vr d-none d-xl-block"></div>
