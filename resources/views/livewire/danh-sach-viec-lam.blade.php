@@ -26,22 +26,6 @@
 
 
                     <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-                    <meta http-equiv="content-language" content="vi" />
-                    <link rel="alternate" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html"
-                        hreflang="x-default" hreflang="vi" />
-                    <link rel="canonical" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html" />
-
-                    <link rel="next" href="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html?page=2" />
-
-
-                    <meta charset="UTF-8">
-                    <meta name="viewport"
-                        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-                    <meta name="HandheldFriendly" content="true" />
-                    <meta name="author" content="Rzcareer.,JSC" />
-                    <meta name="csrf-param" content="_csrf-Rzcareer-candidate">
-                    <meta name="csrf-token"
-                        content="wY2pSbLAbVdOYKnk7oQrrnT3Ugg3V9lQWPF7-jxiJRKe7-MI3oUDYApNx6OZyFnaHJkceV1jv2UHyT6VaiETUQ==">
                     <title>Danh sách việc làm | Rzcareer</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
@@ -639,27 +623,14 @@
                                                                         </li>
                                                                         <li itemprop="itemListElement" itemscope=""
                                                                             itemtype="https://schema.org/ListItem"><a
-                                                                                href="https://Rzcareer.vn/viec-lam.html"
+                                                                                href="/danh-sach-viec-lam"
                                                                                 itemtype="https://schema.org/Thing"
                                                                                 itemprop="item"> <span
                                                                                     itemprop="name">Việc
                                                                                     làm</span> </a>
                                                                             <meta itemprop="position" content="2">
                                                                         </li>
-                                                                        <li class="active" itemprop="itemListElement"
-                                                                            itemscope=""
-                                                                            itemtype="https://schema.org/ListItem">
-                                                                            <span class="text-muted">
-                                                                                <meta
-                                                                                    itemtype="https://schema.org/Thing"
-                                                                                    itemprop="item"
-                                                                                    content="https://Rzcareer.vn/viec-lam-tai-chinh-ngan-hang.html">
-                                                                                <span itemprop="name">Việc làm Tài
-                                                                                    Chính/Ngân Hàng
-                                                                                </span>
-                                                                                <meta itemprop="position" content="3">
-                                                                            </span>
-                                                                        </li>
+                                                                   
                                                                     </ol>
 
                                                                 </div>
@@ -901,32 +872,7 @@
                                                     <div class="padd-top-15">
                                                         <div></div>
 
-                                                        <div class="hidden-xs">
-
-                                                            <div>
-                                                                <div class="d-flex box-summary-report industry_summary_report"
-                                                                    title="Tài Chính/Ngân Hàng"><img
-                                                                        src="{{asset('assets_livewire/img/2024/ic31.svg')}}"
-                                                                        alt="Rzcareer" width="42">
-                                                                    <div>
-                                                                        <p>Số tin đăng và lượt ứng tuyển theo tháng</p>
-                                                                        <p><strong><i
-                                                                                    class="bx bx-info-square bx-sm"></i>
-                                                                                Tài
-                                                                                Chính/Ngân Hàng</strong><a
-                                                                                onclick="addScrollEvent('div#report', 170);"
-                                                                                href="javascript:void(0)">Xem chi tiết
-                                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                    viewBox="0 0 24 24"
-                                                                                    fill="currentColor" class="size-6">
-                                                                                    <path fill-rule="evenodd"
-                                                                                        d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                                                                                        clip-rule="evenodd"></path>
-                                                                                </svg></a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                  
 
 
                                                         <div class="blog-sidebar">

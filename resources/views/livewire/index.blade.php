@@ -573,20 +573,7 @@
         </div>
       </div>
     </div>
-    <div class="row my-3">
-      <div class="col-4">
-        <a target="_blank" href="#"><img width="100%" loading="lazy"
-            src="/assets_livewire/img/2024/bn1.webp" alt="img"></a>
-      </div>
-      <div class="col-4">
-        <a target="_blank" href="#"><img width="100%" loading="lazy"
-            src="/assets_livewire/img/2024/bn2.webp" alt="Rzcareer"></a>
-      </div>
-      <div class="col-4">
-        <a target="_blank" href="#"><img width="100%" loading="lazy"
-            src="/assets_livewire/img/2024/bn3.webp" alt="img"></a>
-      </div>
-    </div>
+    
     </div>
   </section>
 
