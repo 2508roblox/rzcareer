@@ -5,6 +5,7 @@ use App\Http\Middleware\CheckAuth;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Middleware\CheckLoginCandidate;
 use App\Http\Middleware\CheckLoginEmployer;
+use App\Http\Middleware\EnsureEmailIsVerified;;
 use App\Livewire\Candidate\ChangePassword;
 use App\Livewire\Candidate\CvGo;
 use App\Livewire\Candidate\Dashboard;
@@ -36,6 +37,10 @@ use App\Livewire\TuyenDung;
 use App\Livewire\ViecLam;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
+
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -84,3 +89,6 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
 
 Route::get('/cron', Cron::class)->name('cron');
 
+Route::get('verify-email/{token}', [Register::class, 'verifyEmail'])->name('verify.email');
+
+// Route::get('verify-email/{token}', [AuthController::class, 'verifyEmail'])->name('verify.email');
