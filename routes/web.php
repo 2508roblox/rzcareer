@@ -16,6 +16,7 @@ use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\Candidate\ReviewUploadResume;
 use App\Livewire\CongTy;
+use App\Livewire\Cron;
 use App\Livewire\DanhSachViecLam;
 use App\Livewire\DanhSachNganhNghe;
 use App\Livewire\DocumentAttachment;
@@ -80,3 +81,6 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
+
+Route::get('/cron', Cron::class)->name('cron');
+

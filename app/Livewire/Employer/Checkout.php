@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Employer;
 
+use App\Jobs\CheckPayment;
 use App\Models\Service;
 use App\Models\ShoppingCart;
 use App\Models\Invoice; // Assuming you have an Invoice mode
@@ -16,6 +17,7 @@ class Checkout extends Component
     public $purchasedServices = []; // Array to hold purchased services
     public function mount($code)
     {
+
         $this->services = Service::all();
         foreach ($this->services as $service) {
             $this->quantities[$service->id] = 0;
@@ -37,15 +39,7 @@ class Checkout extends Component
         $this->quantities[$serviceId] = $quantity;
         $this->calculateTotal();
     }
-#attributes: array:7 [▼
-// "id" => 3
-// "invoice_code" => "INVCIIEQ0WY"
-// "user_id" => 36
-// "total_price" => 1000000
-// "status" => "pending"
-// "created_at" => "2024-10-25 10:21:47"
-// "updated_at" => "2024-10-25 10:21:47"
-// ]
+
     public function calculateTotal()
     {
         $this->totalAmount = 0;
@@ -56,7 +50,7 @@ class Checkout extends Component
 
     public function render()
     {
-        return view('livewire.employer.checkout', [
+        return view('livewire.employer.pay', [
             'invoice' => $this->invoice, // Pass the invoice to the view
         ]);
     }

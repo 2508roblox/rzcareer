@@ -50,58 +50,7 @@ class DanhSachViecLam extends Component
             $this->resetPage();
         }
     }
-    // public function updatingKeyword()
-    // {
-    //     $this->resetPage();
-    // }
-
-    // public function updatingJobType()
-    // {
-    //     $this->resetPage();
-    // }
-
-    // public function updatingCareerId()
-    // {
-    //     $this->resetPage();
-    // }
-
-    // public function updatingSalaryRange()
-    // {
-    //     $this->resetPage();
-    // }
-
-    // public function updatingPosition()
-    // {
-    //     $this->resetPage();
-    // }
-    // public function updatingExperience()
-    // {
-    //     $this->resetPage();
-    // }
-
-    // public function updateJobType($type)
-    // {
-    //     $this->job_type = $type;
-    // }
-
-    // public function updateCareer($id)
-    // {
-    //     $this->career_id = $id;
-    // }
-
-    // public function updateSalaryRange($salary)
-    // {
-    //     $this->salary = $salary;
-    // }
-
-    // public function updatePosition($position)
-    // {
-    //     $this->position = $position;
-    // }
-    // public function updateExperience($experience)
-    // {
-    //     $this->experience = $experience;
-    // }
+  
 
     protected $listeners = [
         'locationSelected',
@@ -168,6 +117,7 @@ class DanhSachViecLam extends Component
     }
     public function sortBy($field)
     {
+        $this->activeSort = $field;
         if ($this->sortField === $field) {
             // Đảo ngược thứ tự sắp xếp nếu trường giống nhau
             $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
@@ -176,22 +126,10 @@ class DanhSachViecLam extends Component
             $this->sortField = $field;
             $this->sortDirection = 'asc';
         }
+        
     }
 
-    // public function updated($propertyName)
-    // {
-    //     // Cập nhật URL khi có sự thay đổi
-    //     $this->dispatchBrowserEvent('update-url', [
-    //         'keyword' => $this->keyword,
-    //         'location' => $this->location,
-    //         'career_id' => $this->career_id,
-    //         'job_type' => $this->job_type,
-    //         'type_of_workplace' => $this->type_of_workplace,
-    //         'is_hot' => $this->is_hot,
-    //         'is_urgent' => $this->is_urgent,
-    //     ]);
-    // }
-
+  
     public function search()
     {
         $this->resetPage();

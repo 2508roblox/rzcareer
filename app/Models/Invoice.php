@@ -24,4 +24,9 @@ class Invoice extends Model
     {
         return $this->hasMany(PaymentHistory::class, 'invoice_id');
     }
+    public function markAsPaid()
+    {
+        $this->status = 'successful'; // Giả sử bạn có thuộc tính 'status'
+        $this->save(); // Lưu thay đổi vào cơ sở dữ liệu
+    }
 }

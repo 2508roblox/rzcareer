@@ -6,39 +6,47 @@ use Livewire\Component;
 use App\Models\Company;
 use App\Models\JobPost;
 use App\Models\CompanyImage;
-use Jantinnerezo\LivewireAlert\LivewireAlert; // Import the LivewireAlert trait
-use Illuminate\Support\Facades\Auth; // Import Auth facade
+use App\Models\CompanyReview; // Import the CompanyReview model
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Illuminate\Support\Facades\Auth;
 
 class TuyenDung extends Component
 {
-    use LivewireAlert; // Use the LivewireAlert trait
-    public $company; // Thêm thuộc tính để lưu thông tin công ty
-    public $jobPosts; // Thêm thuộc tính để lưu danh sách job của công ty
-    public $gallery; // thư viện ảnh
+    use LivewireAlert;
+
+    public $company;
+    public $jobPosts;
+    public $gallery;
+    public $reviews; // Add property for reviews
 
     public function mount($slug)
     {
-        // Lấy thông tin công ty dựa trên slug
+        // Fetch company information based on slug
         $this->company = Company::where('slug', $slug)
-            ->with(['location', 'companyImages']) // Tải thông tin location và companyImages
+            ->with(['location', 'companyImages'])
             ->firstOrFail();
 
-        // Lấy các job của công ty này
+        // Fetch job posts for this company
         $this->jobPosts = JobPost::where('company_id', $this->company->id)
-            ->with(['career', 'location']) // Load thêm các mối quan hệ nếu cần
+            ->with(['career', 'location'])
             ->get();
 
-        $this->gallery = CompanyImage::where('company_id', $this->company->id)
+        // Fetch gallery images
+        $this->gallery = CompanyImage::where('company_id', $this->company->id)->get();
+
+        // Fetch reviews for the company
+        $this->reviews = CompanyReview::where('company_id', $this->company->id)
+            ->with('user') // Load related user data for review
             ->get();
     }
 
     public function render()
     {
-
         return view('livewire.tuyen-dung', [
-            'company' => $this->company, // Chuyển dữ liệu công ty vào view
-            'jobPosts' => $this->jobPosts, // Chuyển danh sách job vào view
+            'company' => $this->company,
+            'jobPosts' => $this->jobPosts,
             'gallery' => $this->gallery,
+            'reviews' => $this->reviews, // Pass reviews to the view
         ]);
     }
 }

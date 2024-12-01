@@ -1,29 +1,8 @@
 <div>
 
-    <!DOCTYPE html>
-    <html lang="vi-VN">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="robots" content="index, follow">
-        <meta name="title"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
-        <meta name="description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <meta property="og:url"
-            content="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html">
-        <meta property="og:type" content="website">
-        <meta property="fb:app_id" content="1590841851212703">
-        <meta property="og:image" itemprop="thumbnailUrl"
-            content="https://Rzcareer.vn/media/img/employer/39234-cover-app.jpg">
-        <meta property="og:title"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024">
-        <meta property="og:description"
-            content="Công Ty TNHH Chế Biến Nước Chấm Mekong tuyển dụng nhiều việc làm trên Rzcareer với mức lương cạnh tranh, phúc lợi tốt, môi trường làm việc chuyên nghiệp. Xem việc làm Công ty Chế Biến Nước Chấm Mekong và ứng tuyển ngay.">
-        <link href="https://Rzcareer.vn/tuyen-dung/cong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
-            rel="canonical">
-        <title>Công Ty TNHH Chế Biến Nước Chấm Mekong (Công ty Chế Biến Nước Chấm Mekong) tuyển dụng tháng 09/2024
+        <title>{{ $company->company_name }}
         </title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
             type="font/woff2" crossorigin>
@@ -143,17 +122,7 @@
                 });
             </script>
 
-            <div class="container mb-2">
-                <div class="input-group input-group-search">
-                    <input type="search" id="keyword" onfocus="this.select()" autocomplete="off"
-                        class="auto-complete form-control" placeholder="Từ khóa...">
-                    <input type="search" id="location" onfocus="this.select()" autocomplete="off"
-                        class="auto-complete form-control" placeholder="Tỉnh/thành...">
-                    <button class="btn btn-primary teks-btn-g" type="button" id="search"><i
-                            class="bx bx-search-alt fs-6 text-white"></i> <span
-                            class="d-none d-sm-inline-block fw-bold">Tìm việc</span></button>
-                </div>
-            </div>
+        
             <style>
                 .input-group-search {
                     border: 2px solid #1772bd !important;
@@ -273,16 +242,7 @@
                                 </h1>
                                 <h2 class="d-block fw-normal fs-5 my-1">{{ $company->company_name }}</h2>
 
-                                <div class="designation d-none d-sm-block">
-                                    <button
-                                        class="btn btn-follow btn-sm btn-primary position-absolute bottom-0 end-0 me-4 mb-4"
-                                        data-eid="{{ $company->id }}">
-                                        <span><i class='bx bx-bell'></i> Theo dõi</span>
-                                    </button>
-                                    <a target="_blank" href="">
-                                        <span class="text-capitalize text-dark">{{ $company->field_operation }}</span>
-                                    </a>
-                                </div>
+                               
                             </div>
                         </div>
 
@@ -309,7 +269,7 @@
                             </li>
                             <li class="breadcrumb-item" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem"><a class="text-body small"
-                                    href="https://Rzcareer.vn/cong-ty.html">Công ty</a>
+                                    href="/cong-ty">Công ty</a>
                                 <meta itemprop="position" content="2">
                             </li>
                             <li class="breadcrumb-item active" aria-current="page"><span class="small">
@@ -545,134 +505,54 @@
 
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <div class="row mb-4">
-                                        <div class="col-sm-6">
-                                            <div class="rating-block bg-secondary shadow-sm mt-3 text-white rounded-4">
-                                                <p class="ms-4 pt-3">Được đánh giá</p>
-                                                <p class="ms-4 bold padding-bottom-7 fs-1"> 4.0 <small>/ 5</small></p>
-                                                <div class="ms-4 pb-3">
-                                                    <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 100%, #d8d8d8 100%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button> <button type="button"
-                                                        style="background: linear-gradient(90deg, #f1c40f 0%, #d8d8d8 0%);"
-                                                        class="btn btn-default btn-grey btn-sm"
-                                                        aria-label="Left Align"><span class="bx bxs-star"
-                                                            aria-hidden="true"></span></button>
+                                    @foreach ($reviews as $review)
+                                        <div class="row mb-4">
+                                            <div class="col-sm-6">
+                                                <div class="rating-block bg-secondary shadow-sm mt-3 text-white rounded-4">
+                                                    <p class="ms-4 pt-3">Được đánh giá</p>
+                                                    <p class="ms-4 bold padding-bottom-7 fs-1">
+                                                        {{ round(($review->salary_benefit + $review->training_opportunity + $review->employee_care + $review->company_culture + $review->workplace_environment) / 5, 1) }}
+                                                        <small>/ 5</small>
+                                                    </p>
+                                                    <div class="ms-4 pb-3">
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align" style="background: linear-gradient(90deg, {{ $i <= round(($review->salary_benefit + $review->training_opportunity + $review->employee_care + $review->company_culture + $review->workplace_environment) / 5) ? '#f1c40f' : '#d8d8d8' }} 100%);">
+                                                                <span class="bx bxs-star" aria-hidden="true"></span>
+                                                            </button>
+                                                        @endfor
+                                                    </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                @php
+                                                    $fields = [
+                                                        'Lương thưởng & phúc lợi' => $review->salary_benefit,
+                                                        'Đào tạo & học hỏi' => $review->training_opportunity,
+                                                        'Sự quan tâm đến nhân viên' => $review->employee_care,
+                                                        'Văn hoá công ty' => $review->company_culture,
+                                                        'Văn phòng làm việc' => $review->workplace_environment,
+                                                    ];
+                                                @endphp
+                                
+                                                @foreach ($fields as $label => $value)
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div>{{ $label }}</div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-warning bg-secondary" role="progressbar" style="width: {{ $value * 20 }}%">
+                                                                    <span class="sr-only d-none">{{ $value * 20 }}% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Lương thưởng &amp; phúc lợi</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Đào tạo &amp; học hỏi</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Sự quan tâm đến nhân viên</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div>Văn hoá công ty</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div> Văn phòng làm việc</div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-warning bg-secondary"
-                                                            role="progressbar" style="width: 80%"> <span
-                                                                class="sr-only d-none">80% Complete (danger)</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="review-block bg-light shadow-sm p-3 d-none">
-                                                <div class="list"></div>
-                                                <script>
-                                                    window.addEventListener("load", function() {
-                                                        function f1(id) {
-                                                            $.get("/ajax/get-rating?employer_id=39234&last_id=" + id, function(res) {
-                                                                var obj = JSON.parse(res);
-                                                                $('.review-block .list').append(obj.list);
-                                                                $('.view-more').html(obj.more);
-                                                                $('.btn-view-more').click(function() {
-                                                                    var id = $(this).data('last-id');
-                                                                    if (id) {
-                                                                        f1(id);
-                                                                    }
-                                                                });
-                                                            });
-                                                        }
-
-                                                        $(function() {
-                                                            f1(0);
-                                                        });
-                                                    });
-                                                </script>
-                                                <div class="text-center view-more"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
+                                
 
                                 {{-- REVIEW FORM --}}
                                 <livewire:company-review :company_id="$company->id" />
@@ -754,222 +634,7 @@
         </section>
         @livewire('employer.inc.footer')
 
-        {{-- <footer class="footer bg-white pt-4 pt-sm-5 pb-3">
-            <div class="no-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN Rzcareer</div>
-                                <div class="textwidget">
-                                    <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five
-                                        Star Garden, Thanh Xuân, Hà Nội <br>Điện thoại: <a class="text-primary"
-                                            title="Rzcareer Miền Bắc" href="tel:0898579188">0898.579.188</a></p>
-                                    <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn
-                                        Kiệm,<br> Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: <a
-                                            class="text-primary" title="Rzcareer Miền Nam"
-                                            href="tel:0896557388">0896.557.388</a></p>
-                                    <p><strong>Email:</strong> <a
-                                            href="mailto:contact@Rzcareer.vn">contact@Rzcareer.vn</a><br /><strong
-                                            title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> <a
-                                            title="Chăm sóc ứng viên" class="text-primary"
-                                            href="tel:0705052927">070.505.2927</a><br> <strong>Hotline:</strong> <a
-                                            title="Hotline" class="text-primary"
-                                            href="tel:0899.565.868">0899.565.868</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold" title="Việc làm theo địa điểm">
-                                    Việc theo địa điểm</div>
-                                <div class="textwidget">
-                                    <div class="textwidget">
-                                        <ul class="footer-navigation list-unstyled">
-                                            <li><a href="/viec-lam-tai-ho-chi-minh.html"
-                                                    title="Việc làm tại Hồ Chí Minh">TPHCM</a></li>
-                                            <li><a href="/viec-lam-tai-ha-noi.html" title="Việc làm tại Hà Nội">Hà
-                                                    Nội</a></li>
-                                            <li><a href="/viec-lam-tai-da-nang.html" title="Việc làm tại Đà Nẵng">Đà
-                                                    Nẵng</a></li>
-                                            <li><a href="/viec-lam-tai-can-tho.html" title="Việc làm tại Cần Thơ">Cần
-                                                    Thơ</a></li>
-                                            <li><a href="/viec-lam-tai-binh-duong.html"
-                                                    title="Việc làm tại Bình Dương">Bình Dương</a></li>
-                                            <li><a href="/viec-lam-tai-hai-phong.html"
-                                                    title="Việc làm tại Hải Phòng">Hải Phòng</a></li>
-                                            <li><a href="/viec-lam-tai-dong-nai.html" title="Việc làm tại Đồng Nai">Đồng
-                                                    Nai</a></li>
-                                            <li><a href="/viec-lam-tai-quang-ninh.html"
-                                                    title="Việc làm tại Quảng Ninh">Quảng Ninh</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo ngành nghề">Việc theo ngành nghề</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-tai-chinh-ngan-hang.html"
-                                                title="Việc làm Tài Chính/Ngân Hàng">Tài Chính/Ngân Hàng</a></li>
-                                        <li><a href="/viec-lam-ke-toan.html" title="Việc làm Kế Toán">Kế Toán</a>
-                                        </li>
-                                        <li><a href="/viec-lam-nhan-vien-hanh-chinh-nhan-su.html"
-                                                title="Việc làm Hành Chính Nhân Sự">Hành Chính Nhân Sự</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-kinh-doanh.html"
-                                                title="Việc làm Kinh doanh">Kinh Doanh</a></li>
-                                        <li><a href="/viec-lam-marketing.html" title="Việc làm Marketing">Marketing</a>
-                                        </li>
-                                        <li><a href="/viec-lam-xay-dung.html" title="Việc làm Xây Dựng">Xây Dựng</a>
-                                        </li>
-                                        <li><a href="/viec-lam-tai-xe.html" title="Việc làm Tài Xế">Tài Xế</a></li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả ngành nghề">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold"
-                                    title="Việc làm theo Vị trí/Chức vụ">Việc theo chức danh</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-thuc-tap-sinh.html" title="Việc làm Thực Tập Sinh">Thực
-                                                Tập Sinh</a></li>
-                                        <li><a href="/viec-lam-tro-ly-giam-doc.html" title="Việc làm Trợ Lý">Trợ
-                                                Lý</a></li>
-                                        <li><a href="/viec-lam-nhan-vien-van-phong.html" title="Việc làm Tài Xế">Nhân
-                                                Viên Văn Phòng</a></li>
-                                        <li><a href="/viec-lam-truong-phong.html" title="Việc làm Trưởng Phòng">Trưởng
-                                                Phòng</a></li>
-                                        <li><a href="/viec-lam-giam-doc.html" title="Việc làm Giám đốc">Giám đốc</a>
-                                        </li>
-                                        <li><a href="/nganh-nghe.html" title="Xem tất cả vị trí/chức vụ">Xem tất cả
-                                                <b>»</b></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6 col-xs-6 col-md-2">
-                            <div class="footer-widget">
-                                <div class="widgettitle widget-title text-dark fw-bold" title="Việc làm theo loại hình">
-                                    Việc theo loại hình</div>
-                                <div class="textwidget">
-                                    <ul class="footer-navigation list-unstyled">
-                                        <li><a href="/viec-lam-part-time.html" title="Việc làm Part-time">Part-time</a>
-                                        </li>
-                                        <li><a href="/viec-lam-online.html" title="Việc làm Online">Online</a></li>
-                                        <li><a href="/viec-lam-thoi-vu.html" title="Việc làm Thời vụ">Thời vụ</a>
-                                        </li>
-                                        <li><a href="/viec-lam-remote.html" title="Việc làm Remote">Remote</a></li>
-                                    </ul>
-                                    <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
-                                        <li class="list-inline-item"><a href="https://www.facebook.com/RzcareerVN/"
-                                                target="_blank"><i class='bx bx-xs bxl-facebook'></i></a></li>
-                                        <li class="list-inline-item"><a
-                                                href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
-                                                    class='bx bx-xs bxl-linkedin'></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.instagram.com/Rzcareer_vn/"
-                                                target="_blank"><i class='bx bx-xs bxl-instagram'></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-10">
-                            <ul class="list-inline list-unstyled mb-1 text-primary">
-                                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/about-us"
-                                        title="Về chúng tôi"><u>Giới
-                                            thiệu</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/chinh-sach.pdf"
-                                        title="Chính sách"><u>Chính sách</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://Rzcareer.vn/pdf/viewer/?file=/media/pdf/quy-che-hoat-dong.pdf"
-                                        title="Quy chế hoạt động"><u>Quy chế</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://Rzcareer.vn/site/giai-quyet-tranh-chap"
-                                        title="Giải quyết tranh chấp"><u>Giải quyết tranh chấp</u></a></li>
-                                <!--<li><a href="https://Rzcareer.vn/site/term-of-service" title="Điều khoản sử dụng">Điều khoản</a></li>-->
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2FRzcareer.vn%2FRzcareer_thoa_thuan_mang_xa_hoi.doc&amp;wdOrigin=BROWSELINK"><u>Thoả
-                                            thuận sử dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://Rzcareer.vn/site/privacy-policy" title="Chính sách bảo mật"><u>Bảo
-                                            mật</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" target="_blank"
-                                        href="https://employer.Rzcareer.vn"
-                                        title="Rzcareer dành cho Nhà tuyển dụng tìm kiếm nhân sự"><u>Dành cho Nhà Tuyển
-                                            Dụng</u></a></li>
-                                <li class="list-inline-item"><a rel="nofollow" href="https://Rzcareer.vn/site/faq"
-                                        title="Câu hỏi thường gặp"><u>FAQ</u></a></li>
-                                <li class="list-inline-item"><a href="https://Rzcareer.vn/blog" target="_blank"
-                                        title="Tin tức"><u>Blog</u></a></li>
-                                <li class="list-inline-item"><a href="https://Rzcareer.vn/hoi-dap/cau-hoi"
-                                        target="_blank" title="Hỏi & Đáp"><u>Hỏi & Đáp</u></a></li>
-                                <li class="list-inline-item"><a href="https://Rzcareer.vn/sitemap.html"
-                                        title="Sơ đồ trang web"><u>Sitemap</u></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-2">
-                            <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.facebook.com/RzcareerVN/" target="_blank"><i
-                                            class='bx bx-xs bxl-facebook'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.linkedin.com/company/josbgo.vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-linkedin'></i></a></li>
-                                <li class="list-inline-item"><a rel="nofollow"
-                                        href="https://www.instagram.com/Rzcareer_vn/" target="_blank"><i
-                                            class='bx bx-xs bxl-instagram'></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế
-                                hoạch và Đầu tư Thành phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số
-                                568/GP-BTTTT do Bộ Thông tin & Truyền thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ
-                                phần Rzcareer. All Rights Reserved.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="text-center">
-                                <a target="_blank" rel="nofollow" href="http://online.gov.vn/Home/WebDetails/73770">
-
-                                    <img class="lazy"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/online-gov.svg" alt="Rzcareer" width="100"
-                                        height="38">
-
-                                </a>
-                                <a target="_blank" rel="nofollow"
-                                    href="https://www.dmca.com/Protection/Status.aspx?ID=80a751d3-fcbd-43c7-99fa-854fd7052f3e&refurl=https%3A%2F%2FRzcareer.vn%2Ftuyen-dung%2Fcong-ty-tnhh-che-bien-nuoc-cham-mekong-566271458.html"
-                                    title="DMCA.com Protection Status" class="dmca-badge">
-
-                                    <img class="lazy"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                        data-src="/assets_livewire/teks/img/dmca.svg" alt="Rzcareer" width="100"
-                                        height="21">
-
-                                </a>
-                                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer> --}}
+   
         <style>
             .zalo-chat-widget {
                 left: initial !important;
@@ -980,9 +645,7 @@
                 height: 60px !important;
             }
         </style>
-        <a href="https://zalo.me/409462990633304042" target="_blank" rel="nofollow" class="zalo-chat-widget">
-            <img loading="lazy" src="/assets_livewire/img/2024/zalo.svg" alt="Rzcareer">
-        </a>
+     
 
 
         <script>
@@ -1093,15 +756,12 @@
                         </video>
                     </div>
                     <div class="modal-footer">
-                        <a class="btn btn-primary m-auto d-block" href="/tao-cv-bang-ai.html">Tạo CV ngay</a>
+                        <a class="btn btn-primary m-auto d-block" href="/">Tạo CV ngay</a>
                     </div>
                 </div>
             </div>
         </div>
-        <a title="Giới thiệu tính năng viết CV tự động bằng AI trong vòng 2 phút!"
-            style="z-index: 9999 !important;left: initial !important;bottom: 95px !important;right: 20px !important;position: fixed !important;width: 50px !important;height: 50px !important;background: #fff;border-radius: 100%;box-shadow: 0 0 10px #ccc;display: flex;align-content: center;justify-content: center;align-items: center;"
-            href="" data-bs-toggle="modal" data-bs-target="#cv-modal"> <img loading="lazy" height="40"
-                width="40" src="/assets_livewire/teks/img/Rzcareer-ai-robot.svg?v=1.2" alt="Rzcareer AI"> </a>
+  
         <script>
             window.addEventListener('load', function() {
                 $(function() {
@@ -1118,6 +778,5 @@
         </script>
     </body>
 
-    </html>
 
 </div>

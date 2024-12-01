@@ -23,42 +23,35 @@ class HomeIndex extends Component
     public function mount()
     {
         // Lấy danh sách các JobPost có is_hot = 1
-        $this->hotJobPosts = Cache::remember('hot_job_posts', now()->addMinutes(10), function () {
-            return JobPost::with(['career', 'company', 'location', 'city'])
-                ->where('is_hot', 1)
-                ->orderBy('id', 'asc')
-                ->limit(100)
-                ->get()
-                ->map(function ($jobPost) {
-                    $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
-                    return $jobPost;
-                });
+        $this->hotJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
+        ->where('is_hot', 1)
+        ->orderBy('id', 'asc')
+        ->limit(10)
+        ->get()
+        ->map(function ($jobPost) {
+            $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+            return $jobPost;
         });
 
         // Cache urgent job posts
-        $this->urgentJobPosts = Cache::remember('urgent_job_posts', now()->addMinutes(10), function () {
-            return JobPost::with(['career', 'company', 'location', 'city'])
-                ->where('is_urgent', 1)
-                ->get()
-                ->map(function ($jobPost) {
-                    $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
-                    return $jobPost;
-                });
+        $this->urgentJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
+        ->where('is_urgent', 1)
+        ->limit(100) // Thêm giới hạn số lượng bản ghi
+        ->get()
+        ->map(function ($jobPost) {
+            $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+            return $jobPost;
         });
 
         // Cache companies
-        $this->companies = Cache::remember('companies', now()->addMinutes(10), function () {
-            return Company::limit(100)->get();
-        });
+        $this->companies = Company::limit(100)->get();
 
         // Cache careers with job post counts
-        $this->careers = Cache::remember('careers_with_counts', now()->addMinutes(10), function () {
-            return CommonCareer::withCount('jobPosts')
-                ->orderBy('job_posts_count', 'desc')
-                ->take(12)
-                ->get();
-        });
-        CheckPayment::dispatch();
+        $this->careers = CommonCareer::withCount('jobPosts')
+        ->orderBy('job_posts_count', 'desc')
+        ->take(12)
+        ->get();
+ 
     }
 
     public function searchJobs()
@@ -93,6 +86,13 @@ class HomeIndex extends Component
         $urgentJobs = JobPost::where('is_urgent', true)
         ->limit(10)
         ->get();
+        // dd([
+        //     'hotJobPosts' => $this->hotJobPosts,
+        //     'urgentJobPosts' => $this->urgentJobPosts,
+        //     'companies' => $this->companies,
+        //     'careers' => $this->careers, // Add this line
+
+        // ]);
         return view('livewire.index', [
             'hotJobPosts' => $this->hotJobPosts,
             'urgentJobPosts' => $this->urgentJobPosts,

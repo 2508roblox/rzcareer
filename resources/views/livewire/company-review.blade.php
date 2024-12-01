@@ -25,41 +25,7 @@
                                                     }
                                                 })
                                             });
-                                            $('.btn-comment').click(function() {
-                                                var rating_1 = $('.rating-1 .btn-warning').length;
-                                                var rating_2 = $('.rating-2 .btn-warning').length;
-                                                var rating_3 = $('.rating-3 .btn-warning').length;
-                                                var rating_4 = $('.rating-4 .btn-warning').length;
-                                                var rating_5 = $('.rating-5 .btn-warning').length;
-                                                var title = $('.rating-title').val();
-                                                var content = $('.rating-content').val();
-                                                var employer_id = '39234';
-                                                if (!rating_1 || !rating_2 || !rating_3 || !rating_4 || !rating_5) {
-                                                    alert('Vui lòng chọn đầy đủ các tiêu chí đánh giá');
-                                                } else if (!title || !content) {
-                                                    alert('Vui lòng nhập đầy đủ thông tin trước khi gửi đánh giá');
-                                                } else {
-                                                    $.ajax({
-                                                        url: "/api/employer-rating",
-                                                        method: "POST",
-                                                        data: {
-                                                            rating_1: rating_1,
-                                                            rating_2: rating_2,
-                                                            rating_3: rating_3,
-                                                            rating_4: rating_4,
-                                                            rating_5: rating_5,
-                                                            employer_id: employer_id,
-                                                            title: title,
-                                                            content: content,
-                                                        },
-                                                    }).done(function(response) {
-                                                        alert(
-                                                            'Thông tin đánh giá đã được gửi đi thành công và đang trong trạng thái chờ xét duyệt. Xin cảm ơn!'
-                                                        );
-                                                        $('.comments-form').hide();
-                                                    }).fail(function(jqXHR, textStatus) {});
-                                                }
-                                            });
+                                      
                                         });
                                     });
                                 </script>
