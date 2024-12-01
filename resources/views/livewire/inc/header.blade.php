@@ -120,7 +120,7 @@
           @endif
         </li>
 
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
           <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
             href="/mau-cv-xin-viec.html">
             <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -132,7 +132,7 @@
             <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
             <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
           </ul>
-        </li>
+        </li> --}}
 
       </ul>
 
@@ -155,7 +155,7 @@
           src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
           alt="avatar" width="32" height="32">
-        
+
 
           <span style="margin-left: 5px">
             @if (Auth::check())
@@ -497,7 +497,7 @@
                   @endif
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              {{-- <li class="nav-item dropdown">
                 <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
                   href="/mau-cv-xin-viec.html">
                   <img src="/assets_livewire/img/cv.svg" alt="job" loading="lazy"> CV / Hồ sơ
@@ -509,7 +509,7 @@
                   <li><a class="dropdown-item" href="/phan-tich-cv.html">Tải lên CV</a></li>
                   <li><a class="dropdown-item" href="/mau-cv-xin-viec.html">Mẫu CV</a></li>
                 </ul>
-              </li>
+              </li> --}}
 
             </ul>
             <div class="vr d-none d-xl-block"></div>
