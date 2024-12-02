@@ -11,7 +11,7 @@ use App\Models\CommonCity;
 use App\Models\CommonDistrict;
 use Illuminate\Http\Request;
 
-class DanhSachViecLam extends Component
+class JobSearchModal extends Component
 {
     use WithPagination;
 
@@ -134,7 +134,7 @@ class DanhSachViecLam extends Component
     {
         $this->resetPage();
         $this->updateJobList();
-        $this->dispatchBrowserEvent('updateUrl', [
+        $this->dispatch ('updateUrl', [
             'keyword' => $this->keyword,
             'location' => $this->location,
         ]);
@@ -236,7 +236,7 @@ class DanhSachViecLam extends Component
         // Đếm tổng số việc làm
         $totalJobs = JobPost::count();
 
-        return view('livewire.danh-sach-viec-lam', [
+        return view('livewire.job-search-modal', [
             'jobPosts' => $jobPosts,
             'totalJobs' => $totalJobs,
             'salaryRanges' => $salaryRanges,

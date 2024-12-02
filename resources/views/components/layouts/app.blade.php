@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<div>
+
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -72,3 +74,5 @@
 <x-livewire-alert::scripts />
 
 </html>
+
+</div>
