@@ -66,6 +66,7 @@ class VerifyEmail extends Mailable
                     ->with([
                         'name' => $this->user->full_name,
                         'verificationUrl' => $this->verifycationUrl,
+                        'logoUrl' => asset('assets_livewire/logo-light.svg'),
                     ]);
     }
 }
