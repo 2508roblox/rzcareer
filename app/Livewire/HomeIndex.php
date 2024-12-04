@@ -61,7 +61,11 @@ class HomeIndex extends Component
         // Nếu người dùng đã đăng nhập, lấy danh sách công việc phù hợp
         if ($this->user) {
             $this->suggestedJobs = JobPost::with(['career', 'company', 'location', 'city']) // Thêm các quan hệ
-                ->whereIn('job_name', $this->user->resumes->pluck('title'))
+                ->where(function ($query) {
+                    foreach ($this->user->resumes as $resume) {
+                        $query->orWhere('job_name', 'like', '%' . $resume->title . '%');
+                    }
+                })
                 ->limit(4) // Giới hạn số lượng công việc gợi ý
                 ->get()
                 ->map(function ($jobPost) {
@@ -71,6 +75,7 @@ class HomeIndex extends Component
         } else {
             $this->suggestedJobs = collect(); // Nếu chưa đăng nhập, gán giá trị rỗng
         }
+        
     }
 
     public function searchJobs()

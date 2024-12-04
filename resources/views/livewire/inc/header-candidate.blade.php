@@ -241,7 +241,7 @@
                                 background-color: #4CAF50;
                             }
                         </style>
-                        <li><a href="/candidate/dashboard" wire:navigate title="Hồ sơ xin việc"><i
+                        <li><a href="/candidate/dashboard"   title="Hồ sơ xin việc"><i
                                     class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
 
                         <li><a href="/candidate/change-password" title="Đổi mật khẩu"><i
