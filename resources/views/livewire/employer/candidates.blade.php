@@ -1,9 +1,6 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
-    <!-- Please send your resume with cover letter to team@RZcareer.vn -->
-    <!DOCTYPE html>
-    <html class="no-js" lang="vi">
+
 
     <head>
         <link rel="canonical" href="https://employer.RZcareer.vn/" />
@@ -263,6 +260,9 @@
 
 
     </body>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
-    </html>
+    <div class="zalo-chat-widget" data-oaid="1715225565559061022"
+        data-welcome-message="Rzcareer.site Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="100"
+        data-height="200"></div>
 </div>
