@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Events\TestNotification;
 use App\Jobs\CheckPayment;
 use App\Models\CommonCareer;
 use Livewire\Component;
@@ -27,7 +28,11 @@ class HomeIndex extends Component
     {
         // Lấy thông tin người dùng nếu đã đăng nhập
         $this->user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
+        event(new TestNotification([
+            "job_name"=> "Cộng Tác Viên Kiểm Kê Tài Sản (Vpbank)",
+            "status"=> "Đã liên hệ"
 
+        ]));
         // Lấy danh sách các JobPost có is_hot = 1
         $this->hotJobPosts = JobPost::with(['career', 'company', 'location', 'city'])
             ->where('is_hot', 1)
