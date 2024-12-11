@@ -286,28 +286,28 @@
                                     <style>
 
 
-    .image-container-holo   {
-    width: 250px;
-    aspect-ratio: 1;
-    transition: .5s;
-    cursor: pointer;
-    -webkit-mask:
-        linear-gradient(135deg, rgba(156, 8, 255, 0.8) 40%, #ff1313, rgba(0, 255, 179, 0.8) 60%)
-        100% 100% / 250% 250%;
-    animation: shimmer 1.3s infinite linear; /* Thêm animation */
-}
+                                .image-container-holo   {
+                                width: 250px;
+                                aspect-ratio: 1;
+                                transition: .5s;
+                                cursor: pointer;
+                                -webkit-mask:
+                                    linear-gradient(135deg, rgba(156, 8, 255, 0.8) 40%, #ff1313, rgba(0, 255, 179, 0.8) 60%)
+                                    100% 100% / 250% 250%;
+                                animation: shimmer 1.3s infinite linear; 
+                            }
 
 
 
 
-@keyframes shimmer {
-    0% {
-        -webkit-mask-position: 0 0; /* Bắt đầu ở vị trí 0 */
-    }
-    100% {
-        -webkit-mask-position: 100% 100%; /* Kết thúc ở vị trí 100% */
-    }
-}
+                                          @keyframes shimmer {
+                                              0% {
+                                                  -webkit-mask-position: 0 0; /* Bắt đầu ở vị trí 0 */
+                                              }
+                                              100% {
+                                                  -webkit-mask-position: 100% 100%; /* Kết thúc ở vị trí 100% */
+                                              }
+                                          }
 
                                     </style>
                               </div>
