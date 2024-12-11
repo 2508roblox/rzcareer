@@ -4,7 +4,7 @@
             <div>
 
                 <head>
-
+@assets
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
                         type="font/woff2" crossorigin>
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
@@ -20,6 +20,8 @@
                     <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font"
                         type="font/woff2" crossorigin>
                     <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
+@endassets
+
                     <meta name='dmca-site-verification' content='SW92M2l3NDFsN0RiZ2FZSTRqMjM1dz090' />
                     <script>
                         gtag('event', 'page_view', {
@@ -483,7 +485,7 @@
 
 
 
-                                          
+
                                                     <div class="content-group mrg-top-25">
                                                         <h2 class="h5 text-semibold">Mô tả công việc</h2>
                                                         <div class="clearfix">
@@ -717,7 +719,7 @@
                                                                 </ul>
 
                                                             </div>
-                                                            
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -769,37 +771,38 @@
 
                     <div id="preApplyForm" class="modal">
                         <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
+                            <div class="modal-content" style="
+                            height: 90vh;
+                            overflow-y: scroll;
+                        ">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Ứng tuyển ngay</h5>
                                     <button onclick="teksAlert(this)" type="button" class="close"
                                         data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
-                                    <form wire:submit.prevent="apply">
+                                    <form id="applicationForm" wire:submit.prevent="apply">
                                         <div class="form-group">
                                             <label for="full_name">Họ và Tên</label>
-                                            <input type="text" wire:model="full_name" class="form-control"
-                                                id="full_name" required>
+                                            <input type="text" wire:model="full_name" class="form-control" id="full_name" required>
+                                            <div class="invalid-feedback text-danger" id="fullNameError"></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" wire:model="email" class="form-control" id="email"
-                                                required>
+                                            <input type="email" wire:model="email" class="form-control" id="email" required>
+                                            <div class="invalid-feedback text-danger" id="emailError"></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="phone">Số điện thoại</label>
-                                            <input type="text" wire:model="phone" class="form-control" id="phone"
-                                                required>
+                                            <input type="text" wire:model="phone" class="form-control" id="phone" required>
+                                            <div class="invalid-feedback text-danger" id="phoneError"></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="resume">Chọn bản lý lịch</label>
                                             <div id="resume" required>
                                                 @foreach($resumes as $resume)
                                                 <div class="form-check" style="margin-bottom: 15px;">
-                                                    <input class="form-check-input" type="radio"
-                                                        wire:model="selectedResumeId" id="resume{{ $resume->id }}"
-                                                        value="{{ $resume->id }}" style="display: none;">
+                                                    <input class="form-check-input" type="radio" wire:model="selectedResumeId" name='selectedResumeId' id="resume{{ $resume->id }}" value="{{ $resume->id }}" style="display: none;">
                                                     <label class="form-check-label" for="resume{{ $resume->id }}" style="
                                                             display: flex;
                                                             align-items: center;
@@ -812,43 +815,87 @@
                                                             width: 100%;
                                                         ">
                                                         <span style="flex-grow: 1;">{{ $resume->title }}</span>
-                                                        <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}"
-                                                            target="_blank" class="btn btn-link">Xem</a>
+                                                        <a href="{{ $resume->type == 'primary' ? route('candidate.show') : route('candidate.review', $resume->id) }}" target="_blank" class="btn btn-link">Xem</a>
                                                     </label>
                                                 </div>
                                                 @endforeach
                                             </div>
+                                            <div class="invalid-feedback text-danger" id="resumeError"></div>
                                         </div>
-
                                         <style>
-                                            /* Hover effect */
                                             .form-check-label:hover {
                                                 border-color: #007bff;
-                                                /* Màu border khi hover */
                                                 box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
                                             }
-
-                                            /* Checked effect */
-                                            .form-check-input:checked+.form-check-label {
+                                            .form-check-input:checked + .form-check-label {
                                                 border-color: #007bff;
-                                                /* Màu border khi được chọn */
                                                 background-color: rgba(0, 123, 255, 0.1);
-                                                /* Màu nền khi được chọn */
                                             }
                                         </style>
-
-
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="btn-group">
-                                        <button type="submit" wire:click="apply" id="applyButton"
-                                            class="btn btn-success mrg-r-10">
+                                        <button onclick="validateForm()" class="btn btn-success mrg-r-10">
                                             <i class="bx bx-upload"></i> Ứng tuyển
                                         </button>
-
                                     </div>
                                 </div>
+
+                                <script>
+                                    function validateForm() {
+                                        const fullName = document.getElementById('full_name').value.trim();
+                                        const email = document.getElementById('email').value.trim();
+                                        const phone = document.getElementById('phone').value.trim();
+                                        const selectedResumeId = document.querySelector('input[name="selectedResumeId"]:checked');
+
+                                        // Clear previous errors
+                                        document.getElementById('fullNameError').textContent = '';
+                                        document.getElementById('emailError').textContent = '';
+                                        document.getElementById('phoneError').textContent = '';
+                                        document.getElementById('resumeError').textContent = '';
+
+                                        let hasError = false;
+
+                                        if (!fullName) {
+                                            document.getElementById('fullNameError').textContent = "Họ và Tên không được để trống.";
+                                            hasError = true;
+                                        }
+                                        if (!email) {
+                                            document.getElementById('emailError').textContent = "Email không được để trống.";
+                                            hasError = true;
+                                        } else if (!validateEmail(email)) {
+                                            document.getElementById('emailError').textContent = "Email không hợp lệ.";
+                                            hasError = true;
+                                        }
+                                        if (!phone) {
+                                              document.getElementById('phoneError').textContent = "Số điện thoại không được để trống.";
+                                              hasError = true;
+                                          } else if (!validatePhone(phone)) {
+                                              document.getElementById('phoneError').textContent = "Số điện thoại không hợp lệ. Vui lòng nhập lại.";
+                                              hasError = true;
+                                          }
+                                        if (!selectedResumeId) {
+                                            document.getElementById('resumeError').textContent = "Bạn cần chọn một bản lý lịch.";
+                                            hasError = true;
+                                        }
+
+                                        if (!hasError) {
+                                            @this.call('apply');
+
+                                        }
+                                    }
+
+                                    function validateEmail(email) {
+                                        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                        return re.test(email);
+                                    }
+                                    function validatePhone(phone) {
+    // Kiểm tra xem chuỗi có phải là số không
+    const re = /^\d+$/; // Kiểm tra xem chuỗi chỉ chứa chữ số
+    return re.test(phone);
+}
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -968,7 +1015,7 @@
                             height: 60px !important;
                         }
                     </style>
-               
+
 
 
 

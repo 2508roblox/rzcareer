@@ -1,7 +1,7 @@
 cd /var/www/rzcareer.site
 sudo rm -rf ./*
 sudo rm -rf .[^.]*  # Xóa các tệp ẩn
-sudo git clone -b HuyHoang5 https://github.com/2508roblox/rzcareer.git ./ && \
+sudo git clone -b HuyHoang6 https://github.com/2508roblox/rzcareer.git ./ && \
 sudo composer install && \
 sudo cp .env.production .env && \
 sudo chmod -R 777 . && \

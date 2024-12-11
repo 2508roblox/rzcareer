@@ -26,7 +26,6 @@
             integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Cute Alert -->
-        <link class="main-stylesheet" href="/pay/public/cute-alert/style.css" rel="stylesheet" type="text/css">
         <script src="/pay/public/cute-alert/cute-alert.js"></script>
         <!-- jQuery -->
         <script src="/pay/public/js/jquery-3.6.0.js"></script>
@@ -69,7 +68,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-4 left">
                         <div class="info-box">
-                            <div class="receipt">
+                            <div class="receipts">
                                 <img src="/assets_livewire/logo-dark.svg" width="100%" />
                             </div>
                             <div class="entry">
@@ -99,16 +98,16 @@
                                 <p><i class="fa fa-money" aria-hidden="true"></i>
                                     <span style="padding-left: 5px;">Số tiền cần thanh toán</span>
                                     <br />
-                                    <b style="padding-left: 25px;color:aqua;"> {{
-                                        number_format($invoice->total_price, 0, ',', '.') }}đ</b>
+                                    <b style="padding-left: 25px;color:aqua;">
+                                        {{ number_format($invoice->total_price, 0, ',', '.') }}đ</b>
                                 </p>
                             </div>
                             <div class="entry">
                                 <p><i class="fa fa-comment" aria-hidden="true"></i>
                                     <span style="padding-left: 5px;">Nội dung chuyển khoản</span>
                                     <br />
-                                    <b id="copyNoiDung" style="padding-left: 25px;word-break: keep-all;color:yellow;">{{
-                                        $invoice->invoice_code }}</b>
+                                    <b id="copyNoiDung"
+                                        style="padding-left: 25px;word-break: keep-all;color:yellow;">{{ $invoice->invoice_code }}</b>
                                     <i onclick="copy()" data-clipboard-target="#copyNoiDung"
                                         class="fas fa-copy copy"></i>
                                 </p>
@@ -118,21 +117,24 @@
                                     <i class="fa fa-barcode" aria-hidden="true"></i>
                                     <span style="padding-left: 5px;">Trạng thái</span>
                                     <br />
-                                    @if($invoice->status === 'pending')
-                                    <i class="fa fa-spinner fa-spin"></i>
-                                    <span id="status_payment" style="padding-left: 25px; word-break: break-all;">Đang
-                                        chờ thanh toán...</span>
-                                    @elseif($invoice->status === 'completed')
-                                    <i class="fa fa-check-circle" style="color: green;"></i>
-                                    <span id="status_payment" style="padding-left: 25px; word-break: break-all;">Đã
-                                        thanh toán</span>
+                                    @if ($invoice->status === 'pending')
+                                        <i class="fa fa-spinner fa-spin"></i>
+                                        <span id="status_payment"
+                                            style="padding-left: 25px; word-break: break-all;">Đang
+                                            chờ thanh toán...</span>
+                                    @elseif($invoice->status === 'successful')
+                                        <i class="fa fa-check-circle" style="color: green;"></i>
+                                        <span id="status_payment" style="padding-left: 25px; word-break: break-all;">Đã
+                                            thanh toán</span>
                                     @elseif($invoice->status === 'failed')
-                                    <i class="fa fa-times-circle" style="color: red;"></i>
-                                    <span id="status_payment" style="padding-left: 25px; word-break: break-all;">Thanh
-                                        toán thất bại</span>
+                                        <i class="fa fa-times-circle" style="color: red;"></i>
+                                        <span id="status_payment"
+                                            style="padding-left: 25px; word-break: break-all;">Thanh
+                                            toán thất bại</span>
                                     @else
-                                    <span id="status_payment" style="padding-left: 25px; word-break: break-all;">Trạng
-                                        thái không xác định</span>
+                                        <span id="status_payment"
+                                            style="padding-left: 25px; word-break: break-all;">Trạng
+                                            thái không xác định</span>
                                     @endif
                                 </p>
                             </div>
@@ -155,7 +157,7 @@
                                                         <a>Sử dụng <b> App Internet Banking </b> hoặc ứng dụng camera hỗ
                                                             trợ QR code để quét mã</a>
                                                     </div>
-                                                    <img src="https://api.vietqr.io/MB/104567890/{{number_format($invoice->total_price, 0, ',', '')}}/{{ $invoice->invoice_code }}/vietqr_net_2.jpg?accountName=TRAN LE HUY HOANG"
+                                                    <img src="https://api.vietqr.io/MB/104567890/{{ number_format($invoice->total_price, 0, ',', '') }}/{{ $invoice->invoice_code }}/vietqr_net_2.jpg?accountName=TRAN LE HUY HOANG"
                                                         width="100%" />
 
                                                 </div>
@@ -189,74 +191,60 @@
         <script type="text/javascript">
             new ClipboardJS(".copy");
 
-    function copy() {
-        cuteToast({
-            type: "success",
-            message: "Đã sao chép vào bộ nhớ tạm",
-            timer: 5000
-        });
-    }
+            function copy() {
+                cuteToast({
+                    type: "success",
+                    message: "Đã sao chép vào bộ nhớ tạm",
+                    timer: 5000
+                });
+            }
         </script>
         <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-        <script src="https://fastly.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-            // Enable pusher logging - don't include this in production
-   Pusher.logToConsole = true;
+            function fetchCronData() {
+                const invoiceCode = "{{ $invoice->invoice_code }}"; // Make sure this is a valid string
+                fetch('/api/invoice/' + invoiceCode, {
+                        method: 'GET', // HTTP method
+                        headers: {
+                            'Content-Type': 'application/json' // Optional, depending on your backend requirements
+                        }
+                    })
+                    .then(response => response.json()) // Assuming the response is JSON
+                    .then(data => {
+                        if (data.status == 'success') {
+                            Swal.fire({
+                                icon: 'success', // Change the icon type based on your needs (e.g., 'info', 'warning', 'error')
+                                title: 'Thông báo',
+                                text: data.message  ,
+                                confirmButtonText: 'OK'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/recruiter/invoices';
+                                }
+                            });
+                        }
+                        // Set a timeout to fetch again after 2 seconds
+                        setTimeout(fetchCronData, 2000); // 2000 milliseconds = 2 seconds
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
 
-   var pusher = new Pusher('827c74b29880dbe97c43', {
-     cluster: 'ap1'
-   });
-
-   var channel = pusher.subscribe('notification');
-   channel.bind('notification.' + {{ Auth::user()->id }}, function(data) {
-    var content = data.invitation_code; // Adjust this field according to the actual structure of data.bank
-    Swal.fire({
-                icon: 'success', // Change the icon type based on your needs (e.g., 'info', 'warning', 'error')
-                title: 'Thông báo',
-                text: 'Thanh toán thành công đơn hàng ' + content + '!',
-                confirmButtonText: 'OK'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = '/recruiter/invoices';
-                }
-            });
-   });
-   // Function to make the HTTP request
-   function fetchCronData() {
-    fetch('/cron', {
-        method: 'GET', // HTTP method
-        headers: {
-            'Content-Type': 'application/json' // Optional, depending on your backend requirements
-        }
-    })
-    .then(response => response.json()) // Assuming the response is JSON
-    .then(data => {
-        console.log('Data from cron endpoint:', data);
-
-        // If no invoice was updated, still continue fetching
-        if (!data.invoiceUpdated) {
-            console.log('No invoices updated, will try again...');
-        } else {
-            console.log('Invoices updated.');
-        }
-
-        // Always fetch again after the response (continuous polling)
-        fetchCronData(); 
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-
-        // Handle errors if needed, continue fetching in case of failure
-        fetchCronData();
-    });
-}
-
-// Call fetchCronData once to start the process
-fetchCronData();
-
-
+                        // Handle errors if needed, continue fetching in case of failure
+                        setTimeout(fetchCronData, 2000); // Retry after 2 seconds in case of error
+                    });
+            }
+            fetchCronData()
         </script>
     </body>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
+    <div class="zalo-chat-widget" data-oaid="1715225565559061022"
+        data-welcome-message="Rzcareer.site Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="100"
+        data-height="200"></div>
+    <style>
+        .entry {
+            height: 10%;
+        }
+    </style>
 
 </div>
