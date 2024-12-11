@@ -28,61 +28,64 @@ class InterviewResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-pencil';
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
-
-    public static ?string $label = 'Buổi phỏng vấn'; // Nhãn hiển thị cho tài nguyên này
+    public static function getPluralModelLabel(): string
+    {
+        return 'Buổi phỏng vấn'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Grid::make(2) // Chia layout thành 2 cột
+                Forms\Components\Section::make('Thông Tin Phỏng Vấn') // Section for Interview Information
                     ->schema([
                         Forms\Components\Select::make('candidate_id')
-                        ->label('Người Dự Tuyển')
-                        ->options(function () {
-                            // Lấy công ty của người dùng hiện tại
-                            $userId = auth()->id(); // Lấy user_id của người dùng hiện tại
-                            $companyId = Company::where('user_id', $userId)->value('id'); // Lấy company_id
+                            ->label('Người Dự Tuyển')
+                            ->options(function () {
+                                $userId = auth()->id();
+                                $companyId = Company::where('user_id', $userId)->value('id');
 
-                            return JobPost::where('company_id', $companyId)
-                                ->with('postActivities') // Eager load để lấy thông tin postActivities
-                                ->get()
-                                ->flatMap(function ($jobPost) {
-                                    return $jobPost->postActivities->map(function ($activity) {
-                                        return [
-                                            'id' => $activity->user_id, // ID của user
-                                            'name' => $activity->user->full_name . " - " . $activity->user->email, // Tên của ứng viên
-                                        ];
-                                    });
-                                })
-                                ->pluck('name', 'id'); // Trả về danh sách tên ứng viên
-                        })
-                        ->searchable()
-                        ->preload()
-                        ->required(),
+                                return JobPost::where('company_id', $companyId)
+                                    ->with('postActivities')
+                                    ->get()
+                                    ->flatMap(function ($jobPost) {
+                                        return $jobPost->postActivities->map(function ($activity) {
+                                            return [
+                                                'id' => $activity->user_id,
+                                                'name' => $activity->user->full_name . " - " . $activity->user->email,
+                                            ];
+                                        });
+                                    })
+                                    ->pluck('name', 'id');
+                            })
+                            ->searchable()
+                            ->preload()
+                            ->required(),
 
+                        Forms\Components\Select::make('job_post_id')
+                            ->label('Tên Công Việc')
+                            ->options(function () {
+                                $userId = auth()->id();
+                                $companyId = Company::where('user_id', $userId)->value('id');
 
-                        Forms\Components\Select::make('job_post_id') // Thêm select để chọn job post
-                        ->label('Tên Công Việc')
-                        ->options(function (callable $get) {
-                            // Lấy danh sách job posts thuộc công ty và có trong post activities
-                            $userId = auth()->id(); // Lấy user_id của người dùng hiện tại
-                            $companyId = Company::where('user_id', $userId)->value('id'); // Lấy company_id
+                                return JobPost::where('company_id', $companyId)
+                                    ->whereHas('postActivities')
+                                    ->pluck('job_name', 'id');
+                            })
+                            ->searchable()
+                            ->required(),
 
-                            return JobPost::where('company_id', $companyId)
-                                ->whereHas('postActivities') // Chỉ lấy những job post có post activities
-                                ->pluck('job_name', 'id'); // Trả về danh sách job posts
-                        })
-                        ->searchable()
-                        ->required(),
                         Forms\Components\Select::make('slot_id')
                             ->label('Thời Gian Phỏng Vấn')
-                            ->relationship('slot', 'start_time') // Lấy dữ liệu từ relationship 'slot'
+                            ->relationship('slot', 'start_time')
                             ->required(),
 
                         Forms\Components\TextInput::make('feedback')
                             ->label('Phản Hồi')
                             ->required(),
+                    ]),
 
+                Forms\Components\Section::make('Trạng Thái Phỏng Vấn') // Section for Interview Status
+                    ->schema([
                         Forms\Components\Select::make('status')
                             ->label('Trạng Thái')
                             ->options([
@@ -94,7 +97,6 @@ class InterviewResource extends Resource
                             ->reactive()
                             ->afterStateUpdated(function ($state, $record) {
                                 if ($record) {
-                                    // Update PostActivity status
                                     PostActivity::where([
                                         'user_id' => $record->candidate_id,
                                         'job_post_id' => $record->job_post_id
@@ -102,7 +104,6 @@ class InterviewResource extends Resource
                                         'status' => $this->mapStatusToPostActivity($state)
                                     ]);
 
-                                    // Send email notification
                                     $this->sendInterviewStatusEmail($record, $state);
                                 }
                             }),
@@ -183,7 +184,7 @@ class InterviewResource extends Resource
             'edit' => Pages\EditInterview::route('/{record}/edit'),
         ];
     }
-    
+
     private function mapStatusToPostActivity($status)
     {
         return match ($status) {

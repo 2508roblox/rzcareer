@@ -20,34 +20,37 @@ class InterviewerResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
 
-    public static ?string $label = 'Người phỏng vấn'; // Nhãn hiển thị cho tài nguyên này
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'Người phỏng vấn'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('full_name')
-                    ->label('Họ và tên') // Việt hóa
-                    ->required()
-                    ->maxLength(255)
-                    ->placeholder('Nhập họ và tên'), // Placeholder
+                Forms\Components\Section::make('Thông Tin Ứng Viên') // Section for Candidate Information
+                    ->schema([
+                        Forms\Components\TextInput::make('full_name')
+                            ->label('Họ và tên') // Việt hóa
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('Nhập họ và tên'), // Placeholder
 
-                Forms\Components\TextInput::make('email')
-                    ->label('Email') // Việt hóa
-                    ->email()
-                    ->required()
-                    ->maxLength(255)
-                    ->placeholder('Nhập địa chỉ email'), // Placeholder
+                        Forms\Components\TextInput::make('email')
+                            ->label('Email') // Việt hóa
+                            ->email()
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('Nhập địa chỉ email'), // Placeholder
 
-                Forms\Components\TextInput::make('position')
-                    ->label('Vị trí công việc') // Việt hóa
-                    ->required()
-                    ->maxLength(255)
-                    ->placeholder('Nhập vị trí công việc'), // Placeholder
-            ])
-            ->columns(2) // Sử dụng 2 cột để tạo layout đẹp hơn
-            
-           ;
+                        Forms\Components\TextInput::make('position')
+                            ->label('Vị trí công việc') // Việt hóa
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('Nhập vị trí công việc'), // Placeholder
+                    ])
+                    ->columns(2), // Sử dụng 2 cột để tạo layout đẹp hơn
+            ]);
     }
 
 

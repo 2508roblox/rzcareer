@@ -31,6 +31,7 @@ class ViecLam extends Component
         $this->jobPost = JobPost::where('slug', $slug)
             ->with(['career', 'company', 'location'])
             ->firstOrFail();
+        $this->jobPost->increment('views'); // Giả sử bạn có trường 'views' trong bảng job_posts
 
         // Lấy 3 việc làm mới nhất từ cùng công ty
         $this->relatedJobs = JobPost::where('company_id', $this->jobPost->company_id)
@@ -167,7 +168,10 @@ class ViecLam extends Component
             ]);
         }
     }
-
+    public function incrementShare()
+    {
+        $this->jobPost->increment('shares'); // Tăng lượt chia sẻ
+    }
 
     public function render()
     {

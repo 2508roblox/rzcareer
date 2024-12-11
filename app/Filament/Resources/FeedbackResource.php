@@ -73,10 +73,10 @@ class FeedbackResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user_id')
+                Tables\Columns\TextColumn::make('user.email')
                     ->numeric()
                     ->sortable()
-                    ->label('Mã Người Dùng'),
+                    ->label('Người Dùng'),
 
                 Tables\Columns\TextColumn::make('name')  // Cột mới cho tên
                     ->searchable()

@@ -52,6 +52,10 @@ class CompanyJobPostsWidget extends BaseWidget
         $purchasedServiceCount = PurchasedService::where('user_id', auth()->id())->count();
         $totalInvoiceAmount = Invoice::where('user_id', auth()->id())->sum('total_price');
 
+        // Thêm tổng số lượt xem và lượt chia sẻ
+        $totalViews = JobPost::whereIn('company_id', $companyIds)->sum('views'); // Giả sử bạn có trường 'views'
+        $totalShares = JobPost::whereIn('company_id', $companyIds)->sum('shares'); // Giả sử bạn có trường 'shares'
+
         return [
             Stat::make('Số bài đăng công việc', $jobPostCount)
                 ->description('Bài đăng của các công ty thuộc về bạn')
@@ -81,13 +85,11 @@ class CompanyJobPostsWidget extends BaseWidget
             Stat::make('Số buổi phỏng vấn', $interviewCount)
                 ->description('Tổng số buổi phỏng vấn đã lên lịch')
                 ->icon('heroicon-o-document')
-
                 ->color('primary'),
 
             Stat::make('Số hóa đơn', $invoiceCount)
                 ->description('Tổng số hóa đơn đã phát hành')
                 ->icon('heroicon-o-document')
-
                 ->color('warning'),
 
             Stat::make('Lịch sử thanh toán', $paymentHistoryCount)
@@ -98,11 +100,21 @@ class CompanyJobPostsWidget extends BaseWidget
             Stat::make('Dịch vụ đã mua', $purchasedServiceCount)
                 ->description('Tổng số dịch vụ đã mua')
                 ->icon('heroicon-o-credit-card')
-
                 ->color('success'),
-                Stat::make('Tổng tiền hóa đơn', number_format($totalInvoiceAmount, 0, ',', '.').' VNĐ') // Thêm tổng tiền hóa đơn
+
+            Stat::make('Tổng tiền hóa đơn', number_format($totalInvoiceAmount, 0, ',', '.').' VNĐ')
                 ->description('Tổng số tiền của các hóa đơn đã tạo')
                 ->icon('heroicon-o-credit-card')
+                ->color('success'),
+
+            Stat::make('Tổng số lượt xem', $totalViews)
+                ->description('Tổng số lượt xem của các bài đăng')
+                ->icon('heroicon-o-eye')
+                ->color('info'),
+
+            Stat::make('Tổng số lượt chia sẻ', $totalShares)
+                ->description('Tổng số lượt chia sẻ của các bài đăng')
+                ->icon('heroicon-o-share')
                 ->color('success'),
         ];
     }

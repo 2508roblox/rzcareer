@@ -28,11 +28,14 @@ class CommonCityResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(30)
-                    ->label('Tên thành phố') // Thêm nhãn tiếng Việt cho trường
-                    ->placeholder('Nhập tên thành phố'), // Thêm placeholder tiếng Việt
+                Forms\Components\Section::make('Thông tin thành phố') // Thêm tiêu đề cho section
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(30)
+                            ->label('Tên thành phố') // Nhãn tiếng Việt cho trường
+                            ->placeholder('Nhập tên thành phố'), // Placeholder tiếng Việt
+                    ]),
             ]);
     }
 

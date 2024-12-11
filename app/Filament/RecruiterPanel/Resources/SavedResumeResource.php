@@ -127,8 +127,6 @@ public static function table(Table $table): Table
         ->actions([
             // Thêm các action cần thiết
             Tables\Actions\ActionGroup::make([
-                Tables\Actions\ViewAction::make()
-                    ->label('Xem'),
                 Tables\Actions\DeleteAction::make()
                     ->label('Xóa'),
             ]),
@@ -155,8 +153,6 @@ public static function table(Table $table): Table
     {
         return [
             'index' => Pages\ListSavedResumes::route('/'),
-            'create' => Pages\CreateSavedResume::route('/create'),
-            'edit' => Pages\EditSavedResume::route('/{record}/edit'),
         ];
     }
 }

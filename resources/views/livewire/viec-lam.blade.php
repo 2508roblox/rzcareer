@@ -345,11 +345,14 @@
                                                                     </a>
                                                                 </li>
 
-                                                                <li class="mt-5 256138397"><a
-                                                                        href="https://www.facebook.com/sharer/sharer.php?u={{ (url()->current()) }}"
-                                                                        class="btn btn-default "
-                                                                        title="Chia sẻ việc làm trên Facebook"> <i
-                                                                            class='bx bxs-share-alt'></i> Chia sẻ </a>
+                                                                <li class="mt-5">
+                                                                    <a
+                                                                    class="btn btn-default"
+                                                                    title="Chia sẻ việc làm trên Facebook"
+                                                                    wire:click.prevent="incrementShare"
+                                                                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}', '_blank')">
+                                                                    <i class='bx bxs-share-alt'></i> Chia sẻ
+                                                                </a>
                                                                 </li>
                                                             </ul>
 

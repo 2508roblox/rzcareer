@@ -22,42 +22,69 @@ class PaymentHistoryResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Lịch sử Thanh toán'; // Trả về tên số nhiều cho mô hình PaymentHistory
+        return 'Lịch Sử Thanh toán'; // Trả về tên số nhiều cho mô hình PaymentHistory
     }
 
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
-            Forms\Components\Select::make('user_id')
-                ->relationship('user', 'full_name') // Điều chỉnh theo cách định nghĩa quan hệ
-                ->required(),
-            Forms\Components\Select::make('invoice_id')
-                ->relationship('invoice', 'invoice_code') // Điều chỉnh theo cách định nghĩa quan hệ
-                ->required(),
-            Forms\Components\TextInput::make('balance')->required()->numeric(),
-            Forms\Components\TextInput::make('payment_method')->required(),
-            Forms\Components\Select::make('status')
-                ->options([
-                    'Pending' => 'Pending',
-                    'Completed' => 'Completed',
-                    'Failed' => 'Failed',
-                ])->required(),
-            Forms\Components\DatePicker::make('payment_date')->required(),
-        ]);
+            ->schema([
+                Forms\Components\Section::make('Thông tin thanh toán') // Tiêu đề section
+                    ->description('Điền thông tin thanh toán bên dưới') // Mô tả section
+                    ->schema([ // Di chuyển ->schema() vào đúng vị trí
+                        Forms\Components\Select::make('user_id')
+                            ->relationship('user', 'full_name')
+                            ->required()
+                            ->label('Người dùng'), // Việt hóa nhãn
+                        Forms\Components\Select::make('invoice_id')
+                            ->relationship('invoice', 'invoice_code')
+                            ->required()
+                            ->label('Mã hóa đơn'), // Việt hóa nhãn
+                        Forms\Components\TextInput::make('balance')
+                            ->required()
+                            ->numeric()
+                            ->label('Số dư (VNĐ)'), // Việt hóa nhãn
+                        Forms\Components\TextInput::make('payment_method')
+                            ->required()
+                            ->label('Phương thức thanh toán'), // Việt hóa nhãn
+                        Forms\Components\Select::make('status')
+                            ->options([
+                                'pending' => 'Đang chờ',
+                                'completed' => 'Hoàn thành',
+                                'failed' => 'Thất bại',
+                            ])
+                            ->required()
+                            ->label('Trạng thái'), // Việt hóa nhãn
+                        Forms\Components\DatePicker::make('payment_date')
+                            ->required()
+                            ->label('Ngày thanh toán'), // Việt hóa nhãn
+                    ]),
+            ]);
     }
-
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('user.full_name'),
-            Tables\Columns\TextColumn::make('invoice.invoice_code'), // Điều chỉnh theo quan hệ
-            Tables\Columns\TextColumn::make('balance')->money('usd'),
-            Tables\Columns\TextColumn::make('payment_method'),
-            Tables\Columns\TextColumn::make('status'),
-            Tables\Columns\TextColumn::make('payment_date')->date(),
-        ])
+            ->columns([
+                Tables\Columns\TextColumn::make('user.full_name')
+                    ->label('Người dùng'), // Việt hóa nhãn
+                Tables\Columns\TextColumn::make('invoice.invoice_code')
+                    ->label('Mã hóa đơn'), // Việt hóa nhãn
+                Tables\Columns\TextColumn::make('balance')
+                    ->money('VND') // Định dạng tiền Việt
+                    ->label('Số dư'), // Việt hóa nhãn
+                Tables\Columns\TextColumn::make('payment_method')
+                    ->label('Phương thức thanh toán'), // Việt hóa nhãn
+                Tables\Columns\TextColumn::make('status')
+                    ->label('Trạng thái') // Việt hóa nhãn
+                    ->colors([
+                        'pending' => 'Đang chờ',
+                                'completed' => 'Hoàn thành',
+                                'failed' => 'Thất bại',
+                    ]),
+                Tables\Columns\TextColumn::make('payment_date')
+                    ->date()
+                    ->label('Ngày thanh toán'), // Việt hóa nhãn
+            ])
             ->filters([
                 //
             ])

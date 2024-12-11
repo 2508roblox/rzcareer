@@ -64,10 +64,11 @@ class JobPostServiceResource extends Resource
                             ->multiple()
                             ->label('Danh sách công việc') // Điều chỉnh nhãn nếu cần
                             ->required()
-                            ->searchable()
                             ->preload()
                             ->options(function () {
-                                return JobPost::all()->pluck('job_name', 'id'); // Điều chỉnh 'job_name' cho trường hiển thị phù hợp
+                                $userId = auth()->id(); // Lấy user_id của người dùng hiện tại
+                                return JobPost::where('user_id', $userId) // Chỉ lấy job posts của người dùng hiện tại
+                                    ->pluck('job_name', 'id'); // Điều chỉnh 'job_name' cho trường hiển thị phù hợp
                             })
                             ->maxItems(fn($get) => $get('max_jobs')), // Giới hạn số lượng chọn
                     ]),
@@ -91,7 +92,12 @@ class JobPostServiceResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->label('Chỉnh Sửa'), // Việt hóa nút chỉnh sửa
+                Tables\Actions\DeleteAction::make()
+                    ->label('Xóa') // Việt hóa nút xóa
+                    ->requiresConfirmation() // Yêu cầu xác nhận trước khi xóa
+                    ->color('danger'), // Đổi màu nút xóa để nổi bật
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
