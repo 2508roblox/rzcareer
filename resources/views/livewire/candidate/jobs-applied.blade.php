@@ -47,74 +47,61 @@
                 type="text/css">
             <link href="/assets_livewire/css/v2.css?colorgb=234208153092" rel="stylesheet" type="text/css">
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/nicescroll.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/drilldown.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/pace.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/prism.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/spin.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/ladda.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_buttons.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js">
             </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_select2.js"></script>
             <script type="text/javascript"
                 src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=234208153092"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js">
-            </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=234208153092">
-            </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092"></script>
             <script type="text/javascript"
                 src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=234208153092">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/main.js?colorgb=234208153092"></script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js">
+            </script>
             <script type="text/javascript" src="/assets_livewire/cv_template/dist/js/intro.js?v=234208153092"></script>
 
 
 
             <!--<script type="text/javascript">
-       $(document).ready(function () {
-           setTimeout(function () {
-               if (localStorage.getItem('cvgo_popup_state') != 'shown') {
-                   let options = {
-                       'tooltipPosition': 'right',
-                       'doneLabel': 'Đã hiểu',
-                       'showBullets': false,
-                       'showStepNumbers': false,
-                   }
-                   introJs().setOptions(options).start();
-                   localStorage.setItem('cvgo_popup_state', 'shown');
-               }
-           }, 3000);
-       });
-   </script>-->
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        if (localStorage.getItem('cvgo_popup_state') != 'shown') {
+                            let options = {
+                                'tooltipPosition': 'right',
+                                'doneLabel': 'Đã hiểu',
+                                'showBullets': false,
+                                'showStepNumbers': false,
+                            }
+                            introJs().setOptions(options).start();
+                            localStorage.setItem('cvgo_popup_state', 'shown');
+                        }
+                    }, 3000);
+                });
+            </script>-->
             <style>
                 .footer {
                     position: absolute;
@@ -212,7 +199,7 @@
                                 <ul class="breadcrumb">
                                     <li><a href="candidate/dashboard" "=" ">Bảng tin</a></li>
                             <li>Danh sách việc làm đã ứng tuyển</li>
-                        </ul>
+                               </ul>
                         <div class=" heading-elements panel-nav ">
                             <ul class=" nav nav-pills ">
 
@@ -296,73 +283,187 @@
                         <!-- Tab content -->
                         <div class=" tab-content ">
                             <div class=" tab-pane fade in active " id=" profile ">
+                                <div class="filter-container">
+                                    <h6>Lọc theo trạng thái:</h6>
+                                    <div class="checkbox-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Chờ xác nhận" wire:model.live="selectedStatus">
+                                            <span>Chờ xác nhận</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Đã liên hệ" wire:model.live="selectedStatus">
+                                            <span>Đã liên hệ</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Đã test" wire:model.live="selectedStatus">
+                                            <span>Đã test</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Đã phỏng vấn" wire:model.live="selectedStatus">
+                                            <span>Đã phỏng vấn</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Trúng tuyển" wire:model.live="selectedStatus">
+                                            <span>Trúng tuyển</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" value="Không trúng tuyển" wire:model.live="selectedStatus">
+                                            <span>Không trúng tuyển</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                    <style>
+                                        .filter-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
 
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    display: none; /* Ẩn checkbox mặc định */
+}
+
+.custom-checkbox span {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.custom-checkbox span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.custom-checkbox input:checked + span::before {
+    background-color: #007bff; /* Màu nền khi chọn */
+    border-color: #007bff; /* Màu viền khi chọn */
+}
+
+.custom-checkbox input:checked + span::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 10px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+                                    </style>
+                                
                                 <!-- Cards layout -->
                                 <div class=" panel panel-white ">
 
+                                   
+                                    
                                     <ul class="media-list">
-                                        @foreach($appliedJobs as $job)
+                                        @foreach ($appliedJobs as $job)
                                             @php
                                                 $jobPost = $job->jobPost; // Đối tượng JobPost
                                             @endphp
-                                            <li class="media panel-body stack-media-on-mobile" title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}">
+                                            <li class="media panel-body stack-media-on-mobile"
+                                                title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}">
                                                 <div class="media-left">
-                                                    <a title="Xem chi tiết" href="{{ url('viec-lam/' . $jobPost->slug) }}" target="_blank">
+                                                    <a title="Xem chi tiết" href="{{ url('viec-lam/' . $jobPost->slug) }}"
+                                                       target="_blank">
                                                         <img width="100"
-                                                            src="{{ Storage::url($jobPost->company->company_image_url) }}"
-                                                            class="img-rounded" alt=""
-                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'">
+                                                             src="{{ Storage::url($jobPost->company->company_image_url) }}"
+                                                             class="img-rounded" alt=""
+                                                             onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'">
                                                     </a>
                                                 </div>
-
+                                    
                                                 <div class="media-body">
-                                                    <h6 class="media-heading text-semibold" style="display: flex; justify-content: space-between">
+                                                    <h6 class="media-heading text-semibold"
+                                                        style="display: flex; justify-content: space-between">
                                                         <div class="clamp-text">
-                                                            <a title="Xem chi tiết" target="_blank" href="{{ url('viec-lam/' . $jobPost->slug) }}">{{ $jobPost->job_name }}</a>
-                                                            <strong class="text-uppercase text-grey">- {{ $jobPost->company->company_name }}</strong>
+                                                            <a title="Xem chi tiết" target="_blank"
+                                                               href="{{ url('viec-lam/' . $jobPost->slug) }}">{{ $jobPost->job_name }}</a>
+                                                               <br>
+                                                            <strong class="text-uppercase text-grey">
+                                                                {{ $jobPost->company->company_name }}</strong>
                                                         </div>
-                                                        <span title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}" class="text-blue-600">
+                                                        <span title="Ứng tuyển lúc {{ $job->created_at->format('H:i - d/m/Y') }}"
+                                                              class="text-blue-600">
                                                             {{ $job->created_at->format('d/m/Y') }}
                                                         </span>
                                                     </h6>
-
+                                    
                                                     <ul class="list-inline list-inline-separate text-muted mb-10">
                                                         <li title="Địa điểm làm việc">
                                                             <span class="clamp-text-place">
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $jobPost->city->name }}
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                {{ $jobPost->city->name }}
                                                             </span>
                                                         </li>
                                                         <li title="Thời hạn kết thúc tuyển dụng">
                                                             <span class="clamp-text-place">
-                                                                <i class="fa fa-clock-o" aria-hidden="true"></i> {{ $jobPost->created_at->format('d/m/Y') }}
+                                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                                {{ $jobPost->created_at->format('d/m/Y') }}
                                                             </span>
                                                         </li>
                                                         <li title="Mức lương">
                                                             <span class="clamp-text-place">
                                                                 <i class="fa fa-money" aria-hidden="true"></i>
-                                                                {{ number_format($jobPost->salary_min / 1_000_000, 0, '.', ',') }} - {{ number_format($jobPost->salary_max / 1_000_000, 0, '.', ',') }} triệu VNĐ
+                                                                {{ number_format($jobPost->salary_min / 1_000_000, 0, '.', ',') }}
+                                                                -
+                                                                {{ number_format($jobPost->salary_max / 1_000_000, 0, '.', ',') }}
+                                                                triệu VNĐ
                                                             </span>
                                                         </li>
                                                         <li title="Loại hình công việc">
                                                             <span class="clamp-text-place">
-                                                                <i class="fa fa-star-o" aria-hidden="true"></i> {{ $jobPost->job_type }}
+                                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                {{ $jobPost->job_type }}
                                                             </span>
                                                         </li>
                                                     </ul>
                                                 </div>
-
+                                    
                                                 <div class="media-right text-nowrap" title="Trạng thái">
-                                                    <span class="label bg-primary">Mới ứng tuyển</span>
+                                                    <span class="label bg-primary">{{ $job->status }}</span>
                                                     <a wire:click="cancelApplication({{ $job->id }})"
-                                                       class="text-uppercase hide btn btn-cancel btn-danger btn-xs"
-
-                                                     >
-                                                       <i class="icon-trash"></i> Hủy bỏ
+                                                       class="text-uppercase   btn btn-cancel btn-danger btn-xs">
+                                                        <i class="icon-trash"></i> Hủy bỏ
                                                     </a>
                                                 </div>
+                                                <style>
+                                                    .media-list li .btn {
+    display: block !important;
+    margin: 10px 0;
+}
+                                                </style>
                                             </li>
                                         @endforeach
                                     </ul>
+                                    
 
 
                                 <div class="text-center pb-20 "> </div>
@@ -399,7 +500,8 @@
                                             <span class="ml-20 text-default ">Đã tìm được việc mới</span>
                                         </label>
                                         <label class="checkbox ">
-                                            <input type="checkbox " name="reason[] " value="Mức lương không phù hợp ">
+                                            <input type="checkbox " name="reason[] "
+                                                value="Mức lương không phù hợp ">
                                             <span class="ml-20 text-default ">Mức lương không phù hợp</span>
                                         </label>
                                         <label class="checkbox ">
@@ -415,7 +517,8 @@
                                             <span class="ml-20 text-default ">Nghi ngờ NTD lừa đảo</span>
                                         </label>
                                         <label class="checkbox ">
-                                            <input type="checkbox " name="reason[] " value="Ứng tuyển nhầm công việc ">
+                                            <input type="checkbox " name="reason[] "
+                                                value="Ứng tuyển nhầm công việc ">
                                             <span class="ml-20 text-default ">Ứng tuyển nhầm công việc</span>
                                         </label>
                                         <label class="checkbox ">
@@ -423,8 +526,7 @@
                                                 class="ml-20 text-default ">Thay đổi hồ sơ</span>
                                         </label>
                                         <div class="checkbox ">
-                                            <textarea id="reason " name="reason[] " class="form-control mt-10 "
-                                                placeholder="Lý do khác... "></textarea>
+                                            <textarea id="reason " name="reason[] " class="form-control mt-10 " placeholder="Lý do khác... "></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -442,91 +544,92 @@
                 </div>
             </div>
             <script>
-                $(function () {
-                        $('.btn-cancel').click(function () {
-                            var t = $(this);
-                            var f = $('#myModal form');
-                            $('.modal-title').html(t.attr('title'))
-                            f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
-                            $('.btn-submit').click(function () {
-                                var r = $('#reason');
+                $(function() {
+                    $('.btn-cancel').click(function() {
+                        var t = $(this);
+                        var f = $('#myModal form');
+                        $('.modal-title').html(t.attr('title'))
+                        f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
+                        $('.btn-submit').click(function() {
+                            var r = $('#reason');
 
-                                var is_checked = false;
-                                $('.checkbox').each(function () {
-                                    if ($(this).find('input[name="reason[] "]').is(":checked ") || r.val() != '') {
-                                        is_checked = true;
-                                    }
-                                });
-
-                                if (is_checked == false) {
-                                    r.focus();
-                                } else {
-                                    f.submit();
+                            var is_checked = false;
+                            $('.checkbox').each(function() {
+                                if ($(this).find('input[name="reason[] "]').is(":checked ") || r
+                                    .val() != '') {
+                                    is_checked = true;
                                 }
                             });
-                        });
 
-                        const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
-
-                        const updateUrlAndCheckbox = () => {
-                            const checkedStatusValues = Array.from(checkboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => checkbox.getAttribute('data-id'));
-                            window.location.href = updateUrlParams('status', checkedStatusValues);
-                        };
-
-                        checkboxes.forEach(checkbox => {
-                            checkbox.addEventListener('click', () => {
-                                updateUrlAndCheckbox();
-                            });
-                        });
-
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const checkboxGroups = ['statusDropdown'];
-
-                        checkboxGroups.forEach(group => {
-                            const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
-                            const statusValues = urlParams.get('status');
-
-                            if (statusValues) {
-                                const statusArray = statusValues.split(',');
-
-                                checkboxes.forEach(checkbox => {
-                                    const dataId = checkbox.getAttribute('data-id');
-
-                                    if (statusArray.includes(dataId)) {
-                                        checkbox.checked = true;
-                                    }
-                                });
+                            if (is_checked == false) {
+                                r.focus();
+                            } else {
+                                f.submit();
                             }
                         });
                     });
 
-                    $(document).ready(function () {
-                        $("#dropdown-sort ").hover(function () {
-                            $(this).addClass("open ");
-                            $("#dropdown-filter ").removeClass("open ")
-                        }, function () {
-                            $("#dropdown-menu-sort ").hover(function () {
-                                $(this).closest("#dropdown-sort ").addClass("open ");
-                            }, function () {
-                                $(this).removeClass("open ");
-                                $(this).closest("#dropdown-sort ").removeClass("open ");
-                            });
-                        });
+                    const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
 
-                        $("#dropdown-filter ").hover(function () {
-                            $(this).addClass("open ");
-                            $("#dropdown-sort ").removeClass("open ")
-                        }, function () {
-                            $("#statusDropdown ").hover(function () {
-                                $(this).closest("#dropdown-filter ").addClass("open ");
-                            }, function () {
-                                $(this).removeClass("open ");
-                                $(this).closest("#dropdown-filter ").removeClass("open ");
-                            });
+                    const updateUrlAndCheckbox = () => {
+                        const checkedStatusValues = Array.from(checkboxes)
+                            .filter(checkbox => checkbox.checked)
+                            .map(checkbox => checkbox.getAttribute('data-id'));
+                        window.location.href = updateUrlParams('status', checkedStatusValues);
+                    };
+
+                    checkboxes.forEach(checkbox => {
+                        checkbox.addEventListener('click', () => {
+                            updateUrlAndCheckbox();
                         });
                     });
+
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const checkboxGroups = ['statusDropdown'];
+
+                    checkboxGroups.forEach(group => {
+                        const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
+                        const statusValues = urlParams.get('status');
+
+                        if (statusValues) {
+                            const statusArray = statusValues.split(',');
+
+                            checkboxes.forEach(checkbox => {
+                                const dataId = checkbox.getAttribute('data-id');
+
+                                if (statusArray.includes(dataId)) {
+                                    checkbox.checked = true;
+                                }
+                            });
+                        }
+                    });
+                });
+
+                $(document).ready(function() {
+                    $("#dropdown-sort ").hover(function() {
+                        $(this).addClass("open ");
+                        $("#dropdown-filter ").removeClass("open ")
+                    }, function() {
+                        $("#dropdown-menu-sort ").hover(function() {
+                            $(this).closest("#dropdown-sort ").addClass("open ");
+                        }, function() {
+                            $(this).removeClass("open ");
+                            $(this).closest("#dropdown-sort ").removeClass("open ");
+                        });
+                    });
+
+                    $("#dropdown-filter ").hover(function() {
+                        $(this).addClass("open ");
+                        $("#dropdown-sort ").removeClass("open ")
+                    }, function() {
+                        $("#statusDropdown ").hover(function() {
+                            $(this).closest("#dropdown-filter ").addClass("open ");
+                        }, function() {
+                            $(this).removeClass("open ");
+                            $(this).closest("#dropdown-filter ").removeClass("open ");
+                        });
+                    });
+                });
             </script>
 
             <!-- Detached sidebar -->
@@ -538,9 +641,10 @@
                         <div class="content-group ">
                             <div class="panel-body bg-blue-800 text-center ">
                                 <div class="content-group-sm ">
-                                    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng " data-fancybox=" "
-                                        data-type="iframe " class="text-white "
-                                        href="https://jobsgo.vn/candidate/detail?v=1727394586 " title="Hồ sơ xin việc của bạn
+                                    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng "
+                                        data-fancybox=" " data-type="iframe " class="text-white "
+                                        href="https://jobsgo.vn/candidate/detail?v=1727394586 "
+                                        title="Hồ sơ xin việc của bạn
                                             trong mắt nhà tuyển dụng ">
                                         <h6 class="text-semibold no-margin-bottom ">
                                             web developer
@@ -601,7 +705,8 @@
                             <div class="panel no-border-top no-border-radius-top ">
                                 <ul class="navigation ">
                                     <li class="navigation-header ">Cá nhân</li>
-                                    <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin việc</a>
+                                    <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
+                                            việc</a>
                                     </li>
                                     <li><a href="candidate/document-attachment "><i class="icon-file-media "></i> Đính
                                             kèm CV/chứng chỉ</a></li>
@@ -831,18 +936,25 @@
 
             var url_string = window.location.href;
             var url = new URL(url_string);
-            var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") : '';
+            var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") :
+                '';
             var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
-            var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get("utm_campaign") : '';
+            var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get(
+                "utm_campaign") : '';
             var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
             if (utmSource || utmMed || utmCampaign || utmTerm) {
                 $('a').attr("href", function() {
                     var currUrl = $(this).attr('href');
-                    if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
+                    if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !
+                        currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
                         if (currUrl && currUrl.indexOf("?") == -1) {
-                            urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
+                            urlWithParam = currUrl + "?utm_source=" + utmSource +
+                                "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                "&utm_campaign=" + utmCampaign;
                         } else {
-                            urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
+                            urlWithParam = currUrl + "&utm_source=" + utmSource +
+                                "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                "&utm_campaign=" + utmCampaign;
                         }
                         return urlWithParam;
                     }

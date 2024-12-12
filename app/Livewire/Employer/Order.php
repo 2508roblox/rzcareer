@@ -2,12 +2,14 @@
 
 namespace App\Livewire\Employer;
 
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use App\Models\Service;
 use App\Models\ShoppingCart;
 
 class Order extends Component
 {
+    use LivewireAlert;
     public $services;
     public $quantities = [];
     public $totalAmount = 0;
@@ -42,9 +44,16 @@ class Order extends Component
     public function submitOrder()
     {
         $user = auth()->user();
-        
+
         if (!$user) {
             dd('Lỗi: Người dùng chưa đăng nhập');
+        }
+
+        // Check if no services are selected
+        $totalSelected = array_sum($this->quantities);
+        if ($totalSelected === 0) {
+            $this->alert('error', 'Vui lòng chọn ít nhất một dịch vụ.'); // Use LivewireAlert
+            return; // Don't redirect, just show the alert
         }
 
         try {
@@ -62,24 +71,20 @@ class Order extends Component
                         $existingCartItem->save();
                     } else {
                         // Create new cart item
-                        $cartItem = ShoppingCart::create([
+                        ShoppingCart::create([
                             'user_id' => $user->id,
                             'service_id' => $serviceId,
                             'quantity' => $quantity,
                             'total_price' => $service->price * $quantity,
                         ]);
-
-                        if (!$cartItem) {
-                            throw new \Exception('Không thể thêm dịch vụ vào giỏ hàng');
-                        }
                     }
                 }
             }
-            
-            session()->flash('message', 'Đơn hàng đã được lưu vào giỏ hàng.');
+
+            $this->alert('success', 'Đơn hàng đã được lưu vào giỏ hàng.'); // Success alert
             return redirect('/recruiter/shopping-carts');
         } catch (\Exception $e) {
-            dd('Lỗi khi thêm vào giỏ hàng: ' . $e->getMessage());
+            $this->alert('error', 'Lỗi khi thêm vào giỏ hàng: ' . $e->getMessage());
         }
     }
 }

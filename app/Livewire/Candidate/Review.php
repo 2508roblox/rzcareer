@@ -63,6 +63,7 @@ class Review extends Component
     public $skills = [];
     public $newSkill = '';
     public $newExperience = '';
+    public $editingAdvanceSkillId = null;
     // advanced skills
 
 
@@ -248,6 +249,10 @@ class Review extends Component
     {
         $this->experiences = ResumeExperienceDetail::where('resume_id', $this->resumes->first()->id)->get();
     }
+    public function loadAdvancedSkill()
+    {
+        $this->skills = ResumeAdvancedSkill::where('resume_id', $this->resumes->first()->id)->get();
+    }
     private function isSeekerProfileComplete($seekerProfile)
     {
         // dd($seekerProfile);
@@ -404,6 +409,7 @@ class Review extends Component
         $resume->update(['experience' => $this->experience]);
         session()->flash('message', 'Cập nhật kinh nghiệm thành công!');
     }
+   
 
     public function editAcademicLevel()
     {
@@ -536,11 +542,21 @@ class Review extends Component
         //     'newExperience' => 'required',
         // ]);
         // Create a new advanced skill
+        if ($this->editingAdvanceSkillId) {
+            $skill = ResumeAdvancedSkill::find($this->editingAdvanceSkillId);
+            // Cập nhật thông tin Experience
+            $skill->update([
+                'name' => $this->newSkill,
+                'level' => $this->newExperience,
+                
+            ]);
+        } else {
         ResumeAdvancedSkill::create([
             'name' => $this->newSkill,
             'level' => $this->newExperience,
             'resume_id' =>  $this->resumes->first()->id, // Assuming you have the resume ID available
         ]);
+    }
 
         // Reset the input fields
         $this->newSkill = '';
@@ -625,6 +641,34 @@ public function deleteExperience($experienceId)
 }
 
 
+public function deleteAdvancedSkill($skillId)
+{
+    // Tìm và xoá kinh nghiệm làm việc
+    $skill = ResumeAdvancedSkill::findOrFail($skillId);
+    $skill->delete();
+
+    // Cập nhật lại danh sách kinh nghiệm sau khi xóa
+    $this->loadAdvancedSkill();
+
+    // Hiển thị thông báo thành công (tuỳ chọn)
+    session()->flash('message', 'Kĩ năng làm việc đã được xoá thành công.');
+}
+public function editAdvancedSkill($id)
+{
+    $this->editingAdvanceSkillId = $id;
+
+    // Lấy thông tin của education từ database
+    $skill = ResumeAdvancedSkill::find($id);
+
+    if ($skill) {
+       
+        $this->newSkill = $skill->name;
+        $this->newExperience = $skill->level;
+    }
+
+    // Hiển thị modal
+    // $this->dis('showModal');
+} 
 
 
 

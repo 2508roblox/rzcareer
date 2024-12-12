@@ -77,9 +77,19 @@ class Dashboard extends Component
 
             // Count the number of saved jobs
             $this->savedJobsCount = SavedJobPost::where('user_id', $this->user->id)->count(); // Get count of saved jobs
-            $this->suggestedJobs = JobPost::whereIn('job_name', $this->resumes->pluck('title'))
-            ->limit(4) // Limit to 4 jobs
-            ->get();
+            $this->suggestedJobs = JobPost::with(['career', 'company', 'location', 'city']) // Thêm các quan hệ
+            ->where(function ($query) {
+                foreach ($this->resumes as $resume) {
+                    $query->orWhere('job_name', 'like', '%' . $resume->title . '%');
+                }
+            })
+            ->limit(4) // Giới hạn số lượng công việc gợi ý
+            ->get()
+            ->map(function ($jobPost) {
+                $jobPost->activeServices = $jobPost->getActiveServicesByProductId($jobPost->id);
+                return $jobPost;
+            });
+        
         }
     }
     public function deleteResume($resumeId)

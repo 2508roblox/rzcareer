@@ -42,9 +42,10 @@ class JobPostResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane'; // Thay đổi biểu tượng
     protected static ?string $navigationGroup = 'Quản lý công ty';
 
-    public static ?string $label = 'Bài tuyển dụng';
-    public static ?string $subheading = 'Bài tuyển dụng';
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'Bài tuyển dụng'; // Trả về tên số nhiều cho mô hình Company
+    }
 
     public static function form(Form $form): Form
     {
@@ -52,8 +53,8 @@ class JobPostResource extends Resource
 
         return $form
         ->schema([
-            // Group: Basic Information
-            Forms\Components\Section::make(__('forms.basic_information'))
+            // Nhóm: Thông tin cơ bản
+            Forms\Components\Section::make('Thông tin cơ bản')
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
@@ -62,12 +63,12 @@ class JobPostResource extends Resource
                                 ->relationship('career', 'name')
                                 ->preload()
                                 ->searchable()
-                                ->label(__('forms.career')),
+                                ->label('Nghề nghiệp'),
 
                             Forms\Components\Select::make('district_id')
                                 ->required()
                                 ->options(CommonDistrict::all()->pluck('name', 'id'))
-                                ->label(__('forms.district'))
+                                ->label('Quận/Huyện')
                                 ->preload()
                                 ->searchable()
                                 ->reactive()
@@ -92,7 +93,7 @@ class JobPostResource extends Resource
                             Forms\Components\Select::make('city_id')
                                 ->required()
                                 ->options(CommonCity::all()->pluck('name', 'id'))
-                                ->label(__('forms.city'))
+                                ->label('Tỉnh/Thành phố')
                                 ->preload()
                                 ->searchable()
                                 ->reactive()
@@ -116,10 +117,10 @@ class JobPostResource extends Resource
                             Forms\Components\TextInput::make('location_id')
                                 ->disabled()
                                 ->dehydrated()
-                                ->label(__('forms.location')),
+                                ->label('Vị trí'),
 
                             Forms\Components\TextInput::make('lat')
-                                ->label(__('forms.latitude'))
+                                ->label('Vĩ độ')
                                 ->live(255)
                                 ->afterStateUpdated(function ($state, callable $set, callable $get) {
                                     $location = static::createNewLocation($get);
@@ -128,10 +129,10 @@ class JobPostResource extends Resource
                                     }
                                 })
                                 ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                ->hint(__('forms.latitude_hint')),
+                                ->hint('Nhập vĩ độ của địa điểm'),
 
                             Forms\Components\TextInput::make('lng')
-                                ->label(__('forms.longitude'))
+                                ->label('Kinh độ')
                                 ->live(255)
                                 ->afterStateUpdated(function ($state, callable $set, callable $get) {
                                     $location = static::createNewLocation($get);
@@ -140,12 +141,12 @@ class JobPostResource extends Resource
                                     }
                                 })
                                 ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                ->hint(__('forms.longitude_hint')),
+                                ->hint('Nhập kinh độ của địa điểm'),
                         ]),
                 ]),
 
-            // Group: Job Details
-            Forms\Components\Section::make(__('forms.job_details'))
+            // Nhóm: Chi tiết công việc
+            Forms\Components\Section::make('Chi tiết công việc')
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
@@ -157,7 +158,7 @@ class JobPostResource extends Resource
                                     $slug = \Illuminate\Support\Str::slug($state);
                                     $set('slug', $slug);
                                 })
-                                ->label(__('forms.job_name')),
+                                ->label('Tên công việc'),
 
                             Forms\Components\TextInput::make('slug')
                                 ->required()
@@ -165,49 +166,49 @@ class JobPostResource extends Resource
                                 ->disabled()
                                 ->dehydrated()
                                 ->unique(JobPost::class, 'slug', ignoreRecord: true)
-                                ->label(__('forms.slug')),
+                                ->label('Đường dẫn'),
 
                             Forms\Components\DatePicker::make('deadline')
                                 ->required()
-                                ->label(__('forms.deadline')),
+                                ->label('Hạn nộp hồ sơ'),
 
                             Forms\Components\TextInput::make('quantity')
                                 ->required()
                                 ->numeric()
-                                ->label(__('forms.quantity')),
+                                ->label('Số lượng tuyển'),
 
                             Forms\Components\Select::make('gender_required')
                                 ->required()
                                 ->searchable()
                                 ->prefixIcon('heroicon-o-user')
                                 ->options([
-                                    0 => __('forms.gender_none'),
-                                    1 => __('forms.gender_male'),
-                                    2 => __('forms.gender_female'),
+                                    0 => 'Không yêu cầu',
+                                    1 => 'Nam',
+                                    2 => 'Nữ',
                                 ])
                                 ->default(0)
-                                ->placeholder(__('forms.select_gender'))
-                                ->label(__('forms.gender_required')),
+                                ->placeholder('Chọn giới tính')
+                                ->label('Yêu cầu giới tính'),
 
                             Forms\Components\RichEditor::make('job_description')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label(__('forms.job_description')),
+                                ->label('Mô tả công việc'),
 
                             Forms\Components\MarkdownEditor::make('job_requirement')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label(__('forms.job_requirement')),
+                                ->label('Yêu cầu công việc'),
 
                             Forms\Components\MarkdownEditor::make('benefits_enjoyed')
                                 ->required()
                                 ->columnSpanFull()
-                                ->label(__('forms.benefits_enjoyed')),
+                                ->label('Quyền lợi được hưởng'),
                         ]),
                 ]),
 
-            // Group: Job Specifications
-            Forms\Components\Section::make(__('forms.job_specifications'))
+            // Nhóm: Thông số công việc
+            Forms\Components\Section::make('Thông số công việc')
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
@@ -216,37 +217,37 @@ class JobPostResource extends Resource
                                 ->preload()
                                 ->searchable()
                                 ->options([
-                                    'Manager' => __('forms.position_manager'),
-                                    'Developer' => __('forms.position_developer'),
-                                    'Designer' => __('forms.position_designer'),
-                                    'Analyst' => __('forms.position_analyst'),
-                                    'Support' => __('forms.position_support'),
+                                    'Manager' => 'Quản lý',
+                                    'Developer' => 'Lập trình viên',
+                                    'Designer' => 'Thiết kế',
+                                    'Analyst' => 'Phân tích',
+                                    'Support' => 'Hỗ trợ',
                                 ])
-                                ->placeholder(__('forms.select_position'))
-                                ->label(__('forms.position'))
-                                ->helperText(__('forms.position_helper'))
-                                ->hint(__('forms.position_hint'))
-                                ->default('Developer') // Set a default value if applicable
-                                ->reactive() // Make it reactive if it affects other fields
-                                ->disablePlaceholderSelection() // Prevent placeholder from being selected
-                                ->columnSpan(1), // Adjust width in the grid
+                                ->placeholder('Chọn vị trí')
+                                ->label('Vị trí')
+                                ->helperText('Chọn vị trí công việc phù hợp')
+                                ->hint('Vị trí trong công ty')
+                                ->default('Developer')
+                                ->reactive()
+                                ->disablePlaceholderSelection()
+                                ->columnSpan(1),
 
                             Forms\Components\Select::make('type_of_workplace')
                                 ->required()
                                 ->preload()
                                 ->searchable()
                                 ->options([
-                                    'Office' => __('forms.workplace_office'),
-                                    'Remote' => __('forms.workplace_remote'),
-                                    'Hybrid' => __('forms.workplace_hybrid'),
-                                    'Field' => __('forms.workplace_field'),
-                                    'On-site' => __('forms.workplace_on_site'),
+                                    'Office' => 'Văn phòng',
+                                    'Remote' => 'Từ xa',
+                                    'Hybrid' => 'Kết hợp',
+                                    'Field' => 'Thực địa',
+                                    'On-site' => 'Tại chỗ',
                                 ])
-                                ->placeholder(__('forms.select_workplace'))
-                                ->label(__('forms.type_of_workplace'))
-                                ->helperText(__('forms.workplace_helper'))
-                                ->hint(__('forms.workplace_hint'))
-                                ->default('Remote') // Set a default value if applicable
+                                ->placeholder('Chọn nơi làm việc')
+                                ->label('Loại hình làm việc')
+                                ->helperText('Chọn loại hình làm việc phù hợp')
+                                ->hint('Môi trường làm việc')
+                                ->default('Remote')
                                 ->reactive()
                                 ->disablePlaceholderSelection()
                                 ->columnSpan(1),
@@ -256,16 +257,16 @@ class JobPostResource extends Resource
                                 ->preload()
                                 ->searchable()
                                 ->options([
-                                    '0-1 years' => __('forms.experience_0_1'),
-                                    '2-3 years' => __('forms.experience_2_3'),
-                                    '4-5 years' => __('forms.experience_4_5'),
-                                    '6-10 years' => __('forms.experience_6_10'),
-                                    '10+ years' => __('forms.experience_10_plus'),
+                                    '0-1 years' => '0-1 năm',
+                                    '2-3 years' => '2-3 năm',
+                                    '4-5 years' => '4-5 năm',
+                                    '6-10 years' => '6-10 năm',
+                                    '10+ years' => 'Trên 10 năm',
                                 ])
-                                ->placeholder(__('forms.select_experience'))
-                                ->label(__('forms.experience'))
-                                ->helperText(__('forms.experience_helper'))
-                                ->hint(__('forms.experience_hint'))
+                                ->placeholder('Chọn kinh nghiệm')
+                                ->label('Kinh nghiệm')
+                                ->helperText('Chọn mức kinh nghiệm yêu cầu')
+                                ->hint('Số năm kinh nghiệm')
                                 ->default('2-3 years')
                                 ->reactive()
                                 ->disablePlaceholderSelection()
@@ -276,16 +277,16 @@ class JobPostResource extends Resource
                                 ->preload()
                                 ->searchable()
                                 ->options([
-                                    'High School' => __('forms.academic_high_school'),
-                                    'Associate Degree' => __('forms.academic_associate'),
-                                    'Bachelor\'s Degree' => __('forms.academic_bachelor'),
-                                    'Master\'s Degree' => __('forms.academic_master'),
-                                    'Doctorate' => __('forms.academic_doctorate'),
+                                    'High School' => 'THPT',
+                                    'Associate Degree' => 'Cao đẳng',
+                                    'Bachelor\'s Degree' => 'Đại học',
+                                    'Master\'s Degree' => 'Thạc sĩ',
+                                    'Doctorate' => 'Tiến sĩ',
                                 ])
-                                ->placeholder(__('forms.select_academic_level'))
-                                ->label(__('forms.academic_level'))
-                                ->helperText(__('forms.academic_helper'))
-                                ->hint(__('forms.academic_hint'))
+                                ->placeholder('Chọn trình độ học vấn')
+                                ->label('Trình độ học vấn')
+                                ->helperText('Chọn trình độ học vấn yêu cầu')
+                                ->hint('Bằng cấp yêu cầu')
                                 ->default('Bachelor\'s Degree')
                                 ->reactive()
                                 ->disablePlaceholderSelection()
@@ -296,17 +297,17 @@ class JobPostResource extends Resource
                                 ->preload()
                                 ->searchable()
                                 ->options([
-                                    'Full-time' => __('forms.job_type_full_time'),
-                                    'Part-time' => __('forms.job_type_part_time'),
-                                    'Contract' => __('forms.job_type_contract'),
-                                    'Temporary' => __('forms.job_type_temporary'),
-                                    'Internship' => __('forms.job_type_internship'),
-                                    'Freelance' => __('forms.job_type_freelance'),
+                                    'Full-time' => 'Toàn thời gian',
+                                    'Part-time' => 'Bán thời gian',
+                                    'Contract' => 'Hợp đồng',
+                                    'Temporary' => 'Tạm thời',
+                                    'Internship' => 'Thực tập',
+                                    'Freelance' => 'Tự do',
                                 ])
-                                ->placeholder(__('forms.select_job_type'))
-                                ->label(__('forms.job_type'))
-                                ->helperText(__('forms.job_type_helper'))
-                                ->hint(__('forms.job_type_hint'))
+                                ->placeholder('Chọn loại hình công việc')
+                                ->label('Loại hình công việc')
+                                ->helperText('Chọn loại hình công việc phù hợp')
+                                ->hint('Hình thức làm việc')
                                 ->default('Full-time')
                                 ->reactive()
                                 ->disablePlaceholderSelection()
@@ -315,38 +316,38 @@ class JobPostResource extends Resource
                             Forms\Components\TextInput::make('salary_min')
                                 ->required()
                                 ->numeric()
-                                ->label(__('forms.salary_min'))
-                                ->placeholder(__('forms.enter_min_salary'))
-                                ->helperText(__('forms.salary_min_helper'))
-                                ->hint(__('forms.salary_min_hint'))
-                                ->prefix('$') // Add currency symbol or any prefix
-                                ->suffix(__('forms.salary_suffix')) // Add suffix if needed
+                                ->label('Lương tối thiểu')
+                                ->placeholder('Nhập lương tối thiểu')
+                                ->helperText('Mức lương khởi điểm')
+                                ->hint('VNĐ/tháng')
+                                ->prefix('₫')
+                                ->suffix('VNĐ')
                                 ->columnSpan(1),
 
                             Forms\Components\TextInput::make('salary_max')
                                 ->required()
                                 ->numeric()
-                                ->label(__('forms.salary_max'))
-                                ->placeholder(__('forms.enter_max_salary'))
-                                ->helperText(__('forms.salary_max_helper'))
-                                ->hint(__('forms.salary_max_hint'))
-                                ->prefix('$') // Add currency symbol or any prefix
-                                ->suffix(__('forms.salary_suffix')) // Add suffix if needed
+                                ->label('Lương tối đa')
+                                ->placeholder('Nhập lương tối đa')
+                                ->helperText('Mức lương cao nhất')
+                                ->hint('VNĐ/tháng')
+                                ->prefix('₫')
+                                ->suffix('VNĐ')
                                 ->columnSpan(1),
 
                             Forms\Components\Select::make('salary_type')
                                 ->required()
-                                ->label(__('forms.salary_type'))
+                                ->label('Loại lương')
                                 ->options([
-                                    'hourly' => __('forms.salary_type_hourly'),
-                                    'monthly' => __('forms.salary_type_monthly'),
-                                    'weekly' => __('forms.salary_type_weekly'),
+                                    'hourly' => 'Theo giờ',
+                                    'monthly' => 'Theo tháng',
+                                    'weekly' => 'Theo tuần',
                                 ])
                                 ->searchable()
-                                ->placeholder(__('forms.select_salary_type'))
+                                ->placeholder('Chọn loại lương')
                                 ->default('monthly')
-                                ->helperText(__('forms.salary_type_helper'))
-                                ->hint(__('forms.salary_type_hint'))
+                                ->helperText('Chọn cách tính lương')
+                                ->hint('Hình thức trả lương')
                                 ->preload()
                                 ->reactive()
                                 ->disablePlaceholderSelection()
@@ -354,20 +355,20 @@ class JobPostResource extends Resource
                         ]),
                 ]),
 
-            // Group: Visibility and Contact
-            Forms\Components\Section::make(__('forms.visibility_and_contact'))
+            // Nhóm: Hiển thị và Liên hệ
+            Forms\Components\Section::make('Hiển thị và Liên hệ')
                 ->schema([
                     Forms\Components\Grid::make(2)
                         ->schema([
                             Forms\Components\Toggle::make('is_hot')
-                                ->label(__('forms.is_hot'))
+                                ->label('Tin nổi bật')
                                 ->required()
                                 ->default(false)
                                 ->onIcon('heroicon-o-fire')
                                 ->offIcon('heroicon-s-fire'),
 
                             Forms\Components\Toggle::make('is_urgent')
-                                ->label(__('forms.is_urgent'))
+                                ->label('Tuyển gấp')
                                 ->required()
                                 ->default(false)
                                 ->onIcon('heroicon-o-exclamation-circle')
@@ -377,27 +378,27 @@ class JobPostResource extends Resource
                                 ->required()
                                 ->maxLength(100)
                                 ->prefix('👤')
-                                ->placeholder(__('forms.enter_contact_name'))
-                                ->helperText(__('forms.contact_name_helper'))
-                                ->label(__('forms.contact_person_name')),
+                                ->placeholder('Nhập tên người liên hệ')
+                                ->helperText('Tên người phụ trách tuyển dụng')
+                                ->label('Tên người liên hệ'),
 
                             Forms\Components\TextInput::make('contact_person_phone')
                                 ->required()
                                 ->tel()
                                 ->maxLength(15)
                                 ->prefix('📞')
-                                ->placeholder(__('forms.enter_contact_phone'))
-                                ->helperText(__('forms.contact_phone_helper'))
-                                ->label(__('forms.contact_person_phone')),
+                                ->placeholder('Nhập số điện thoại liên hệ')
+                                ->helperText('Số điện thoại để ứng viên liên hệ')
+                                ->label('Số điện thoại liên hệ'),
 
                             Forms\Components\TextInput::make('contact_person_email')
                                 ->required()
                                 ->email()
                                 ->maxLength(100)
                                 ->prefix('✉️')
-                                ->placeholder(__('forms.enter_contact_email'))
-                                ->helperText(__('forms.contact_email_helper'))
-                                ->label(__('forms.contact_person_email')),
+                                ->placeholder('Nhập email liên hệ')
+                                ->helperText('Email để ứng viên liên hệ')
+                                ->label('Email liên hệ'),
 
                             Forms\Components\Select::make('status')
                                 ->required()
@@ -407,31 +408,30 @@ class JobPostResource extends Resource
                                 ->dehydrated()
                                 ->default(0)
                                 ->afterStateHydrated(function ($set, $state) {
-                                    // Đảm bảo rằng nếu trạng thái chưa được đặt, sẽ gán giá trị mặc định
                                     if ($state === null) {
                                         $set('status', 0);
                                     }
                                 })
                                 ->options([
-                                    0 => __('forms.status_pending_review'),
-                                    1 => __('forms.status_approved'),
-                                    2 => __('forms.status_rejected'),
-                                    3 => __('forms.status_published'),
-                                    4 => __('forms.status_closed'),
-                                    5 => __('forms.status_expired'),
-                                    6 => __('forms.status_under_review'),
-                                    7 => __('forms.status_interviewing'),
-                                    8 => __('forms.status_hired'),
-                                    9 => __('forms.status_archived'),
-                                    10 => __('forms.status_cancelled'),
-                                    11 => __('forms.status_on_hold'),
-                                    12 => __('forms.status_filled'),
-                                    13 => __('forms.status_draft'),
-                                    14 => __('forms.status_reopened'),
+                                    0 => 'Chờ duyệt',
+                                    1 => 'Đã duyệt',
+                                    2 => 'Từ chối',
+                                    3 => 'Đã đăng',
+                                    4 => 'Đã đóng',
+                                    5 => 'Hết hạn',
+                                    6 => 'Đang xem xét',
+                                    7 => 'Đang phỏng vấn',
+                                    8 => 'Đã tuyển',
+                                    9 => 'Đã lưu trữ',
+                                    10 => 'Đã hủy',
+                                    11 => 'Tạm hoãn',
+                                    12 => 'Đã tuyển đủ',
+                                    13 => 'Bản nháp',
+                                    14 => 'Mở lại',
                                 ])
                                 ->default(0)
-                                ->placeholder(__('forms.select_status'))
-                                ->label(__('forms.status')),
+                                ->placeholder('Chọn trạng thái')
+                                ->label('Trạng thái'),
                         ]),
                 ]),
         ]);
@@ -446,20 +446,12 @@ class JobPostResource extends Resource
                 ->label('ID') // Thêm tiêu đề tiếng Việt
                 ->numeric()
                 ->sortable(),
-            Tables\Columns\TextColumn::make('career_id')
-                ->label('ID Nghề nghiệp')
+            Tables\Columns\TextColumn::make('career.name')
+                ->label('Nghề nghiệp')
                 ->numeric()
                 ->sortable(),
-            Tables\Columns\TextColumn::make('company_id')
-                ->label('ID Công ty')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('location_id')
-                ->label('ID Địa điểm')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('user_id')
-                ->label('ID Người dùng')
+            Tables\Columns\TextColumn::make('location.address')
+                ->label('Địa điểm')
                 ->numeric()
                 ->sortable(),
             Tables\Columns\TextColumn::make('job_name')

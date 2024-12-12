@@ -15,12 +15,22 @@ class JobApplicationMail extends Mailable
     public $candidateName;
     public $jobName;
     public $companyName;
-
-    public function __construct($candidateName, $jobName, $companyName)
+    public $typeOfWorkplace;
+    public $position;
+    public $academicLevel;
+    public $experience;
+    public $createdAt, $sentAt;
+    public function __construct($candidateName, $jobName, $companyName,$jobPost)
     {
         $this->candidateName = $candidateName;
         $this->jobName = $jobName;
         $this->companyName = $companyName;
+        $this->typeOfWorkplace = $jobPost->type_of_workplace;
+        $this->position = $jobPost->position;
+        $this->academicLevel = $jobPost->academic_level;
+        $this->experience = $jobPost->experience;
+        $this->createdAt = \Carbon\Carbon::parse($jobPost->created_at)->format('d/m/Y');
+        $this->sentAt = now()->format('d/m/Y H:i');
     }
 
     public function envelope(): Envelope
@@ -30,10 +40,20 @@ class JobApplicationMail extends Mailable
         );
     }
 
-    public function content(): Content
+    public function build()
     {
-        return new Content(
-            view: 'emails.job-application',
-        );
+        return $this->view('emails.job-application')
+            ->with([
+                'candidateName' => $this->candidateName,
+                'jobName' => $this->jobName,
+                'companyName' => $this->companyName,
+                'statusColor' => '#007bff', // Màu sắc có thể thay đổi tùy theo tình trạng
+                'typeOfWorkplace' => $this->typeOfWorkplace,
+                'position' => $this->position,
+                'academicLevel' => $this->academicLevel,
+                'experience' => $this->experience,
+                'createdAt' => $this->createdAt,
+                'sentAt' => $this->sentAt,
+            ]);
     }
 }

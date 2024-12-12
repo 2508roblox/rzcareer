@@ -31,6 +31,7 @@ class ViecLam extends Component
         $this->jobPost = JobPost::where('slug', $slug)
             ->with(['career', 'company', 'location'])
             ->firstOrFail();
+        $this->jobPost->increment('views'); // Giả sử bạn có trường 'views' trong bảng job_posts
 
         // Lấy 3 việc làm mới nhất từ cùng công ty
         $this->relatedJobs = JobPost::where('company_id', $this->jobPost->company_id)
@@ -49,8 +50,8 @@ class ViecLam extends Component
             ->get();
         $this->resumes = Resume::where('user_id', Auth::id())->get();
         $this->hasApplied = PostActivity::where('job_post_id', $this->jobPost->id)
-        ->where('user_id', Auth::id())
-        ->exists();
+            ->where('user_id', Auth::id())
+            ->exists();
     }
     public function saveJob()
     {
@@ -58,7 +59,7 @@ class ViecLam extends Component
         if (!Auth::check()) {
             // Nếu chưa đăng nhập, hiển thị thông báo
             $this->alert('error', 'Bạn cần đăng nhập để lưu công việc!', [
-                'position' => 'center',
+
                 'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
 
             ]);
@@ -73,7 +74,7 @@ class ViecLam extends Component
         if ($existingSavedJob) {
             // Nếu đã lưu, hiển thị thông báo
             $this->alert('info', 'Công việc này đã được lưu trước đó!', [
-                'position' => 'center',
+
                 'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
 
             ]);
@@ -89,13 +90,13 @@ class ViecLam extends Component
 
             // Thông báo thành công
             $this->alert('success', 'Bạn đã lưu công việc thành công!', [
-                'position' => 'center',
+
                 'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
 
             ]);
         } catch (\Exception $e) {
             $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.', [
-                'position' => 'center',
+
                 'timer' => 3000, // Thời gian hiển thị thông báo trong 3 giây
             ]);
         }
@@ -104,7 +105,6 @@ class ViecLam extends Component
     public function apply()
     {
 
-         $this->hasApplied = true;
         // Kiểm tra xem người dùng đã ứng tuyển vào công việc này chưa
         $existingApplication = PostActivity::where('job_post_id', $this->jobPost->id)
             ->where('user_id', Auth::id())
@@ -112,7 +112,7 @@ class ViecLam extends Component
 
         if ($existingApplication) {
             $this->alert('info', 'Bạn đã ứng tuyển vào công việc này rồi!', [
-                'position' => 'center',
+
                 'timer' => 3000,
             ]);
             return; // Dừng phương thức nếu đã ứng tuyển
@@ -124,7 +124,7 @@ class ViecLam extends Component
 
             if (!$resume) {
                 $this->alert('error', 'Bạn cần chọn một bản lý lịch hợp lệ để ứng tuyển!', [
-                    'position' => 'center',
+
                     'timer' => 3000,
                 ]);
                 return; // Dừng phương thức nếu không có bản lý lịch
@@ -144,30 +144,34 @@ class ViecLam extends Component
             ]);
 
             // Thông báo thành công
-            $this->alert('success', 'Bạn đã ứng tuyển thành công!', [
-                'position' => 'center',
-                'timer' => 3000,
-            ]);
-
             // Add email sending after creating PostActivity
             try {
                 Mail::to($this->email)->send(new JobApplicationMail(
                     $this->full_name,
                     $this->jobPost->job_name,
-                    $this->jobPost->company->company_name
+                    $this->jobPost->company->company_name,
+                    $this->jobPost
                 ));
+                $this->hasApplied = true;
+
+
             } catch (\Exception $e) {
                 // Log email sending error
                 \Log::error('Failed to send application confirmation email: ' . $e->getMessage());
             }
+            return redirect()->to('/candidate/jobs-applied');
+
         } catch (\Exception $e) {
             $this->alert('error', 'Có lỗi xảy ra, vui lòng thử lại sau.', [
-                'position' => 'center',
+
                 'timer' => 3000,
             ]);
         }
     }
-
+    public function incrementShare()
+    {
+        $this->jobPost->increment('shares'); // Tăng lượt chia sẻ
+    }
 
     public function render()
     {

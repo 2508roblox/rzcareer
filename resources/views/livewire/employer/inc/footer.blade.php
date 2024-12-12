@@ -6,15 +6,9 @@
                     <div class="footer-widget">
                         <div class="widgettitle widget-title text-dark fw-bold">CÔNG TY CỔ PHẦN Rzcareer</div>
                         <div class="textwidget">
-                            <p><strong class="text-body">Văn phòng Miền Bắc:</strong> Tầng 3 tòa G1 <br> Five Star
-                                Garden, Thanh Xuân,
-                                Hà Nội <br>Điện thoại: 0898.579.188</p>
-                            <p><strong class="text-body">Văn phòng Miền Nam:</strong> Lầu 5, 607-609 Nguyễn Kiệm,<br>
-                                Phường 9, Quận
-                                Phú Nhuận, TP. Hồ Chí Minh <br>Điện thoại: 0896.557.388</p>
                             <p><strong>Email:</strong> contact@Rzcareer.vn<br /><strong
-                                    title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> 070.505.2927<br>
-                                <strong>Hotline:</strong> 0899.565.868
+                                    title="Chăm sóc ứng viên">Hỗ trợ ứng viên:</strong> 0999.999.999<br>
+                                <strong>Hotline:</strong> 0999.999.999
                             </p>
                         </div>
 
@@ -105,22 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-10">
-                    <ul class="list-inline list-unstyled mb-1 text-primary">
-                        <li class="list-inline-item">Giới thiệu</li>
-                        <li class="list-inline-item">Chính sách</li>
-                        <li class="list-inline-item">Quy chế</li>
-                        <li class="list-inline-item">Giải quyết tranh chấp</li>
-                        <!--
-                        <li>Điều khoản</li>
-                        -->
-                        <li class="list-inline-item">Thoả thuận sử dụng</li>
-                        <li class="list-inline-item">Bảo mật</li>
-                        <li class="list-inline-item">Dành cho Nhà Tuyển Dụng</li>
-                        <li class="list-inline-item">FAQ</li>
-                        <li class="list-inline-item">Blog</li>
-                        <li class="list-inline-item">Hỏi & Đáp</li>
-                        <li class="list-inline-item">Sitemap</li>
-                    </ul>
+        
                 </div>
                 <div class="col-12 col-sm-2">
                     <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
@@ -132,11 +111,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-10">
-                    <p class="pull-left small text-body">Số ĐKKD:‎‎ 0108266100, cấp ngày 09/05/2018 do Sở Kế hoạch và
-                        Đầu tư Thành
-                        phố Hà Nội cấp. <br />Giấy phép thiết lập Mạng xã hội trên mạng số 568/GP-BTTTT do Bộ Thông tin
-                        & Truyền
-                        thông cấp ngày 30/08/2021.<br /> © 2024 Công ty Cổ phần Rzcareer. All Rights Reserved.</p>
+                    <p class="pull-left small text-body">  © 2024 Công ty Cổ phần Rzcareer. All Rights Reserved.</p>
                 </div>
                 <div class="col-sm-2">
                     <div class="text-center">

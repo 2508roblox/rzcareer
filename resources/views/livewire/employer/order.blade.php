@@ -1,8 +1,5 @@
 <div>
 
-    <!DOCTYPE html>
-    <html lang="vi-VN">
-
     <head>
         <meta charset="UTF-8">
 
@@ -476,7 +473,9 @@
             }
         </style>
     </body>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
-    </html>
-
+    <div class="zalo-chat-widget" data-oaid="1715225565559061022"
+        data-welcome-message="Rzcareer.site Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="100"
+        data-height="200"></div>
 </div>

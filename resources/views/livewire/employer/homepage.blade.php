@@ -1,10 +1,5 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
-    <!-- Please send your resume with cover letter to team@RZcareer.vn -->
-    <!DOCTYPE html>
-    <html class="no-js" lang="vi">
-
     <head>
         <link rel="canonical" href="https://employer.RZcareer.vn/" />
         <meta charset="UTF-8">
@@ -151,46 +146,53 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($services as $service)
-                            <tr>
-                                <td>
-                                    @if($service->illustration_image)
-                                        <img src="{{ Storage::url($service->illustration_image) }}" class="img-thumbnail" style="max-width: 100px;" alt="{{ $service->package_name }}">
-                                    @endif
-                                </td>
-                                <td>
-                                    <strong>{{ $service->package_name }}</strong>
-                                    <p class="text-muted">{{ $service->description }}</p>
-                                </td>
-                                <td>{{ number_format($service->price, 0, ',', '.') }}đ</td>
-                                <td>{{ $service->duration }} ngày</td>
-                                <td>{{ $service->job_post_count }}</td>
-                                <td>
-                                    <ul class="list-unstyled">
-                                        @if($service->highlight_post)
-                                            <li><i class="fa fa-check-circle text-success"></i> Bài viết nổi bật</li>
+                            @foreach ($services as $service)
+                                <tr>
+                                    <td>
+                                        @if ($service->illustration_image)
+                                            <img src="{{ Storage::url($service->illustration_image) }}"
+                                                class="img-thumbnail" style="max-width: 100px;"
+                                                alt="{{ $service->package_name }}">
                                         @endif
-                                        @if($service->top_sector)
-                                            <li><i class="fa fa-check-circle text-success"></i> Vị trí top trong ngành</li>
-                                        @endif
-                                        @if($service->border_effect)
-                                            <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng viền</li>
-                                        @endif
-                                        @if($service->hot_effect)
-                                            <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng hot</li>
-                                        @endif
-                                        @if($service->highlight_logo)
-                                            <li><i class="fa fa-check-circle text-success"></i> Logo nổi bật</li>
-                                        @endif
-                                        @if($service->homepage_banner)
-                                            <li><i class="fa fa-check-circle text-success"></i> Banner trên trang chủ</li>
-                                        @endif
-                                    </ul>
-                                </td>
-                                <td>
-                                    <a class="btn btn-primary" href="/employer/order?package={{ strtolower($service->package_name) }}">Mua ngay</a>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <strong>{{ $service->package_name }}</strong>
+                                        <p class="text-muted">{{ $service->description }}</p>
+                                    </td>
+                                    <td>{{ number_format($service->price, 0, ',', '.') }}đ</td>
+                                    <td>{{ $service->duration }} ngày</td>
+                                    <td>{{ $service->job_post_count }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            @if ($service->highlight_post)
+                                                <li><i class="fa fa-check-circle text-success"></i> Bài viết nổi bật
+                                                </li>
+                                            @endif
+                                            @if ($service->top_sector)
+                                                <li><i class="fa fa-check-circle text-success"></i> Vị trí top trong
+                                                    ngành</li>
+                                            @endif
+                                            @if ($service->border_effect)
+                                                <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng viền</li>
+                                            @endif
+                                            @if ($service->hot_effect)
+                                                <li><i class="fa fa-check-circle text-success"></i> Hiệu ứng hot</li>
+                                            @endif
+                                            @if ($service->highlight_logo)
+                                                <li><i class="fa fa-check-circle text-success"></i> Logo nổi bật</li>
+                                            @endif
+                                            @if ($service->homepage_banner)
+                                                <li><i class="fa fa-check-circle text-success"></i> Banner trên trang
+                                                    chủ</li>
+                                            @endif
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary"
+                                            href="/employer/order?package={{ strtolower($service->package_name) }}">Mua
+                                            ngay</a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -217,29 +219,30 @@
                 <div class="row" id="counter">
                     <div class="col-sm-3 col-xs-6">
                         <div class="number"><i class="fa fa-users"></i>
-                            <h3 class="white-text"><span class="counter-value" data-count="100000">100.000</span></h3>
+                            <h3 class="white-text"><span class="counter-value" data-count="100000">100.000</span>
+                            </h3>
                             <span class="white-text">Ứng viên</span>
                         </div>
                     </div> <!-- /number -->
                     <!-- number -->
                     <div class="col-sm-3 col-xs-6">
                         <div class="number"><i class="fa fa-suitcase"></i>
-                            <h3 class="white-text"><span class="counter-value" data-count="9999">99+</span></h3> <span
-                                class="white-text">Ngành nghề</span>
+                            <h3 class="white-text"><span class="counter-value" data-count="9999">99+</span></h3>
+                            <span class="white-text">Ngành nghề</span>
                         </div>
                     </div> <!-- /number -->
                     <!-- number -->
                     <div class="col-sm-3 col-xs-6">
                         <div class="number"><i class="fa fa-coffee"></i>
-                            <h3 class="white-text"><span class="counter-value" data-count="9999">9999+</span></h3> <span
-                                class="white-text">Nhà Tuyển Dụng</span>
+                            <h3 class="white-text"><span class="counter-value" data-count="9999">9999+</span></h3>
+                            <span class="white-text">Nhà Tuyển Dụng</span>
                         </div>
                     </div> <!-- /number -->
                     <!-- number -->
                     <div class="col-sm-3 col-xs-6">
                         <div class="number"><i class="fa fa-file"></i>
-                            <h3 class="white-text"><span class="counter-value" data-count="1445">14455</span></h3> <span
-                                class="white-text">Lượt ứng tuyển</span>
+                            <h3 class="white-text"><span class="counter-value" data-count="1445">14455</span></h3>
+                            <span class="white-text">Lượt ứng tuyển</span>
                         </div>
                     </div> <!-- /number -->
                 </div>
@@ -310,38 +313,41 @@
 
 
 
-        <div class="zalo-chat-widget" data-oaid="2715936568206115822"
-            data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height=""></div>
-
-            {{-- @livewire('employer.inc.footer') --}}
+        {{-- @livewire('employer.inc.footer') --}}
 
         <script>
-            window.addEventListener('load', function () {
-            $(document).ready(function () {
-                var utmSource = '';
-                var utmMed = '';
-                var refCode = '';
-                if (utmSource || utmMed || refCode) {
-                    $('a').attr("href", function () {
-                        var currUrl = $(this).attr('href');
-                        if (currUrl.includes('#')) {
-                            return;
-                        }
-                        if (currUrl.indexOf("?") == -1) {
-                            urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed + "&ref_code=" + refCode;
-                        } else {
-                            urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&ref_code=" + refCode;
-                        }
-                        return urlWithParam;
-                    });
-                }
-            })
-        });
+            window.addEventListener('load', function() {
+                $(document).ready(function() {
+                    var utmSource = '';
+                    var utmMed = '';
+                    var refCode = '';
+                    if (utmSource || utmMed || refCode) {
+                        $('a').attr("href", function() {
+                            var currUrl = $(this).attr('href');
+                            if (currUrl.includes('#')) {
+                                return;
+                            }
+                            if (currUrl.indexOf("?") == -1) {
+                                urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" +
+                                    utmMed + "&ref_code=" + refCode;
+                            } else {
+                                urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" +
+                                    utmMed + "&ref_code=" + refCode;
+                            }
+                            return urlWithParam;
+                        });
+                    }
+                })
+            });
         </script>
     </body>
+    <div>
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 
-    </html>
+        <div class="zalo-chat-widget" data-oaid="1715225565559061022"
+            data-welcome-message="Rzcareer.site Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="100"
+            data-height="200"></div>
+
+    </div>
+
 </div>
-
-
-

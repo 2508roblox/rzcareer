@@ -29,101 +29,144 @@ class PostActivityResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('job_post_id')
-                    ->required()
-                    ->numeric()
-                    ->disabled(),
-                Forms\Components\TextInput::make('resume_id')
-                    ->required()
-                    ->numeric()
-                    ->disabled(),
-                Forms\Components\TextInput::make('user_id')
-                    ->required()
-                    ->numeric()
-                    ->disabled(),
-                Forms\Components\TextInput::make('full_name')
-                    ->required()
-                    ->maxLength(100)
-                    ->disabled(),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->maxLength(100)
-                    ->disabled(),
-                Forms\Components\TextInput::make('phone')
-                    ->tel()
-                    ->required()
-                    ->maxLength(15)
-                    ->disabled(),
-                Forms\Components\TextInput::make('status')
-                    ->required()
-                    ->disabled(),
-                Forms\Components\TextInput::make('is_sent_email')
-                    ->required()
-                    ->numeric()
-                    ->default(0)
-                    ->disabled(),
-                Forms\Components\TextInput::make('is_deleted')
-                    ->required()
-                    ->numeric()
-                    ->default(0)
-                    ->disabled(),
+                Forms\Components\Section::make('Thông Tin Ứng Viên')
+                    ->schema([
+                        Forms\Components\TextInput::make('full_name')
+                            ->required()
+                            ->maxLength(100)
+                            ->disabled()
+                            ->label('Họ và Tên')
+                            ->placeholder('Nhập họ và tên'),
+                        Forms\Components\TextInput::make('email')
+                            ->email()
+                            ->required()
+                            ->maxLength(100)
+                            ->disabled()
+                            ->label('Email')
+                            ->placeholder('Nhập địa chỉ email'),
+                        Forms\Components\TextInput::make('phone')
+                            ->tel()
+                            ->required()
+                            ->maxLength(15)
+                            ->disabled()
+                            ->label('Số Điện Thoại')
+                            ->placeholder('Nhập số điện thoại'),
+                    ]),
+
+                Forms\Components\Section::make('Thông Tin Bài Đăng')
+                    ->schema([
+                        Forms\Components\TextInput::make('job_post_id')
+                            ->required()
+                            ->numeric()
+                            ->disabled()
+                            ->label('ID Bài Đăng'),
+                        Forms\Components\TextInput::make('resume_id')
+                            ->required()
+                            ->numeric()
+                            ->disabled()
+                            ->label('ID Hồ Sơ'),
+                        Forms\Components\TextInput::make('user_id')
+                            ->required()
+                            ->numeric()
+                            ->disabled()
+                            ->label('ID Người Dùng'),
+                    ]),
+
+                Forms\Components\Section::make('Trạng Thái')
+                    ->schema([
+                        Forms\Components\TextInput::make('status')
+                            ->required()
+                            ->disabled()
+                            ->label('Trạng Thái'),
+                        Forms\Components\TextInput::make('is_sent_email')
+                            ->required()
+                            ->numeric()
+                            ->default(0)
+                            ->disabled()
+                            ->label('Đã Gửi Email'),
+                        Forms\Components\TextInput::make('is_deleted')
+                            ->required()
+                            ->numeric()
+                            ->default(0)
+                            ->disabled()
+                            ->label('Đã Xóa'),
+                    ]),
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('job_post_id')
-                ->label('ID Bài tuyển dụng')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('resume_id')
-                ->label('ID Hồ sơ')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('user_id')
-                ->label('ID Người dùng')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('full_name')
-                ->label('Họ và tên')
-                ->searchable(),
-            Tables\Columns\TextColumn::make('email')
-                ->label('Email')
-                ->searchable(),
-            Tables\Columns\TextColumn::make('phone')
-                ->label('Số điện thoại')
-                ->searchable(),
-            Tables\Columns\TextColumn::make('status')
-                ->label('Trạng thái'),
-            Tables\Columns\TextColumn::make('is_sent_email')
-                ->label('Đã gửi email')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('is_deleted')
-                ->label('Đã xóa')
-                ->numeric()
-                ->sortable(),
-            Tables\Columns\TextColumn::make('created_at')
-                ->label('Ngày tạo')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
-            Tables\Columns\TextColumn::make('updated_at')
-                ->label('Ngày cập nhật')
-                ->dateTime()
-                ->sortable()
-                ->toggleable(isToggledHiddenByDefault: true),
-        ])
-        
+            ->columns([
+                Tables\Columns\TextColumn::make(name: 'jobPost.job_name')
+                    ->label('Bài tuyển dụng')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('full_name')
+                    ->label('Họ và tên')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->label('Email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('phone')
+                    ->label('Số điện thoại')
+                    ->searchable(),
+                Tables\Columns\SelectColumn::make('status') // Change to SelectColumn
+                    ->label('Trạng thái  ứng tuyển')
+                    ->options([
+                        'Chờ xác nhận' => 'Chờ xác nhận',
+                        'Đã liên hệ' => 'Đã liên hệ',
+                        'Đã test' => 'Đã test',
+                        'Đã phỏng vấn' => 'Đã phỏng vấn',
+                        'Trúng tuyển' => 'Trúng tuyển',
+                        'Không trúng tuyển' => 'Không trúng tuyển',
+                    ])
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('is_sent_email')
+                    ->label('Đã gửi email')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('is_deleted')
+                    ->label('Đã xóa')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Ngày tạo')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Ngày cập nhật')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('status') // Add filter for status
+                    ->label('Trạng thái')
+                    ->options([
+                        'Chờ xác nhận' => 'Chờ xác nhận',
+                        'Đã liên hệ' => 'Đã liên hệ',
+                        'Đã test' => 'Đã test',
+                        'Đã phỏng vấn' => 'Đã phỏng vấn',
+                        'Trúng tuyển' => 'Trúng tuyển',
+                        'Không trúng tuyển' => 'Không trúng tuyển',
+                    ])
+                    ->placeholder('Chọn trạng thái'), // Placeholder for the filter
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\DeleteAction::make('Xóa') // Vietnamese for "Delete"
+                        ->label('Xóa'),
+                    Tables\Actions\Action::make('Gửi Email') // Add email button
+                        ->action(function ($record) {
+                            // Your email sending logic here
+                        })
+                        ->requiresConfirmation()
+                        ->color('primary')
+                        ->label('Gửi Email'), // Set label for the button
+                ])
             ])
             ->bulkActions([
                 // Tables\Actions\BulkActionGroup::make([
@@ -150,5 +193,5 @@ class PostActivityResource extends Resource
             // 'edit' => Pages\EditPostActivity::route('/{record}/edit'),
         ];
     }
-    
+
 }

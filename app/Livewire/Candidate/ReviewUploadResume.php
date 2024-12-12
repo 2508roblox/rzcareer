@@ -63,6 +63,7 @@ class ReviewUploadResume extends Component
     public $skills = [];
     public $newSkill = '';
     public $newExperience = '';
+    public $editingAdvanceSkillId = null;
     // advanced skills
 
 
@@ -532,18 +533,28 @@ if ($this->isSeekerProfileComplete($this->resume->seekerProfile)) {
         //     'newExperience' => 'required',
         // ]);
         // Create a new advanced skill
+        if ($this->editingAdvanceSkillId) {
+            $skill = ResumeAdvancedSkill::find($this->editingAdvanceSkillId);
+            // Cập nhật thông tin Experience
+            $skill->update([
+                'name' => $this->newSkill,
+                'level' => $this->newExperience,
+                
+            ]);
+        } else {
         ResumeAdvancedSkill::create([
             'name' => $this->newSkill,
             'level' => $this->newExperience,
-            'resume_id' =>  $this->resume_id, // Assuming you have the resume ID available
+            'resume_id' =>  $this->resumes->first()->id, // Assuming you have the resume ID available
         ]);
+    }
 
         // Reset the input fields
         $this->newSkill = '';
         $this->newExperience = '';
 
         // Optionally, refresh the list of skills
-        $this->skills = ResumeAdvancedSkill::where('resume_id',  $this->resume_id)->get();
+        $this->skills = ResumeAdvancedSkill::where('resume_id',  $this->resume->first()->id)->get();
     }
 
 
@@ -810,4 +821,22 @@ public function createLanguageSkill()
             'resume' => $this->resume,
         ]);
     }
+    public function editAdvancedSkill($id)
+{
+    $this->editingAdvanceSkillId = $id;
+
+    // Lấy thông tin của education từ database
+    $skill = ResumeAdvancedSkill::find($id);
+
+    if ($skill) {
+       
+        $this->newSkill = $skill->name;
+        $this->newExperience = $skill->level;
+    }
+
+    // Hiển thị modal
+    // $this->dis('showModal');
+} 
+
+
 }

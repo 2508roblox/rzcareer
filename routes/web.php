@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Checkpayment;
 use App\Http\Middleware\CheckEmployer;
 use App\Http\Middleware\CheckAuth;
 use App\Http\Middleware\CheckLogin;
@@ -82,5 +83,6 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
 
-Route::get('/cron', Cron::class)->name('cron');
+Route::get('/api/invoice/{invoice_code}', [Checkpayment::class, 'checkInvoice'])->name('checkinvoice');
+
 

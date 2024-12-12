@@ -1758,65 +1758,124 @@
                                                                         chuyên môn</button>
 
                                                                 </div>
-                                                                <div class="box-row box-cjcs">
+                                                                <div class="box-row box-cjcs timeline timeline-left mt-20">
+
 
                                                                         @if ($resume->advancedSkills->isNotEmpty())
+                                                                    <div class="timeline-container">
+
                                                                             @foreach ($resume->advancedSkills as $skill)
-                                                                                <div class="skill-card"> <!-- Card for each skill -->
-                                                                                    <p class="skill-name text-muted mb-0">
-                                                                                        <strong>{{ $skill->name }}</strong>
-                                                                                    </p>
-                                                                                    <p class="skill-level text-muted mb-2">
-                                                                                        <span class="ml-2 editable" data-name="expected_salary_min" >
-                                                                                            {{ $skill->level }} năm kinh nghiệm
-                                                                                        </span>
-                                                                                    </p>
+                                                                              
+                                                                            <div class="timeline-row">
+                                                                                <div class="timeline-icon">
+                                                                                    <div class="bg-info">
+                                                                                        <i class="icon-clipboard5"></i>
+                                                                                    </div>
                                                                                 </div>
+                                                                                <div class="row mb-0">
+                                                                                    <div class="col-lg-12">
+                                                                                        <div
+                                                                                            class="panel panel-flat timeline-content">
+                                                                                            <div class="panel-heading">
+                                                                                                <h5 class="panel-title"
+                                                                                                    title="Chức danh">Tên kĩ năng: {{ $skill->name }}
+                                                                                                </h5>
+                                                                                                <div
+                                                                                                    class="btn-group heading-elements">
+                                                                                                    <button data-id="3"
+                                                                                                        data-i42="12"
+                                                                                                        data-i5="Developed web applications and maintained existing systems."
+                                                                                                        data-toggle="modal"
+                                                                                                        data-backdrop="static"
+                                                                                                        data-target="#colorgbModal61"
+                                                                                                        wire:click="editAdvancedSkill({{ $skill->id }})"
+                                                                                                        class="btn btn-update-cjh btn-xs btn-default text-green">
+                                                                                                        <i
+                                                                                                            class="icon-pencil7 position-left"></i>
+                                                                                                        Sửa
+                                                                                                    </button>
+                                                                                                    <button data-id="3"
+                                                                                                        wire:click="deleteAdvancedSkill({{ $skill->id }})"
+                                                                                                        class="btn btn-del-cjh btn-xs btn-default text-warning">
+                                                                                                        <i
+                                                                                                            class="icon-trash position-left"></i>
+                                                                                                        Xóa
+                                                                                                    </button>
+    
+                                                                                                </div>
+                                                                                                <a
+                                                                                                    class="heading-elements-toggle"><i
+                                                                                                        class="icon-menu"></i></a>
+                                                                                            </div>
+                                                                                            <div class="panel-body">
+                                                                                                <div class="panel-3">
+                                                                                                    <div>
+                                                                                                        <div
+                                                                                                            class="panel-heading-bk pb-5">
+                                                                                                          
+                                                                                                            <div
+                                                                                                                class="text-muted mb-0">
+                                                                                                                <strong>Thời
+                                                                                                                    gian:</strong>
+                                                                                                                    {{ $skill->level }} năm
+                                                                                                                    kinh nghiệm
+    
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                       
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                             @endforeach
+                                                                    </div>
                                                                         @else
                                                                             <p>No advanced skills available for this resume.</p>
                                                                         @endif
 
                                                                 </div>
                                                                 <style>
-.box-row {
-    display: flex;
-    flex-direction: column; /* Stack skills vertically */
-    gap: 15px; /* Space between skill cards */
-}
+                                                                    .box-row {
+                                                                        display: flex;
+                                                                        flex-direction: column; /* Stack skills vertically */
+                                                                        gap: 15px; /* Space between skill cards */
+                                                                    }
 
-.skill-card {
-    border: 1px solid #e0e0e0; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 15px; /* Padding inside each card */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.2s; /* Animation for hover effect */
-}
+                                                                    .skill-card {
+                                                                        border: 1px solid #e0e0e0; /* Light border */
+                                                                        border-radius: 8px; /* Rounded corners */
+                                                                        padding: 10px 15px; /* Padding inside each card */
+                                                                        background-color: #f9f9f9; /* Light background color */
+                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                                                                        transition: transform 0.2s; /* Animation for hover effect */
+                                                                    }
 
-.skill-card:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-}
+                                                                    .skill-card:hover {
+                                                                        transform: scale(1.02); /* Slightly enlarge on hover */
+                                                                    }
 
-.skill-name {
-    font-weight: bold; /* Emphasize skill name */
-}
+                                                                    .skill-name {
+                                                                        font-weight: bold; /* Emphasize skill name */
+                                                                    }
 
-.skill-level {
-    margin-top: 5px; /* Space above skill level */
-}
+                                                                    .skill-level {
+                                                                        margin-top: 5px; /* Space above skill level */
+                                                                    }
 
-.text-muted {
-    color: #6c757d; /* Bootstrap muted color */
-}
+                                                                    .text-muted {
+                                                                        color: #6c757d; /* Bootstrap muted color */
+                                                                    }
 
-.editable {
-    cursor: pointer; /* Indicate that this can be edited */
-}
+                                                                    .editable {
+                                                                        cursor: pointer; /* Indicate that this can be edited */
+                                                                    }
 
-.editable:hover {
-    color: #007bff; /* Change color on hover */
-}
+                                                                    .editable:hover {
+                                                                        color: #007bff; /* Change color on hover */
+                                                                    }
 
 
                                                                 </style>
@@ -5960,7 +6019,7 @@
                 <h4 class="modal-title text-default-800">Kỹ năng chuyên môn</h4>
             </div>
             <div class="modal-body">
-                <form wire:submit.prevent="saveSkills"> <!-- Bọc trong thẻ form -->
+                <form wire:submit="saveSkills"> <!-- Bọc trong thẻ form -->
                     <div class="panel panel-body border-top-blue">
                         <div class="row-cjc">
                             <div class="row">
@@ -5974,22 +6033,29 @@
                                 <div class="col-xs-4">
                                     <div class="form-group field-eduinfoform-specialization required">
                                         <label class="control-label">Số năm kinh nghiệm</label>
-                                        <select wire:model="newExperience" class="form-control" required>
-                                            <option value="">Chọn...</option>
-                                            <option value="1">1 năm</option>
-                                            <option value="2">2 năm</option>
-                                            <option value="3">3 năm</option>
-                                            <option value="4">4 năm</option>
-                                            <option value="5">5 năm</option>
-                                            <option value="6">6 năm</option>
-                                            <option value="7">7 năm</option>
-                                            <option value="8">8 năm</option>
-                                            <option value="9">9 năm</option>
-                                            <option value="10">10 năm</option>
-                                        </select>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownExperience" data-toggle="dropdown" aria-expanded="false">
+                                                {{ $newExperience ? $newExperience . ' năm' : 'Chọn số năm' }}
+                                               
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownExperience" style="max-height: 200px; overflow-y: auto;">
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '')">Chọn số năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '1')">1 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '2')">2 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '3')">3 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '4')">4 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '5')">5 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '6')">6 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '7')">7 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '8')">8 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '9')">9 năm</a></li>
+                                                <li><a href="#" wire:click.prevent="$set('newExperience', '10')">10 năm</a></li>
+                                            </ul>
+                                        </div>
                                         <p class="help-block help-block-error"></p>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
 
@@ -6001,40 +6067,7 @@
                             </div>
                         </div>
 
-                        <script>
-                            function getRandomNumber(min = 1, max = 1e9) {
-                                return Math.floor(Math.random() * (max - min + 1)) + min;
-                            }
-
-                            $(function() {
-                                $('.btn-clone-row-cjc').click(function() {
-                                    $('#colorgbModal61 .row-cjc select').select2('destroy');
-                                    var clonedDiv = $('#colorgbModal61 .row-cjc > .row:nth-child(1)').clone();
-                                    $("#colorgbModal61 .row-cjc").append(clonedDiv);
-                                    $('#colorgbModal61 .row-cjc select').select2();
-                                    $('#colorgbModal61 [name="cid[]"]:last').prop('disabled', false).attr('id', 'cid' + getRandomNumber()).select2({
-                                        placeholder: 'Tìm kiếm...',
-                                        ajax: {
-                                            url: '/api/job-categories',
-                                            dataType: 'json',
-                                            delay: 250,
-                                            processResults: function(data) {
-                                                return {
-                                                    results: $.map(data, function(item) {
-                                                        return {
-                                                            id: item.job_category_id,
-                                                            text: item.job_category_name_vn
-                                                        };
-                                                    })
-                                                };
-                                            },
-                                            cache: true
-                                        }
-                                    });
-                                    $('#colorgbModal61 [name="cexp[]"]:last').prop('disabled', false).attr('id', 'cexp' + getRandomNumber()).select2();
-                                });
-                            });
-                        </script>
+                
 
                         <div class="form-group">
                             <input type="hidden" class="form-control" id="id" wire:model="resumeId"> <!-- Resume ID nếu cần -->

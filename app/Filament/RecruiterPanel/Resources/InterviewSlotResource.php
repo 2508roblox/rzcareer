@@ -24,8 +24,10 @@ class InterviewSlotResource extends Resource
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
 
 
-    public static ?string $label = 'Lịch phỏng vấn'; // Nhãn hiển thị cho tài nguyên này
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'Lịch phỏng vấn'; // Trả về tên số nhiều cho mô hình Company
+    }
     public static function form(Form $form): Form
     {
         return $form

@@ -113,7 +113,7 @@ class DanhSachViecLam extends Component
 
     public function updateJobList()
     {
-        $this->emit('refresh');
+        $this->dispatch('refresh');
     }
     public function sortBy($field)
     {
