@@ -20,6 +20,7 @@ class ReviewUploadResume extends Component
     use WithFileUploads;
     public $user;
     public $resume;
+    public $resumes;
     public $resumeDataPercentage; // Variable to hold percentage of resume with data
     public $a; // Variable to hold the status of advancedSkills, educationDetails, experienceDetails, and seekerProfile
     public $fullName;
@@ -142,6 +143,7 @@ class ReviewUploadResume extends Component
 
         // Load resume and their relationships
         if ($this->user) {
+            $this->resumes = Resume::where('user_id', $this->user->id)->get();
             $this->resume = Resume::with([
                 'educationDetails',
                 'certificates',
@@ -838,5 +840,48 @@ public function createLanguageSkill()
     // $this->dis('showModal');
 } 
 
+public function loadAdvancedSkills()
+{
+    $this->skills = ResumeAdvancedSkill::where('resume_id', $this->resume_id)->get();
+}
+
+public function saveAdvancedSkill()
+{
+    $this->validate([
+        'newSkill' => 'required|string|max:200',
+        'newExperience' => 'required|string|max:50'
+    ]);
+
+    if ($this->editingAdvanceSkillId) {
+        // Cập nhật kỹ năng hiện có
+        $skill = ResumeAdvancedSkill::find($this->editingAdvanceSkillId);
+        $skill->update([
+            'name' => $this->newSkill,
+            'level' => $this->newExperience
+        ]);
+    } else {
+        // Thêm kỹ năng mới
+        ResumeAdvancedSkill::create([
+            'resume_id' => $this->resume_id,
+            'name' => $this->newSkill,
+            'level' => $this->newExperience
+        ]);
+    }
+
+    // Reset form
+    $this->reset(['newSkill', 'newExperience', 'editingAdvanceSkillId']);
+    
+    // Reload danh sách kỹ năng
+    $this->loadAdvancedSkills();
+    
+    session()->flash('message', 'Kỹ năng chuyên môn đã được lưu thành công.');
+}
+
+public function deleteAdvancedSkill($id)
+{
+    ResumeAdvancedSkill::destroy($id);
+    $this->loadAdvancedSkills();
+    session()->flash('message', 'Đã xóa kỹ năng chuyên môn.');
+}
 
 }
