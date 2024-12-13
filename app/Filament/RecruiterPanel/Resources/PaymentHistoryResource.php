@@ -17,8 +17,7 @@ class PaymentHistoryResource extends Resource
 {
     protected static ?string $model = PaymentHistory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-clipboard';
-
+    protected static ?string $navigationIcon = 'heroicon-o-banknotes';
 
     protected static ?string $navigationGroup = 'Quản lý dịch vụ';
     public static function getPluralModelLabel(): string

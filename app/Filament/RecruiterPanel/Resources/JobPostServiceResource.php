@@ -19,7 +19,7 @@ class JobPostServiceResource extends Resource
 {
     protected static ?string $model = JobPostService::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
 
     protected static ?string $navigationGroup = 'Quản lý dịch vụ';
