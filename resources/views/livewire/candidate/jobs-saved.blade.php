@@ -210,7 +210,7 @@
                             <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                 <ul class="breadcrumb">
-                                    <li><a href="candidate/dashboard">Bảng tin</a></li>
+                                    <li><a href="{{ Route::has('candidate.dashboard') ? route('candidate.dashboard') : '#' }}">Bảng tin</a></li>
                                     <li>Danh sách việc đã lưu</li>
 
                                 </ul>
@@ -305,64 +305,112 @@
 
 
                                             @if($savedJobs->isEmpty())
-
+                                                <div class="no-jobs">
+                                                    <p>Bạn chưa lưu việc làm nào</p>
+                                                </div>
                                             @else
-                                            <ul class="media-list">
-                                                @foreach($savedJobs as $savedJob)
-                                                <li class="media panel-body stack-media-on-mobile" style="width: 100%;">
-                                                    <div class="media-left">
-                                                        <a title="View Details" href="{{ $savedJob->jobPost->url }}"
-                                                            target="_blank">
-                                                            <img src="{{ $savedJob->jobPost->company->logo_url }}"
-                                                                class="img-rounded" alt="">
-                                                        </a>
-                                                    </div>
+                                                <div class="row w-100" style="display: flex; flex-wrap: wrap; justify-content: center; padding: 15px;">
+                                                    @foreach($savedJobs as $savedJob)
+                                                    <div class="col-md-6 col-lg-4 mb-20 w-100">
+                                                        <div class="card w-100">
+                                                            <div class="card-header bg-white pb-0">
+                                                                <div class="media">
+                                                                    <div class="media-body">
+                                                                        <h6 class="media-heading text-semibold mb-5">
+                                                                            <a href="{{ route('viec-lam', $savedJob->jobPost->slug) }}" target="_blank" class="text-default">
+                                                                                {{ $savedJob->jobPost->job_name }}
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="text-muted mb-0">{{ $savedJob->jobPost->company->name }}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading text-semibold">
-                                                            <a title="View Details" target="_blank"
-                                                                href="{{ $savedJob->jobPost->url }}">
-                                                                {{ $savedJob->jobPost->title }} <strong
-                                                                    class="text-uppercase text-grey">- {{
-                                                                    $savedJob->jobPost->company->name }}</strong>
-                                                            </a>
-                                                        </h6>
-                                                        <ul class="list-inline list-inline-separate text-muted mb-10">
-                                                            <li title="Location"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->location }}</li>
-                                                            {{-- <li title="Closing Date"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->closing_date->format('d/m/Y') }}
-                                                            </li> --}}
-                                                            <li title="Salary"><i class="fa fa-money"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->salary }}</li>
-                                                            <li title="Job Type"><i class="fa fa-star-o"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->job_type }}</li>
-                                                        </ul>
-                                                        <p title="Job Description">
-                                                            {{ $savedJob->jobPost->description }}
-                                                        </p>
-                                                    </div>
+                                                            <div class="card-body pt-10">
+                                                                <ul class="list-unstyled text-muted mb-15">
+                                                                    <li class="mb-5">
+                                                                        <i class="fa fa-map-marker mr-5"></i> 
+                                                                        {{ $savedJob->jobPost->location->address }}
+                                                                    </li>
+                                                                    <li class="mb-5">
+                                                                        <i class="fa fa-money mr-5"></i>
+                                                                        {{ number_format($savedJob->jobPost->salary_min) }} - 
+                                                                        {{ number_format($savedJob->jobPost->salary_max) }}
+                                                                        {{ $savedJob->jobPost->salary_type == 'monthly' ? 'VNĐ/tháng' : 'VNĐ/giờ' }}
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-star-o mr-5"></i>
+                                                                        {{ $savedJob->jobPost->job_type }}
+                                                                    </li>
+                                                                </ul>
 
-                                                    <div class="media-right text-nowrap">
-                                                        <span class="label label-default"
-                                                            title="Saved at: {{ $savedJob->created_at->format('H:i - d/m/Y') }}">{{
-                                                            $savedJob->created_at->format('H:i - d/m/Y') }}</span>
-                                                        <button wire:click="removeJob({{ $savedJob->job_post_id }})"
-                                                            class="btn-colorgb-jgd text-uppercase btn btn-danger btn-xs"
-                                                            title="Remove job: {{ $savedJob->jobPost->title }}">
-                                                            <i class="icon-trash"></i> Remove
-                                                        </button>
+                                                                <p class="text-muted mb-15 clamp-text">
+                                                                    {{ $savedJob->jobPost->description }}
+                                                                </p>
+
+                                                                <div class="d-flex justify-content-between align-items-center">
+                                                                    <span class="text-muted small">
+                                                                        {{ $savedJob->created_at->format('H:i - d/m/Y') }}
+                                                                    </span>
+                                                                    <button wire:click="removeJob({{ $savedJob->jobPost->id }})"
+                                                                            class="btn btn-danger btn-xs">
+                                                                        <i class="icon-trash"></i> Bỏ lưu
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </li>
-                                                @endforeach
-                                            </ul>
+                                                    @endforeach
+                                                </div>
                                             @endif
+                                            <style>
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
+.card-header {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+}
 
+.card-body {
+    padding: 15px;
+}
+
+.clamp-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+</style>
 
                                             <div class="text-center pb-20 "> </div>
 

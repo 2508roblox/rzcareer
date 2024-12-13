@@ -6,18 +6,22 @@ use Livewire\Component;
 use App\Models\SavedJobPost; // Import the SavedJobPost model
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert; // Import the LivewireAlert trait
+use Filament\Notifications\Notification;
 
 class JobsSaved extends Component
 {
-    use LivewireAlert; // Use the LivewireAlert trait for alert functionality
+    // use LivewireAlert; // Use the LivewireAlert trait for alert functionality
 
     public $savedJobs; // Variable to hold saved jobs
+    public $reason;
 
     public function mount()
     {
-        // Retrieve the saved jobs for the authenticated user
+        // Lấy danh sách việc làm đã lưu kèm theo thông tin chi tiết
         $this->savedJobs = SavedJobPost::where('user_id', Auth::id())
-            ->with('jobPost') // Eager load the related job post
+            ->with(['jobPost' => function($query) {
+                $query->with(['company', 'location', 'career']); // Eager load các quan hệ cần thiết
+            }])
             ->get();
     }
 
@@ -57,7 +61,9 @@ class JobsSaved extends Component
     public function render()
     {
         return view('livewire.candidate.jobs-saved', [
-            'savedJobs' => $this->savedJobs, // Pass saved jobs to the view
+            'savedJobs' => $this->savedJobs->filter(function($savedJob) {
+                return $savedJob->jobPost !== null; // Lọc bỏ các job đã bị xóa
+            })
         ]);
     }
 }

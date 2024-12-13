@@ -42,7 +42,7 @@ use App\Http\Controllers\ResetPasswordController;
 
 Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/', action: HomeIndex::class)->name('index');
-    Route::get('/viec-lam/{slug}', ViecLam::class);
+    Route::get('/viec-lam/{slug}', ViecLam::class)->name('viec-lam');
     Route::get('/tuyen-dung/{slug}', TuyenDung::class);
     Route::get('/cong-ty', CongTy::class);
     Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
@@ -52,7 +52,7 @@ Route::middleware(CheckEmployer::class)->group(function () {
 //     Route::get('/cong-ty', CongTy::class);
 // });
 Route::middleware(CheckLoginCandidate::class)->group(function () {
-    Route::get('/candidate/dashboard', Dashboard::class);
+    Route::get('/candidate/dashboard', Dashboard::class)->name('candidate.dashboard');
     Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
     Route::get('/candidate/review', Review::class)->name('candidate.show');
@@ -63,6 +63,7 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
     Route::get('/candidate/document-attachment', DocumentAttachment::class);
+    Route::get('/candidate/jobs-saved', JobsSaved::class);
 });
 Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer', Homepage::class);
