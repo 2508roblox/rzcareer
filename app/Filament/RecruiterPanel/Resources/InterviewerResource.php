@@ -17,7 +17,7 @@ class InterviewerResource extends Resource
 {
     protected static ?string $model = Interviewer::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationIcon = 'heroicon-o-user-circle';
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
 
     public static function getPluralModelLabel(): string

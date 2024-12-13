@@ -26,7 +26,7 @@ class InterviewResource extends Resource
 {
     protected static ?string $model = Interview::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-pencil';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
     protected static ?string $navigationGroup = 'Quản lý lịch phỏng vấn'; // Nhóm trong menu điều hướng
     public static function getPluralModelLabel(): string
     {
