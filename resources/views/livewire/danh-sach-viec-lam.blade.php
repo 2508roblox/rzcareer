@@ -329,3 +329,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized', () => {
+        Livewire.on('urlChange', (params) => {
+            let url = new URL(window.location.href);
+            
+            // Cập nhật hoặc thêm career_id vào URL
+            if (params.career_id) {
+                url.searchParams.set('career_id', params.career_id);
+            } else {
+                url.searchParams.delete('career_id');
+            }
+            
+            // Cập nhật URL mà không reload trang
+            window.history.pushState({}, '', url);
+        });
+    });
+</script>

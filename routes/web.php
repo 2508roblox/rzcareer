@@ -37,8 +37,8 @@ use App\Livewire\TuyenDung;
 use App\Livewire\ViecLam;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
-
-
+use App\Livewire\JobSearchModal;
+use App\Http\Controllers\ResetPasswordController;
 
 Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/', action: HomeIndex::class)->name('index');
@@ -77,6 +77,13 @@ Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/site/login', Login::class);
 });
 
+Route::get('/site/request-password-reset', RequestPasswordReset::class)->name('request-password-reset');
+
+Route::get('/reset-password/{token}', function ($token) {
+    return view('reset-password', ['token' => $token]);
+})->name('password.reset');
+
+Route::post('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
 
 Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');

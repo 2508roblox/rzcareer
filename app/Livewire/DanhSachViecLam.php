@@ -34,7 +34,7 @@ class DanhSachViecLam extends Component
     public $sortDirection = 'desc';
     public $activeSort = '';
 
-    protected $queryString = ['job_type', 'salary', 'position', 'experience'];
+    protected $queryString = ['job_type', 'salary', 'position', 'experience', 'career_id'];
     protected $resetPageOnUpdate = ['job_type', 'salary', 'position', 'experience'];
 
     public function updating($name, $value)
@@ -72,6 +72,17 @@ class DanhSachViecLam extends Component
         $this->is_urgent = $request->query('is_urgent', false);
         $this->listLocation = collect();
         $this->activeSort = 'relevance';
+    }
+
+    public function updateCareerFilter($careerId)
+    {
+        $this->career_id = $careerId;
+        $this->resetPage();
+        
+        // Cập nhật URL với career_id mới
+        $this->dispatch('urlChange', [
+            'career_id' => $this->career_id
+        ]);
     }
 
     public function selectLocation($locationSelected)
@@ -242,6 +253,7 @@ class DanhSachViecLam extends Component
             'salaryRanges' => $salaryRanges,
             'keyword' => $this->keyword,
             'location' => $this->location,
+            'career_id' => $this->career_id,
         ]);
     }
 }

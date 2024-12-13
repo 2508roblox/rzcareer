@@ -71,7 +71,7 @@
                                         <div class="input-group mb-3">
                                             <input type="search" id="123" wire:model.defer="keyword"
                                                 onfocus="this.select()" autocomplete="off"
-                                                class="auto-complete form-control" placeholder="Từ khóa...">
+                                                class="auto-complete form-control ms-4" placeholder="Từ khóa...">
                                             <div class="teks-location">
                                                 <i class="bx bx-map"></i>
                                                 <input type="search" id="location" wire:model.defer="location"
@@ -120,17 +120,10 @@
                                <a title="Việc làm {{ $career->name }}"
                                   href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
                                   class="list-group-item-action">
-                                  <img height="15" width="15"
-                                       loading="lazy"
-                                       src="/assets_livewire/teks/img/ic-nhan-su.svg?v=234208153092"
-                                       alt="Việc làm {{ $career->name }}">
                                   {{ $career->name }}
                                </a>
                            </li>
                        @endforeach
-                       
-
-
                                     </ul>
 
                                 </div>
@@ -144,21 +137,16 @@
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
                                                             src="/assets_livewire/img/2024/ic1.svg?v=234208153092"
-                                                            alt="Đánh giá CV - Rzcareer AI">
+                                                            alt="Tìm việc theo ngành nghề">
                                                     </div>
                                                     <div class="col-8">
                                                         <div class="card-body">
-                                                            <h3 class="fs-6 card-title fw-bold">Đánh giá CV - Rzcareer
-                                                                AI</h3>
-                                                            <p class="card-text small">Bạn đã có sẵn CV? Tải lên để
-                                                                nhận phân tích và gợi ý của
-                                                                Rzcareer AI</p>
-                                                            <a href="/review-cv.html" class="btn btn-primary btn-sm">
-                                                                Tải lên CV</a>
-
+                                                            <h3 class="fs-6 card-title fw-bold">Tìm việc theo ngành nghề</h3>
+                                                            <p class="card-text small">Khám phá cơ hội việc làm phù hợp với chuyên môn của bạn</p>
+                                                            <a href="/danh-sach-viec-lam" class="btn btn-primary btn-sm">
+                                                                Xem ngay</a>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -166,20 +154,16 @@
                                         <div class="col d-flex">
                                             <div class="card border-primary w-100">
                                                 <div class="row g-0 align-items-center">
-
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
                                                             src="/assets_livewire/img/2024/ic2.svg?v=234208153092"
-                                                            alt="Tạo CV Online - Rzcareer AI">
+                                                            alt="Việc làm theo địa điểm">
                                                     </div>
                                                     <div class="col-8">
                                                         <div class="card-body">
-                                                            <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2
-                                                                phút</h3>
-                                                            <p class="card-text small">Tạo CV xin việc Online chuẩn,
-                                                                đẹp miễn phí với Rzcareer</p>
-                                                            <a href="/candidate/import-cv-data"
-                                                                class="btn btn-primary btn-sm">Tạo CV 2 phút</a>
+                                                            <h3 class="fs-6 card-title fw-bold">Việc làm theo địa điểm</h3>
+                                                            <p class="card-text small">Tìm việc làm gần nhà, thuận tiện đi lại</p>
+                                                            <a href="/danh-sach-viec-lam" class="btn btn-primary btn-sm">Tìm việc ngay</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -237,7 +221,7 @@
                                         <div class="col-6">
                                             <img src="/assets_livewire/img/2024/ic5.svg?v=234208153092" width="20"
                                                 loading="lazy" alt="Rzcareer">
-                                            <p>Lượt tải ứng dụng</p>
+                                            <p>Lượt truy cập hàng tháng</p>
                                             <strong>1.200.000+</strong>
                                         </div>
                                     </div>
