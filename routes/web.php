@@ -74,7 +74,7 @@ Route::middleware(CheckLoginEmployer::class)->group(function () {
 Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/employer/login', EmployerLogin::class);
     Route::get('/site/register', Register::class);
-    Route::get('/site/login', Login::class);
+    Route::get('/site/login', Login::class)->name('site.login');
 });
 
 Route::get('/site/request-password-reset', RequestPasswordReset::class)->name('request-password-reset');

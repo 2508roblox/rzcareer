@@ -300,6 +300,11 @@
                                         height: 17rem;
                                         object-fit: contain;
                                     " src="{{ asset('assets_livewire/img/9170826-removebg-preview (1).png') }}" alt="">
+                                    <div class="text-center">
+                                        <h3>Không tìm thấy việc làm phù hợp</h3>
+                                        <p>Vui lòng đăng nhập và tải CV lên để chúng tôi có thể gợi ý việc làm phù hợp với bạn.</p>
+                                        <a href="/site/login" class="btn btn-primary">Đăng nhập</a>
+                                    </div>
                                     @else
                                         @foreach (array_chunk($suggestedJobs->toArray(), 15) as $index => $jobChunk)
                                             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -380,11 +385,6 @@
                                             </div>
                                         @endforeach
                                     @endif
-                                    
-
-
-
-
                                     </div>
                                     @if (!$suggestedJobs->isEmpty()) 
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel_1"
@@ -851,23 +851,16 @@
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
                                                             src="/assets_livewire/img/2024/ic1.svg?v=234208153092"
-                                                            alt="Đánh giá CV - Rzcareer AI">
+                                                            alt="Tìm việc theo ngành nghề">
                                                     </div>
                                                     <div class="col-8">
                                                         <div class="card-body">
-                                                            <h3 class="fs-6 card-title fw-bold">Đánh giá CV - Rzcareer
-                                                                AI</h3>
-                                                            <p class="card-text small">Bạn đã có sẵn CV? Tải lên để
-                                                                nhận phân tích và gợi ý của Rzcareer AI
-                                                            </p>
-                                                            <a href="/candidate/import-cv-data"
-                                                                class="btn btn-primary btn-sm"> <i
-                                                                    class='bx bx-upload'></i> Tải lên
-                                                                CV</a>
-
+                                                            <h3 class="fs-6 card-title fw-bold">Tìm việc theo ngành nghề</h3>
+                                                            <p class="card-text small">Khám phá cơ hội việc làm phù hợp với chuyên môn của bạn</p>
+                                                            <a href="/danh-sach-viec-lam" class="btn btn-primary btn-sm">
+                                                                Xem ngay</a>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -875,22 +868,16 @@
                                         <div class="col d-flex">
                                             <div class="card border-primary w-100">
                                                 <div class="row g-0 align-items-center">
-
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
                                                             src="/assets_livewire/img/2024/ic2.svg?v=234208153092"
-                                                            alt="Phân tích CV - Rzcareer AI">
+                                                            alt="Việc làm theo địa điểm">
                                                     </div>
                                                     <div class="col-8">
                                                         <div class="card-body">
-                                                            <h3 class="fs-6 card-title fw-bold">Tạo CV tự động trong 2
-                                                                phút</h3>
-                                                            <p class="card-text small">Tạo CV xin việc Online chuẩn,
-                                                                đẹp miễn phí với Rzcareer</p>
-                                                            <a href="/candidate/import-cv-data"
-                                                                class="btn btn-primary btn-sm"><i
-                                                                    class='bx bx-plus'></i> Tạo CV
-                                                                ngay!</a>
+                                                            <h3 class="fs-6 card-title fw-bold">Việc làm theo địa điểm</h3>
+                                                            <p class="card-text small">Tìm việc làm gần nhà, thuận tiện đi lại</p>
+                                                            <a href="/danh-sach-viec-lam" class="btn btn-primary btn-sm">Tìm việc ngay</a>
                                                         </div>
                                                     </div>
                                                 </div>
