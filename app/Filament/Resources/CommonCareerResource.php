@@ -42,7 +42,7 @@ class CommonCareerResource extends Resource
                             Forms\Components\FileUpload::make('icon_url')
                             ->label('Tải lên biểu tượng')
                             ->required()
-                            ->maxSize(1024) // Maximum file size in kilobytes (adjust as necessary)
+                            ->maxSize(10240) // Maximum file size in kilobytes (adjust as necessary)
                             ->placeholder('Chọn file biểu tượng')
                             ->image() // Optional: Specify that only images are allowed
                             ->disk('public') // Specify the disk where the file will be stored
@@ -66,11 +66,14 @@ class CommonCareerResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->label('ID')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('name')
                     ->label('Tên ứng dụng')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('icon_url')
-                    ->label('URL biểu tượng')
+                Tables\Columns\ImageColumn::make('icon_url')
+                    ->label(' biểu tượng')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('app_icon_name')
                     ->label('Tên biểu tượng ứng dụng')

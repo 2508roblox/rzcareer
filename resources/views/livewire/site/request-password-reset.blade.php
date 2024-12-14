@@ -1,6 +1,4 @@
 <div>
-    <!DOCTYPE html>
-    <html lang="vi-VN">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -30,7 +28,7 @@
                 background-color: #fffaf2;
             }
             .login-container {
-                background-color: #2f8cba;
+                background-color: inherit;
             }
             @media (max-width: 768px) {
                 .login-container .login-form {
@@ -40,7 +38,7 @@
         </style>
     </head>
 
-    <body class="access" style="background-color: #050515">
+    <body class="access"  style="background-image: url(/assets_livewire/banner.png); background-size: cover; ">
         <div class="page-container login-container">
             <div class="page-content">
                 <div class="content-wrapper">
@@ -64,7 +62,7 @@
                             <div class="form-group has-feedback">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" wire:model="email" class="form-control" placeholder="Nhập email của bạn">
-                                @error('email') 
+                                @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -86,5 +84,4 @@
             </div>
         </div>
     </body>
-    </html>
 </div>

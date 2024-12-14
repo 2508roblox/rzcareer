@@ -182,7 +182,7 @@
                                     <img src="/assets_livewire/img/2024/ic3.svg?v=234208153092" width="16"
                                         loading="lazy" alt="Rzcareer">
                                     Thị trường làm việc hôm nay
-                                    <small class="float-end fw-normal">25/09/2024</small>
+                                    <small class="float-end fw-normal">{{ now()->format('d/m/Y') }}</small>
                                     <div class="row my-3 mt-4 text-center">
                                         @php
                                             $jobPostCount = App\Models\JobPost::where('status', 1)->count();
@@ -215,14 +215,14 @@
                                         <div class="col-6">
                                             <img src="/assets_livewire/img/2024/ic4.svg?v=234208153092" width="28"
                                                 loading="lazy" alt="Rzcareer">
-                                            <p>Nhà tuyển dụng uy tín</p>
-                                            <strong>120.000+</strong>
+                                            <p>Số lượng công ty </p>
+                                            <strong>{{ number_format($companyCount) }}</strong>
                                         </div>
                                         <div class="col-6">
                                             <img src="/assets_livewire/img/2024/ic5.svg?v=234208153092" width="20"
                                                 loading="lazy" alt="Rzcareer">
-                                            <p>Lượt truy cập hàng tháng</p>
-                                            <strong>1.200.000+</strong>
+                                            <p>Số lượng ứng viên đăng ký</p>
+                                            <strong>{{ number_format($userCount) }}</strong>
                                         </div>
                                     </div>
                                 </h6>
@@ -279,7 +279,7 @@
                                     </div>
 
                                     <div class="carousel-inner">
-                                       
+
                                         <style>
                                             a.border_pack_effect {
                                                 border-left: 4px solid #197bcd !important;
@@ -319,7 +319,7 @@
                                                                         border: 1px solid #00000033;
                                                                         border-radius: .5rem;
                                                                     "
-                                                                    class="lazy 
+                                                                    class="lazy
                                                                         @if (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['highlight_logo'] === 1)
                                                                             image-container-holo
                                                                         @elseif (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['hot_effect'] === 1)
@@ -328,7 +328,7 @@
                                                                     width="80" height="80"
                                                                     data-src="{{ isset($jobPost['company']['company_image_url']) && Storage::disk('public')->exists($jobPost['company']['company_image_url']) ? Storage::url($jobPost['company']['company_image_url']) : asset('assets_livewire/img/default-company.svg') }}"
                                                                     lazy>
-                                                                    
+
                                                                     <style>
                                                                         .image-container-holo {
                                                                             width: 250px;
@@ -347,7 +347,7 @@
                                                                             padding: 2px;
                                                                             position: relative;
                                                                         }
-                                    
+
                                                                         @keyframes shimmer {
                                                                             0% {
                                                                                 -webkit-mask-position: 0 0;
@@ -363,7 +363,7 @@
                                                                         <img src="{{ asset('assets_livewire/img/image-removebg-preview.png') }}" alt="">
                                                                     </div>
                                                                 @endif
-                                    
+
                                                                 <div class="flex-grow-1 ms-2">
                                                                     <h3 class="tooltip_job_{{ $jobPost['id'] }} h5 tooltip" title="">{{ $jobPost['job_name'] }}</h3>
                                                                     <div class="h6 text-muted">{{ $jobPost['company']['company_name'] }}</div>
@@ -386,7 +386,7 @@
                                         @endforeach
                                     @endif
                                     </div>
-                                    @if (!$suggestedJobs->isEmpty()) 
+                                    @if (!$suggestedJobs->isEmpty())
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel_1"
                                     data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -398,7 +398,7 @@
                                     <span class="visually-hidden">Next</span>
                                 </button>
                                     @endif
-                               
+
                                 </div>
                             </div>
                         </div>
@@ -549,7 +549,7 @@
                                                                     border: 1px solid #00000033;
                                                                     border-radius: .5rem;
                                                                 "
-                                                                class="lazy 
+                                                                class="lazy
                                                                     @if (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['highlight_logo'] === 1)
                                                                         image-container-holo
                                                                     @elseif (isset($jobPost['activeServices'][0]) && $jobPost['activeServices'][0]['hot_effect'] === 1)
@@ -558,7 +558,7 @@
                                                                 width="80" height="80"
                                                                 data-src="{{ isset($jobPost['company']['company_image_url']) && Storage::disk('public')->exists($jobPost['company']['company_image_url']) ? Storage::url($jobPost['company']['company_image_url']) : asset('assets_livewire/img/default-company.svg') }}"
                                                                 lazy>
-                                                                
+
                                                                     <style>
                                                                         .image-container-holo {
                                                                             width: 250px;
@@ -572,7 +572,7 @@
                                                                         }
                                                                         .hot_border {
                                                                             border: 5px solid linear-gradient(to right, #add8e6, #197bcd)   !important;
-                                                                  
+
                                                                             background-image: linear-gradient(201.63deg, #197bcd 14.36%, #003e71 95.71%);
                                                                                 background-repeat: no-repeat;
                                                                                 background-size: 100%;
@@ -712,7 +712,7 @@
                             </div>
                         </div>
                     </div>
-               
+
 
                 </div>
             </section>

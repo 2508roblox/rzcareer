@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Events\TestNotification;
 use App\Jobs\CheckPayment;
 use App\Models\CommonCareer;
+use App\Models\User;
 use Livewire\Component;
 use App\Models\JobPost;
 use App\Models\Company;
@@ -23,9 +24,12 @@ class HomeIndex extends Component
     // Properties for search
     public $keyword = '';
     public $location = '';
-
+    public $userCount;
+    public $companyCount;
     public function mount()
     {
+        $this->userCount = User::count();
+        $this->companyCount = Company::count();
         // Lấy thông tin người dùng nếu đã đăng nhập
         $this->user = Auth::user(); // Lấy thông tin người dùng đã đăng nhập
         event(new TestNotification([
@@ -80,7 +84,7 @@ class HomeIndex extends Component
         } else {
             $this->suggestedJobs = collect(); // Nếu chưa đăng nhập, gán giá trị rỗng
         }
-        
+
     }
 
     public function searchJobs()

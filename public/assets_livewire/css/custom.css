@@ -1,15 +1,12 @@
 @media all and (min-width: 1000px) and (max-width: 1300px) {
-
     .btn {
         font-size: 13px;
     }
-
     nav.navbar ul.nav>li>a,
     .teks-header .nav-link {
         font-size: 14px;
         font-weight: 500 !important;
     }
-
 }
 
 @media all and (min-width: 1000px) {
@@ -118,11 +115,10 @@ body .item-click:hover,
 
 .teks-newspaper {
     background: linear-gradient(180deg, #D2EDFF 0%, #FDFFF3 100%);
-
 }
 
 .teks-search-box {
-    background: url(/assets_livewire/img/2024/bg1.webp);
+    background: url(/assets_livewire/img/2024/bg.png);
     background-size: cover;
 }
 
@@ -207,7 +203,6 @@ body .item-click:hover,
     font-size: 18px;
     font-weight: 400;
     line-height: 27.32px;
-
 }
 
 .teks-box-today .row>.col-6 {
@@ -228,7 +223,6 @@ body .item-click:hover,
     font-size: 15px;
     font-weight: 700;
     line-height: 21.86px;
-
 }
 
 .teks-box-today .row img {
@@ -263,7 +257,6 @@ body .item-click:hover,
     font-weight: 700;
     line-height: 32.78px;
     color: rgba(96, 172, 236, 1);
-
 }
 
 .loader {
@@ -333,7 +326,6 @@ body .item-click .article:hover {
         transform: scale(0.6);
         opacity: 1;
     }
-
     100% {
         transform: scale(1);
         opacity: 0;
@@ -372,7 +364,6 @@ html body .teks-header {
 
 [lang="vi"] .section-download .btn {
     padding: 6px 12px !important;
-
 }
 
 .teks-search-form {
@@ -437,7 +428,6 @@ body .item-click {
     border: 1px solid transparent !important;
     border-radius: 4px;
 }
-
 
 .size-6 {
     width: 16px;
@@ -651,72 +641,56 @@ ul.footer-navigation li a:hover {
 @media all and (min-width: 1000px) {
     header .dropdown:hover .dropdown-menu {
         max-width: 710px;
-
     }
-
     nav .navbar-right .dropdown-menu {
         top: 50px;
         max-width: 662px;
-
     }
-
     .padd-top-5.teks-seo {
         padding-bottom: 20px !important;
     }
-
     .stack-media-on-mobile .list-inline.no-margin li .btn,
     .stack-media-on-mobile .media-right.media-middle.text-nowrap,
     .stack-media-on-mobile .list-inline.no-margin:not(.fixed) {
         width: 100%;
         display: block;
     }
-
     .page-research-salary .brows-job-category .item-click {
         width: calc(50% - 10px);
     }
-
     .stack-media-on-mobile .list-inline.no-margin:not(.fixed) li:nth-child(1) {
         width: 50%;
     }
-
     .stack-media-on-mobile .list-inline.no-margin:not(.fixed) li {
         width: 25%;
     }
-
 }
 
 @media all and (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
-
     .footer .container,
     .section-download .container {
         padding-left: 10px;
         padding-right: 10px;
     }
-
     .list-inline.text-muted.mrg-bot-5 li {
         margin-bottom: 0;
         font-size: 11px;
     }
-
     .profile-cover {
         padding-bottom: 0 !important;
     }
-
     .stack-media-on-mobile .list-inline.no-margin.fixed li:nth-child(3) {
         padding-right: 0 !important;
     }
-
     h2 {
         font-size: 18px;
     }
-
     .teks-tools .teks-item {
         height: 75px;
     }
-
     .easy-autocomplete-container ul {
         width: calc(100% - 10px) !important;
         top: 110px !important;
@@ -725,13 +699,10 @@ ul.footer-navigation li a:hover {
         right: 6px !important;
         margin: auto;
     }
-
     .page-job-job .easy-autocomplete-container ul {
         top: 105px !important;
     }
-
     .mxh-100 {
         -webkit-line-clamp: 5;
     }
-
 }
