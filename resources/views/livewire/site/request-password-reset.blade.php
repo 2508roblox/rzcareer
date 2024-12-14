@@ -1,9 +1,5 @@
 <div>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-        <meta name="csrf-token" content="{{csrf_token()}}">
         <title>Quên mật khẩu - RZCareer</title>
 
         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">

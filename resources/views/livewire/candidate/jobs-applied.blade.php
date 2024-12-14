@@ -1,8 +1,8 @@
 <div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-        <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+
+
         <!DOCTYPE html>
         <html lang="vi-VN">
 
@@ -29,7 +29,7 @@
             <meta name="csrf-token"
                 content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-            <title>Bảng tin - RZCareer</title>
+            <title>Danh sách việc làm đã ứng tuyển - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                 type="text/css">
@@ -197,82 +197,10 @@
                             <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                 <ul class="breadcrumb">
-                                    <li><a href="candidate/dashboard" "=" ">Bảng tin</a></li>
+                                    <li><a href="/candidate/dashboard" "=" ">Bảng tin</a></li>
                             <li>Danh sách việc làm đã ứng tuyển</li>
                                </ul>
-                        <div class=" heading-elements panel-nav ">
-                            <ul class=" nav nav-pills ">
 
-                                <li class=" dropdown " id=" dropdown-sort ">
-                                    <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
-                                        <i class=" icon-sort "></i>
-                                        <span class=" position-right ">Sắp xếp</span>
-                                    </a>
-
-                                    <ul class=" dropdown-menu dropdown-menu-right " id=" dropdown-menu-sort ">
-                                        <li>
-                                            <a href=" /candidate/jobs-applied?sort[date]=asc "><i class="
-                                            icon-sort-time-asc "></i> Cũ nhất</a>
-                                        </li>
-                                        <li>
-                                            <a href=" /candidate/jobs-applied?sort[date]=desc "><i class="
-                                            icon-sort-time-desc "></i> Mới
-                                                nhất</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class=" dropdown " id=" dropdown-filter ">
-                                    <a href=" javascript:void(0) " class=" dropdown-toggle " data-toggle=" dropdown ">
-                                        <i class=" fa fa-search "></i>
-                                        <span class=" position-right ">Lọc</span>
-                                    </a>
-
-                                    <ul class=" dropdown-menu dropdown-menu-right " id=" statusDropdown ">
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 0 " data-id=" 0 ">
-                                                    <span>Chỉ Mới Apply</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 2 " data-id=" 2 ">
-                                                    <span>Từ Chối</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 6 " data-id=" 6 ">
-                                                    <span>Liên Lạc</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 7 " data-id=" 7 ">
-                                                    <span>Phỏng Vấn</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 8 " data-id=" 8 ">
-                                                    <span>Gửi Offer</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 9 " data-id=" 9 ">
-                                                    <span>Tuyển Thành Công</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 10 " data-id=" 10 ">
-                                                    <span>Sàng Lọc Hồ Sơ</span>
-                                                </label>
-                                            </li>
-                                                                    <li>
-                                                <label><input type=" checkbox " value=" 11 " data-id=" 11 ">
-                                                    <span>Đặt Lịch Phỏng Vấn</span>
-                                                </label>
-                                            </li>
-                                                            </ul>
-                                </li>
-                            </ul>
-                        </div>
 
                     </div>
                 </div>
@@ -705,12 +633,12 @@
                             <div class="panel no-border-top no-border-radius-top ">
                                 <ul class="navigation ">
                                     <li class="navigation-header ">Cá nhân</li>
-                                    <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
+                                    <li><a href="/candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
                                             việc</a>
                                     </li>
-                                    <li><a href="candidate/document-attachment "><i class="icon-file-media "></i> Đính
+                                    <li><a href="/candidate/document-attachment "><i class="icon-file-media "></i> Đính
                                             kèm CV/chứng chỉ</a></li>
-                                    <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
+                                    <li><a href="/candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
                                             thông tin từ LinkedIn</a></li>
                                     <li
                                         data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4>
@@ -720,12 +648,12 @@
                                                 class="badge badge-danger">Mới!</span></a>
                                     </li>
                                     <li class="navigation-divider"></li>
-                                    <li class="active"><a href="candidate/jobs-applied"
+                                    <li class="active"><a href="/candidate/jobs-applied"
                                             title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i>
                                             Việc làm đã ứng tuyển</a></li>
-                                    <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                    <li><a href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
                                                 class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                    <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
+                                    <li><a href="/candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
                                                 class="icon-stack4"></i> Việc làm phù hợp</a></li>
                                 </ul>
                             </div>

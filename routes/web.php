@@ -53,7 +53,7 @@ Route::middleware(CheckEmployer::class)->group(function () {
 // });
 Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/dashboard', Dashboard::class)->name('candidate.dashboard');
-    Route::get('/candidate/manage-resume', ManageResume::class);
+    // Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
     Route::get('/candidate/review', Review::class)->name('candidate.show');
     Route::get('/candidate/review{resume_id}', ReviewUploadResume::class)->name('candidate.review');
@@ -62,7 +62,7 @@ Route::middleware(CheckLoginCandidate::class)->group(function () {
     Route::get('/candidate/change-password', ChangePassword::class);
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
-    Route::get('/candidate/document-attachment', DocumentAttachment::class);
+    // Route::get('/candidate/document-attachment', DocumentAttachment::class);
     Route::get('/candidate/jobs-saved', JobsSaved::class);
 });
 Route::middleware(CheckLoginEmployer::class)->group(function () {

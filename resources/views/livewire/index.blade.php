@@ -1,26 +1,7 @@
 <div>
 
-    <!DOCTYPE html>
-    <html lang="vi-VN">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="robots" content="index, follow">
-        <meta name="description"
-            content="Rzcareer - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
-        <meta name="title" content="Rzcareer – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://Rzcareer.vn">
-        <meta property="og:image" itemprop="thumbnailUrl" content="https://Rzcareer.vn/media/img/cover-share.jpg">
-        <meta property="og:description"
-            content="Rzcareer - Nền tảng tuyển dụng trực tuyến, App tuyển dụng, tìm việc làm nhanh trên Android và iOS. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
-        <meta property="og:title" content="Rzcareer – Nền tảng tuyển dụng, tìm việc làm nhanh theo cách hoàn toàn mới">
-        <meta property="fb:app_id" content="1590841851212703">
-        <meta property="al:android:package" content="vn.ca.hope.candidate">
-        <meta property="al:android:app_name" content="Rzcareer">
-        <meta property="al:ios:app_store_id" content="1234120247">
-        <meta property="al:ios:app_name" content="Rzcareer">
         <title>Rzcareer - Tìm việc làm mơ ước</title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
             type="font/woff2" crossorigin>
@@ -232,12 +213,6 @@
                 </div>
 
             </section>
-            <section class="d-block d-lg-none text-center">
-                <a href="https://Rzcareer.vn/site/download?utm_source=home_mobile">
-                    <img height="117" width="400" class="w-100 h-auto" loading="lazy"
-                        src="/assets_livewire/teks/img/download-app.webp" alt="Download Rzcareer">
-                </a>
-            </section>
             <section class="bg-linear-gradient pt-2 py-sm-3 p-sm-4">
                 <div class="container">
                     <div class="teks-section">
@@ -256,7 +231,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                                 <img src="/assets_livewire/img/2024/ic6.svg?v=234208153092" width="16"
                                     loading="lazy" alt="Rzcareer">
-                                <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
+                                <strong>Gợi ý:</strong> Cung cấp thanh tìm kiếm cho phép người dùng lọc theo ngành nghề, mức lương, địa điểm và loại hình công việc.
                             </div>
                             <div class="d-sm-block">
 
@@ -497,7 +472,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                                 <img src="/assets_livewire/img/2024/ic6.svg?v=234208153092" width="16"
                                     loading="lazy" alt="Rzcareer">
-                                <strong>Gợi ý:</strong> Di chuột vào tiêu đề việc làm để xem thông tin chi tiết.
+                                <strong>Gợi ý:</strong> Cho phép người dùng chia sẻ thông tin việc làm trên các mạng xã hội để tăng độ lan tỏa.
                             </div>
                             <div class="d-sm-block">
 
@@ -817,12 +792,12 @@
                                             /* Hoặc màu khác tùy ý */
                                         }
                                     </style>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHotJobs"
                                         data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselHotJobs"
                                         data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
@@ -1045,477 +1020,6 @@
     </div>
   </section> --}}
 
-            <section class="bg-white teks-newspaper py-4 py-sm-5">
-                <div class="container">
-
-
-
-                </div>
-                <div class="container mt-3 mt-sm-5">
-                    <h2 class="mb-4 text-dark text-center">Người dùng đánh giá</h2>
-                    <div class="teks-section p-0 rounded-4">
-                        <div class="row align-items-center">
-                            <div class="col-sm-12 teks-section-content teks-swiper">
-                                <div class="d-none d-lg-block">
-                                    <div id="carousel9" class="carousel slide" data-bs-interval="999999"
-                                        data-bs-ride="carousel">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carousel9" data-bs-slide-to="0"
-                                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#carousel9" data-bs-slide-to="1"
-                                                aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner p-1 pb-5">
-                                            <div class="carousel-item active">
-                                                <div class="row">
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/reviewers/tue_dan.png"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Tuệ Đan</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Rzcareer có App trên điện thoại dễ dùng, có thể nhận
-                                                                thông báo và chat với NTD. Phần nào không
-                                                                biết có thể chat với Support trên App, họ hướng dẫn chi
-                                                                tiết lắm. Tìm việc ở trên này cũng đơn
-                                                                giản. Có cái tính năng tìm việc xung quanh vị trí bạn
-                                                                đang đứng với bán kính bao nhiêu km cũng
-                                                                hay.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/reviewers/thuy_nga.png"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Thúy Nga</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình biết đến Rzcareer qua sự giới thiệu của một người
-                                                                bạn nên cũng thử tìm việc trên đó xem
-                                                                thế nào. Với việc làm Content mà mình tìm kiếm thì có
-                                                                khá đa dạng các ngành nghề, lĩnh vực
-                                                                tuyển dụng nên mình cũng may mắn tìm được việc làm phù
-                                                                hợp. Tìm việc trên Rzcareer thì mình có
-                                                                thể tạo CV online rồi apply trực tiếp nên cũng tiện lợi.
-                                                                Nhất là có cái tính năng phân tích
-                                                                CV, sửa lỗi CV, nó giúp mình biết CV cần chỉnh sửa những
-                                                                gì, cái đó mình thấy khá hay.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/reviewers/quynh_anh.png"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Anh</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình đã có 1 trải nghiệm tốt khi tải ứng dụng, đăng ký
-                                                                tài khoản Rzcareer. Sau khi hoàn thành
-                                                                hồ sơ cá nhân hệ thống đã chủ động tìm và gợi ý việc làm
-                                                                đến mình dựa theo những thông tin mà
-                                                                mình đã cung cấp. Ứng dụng có rất nhiều ưu điểm ví dụ
-                                                                như nộp hồ sơ nhanh, chat trực tiếp với
-                                                                nhà tuyển dụng & thông tin doanh nghiệp rõ ràng chi
-                                                                tiết. Mình rất an tâm và hài lòng khi sử
-                                                                dụng.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/reviewers/thuy_anh.png"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Thuỳ Anh</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Tôi đã sử dụng nhiều ứng dụng khác nhau trước khi biết
-                                                                tới Rzcareer, nhưng đây thực sự là một
-                                                                ứng dụng tuyệt vời. Tôi rất thích tính năng tạo CV
-                                                                online nhanh chóng, được phân tích và sửa
-                                                                lỗi CV hoàn toàn miễn phí từ Rzcareer. Giao diện của ứng
-                                                                dụng cũng rất dễ sử dụng, tất cả đều
-                                                                được sắp xếp một cách rõ ràng và logic, giúp tôi dễ dàng
-                                                                tìm thấy những gì tôi cần mà không
-                                                                cần mất quá nhiều thời gian. Rzcareer có đầy đủ ngành
-                                                                nghề tôi quan tâm với những mức offer
-                                                                tốt, hơn nữa tôi còn dễ dàng tìm kiếm việc gần khu vực
-                                                                tôi ở. Đánh giá 5 sao nhé!
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <div class="row">
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/2.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình sử dụng app Rzcareer để tìm việc làm từ 3 năm trước
-                                                                và rất thích các tính năng của app
-                                                                như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng
-                                                                điện thoại. NTD cũng liên hệ sớm, không
-                                                                bị tình trạng tin đăng ảo rồi không ai gọi như một số
-                                                                bên khác.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/1.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Em mới ra trường, chưa biết cách làm CV như thế nào. May
-                                                                có một chị người quen bảo lên website
-                                                                Rzcareer.vn tạo CV, được hướng dẫn chi tiết. Trên
-                                                                Rzcareer còn có phần phân tích CV rất hữu
-                                                                ích, em có thể biết được mình đang thiếu thông tin gì và
-                                                                bổ sung.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/4.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Rzcareer giúp em tìm thấy công việc phù hợp với mình
-                                                                thông qua các đề xuất được cập nhật qua
-                                                                email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy
-                                                                tín để xây dựng kinh nghiệm thực tế
-                                                                trong lĩnh vực Marketing mà mình yêu thích.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/5.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
-                                                            <p class="text-muted text-body small mxh-100">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối.
-                                                                Sau đó mình đã nhìn thấy quảng cáo của
-                                                                Rzcareer và cập nhật CV lên website. Nhờ tính năng phân
-                                                                tích CV mà mình biết CV cần khắc phục
-                                                                những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carousel9" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carousel9" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="d-block d-lg-none">
-                                    <div id="carousel10" class="carousel slide" data-bs-ride="carousel">
-
-                                        <div class="carousel-inner p-1">
-
-                                            <div class="carousel-item active">
-                                                <div class="row g-3">
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/6.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Phương Thảo</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Tôi rất hài lòng với web Rzcareer! Tôi nhận được phản
-                                                                hồi từ các NTD rất nhanh. Giao diện mới
-                                                                giúp tôi thực hiện các thao tác dễ dàng hơn và tôi đã
-                                                                nhận được nhiều lời mời phỏng vấn từ các
-                                                                công ty lớn.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/7.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Nguyễn Hạnh</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Tôi từng làm kế toán và sau đó chuyển sang Marketing. Sử
-                                                                dụng CV tự làm của mình, tôi đã nhận
-                                                                được phản hồi rất kém từ các NTD. Sau khi update CV của
-                                                                mình lên Rzcareer AI, tôi đã được
-                                                                feedback rất chi tiết và đã nhận được nhiều cuộc phỏng
-                                                                vấn.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <div class="row g-3">
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/8.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Trung Kiên</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình đã luôn nghĩ rằng CV dài 3 trang A4 của bản thân
-                                                                thật hoàn hảo. Ôi, nhưng mình đã sai
-                                                                lầm! Từ khi biết đến tình năng Rzcareer AI, mình đã có
-                                                                một CV ngắn gọn, chính xác, chuyên
-                                                                nghiệp và tự tin gửi cho các nhà tuyển dụng tiềm năng.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/9.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Anh Quân</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Trước kia, khi tôi đăng CV lên các trang tuyển dụng, tôi
-                                                                nhận được rất ít phản hồi, thậm chí
-                                                                là không có. Kể từ khi tôi bắt đầu đăng CV lên
-                                                                Rzcareer.vn, tôi đã nhận được ba phản hồi liên
-                                                                quan đến nghề nghiệp của mình chỉ trong 1 tuần.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <div class="row g-3">
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/10.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Thu Trang</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Rzcareer đã làm rất tốt và tôi chắc chắn giới thiệu app
-                                                                tìm việc này tới bạn bè của tôi. Nhân
-                                                                viên làm việc rất chuyên nghiệp. Tôi được hướng dẫn chi
-                                                                tiết từ A-Z, giao diện mới cũng giúp
-                                                                tôi thao tác nhanh chóng. Đồng thời, tỷ lệ phản hồi từ
-                                                                nhà tuyển dụng rất cao.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/1.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Thùy Dung</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình sử dụng app Rzcareer để tìm việc làm từ 3 năm trước
-                                                                và rất thích các tính năng của app
-                                                                như việc làm nhanh, tạo CV dạng PDF và ứng tuyển bằng
-                                                                điện thoại. NTD cũng liên hệ sớm, không
-                                                                bị tình trạng tin đăng ảo rồi không ai gọi như một số
-                                                                bên khác.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <div class="row g-3">
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/2.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Tài Linh</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Em mới ra trường, chưa biết cách làm CV như thế nào. May
-                                                                có một chị người quen bảo lên website
-                                                                Rzcareer.vn tạo CV, được hướng dẫn chi tiết. Trên
-                                                                Rzcareer còn có phần phân tích CV rất hữu
-                                                                ích, em có thể biết được mình đang thiếu thông tin gì và
-                                                                bổ sung.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/3.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Hồng Kim</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Tôi nghỉ việc để chăm sóc con cái cũng đã gần 2 năm. Nay
-                                                                ứng tuyển lại thực sự khó khăn, may
-                                                                nhờ app Rzcareer gợi ý các danh sách việc làm phù hợp mà
-                                                                tôi đã giành được 2 cuộc phỏng vấn.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="carousel-item">
-                                                <div class="row g-3">
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/4.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Quỳnh Trang</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Rzcareer giúp em tìm thấy công việc phù hợp với mình
-                                                                thông qua các đề xuất được cập nhật qua
-                                                                email mỗi ngày. Em đã tìm thấy nhiều cơ hội thực tập uy
-                                                                tín để xây dựng kinh nghiệm thực tế
-                                                                trong lĩnh vực Marketing mà mình yêu thích.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="bg-white shadow-sm p-2 p-sm-3 rounded-4 text-center">
-                                                            <img class="rounded-circle w-50 my-2" loading="lazy"
-                                                                src="/assets_livewire/teks/img/avatar/5.jpg"
-                                                                alt="avatar" />
-                                                            <div class="mb-1 text-dark fs-6 fw-bold">Phúc Bùi</div>
-                                                            <p class="text-muted text-body small mxh-100 p-1">
-                                                                <img class="d-block m-auto" loading="lazy"
-                                                                    src="/assets_livewire/img/2024/ic16.svg?v=234208153092"
-                                                                    alt="Rzcareer">
-                                                                Mình đã trải qua 2 tháng liên tục bị các NTD từ chối.
-                                                                Sau đó mình đã nhìn thấy quảng cáo của
-                                                                Rzcareer và cập nhật CV lên website. Nhờ tính năng phân
-                                                                tích CV mà mình biết CV cần khắc phục
-                                                                những lỗi gì và hiện đã có NTD liên hệ mời phỏng vấn.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carousel10" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carousel10" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
 
             <!-- <section class="bg-FAFAFA py-2 py-sm-3">
           <div class="container">
@@ -1630,6 +1134,5 @@
         </script>
     </body>
 
-    </html>
 
 </div>

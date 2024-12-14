@@ -150,7 +150,7 @@
 
 
 
-                    <a href="candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
+                    <a href="/candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
                         class="dropdown-toggle" data-toggle="dropdown">
                         <img class="lazy rounded-1"
                         src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"

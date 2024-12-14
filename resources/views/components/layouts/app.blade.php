@@ -6,9 +6,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets_livewire/logo-light.svg" type="image/x-icon">
+    <meta name="robots" content="index, follow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
+    <link rel="shortcut icon" href="/assets_livewire/img/icon.png" type="image/png">
+    <meta name="description" content="Rzcareer - Nền tảng tuyển dụng trực tuyến. Kênh thông tin tuyển dụng và việc làm kết nối nhà tuyển dụng với ứng viên dễ dàng.">
+    <meta name="twitter:image" content="{{asset('assets/banner.png')}}" /> <!-- Add your image path here -->
+    <meta property="og:image" content="{{asset('assets/banner.png')}}">
+    <meta property="og:image" itemprop="thumbnailUrl" content="{{asset('assets/banner.png')}}">
 </head>
 
 @livewireStyles
@@ -79,7 +84,7 @@
     background-image:  none !important;
 }
 #toast-container {
-    
+
     width: 23rem !important;
 
 }
@@ -170,7 +175,7 @@
 .toast-time {
     font-size: 12px;
 
-    
+
     color: #808080a3;
     font-weight: 100;
     font-size: .7rem;
@@ -198,7 +203,7 @@
         });
 
     </script>
-    
+
     {{ $slot }}
 
 {{-- pusher --}}
@@ -206,14 +211,14 @@
     <script>
         // Biến này được lấy từ backend Laravel, bạn cần khai báo trong view Blade
         const currentUserId = {{ auth()->id() }}; // Hoặc user ID khác được truyền vào
-    
+
         // Enable pusher logging - don't include this in production
         Pusher.logToConsole = true;
-    
+
         var pusher = new Pusher('bfb528bfe72756d0a69e', {
             cluster: 'ap1'
         });
-    
+
         var channel = pusher.subscribe('notification');
         channel.bind('test.notification', function(data) {
             console.log(data.user_id , currentUserId)
@@ -228,9 +233,9 @@
                         'Trúng tuyển': 'Ứng viên đã được trúng tuyển!',
                         'Không trúng tuyển': 'Ứng viên không trúng tuyển.'
                     };
-    
+
                     let statusMessage = statusMessages[data.status] || 'Trạng thái không xác định.';
-                    
+
                     toastr.info(
                         `<div class="toast-notification">
                             <div class="toast-header">
@@ -272,8 +277,8 @@
             }
         });
     </script>
-    
-    
+
+
 
 {{-- pusher --}}
 

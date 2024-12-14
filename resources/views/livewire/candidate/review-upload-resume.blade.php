@@ -6,8 +6,8 @@
                     <div>
                         <div>
 
-                            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-                            <!-- Please send your resume with cover letter to team@jobsgo.vn -->
+
+
                             <!DOCTYPE html>
                             <html lang="vi-VN">
 
@@ -394,10 +394,10 @@
                                                     thiện CV <div
                                                         style="position:absolute;top:-5px;right:0px;font-size:9px;color:white;background:#ff5722;border-radius: 9px;width: 16px;height: 16px;line-height: 16px;;text-align:center">
                                                         67</div></a>
-                                                <!--  <a href="candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
+                                                <!--  <a href="/candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
                                                 <!--"><i class="fa fa-exclamation-triangle"></i> Sửa lỗi CV-->
                                                 <!--</a>-->
-                                                <a href="candidate/pre-profile?tab=analyze"
+                                                <a href="/candidate/pre-profile?tab=analyze"
                                                     class="border-primary text-uppercase text-bold btn btn-default"><i
                                                         class="fa fa-line-chart"></i> Phân
                                                     tích CV</a>
@@ -1022,7 +1022,7 @@
 
                                                         showCvProfile();
                                                     });
-                                                    $('.btn-links a[href="candidate/pre-profile?tab=check-spell"]').click(function(e) {
+                                                    $('.btn-links a[href="/candidate/pre-profile?tab=check-spell"]').click(function(e) {
                                                         e.preventDefault();
                                                         $('.btn-links > a').removeClass('btn-primary');
                                                         $(this).addClass('btn-primary');
@@ -1030,7 +1030,7 @@
 
                                                         showCvProfile();
                                                     });
-                                                    $('.btn-links a[href="candidate/pre-profile?tab=analyze"]').click(function(e) {
+                                                    $('.btn-links a[href="/candidate/pre-profile?tab=analyze"]').click(function(e) {
                                                         e.preventDefault();
                                                         $('.btn-links > a').removeClass('btn-primary');
                                                         $(this).addClass('btn-primary');
@@ -1765,7 +1765,7 @@
                                                                     <div class="timeline-container">
 
                                                                             @foreach ($resume->advancedSkills as $skill)
-                                                                              
+
                                                                             <div class="timeline-row">
                                                                                 <div class="timeline-icon">
                                                                                     <div class="bg-info">
@@ -1801,7 +1801,7 @@
                                                                                                             class="icon-trash position-left"></i>
                                                                                                         Xóa
                                                                                                     </button>
-    
+
                                                                                                 </div>
                                                                                                 <a
                                                                                                     class="heading-elements-toggle"><i
@@ -1812,17 +1812,17 @@
                                                                                                     <div>
                                                                                                         <div
                                                                                                             class="panel-heading-bk pb-5">
-                                                                                                          
+
                                                                                                             <div
                                                                                                                 class="text-muted mb-0">
                                                                                                                 <strong>Thời
                                                                                                                     gian:</strong>
                                                                                                                     {{ $skill->level }} năm
                                                                                                                     kinh nghiệm
-    
+
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                       
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -6036,7 +6036,7 @@
                                         <div class="dropdown">
                                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownExperience" data-toggle="dropdown" aria-expanded="false">
                                                 {{ $newExperience ? $newExperience . ' năm' : 'Chọn số năm' }}
-                                               
+
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownExperience" style="max-height: 200px; overflow-y: auto;">
                                                 <li><a href="#" wire:click.prevent="$set('newExperience', '')">Chọn số năm</a></li>
@@ -6055,7 +6055,7 @@
                                         <p class="help-block help-block-error"></p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -6067,7 +6067,7 @@
                             </div>
                         </div>
 
-                
+
 
                         <div class="form-group">
                             <input type="hidden" class="form-control" id="id" wire:model="resumeId"> <!-- Resume ID nếu cần -->
@@ -7246,13 +7246,13 @@
                                                             <div class="panel no-border-top no-border-radius-top">
                                                                 <ul class="navigation">
                                                                     <li class="navigation-header">Cá nhân</li>
-                                                                    <li><a href="candidate/profile"><i
+                                                                    <li><a href="/candidate/profile"><i
                                                                                 class="icon-file-text"></i> Hồ sơ xin
                                                                             việc</a></li>
-                                                                    <li><a href="candidate/document-attachment"><i
+                                                                    <li><a href="/candidate/document-attachment"><i
                                                                                 class="icon-file-media"></i> Đính kèm
                                                                             CV/chứng chỉ</a></li>
-                                                                    <li><a href="candidate/import-linkedin-data"><i
+                                                                    <li><a href="/candidate/import-linkedin-data"><i
                                                                                 class="icon-linkedin"></i>Nhập thông tin
                                                                             từ LinkedIn</a></li>
                                                                     <li
@@ -7263,15 +7263,15 @@
                                                                                 class="badge badge-danger">Mới!</span></a>
                                                                     </li>
                                                                     <li class="navigation-divider"></li>
-                                                                    <li><a href="candidate/jobs-applied"
+                                                                    <li><a href="/candidate/jobs-applied"
                                                                             title="Danh sách việc làm đã ứng tuyển"><i
                                                                                 class="icon-stack-check"></i> Việc làm
                                                                             đã ứng tuyển</a></li>
-                                                                    <li><a href="candidate/jobs-saved"
+                                                                    <li><a href="/candidate/jobs-saved"
                                                                             title="Danh sách việc làm đã lưu"><i
                                                                                 class="icon-stack-star"></i> Việc làm đã
                                                                             lưu</a></li>
-                                                                    <li><a href="candidate/jobs-matching"
+                                                                    <li><a href="/candidate/jobs-matching"
                                                                             title="Danh sách việc làm phù hợp"><i
                                                                                 class="icon-stack4"></i> Việc làm phù
                                                                             hợp</a></li>
@@ -7415,7 +7415,7 @@
 
                                     })
                                 </script>
-                            
+
                                 <script>
                                     jQuery(function($) {
                                         jQuery('#w0').yiiActiveForm([{
