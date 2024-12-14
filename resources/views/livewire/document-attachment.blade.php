@@ -708,9 +708,9 @@
         })
     </script>
     <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+    {{-- <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
         href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
-        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a> --}}
 
     <script>
         $(function() {

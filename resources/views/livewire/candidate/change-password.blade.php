@@ -120,27 +120,28 @@
                                         <!-- Profile info -->
                                         <div class="panel panel-flat">
 
-
                                             <div class="panel-body">
                                                 <form wire:submit.prevent="changePassword" class="form-horizontal">
                                                     <div class="form-group field-changepasswordform-new_password required">
                                                         <label class="control-label col-sm-4 text-right" for="new_password">Mật khẩu mới</label>
                                                         <div class="col-sm-4">
                                                             <input type="password" id="new_password" class="form-control"
-                                                                wire:model.defer="new_password"
-                                                                placeholder="Nhập mật khẩu mới" aria-required="true">
-
-                                                            <p class="help-block help-block-error"></p>
+                                                                   wire:model.defer="new_password"
+                                                                   placeholder="Nhập mật khẩu mới" aria-required="true">
+                                                            @if(isset($error['new_password']))
+                                                                <span class="text-danger">{{ $error['new_password'] }}</span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="form-group field-changepasswordform-confirm_password required">
                                                         <label class="control-label col-sm-4 text-right" for="confirm_password">Xác nhận mật khẩu</label>
                                                         <div class="col-sm-4">
                                                             <input type="password" id="confirm_password" class="form-control"
-                                                                wire:model.defer="confirm_password"
-                                                                placeholder="Nhập lại mật khẩu mới" aria-required="true">
-
-                                                            <p class="help-block help-block-error"></p>
+                                                                   wire:model.defer="confirm_password"
+                                                                   placeholder="Nhập lại mật khẩu mới" aria-required="true">
+                                                            @if(isset($error['confirm_password']))
+                                                                <span class="text-danger">{{ $error['confirm_password'] }}</span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -152,7 +153,6 @@
                                                         </div>
                                                     </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                         <!-- /profile info -->

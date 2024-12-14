@@ -312,7 +312,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                     <style>
                                         .filter-container {
     margin: 20px 0;
@@ -377,12 +377,12 @@
     transform: rotate(45deg);
 }
                                     </style>
-                                
+
                                 <!-- Cards layout -->
                                 <div class=" panel panel-white ">
 
-                                   
-                                    
+
+
                                     <ul class="media-list">
                                         @foreach ($appliedJobs as $job)
                                             @php
@@ -399,7 +399,7 @@
                                                              onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'">
                                                     </a>
                                                 </div>
-                                    
+
                                                 <div class="media-body">
                                                     <h6 class="media-heading text-semibold"
                                                         style="display: flex; justify-content: space-between">
@@ -415,7 +415,7 @@
                                                             {{ $job->created_at->format('d/m/Y') }}
                                                         </span>
                                                     </h6>
-                                    
+
                                                     <ul class="list-inline list-inline-separate text-muted mb-10">
                                                         <li title="Địa điểm làm việc">
                                                             <span class="clamp-text-place">
@@ -446,7 +446,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                    
+
                                                 <div class="media-right text-nowrap" title="Trạng thái">
                                                     <span class="label bg-primary">{{ $job->status }}</span>
                                                     <a wire:click="cancelApplication({{ $job->id }})"
@@ -463,7 +463,7 @@
                                             </li>
                                         @endforeach
                                     </ul>
-                                    
+
 
 
                                 <div class="text-center pb-20 "> </div>
@@ -868,9 +868,9 @@
     })
 </script>
 <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-<a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+{{-- <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
     href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
-    class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+    class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a> --}}
 
 <script>
     $(function() {

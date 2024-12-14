@@ -2007,14 +2007,14 @@
 
                             })
                         </script>
-                        <script src="/event/min.js?v=1727349128"></script>
+                        {{-- <script src="/event/min.js?v=1727349128"></script>
                         <script src="/assets/2878b065/yii.js"></script>
                         <script src="/assets/2878b065/yii.validation.js"></script>
                         <script src="/assets/141550af/js/bootstrap-datepicker.min.js"></script>
                         <script src="/assets/141550af/js/datepicker-kv.min.js"></script>
                         <script src="/assets/141550af/js/locales/bootstrap-datepicker.vi.min.js"></script>
                         <script src="/assets/dc7f7faf/js/kv-widgets.min.js"></script>
-                        <script src="/assets/2878b065/yii.activeForm.js"></script>
+                        <script src="/assets/2878b065/yii.activeForm.js"></script> --}}
                         <script>
                             jQuery(function($) {
                                 jQuery.fn.kvDatepicker.dates = {};
@@ -2139,7 +2139,7 @@
                                     }
                                 }], []);
                             });
-                        </script><a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" href="https://jobsgo.vn/candidate/detail?v=1727349128" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+                        </script>
 
                         <script>
                             $(function() {

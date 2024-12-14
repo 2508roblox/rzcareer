@@ -1,7 +1,6 @@
 <div>
 
     <head>
-        <link rel="canonical" href="https://employer.RZcareer.vn/" />
         <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
@@ -93,8 +92,8 @@
                     </div>
                     <div class="hidden-xs hidden-sm col-md-6 text-right">
                         <div class="screen-box">
-                            <div class="item"><img src="/employer_assets/media/img/screen-3.jpg" class="lazy"
-                                    data-src="/employer_assets/media/img/screen-3.jpg" alt=""></div>
+                            <div class="item"><img src="/employer_assets/banner.png" class="lazy"
+                                    data-src="/employer_assets/banner.png" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -251,6 +250,15 @@
 
 
         <style>
+            .overlay:before,
+            .sky-bg {
+                background: #75cbe7;
+                background: -webkit-gradient(linear, left top, left bottom, from(#75cbe7), to(#007CB9));
+                background: linear-gradient(to bottom, #1b005c 0%, #007CB9 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#75cbe7', endColorstr='#007CB9', GradientType=0);
+                color: #fff;
+            }
+
             a .img-responsive {
                 width: 100%;
             }

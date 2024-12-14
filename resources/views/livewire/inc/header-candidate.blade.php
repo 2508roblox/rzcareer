@@ -35,13 +35,6 @@
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-menu7"></i></a>
                 </li>
             </ul>
-            <div class="visible-xs"
-                style="position: absolute;right: 70px;top: 17px;padding: 4px 6px;border-radius: 4px;background-color: #ff5c35; padding: 4px 20px; border-radius: 3px; line-height: 22px;">
-                <a href="/site/download?utm_source=web_ntv&amp;utm_medium=top_menu_tai_app" title="Tải App"
-                    target="_blank" style="color: #fff !important;"><i class="glyphicon glyphicon-download-alt"
-                        style="color: #fff !important;"></i> Tải
-                    App</a>
-            </div>
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
