@@ -16,6 +16,7 @@ use App\Livewire\Candidate\JobsSaved;
 use App\Livewire\Candidate\ManageResume;
 use App\Livewire\Candidate\Review;
 use App\Livewire\Candidate\ReviewUploadResume;
+use App\Livewire\Chat\Index as ChatIndex;
 use App\Livewire\CongTy;
 use App\Livewire\Cron;
 use App\Livewire\DanhSachViecLam;
@@ -41,7 +42,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(CheckEmployer::class)->group(function () {
-    Route::get('/', action: HomeIndex::class)->name('index');
+    Route::get('/', HomeIndex::class)->name('index');
     Route::get('/viec-lam/{slug}', ViecLam::class);
     Route::get('/tuyen-dung/{slug}', TuyenDung::class);
     Route::get('/cong-ty', CongTy::class);
@@ -83,6 +84,10 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google/callback', [Login::class, 'handleGoogleCallback']);
 });
 
+
+
 Route::get('/api/invoice/{invoice_code}', [Checkpayment::class, 'checkInvoice'])->name('checkinvoice');
 
-
+Route::middleware(CheckEmployer::class)->group(function () {
+    Route::get('/chat', ChatIndex::class)->name('chat.index');
+});

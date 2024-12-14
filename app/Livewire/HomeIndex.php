@@ -75,7 +75,7 @@ class HomeIndex extends Component
         } else {
             $this->suggestedJobs = collect(); // Nếu chưa đăng nhập, gán giá trị rỗng
         }
-        
+
     }
 
     public function searchJobs()
