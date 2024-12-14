@@ -10,7 +10,7 @@ use Filament\Notifications\Notification;
 
 class JobsSaved extends Component
 {
-    // use LivewireAlert; // Use the LivewireAlert trait for alert functionality
+    use LivewireAlert; // Use the LivewireAlert trait for alert functionality
 
     public $savedJobs; // Variable to hold saved jobs
     public $reason;
