@@ -22,14 +22,20 @@
                         <div class="textwidget">
                             <div class="textwidget">
                                 <ul class="footer-navigation list-unstyled">
-                                    <li>TPHCM</li>
-                                    <li>Hà Nội</li>
-                                    <li>Đà Nẵng</li>
-                                    <li>Cần Thơ</li>
-                                    <li>Bình Dương</li>
-                                    <li>Hải Phòng</li>
-                                    <li>Đồng Nai</li>
-                                    <li>Quảng Ninh</li>
+                                    @foreach(
+                                        App\Models\CommonCity::whereHas('locations.jobPosts')
+                                        ->withCount(['locations as job_posts_count' => function ($query) {
+                                        $query->whereHas('jobPosts'); // Đếm số lượng job_posts qua locations
+                                        }])
+                                        ->orderBy('job_posts_count', 'desc')
+                                        ->get() as $city)
+                                        <li>
+                                            <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => $city->name, 'career_id' => '']) }}"
+                                                title="{{$city->name}}">
+                                                <div class="txt text-capitalize">{{ $city->name }}</div>
+                                            </a>
+                                        </li>
+                                        @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -43,14 +49,24 @@
                             nghề</div>
                         <div class="textwidget">
                             <ul class="footer-navigation list-unstyled">
-                                <li>Tài Chính/Ngân Hàng</li>
-                                <li>Kế Toán</li>
-                                <li>Hành Chính Nhân Sự</li>
-                                <li>Kinh Doanh</li>
-                                <li>Marketing</li>
-                                <li>Xây Dựng</li>
-                                <li>Tài Xế</li>
-                                <li>Xem tất cả »</li>
+                                @foreach(
+                                    App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
+                                    ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
+                                    ->limit(5) // Limit to top 5 careers
+                                    ->get() as $career)
+                                    <li>
+                                        <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => $career->id]) }}"
+                                            title="{{$career->name}}">
+                                            <div class="txt text-capitalize">{{$career->name}}</div>
+                                        </a>
+                                    </li>
+                                @endforeach
+                                <li>
+                                    <a href="{{ route('danh-sach-viec-lam', ['keyword' => '', 'location' => '', 'career_id' => '']) }}"
+                                        title="Xem tất cả ngành nghề">
+                                        <div class="txt text-capitalize">Xem tất cả</div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -62,12 +78,17 @@
                             danh</div>
                         <div class="textwidget">
                             <ul class="footer-navigation list-unstyled">
-                                <li>Thực Tập Sinh</li>
-                                <li>Trợ Lý</li>
-                                <li>Nhân Viên Văn Phòng</li>
-                                <li>Trưởng Phòng</li>
-                                <li>Giám đốc</li>
-                                <li>Xem tất cả »</li>
+                                @foreach(
+                                    App\Models\jobPost::select('position') // Count related job posts
+                                    ->distinct()
+                                    ->get() as $position)
+                                    <li>
+                                        <a href="{{ route('danh-sach-viec-lam', ['keyword' => $position->position, 'location' => '', 'career_id' => '']) }}"
+                                            title="{{$position->position}}">
+                                            <div class="txt text-capitalize">{{$position->position}}</div>
+                                        </a>
+                                    </li>
+                                    @endforeach
                             </ul>
                         </div>
                     </div>
@@ -79,10 +100,17 @@
                         </div>
                         <div class="textwidget">
                             <ul class="footer-navigation list-unstyled">
-                                <li>Part-time</li>
-                                <li>Online</li>
-                                <li>Thời vụ</li>
-                                <li>Remote</li>
+
+                                @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
+                                as $jobType_item)
+
+                                <li>
+                                    <a href="{{ route('danh-sach-viec-lam', ['keyword' => $jobType_item->job_type, 'location' => '', 'career_id' => '']) }}"
+                                        title="{{$jobType_item->job_type}}">
+                                        <div class="txt text-capitalize">{{$jobType_item->job_type}}</div>
+                                    </a>
+                                </li>
+                                @endforeach
                             </ul>
                             <ul class="footer-social visible-xs d-block d-sm-none list-inline mb-1">
                                 <li class="list-inline-item"><i class='bx bx-xs bxl-facebook'></i></li>

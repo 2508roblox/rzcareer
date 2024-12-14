@@ -159,34 +159,40 @@
 
                                             </a>
 
-                        <div class="panel panel-body">
-                            <div class="form-group">
-                                <label for="full_name">Họ và tên</label>
-                                <input type="text" id="full_name" wire:model="full_name" class="form-control">
-                                @error('full_name') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+                                            <div class="panel panel-body">
 
 
+                                                <div class="form-group">
+                                                    <label for="full_name">Họ và tên</label>
+                                                    <input type="text" id="full_name" wire:model="full_name" class="form-control">
+                                                    @if(isset($error['full_name'])) <span class="text-danger">{{ $error['full_name'] }}</span> @endif
+                                                </div>
 
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" wire:model="email" class="form-control">
-                                @error('email') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" id="email" wire:model="email" class="form-control">
+                                                    @if(isset($error['email'])) <span class="text-danger">{{ $error['email'] }}</span> @endif
+                                                </div>
 
-                            <div class="form-group">
-                                <label for="password">Mật khẩu</label>
-                                <input type="password" id="password" wire:model="password" class="form-control">
-                                @error('password') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
+                                                <div class="form-group">
+                                                    <label for="password">Mật khẩu</label>
+                                                    <input type="password" id="password" wire:model="password" class="form-control">
+                                                    @if(isset($error['password'])) <span class="text-danger">{{ $error['password'] }}</span> @endif
+                                                </div>
 
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
-                            </div>
+                                                <div class="form-group">
+                                                    <label for="confirm_password">Xác nhận mật khẩu</label>
+                                                    <input type="password" id="confirm_password" wire:model="confirm_password" class="form-control">
+                                                    @if(isset($error['password'])) <span class="text-danger">{{ $error['password'] }}</span> @endif
+                                                </div>
 
-                            <div class="content-divider text-muted form-group"><span>Bạn đã có tài khoản?</span></div>
-                            <a href="/site/login" class="btn btn-default btn-block">Đăng nhập</a>
-                        </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+                                                </div>
+
+                                                <div class="content-divider text-muted form-group"><span>Bạn đã có tài khoản?</span></div>
+                                                <a href="/site/login" class="btn btn-default btn-block">Đăng nhập</a>
+                                            </div>
                     </form>
 
                     <!-- The popup modal -->
