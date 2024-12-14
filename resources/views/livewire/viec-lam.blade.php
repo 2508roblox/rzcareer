@@ -53,7 +53,7 @@
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
                     <meta name="csrf-token"
                         content="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
-                    <title>{{$jobPost->job_name}}</title>
+                    <title>{{$jobPost->job_name}} - Rzcareer</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"

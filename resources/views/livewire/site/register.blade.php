@@ -1,16 +1,9 @@
 <div>
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
-    <!DOCTYPE html>
-    <html lang="vi-VN">
+
 
     <head>
-        <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-        <meta name="csrf-token" content="m6GRiXQWcMY8qu3uDTSc9bDmAMOWGrPBm51IfnaZQi-olObMFU44nEXTgah3VeWM_LdtgtEj5Y3xr38nAagYdw==">
-        <title>Đăng nhập hệ thống - Dành cho người tìm việc - RZCareer</title>
+        <title>Đăng ký tài khoản - RZCareer</title>
 
         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -20,9 +13,9 @@
         <link href="/assets_livewire/bolt/assets/css/colors.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/extras/animate.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-        <link href="https://jobsgo.vn/cv_template/dist/css/introjs.css?v=2342081531001" rel="stylesheet" type="text/css">
+        <link href="/assets_livewire/cv_template/dist/css/introjs.css?v=2342081531001" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
-        <link href="https://jobsgo.vn/css/v2.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
+        <link href="/assets_livewire/css/v2.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
 
 
 
@@ -62,7 +55,7 @@
 
     </head>
 
-    <body class=" access " style="background-color: #050515">
+    <body class=" access " style="background-image: url(/assets_livewire/banner.png); background-size: cover; ">
         <!-- Google Tag Manager (noscript) -->
         <!--Start of Tawk.to Script--> <!--<div id="load-tawkto"><img src="https://jobsgo.vn/img/chat_icon.png"></div>--> <!-- Messenger Plugin chat Code -->
         <div id="fb-root"></div> <!-- Your Plugin chat code -->
@@ -167,7 +160,6 @@
                                             </a>
 
                         <div class="panel panel-body">
-                            <div class="content-divider text-uppercase text-muted form-group"><span>Đăng Ký Với</span></div>
                             <div class="form-group">
                                 <label for="full_name">Họ và tên</label>
                                 <input type="text" id="full_name" wire:model="full_name" class="form-control">
@@ -280,7 +272,6 @@
 
     </body>
 
-    </html>
 
 
 </div>

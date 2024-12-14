@@ -79,17 +79,17 @@ class CompanyJobPostsWidget extends BaseWidget
 
             Stat::make('Số lượng ứng tuyển', $applicationCount)
                 ->description('Tổng số ứng tuyển vào các bài đăng của bạn')
-                ->icon('heroicon-o-document')
+                ->icon('heroicon-o-user-plus')
                 ->color('success'),
 
             Stat::make('Số buổi phỏng vấn', $interviewCount)
                 ->description('Tổng số buổi phỏng vấn đã lên lịch')
-                ->icon('heroicon-o-document')
+                ->icon('heroicon-o-calendar')
                 ->color('primary'),
 
             Stat::make('Số hóa đơn', $invoiceCount)
                 ->description('Tổng số hóa đơn đã phát hành')
-                ->icon('heroicon-o-document')
+                ->icon('heroicon-o-receipt-percent')
                 ->color('warning'),
 
             Stat::make('Lịch sử thanh toán', $paymentHistoryCount)
@@ -99,12 +99,12 @@ class CompanyJobPostsWidget extends BaseWidget
 
             Stat::make('Dịch vụ đã mua', $purchasedServiceCount)
                 ->description('Tổng số dịch vụ đã mua')
-                ->icon('heroicon-o-credit-card')
+                ->icon('heroicon-o-shopping-cart')
                 ->color('success'),
 
             Stat::make('Tổng tiền hóa đơn', number_format($totalInvoiceAmount, 0, ',', '.').' VNĐ')
                 ->description('Tổng số tiền của các hóa đơn đã tạo')
-                ->icon('heroicon-o-credit-card')
+                ->icon('heroicon-o-banknotes')
                 ->color('success'),
 
             Stat::make('Tổng số lượt xem', $totalViews)

@@ -37,12 +37,12 @@ use App\Livewire\TuyenDung;
 use App\Livewire\ViecLam;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
-
-
+use App\Livewire\JobSearchModal;
+use App\Http\Controllers\ResetPasswordController;
 
 Route::middleware(CheckEmployer::class)->group(function () {
     Route::get('/', action: HomeIndex::class)->name('index');
-    Route::get('/viec-lam/{slug}', ViecLam::class);
+    Route::get('/viec-lam/{slug}', ViecLam::class)->name('viec-lam');
     Route::get('/tuyen-dung/{slug}', TuyenDung::class);
     Route::get('/cong-ty', CongTy::class);
     Route::get('/danh-sach-viec-lam', DanhSachViecLam::class)->name('danh-sach-viec-lam');
@@ -52,17 +52,18 @@ Route::middleware(CheckEmployer::class)->group(function () {
 //     Route::get('/cong-ty', CongTy::class);
 // });
 Route::middleware(CheckLoginCandidate::class)->group(function () {
-    Route::get('/candidate/dashboard', Dashboard::class);
-    Route::get('/candidate/manage-resume', ManageResume::class);
+    Route::get('/candidate/dashboard', Dashboard::class)->name('candidate.dashboard');
+    // Route::get('/candidate/manage-resume', ManageResume::class);
     Route::get('/candidate/import-cv-data', ImportCvData::class);
     Route::get('/candidate/review', Review::class)->name('candidate.show');
     Route::get('/candidate/review{resume_id}', ReviewUploadResume::class)->name('candidate.review');
 
-    Route::get('/candidate/cv-go', CvGo::class);
+    // Route::get('/candidate/cv-go', CvGo::class);
     Route::get('/candidate/change-password', ChangePassword::class);
     Route::get('/candidate/jobs-applied', JobsApplied::class);
     Route::get('/candidate/employers-viewed', EmployersViewed::class);
-    Route::get('/candidate/document-attachment', DocumentAttachment::class);
+    // Route::get('/candidate/document-attachment', DocumentAttachment::class);
+    Route::get('/candidate/jobs-saved', JobsSaved::class);
 });
 Route::middleware(CheckLoginEmployer::class)->group(function () {
     Route::get('/employer', Homepage::class);
@@ -74,9 +75,16 @@ Route::middleware(CheckLoginEmployer::class)->group(function () {
 Route::middleware(CheckLogin::class)->group(function () {
     Route::get('/employer/login', EmployerLogin::class);
     Route::get('/site/register', Register::class);
-    Route::get('/site/login', Login::class);
+    Route::get('/site/login', Login::class)->name('site.login');
 });
 
+Route::get('/site/request-password-reset', RequestPasswordReset::class)->name('request-password-reset');
+
+Route::get('/reset-password/{token}', function ($token) {
+    return view('reset-password', ['token' => $token]);
+})->name('password.reset');
+
+Route::post('/reset-password', [ResetPasswordController::class, 'update'])->name('password.update');
 
 Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/auth/google', [Login::class, 'redirectToProvider'])->name('google.login');

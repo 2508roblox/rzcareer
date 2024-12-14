@@ -99,7 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-10">
-        
+
                 </div>
                 <div class="col-12 col-sm-2">
                     <ul class="footer-social text-center hidden-xs d-none d-sm-block list-inline mb-1">
@@ -113,30 +113,7 @@
                 <div class="col-sm-10">
                     <p class="pull-left small text-body">  © 2024 Công ty Cổ phần Rzcareer. All Rights Reserved.</p>
                 </div>
-                <div class="col-sm-2">
-                    <div class="text-center">
-                        <a target="_blank" rel="nofollow" >
 
-                            <img class="lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                data-src="/assets_livewire/teks/img/online-gov.svg" alt="Rzcareer" width="100"
-                                height="38">
-
-                        </a>
-                        <a target="_blank" rel="nofollow"
-                           
-                         
-                            title="DMCA.com Protection Status" class="dmca-badge">
-
-                            <img class="lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                data-src="/assets_livewire/teks/img/dmca.svg" alt="Rzcareer" width="100"
-                                height="21">
-
-                        </a>
-                        <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

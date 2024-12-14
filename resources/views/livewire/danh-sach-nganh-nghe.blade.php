@@ -118,7 +118,7 @@
                                 itemprop="item"> <span itemprop="name"> RZCareer</span> </a>
                             <meta itemprop="position" content="1">
                         </li>
-                        <li class="active"><span class="text-muted" style="color:#888!important">Danh sách
+                        <li class="active"><span class="text-muted" style="color:#888!important">/ Danh sách
                                 ngành
                                 nghề</span></li>
                     </ol>
@@ -242,7 +242,7 @@
 
         @livewire('employer.inc.footer')
 
- 
+
         <style>
             .zalo-chat-widget {
                 left: initial !important;
@@ -253,7 +253,7 @@
                 height: 60px !important;
             }
         </style>
- 
+
 
 
 
@@ -313,7 +313,7 @@
                 </div>
             </div>
         </div>
-  
+
         <script>
             window.addEventListener('load', function() {
                 $(function() {

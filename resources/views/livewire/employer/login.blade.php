@@ -1,6 +1,6 @@
 <div>
 
-  <!-- This website is like a Rocket, isn't it? Performance optimized by RZcareer Team -->
+
   <!-- Please send your resume with cover letter to team@RZcareer.vn -->
   <!DOCTYPE html>
   <html lang="vi-VN" ng-app="angularBolt">

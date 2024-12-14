@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Auth;
 class JobPostResource extends Resource
 {
     protected static ?string $model = JobPost::class;
-    protected static ?string $navigationIcon = 'heroicon-o-paper-airplane'; // Thay đổi biểu tượng
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $navigationGroup = 'Quản lý công ty';
 
     public static function getPluralModelLabel(): string

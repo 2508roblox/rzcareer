@@ -21,7 +21,7 @@ class CommonCityResource extends Resource
         return 'Các thành phố chung'; // Nhãn số nhiều cho mô hình
     }
 
-    protected static ?string $navigationIcon = 'heroicon-o-map';
+    protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
     protected static ?string $navigationGroup = 'Dữ liệu chung';
 
     public static function form(Form $form): Form

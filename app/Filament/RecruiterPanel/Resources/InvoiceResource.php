@@ -18,7 +18,7 @@ class InvoiceResource extends Resource
 {
     protected static ?string $model = Invoice::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document'; // Thay đổi biểu tượng
+    protected static ?string $navigationIcon = 'heroicon-o-receipt-percent';
     protected static ?string $navigationGroup = 'Quản lý dịch vụ';
 
     public static function getPluralModelLabel(): string
@@ -71,8 +71,10 @@ class InvoiceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('invoice_code')
+                    ->searchable()
+                    ->sortable()
                     ->label('Mã hóa đơn'), // Tiêu đề bằng tiếng Việt
-                    Tables\Columns\TextColumn::make('total_price')
+                Tables\Columns\TextColumn::make('total_price')
                     ->money('vnd') // Đổi từ 'usd' thành 'vnd'
                     ->label('Tổng giá'), // Tiêu đề bằng tiếng Việt
 

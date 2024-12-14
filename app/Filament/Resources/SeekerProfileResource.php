@@ -36,17 +36,17 @@ class SeekerProfileResource extends Resource
                             ->preload()
                             ->searchable()
                             ->label('Người dùng'), // Dịch sang tiếng Việt
-    
+
                         Forms\Components\TextInput::make('phone')
                             ->tel()
                             ->required()
                             ->maxLength(15)
                             ->label('Số điện thoại'), // Dịch sang tiếng Việt
-    
+
                         Forms\Components\DatePicker::make('birthday')
                             ->required()
                             ->label('Ngày sinh'), // Dịch sang tiếng Việt
-    
+
                         Forms\Components\Select::make('gender')
                             ->required()
                             ->options([
@@ -55,12 +55,12 @@ class SeekerProfileResource extends Resource
                                 'O' => 'Khác', // Dịch giới tính sang tiếng Việt
                             ])
                             ->label('Giới tính'), // Dịch sang tiếng Việt
-    
+
                         Forms\Components\Textarea::make('introduction')
                             ->maxLength(500)
                             ->label('Giới thiệu bản thân'), // Thêm trường Giới thiệu bản thân
                     ]),
-    
+
                 Forms\Components\Section::make('Địa chỉ và hôn nhân') // Section cho địa chỉ và tình trạng hôn nhân
                     ->schema([
                         Forms\Components\Select::make('location_id')
@@ -69,11 +69,11 @@ class SeekerProfileResource extends Resource
                             ->preload()
                             ->searchable()
                             ->label('Địa chỉ'), // Dịch sang tiếng Việt
-    
+
                         Forms\Components\TextInput::make('current_residence')
                             ->required()
                             ->label('Chỗ ở hiện tại'), // Thêm trường Chỗ ở hiện tại
-    
+
                         Forms\Components\Select::make('marital_status')
                             ->required()
                             ->options([
@@ -84,27 +84,27 @@ class SeekerProfileResource extends Resource
                             ])
                             ->label('Tình trạng hôn nhân'), // Dịch sang tiếng Việt
                     ]),
-    
+
                 Forms\Components\Section::make('Công việc và Bằng cấp') // Section cho công việc và bằng cấp
                     ->schema([
                         Forms\Components\TextInput::make('working_province')
                             ->required()
                             ->label('Tỉnh/thành làm việc'), // Thêm trường Tỉnh/thành làm việc
-    
+
                         Forms\Components\TextInput::make('degree')
                             ->required()
                             ->label('Bằng cấp'), // Thêm trường Bằng cấp
-    
+
                         Forms\Components\TextInput::make('current_salary')
                             ->numeric()
                             ->label('Mức lương hiện tại'), // Thêm trường Mức lương hiện tại
-    
+
                         Forms\Components\Fieldset::make('Mức lương mong muốn') // Gộp hai trường mức lương mong muốn trong một fieldset
                             ->schema([
                                 Forms\Components\TextInput::make('expected_salary_min')
                                     ->numeric()
                                     ->label('Mức lương mong muốn tối thiểu'), // Thêm trường Mức lương mong muốn tối thiểu
-    
+
                                 Forms\Components\TextInput::make('expected_salary_max')
                                     ->numeric()
                                     ->label('Mức lương mong muốn tối đa'), // Thêm trường Mức lương mong muốn tối đa
@@ -112,17 +112,17 @@ class SeekerProfileResource extends Resource
                     ]),
             ]);
     }
-    
+
 
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user_id')
+                Tables\Columns\TextColumn::make('user.email')
                     ->numeric()
                     ->sortable()
-                    ->label('ID Người dùng'),
+                    ->label('Người dùng'),
 
                 Tables\Columns\TextColumn::make('location_id')
                     ->numeric()

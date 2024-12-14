@@ -6,7 +6,6 @@
 
 
                     <head>
-                        <meta name="csrf-token" content="{{ csrf_token() }}">
 
                         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2"
                             as="font" type="font/woff2" crossorigin>
@@ -23,24 +22,8 @@
                         <link rel="preload" href="/assets_livewire/teks/css/fonts/boxicons.woff2" as="font"
                             type="font/woff2" crossorigin>
                         <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
-                        <meta name='dmca-site-verification' content='SW92M2l3NDFsN0RiZ2FZSTRqMjM1dz090' />
                         <!--<link rel="amphtml" href=""/>-->
-                        <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-                        <meta http-equiv="content-language" content="vi" />
-                        <link rel="alternate" href="https://Rzcareer.vn/cong-ty-bao-hiem.html" hreflang="x-default"
-                            hreflang="vi" />
-                        <link rel="canonical" href="https://Rzcareer.vn/cong-ty-bao-hiem.html" />
-
-
-                        <meta charset="UTF-8">
-                        <meta name="viewport"
-                            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-                        <meta name="HandheldFriendly" content="true" />
-                        <meta name="author" content="Rzcareer.,JSC" />
-                        <meta name="csrf-param" content="_csrf-Rzcareer-candidate">
-                        <meta name="csrf-token"
-                            content="1xkHd6mgw9FcszdNoxtCaZ7SwHYNwjJV167ivC3YPMKPaj4h6uO6hx7hXSjLSgkO9LqVLmmnARjl_4SKGqwElA==">
-                        <title>Danh sách công ty | Rzcareer</title>
+                        <title>Danh sách công ty - Rzcareer</title>
                         <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                             href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                         <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
@@ -159,32 +142,35 @@
                                     <div class="row no-mrg-bk">
                                         <div class="col-sm-3">
                                             <input style="height: 52px;" type="text" id="employerName"
-                                                class="form-control mrg-bot-10"  name="companyName"  placeholder="Tên công ty...">
+                                                class="form-control mrg-bot-10" name="companyName"
+                                                placeholder="Tên công ty...">
                                         </div>
                                         <div class="col-sm-3">
-                                            <select id="employerName" name="careerName" class="select2 form-control" >
+                                            <select id="employerName" name="careerName" class="select2 form-control">
                                                 <option value="">Chọn ngành nghề</option>
-                                                @foreach($topCareers as $career)
+                                                @foreach ($topCareers as $career)
                                                     <option value="{{ $career->name }}">{{ $career->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        
+
                                         <div class="col-sm-3">
-                                            <select id="employerPlace" class="select2 form-control" name="companyLocation" >
+                                            <select id="employerPlace" class="select2 form-control"
+                                                name="companyLocation">
                                                 <option value="">Chọn địa điểm</option>
-                                                @foreach($locations as $location)
+                                                @foreach ($locations as $location)
                                                     <option value="{{ $location->id }}">
-                                                        {{ $location->address }} - {{ $location->district->name ?? '' }}, {{ $location->city->name ?? '' }}
+                                                        {{ $location->address }} -
+                                                        {{ $location->district->name ?? '' }},
+                                                        {{ $location->city->name ?? '' }}
                                                     </option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        
+
 
                                         <div class="col-sm-3 col-md-2">
-                                            <button   type="submit"
-                                                class="btn btn-warning btn-block text-uppercase"><i
+                                            <button type="submit" class="btn btn-warning btn-block text-uppercase"><i
                                                     class="fa fa-binoculars"></i> Tìm
                                                 công ty</button>
                                         </div>
@@ -196,37 +182,37 @@
                         <script defer src="/assets_livewirelib/owl-carousel/dist/owl.carousel.min.js"></script>
                         <script>
                             window.addEventListener("load", function() {
-                $(document).ready(function($) {
-                    var owl = $('.owl-carousel');
-                    owl.owlCarousel({
-                        items: 8,
-                        margin: 15,
-                        stagePadding: 40,
-                        loop: true,
-                        nav: true,
-                        navText: ["<i class='bx bx-chevron-left'></i>",
-                            "<i class='bx bx-chevron-right'></i>"
-                        ],
-                        responsive: {
-                            0: {
-                                items: 2, // Adjust the number of items for mobile view
-                                margin: 10 // Adjust the margin for mobile view
-                                // You can add more responsive options as needed
-                            },
-                            600: {
-                                items: 4,
-                                margin: 15
-                                // Adjust the configuration for tablets and other small screens
-                            },
-                            1000: {
-                                items: 8,
-                                margin: 15
-                                // Default configuration for larger screens
-                            }
-                        }
-                    })
-                })
-            })
+                                $(document).ready(function($) {
+                                    var owl = $('.owl-carousel');
+                                    owl.owlCarousel({
+                                        items: 8,
+                                        margin: 15,
+                                        stagePadding: 40,
+                                        loop: true,
+                                        nav: true,
+                                        navText: ["<i class='bx bx-chevron-left'></i>",
+                                            "<i class='bx bx-chevron-right'></i>"
+                                        ],
+                                        responsive: {
+                                            0: {
+                                                items: 2, // Adjust the number of items for mobile view
+                                                margin: 10 // Adjust the margin for mobile view
+                                                // You can add more responsive options as needed
+                                            },
+                                            600: {
+                                                items: 4,
+                                                margin: 15
+                                                // Adjust the configuration for tablets and other small screens
+                                            },
+                                            1000: {
+                                                items: 8,
+                                                margin: 15
+                                                // Default configuration for larger screens
+                                            }
+                                        }
+                                    })
+                                })
+                            })
                         </script>
                         <section class="section padd-top-25 padd-bot-10">
                             <div class="container">
@@ -268,17 +254,18 @@
                                 </style>
                                 <div class="box-top-employer">
                                     <div class="owl-carousel-owl-theme">
-                                        @foreach($topCareers as $career)
-                                        <div class="text-left teks-item {{ $field_operation == Str::lower(str_replace(' ', '-', $career->name)) ? 'active' : '' }}">
-                                            <a href="?careerName={{ $career->name }}" class="clearfix">
-                                                <h5>
-                                                    {{ $career->name }}
-                                                </h5>
-                                                <p>{{ $career->companies_count }}+ công ty </p>
-                                            </a>
-                                        </div>
-                                    @endforeach
-                                    
+                                        @foreach ($topCareers as $career)
+                                            <div
+                                                class="text-left teks-item {{ $field_operation == Str::lower(str_replace(' ', '-', $career->name)) ? 'active' : '' }}">
+                                                <a href="?careerName={{ $career->name }}" class="clearfix">
+                                                    <h5>
+                                                        {{ $career->name }}
+                                                    </h5>
+                                                    <p>{{ $career->companies_count }}+ công ty </p>
+                                                </a>
+                                            </div>
+                                        @endforeach
+
                                     </div>
                                 </div>
 
@@ -378,7 +365,8 @@
                             <div class="container">
                                 <div class="row no-mrg-bk">
                                     <div class="col-sm-12">
-                                        <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                        <ol class="breadcrumb" itemscope=""
+                                            itemtype="http://schema.org/BreadcrumbList">
                                             <li itemprop="itemListElement" itemscope=""
                                                 itemtype="https://schema.org/ListItem"><a href="/"
                                                     itemtype="https://schema.org/Thing" itemprop="item"> <span
@@ -391,13 +379,14 @@
                                                         itemprop="name">Công ty</span> </a>
                                                 <meta itemprop="position" content="2">
                                             </li>
-                                            <li class="active"><span class="text-muted">Công ty {{$careerName}} đang tuyển
+                                            <li class="active"><span class="text-muted">Công ty {{ $careerName }}
+                                                    đang tuyển
                                                     dụng</span></li>
                                         </ol>
                                         <div class="sidebar-widget padd-top-0 mrg-bot-0">
                                             <div class="colorgb-container">
                                                 <div class="clearfix">
-                                                   
+
                                                 </div>
                                                 <style>
                                                     .grid-view.brows-job-list {
@@ -419,64 +408,64 @@
                                                 </style>
                                                 <div class="row extra-mrg brows-employer-list mrg-bot-10">
                                                     @foreach ($companies as $company)
-                                                    <div class="colorgb-carousel-bk">
-                                                        <div class="item">
-                                                            <div class="col-sm-2 col-xs-6">
-                                                                <div class="grid-view brows-job-list clearfix">
-                                                                    <a title="{{ $company->company_name }}"
-                                                                        href="/tuyen-dung/{{ $company->slug }}">
-                                                                        <div class="brows-job-company-img">
-                                                                            <img onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                                src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
-                                                                                data-src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
-                                                                                class="img-responsive lazy"
-                                                                                alt="{{ $company->company_name }}">
-                                                                        </div>
-                                                                        <div class="brows-job-position padd-bot-5">
-                                                                            <h3 class="mrg-bot-0">{{
-                                                                                $company->company_name }}</h3>
-                                                                        </div>
-                                                                        <p class="mrg-bot-0"
-                                                                            style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px;"
-                                                                            title="Nam Từ Liêm, Hà Nội">
-                                                                            Nam Từ Liêm, Hà Nội
-                                                                        </p>
+                                                        <div class="colorgb-carousel-bk">
+                                                            <div class="item">
+                                                                <div class="col-sm-2 col-xs-6">
+                                                                    <div class="grid-view brows-job-list clearfix">
+                                                                        <a title="{{ $company->company_name }}"
+                                                                            href="/tuyen-dung/{{ $company->slug }}">
+                                                                            <div class="brows-job-company-img">
+                                                                                <img onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                                    src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
+                                                                                    data-src="{{ Storage::url($company->company_image_url ?? '/img/employer-logo.jpg') }}"
+                                                                                    class="img-responsive lazy"
+                                                                                    alt="{{ $company->company_name }}">
+                                                                            </div>
+                                                                            <div class="brows-job-position padd-bot-5">
+                                                                                <h3 class="mrg-bot-0">
+                                                                                    {{ $company->company_name }}</h3>
+                                                                            </div>
+                                                                            <p class="mrg-bot-0"
+                                                                                style="font-size:90%; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 5px 2px;"
+                                                                                title="Nam Từ Liêm, Hà Nội">
+                                                                                Nam Từ Liêm, Hà Nội
+                                                                            </p>
 
-                                                                        <p class="mrg-bot-5"
-                                                                            style="font-size:100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                                            <span
-                                                                                style="border-radius: 15px !important; padding: 0 10px !important; color:green">
-                                                                                <b>{{ $company->jobPosts->count() }}</b>
-                                                                                việc đang
-                                                                                tuyển
-                                                                            </span>
-                                                                        </p>
+                                                                            <p class="mrg-bot-5"
+                                                                                style="font-size:100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                <span
+                                                                                    style="border-radius: 15px !important; padding: 0 10px !important; color:green">
+                                                                                    <b>{{ $company->jobPosts->count() }}</b>
+                                                                                    việc đang
+                                                                                    tuyển
+                                                                                </span>
+                                                                            </p>
 
-                                                                        <p class="mrg-bot-5"
-                                                                            style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                                                            <span title="Địa điểm làm việc"
-                                                                                class="job-location">
-                                                                                <i class="bx bx-map"></i>
-                                                                                {{ $company->district_name }}
-                                                                            </span>
-                                                                            <span title="Địa điểm làm việc"
-                                                                                class="job-location">
-                                                                                <i class="bx bx-map"></i> {{
-                                                                                $company->city_name }}
-                                                                            </span>
+                                                                            <p class="mrg-bot-5"
+                                                                                style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                <span title="Địa điểm làm việc"
+                                                                                    class="job-location">
+                                                                                    <i class="bx bx-map"></i>
+                                                                                    {{ $company->district_name }}
+                                                                                </span>
+                                                                                <span title="Địa điểm làm việc"
+                                                                                    class="job-location">
+                                                                                    <i class="bx bx-map"></i>
+                                                                                    {{ $company->city_name }}
+                                                                                </span>
 
-                                                                        </p>
+                                                                            </p>
 
 
-                                                                        @if ($company->is_hot)
-                                                                        <span
-                                                                            class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
-                                                                        @endif
-                                                                    </a>
+                                                                            @if ($company->is_hot)
+                                                                                <span
+                                                                                    class="tg-themetag hide tg-featuretag hidden-xs">Hot</span>
+                                                                            @endif
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
                                                     @endforeach
                                                 </div>
 
@@ -486,19 +475,20 @@
                                                             <li
                                                                 class="prev {{ $companies->onFirstPage() ? 'disabled' : '' }}">
                                                                 <a
-                                                                    href="{{ $companies->previousPageUrl() }}&careerName={{$careerName}}">&laquo;</a>
+                                                                    href="{{ $companies->previousPageUrl() }}&careerName={{ $careerName }}">&laquo;</a>
                                                             </li>
                                                             @for ($i = 1; $i <= $companies->lastPage(); $i++)
                                                                 <li
                                                                     class="{{ $companies->currentPage() == $i ? 'active' : '' }}">
-                                                                    <a href="{{ $companies->url($i) }}&careerName={{$careerName}}">{{ $i }}</a>
-                                                                </li>
-                                                                @endfor
-                                                                <li
-                                                                    class="next {{ $companies->hasMorePages() ? '' : 'disabled' }}">
                                                                     <a
-                                                                        href="{{ $companies->nextPageUrl() }}&careerName={{$careerName}}">&raquo;</a>
+                                                                        href="{{ $companies->url($i) }}&careerName={{ $careerName }}">{{ $i }}</a>
                                                                 </li>
+                                                            @endfor
+                                                            <li
+                                                                class="next {{ $companies->hasMorePages() ? '' : 'disabled' }}">
+                                                                <a
+                                                                    href="{{ $companies->nextPageUrl() }}&careerName={{ $careerName }}">&raquo;</a>
+                                                            </li>
                                                         </ul>
 
                                                     </div>

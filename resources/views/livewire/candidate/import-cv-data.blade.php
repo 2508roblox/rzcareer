@@ -4,7 +4,7 @@
             <div>
                 <div>
 
-                    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
+
                     <!DOCTYPE html>
                     <html lang="vi-VN">
 
@@ -23,7 +23,7 @@
                         <meta name="csrf-param" content="_csrf-jobsgo-candidate">
                         <meta name="csrf-token" content="3aIMpL9gEVG9znrqqTw_khQIFAWNLtg9EAkxKRWLTjrul3vh3jhZC8S3FqzTXUbrWFl5RMoXjnF6OwZwYroUYg==">
 
-                        <title>Nhập dữ liệu từ CV của bạn</title>
+                        <title>Nhập dữ liệu từ CV của bạn - RZCareer</title>
                         <link href="/assets/141550af/css/bootstrap-datepicker3.min.css" rel="stylesheet">
                         <link href="/assets/141550af/css/datepicker-kv.min.css" rel="stylesheet">
                         <link href="/assets/dc7f7faf/css/kv-widgets.min.css" rel="stylesheet">
@@ -461,10 +461,10 @@
                                         <a href="/candidate/review"
                                             class="border-primary text-uppercase text-bold btn btn-default"><i class="fa fa-list-alt"></i> Hoàn
                                             thiện CV <div style="position:absolute;top:-5px;right:0px;font-size:9px;color:white;background:#ff5722;border-radius: 9px;width: 16px;height: 16px;line-height: 16px;;text-align:center">67</div></a>
-                                        <!--  <a href="candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
+                                        <!--  <a href="/candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
                                         <!--"><i class="fa fa-exclamation-triangle"></i> Sửa lỗi CV-->
                                         <!--</a>-->
-                                        <a href="candidate/pre-profile?tab=analyze"
+                                        <a href="/candidate/pre-profile?tab=analyze"
                                             class="border-primary text-uppercase text-bold btn btn-default"><i class="fa fa-line-chart"></i> Phân
                                             tích CV</a>
                                         <a href="cv-go" class="border-primary text-uppercase text-bold btn  btn-default"><i
@@ -1862,14 +1862,14 @@
                                                     <div class="panel no-border-top no-border-radius-top">
                                                         <ul class="navigation">
                                                             <li class="navigation-header">Cá nhân</li>
-                                                            <li><a href="candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin việc</a></li>
-                                                            <li><a href="candidate/document-attachment"><i class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
-                                                            <li><a href="candidate/import-linkedin-data"><i class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a></li>
+                                                            <li><a href="/candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin việc</a></li>
+                                                            <li><a href="/candidate/document-attachment"><i class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
+                                                            <li><a href="/candidate/import-linkedin-data"><i class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a></li>
                                                             <li data-intro='<h4 class="text-center">CV Go đã xuất hiện!</h4><p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width="200px" src="/cv_template/assets/images/theme/cv3.png" />'><a href="/candidate/pre-profile?tab=manage-resume" target="_blank"><i class="icon-copy"></i>CV Go - Tạo CV cực chất<span class="badge badge-danger">Mới!</span></a></li>
                                                             <li class="navigation-divider"></li>
-                                                            <li><a href="candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
-                                                            <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                            <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i> Việc làm phù hợp</a></li>
+                                                            <li><a href="/candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
+                                                            <li><a href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i class="icon-stack-star"></i> Việc làm đã lưu</a></li>
+                                                            <li><a href="/candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i> Việc làm phù hợp</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -2007,14 +2007,14 @@
 
                             })
                         </script>
-                        <script src="/event/min.js?v=1727349128"></script>
+                        {{-- <script src="/event/min.js?v=1727349128"></script>
                         <script src="/assets/2878b065/yii.js"></script>
                         <script src="/assets/2878b065/yii.validation.js"></script>
                         <script src="/assets/141550af/js/bootstrap-datepicker.min.js"></script>
                         <script src="/assets/141550af/js/datepicker-kv.min.js"></script>
                         <script src="/assets/141550af/js/locales/bootstrap-datepicker.vi.min.js"></script>
                         <script src="/assets/dc7f7faf/js/kv-widgets.min.js"></script>
-                        <script src="/assets/2878b065/yii.activeForm.js"></script>
+                        <script src="/assets/2878b065/yii.activeForm.js"></script> --}}
                         <script>
                             jQuery(function($) {
                                 jQuery.fn.kvDatepicker.dates = {};
@@ -2139,7 +2139,7 @@
                                     }
                                 }], []);
                             });
-                        </script><a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe" href="https://jobsgo.vn/candidate/detail?v=1727349128" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+                        </script>
 
                         <script>
                             $(function() {

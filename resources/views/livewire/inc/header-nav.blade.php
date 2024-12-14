@@ -143,9 +143,12 @@
                     <a href="/candidate/index" style=" padding-top: 12px; display: flex !important; align-items:center;"
                         class="dropdown-toggle" data-toggle="dropdown">
 
-                        <img loading="lazy" width="32" 
-                            src="https://jobsgo.vn/uploads/avatar/202409/2599835_20240925210030.jpg?colorgb=1727271940"
-                            alt="web developer" class="img-rounded">
+                        <img loading="lazy" width="32"
+
+                        src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+                        data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+
+                        alt="web developer" class="img-rounded">
                         <span style="margin-left: 5px">
                             <div class="d-flex text-bold" style="font-weight: bold;">
                                 @if (Auth::check())
@@ -303,5 +306,5 @@
     </div>
 
     </div>
-    
+
 </nav>

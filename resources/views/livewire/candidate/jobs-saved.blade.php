@@ -1,12 +1,10 @@
-<div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-        <!-- Please send your resume with cover letter to team@jobsgo.vn -->
-        <!DOCTYPE html>
-        <html lang="vi-VN">
+
+
 
         <head>
+            <title>Danh sách việc làm đã lưu - RZCareer</title>
             <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
                 type="font/woff2" crossorigin>
             <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
@@ -29,7 +27,6 @@
             <meta name="csrf-token"
                 content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-            <title>Bảng tin - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                 type="text/css">
@@ -47,74 +44,61 @@
                 type="text/css">
             <link href="/assets_livewire/css/v2.css?colorgb=234208153092" rel="stylesheet" type="text/css">
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/jquery_ui/full.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/libraries/bootstrap.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/nicescroll.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/drilldown.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/pace.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/loaders/blockui.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/ui/prism.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/spin.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/buttons/ladda.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_buttons.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/inputs/touchspin.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js">
             </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/plugins/jquery-number-master/jquery.number.min.js"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js">
-            </script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/selects/select2.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/uniform.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switchery.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/styling/switch.min.js"></script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/form_select2.js"></script>
             <script type="text/javascript"
                 src="/assets_livewire/bolt/assets/js/pages/form_checkboxes_radios.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/forms/editable/editable.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3.min.js">
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=234208153092"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092">
             </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/visualization/d3/d3_tooltip.js">
-            </script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/notifications/jgrowl.min.js">
-            </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/pages/components_loaders.js?colorgb=234208153092"></script>
-            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/core/app.js?colorgb=234208153092">
-            </script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/layout_fixed_native.js?colorgb=234208153092"></script>
             <script type="text/javascript"
                 src="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.js?colorgb=234208153092">
             </script>
             <script type="text/javascript" src="/assets_livewire/bolt/assets/js/main.js?colorgb=234208153092"></script>
-            <script type="text/javascript"
-                src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js"></script>
+            <script type="text/javascript" src="/assets_livewire/bolt/assets/js/plugins/mobile-detect.js/mobile-detect.min.js">
+            </script>
             <script type="text/javascript" src="/assets_livewire/cv_template/dist/js/intro.js?v=234208153092"></script>
 
 
 
             <!--<script type="text/javascript">
-       $(document).ready(function () {
-           setTimeout(function () {
-               if (localStorage.getItem('cvgo_popup_state') != 'shown') {
-                   let options = {
-                       'tooltipPosition': 'right',
-                       'doneLabel': 'Đã hiểu',
-                       'showBullets': false,
-                       'showStepNumbers': false,
-                   }
-                   introJs().setOptions(options).start();
-                   localStorage.setItem('cvgo_popup_state', 'shown');
-               }
-           }, 3000);
-       });
-   </script>-->
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        if (localStorage.getItem('cvgo_popup_state') != 'shown') {
+                            let options = {
+                                'tooltipPosition': 'right',
+                                'doneLabel': 'Đã hiểu',
+                                'showBullets': false,
+                                'showStepNumbers': false,
+                            }
+                            introJs().setOptions(options).start();
+                            localStorage.setItem('cvgo_popup_state', 'shown');
+                        }
+                    }, 3000);
+                });
+            </script>-->
             <style>
                 .footer {
                     position: absolute;
@@ -210,85 +194,13 @@
                             <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                 <ul class="breadcrumb">
-                                    <li><a href="candidate/dashboard">Bảng tin</a></li>
+                                    <li><a
+                                            href="{{ Route::has('candidate.dashboard') ? route('candidate.dashboard') : '#' }}">Bảng
+                                            tin</a></li>
                                     <li>Danh sách việc đã lưu</li>
 
                                 </ul>
-                                <div class=" heading-elements panel-nav ">
-                                    <ul class=" nav nav-pills ">
 
-                                        <li class=" dropdown " id=" dropdown-sort ">
-                                            <a href=" javascript:void(0) " class=" dropdown-toggle "
-                                                data-toggle=" dropdown ">
-                                                <i class=" icon-sort "></i>
-                                                <span class=" position-right ">Sắp xếp</span>
-                                            </a>
-
-                                            <ul class=" dropdown-menu dropdown-menu-right " id=" dropdown-menu-sort ">
-                                                <li>
-                                                    <a href=" /candidate/jobs-applied?sort[date]=asc "><i class="
-                                            icon-sort-time-asc "></i> Cũ nhất</a>
-                                                </li>
-                                                <li>
-                                                    <a href=" /candidate/jobs-applied?sort[date]=desc "><i class="
-                                            icon-sort-time-desc "></i> Mới
-                                                        nhất</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class=" dropdown " id=" dropdown-filter ">
-                                            <a href=" javascript:void(0) " class=" dropdown-toggle "
-                                                data-toggle=" dropdown ">
-                                                <i class=" fa fa-search "></i>
-                                                <span class=" position-right ">Lọc</span>
-                                            </a>
-
-                                            <ul class=" dropdown-menu dropdown-menu-right " id=" statusDropdown ">
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 0 " data-id=" 0 ">
-                                                        <span>Chỉ Mới Apply</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 2 " data-id=" 2 ">
-                                                        <span>Từ Chối</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 6 " data-id=" 6 ">
-                                                        <span>Liên Lạc</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 7 " data-id=" 7 ">
-                                                        <span>Phỏng Vấn</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 8 " data-id=" 8 ">
-                                                        <span>Gửi Offer</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 9 " data-id=" 9 ">
-                                                        <span>Tuyển Thành Công</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 10 " data-id=" 10 ">
-                                                        <span>Sàng Lọc Hồ Sơ</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label><input type=" checkbox " value=" 11 " data-id=" 11 ">
-                                                        <span>Đặt Lịch Phỏng Vấn</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
 
                             </div>
                         </div>
@@ -304,65 +216,124 @@
                                         <div class=" panel panel-white ">
 
 
-                                            @if($savedJobs->isEmpty())
+                                            @if ($savedJobs->isEmpty())
+                                                <div class="row w-100"
+                                                    style="display: flex; flex-wrap: wrap; justify-content: center; padding: 15px;">
 
+                                                    <p>Bạn chưa lưu việc làm nào</p>
+                                                </div>
                                             @else
-                                            <ul class="media-list">
-                                                @foreach($savedJobs as $savedJob)
-                                                <li class="media panel-body stack-media-on-mobile" style="width: 100%;">
-                                                    <div class="media-left">
-                                                        <a title="View Details" href="{{ $savedJob->jobPost->url }}"
-                                                            target="_blank">
-                                                            <img src="{{ $savedJob->jobPost->company->logo_url }}"
-                                                                class="img-rounded" alt="">
-                                                        </a>
-                                                    </div>
+                                                <div class="row w-100"
+                                                    style="display: flex; flex-wrap: wrap; justify-content: center; padding: 15px;">
+                                                    @foreach ($savedJobs as $savedJob)
+                                                        <div class="col-md-6 col-lg-4 mb-20 w-100">
+                                                            <div class="card w-100">
+                                                                <div class="card-header bg-white pb-0">
+                                                                    <div class="media">
+                                                                        <div class="media-body">
+                                                                            <h6
+                                                                                class="media-heading text-semibold mb-5">
+                                                                                <a href="{{ route('viec-lam', $savedJob->jobPost->slug) }}"
+                                                                                    target="_blank"
+                                                                                    class="text-default">
+                                                                                    {{ $savedJob->jobPost->job_name }}
+                                                                                </a>
+                                                                            </h6>
+                                                                            <p class="text-muted mb-0">
+                                                                                {{ $savedJob->jobPost->company->name }}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading text-semibold">
-                                                            <a title="View Details" target="_blank"
-                                                                href="{{ $savedJob->jobPost->url }}">
-                                                                {{ $savedJob->jobPost->title }} <strong
-                                                                    class="text-uppercase text-grey">- {{
-                                                                    $savedJob->jobPost->company->name }}</strong>
-                                                            </a>
-                                                        </h6>
-                                                        <ul class="list-inline list-inline-separate text-muted mb-10">
-                                                            <li title="Location"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->location }}</li>
-                                                            {{-- <li title="Closing Date"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->closing_date->format('d/m/Y') }}
-                                                            </li> --}}
-                                                            <li title="Salary"><i class="fa fa-money"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->salary }}</li>
-                                                            <li title="Job Type"><i class="fa fa-star-o"
-                                                                    aria-hidden="true"></i> {{
-                                                                $savedJob->jobPost->job_type }}</li>
-                                                        </ul>
-                                                        <p title="Job Description">
-                                                            {{ $savedJob->jobPost->description }}
-                                                        </p>
-                                                    </div>
+                                                                <div class="card-body pt-10">
+                                                                    <ul class="list-unstyled text-muted mb-15">
+                                                                        <li class="mb-5">
+                                                                            <i class="fa fa-map-marker mr-5"></i>
+                                                                            {{ $savedJob->jobPost->location->address }}
+                                                                        </li>
+                                                                        <li class="mb-5">
+                                                                            <i class="fa fa-money mr-5"></i>
+                                                                            {{ number_format($savedJob->jobPost->salary_min) }}
+                                                                            -
+                                                                            {{ number_format($savedJob->jobPost->salary_max) }}
+                                                                            {{ $savedJob->jobPost->salary_type == 'monthly' ? 'VNĐ/tháng' : 'VNĐ/giờ' }}
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-star-o mr-5"></i>
+                                                                            {{ $savedJob->jobPost->job_type }}
+                                                                        </li>
+                                                                    </ul>
 
-                                                    <div class="media-right text-nowrap">
-                                                        <span class="label label-default"
-                                                            title="Saved at: {{ $savedJob->created_at->format('H:i - d/m/Y') }}">{{
-                                                            $savedJob->created_at->format('H:i - d/m/Y') }}</span>
-                                                        <button wire:click="removeJob({{ $savedJob->job_post_id }})"
-                                                            class="btn-colorgb-jgd text-uppercase btn btn-danger btn-xs"
-                                                            title="Remove job: {{ $savedJob->jobPost->title }}">
-                                                            <i class="icon-trash"></i> Remove
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                @endforeach
-                                            </ul>
+                                                                    <p class="text-muted mb-15 clamp-text">
+                                                                        {{ $savedJob->jobPost->description }}
+                                                                    </p>
+
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="text-muted small">
+                                                                            {{ $savedJob->created_at->format('H:i - d/m/Y') }}
+                                                                        </span>
+                                                                        <button
+                                                                            wire:click="removeJob({{ $savedJob->jobPost->id }})"
+                                                                            class="btn btn-danger btn-xs">
+                                                                            <i class="icon-trash"></i> Bỏ lưu
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
                                             @endif
+                                            <style>
+                                                .card {
+                                                    border: 1px solid #ddd;
+                                                    border-radius: 4px;
+                                                    height: 100%;
+                                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                                                }
 
+                                                .card-header {
+                                                    border-bottom: 1px solid #eee;
+                                                    padding: 15px;
+                                                }
 
+                                                .card-body {
+                                                    padding: 15px;
+                                                }
+
+                                                .clamp-text {
+                                                    display: -webkit-box;
+                                                    -webkit-line-clamp: 3;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                }
+
+                                                .mb-20 {
+                                                    margin-bottom: 20px;
+                                                }
+
+                                                .mb-15 {
+                                                    margin-bottom: 15px;
+                                                }
+
+                                                .mb-5 {
+                                                    margin-bottom: 5px;
+                                                }
+
+                                                .mr-5 {
+                                                    margin-right: 5px;
+                                                }
+
+                                                .pt-10 {
+                                                    padding-top: 10px;
+                                                }
+
+                                                .pb-0 {
+                                                    padding-bottom: 0;
+                                                }
+                                            </style>
 
                                             <div class="text-center pb-20 "> </div>
 
@@ -401,7 +372,8 @@
                                                     <label class="checkbox ">
                                                         <input type="checkbox " name="reason[] "
                                                             value="Mức lương không phù hợp ">
-                                                        <span class="ml-20 text-default ">Mức lương không phù hợp</span>
+                                                        <span class="ml-20 text-default ">Mức lương không phù
+                                                            hợp</span>
                                                     </label>
                                                     <label class="checkbox ">
                                                         <input type="checkbox " name="reason[] "
@@ -430,15 +402,14 @@
                                                             class="ml-20 text-default ">Thay đổi hồ sơ</span>
                                                     </label>
                                                     <div class="checkbox ">
-                                                        <textarea id="reason " name="reason[] "
-                                                            class="form-control mt-10 "
-                                                            placeholder="Lý do khác... "></textarea>
+                                                        <textarea id="reason " name="reason[] " class="form-control mt-10 " placeholder="Lý do khác... "></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group ">
                                                 <div class="col-sm-offset-3 col-sm-9 ">
-                                                    <button type="button " class="btn btn-submit btn-danger ">Hủy bỏ ứng
+                                                    <button type="button " class="btn btn-submit btn-danger ">Hủy bỏ
+                                                        ứng
                                                         tuyển</button>
                                                 </div>
                                             </div>
@@ -450,91 +421,92 @@
                             </div>
                         </div>
                         <script>
-                            $(function () {
-                        $('.btn-cancel').click(function () {
-                            var t = $(this);
-                            var f = $('#myModal form');
-                            $('.modal-title').html(t.attr('title'))
-                            f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
-                            $('.btn-submit').click(function () {
-                                var r = $('#reason');
+                            $(function() {
+                                $('.btn-cancel').click(function() {
+                                    var t = $(this);
+                                    var f = $('#myModal form');
+                                    $('.modal-title').html(t.attr('title'))
+                                    f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
+                                    $('.btn-submit').click(function() {
+                                        var r = $('#reason');
 
-                                var is_checked = false;
-                                $('.checkbox').each(function () {
-                                    if ($(this).find('input[name="reason[] "]').is(":checked ") || r.val() != '') {
-                                        is_checked = true;
-                                    }
+                                        var is_checked = false;
+                                        $('.checkbox').each(function() {
+                                            if ($(this).find('input[name="reason[] "]').is(":checked ") || r
+                                                .val() != '') {
+                                                is_checked = true;
+                                            }
+                                        });
+
+                                        if (is_checked == false) {
+                                            r.focus();
+                                        } else {
+                                            f.submit();
+                                        }
+                                    });
                                 });
 
-                                if (is_checked == false) {
-                                    r.focus();
-                                } else {
-                                    f.submit();
-                                }
-                            });
-                        });
+                                const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
 
-                        const checkboxes = document.querySelectorAll('#statusDropdown input[type="checkbox "]');
-
-                        const updateUrlAndCheckbox = () => {
-                            const checkedStatusValues = Array.from(checkboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => checkbox.getAttribute('data-id'));
-                            window.location.href = updateUrlParams('status', checkedStatusValues);
-                        };
-
-                        checkboxes.forEach(checkbox => {
-                            checkbox.addEventListener('click', () => {
-                                updateUrlAndCheckbox();
-                            });
-                        });
-
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const checkboxGroups = ['statusDropdown'];
-
-                        checkboxGroups.forEach(group => {
-                            const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
-                            const statusValues = urlParams.get('status');
-
-                            if (statusValues) {
-                                const statusArray = statusValues.split(',');
+                                const updateUrlAndCheckbox = () => {
+                                    const checkedStatusValues = Array.from(checkboxes)
+                                        .filter(checkbox => checkbox.checked)
+                                        .map(checkbox => checkbox.getAttribute('data-id'));
+                                    window.location.href = updateUrlParams('status', checkedStatusValues);
+                                };
 
                                 checkboxes.forEach(checkbox => {
-                                    const dataId = checkbox.getAttribute('data-id');
+                                    checkbox.addEventListener('click', () => {
+                                        updateUrlAndCheckbox();
+                                    });
+                                });
 
-                                    if (statusArray.includes(dataId)) {
-                                        checkbox.checked = true;
+                                const urlParams = new URLSearchParams(window.location.search);
+                                const checkboxGroups = ['statusDropdown'];
+
+                                checkboxGroups.forEach(group => {
+                                    const checkboxes = document.querySelectorAll(`#${group} input[type="checkbox "]`);
+                                    const statusValues = urlParams.get('status');
+
+                                    if (statusValues) {
+                                        const statusArray = statusValues.split(',');
+
+                                        checkboxes.forEach(checkbox => {
+                                            const dataId = checkbox.getAttribute('data-id');
+
+                                            if (statusArray.includes(dataId)) {
+                                                checkbox.checked = true;
+                                            }
+                                        });
                                     }
                                 });
-                            }
-                        });
-                    });
-
-                    $(document).ready(function () {
-                        $("#dropdown-sort ").hover(function () {
-                            $(this).addClass("open ");
-                            $("#dropdown-filter ").removeClass("open ")
-                        }, function () {
-                            $("#dropdown-menu-sort ").hover(function () {
-                                $(this).closest("#dropdown-sort ").addClass("open ");
-                            }, function () {
-                                $(this).removeClass("open ");
-                                $(this).closest("#dropdown-sort ").removeClass("open ");
                             });
-                        });
 
-                        $("#dropdown-filter ").hover(function () {
-                            $(this).addClass("open ");
-                            $("#dropdown-sort ").removeClass("open ")
-                        }, function () {
-                            $("#statusDropdown ").hover(function () {
-                                $(this).closest("#dropdown-filter ").addClass("open ");
-                            }, function () {
-                                $(this).removeClass("open ");
-                                $(this).closest("#dropdown-filter ").removeClass("open ");
+                            $(document).ready(function() {
+                                $("#dropdown-sort ").hover(function() {
+                                    $(this).addClass("open ");
+                                    $("#dropdown-filter ").removeClass("open ")
+                                }, function() {
+                                    $("#dropdown-menu-sort ").hover(function() {
+                                        $(this).closest("#dropdown-sort ").addClass("open ");
+                                    }, function() {
+                                        $(this).removeClass("open ");
+                                        $(this).closest("#dropdown-sort ").removeClass("open ");
+                                    });
+                                });
+
+                                $("#dropdown-filter ").hover(function() {
+                                    $(this).addClass("open ");
+                                    $("#dropdown-sort ").removeClass("open ")
+                                }, function() {
+                                    $("#statusDropdown ").hover(function() {
+                                        $(this).closest("#dropdown-filter ").addClass("open ");
+                                    }, function() {
+                                        $(this).removeClass("open ");
+                                        $(this).closest("#dropdown-filter ").removeClass("open ");
+                                    });
+                                });
                             });
-                        });
-                    });
                         </script>
 
                         <!-- Detached sidebar -->
@@ -548,7 +520,8 @@
                                             <div class="content-group-sm ">
                                                 <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng "
                                                     data-fancybox=" " data-type="iframe " class="text-white "
-                                                    href="https://jobsgo.vn/candidate/detail?v=1727394586 " title="Hồ sơ xin việc của bạn
+                                                    href="https://jobsgo.vn/candidate/detail?v=1727394586 "
+                                                    title="Hồ sơ xin việc của bạn
                                             trong mắt nhà tuyển dụng ">
                                                     <h6 class="text-semibold no-margin-bottom ">
                                                         web developer
@@ -565,7 +538,8 @@
 
                                                 <div class="progress progress-striped active mt-10 "
                                                     title="Hồ sơ xin việc đã hoàn thiện được 45% ">
-                                                    <div class="progress-bar progress-bar-success " style="width: 45% ">
+                                                    <div class="progress-bar progress-bar-success "
+                                                        style="width: 45% ">
                                                         <span class="text-size-mini text-capitalize ">45%</span>
                                                     </div>
                                                 </div>
@@ -610,13 +584,14 @@
                                         <div class="panel no-border-top no-border-radius-top ">
                                             <ul class="navigation ">
                                                 <li class="navigation-header ">Cá nhân</li>
-                                                <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ
+                                                <li><a href="/candidate/profile "><i class="icon-file-text "></i> Hồ
+                                                        sơ
                                                         xin việc</a>
                                                 </li>
-                                                <li><a href="candidate/document-attachment "><i
+                                                <li><a href="/candidate/document-attachment "><i
                                                             class="icon-file-media "></i> Đính
                                                         kèm CV/chứng chỉ</a></li>
-                                                <li><a href="candidate/import-linkedin-data "><i
+                                                <li><a href="/candidate/import-linkedin-data "><i
                                                             class="icon-linkedin "></i>Nhập
                                                         thông tin từ LinkedIn</a></li>
                                                 <li
@@ -627,12 +602,13 @@
                                                         chất<span class="badge badge-danger">Mới!</span></a>
                                                 </li>
                                                 <li class="navigation-divider"></li>
-                                                <li class="active"><a href="candidate/jobs-applied"
+                                                <li class="active"><a href="/candidate/jobs-applied"
                                                         title="Danh sách việc đã lưu"><i class="icon-stack-check"></i>
                                                         Việc làm đã ứng tuyển</a></li>
-                                                <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                                <li><a href="/candidate/jobs-saved"
+                                                        title="Danh sách việc làm đã lưu"><i
                                                             class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                <li><a href="candidate/jobs-matching"
+                                                <li><a href="/candidate/jobs-matching"
                                                         title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i>
                                                         Việc làm phù hợp</a></li>
                                             </ul>
@@ -678,7 +654,8 @@
                                     <div class="pace_activity"></div>
                                 </div>
                             </div>
-                            <iframe class="colorgb-content-wrapper" width="100%" height="100%" frameborder="0"></iframe>
+                            <iframe class="colorgb-content-wrapper" width="100%" height="100%"
+                                frameborder="0"></iframe>
                         </div>
 
                     </div>
@@ -689,188 +666,193 @@
             <!-- /.modal -->
             <script>
                 function message() {
-        $.ajax({
-            url: "/message/new",
-            success: function(result) {
-                var obj = JSON.parse(result);
-                var nm = $(".new-message");
-                var lm = $(".list-message");
-                if (obj.cn > 0) {
-                    nm.removeClass('hide');
-                } else {
-                    nm.addClass('hide');
+                    $.ajax({
+                        url: "/message/new",
+                        success: function(result) {
+                            var obj = JSON.parse(result);
+                            var nm = $(".new-message");
+                            var lm = $(".list-message");
+                            if (obj.cn > 0) {
+                                nm.removeClass('hide');
+                            } else {
+                                nm.addClass('hide');
+                            }
+                            nm.html(obj.cn);
+                            lm.html(obj.lm);
+                            boltJs();
+                            $('.list-message .media-title a').click(function() {
+                                $('.message>a').trigger('click');
+                                $('.new-message').addClass('hide');
+                            });
+
+                        }
+                    });
                 }
-                nm.html(obj.cn);
-                lm.html(obj.lm);
-                boltJs();
-                $('.list-message .media-title a').click(function() {
-                    $('.message>a').trigger('click');
-                    $('.new-message').addClass('hide');
-                });
 
-            }
-        });
-    }
+                /*setInterval(function () {
+                       $.ajax({
+                           url: "/message/check", success: function (result) {
+                               if(result !='null'){
+                                   message();
+                               }else{
+                                   $('.new-message').addClass('hide');
+                               }
+                           }
+                       });
 
-    /*setInterval(function () {
-           $.ajax({
-               url: "/message/check", success: function (result) {
-                   if(result !='null'){
-                       message();
-                   }else{
-                       $('.new-message').addClass('hide');
-                   }
-               }
-           });
+                   },5000);*/
 
-       },5000);*/
+                $(function() {
 
-    $(function() {
+                    //message();
 
-        //message();
-
-        /*var e = $('.sidebar').offset();
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > (e.top) && $(window).width() > 1400) {
-                $('.sidebar').css({'position': 'fixed', 'top': '0px', 'width': '260px'});
-            } else {
-                $('.sidebar').css('position', 'static');
-            }
-        });*/
+                    /*var e = $('.sidebar').offset();
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() > (e.top) && $(window).width() > 1400) {
+                            $('.sidebar').css({'position': 'fixed', 'top': '0px', 'width': '260px'});
+                        } else {
+                            $('.sidebar').css('position', 'static');
+                        }
+                    });*/
 
 
-        $('#colorgbChangeAvatar').change(function() {
-            var file = $(this).prop("files")[0];
-            var formData = new FormData();
-            formData.append('file', file);
-            $.ajax({
-                url: '/api/change-avatar',
-                type: 'POST',
-                dataType: 'text',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: formData,
-                success: function(res) {
-                    obj = JSON.parse(res);
-                    if (obj.status == '1') {
-                        $('.avatar').attr('src', obj.data);
-                        colorgbJGrowl('bg-green', 'Thay đổi hình ảnh đại diện thành công');
-                    } else {
-                        colorgbJGrowl('bg-warning', obj.data);
+                    $('#colorgbChangeAvatar').change(function() {
+                        var file = $(this).prop("files")[0];
+                        var formData = new FormData();
+                        formData.append('file', file);
+                        $.ajax({
+                            url: '/api/change-avatar',
+                            type: 'POST',
+                            dataType: 'text',
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            data: formData,
+                            success: function(res) {
+                                obj = JSON.parse(res);
+                                if (obj.status == '1') {
+                                    $('.avatar').attr('src', obj.data);
+                                    colorgbJGrowl('bg-green', 'Thay đổi hình ảnh đại diện thành công');
+                                } else {
+                                    colorgbJGrowl('bg-warning', obj.data);
 
-                    }
+                                }
 
-                }
-            });
-        });
-        var pathname = window.location.pathname;
+                            }
+                        });
+                    });
+                    var pathname = window.location.pathname;
 
-        $('#navbar-mobile > .navbar-right >  li > a').each(function() {
-            var pn = pathname.toLowerCase().replace('/index', '');
-            if (pn.split('/').pop() === $(this).attr('href').split('/').pop()) {
-                $(this).parent().addClass('active');
-            }
+                    $('#navbar-mobile > .navbar-right >  li > a').each(function() {
+                        var pn = pathname.toLowerCase().replace('/index', '');
+                        if (pn.split('/').pop() === $(this).attr('href').split('/').pop()) {
+                            $(this).parent().addClass('active');
+                        }
 
-        });
+                    });
 
-    })
+                })
             </script>
             <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-            <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+            {{-- <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
                 href="/assets_livewire/candidate/detail?v=1727321539"
                 title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i
-                    class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+                    class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a> --}}
 
             <script>
                 $(function() {
-        if (!getCookie('jobsgo-logged')) {
-            $.ajax({
-                url: "/api/logged?utm_source=&utm_medium=",
-                success: function(result) {
-                    setCookie('jobsgo-logged', 1, 1);
-                }
-            });
+                    if (!getCookie('jobsgo-logged')) {
+                        $.ajax({
+                            url: "/api/logged?utm_source=&utm_medium=",
+                            success: function(result) {
+                                setCookie('jobsgo-logged', 1, 1);
+                            }
+                        });
 
-        }
-    })
+                    }
+                })
             </script>
 
 
             <script>
                 window.addEventListener('load', function() {
-        $(function() {
+                    $(function() {
 
-            $('.btn-policy').click(function() {
-                $.post("/api/policy", {
-                        agreement: ($('#agreement').is(":checked") ? 1 : 0),
-                        save_cv: ($('#save_cv').is(":checked") ? 1 : 0)
-                    },
-                    function(data, status) {
-                        $('#policyModal').modal('hide');
-                    });
-            });
+                        $('.btn-policy').click(function() {
+                            $.post("/api/policy", {
+                                    agreement: ($('#agreement').is(":checked") ? 1 : 0),
+                                    save_cv: ($('#save_cv').is(":checked") ? 1 : 0)
+                                },
+                                function(data, status) {
+                                    $('#policyModal').modal('hide');
+                                });
+                        });
 
-            $('#policyModal').modal('show');
+                        $('#policyModal').modal('show');
 
-        })
-    });
+                    })
+                });
             </script>
             <script>
                 const textareas = document.querySelectorAll('.myTextarea');
 
-    textareas.forEach(textarea => {
-        const message = document.createElement('p');
-        message.classList.add('message');
-        message.classList.add('small');
-        message.classList.add('text-danger');
-        textarea.parentNode.insertBefore(message, textarea.nextSibling);
+                textareas.forEach(textarea => {
+                    const message = document.createElement('p');
+                    message.classList.add('message');
+                    message.classList.add('small');
+                    message.classList.add('text-danger');
+                    textarea.parentNode.insertBefore(message, textarea.nextSibling);
 
-        textarea.addEventListener('input focus', function() {
-            const minLength = 50;
-            const currentLength = textarea.value.length;
-            const messageElement = textarea.nextElementSibling;
+                    textarea.addEventListener('input focus', function() {
+                        const minLength = 50;
+                        const currentLength = textarea.value.length;
+                        const messageElement = textarea.nextElementSibling;
 
-            if (currentLength >= minLength) {
-                messageElement.textContent = ``;
-            } else {
-                messageElement.textContent = `Cần tối thiểu ${minLength - currentLength} ký tự nữa`;
-            }
-        });
-    });
+                        if (currentLength >= minLength) {
+                            messageElement.textContent = ``;
+                        } else {
+                            messageElement.textContent = `Cần tối thiểu ${minLength - currentLength} ký tự nữa`;
+                        }
+                    });
+                });
             </script>
 
             <script>
                 window.addEventListener('load', function() {
-        $(function() {
+                    $(function() {
 
-            var url_string = window.location.href;
-            var url = new URL(url_string);
-            var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") : '';
-            var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
-            var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get("utm_campaign") : '';
-            var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
-            if (utmSource || utmMed || utmCampaign || utmTerm) {
-                $('a').attr("href", function() {
-                    var currUrl = $(this).attr('href');
-                    if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
-                        if (currUrl && currUrl.indexOf("?") == -1) {
-                            urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
-                        } else {
-                            urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
+                        var url_string = window.location.href;
+                        var url = new URL(url_string);
+                        var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") :
+                        '';
+                        var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
+                        var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get(
+                            "utm_campaign") : '';
+                        var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
+                        if (utmSource || utmMed || utmCampaign || utmTerm) {
+                            $('a').attr("href", function() {
+                                var currUrl = $(this).attr('href');
+                                if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !
+                                    currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
+                                    if (currUrl && currUrl.indexOf("?") == -1) {
+                                        urlWithParam = currUrl + "?utm_source=" + utmSource +
+                                            "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                            "&utm_campaign=" + utmCampaign;
+                                    } else {
+                                        urlWithParam = currUrl + "&utm_source=" + utmSource +
+                                            "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                            "&utm_campaign=" + utmCampaign;
+                                    }
+                                    return urlWithParam;
+                                }
+                            });
                         }
-                        return urlWithParam;
-                    }
+                    });
                 });
-            }
-        });
-    });
             </script>
         </body>
 
-        </html>
 
 
     </div>
 
-</div>

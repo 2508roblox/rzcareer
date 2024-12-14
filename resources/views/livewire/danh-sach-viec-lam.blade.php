@@ -25,8 +25,7 @@
                     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-                    <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-                    <title>Danh sách việc làm | Rzcareer</title>
+                    <title>Danh sách việc làm - Rzcareer</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
@@ -155,7 +154,7 @@
                                                     <div class="padd-top-15">
                                                         <div></div>
 
-                                                  
+
 
 
                                                         <div class="blog-sidebar">
@@ -209,10 +208,10 @@
                                                                 <div class="mrg-bot-5 h4"> Việc làm theo Loại hình <a href="javascript:void(0)"
                                                                     class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                                             <ul class="sidebar-list expandible-bk">
-                    
+
                                                                 @foreach(App\Models\JobPost::select('job_type')->distinct()->get()
                                                                 as $jobType_item)
-                    
+
                                                                 <li>
                                                                     <a href="{{ route('danh-sach-viec-lam', ['keyword' => $jobType_item->job_type, 'location' => '', 'career_id' => '']) }}"
                                                                         title="{{$jobType_item->job_type}}">
@@ -220,7 +219,7 @@
                                                                     </a>
                                                                 </li>
                                                                 @endforeach
-                    
+
                                                             </ul>
                                                             </div>
                                                             <div
@@ -228,8 +227,8 @@
                                                                 <div class="mrg-bot-5 h4"> Việc làm theo Ngành nghề <a href="javascript:void(0)"
                                                                     class="pull-right"> <i class="fa fa-angle-double-down"></i></a></div>
                                                             <ul class="sidebar-list expandible-bk">
-                    
-                    
+
+
                                                                 @foreach(
                                                                 App\Models\CommonCareer::withCount('jobPosts') // Count related job posts
                                                                 ->orderBy('job_posts_count', 'desc') // Sort by the number of job posts
@@ -261,7 +260,7 @@
                                     style="display: block;margin: auto;"></div>
                         </div>
                     </section> --}}
-              
+
 
 
                     @livewire('employer.inc.footer')
@@ -329,3 +328,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized', () => {
+        Livewire.on('urlChange', (params) => {
+            let url = new URL(window.location.href);
+
+            // Cập nhật hoặc thêm career_id vào URL
+            if (params.career_id) {
+                url.searchParams.set('career_id', params.career_id);
+            } else {
+                url.searchParams.delete('career_id');
+            }
+
+            // Cập nhật URL mà không reload trang
+            window.history.pushState({}, '', url);
+        });
+    });
+</script>
