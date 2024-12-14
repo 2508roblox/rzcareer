@@ -17,6 +17,7 @@ class Register extends Component
     public $password;
     public $email;
     public $rememberMe = false;
+    public $error = [];
 
     public function mount()
     {
@@ -28,12 +29,6 @@ class Register extends Component
 
     public function register()
     {
-        // Validate input data
-        $this->validate([
-            'password' => 'required|string|min:6',
-            'email' => 'required|email|unique:users,email',
-            'full_name' => 'required|string|max:255',
-        ]);
 
         try {
 
