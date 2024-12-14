@@ -21,7 +21,7 @@ class Checkpayment extends Controller
 
         // Gọi API để lấy danh sách giao dịch
         $url = 'https://my.sepay.vn/userapi/transactions/list';
-        $accountNumber = '104567890';
+        $accountNumber = '0966579217';
         $limit = 10;
 
         // Khởi tạo cURL
@@ -32,7 +32,7 @@ class Checkpayment extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: application/json',
-            'Authorization: Bearer ZTAMVHYFPJWVYTNXQWXEMAP5IOBUADBMH079LUDYBQJQRZLHZTUI2TXS3LS8F8PL',
+            'Authorization: Bearer FHQMNTA45AVPJTZAUU2C61UZQ3OWBZMFDII1MESK8GXYVPB7NKS7JHYLN0PAXQEL',
         ]);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 

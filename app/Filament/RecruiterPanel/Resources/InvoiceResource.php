@@ -71,8 +71,10 @@ class InvoiceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('invoice_code')
+                    ->searchable()
+                    ->sortable()
                     ->label('Mã hóa đơn'), // Tiêu đề bằng tiếng Việt
-                    Tables\Columns\TextColumn::make('total_price')
+                Tables\Columns\TextColumn::make('total_price')
                     ->money('vnd') // Đổi từ 'usd' thành 'vnd'
                     ->label('Tổng giá'), // Tiêu đề bằng tiếng Việt
 
