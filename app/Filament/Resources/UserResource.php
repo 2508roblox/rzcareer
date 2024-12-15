@@ -155,18 +155,6 @@ class UserResource extends Resource
                             ]),
                     ]),
 
-                Section::make('Thông Báo')
-                    ->schema([
-                        Grid::make(2)
-                            ->schema([
-                                Forms\Components\Toggle::make('email_notification_active')
-                                    ->required()
-                                    ->label('Kích Hoạt Thông Báo Email'),
-                                Forms\Components\Toggle::make('sms_notification_active')
-                                    ->required()
-                                    ->label('Kích Hoạt Thông Báo SMS'),
-                            ]),
-                    ]),
 
                 Section::make('Trạng Thái Tài Khoản')
                     ->schema([

@@ -33,7 +33,7 @@ class ResumeResource extends Resource
     protected static ?string $model = Resume::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-document';
-    protected static ?string $navigationGroup = 'Sơ yếu lý lịch & Mục đã lưu';
+    protected static ?string $navigationGroup = 'Sơ yếu lý lịch & Hồ sơ';
     public static function getPluralModelLabel(): string
     {
         return 'Sơ yếu lý lịch'; // Trả về tên số nhiều cho mô hình Company
@@ -188,7 +188,7 @@ class ResumeResource extends Resource
                             ->required()
                             ->label('Tên Kỹ năng Nâng cao')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('level')
                             ->required()
                             ->numeric(1)
@@ -199,7 +199,7 @@ class ResumeResource extends Resource
                 ])
                 ->label('Kỹ năng Nâng cao')
                 ->columnSpanFull(),
-            
+
 
                 // Group for Resume Type
                 Section::make('Loại Hồ sơ')
@@ -227,28 +227,28 @@ class ResumeResource extends Resource
                             ->required()
                             ->label('Tên Tổ chức')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('degree_name')
                             ->required()
                             ->label('Bằng cấp')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('major')
                             ->required()
                             ->label('Ngành học')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày bắt đầu')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('completed_date')
                             ->label('Ngày hoàn thành')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         Textarea::make('description')
                             ->label('Mô tả')
                             ->columnSpan(2), // Span both columns for description
@@ -256,7 +256,7 @@ class ResumeResource extends Resource
                 ])
                 ->label('Chi tiết Học vấn')
                 ->columnSpanFull(),
-            
+
 
                 // Group for Certificates
                 Repeater::make('certificates')
@@ -267,23 +267,23 @@ class ResumeResource extends Resource
                             ->required()
                             ->label('Tên Chứng chỉ')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('training_place')
                             ->required()
                             ->label('Cơ sở cấp')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày cấp')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('expiration_date')
                             ->label('Ngày hết hạn')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         Textarea::make('description')
                             ->label('Mô tả')
                             ->columnSpan(2), // Span both columns for description
@@ -291,7 +291,7 @@ class ResumeResource extends Resource
                 ])
                 ->label('Chứng chỉ đạt được')
                 ->columnSpanFull(),
-            
+
 
                 // Group for Experience Details
                 Repeater::make('experienceDetails')
@@ -302,23 +302,23 @@ class ResumeResource extends Resource
                             ->required()
                             ->label('Tên Công ty')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('job_name') // Updated to match the fillable attribute
                             ->required()
                             ->label('Chức vụ')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('start_date')
                             ->required()
                             ->label('Ngày bắt đầu')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('end_date')
                             ->label('Ngày kết thúc')
                             ->type('date')
                             ->columnSpan(1), // Span 1 column
-            
+
                         Textarea::make('description') // Updated to match the fillable attribute
                             ->required()
                             ->label('Nhiệm vụ')
@@ -327,7 +327,7 @@ class ResumeResource extends Resource
                 ])
                 ->label('Kinh nghiệm làm việc')
                 ->columnSpanFull(),
-            
+
                 // Group for Language Skills
                 Repeater::make('languageSkills')
                 ->relationship('languageSkills')
@@ -346,9 +346,9 @@ class ResumeResource extends Resource
                                 'Tiếng Trung' => 'Tiếng Trung',
                                 'Tiếng Nga' => 'Tiếng Nga',
                             ])
-                            
+
                             ->columnSpan(1), // Span 1 column
-            
+
                         TextInput::make('level') // This remains as a TextInput for proficiency level
                             ->required()
                             ->numeric()
@@ -356,10 +356,10 @@ class ResumeResource extends Resource
                             ->columnSpan(1), // Span 1 column
                     ]),
                 ])
-            
+
                 ->label('Kỹ năng Ngôn ngữ')
                 ->columnSpanFull(),
-            
+
 
             ]);
     }

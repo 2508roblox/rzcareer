@@ -18,7 +18,7 @@ class SeekerProfileResource extends Resource
     protected static ?string $model = SeekerProfile::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
-    protected static ?string $navigationGroup = 'Hồ Sơ & Lượt Xem'; // Điều chỉnh tên nhóm cho phù hợp với ngữ cảnh tiếng Việt
+    protected static ?string $navigationGroup = 'Sơ yếu lý lịch & Hồ sơ';
     public static function getPluralModelLabel(): string
     {
         return 'Hồ sơ ứng viên'; // Ví dụ: tên số nhiều cho mô hình 'SeekerProfile'
