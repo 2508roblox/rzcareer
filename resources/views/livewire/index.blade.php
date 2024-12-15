@@ -515,6 +515,7 @@
                                                 <div class="row row-cols-1 row-cols-lg-3 g-2">
 
                                                     @foreach ($jobChunk as $jobPost)
+
                                                         <div class="col">
                                                             <a href="{{ url('viec-lam/' . $jobPost['slug']) }}"
                                                                 style="position: relative;"
