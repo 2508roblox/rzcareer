@@ -117,7 +117,7 @@
                                                 <div class="row g-0 align-items-center">
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
-                                                            src="/assets_livewire/img/2024/ic1.svg?v=234208153092"
+                                                            src="/assets/robot.png"
                                                             alt="Tìm việc theo ngành nghề">
                                                     </div>
                                                     <div class="col-8">
@@ -137,7 +137,7 @@
                                                 <div class="row g-0 align-items-center">
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
-                                                            src="/assets_livewire/img/2024/ic2.svg?v=234208153092"
+                                                            src="/assets/robot.png"
                                                             alt="Việc làm theo địa điểm">
                                                     </div>
                                                     <div class="col-8">
@@ -825,7 +825,7 @@
                                                 <div class="row g-0 align-items-center">
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
-                                                            src="/assets_livewire/img/2024/ic1.svg?v=234208153092"
+                                                            src="/assets/robot.png"
                                                             alt="Tìm việc theo ngành nghề">
                                                     </div>
                                                     <div class="col-8">
@@ -845,7 +845,7 @@
                                                 <div class="row g-0 align-items-center">
                                                     <div class="col-4 p-1 text-center">
                                                         <img height="90" width="90" loading="lazy"
-                                                            src="/assets_livewire/img/2024/ic2.svg?v=234208153092"
+                                                            src="/assets/robot.png"
                                                             alt="Việc làm theo địa điểm">
                                                     </div>
                                                     <div class="col-8">

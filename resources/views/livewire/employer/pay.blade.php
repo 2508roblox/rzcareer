@@ -178,7 +178,7 @@
                                 <br />
                                 Vui lòng thanh toán vào thông tin tài khoản trên để hệ thống xử lý hoá đơn tự động.
                             </p>
-                            <a href="/pay/client/invoices">
+                            <a href="/recruiter/invoices">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                                 <span>Quay lại</span></a>
                         </div>
