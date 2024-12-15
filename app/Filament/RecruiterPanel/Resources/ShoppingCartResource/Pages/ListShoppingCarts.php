@@ -20,7 +20,10 @@ class ListShoppingCarts extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+
+            Actions\Action::make('goToServices')
+                ->label('Danh sách dịch vụ')
+                ->url('/employer/order'), // Adjust the route name as needed
             Actions\Action::make('createInvoice')
                 ->label('Tạo hóa đơn')
                 ->icon('heroicon-o-document-text')

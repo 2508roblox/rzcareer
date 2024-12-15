@@ -80,10 +80,23 @@ class JobPostServiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('purchased_service_id')
                     ->label('Mã Dịch Vụ Đã Mua'), // Thêm nhãn cho cột purchased_service_id
+                    Tables\Columns\TextColumn::make('list_jobs')
+                    ->label('Danh Sách Công Việc')
+                    ->formatStateUsing(function ($record) {
+                        // Assuming $record->list_jobs is already an array
+                        $jobIds = $record->list_jobs;
+                        // Fetch job names based on IDs
+                        $jobNames = array_map(function ($jobId) {
+                            $jobPost = JobPost::find($jobId); // Adjust this based on your Job model
+                            return $jobPost ? $jobPost->job_name : 'N/A'; // Handle not found case
+                        }, $jobIds);
 
-                Tables\Columns\TextColumn::make('list_jobs')
-                    ->label('Danh Sách Công Việc'), // Thêm nhãn cho cột list_jobs
-
+                        // Create badge HTML for each job name
+                        return collect($jobNames)->map(function ($name) {
+                            return '<span class="badge badge-primary">' . htmlspecialchars($name) . '</span>';
+                        })->implode(' '); // Join badges with a space
+                    })
+                    ->html(), // Enable HTML rendering
                 Tables\Columns\TextColumn::make('purchasedService.expiration_date') // Sử dụng tên mối quan hệ
                     ->label('Ngày Hết Hạn') // Thêm nhãn cho cột expiration_date
                     ->dateTime(), // Đảm bảo hiển thị dưới dạng ngày

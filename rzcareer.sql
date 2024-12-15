@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 15, 2024 lúc 12:50 PM
+-- Thời gian đã tạo: Th12 15, 2024 lúc 01:14 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -1559,7 +1559,8 @@ CREATE TABLE `invoices` (
 --
 
 INSERT INTO `invoices` (`id`, `invoice_code`, `user_id`, `total_price`, `status`, `created_at`, `updated_at`) VALUES
-(19, 'INVGUEAIYOS', 36, 100000, 'successful', '2024-12-15 11:43:24', '2024-12-15 11:43:24');
+(19, 'INVGUEAIYOS', 36, 100000, 'successful', '2024-12-15 11:43:24', '2024-12-15 11:43:24'),
+(20, 'INVZGTFXIWA', 36, 10000, 'successful', '2024-12-15 12:09:14', '2024-12-15 12:09:14');
 
 -- --------------------------------------------------------
 
@@ -1914,7 +1915,7 @@ INSERT INTO `job_posts` (`id`, `career_id`, `company_id`, `location_id`, `user_i
 (275, 7, 5293, 1, 1, 'Nhân Viên Kinh Doanh/ Telesales Tài Chính Không Yêu Cầu Kinh Nghiệm ( Thu Nhập Trên 12 Triệu )', 'nhan-vien-kinh-doanh-telesales-tai-chinh-khong-yeu-cau-kinh-nghiem--thu-nhap-tren-12-trieu-', '2024-02-21', 17, '0', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
 (276, 3, 5162, 1, 1, 'Chuyên Viên Kinh Doanh Quốc Tế', 'chuyen-vien-kinh-doanh-quoc-te', '2024-08-25', 20, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
 (277, 21, 5599, 1, 1, 'Nhân Viên Quản Lý Ngành Hàng', 'nhan-vien-quan-ly-nganh-hang', '2024-06-15', 15, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
-(278, 8, 6010, 1, 1, 'Cán Bộ Đảm Bảo Chất Lượng (QA)', 'can-bo-dam-bao-chat-luong-qa', '2024-05-04', 5, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1007, 100, 1, '2024-09-29 02:41:13', '2024-12-15 11:25:07'),
+(278, 8, 6010, 1, 36, 'Cán Bộ Đảm Bảo Chất Lượng (QA)', 'can-bo-dam-bao-chat-luong-qa', '2024-05-04', 5, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1007, 100, 1, '2024-09-29 02:41:13', '2024-12-15 11:25:07'),
 (279, 11, 5563, 1, 1, 'Business Development Manager', 'business-development-manager', '2024-09-21', 4, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
 (280, 20, 5298, 1, 1, 'Nhân Viên Kinh Doanh/ Phát Triển Kênh Bán Bảo Hiểm', 'nhan-vien-kinh-doanh-phat-trien-kenh-ban-bao-hiem', '2024-04-06', 11, '0', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
 (281, 14, 5315, 1, 1, 'Nhân Viên Kế Toán Công Nợ', 'nhan-vien-ke-toan-cong-no', '2024-03-05', 14, '0', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:13', '2024-09-29 02:41:13'),
@@ -5277,13 +5278,10 @@ INSERT INTO `job_posts` (`id`, `career_id`, `company_id`, `location_id`, `user_i
 (3611, 5, 5932, 1, 1, 'Nhân Viên Thiết Kế Điện', 'nhan-vien-thiet-ke-dien', '2024-05-23', 12, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:15', '2024-09-29 02:41:15'),
 (3612, 7, 5782, 1, 1, '[G7] BSV - Nhân Viên Văn Phòng - Viettel Telecom - Quận 3', 'g7-bsv---nhan-vien-van-phong---viettel-telecom---quan-3', '2024-03-18', 9, '0', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:15', '2024-09-29 02:41:15'),
 (3613, 12, 5079, 1, 1, 'System Engineer', 'system-engineer', '2024-06-03', 16, '2', '(Mô tả công việc)', '(Yêu cầu công việc)', '(Lợi ích)', 'Nhân viên', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 10000000, 15000000, 'monthly', 1, 1, 'giang', '983472356', 'trangiangzxc@gmail.com', 1000, 100, 1, '2024-09-29 02:41:15', '2024-09-29 02:41:15'),
-(3614, 6, 6010, 1, 36, '123', '123', '2024-10-10', 1, '1', '<p>123123</p>', '123', '123', 'Support', 'Remote', '6-10 years', 'Bachelor\'s Degree', 'Contract', 1, 10, 'monthly', 1, 1, '1', '1', '2@2', 2, 0, 0, '2024-09-30 06:30:32', '2024-12-15 11:48:02'),
-(3615, 17, 5899, 1, 36, '123124213', '123124213', '2024-10-30', 123, '1', '<p>123</p>', '<p>123</p>', '<p>123</p>', 'Manager', 'Remote', '0-1 years', 'Bằng cử nhân', 'Toàn thời gian', 123123, 123123, 'monthly', 1, 0, '123', '123', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:51:51', '2024-10-29 07:51:51'),
 (3616, 10, 5239, 1, 42, 'Nhân Viên Kinh Doanh / Sales / Tư Vấn Tài Chính (L23CB 20 Triệu + Hoa Hồng)', 'nhan-vien-kinh-doanh-sales-tu-van-tai-chinh-l23cb-20-trieu-hoa-hong', '2024-10-10', 12, '1', '<p>12</p>', '<p>12</p>', '<p>12</p>', 'Developer', 'Remote', '10+ years', 'Bằng cử nhân', 'Contract', 123, 123, 'monthly', 0, 0, 'faweg ăegaw', '0589317493', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:54:52', '2024-10-29 07:54:52'),
 (3617, 10, 5239, 1, 42, 'Nhân Viên Kinh Doanh / Sales / Tư Vấn Tài Chính (L22133CB 20 Triệu + Hoa Hồng)', 'nhan-vien-kinh-doanh-sales-tu-van-tai-chinh-l22133cb-20-trieu-hoa-hong', '2024-10-10', 12, '1', '<p>12</p>', '<p>12</p>', '<p>12</p>', 'Developer', 'Remote', '10+ years', 'Bằng cử nhân', 'Contract', 123, 123, 'monthly', 0, 0, 'faweg ăegaw', '0589317493', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:57:09', '2024-10-29 07:57:09'),
 (3618, 10, 5239, 1, 42, 'Nhân Viên Kinh Doanh / Sales / Tư 123Vấn Tài Chính (L22133CB 20 Triệu + Hoa Hồng)', 'nhan-vien-kinh-doanh-sales-tu-123van-tai-chinh-l22133cb-20-trieu-hoa-hong', '2024-10-10', 12, '1', '<p>12</p>', '<p>12</p>', '<p>12</p>', 'Developer', 'Remote', '10+ years', 'Bằng cử nhân', 'Contract', 123, 123, 'monthly', 1, 0, 'faweg ăegaw', '0589317493', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:57:26', '2024-10-29 07:57:26'),
 (3619, 10, 5239, 1, 42, 'Nhân Viên Kinh Doanh / Sales / T123ư 123Vấn Tài Chính (L22133CB 20 Triệu + Hoa Hồng)', 'nhan-vien-kinh-doanh-sales-t123u-123van-tai-chinh-l22133cb-20-trieu-hoa-hong', '2024-10-10', 12, '1', '<p>12</p>', '<p>12</p>', '<p>12</p>', 'Developer', 'Remote', '10+ years', 'Bằng cử nhân', 'Contract', 123, 123, 'monthly', 1, 0, 'faweg ăegaw', '0589317493', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:57:58', '2024-10-29 07:57:58'),
-(3620, 6, 5899, 1, 36, '1231241231c31c313', '1231241231c31c313', '2024-10-09', 123, '0', '<p>124</p>', '<p>124</p>', '<p>123</p>', 'Developer', 'Remote', '0-1 years', 'Bằng cử nhân', 'Part-time', 123, 123, 'monthly', 0, 0, 'faweg ăegaw', '0589317493', 'trangiangzxc@gmail.com', 0, 0, 0, '2024-10-29 07:59:27', '2024-10-29 07:59:27'),
 (3621, 6, 5239, 1, 36, 'Nhân Viên Kinh Doanh / Sales / Tư Vấn Tài Chính (LCB 20 Triệu + Hoa Hồng)1222', 'nhan-vien-kinh-doanh-sales-tu-van-tai-chinh-lcb-20-trieu-hoa-hong1222', '2024-10-02', 123, '0', '<p>124</p>', '<p>124</p>', '<p>124</p>', 'Developer', 'Remote', '2-3 years', 'Bằng cử nhân', 'Toàn thời gian', 124, 124, 'monthly', 0, 0, 'faweg ăegaw', '124', 'trangiangzxc@gmail.com', 1, 0, 0, '2024-10-30 03:13:55', '2024-12-15 11:38:39');
 
 -- --------------------------------------------------------
@@ -5321,6 +5319,14 @@ CREATE TABLE `job_post_services` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `job_post_services`
+--
+
+INSERT INTO `job_post_services` (`id`, `purchased_service_id`, `list_jobs`, `created_at`, `updated_at`) VALUES
+(9, 18, '[\"3621\",\"278\"]', '2024-12-15 11:59:42', '2024-12-15 11:59:42'),
+(10, 19, '[\"278\",\"3621\"]', '2024-12-15 12:09:52', '2024-12-15 12:09:52');
 
 -- --------------------------------------------------------
 
@@ -7423,20 +7429,20 @@ INSERT INTO `pulse_aggregates` (`id`, `bucket`, `period`, `type`, `key`, `aggreg
 (139653, 1734253920, 60, 'cache_miss', 'theme', 'count', 20.00, NULL),
 (139654, 1734253920, 360, 'cache_miss', 'theme', 'count', 84.00, NULL),
 (139655, 1734253920, 1440, 'cache_miss', 'theme', 'count', 84.00, NULL),
-(139656, 1734253920, 10080, 'cache_miss', 'theme', 'count', 280.00, NULL),
+(139656, 1734253920, 10080, 'cache_miss', 'theme', 'count', 300.00, NULL),
 (139657, 1734253920, 60, 'cache_miss', 'theme_color', 'count', 5.00, NULL),
 (139658, 1734253920, 360, 'cache_miss', 'theme_color', 'count', 21.00, NULL),
 (139659, 1734253920, 1440, 'cache_miss', 'theme_color', 'count', 21.00, NULL),
-(139660, 1734253920, 10080, 'cache_miss', 'theme_color', 'count', 70.00, NULL),
+(139660, 1734253920, 10080, 'cache_miss', 'theme_color', 'count', 75.00, NULL),
 (139661, 1734253920, 60, 'cache_hit', 'spatie.permission.cache', 'count', 6.00, NULL),
 (139662, 1734253920, 360, 'cache_hit', 'spatie.permission.cache', 'count', 30.00, NULL),
 (139663, 1734253920, 1440, 'cache_hit', 'spatie.permission.cache', 'count', 30.00, NULL),
-(139664, 1734253920, 10080, 'cache_hit', 'spatie.permission.cache', 'count', 133.00, NULL),
+(139664, 1734253920, 10080, 'cache_hit', 'spatie.permission.cache', 'count', 139.00, NULL),
 (139675, 1734253860, 60, 'slow_request', '[\"GET\",\"\\/admin\\/users\\/{record}\\/edit\",\"App\\\\Filament\\\\Resources\\\\UserResource\\\\Pages\\\\EditUser@__invoke\"]', 'max', 1030.00, NULL),
 (139679, 1734253920, 60, 'user_request', '36', 'count', 23.00, NULL),
 (139680, 1734253920, 360, 'user_request', '36', 'count', 49.00, NULL),
 (139681, 1734253920, 1440, 'user_request', '36', 'count', 49.00, NULL),
-(139682, 1734253920, 10080, 'user_request', '36', 'count', 230.00, NULL),
+(139682, 1734253920, 10080, 'user_request', '36', 'count', 240.00, NULL),
 (139687, 1734253920, 60, 'slow_request', '[\"GET\",\"\\/admin\\/resumes\",\"App\\\\Filament\\\\Resources\\\\ResumeResource\\\\Pages\\\\ListResumes@__invoke\"]', 'count', 1.00, NULL),
 (139688, 1734253920, 360, 'slow_request', '[\"GET\",\"\\/admin\\/resumes\",\"App\\\\Filament\\\\Resources\\\\ResumeResource\\\\Pages\\\\ListResumes@__invoke\"]', 'count', 1.00, NULL),
 (139689, 1734253920, 1440, 'slow_request', '[\"GET\",\"\\/admin\\/resumes\",\"App\\\\Filament\\\\Resources\\\\ResumeResource\\\\Pages\\\\ListResumes@__invoke\"]', 'count', 1.00, NULL),
@@ -7653,13 +7659,13 @@ INSERT INTO `pulse_aggregates` (`id`, `bucket`, `period`, `type`, `key`, `aggreg
 (140754, 1734262560, 1440, 'slow_user_request', '36', 'count', 9.00, NULL),
 (140755, 1734262560, 60, 'user_request', '36', 'count', 11.00, NULL),
 (140756, 1734262560, 360, 'user_request', '36', 'count', 77.00, NULL),
-(140757, 1734262560, 1440, 'user_request', '36', 'count', 133.00, NULL),
+(140757, 1734262560, 1440, 'user_request', '36', 'count', 143.00, NULL),
 (140758, 1734262560, 60, 'cache_miss', 'theme', 'count', 8.00, NULL),
 (140759, 1734262560, 360, 'cache_miss', 'theme', 'count', 64.00, NULL),
-(140760, 1734262560, 1440, 'cache_miss', 'theme', 'count', 160.00, NULL),
+(140760, 1734262560, 1440, 'cache_miss', 'theme', 'count', 180.00, NULL),
 (140761, 1734262560, 60, 'cache_miss', 'theme_color', 'count', 2.00, NULL),
 (140762, 1734262560, 360, 'cache_miss', 'theme_color', 'count', 16.00, NULL),
-(140763, 1734262560, 1440, 'cache_miss', 'theme_color', 'count', 40.00, NULL),
+(140763, 1734262560, 1440, 'cache_miss', 'theme_color', 'count', 45.00, NULL),
 (140764, 1734262560, 60, 'cache_miss', 'spatie.permission.cache', 'count', 1.00, NULL),
 (140765, 1734262560, 360, 'cache_miss', 'spatie.permission.cache', 'count', 1.00, NULL),
 (140766, 1734262560, 1440, 'cache_miss', 'spatie.permission.cache', 'count', 1.00, NULL),
@@ -7670,7 +7676,7 @@ INSERT INTO `pulse_aggregates` (`id`, `bucket`, `period`, `type`, `key`, `aggreg
 (140775, 1734253920, 10080, 'slow_request', '[\"GET\",\"\\/recruiter\",\"Filament\\\\Pages\\\\Dashboard\"]', 'max', 8366.00, NULL),
 (140776, 1734262560, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
 (140777, 1734262560, 360, 'cache_hit', 'spatie.permission.cache', 'count', 53.00, NULL),
-(140778, 1734262560, 1440, 'cache_hit', 'spatie.permission.cache', 'count', 94.00, NULL),
+(140778, 1734262560, 1440, 'cache_hit', 'spatie.permission.cache', 'count', 100.00, NULL),
 (140792, 1734262560, 60, 'slow_request', '[\"POST\",\"\\/recruiter\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
 (140793, 1734262560, 360, 'slow_request', '[\"POST\",\"\\/recruiter\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
 (140794, 1734262560, 1440, 'slow_request', '[\"POST\",\"\\/recruiter\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
@@ -7802,7 +7808,173 @@ INSERT INTO `pulse_aggregates` (`id`, `bucket`, `period`, `type`, `key`, `aggreg
 (142056, 1734263400, 60, 'user_request', '36', 'count', 2.00, NULL),
 (142057, 1734263400, 60, 'cache_miss', 'theme', 'count', 8.00, NULL),
 (142058, 1734263400, 60, 'cache_miss', 'theme_color', 'count', 2.00, NULL),
-(142059, 1734263400, 60, 'cache_hit', 'spatie.permission.cache', 'count', 2.00, NULL);
+(142059, 1734263400, 60, 'cache_hit', 'spatie.permission.cache', 'count', 2.00, NULL),
+(142088, 1734263760, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142089, 1734263640, 360, 'user_request', '36', 'count', 10.00, NULL),
+(142090, 1734263760, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142091, 1734263640, 360, 'cache_miss', 'theme', 'count', 20.00, NULL),
+(142092, 1734263760, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142093, 1734263640, 360, 'cache_miss', 'theme_color', 'count', 5.00, NULL),
+(142094, 1734263760, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142095, 1734263640, 360, 'cache_hit', 'spatie.permission.cache', 'count', 6.00, NULL),
+(142104, 1734263820, 60, 'user_request', '36', 'count', 3.00, NULL),
+(142108, 1734263820, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142109, 1734263820, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142110, 1734263820, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142128, 1734263940, 60, 'user_request', '36', 'count', 6.00, NULL),
+(142132, 1734263940, 60, 'cache_miss', 'theme', 'count', 12.00, NULL),
+(142133, 1734263940, 60, 'cache_miss', 'theme_color', 'count', 3.00, NULL),
+(142134, 1734263940, 60, 'cache_hit', 'spatie.permission.cache', 'count', 4.00, NULL),
+(142192, 1734264060, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'count', 1.00, NULL),
+(142193, 1734264000, 360, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'count', 2.00, NULL),
+(142194, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'count', 2.00, NULL),
+(142195, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'count', 2.00, NULL),
+(142196, 1734264060, 60, 'slow_user_request', '36', 'count', 1.00, NULL),
+(142197, 1734264000, 360, 'slow_user_request', '36', 'count', 2.00, NULL),
+(142198, 1734264000, 1440, 'slow_user_request', '36', 'count', 5.00, NULL),
+(142199, 1734264000, 10080, 'slow_user_request', '36', 'count', 5.00, NULL),
+(142200, 1734264060, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142201, 1734264000, 360, 'user_request', '36', 'count', 8.00, NULL),
+(142202, 1734264000, 1440, 'user_request', '36', 'count', 41.00, NULL),
+(142203, 1734264000, 10080, 'user_request', '36', 'count', 41.00, NULL),
+(142204, 1734264060, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142205, 1734264000, 360, 'cache_miss', 'theme', 'count', 20.00, NULL),
+(142206, 1734264000, 1440, 'cache_miss', 'theme', 'count', 76.00, NULL),
+(142207, 1734264000, 10080, 'cache_miss', 'theme', 'count', 76.00, NULL),
+(142208, 1734264060, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142209, 1734264000, 360, 'cache_miss', 'theme_color', 'count', 5.00, NULL),
+(142210, 1734264000, 1440, 'cache_miss', 'theme_color', 'count', 19.00, NULL),
+(142211, 1734264000, 10080, 'cache_miss', 'theme_color', 'count', 19.00, NULL),
+(142212, 1734264060, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142213, 1734264000, 360, 'cache_hit', 'spatie.permission.cache', 'count', 5.00, NULL),
+(142214, 1734264000, 1440, 'cache_hit', 'spatie.permission.cache', 'count', 24.00, NULL),
+(142215, 1734264000, 10080, 'cache_hit', 'spatie.permission.cache', 'count', 24.00, NULL),
+(142216, 1734264060, 60, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'count', 1.00, NULL),
+(142217, 1734264000, 360, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'count', 1.00, NULL),
+(142218, 1734264000, 1440, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'count', 1.00, NULL),
+(142219, 1734264000, 10080, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'count', 1.00, NULL),
+(142220, 1734264060, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'max', 2250.00, NULL),
+(142221, 1734264000, 360, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'max', 2250.00, NULL),
+(142222, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'max', 2250.00, NULL),
+(142223, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'max', 2250.00, NULL),
+(142224, 1734264060, 60, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'max', 1734264088.00, NULL),
+(142225, 1734264000, 360, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'max', 1734264088.00, NULL),
+(142226, 1734264000, 1440, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'max', 1734264088.00, NULL),
+(142227, 1734264000, 10080, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 'max', 1734264088.00, NULL),
+(142228, 1734264120, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'count', 1.00, NULL),
+(142229, 1734264120, 60, 'slow_user_request', '36', 'count', 1.00, NULL),
+(142230, 1734264120, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142231, 1734264120, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142232, 1734264120, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142233, 1734264120, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142252, 1734264120, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 'max', 1005.00, NULL),
+(142256, 1734264180, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142257, 1734264180, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142258, 1734264180, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142259, 1734264180, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142272, 1734264240, 60, 'user_request', '36', 'count', 3.00, NULL),
+(142273, 1734264240, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142274, 1734264240, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142275, 1734264240, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142296, 1734264300, 60, 'user_request', '36', 'count', 2.00, NULL),
+(142297, 1734264300, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142298, 1734264300, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142299, 1734264300, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142312, 1734264360, 60, 'cache_miss', 'theme', 'count', 20.00, NULL),
+(142313, 1734264360, 360, 'cache_miss', 'theme', 'count', 52.00, NULL),
+(142314, 1734264360, 60, 'cache_miss', 'theme_color', 'count', 5.00, NULL),
+(142315, 1734264360, 360, 'cache_miss', 'theme_color', 'count', 13.00, NULL),
+(142316, 1734264360, 60, 'cache_hit', 'spatie.permission.cache', 'count', 6.00, NULL),
+(142317, 1734264360, 360, 'cache_hit', 'spatie.permission.cache', 'count', 18.00, NULL),
+(142328, 1734264360, 60, 'user_request', '36', 'count', 6.00, NULL),
+(142329, 1734264360, 360, 'user_request', '36', 'count', 32.00, NULL),
+(142364, 1734264360, 60, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142365, 1734264360, 360, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142366, 1734264000, 1440, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142367, 1734264000, 10080, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142368, 1734264360, 60, 'slow_user_request', '36', 'count', 1.00, NULL),
+(142369, 1734264360, 360, 'slow_user_request', '36', 'count', 3.00, NULL),
+(142370, 1734264360, 60, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'count', 1.00, NULL),
+(142371, 1734264360, 360, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'count', 1.00, NULL),
+(142372, 1734264000, 1440, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'count', 1.00, NULL),
+(142373, 1734264000, 10080, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'count', 1.00, NULL),
+(142384, 1734264360, 60, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'max', 1775.00, NULL),
+(142385, 1734264360, 360, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'max', 1775.00, NULL),
+(142386, 1734264000, 1440, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'max', 1775.00, NULL),
+(142387, 1734264000, 10080, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 'max', 1775.00, NULL),
+(142388, 1734264360, 60, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'max', 1734264377.00, NULL),
+(142389, 1734264360, 360, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'max', 1734264377.00, NULL),
+(142390, 1734264000, 1440, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'max', 1734264377.00, NULL),
+(142391, 1734264000, 10080, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 'max', 1734264377.00, NULL),
+(142424, 1734264480, 60, 'user_request', '36', 'count', 5.00, NULL),
+(142432, 1734264480, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'count', 1.00, NULL),
+(142433, 1734264360, 360, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'count', 1.00, NULL),
+(142434, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'count', 1.00, NULL),
+(142435, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'count', 1.00, NULL),
+(142436, 1734264480, 60, 'slow_user_request', '36', 'count', 1.00, NULL),
+(142437, 1734264480, 60, 'cache_miss', 'theme', 'count', 8.00, NULL),
+(142438, 1734264480, 60, 'cache_miss', 'theme_color', 'count', 2.00, NULL),
+(142439, 1734264480, 60, 'cache_hit', 'spatie.permission.cache', 'count', 2.00, NULL),
+(142440, 1734264480, 60, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'count', 1.00, NULL),
+(142441, 1734264360, 360, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'count', 1.00, NULL),
+(142442, 1734264000, 1440, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'count', 1.00, NULL),
+(142443, 1734264000, 10080, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'count', 1.00, NULL),
+(142460, 1734264480, 60, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'max', 2702.00, NULL),
+(142461, 1734264360, 360, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'max', 2702.00, NULL),
+(142462, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'max', 2702.00, NULL),
+(142463, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 'max', 2702.00, NULL),
+(142464, 1734264480, 60, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'max', 1734264526.00, NULL),
+(142465, 1734264360, 360, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'max', 1734264526.00, NULL),
+(142466, 1734264000, 1440, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'max', 1734264526.00, NULL),
+(142467, 1734264000, 10080, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 'max', 1734264526.00, NULL),
+(142488, 1734264540, 60, 'user_request', '36', 'count', 19.00, NULL),
+(142504, 1734264540, 60, 'cache_miss', 'theme', 'count', 24.00, NULL),
+(142505, 1734264540, 60, 'cache_miss', 'theme_color', 'count', 6.00, NULL),
+(142506, 1734264540, 60, 'cache_hit', 'spatie.permission.cache', 'count', 9.00, NULL),
+(142648, 1734264600, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142652, 1734264660, 60, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142653, 1734264360, 360, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142654, 1734264000, 1440, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142655, 1734264000, 10080, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'count', 1.00, NULL),
+(142656, 1734264660, 60, 'slow_user_request', '36', 'count', 1.00, NULL),
+(142657, 1734264660, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142658, 1734264660, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142659, 1734264660, 60, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'count', 1.00, NULL),
+(142660, 1734264360, 360, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'count', 1.00, NULL),
+(142661, 1734264000, 1440, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'count', 1.00, NULL),
+(142662, 1734264000, 10080, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'count', 1.00, NULL),
+(142672, 1734264660, 60, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'max', 1725.00, NULL),
+(142673, 1734264360, 360, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'max', 1725.00, NULL),
+(142674, 1734264000, 1440, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'max', 1725.00, NULL),
+(142675, 1734264000, 10080, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 'max', 1725.00, NULL),
+(142676, 1734264660, 60, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'max', 1734264673.00, NULL),
+(142677, 1734264360, 360, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'max', 1734264673.00, NULL),
+(142678, 1734264000, 1440, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'max', 1734264673.00, NULL),
+(142679, 1734264000, 10080, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 'max', 1734264673.00, NULL),
+(142680, 1734264720, 60, 'user_request', '36', 'count', 1.00, NULL),
+(142681, 1734264720, 360, 'user_request', '36', 'count', 1.00, NULL),
+(142682, 1734264720, 60, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142683, 1734264720, 360, 'cache_miss', 'theme', 'count', 4.00, NULL),
+(142684, 1734264720, 60, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142685, 1734264720, 360, 'cache_miss', 'theme_color', 'count', 1.00, NULL),
+(142686, 1734264720, 60, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142687, 1734264720, 360, 'cache_hit', 'spatie.permission.cache', 'count', 1.00, NULL),
+(142696, 1734264780, 60, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'count', 2.00, NULL),
+(142697, 1734264720, 360, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'count', 2.00, NULL),
+(142698, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'count', 2.00, NULL),
+(142699, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'count', 2.00, NULL),
+(142700, 1734264780, 60, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'count', 1.00, NULL),
+(142701, 1734264720, 360, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'count', 1.00, NULL),
+(142702, 1734264000, 1440, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'count', 1.00, NULL),
+(142703, 1734264000, 10080, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'count', 1.00, NULL),
+(142704, 1734264780, 60, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'max', 2596.00, NULL),
+(142705, 1734264720, 360, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'max', 2596.00, NULL),
+(142706, 1734264000, 1440, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'max', 2596.00, NULL),
+(142707, 1734264000, 10080, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 'max', 2596.00, NULL),
+(142708, 1734264780, 60, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'max', 1734264797.00, NULL),
+(142709, 1734264720, 360, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'max', 1734264797.00, NULL),
+(142710, 1734264000, 1440, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'max', 1734264797.00, NULL),
+(142711, 1734264000, 10080, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 'max', 1734264797.00, NULL);
 
 -- --------------------------------------------------------
 
@@ -11398,7 +11570,225 @@ INSERT INTO `pulse_entries` (`id`, `timestamp`, `type`, `key`, `value`) VALUES
 (38703, 1734263414, 'cache_miss', 'theme', NULL),
 (38704, 1734263414, 'cache_miss', 'theme', NULL),
 (38705, 1734263414, 'cache_miss', 'theme', NULL),
-(38706, 1734263414, 'cache_hit', 'spatie.permission.cache', NULL);
+(38706, 1734263414, 'cache_hit', 'spatie.permission.cache', NULL),
+(38707, 1734263812, 'user_request', '36', NULL),
+(38708, 1734263813, 'cache_miss', 'theme', NULL),
+(38709, 1734263813, 'cache_miss', 'theme_color', NULL),
+(38710, 1734263813, 'cache_miss', 'theme', NULL),
+(38711, 1734263813, 'cache_miss', 'theme', NULL),
+(38712, 1734263813, 'cache_miss', 'theme', NULL),
+(38713, 1734263813, 'cache_hit', 'spatie.permission.cache', NULL),
+(38714, 1734263821, 'user_request', '36', NULL),
+(38715, 1734263825, 'user_request', '36', NULL),
+(38716, 1734263826, 'cache_miss', 'theme', NULL),
+(38717, 1734263826, 'cache_miss', 'theme_color', NULL),
+(38718, 1734263826, 'cache_miss', 'theme', NULL),
+(38719, 1734263826, 'cache_miss', 'theme', NULL),
+(38720, 1734263826, 'cache_miss', 'theme', NULL),
+(38721, 1734263826, 'cache_hit', 'spatie.permission.cache', NULL),
+(38722, 1734263835, 'user_request', '36', NULL),
+(38723, 1734263970, 'user_request', '36', NULL),
+(38724, 1734263970, 'user_request', '36', NULL),
+(38725, 1734263971, 'cache_miss', 'theme', NULL),
+(38726, 1734263971, 'cache_miss', 'theme_color', NULL),
+(38727, 1734263971, 'cache_miss', 'theme', NULL),
+(38728, 1734263971, 'cache_miss', 'theme', NULL),
+(38729, 1734263971, 'cache_miss', 'theme', NULL),
+(38730, 1734263971, 'cache_hit', 'spatie.permission.cache', NULL),
+(38731, 1734263975, 'user_request', '36', NULL),
+(38732, 1734263981, 'user_request', '36', NULL),
+(38733, 1734263982, 'cache_hit', 'spatie.permission.cache', NULL),
+(38734, 1734263982, 'user_request', '36', NULL),
+(38735, 1734263983, 'cache_miss', 'theme', NULL),
+(38736, 1734263983, 'cache_miss', 'theme_color', NULL),
+(38737, 1734263983, 'cache_miss', 'theme', NULL),
+(38738, 1734263983, 'cache_miss', 'theme', NULL),
+(38739, 1734263983, 'cache_miss', 'theme', NULL),
+(38740, 1734263983, 'cache_hit', 'spatie.permission.cache', NULL),
+(38741, 1734263986, 'user_request', '36', NULL),
+(38742, 1734263986, 'cache_miss', 'theme', NULL),
+(38743, 1734263986, 'cache_miss', 'theme_color', NULL),
+(38744, 1734263986, 'cache_miss', 'theme', NULL),
+(38745, 1734263986, 'cache_miss', 'theme', NULL),
+(38746, 1734263986, 'cache_miss', 'theme', NULL),
+(38747, 1734263986, 'cache_hit', 'spatie.permission.cache', NULL),
+(38748, 1734264088, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 2250),
+(38749, 1734264088, 'slow_user_request', '36', NULL),
+(38750, 1734264088, 'user_request', '36', NULL),
+(38751, 1734264088, 'cache_miss', 'theme', NULL),
+(38752, 1734264088, 'cache_miss', 'theme_color', NULL),
+(38753, 1734264088, 'cache_miss', 'theme', NULL),
+(38754, 1734264088, 'cache_miss', 'theme', NULL),
+(38755, 1734264088, 'cache_miss', 'theme', NULL),
+(38756, 1734264088, 'cache_hit', 'spatie.permission.cache', NULL),
+(38757, 1734264088, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\tables\\\\resources\\\\views\\\\columns\\\\text-column.blade.php\"]', 1734264088),
+(38758, 1734264122, 'slow_request', '[\"GET\",\"\\/recruiter\\/job-post-services\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\JobPostServiceResource\\\\Pages\\\\ListJobPostServices@__invoke\"]', 1005),
+(38759, 1734264122, 'slow_user_request', '36', NULL),
+(38760, 1734264122, 'user_request', '36', NULL),
+(38761, 1734264123, 'cache_miss', 'theme', NULL),
+(38762, 1734264123, 'cache_miss', 'theme_color', NULL),
+(38763, 1734264123, 'cache_miss', 'theme', NULL),
+(38764, 1734264123, 'cache_miss', 'theme', NULL),
+(38765, 1734264123, 'cache_miss', 'theme', NULL),
+(38766, 1734264123, 'cache_hit', 'spatie.permission.cache', NULL),
+(38767, 1734264212, 'user_request', '36', NULL),
+(38768, 1734264212, 'cache_miss', 'theme', NULL),
+(38769, 1734264212, 'cache_miss', 'theme_color', NULL),
+(38770, 1734264212, 'cache_miss', 'theme', NULL),
+(38771, 1734264212, 'cache_miss', 'theme', NULL),
+(38772, 1734264212, 'cache_miss', 'theme', NULL),
+(38773, 1734264212, 'cache_hit', 'spatie.permission.cache', NULL),
+(38774, 1734264258, 'user_request', '36', NULL),
+(38775, 1734264259, 'cache_miss', 'theme', NULL),
+(38776, 1734264259, 'cache_miss', 'theme_color', NULL),
+(38777, 1734264259, 'cache_miss', 'theme', NULL),
+(38778, 1734264259, 'cache_miss', 'theme', NULL),
+(38779, 1734264259, 'cache_miss', 'theme', NULL),
+(38780, 1734264259, 'cache_hit', 'spatie.permission.cache', NULL),
+(38781, 1734264273, 'user_request', '36', NULL),
+(38782, 1734264274, 'user_request', '36', NULL),
+(38783, 1734264356, 'user_request', '36', NULL),
+(38784, 1734264357, 'cache_miss', 'theme', NULL),
+(38785, 1734264357, 'cache_miss', 'theme_color', NULL),
+(38786, 1734264357, 'cache_miss', 'theme', NULL),
+(38787, 1734264357, 'cache_miss', 'theme', NULL),
+(38788, 1734264357, 'cache_miss', 'theme', NULL),
+(38789, 1734264357, 'cache_hit', 'spatie.permission.cache', NULL),
+(38790, 1734264359, 'user_request', '36', NULL),
+(38791, 1734264360, 'cache_miss', 'theme', NULL),
+(38792, 1734264360, 'cache_miss', 'theme_color', NULL),
+(38793, 1734264360, 'cache_miss', 'theme', NULL),
+(38794, 1734264360, 'cache_miss', 'theme', NULL),
+(38795, 1734264360, 'cache_miss', 'theme', NULL),
+(38796, 1734264360, 'cache_hit', 'spatie.permission.cache', NULL),
+(38797, 1734264363, 'user_request', '36', NULL),
+(38798, 1734264364, 'cache_miss', 'theme', NULL),
+(38799, 1734264364, 'cache_miss', 'theme_color', NULL),
+(38800, 1734264364, 'cache_miss', 'theme', NULL),
+(38801, 1734264364, 'cache_miss', 'theme', NULL),
+(38802, 1734264364, 'cache_miss', 'theme', NULL),
+(38803, 1734264364, 'cache_hit', 'spatie.permission.cache', NULL),
+(38804, 1734264367, 'user_request', '36', NULL),
+(38805, 1734264368, 'cache_miss', 'theme', NULL),
+(38806, 1734264368, 'cache_miss', 'theme_color', NULL),
+(38807, 1734264368, 'cache_miss', 'theme', NULL),
+(38808, 1734264368, 'cache_miss', 'theme', NULL),
+(38809, 1734264368, 'cache_miss', 'theme', NULL),
+(38810, 1734264368, 'cache_hit', 'spatie.permission.cache', NULL),
+(38811, 1734264373, 'user_request', '36', NULL),
+(38812, 1734264377, 'slow_request', '[\"POST\",\"\\/recruiter\\/shopping-carts\\/create\",\"via \\/livewire\\/update\"]', 1775),
+(38813, 1734264377, 'slow_user_request', '36', NULL),
+(38814, 1734264377, 'user_request', '36', NULL),
+(38815, 1734264377, 'cache_hit', 'spatie.permission.cache', NULL),
+(38816, 1734264377, 'exception', '[\"Illuminate\\\\Database\\\\QueryException\",\"vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Database\\\\Connection.php:825\"]', 1734264377),
+(38817, 1734264384, 'user_request', '36', NULL),
+(38818, 1734264385, 'cache_miss', 'theme', NULL),
+(38819, 1734264385, 'cache_miss', 'theme_color', NULL),
+(38820, 1734264385, 'cache_miss', 'theme', NULL),
+(38821, 1734264385, 'cache_miss', 'theme', NULL),
+(38822, 1734264385, 'cache_miss', 'theme', NULL),
+(38823, 1734264385, 'cache_hit', 'spatie.permission.cache', NULL),
+(38824, 1734264399, 'user_request', '36', NULL),
+(38825, 1734264399, 'cache_miss', 'theme', NULL),
+(38826, 1734264399, 'cache_miss', 'theme_color', NULL),
+(38827, 1734264399, 'cache_miss', 'theme', NULL),
+(38828, 1734264399, 'cache_miss', 'theme', NULL),
+(38829, 1734264399, 'cache_miss', 'theme', NULL),
+(38830, 1734264399, 'cache_hit', 'spatie.permission.cache', NULL),
+(38831, 1734264503, 'user_request', '36', NULL),
+(38832, 1734264519, 'user_request', '36', NULL),
+(38833, 1734264525, 'slow_request', '[\"GET\",\"\\/recruiter\\/shopping-carts\",\"App\\\\Filament\\\\RecruiterPanel\\\\Resources\\\\ShoppingCartResource\\\\Pages\\\\ListShoppingCarts@__invoke\"]', 2702),
+(38834, 1734264525, 'slow_user_request', '36', NULL),
+(38835, 1734264525, 'user_request', '36', NULL),
+(38836, 1734264526, 'cache_miss', 'theme', NULL),
+(38837, 1734264526, 'cache_miss', 'theme_color', NULL),
+(38838, 1734264526, 'cache_miss', 'theme', NULL),
+(38839, 1734264526, 'cache_miss', 'theme', NULL),
+(38840, 1734264526, 'cache_miss', 'theme', NULL),
+(38841, 1734264526, 'cache_hit', 'spatie.permission.cache', NULL),
+(38842, 1734264526, 'exception', '[\"Illuminate\\\\View\\\\ViewException\",\"vendor\\\\filament\\\\support\\\\resources\\\\views\\\\components\\\\icon.blade.php\"]', 1734264526),
+(38843, 1734264532, 'user_request', '36', NULL),
+(38844, 1734264533, 'cache_miss', 'theme', NULL),
+(38845, 1734264533, 'cache_miss', 'theme_color', NULL),
+(38846, 1734264533, 'cache_miss', 'theme', NULL),
+(38847, 1734264533, 'cache_miss', 'theme', NULL),
+(38848, 1734264533, 'cache_miss', 'theme', NULL),
+(38849, 1734264533, 'cache_hit', 'spatie.permission.cache', NULL),
+(38850, 1734264536, 'user_request', '36', NULL),
+(38851, 1734264540, 'user_request', '36', NULL),
+(38852, 1734264544, 'user_request', '36', NULL),
+(38853, 1734264547, 'user_request', '36', NULL),
+(38854, 1734264549, 'user_request', '36', NULL),
+(38855, 1734264550, 'user_request', '36', NULL),
+(38856, 1734264550, 'cache_miss', 'theme', NULL),
+(38857, 1734264550, 'cache_miss', 'theme_color', NULL),
+(38858, 1734264550, 'cache_miss', 'theme', NULL),
+(38859, 1734264550, 'cache_miss', 'theme', NULL),
+(38860, 1734264550, 'cache_miss', 'theme', NULL),
+(38861, 1734264550, 'cache_hit', 'spatie.permission.cache', NULL),
+(38862, 1734264554, 'user_request', '36', NULL),
+(38863, 1734264554, 'cache_hit', 'spatie.permission.cache', NULL),
+(38864, 1734264555, 'user_request', '36', NULL),
+(38865, 1734264556, 'user_request', '36', NULL),
+(38866, 1734264557, 'cache_miss', 'theme', NULL),
+(38867, 1734264557, 'cache_miss', 'theme_color', NULL),
+(38868, 1734264557, 'cache_miss', 'theme', NULL),
+(38869, 1734264557, 'cache_miss', 'theme', NULL),
+(38870, 1734264557, 'cache_miss', 'theme', NULL),
+(38871, 1734264557, 'cache_hit', 'spatie.permission.cache', NULL),
+(38872, 1734264560, 'user_request', '36', NULL),
+(38873, 1734264561, 'cache_hit', 'spatie.permission.cache', NULL),
+(38874, 1734264561, 'user_request', '36', NULL),
+(38875, 1734264562, 'user_request', '36', NULL),
+(38876, 1734264566, 'user_request', '36', NULL),
+(38877, 1734264569, 'user_request', '36', NULL),
+(38878, 1734264571, 'user_request', '36', NULL),
+(38879, 1734264572, 'cache_miss', 'theme', NULL),
+(38880, 1734264572, 'cache_miss', 'theme_color', NULL),
+(38881, 1734264572, 'cache_miss', 'theme', NULL),
+(38882, 1734264572, 'cache_miss', 'theme', NULL),
+(38883, 1734264572, 'cache_miss', 'theme', NULL),
+(38884, 1734264572, 'cache_hit', 'spatie.permission.cache', NULL),
+(38885, 1734264575, 'user_request', '36', NULL),
+(38886, 1734264575, 'cache_miss', 'theme', NULL),
+(38887, 1734264575, 'cache_miss', 'theme_color', NULL),
+(38888, 1734264575, 'cache_miss', 'theme', NULL),
+(38889, 1734264575, 'cache_miss', 'theme', NULL),
+(38890, 1734264575, 'cache_miss', 'theme', NULL),
+(38891, 1734264575, 'cache_hit', 'spatie.permission.cache', NULL),
+(38892, 1734264580, 'user_request', '36', NULL),
+(38893, 1734264580, 'cache_miss', 'theme', NULL),
+(38894, 1734264580, 'cache_miss', 'theme_color', NULL),
+(38895, 1734264580, 'cache_miss', 'theme', NULL),
+(38896, 1734264580, 'cache_miss', 'theme', NULL),
+(38897, 1734264580, 'cache_miss', 'theme', NULL),
+(38898, 1734264580, 'cache_hit', 'spatie.permission.cache', NULL),
+(38899, 1734264588, 'user_request', '36', NULL),
+(38900, 1734264592, 'user_request', '36', NULL),
+(38901, 1734264592, 'cache_hit', 'spatie.permission.cache', NULL),
+(38902, 1734264592, 'user_request', '36', NULL),
+(38903, 1734264593, 'cache_miss', 'theme', NULL),
+(38904, 1734264593, 'cache_miss', 'theme_color', NULL),
+(38905, 1734264593, 'cache_miss', 'theme', NULL),
+(38906, 1734264593, 'cache_miss', 'theme', NULL),
+(38907, 1734264593, 'cache_miss', 'theme', NULL),
+(38908, 1734264593, 'cache_hit', 'spatie.permission.cache', NULL),
+(38909, 1734264604, 'user_request', '36', NULL),
+(38910, 1734264673, 'slow_request', '[\"POST\",\"\\/recruiter\\/job-post-services\\/10\\/edit\",\"via \\/livewire\\/update\"]', 1725),
+(38911, 1734264673, 'slow_user_request', '36', NULL),
+(38912, 1734264673, 'user_request', '36', NULL),
+(38913, 1734264673, 'cache_hit', 'spatie.permission.cache', NULL),
+(38914, 1734264673, 'exception', '[\"TypeError\",\"vendor\\\\brick\\\\math\\\\src\\\\BigNumber.php:365\"]', 1734264673),
+(38915, 1734264759, 'user_request', '36', NULL),
+(38916, 1734264759, 'cache_miss', 'theme', NULL),
+(38917, 1734264759, 'cache_miss', 'theme_color', NULL),
+(38918, 1734264759, 'cache_miss', 'theme', NULL),
+(38919, 1734264759, 'cache_miss', 'theme', NULL),
+(38920, 1734264759, 'cache_miss', 'theme', NULL),
+(38921, 1734264759, 'cache_hit', 'spatie.permission.cache', NULL),
+(38922, 1734264796, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 2596),
+(38923, 1734264797, 'exception', '[\"ErrorException\",\"resources\\\\views\\\\livewire\\\\index.blade.php\"]', 1734264797),
+(38924, 1734264815, 'slow_request', '[\"GET\",\"\\/\",\"App\\\\Livewire\\\\HomeIndex@__invoke\"]', 1237);
 
 -- --------------------------------------------------------
 
@@ -11440,7 +11830,8 @@ CREATE TABLE `purchased_services` (
 --
 
 INSERT INTO `purchased_services` (`id`, `user_id`, `service_id`, `invoice_id`, `status`, `quantity`, `used_quantity`, `purchase_date`, `expiration_date`, `created_at`, `updated_at`) VALUES
-(18, 36, 3, 19, 'pending', 100, 0, '2024-12-15 18:43:24', '2024-12-25 18:43:24', '2024-12-15 11:43:24', '2024-12-15 11:43:24');
+(18, 36, 3, 19, 'pending', 100, 0, '2024-12-15 18:43:24', '2024-12-25 18:43:24', '2024-12-15 11:43:24', '2024-12-15 11:43:24'),
+(19, 36, 1, 20, 'pending', 10, 0, '2024-12-15 19:09:14', '2024-12-17 19:09:14', '2024-12-15 12:09:14', '2024-12-15 12:09:14');
 
 -- --------------------------------------------------------
 
@@ -12448,9 +12839,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('iuqRjONSAyboN76H3wPmwcgmn7hx2ycvXr7anKn6', 36, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTUUzaXVJNU5IcDZkT3RKczJacUszNjhwUnNycjZOZ3pOM0l0UFN1dyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQ5OiJodHRwOi8vbG9jYWxob3N0OjgwMDAvcmVjcnVpdGVyL2pvYi1wb3N0LXNlcnZpY2VzIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MzY7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiRBT0k3REFtR0FQRWU2bmcyRjJObVcuZkJHUGx0TTNPUWx5V0NFOVNmaXJNSUlMWGNEaVRpZSI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1734263414),
+('iuqRjONSAyboN76H3wPmwcgmn7hx2ycvXr7anKn6', 36, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTUUzaXVJNU5IcDZkT3RKczJacUszNjhwUnNycjZOZ3pOM0l0UFN1dyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQ5OiJodHRwOi8vbG9jYWxob3N0OjgwMDAvcmVjcnVpdGVyL2pvYi1wb3N0LXNlcnZpY2VzIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MzY7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiRBT0k3REFtR0FQRWU2bmcyRjJObVcuZkJHUGx0TTNPUWx5V0NFOVNmaXJNSUlMWGNEaVRpZSI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1734264759),
 ('OWn78kIHwCbw4gLtvFbR3kMdTtzuhBYGo06RmX6F', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUzg4M0NlV0tZa2JXMHBvR0NtdHE1YXBCSk96M3dJOU5XU0dPdkFZQSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC92aWVjLWxhbS9jYW4tYm8tZGFtLWJhby1jaGF0LWx1b25nLXFhIjt9fQ==', 1734261907),
-('rloLMAnNJx6uwt109f73uAQz5BVTjhGNEMpd8moi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiN05kMGlrbGpQQW9Ic3A4czM0bXptOWtHQ0N4VHlVcHZ2d0lDS3lvZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NzA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9jb25nLXR5P2ZpZWxkX29wZXJhdGlvbj1uJUMzJUI0bmctbmdoaSVFMSVCQiU4N3AiO319', 1734263296);
+('rloLMAnNJx6uwt109f73uAQz5BVTjhGNEMpd8moi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiN05kMGlrbGpQQW9Ic3A4czM0bXptOWtHQ0N4VHlVcHZ2d0lDS3lvZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fX0=', 1734264816);
 
 -- --------------------------------------------------------
 
@@ -13046,7 +13437,7 @@ ALTER TABLE `interview_slots`
 -- AUTO_INCREMENT cho bảng `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `jobs`
@@ -13070,7 +13461,7 @@ ALTER TABLE `job_post_notifications`
 -- AUTO_INCREMENT cho bảng `job_post_services`
 --
 ALTER TABLE `job_post_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -13106,13 +13497,13 @@ ALTER TABLE `post_activities`
 -- AUTO_INCREMENT cho bảng `pulse_aggregates`
 --
 ALTER TABLE `pulse_aggregates`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142088;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142720;
 
 --
 -- AUTO_INCREMENT cho bảng `pulse_entries`
 --
 ALTER TABLE `pulse_entries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38707;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38925;
 
 --
 -- AUTO_INCREMENT cho bảng `pulse_values`
@@ -13124,7 +13515,7 @@ ALTER TABLE `pulse_values`
 -- AUTO_INCREMENT cho bảng `purchased_services`
 --
 ALTER TABLE `purchased_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `resumes`
@@ -13202,7 +13593,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT cho bảng `shopping_carts`
 --
 ALTER TABLE `shopping_carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `social_accounts`
