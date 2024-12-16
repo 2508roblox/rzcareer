@@ -47,7 +47,7 @@ class JobPostServiceResource extends Resource
                                     });
                             })
                             ->required()
-                            ->unique()
+                            ->unique(ignoreRecord: true)
                             ->label('Dịch vụ đã mua')
                             ->afterStateUpdated(function ($state, callable $set) {
                                 $purchasedService = PurchasedService::find($state);
@@ -70,7 +70,7 @@ class JobPostServiceResource extends Resource
                                 return JobPost::where('user_id', $userId) // Chỉ lấy job posts của người dùng hiện tại
                                     ->pluck('job_name', 'id'); // Điều chỉnh 'job_name' cho trường hiển thị phù hợp
                             })
-                            ->maxItems(fn($get) => $get('max_jobs')), // Giới hạn số lượng chọn
+                            ->maxItems(fn($get) => $get('max_jobs') ?? 100), // Giới hạn số lượng chọn
                     ]),
             ]);
     }
@@ -80,6 +80,11 @@ class JobPostServiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('purchased_service_id')
                     ->label('Mã Dịch Vụ Đã Mua'), // Thêm nhãn cho cột purchased_service_id
+                    Tables\Columns\TextColumn::make('purchasedService.service.package_name') // Sử dụng mối quan hệ để lấy tên dịch vụ
+        ->label('Tên Dịch Vụ Đã Mua'), // Thêm nhãn cho cột tên dịch vụ
+        Tables\Columns\TextColumn::make('purchasedService.expiration_date') // Sử dụng tên mối quan hệ
+        ->label('Ngày Hết Hạn') // Thêm nhãn cho cột expiration_date
+        ->dateTime(), // Đảm bảo hiển thị dưới dạng ngày
                     Tables\Columns\TextColumn::make('list_jobs')
                     ->label('Danh Sách Công Việc')
                     ->formatStateUsing(function ($record) {
@@ -97,9 +102,7 @@ class JobPostServiceResource extends Resource
                         })->implode(' '); // Join badges with a space
                     })
                     ->html(), // Enable HTML rendering
-                Tables\Columns\TextColumn::make('purchasedService.expiration_date') // Sử dụng tên mối quan hệ
-                    ->label('Ngày Hết Hạn') // Thêm nhãn cho cột expiration_date
-                    ->dateTime(), // Đảm bảo hiển thị dưới dạng ngày
+              
             ])
             ->filters([
                 //
