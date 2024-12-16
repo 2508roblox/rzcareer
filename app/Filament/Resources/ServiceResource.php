@@ -115,7 +115,7 @@ class ServiceResource extends Resource
             
             Tables\Columns\TextColumn::make('price')
                 ->label('Giá tiền')
-                ->money('usd')
+                ->money('vnd')
                 ->searchable(),
             
             Tables\Columns\TextColumn::make('duration')
