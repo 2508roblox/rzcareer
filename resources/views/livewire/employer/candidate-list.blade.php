@@ -1,8 +1,6 @@
 <div>
 
     <head>
-        <link rel="canonical" href="https://employer.RZcareer.vn/" />
-        <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
                 width: 10px;
@@ -28,28 +26,7 @@
             href="/employer_assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0">
         <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
             href="/employer_assets/plugins/fonts/themify.woff?-fvbane">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="HandheldFriendly" content="true">
-        <meta name="description"
-            content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta name="robots" content="index,follow,noodp" />
-        <meta name="author" content="RZcareer.vn" />
-        <meta http-equiv="refresh" content="3600" />
-        <meta property="og:description"
-            content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
-        <meta property="og:locale" content="vi_VN" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.RZcareer.vn" />
-        <meta property="og:title" content="Ứng viên Thực Tập Sinh Đào Tạo" />
-        <meta property="fb:app_id" content="1590841851212703" />
-        <meta name="geo.placename" content="Ha Noi, Viet Nam" />
-        <meta name="geo.region" content="VN-HN" />
-        <meta name="geo.position" content="21.031965, 105.804934" />
-        <meta name="ICBM" content="21.031965, 105.804934" /> <!-- Title -->
-        <title>Ứng viên Thực Tập Sinh Đào Tạo</title> <!-- Font Awesome Icon -->
+        <title>Ứng viên {{ $careerName }} - RZcareer</title> <!-- Font Awesome Icon -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/css/font-awesome.min.css?v=1.2"> <!-- Plugin-CSS -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
@@ -215,11 +192,11 @@
                             <meta itemprop="position" content="1">
                         </li>
                         <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a
-                                style="color:#000" href="/site/candidates" itemtype="https://schema.org/Thing"
+                                style="color:#000" href="/employer/candidates" itemtype="https://schema.org/Thing"
                                 itemprop="item"> <span itemprop="name">Ứng viên theo ngành nghề</span> </a>
                             <meta itemprop="position" content="2">
                         </li>
-                        <li class="active"><span class="text-muted">Ứng viên Thực Tập Sinh Đào Tạo </span></li>
+                        <li class="active"><span class="text-muted">{{ $careerName }} </span></li>
                     </ol>
                     <div class="row padd-bot-15 clearfix" style="padding-bottom: 15px;">
                         @foreach ($resumes as $resume)
@@ -230,29 +207,44 @@
                                         <h4>
                                             <strong class="text-capitalize text-info">
                                                 <a style="color:#1eca1e;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; max-width: 300px;"
-                                                    {{-- href="{{ route('candidate.details', ['id' => $resume->id]) }}" --}}>
+                                                   {{-- href="{{ route('candidate.details', ['id' => $resume->id]) }}" --}}>
                                                     {{ $resume->seekerProfile->user->full_name }}
                                                 </a>
                                             </strong>
                                             <small> ({{ $resume->seekerProfile->birthday ? \Carbon\Carbon::parse($resume->seekerProfile->birthday)->format('Y-m-d') : 'N/A' }})</small>
+                                            @php
+                                            $isSaved = \App\Models\SavedResume::where('resume_id', $resume->id)->where('company_id', auth()->user()->company->id)->exists();
+                                        @endphp
+
+                                        <small
+                                            wire:click="{{ !$isSaved ? 'saveCandidate(' . $resume->id . ')' : '' }}"
+                                            style="color: {{ $isSaved ? '#ccc' : '#000000' }}; cursor: pointer;"
+                                            {{ $isSaved ? 'disabled' : '' }}>
+                                            {{ $isSaved ? 'Đã lưu' : 'Lưu hồ sơ' }}
+                                        </small>
                                         </h4>
 
                                         <ul class="mrg-bot-10">
                                             <li><i class="glyphicon glyphicon-briefcase"></i> {{ $resume->position }}</li>
                                             <li><i class="glyphicon glyphicon-map-marker"></i> {{ $resume->seekerProfile->city_name }}</li>
-                                            <li><i class="glyphicon glyphicon-paperclip"></i> {{ $resume->attachments_count }} file đính kèm</li>
+                                            <li>
+                                                @if($resume->file_url)
+                                                    <i class="glyphicon glyphicon-paperclip"></i>
+                                                    <a href="{{ url($resume->file_url) }}" target="_blank" style="color: #000000;">1 file đính kèm</a>
+                                                @else
+                                                    0 file đính kèm
+                                                @endif
+                                            </li>
                                         </ul>
 
                                         <p title="Các vị trí đã làm việc">
                                             <u>Các vị trí đã làm việc:</u>
                                             <span style="height: 56px; display: block; overflow: auto; margin-bottom: 1px; margin-top: 3px;">
                                                 @foreach ($resume->experienceDetails as $experience)
-                                                    <span style="background: #2b8fc0; padding: 3px 5px !important; margin-top: 2px; font-size: 11px;"
-                                                        class="label mrg-r-5">{{ $experience->job_name }}</span>
+                                                    <span style="background: #2b8fc0; padding: 3px 5px !important; margin-top: 2px; font-size: 11px;" class="label mrg-r-5">{{ $experience->job_name }}</span>
                                                 @endforeach
                                             </span>
                                         </p>
-
 
                                         <i>Cập nhật hồ sơ: {{ $resume->updated_at }}</i>
 

@@ -20,10 +20,19 @@
                 </div>
             </a>
         </li>
-
-        <li class="{{ request()->is('cv-go') ? 'current btn-primary' : 'btn-default' }}">
-            <a  href="cv-go">
-                <div class="nav-item"><i class="fa fa-user"></i> Tạo CV mới</div>
+        <li class="{{ request()->is('candidate/change-password') ? 'current btn-primary' : 'btn-default' }}">
+            <a  href="/candidate/change-password">
+                <div class="nav-item"><i class="fa fa-lock"></i> Đổi mật khẩu</div>
+            </a>
+        </li>
+        <li class="{{ request()->is('candidate/jobs-applied') ? 'current btn-primary' : 'btn-default' }}">
+            <a  href="/candidate/jobs-applied">
+                <div class="nav-item"><i class="fa fa-briefcase"></i> Việc làm đã ứng tuyển</div>
+            </a>
+        </li>
+        <li class="{{ request()->is('candidate/jobs-saved') ? 'current btn-primary' : 'btn-default' }}">
+            <a  href="/candidate/jobs-saved">
+                <div class="nav-item"><i class="fa fa-briefcase"></i> Việc làm đã lưu</div>
             </a>
         </li>
     </ol>

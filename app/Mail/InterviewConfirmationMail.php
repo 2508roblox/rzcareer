@@ -18,14 +18,19 @@ class InterviewConfirmationMail extends Mailable
     public $interviewTime;
     public $interviewerName;
     public $status; // Thêm biến trạng thái
-
-    public function __construct($candidateName, $jobName, $interviewTime, $interviewerName, $status)
+    public $location;
+    public $feedback;
+    public function __construct($candidateName, $jobName, $interviewTime, $interviewerName, $status, $endTime, $location, $feedback)
     {
         $this->candidateName = $candidateName;
         $this->jobName = $jobName;
         $this->interviewTime = $interviewTime;
         $this->interviewerName = $interviewerName;
         $this->status = $status; // Khởi tạo trạng thái
+        $this->endTime = $endTime;
+        $this->location = $location;
+        $this->feedback = $feedback;
+        $this->from('hoangtlhps26819@fpt.edu.vn', 'RZ Career');
     }
 
     public function envelope(): Envelope

@@ -10,6 +10,7 @@ use App\Models\ResumeEducationDetail;
 use App\Models\ResumeExperienceDetail;
 use App\Models\ResumeLanguageSkill;
 use App\Models\SeekerProfile;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -18,6 +19,7 @@ use Livewire\WithFileUploads;
 class Review extends Component
 {
     use WithFileUploads;
+    use LivewireAlert;
     public $user;
     public $resumes;
     public $resumeDataPercentage; // Variable to hold percentage of resumes with data
@@ -29,9 +31,9 @@ class Review extends Component
     public $avatar;
     // user info
     public $cities = [];
-    public $city_id ;
+    public $city_id;
     public $careers = [];
-    public $career_id ;
+    public $career_id;
 
     public $title;
     public $slug;
@@ -147,7 +149,7 @@ class Review extends Component
                 'languageSkills',
                 'seekerProfile',
             ])
-            ->where('type', 'primary')->get();
+                ->where('type', 'primary')->get();
 
             // Check advancedSkills
             if (
@@ -218,7 +220,7 @@ class Review extends Component
 
             } else {
                 // Nếu không có resume, tạo mới
-            $seekerProfile = SeekerProfile::where('user_id', $userId)->first();
+                $seekerProfile = SeekerProfile::where('user_id', $userId)->first();
 
                 $primaryResume = Resume::createPrimaryResume($userId, $seekerProfile->id);
 
@@ -239,8 +241,8 @@ class Review extends Component
             $this->loadExperiences(); // Load danh sách kinh nghiệm làm việc
             //languages
             $this->languages = ResumeLanguageSkill::where('resume_id', $this->resumes->first()->id)
-            ->get(['language']) // Giả sử bạn chỉ cần cột 'language'
-            ->toArray();
+                ->get(['language']) // Giả sử bạn chỉ cần cột 'language'
+                ->toArray();
 
         }
 
@@ -330,7 +332,7 @@ class Review extends Component
         if ($resume) {
             // Nếu resume đã tồn tại, cập nhật city_id
             $resume->update(['city_id' => $this->city_id]);
-            session()->flash(  'message', 'Cập nhật thành phố thành công!');
+            session()->flash('message', 'Cập nhật thành phố thành công!');
         } else {
             // Nếu không tồn tại, tạo mới một resume
 
@@ -409,7 +411,7 @@ class Review extends Component
         $resume->update(['experience' => $this->experience]);
         session()->flash('message', 'Cập nhật kinh nghiệm thành công!');
     }
-   
+
 
     public function editAcademicLevel()
     {
@@ -470,7 +472,7 @@ class Review extends Component
 
     public function editGender()
     {
-       $this->resumes->first()->seekerProfile->gender = $this->gender ?? 'M';
+        $this->resumes->first()->seekerProfile->gender = $this->gender ?? 'M';
         $this->resumes->first()->seekerProfile->save();
         $this->isEditing = '';
         session()->flash('message', 'Cập nhật giới tính thành công.');
@@ -536,34 +538,29 @@ class Review extends Component
     //advanced skills
     public function saveSkills()
     {
-        // Validate the inputs
-        // $this->validate([
-        //     'newSkill' => 'required',
-        //     'newExperience' => 'required',
-        // ]);
-        // Create a new advanced skill
+
         if ($this->editingAdvanceSkillId) {
             $skill = ResumeAdvancedSkill::find($this->editingAdvanceSkillId);
             // Cập nhật thông tin Experience
             $skill->update([
                 'name' => $this->newSkill,
                 'level' => $this->newExperience,
-                
+
             ]);
         } else {
-        ResumeAdvancedSkill::create([
-            'name' => $this->newSkill,
-            'level' => $this->newExperience,
-            'resume_id' =>  $this->resumes->first()->id, // Assuming you have the resume ID available
-        ]);
-    }
+            ResumeAdvancedSkill::create([
+                'name' => $this->newSkill,
+                'level' => $this->newExperience,
+                'resume_id' => $this->resumes->first()->id, // Assuming you have the resume ID available
+            ]);
+        }
 
         // Reset the input fields
         $this->newSkill = '';
         $this->newExperience = '';
 
         // Optionally, refresh the list of skills
-        $this->skills = ResumeAdvancedSkill::where('resume_id',  $this->resumes->first()->id)->get();
+        $this->skills = ResumeAdvancedSkill::where('resume_id', $this->resumes->first()->id)->get();
     }
 
 
@@ -575,7 +572,7 @@ class Review extends Component
 
         // Xử lý ngày bắt đầu và ngày kết thúc
         $startDate = "{$this->newStartYear}-{$this->newStartMonth}-01";
-        $endDate = $this->currentJob ?  now()->format('Y-m-d') : "{$this->newEndYear}-{$this->newEndMonth}-01";
+        $endDate = $this->currentJob ? now()->format('Y-m-d') : "{$this->newEndYear}-{$this->newEndMonth}-01";
 
         // Tạo mới một kinh nghiệm làm việc
         if ($this->editingExperienceId) {
@@ -614,205 +611,205 @@ class Review extends Component
         $this->loadExperiences();
     }
     public function editWorkingExperience($id)
-{
-    $experience = ResumeExperienceDetail::find($id);
+    {
+        $experience = ResumeExperienceDetail::find($id);
 
-    $this->editingExperienceId = $id; // Gán ID để biết đây là chế độ sửa
-    $this->newCompany = $experience->company_name;
-    $this->newJobTitle = $experience->job_name;
-    $this->newStartMonth = date('m', strtotime($experience->start_date));
-    $this->newStartYear = date('Y', strtotime($experience->start_date));
-    $this->newEndMonth = date('m', strtotime($experience->end_date));
-    $this->newEndYear = date('Y', strtotime($experience->end_date));
-    $this->newDescription = $experience->description;
-    $this->currentJob = is_null($experience->end_date); // Nếu không có ngày kết thúc thì công việc đang làm
-}
-public function deleteExperience($experienceId)
-{
-    // Tìm và xoá kinh nghiệm làm việc
-    $experience = ResumeExperienceDetail::findOrFail($experienceId);
-    $experience->delete();
+        $this->editingExperienceId = $id; // Gán ID để biết đây là chế độ sửa
+        $this->newCompany = $experience->company_name;
+        $this->newJobTitle = $experience->job_name;
+        $this->newStartMonth = date('m', strtotime($experience->start_date));
+        $this->newStartYear = date('Y', strtotime($experience->start_date));
+        $this->newEndMonth = date('m', strtotime($experience->end_date));
+        $this->newEndYear = date('Y', strtotime($experience->end_date));
+        $this->newDescription = $experience->description;
+        $this->currentJob = is_null($experience->end_date); // Nếu không có ngày kết thúc thì công việc đang làm
+    }
+    public function deleteExperience($experienceId)
+    {
+        // Tìm và xoá kinh nghiệm làm việc
+        $experience = ResumeExperienceDetail::findOrFail($experienceId);
+        $experience->delete();
 
-    // Cập nhật lại danh sách kinh nghiệm sau khi xóa
-    $this->loadExperiences();
+        // Cập nhật lại danh sách kinh nghiệm sau khi xóa
+        $this->loadExperiences();
 
-    // Hiển thị thông báo thành công (tuỳ chọn)
-    session()->flash('message', 'Kinh nghiệm làm việc đã được xoá thành công.');
-}
-
-
-public function deleteAdvancedSkill($skillId)
-{
-    // Tìm và xoá kinh nghiệm làm việc
-    $skill = ResumeAdvancedSkill::findOrFail($skillId);
-    $skill->delete();
-
-    // Cập nhật lại danh sách kinh nghiệm sau khi xóa
-    $this->loadAdvancedSkill();
-
-    // Hiển thị thông báo thành công (tuỳ chọn)
-    session()->flash('message', 'Kĩ năng làm việc đã được xoá thành công.');
-}
-public function editAdvancedSkill($id)
-{
-    $this->editingAdvanceSkillId = $id;
-
-    // Lấy thông tin của education từ database
-    $skill = ResumeAdvancedSkill::find($id);
-
-    if ($skill) {
-       
-        $this->newSkill = $skill->name;
-        $this->newExperience = $skill->level;
+        // Hiển thị thông báo thành công (tuỳ chọn)
+        session()->flash('message', 'Kinh nghiệm làm việc đã được xoá thành công.');
     }
 
-    // Hiển thị modal
-    // $this->dis('showModal');
-} 
 
+    public function deleteAdvancedSkill($skillId)
+    {
+        // Tìm và xoá kinh nghiệm làm việc
+        $skill = ResumeAdvancedSkill::findOrFail($skillId);
+        $skill->delete();
 
+        // Cập nhật lại danh sách kinh nghiệm sau khi xóa
+        $this->loadAdvancedSkill();
 
+        // Hiển thị thông báo thành công (tuỳ chọn)
+        session()->flash('message', 'Kĩ năng làm việc đã được xoá thành công.');
+    }
+    public function editAdvancedSkill($id)
+    {
+        $this->editingAdvanceSkillId = $id;
 
+        // Lấy thông tin của education từ database
+        $skill = ResumeAdvancedSkill::find($id);
 
+        if ($skill) {
 
+            $this->newSkill = $skill->name;
+            $this->newExperience = $skill->level;
+        }
 
-public function loadEducations()
-{
-    $this->educations = ResumeEducationDetail::all(); // Tải tất cả thông tin học tập
-}
-
-public function saveEducation()
-{
-    // $this->validate([
-    //     'degree_name' => 'required|string|max:255',
-    //     'major' => 'required|string|max:255',
-    //     'training_place' => 'required|string|max:255',
-    //     'completed_date' => 'required|integer',
-    //     'description' => 'nullable|string',
-    // ]);
-    if ($this->editingEducationId) {
-        // Cập nhật bản ghi
-        $education = ResumeEducationDetail::find($this->editingEducationId);
-        $education->degree_name = $this->degree_name;
-        $education->completed_date = $this->completed_date;
-        $education->major = $this->major;
-        $education->start_date = $this->start_date;
-        $education->training_place = $this->training_place;
-        $education->description = $this->education_description;
-        $education->save();
-
-        session()->flash('message', 'Cập nhật thành công!');
-    } else {
-    ResumeEducationDetail::create([
-        'resume_id' => $this->resumes->first()->id, // Cần thay đổi ID theo ngữ cảnh của bạn
-        'degree_name' => $this->degree_name,
-        'major' => $this->major,
-        'training_place' => $this->training_place,
-        'start_date' => $this->start_date,
-        'completed_date' => $this->completed_date,
-        'description' => $this->education_description,
-    ]);
-    session()->flash('message', 'Thêm mới thành công!');
-}
-
-    // Reset các biến
-    $this->reset(['degree_name', 'major', 'training_place', 'completed_date', 'description', 'current']);
-
-    // Tải lại danh sách
-    $this->loadEducations();
-
-    // Hiển thị thông báo thành công
-    // session()->flash('message', 'Thông tin học tập đã được lưu thành công.');
-}
-
-public function editEducation($id)
-{
-    $this->editingEducationId = $id;
-
-    // Lấy thông tin của education từ database
-    $education = ResumeEducationDetail::find($id);
-    if ($education) {
-        $this->degree_name = $education->degree_name;
-        $this->completed_date = $education->completed_date;
-        $this->start_date = $education->start_date;
-        $this->major = $education->major;
-        $this->training_place = $education->training_place;
-        $this->education_description = $education->description;
+        // Hiển thị modal
+        // $this->dis('showModal');
     }
 
-    // Hiển thị modal
-    // $this->dis('showModal');
-}
-
-public function deleteEducation($id)
-{
-    // Xác nhận trước khi xóa
-    ResumeEducationDetail::destroy($id);
-    $this->loadEducations();
 
 
-}
-public function editCertificate($id)
-{
-    $this->isEdit = true;
-    $certificate = ResumeCertificate::find($id);
-    $this->currentCertificateId = $certificate->id;
-    $this->cert_name = $certificate->name;
-    $this->cert_training_place = $certificate->training_place;
-    $this->cert_start_date = $certificate->start_date->format('Y-m-d');
-    $this->cert_expiration_date = $certificate->expiration_date ? $certificate->expiration_date->format('Y-m-d') : null;
-    $this->cert_description = $certificate->description;
 
-    // $this->dispatchBrowserEvent('open-modal');
-}
-public function updateCertificate()
-{
-    // $this->validate([
-    //     'cert_name' => 'required|string|max:255',
-    //     'cert_training_place' => 'required|string|max:255',
-    //     'cert_start_date' => 'required|date',
-    //     'cert_expiration_date' => 'nullable|date|after_or_equal:cert_start_date',
-    //     'cert_description' => 'nullable|string',
-    // ]);
 
-    $certificate = ResumeCertificate::find($this->currentCertificateId);
-    $certificate->update([
-        'name' => $this->cert_name,
-        'training_place' => $this->cert_training_place,
-        'start_date' => $this->cert_start_date,
-        'expiration_date' => $this->cert_expiration_date,
-        'description' => $this->cert_description,
-    ]);
 
-    // Reset biến và đóng modal
-    $this->reset(['cert_name', 'cert_training_place', 'cert_start_date', 'cert_expiration_date', 'cert_description', 'isEdit', 'currentCertificateId']);
-    // $this->dispatchBrowserEvent('close-modal');
-}
-public function deleteCertificate($id)
-{
-    ResumeCertificate::destroy($id);
-    // $this->dispatchBrowserEvent('certificate-deleted'); // Thông báo xóa thành công
-}
-public function saveCertificate()
-{
 
-    ResumeCertificate::create([
-        'resume_id' => $this->resumes->first()->id,
-        'name' => $this->cert_name,
-        'training_place' => $this->cert_training_place,
-        'start_date' => $this->cert_start_date,
-        'expiration_date' => $this->cert_expiration_date,
-        'description' => $this->cert_description,
-    ]);
+    public function loadEducations()
+    {
+        $this->educations = ResumeEducationDetail::all(); // Tải tất cả thông tin học tập
+    }
 
-    // Reset các biến sau khi lưu
-    $this->reset(['cert_name', 'cert_training_place', 'cert_start_date', 'cert_expiration_date', 'cert_description']);
+    public function saveEducation()
+    {
+        // $this->validate([
+        //     'degree_name' => 'required|string|max:255',
+        //     'major' => 'required|string|max:255',
+        //     'training_place' => 'required|string|max:255',
+        //     'completed_date' => 'required|integer',
+        //     'description' => 'nullable|string',
+        // ]);
+        if ($this->editingEducationId) {
+            // Cập nhật bản ghi
+            $education = ResumeEducationDetail::find($this->editingEducationId);
+            $education->degree_name = $this->degree_name;
+            $education->completed_date = $this->completed_date;
+            $education->major = $this->major;
+            $education->start_date = $this->start_date;
+            $education->training_place = $this->training_place;
+            $education->description = $this->education_description;
+            $education->save();
 
-    // Đóng modal (nếu bạn đang sử dụng Bootstrap modal)
-    // $this->dispatchBrowserEvent('close-modal');
-}
+            session()->flash('message', 'Cập nhật thành công!');
+        } else {
+            ResumeEducationDetail::create([
+                'resume_id' => $this->resumes->first()->id, // Cần thay đổi ID theo ngữ cảnh của bạn
+                'degree_name' => $this->degree_name,
+                'major' => $this->major,
+                'training_place' => $this->training_place,
+                'start_date' => $this->start_date,
+                'completed_date' => $this->completed_date,
+                'description' => $this->education_description,
+            ]);
+            session()->flash('message', 'Thêm mới thành công!');
+        }
 
-public function createLanguageSkill()
+        // Reset các biến
+        $this->reset(['degree_name', 'major', 'training_place', 'completed_date', 'description', 'current']);
+
+        // Tải lại danh sách
+        $this->loadEducations();
+
+        // Hiển thị thông báo thành công
+        // session()->flash('message', 'Thông tin học tập đã được lưu thành công.');
+    }
+
+    public function editEducation($id)
+    {
+        $this->editingEducationId = $id;
+
+        // Lấy thông tin của education từ database
+        $education = ResumeEducationDetail::find($id);
+        if ($education) {
+            $this->degree_name = $education->degree_name;
+            $this->completed_date = $education->completed_date;
+            $this->start_date = $education->start_date;
+            $this->major = $education->major;
+            $this->training_place = $education->training_place;
+            $this->education_description = $education->description;
+        }
+
+        // Hiển thị modal
+        // $this->dis('showModal');
+    }
+
+    public function deleteEducation($id)
+    {
+        // Xác nhận trước khi xóa
+        ResumeEducationDetail::destroy($id);
+        $this->loadEducations();
+
+
+    }
+    public function editCertificate($id)
+    {
+        $this->isEdit = true;
+        $certificate = ResumeCertificate::find($id);
+        $this->currentCertificateId = $certificate->id;
+        $this->cert_name = $certificate->name;
+        $this->cert_training_place = $certificate->training_place;
+        $this->cert_start_date = $certificate->start_date->format('Y-m-d');
+        $this->cert_expiration_date = $certificate->expiration_date ? $certificate->expiration_date->format('Y-m-d') : null;
+        $this->cert_description = $certificate->description;
+
+        // $this->dispatchBrowserEvent('open-modal');
+    }
+    public function updateCertificate()
+    {
+        // $this->validate([
+        //     'cert_name' => 'required|string|max:255',
+        //     'cert_training_place' => 'required|string|max:255',
+        //     'cert_start_date' => 'required|date',
+        //     'cert_expiration_date' => 'nullable|date|after_or_equal:cert_start_date',
+        //     'cert_description' => 'nullable|string',
+        // ]);
+
+        $certificate = ResumeCertificate::find($this->currentCertificateId);
+        $certificate->update([
+            'name' => $this->cert_name,
+            'training_place' => $this->cert_training_place,
+            'start_date' => $this->cert_start_date,
+            'expiration_date' => $this->cert_expiration_date,
+            'description' => $this->cert_description,
+        ]);
+
+        // Reset biến và đóng modal
+        $this->reset(['cert_name', 'cert_training_place', 'cert_start_date', 'cert_expiration_date', 'cert_description', 'isEdit', 'currentCertificateId']);
+        // $this->dispatchBrowserEvent('close-modal');
+    }
+    public function deleteCertificate($id)
+    {
+        ResumeCertificate::destroy($id);
+        // $this->dispatchBrowserEvent('certificate-deleted'); // Thông báo xóa thành công
+    }
+    public function saveCertificate()
+    {
+
+        ResumeCertificate::create([
+            'resume_id' => $this->resumes->first()->id,
+            'name' => $this->cert_name,
+            'training_place' => $this->cert_training_place,
+            'start_date' => $this->cert_start_date,
+            'expiration_date' => $this->cert_expiration_date,
+            'description' => $this->cert_description,
+        ]);
+
+        // Reset các biến sau khi lưu
+        $this->reset(['cert_name', 'cert_training_place', 'cert_start_date', 'cert_expiration_date', 'cert_description']);
+
+        // Đóng modal (nếu bạn đang sử dụng Bootstrap modal)
+        // $this->dispatchBrowserEvent('close-modal');
+    }
+
+    public function createLanguageSkill()
     {
         // Kiểm tra nếu không có ngôn ngữ được chọn hoặc không có level nhập vào
         // if (empty($this->selectedLanguage) || empty($this->languageLevel)) {
@@ -820,16 +817,16 @@ public function createLanguageSkill()
         //     return;
         // }
         // Lưu từng ngôn ngữ với level vào database
-            ResumeLanguageSkill::create([
-                'resume_id' => $this->resumes->first()->id,
-                'language' => $this->selectedLanguage,
-                'level' => $this->language_level,
-            ]);
+        ResumeLanguageSkill::create([
+            'resume_id' => $this->resumes->first()->id,
+            'language' => $this->selectedLanguage,
+            'level' => $this->language_level,
+        ]);
 
 
         // Xóa các giá trị để reset modal
         $this->language_level = '';
-        $this->selectedLanguage  ;
+        $this->selectedLanguage;
         session()->flash('message', 'Kỹ năng ngôn ngữ đã được lưu thành công.');
     }
     public function deleteLanguageSkill($skillId)

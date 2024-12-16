@@ -1,7 +1,4 @@
-<div>
     <div>
-        <!DOCTYPE html>
-        <html lang="vi-VN">
 
         <head>
             <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -26,7 +23,7 @@
             <meta name="csrf-token"
                 content="dMyWkIl86nFBAdpOQ46lc6E-qeMZWVYWM8uNM4S86ONH-eHV6CSiKzh4tgg579wK7W_Eol5gAFpZ-bpq842yuw==">
 
-            <title>Thay đổi mật khẩu</title>
+            <title>Thay đổi mật khẩu - RZCareer</title>
 
             <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                 type="text/css">
@@ -120,27 +117,28 @@
                                         <!-- Profile info -->
                                         <div class="panel panel-flat">
 
-
                                             <div class="panel-body">
                                                 <form wire:submit.prevent="changePassword" class="form-horizontal">
                                                     <div class="form-group field-changepasswordform-new_password required">
                                                         <label class="control-label col-sm-4 text-right" for="new_password">Mật khẩu mới</label>
                                                         <div class="col-sm-4">
                                                             <input type="password" id="new_password" class="form-control"
-                                                                wire:model.defer="new_password"
-                                                                placeholder="Nhập mật khẩu mới" aria-required="true">
-
-                                                            <p class="help-block help-block-error"></p>
+                                                                   wire:model.defer="new_password"
+                                                                   placeholder="Nhập mật khẩu mới" aria-required="true">
+                                                            @if(isset($error['new_password']))
+                                                                <span class="text-danger">{{ $error['new_password'] }}</span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="form-group field-changepasswordform-confirm_password required">
                                                         <label class="control-label col-sm-4 text-right" for="confirm_password">Xác nhận mật khẩu</label>
                                                         <div class="col-sm-4">
                                                             <input type="password" id="confirm_password" class="form-control"
-                                                                wire:model.defer="confirm_password"
-                                                                placeholder="Nhập lại mật khẩu mới" aria-required="true">
-
-                                                            <p class="help-block help-block-error"></p>
+                                                                   wire:model.defer="confirm_password"
+                                                                   placeholder="Nhập lại mật khẩu mới" aria-required="true">
+                                                            @if(isset($error['confirm_password']))
+                                                                <span class="text-danger">{{ $error['confirm_password'] }}</span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -152,7 +150,6 @@
                                                         </div>
                                                     </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                         <!-- /profile info -->
@@ -237,11 +234,11 @@
                                         <div class="panel no-border-top no-border-radius-top">
                                             <ul class="navigation">
                                                 <li class="navigation-header">Cá nhân</li>
-                                                <li><a href="candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin
+                                                <li><a href="/candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin
                                                         việc</a></li>
-                                                <li><a href="candidate/document-attachment"><i
+                                                <li><a href="/candidate/document-attachment"><i
                                                             class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
-                                                <li><a href="candidate/import-linkedin-data"><i
+                                                <li><a href="/candidate/import-linkedin-data"><i
                                                             class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a>
                                                 </li>
                                                 <li
@@ -251,12 +248,12 @@
                                                         chất<span class="badge badge-danger">Mới!</span></a>
                                                 </li>
                                                 <li class="navigation-divider"></li>
-                                                <li><a href="candidate/jobs-applied"
+                                                <li><a href="/candidate/jobs-applied"
                                                         title="Danh sách việc làm đã ứng tuyển"><i
                                                             class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
-                                                <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                                <li><a href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
                                                             class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                <li><a href="candidate/jobs-matching"
+                                                <li><a href="/candidate/jobs-matching"
                                                         title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i>
                                                         Việc làm phù hợp</a></li>
                                             </ul>
@@ -313,7 +310,5 @@
 
         </body>
 
-        </html>
     </div>
 
-</div>

@@ -4,7 +4,6 @@
 
     <head>
         <link rel="canonical" href="https://employer.RZcareer.vn/" />
-        <meta charset="UTF-8">
         <style>
             ::-webkit-scrollbar {
                 width: 10px;
@@ -20,7 +19,7 @@
             }
 
             @media (max-width: 767px) {
-                .tf-logo{
+                .tf-logo {
                     padding-left: 10px !important;
                     width: 100px !important;
                 }
@@ -30,27 +29,7 @@
             href="/employer_assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0">
         <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
             href="/employer_assets/plugins/fonts/themify.woff?-fvbane">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="HandheldFriendly" content="true">
-        <meta name="description"
-            content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta name="robots" content="index,follow,noodp" />
-        <meta name="author" content="RZcareer.vn" />
-        <meta http-equiv="refresh" content="3600" />
-        <meta property="og:description"
-            content="Website đăng tin tuyển dụng hiệu quả, xem hồ sơ ứng viên miễn phí. Nhận kèm gói dịch vụ chạy Facebook Ads chủ động tìm ứng viên! Nhận tư vấn ngay!" />
-        <meta property="og:image" content="https://employer.RZcareer.vn/media/img/share-cover.png" />
-        <meta property="og:site_name" content="https://employer.RZcareer.vn" />
-        <meta property="og:locale" content="vi_VN" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://employer.RZcareer.vn" />
-        <meta property="og:title" content="Ứng viên theo ngành nghề" />
-        <meta property="fb:app_id" content="1590841851212703" />
-        <meta name="geo.placename" content="Ha Noi, Viet Nam" />
-        <meta name="geo.region" content="VN-HN" />
-        <meta name="geo.position" content="21.031965, 105.804934" />
-        <meta name="ICBM" content="21.031965, 105.804934" /> <!-- Title -->
-        <title>Ứng viên theo ngành nghề</title> <!-- Font Awesome Icon -->
+        <title>Ứng viên theo ngành nghề - RZcareer</title> <!-- Font Awesome Icon -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
             href="/employer_assets/plugins/font-awesome/css/font-awesome.min.css?v=1.2"> <!-- Plugin-CSS -->
         <link rel="stylesheet preload prefetch" as="style" type="text/css" crossorigin="anonymous"
@@ -134,8 +113,8 @@
                     <ol style="background: transparent;padding: 20px 0 5px; margin-bottom: 5px;" class="breadcrumb"
                         itemscope="" itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a
-                                style="color:#000" href="/" itemtype="https://schema.org/Thing"
-                                itemprop="item"> <span itemprop="name"> RZcareer</span> </a>
+                                style="color:#000" href="/" itemtype="https://schema.org/Thing" itemprop="item">
+                                <span itemprop="name"> RZcareer</span> </a>
                             <meta itemprop="position" content="1">
                         </li>
                         <li class="active"><span class="text-muted" style="color:#888!important">Ứng viên theo ngành
@@ -147,20 +126,24 @@
                             <h3 class="text-center">Danh sách ngành nghề và số lượng hồ sơ</h3>
                             <div class="row">
                                 @foreach ($careers as $career)
-                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mb-3">
-                                    <div class="card career-card">
-                                        <div class="card-body d-flex align-items-center">
-                                            <img class="career-icon" src="{{ Storage::url($career->icon_url) }}" alt="{{ $career->name }}">
-                                            <div class="career-info ms-3">
-                                                <h5 class="card-title">{{ $career->name }}</h5>
-                                                <p class="card-text">Số lượng hồ sơ: {{ $career->resumes_count }}</p>
-                                                <a href="{{ route('employer.candidate', ['id' => $career->id]) }}" style="
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mb-3">
+                                        <div class="card career-card">
+                                            <div class="card-body d-flex align-items-center">
+                                                <img class="career-icon" src="{{ Storage::url($career->icon_url) }}"
+                                                    alt="{{ $career->name }}">
+                                                <div class="career-info ms-3">
+                                                    <h5 class="card-title">{{ $career->name }}</h5>
+                                                    <p class="card-text">Số lượng hồ sơ: {{ $career->resumes_count }}
+                                                    </p>
+                                                    <a href="{{ route('employer.candidate', ['id' => $career->id]) }}"
+                                                        style="
                                                     width: 100px;
-                                                " class="btn btn-primary btn-sm">Xem chi tiết</a>
+                                                "
+                                                        class="btn btn-primary btn-sm">Xem chi tiết</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
@@ -233,7 +216,8 @@
                                 flex-wrap: wrap;
                             }
 
-                            .col-md-6, .col-lg-4 {
+                            .col-md-6,
+                            .col-lg-4 {
                                 padding: 10px;
                             }
 

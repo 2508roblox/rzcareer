@@ -2,10 +2,8 @@
     <div>
         <div>
 
-            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-            <!-- Please send your resume with cover letter to team@jobsgo.vn -->
-            <!DOCTYPE html>
-            <html lang="vi-VN">
+
+
 
             <head>
                 <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -14,12 +12,12 @@
                     type="font/woff2" crossorigin>
                 <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggmxSuXd.woff2" as="font"
                     type="font/woff2" crossorigin>
-                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2" as="font"
-                    type="font/woff2" crossorigin>
-                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2" as="font"
-                    type="font/woff2" crossorigin>
-                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
-                    type="font/woff2" crossorigin>
+                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggOxSuXd.woff2"
+                    as="font" type="font/woff2" crossorigin>
+                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggqxSuXd.woff2"
+                    as="font" type="font/woff2" crossorigin>
+                <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2"
+                    as="font" type="font/woff2" crossorigin>
                 <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
                 <meta charset="UTF-8">
                 <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
@@ -30,11 +28,12 @@
                 <meta name="csrf-token"
                     content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
-                <title>Bảng tin - RZCareer</title>
+                <title>Danh sách nhà tuyển dụng đã xem hồ sơ - RZCareer</title>
 
                 <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
                     type="text/css">
-                <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+                <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet"
+                    type="text/css">
                 <link href="/assets_livewire/bolt/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
                 <link href="/assets_livewire/bolt/assets/css/core.min.css" rel="stylesheet" type="text/css">
                 <link href="/assets_livewire/bolt/assets/css/components.min.css" rel="stylesheet" type="text/css">
@@ -86,7 +85,7 @@
             <body class=" navbar-top ">
 
                 <!-- Main navbar -->
-              @livewire('inc.header-candidate')
+                @livewire('inc.header-candidate')
                 <!-- /main navbar -->
 
 
@@ -104,27 +103,10 @@
                                 <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 
                                     <ul class="breadcrumb">
-                                        <li><a href="candidate/dashboard">Bảng tin</a></li>
+                                        <li><a href="/candidate/dashboard">Bảng tin</a></li>
                                         <li>Danh sách nhà tuyển dụng đã xem hồ sơ</li>
                                     </ul>
-                                    <div class="heading-elements panel-nav">
-                                        <ul class="nav nav-pills">
 
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="icon-sort"></i>
-                                                    <span class="position-right">Sắp xếp</span>
-                                                </a>
-
-                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                    <li><a href="/candidate/employers-viewed?sort[date]=asc"><i
-                                                                class="icon-sort-time-asc"></i> Cũ nhất</a></li>
-                                                    <li><a href="/candidate/employers-viewed?sort[date]=desc"><i
-                                                                class="icon-sort-time-desc"></i> Mới nhất</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
 
                                 </div>
                             </div>
@@ -146,7 +128,8 @@
                                                             data-dismiss="alert"><span>×</span><span
                                                                 class="sr-only">Đóng</span></button>
                                                         Không có dữ liệu nào. Nhấn <a target="_blank"
-                                                            href="/viec-lam.html">vào đây</a> để tìm kiếm các việc làm mới
+                                                            href="/viec-lam.html">vào đây</a> để tìm kiếm các việc làm
+                                                        mới
                                                         nhất trên hệ thống. Xin cảm ơn!
                                                     </div>
                                                 </div>
@@ -180,7 +163,8 @@
                                                         </h6>
                                                         <span class="display-block">
 
-                                                            N/A 49 tuổi <br> <span class="text-orange-300 text-uppercase"><i
+                                                            N/A 49 tuổi <br> <span
+                                                                class="text-orange-300 text-uppercase"><i
                                                                     class="hide icon-eye8"></i></span>
                                                         </span>
 
@@ -189,7 +173,8 @@
 
                                                     <div class="progress progress-striped active mt-10"
                                                         title="Hồ sơ xin việc đã hoàn thiện được 45%">
-                                                        <div class="progress-bar progress-bar-success" style="width: 45%">
+                                                        <div class="progress-bar progress-bar-success"
+                                                            style="width: 45%">
                                                             <span class="text-size-mini text-capitalize">45%</span>
                                                         </div>
                                                     </div>
@@ -234,26 +219,34 @@
                                             <div class="panel no-border-top no-border-radius-top">
                                                 <ul class="navigation">
                                                     <li class="navigation-header">Cá nhân</li>
-                                                    <li><a href="candidate/profile"><i class="icon-file-text"></i> Hồ sơ xin
+                                                    <li><a href="/candidate/profile"><i class="icon-file-text"></i> Hồ
+                                                            sơ xin
                                                             việc</a></li>
-                                                    <li><a href="candidate/document-attachment"><i
-                                                                class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
-                                                    <li><a href="candidate/import-linkedin-data"><i
-                                                                class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a>
+                                                    <li><a href="/candidate/document-attachment"><i
+                                                                class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a>
+                                                    </li>
+                                                    <li><a href="/candidate/import-linkedin-data"><i
+                                                                class="icon-linkedin"></i>Nhập thông tin từ
+                                                            LinkedIn</a>
                                                     </li>
                                                     <li
                                                         data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4><p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width=&quot;200px&quot; src=&quot;/cv_template/assets/images/theme/cv3.png&quot; />">
                                                         <a href="/candidate/pre-profile?tab=manage-resume"
-                                                            target="_blank"><i class="icon-copy"></i>CV Go - Tạo CV cực
-                                                            chất<span class="badge badge-danger">Mới!</span></a></li>
+                                                            target="_blank"><i class="icon-copy"></i>CV Go - Tạo CV
+                                                            cực
+                                                            chất<span class="badge badge-danger">Mới!</span></a>
+                                                    </li>
                                                     <li class="navigation-divider"></li>
-                                                    <li><a href="candidate/jobs-applied"
+                                                    <li><a href="/candidate/jobs-applied"
                                                             title="Danh sách việc làm đã ứng tuyển"><i
-                                                                class="icon-stack-check"></i> Việc làm đã ứng tuyển</a></li>
-                                                    <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                                                class="icon-stack-check"></i> Việc làm đã ứng tuyển</a>
+                                                    </li>
+                                                    <li><a href="/candidate/jobs-saved"
+                                                            title="Danh sách việc làm đã lưu"><i
                                                                 class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                    <li><a href="candidate/jobs-matching"
-                                                            title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i>
+                                                    <li><a href="/candidate/jobs-matching"
+                                                            title="Danh sách việc làm phù hợp"><i
+                                                                class="icon-stack4"></i>
                                                             Việc làm phù hợp</a></li>
                                                 </ul>
                                             </div>
@@ -287,7 +280,8 @@
                                             <label class="control-label col-sm-3 ">Lý do hủy bỏ:</label>
                                             <div class="col-sm-9 ">
                                                 <label class="checkbox ">
-                                                    <input type="checkbox " name="reason[] " value="Đã tìm được việc mới ">
+                                                    <input type="checkbox " name="reason[] "
+                                                        value="Đã tìm được việc mới ">
                                                     <span class="ml-20 text-default ">Đã tìm được việc mới</span>
                                                 </label>
                                                 <label class="checkbox ">
@@ -296,7 +290,8 @@
                                                         class="ml-20 text-default ">Mức lương không phù hợp</span>
                                                 </label>
                                                 <label class="checkbox ">
-                                                    <input type="checkbox " name="reason[] " value="Yêu cầu không phù hợp ">
+                                                    <input type="checkbox " name="reason[] "
+                                                        value="Yêu cầu không phù hợp ">
                                                     <span class="ml-20 text-default ">Yêu cầu không phù hợp</span>
                                                 </label>
                                                 <label class="checkbox ">
@@ -305,7 +300,8 @@
                                                         class="ml-20 text-default ">Địa điểm không phù hợp</span>
                                                 </label>
                                                 <label class="checkbox ">
-                                                    <input type="checkbox " name="reason[] " value="Nghi ngờ NTD lừa đảo ">
+                                                    <input type="checkbox " name="reason[] "
+                                                        value="Nghi ngờ NTD lừa đảo ">
                                                     <span class="ml-20 text-default ">Nghi ngờ NTD lừa đảo</span>
                                                 </label>
                                                 <label class="checkbox ">
@@ -314,12 +310,11 @@
                                                         class="ml-20 text-default ">Ứng tuyển nhầm công việc</span>
                                                 </label>
                                                 <label class="checkbox ">
-                                                    <input type="checkbox " name="reason[] " value="Thay đổi hồ sơ "> <span
-                                                        class="ml-20 text-default ">Thay đổi hồ sơ</span>
+                                                    <input type="checkbox " name="reason[] " value="Thay đổi hồ sơ ">
+                                                    <span class="ml-20 text-default ">Thay đổi hồ sơ</span>
                                                 </label>
                                                 <div class="checkbox ">
-                                                    <textarea id="reason " name="reason[] " class="form-control mt-10 "
-                                                        placeholder="Lý do khác... "></textarea>
+                                                    <textarea id="reason " name="reason[] " class="form-control mt-10 " placeholder="Lý do khác... "></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -338,18 +333,19 @@
                     </div>
                     <script src="/js/custom.js "></script>
                     <script>
-                        $(function () {
-                            $('.btn-cancel').click(function () {
+                        $(function() {
+                            $('.btn-cancel').click(function() {
                                 var t = $(this);
                                 var f = $('#myModal form');
                                 $('.modal-title').html(t.attr('title'))
                                 f.attr('action', '/api/job-applied?remove=' + t.data('jid'));
-                                $('.btn-submit').click(function () {
+                                $('.btn-submit').click(function() {
                                     var r = $('#reason');
 
                                     var is_checked = false;
-                                    $('.checkbox').each(function () {
-                                        if ($(this).find('input[name="reason[] "]').is(":checked ") || r.val() != '') {
+                                    $('.checkbox').each(function() {
+                                        if ($(this).find('input[name="reason[] "]').is(":checked ") || r
+                                            .val() != '') {
                                             is_checked = true;
                                         }
                                     });
@@ -398,26 +394,26 @@
                             });
                         });
 
-                        $(document).ready(function () {
-                            $("#dropdown-sort ").hover(function () {
+                        $(document).ready(function() {
+                            $("#dropdown-sort ").hover(function() {
                                 $(this).addClass("open ");
                                 $("#dropdown-filter ").removeClass("open ")
-                            }, function () {
-                                $("#dropdown-menu-sort ").hover(function () {
+                            }, function() {
+                                $("#dropdown-menu-sort ").hover(function() {
                                     $(this).closest("#dropdown-sort ").addClass("open ");
-                                }, function () {
+                                }, function() {
                                     $(this).removeClass("open ");
                                     $(this).closest("#dropdown-sort ").removeClass("open ");
                                 });
                             });
 
-                            $("#dropdown-filter ").hover(function () {
+                            $("#dropdown-filter ").hover(function() {
                                 $(this).addClass("open ");
                                 $("#dropdown-sort ").removeClass("open ")
-                            }, function () {
-                                $("#statusDropdown ").hover(function () {
+                            }, function() {
+                                $("#statusDropdown ").hover(function() {
                                     $(this).closest("#dropdown-filter ").addClass("open ");
-                                }, function () {
+                                }, function() {
                                     $(this).removeClass("open ");
                                     $(this).closest("#dropdown-filter ").removeClass("open ");
                                 });
@@ -436,7 +432,8 @@
                                         <div class="content-group-sm ">
                                             <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng "
                                                 data-fancybox=" " data-type="iframe " class="text-white "
-                                                href="https://jobsgo.vn/candidate/detail?v=1727394586 " title="Hồ sơ xin việc của bạn
+                                                href="https://jobsgo.vn/candidate/detail?v=1727394586 "
+                                                title="Hồ sơ xin việc của bạn
                                                 trong mắt nhà tuyển dụng ">
                                                 <h6 class="text-semibold no-margin-bottom ">
                                                     web developer
@@ -497,26 +494,32 @@
                                     <div class="panel no-border-top no-border-radius-top ">
                                         <ul class="navigation ">
                                             <li class="navigation-header ">Cá nhân</li>
-                                            <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
+                                            <li><a href="/candidate/profile "><i class="icon-file-text "></i> Hồ sơ
+                                                    xin
                                                     việc</a></li>
-                                            <li><a href="candidate/document-attachment "><i class="icon-file-media "></i>
+                                            <li><a href="/candidate/document-attachment "><i
+                                                        class="icon-file-media "></i>
                                                     Đính kèm CV/chứng chỉ</a></li>
-                                            <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
+                                            <li><a href="/candidate/import-linkedin-data "><i
+                                                        class="icon-linkedin "></i>Nhập
                                                     thông tin từ LinkedIn</a></li>
                                             <li
                                                 data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4>
                                             <p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width=&quot;200px&quot; src=&quot;/cv_template/assets/images/theme/cv3.png&quot; />">
                                                 <a href="/candidate/pre-profile?tab=manage-resume" target="_blank"><i
                                                         class="icon-copy"></i>CV Go - Tạo CV cực chất<span
-                                                        class="badge badge-danger">Mới!</span></a></li>
+                                                        class="badge badge-danger">Mới!</span></a>
+                                            </li>
                                             <li class="navigation-divider"></li>
-                                            <li class="active"><a href="candidate/jobs-applied"
-                                                    title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i>
+                                            <li class="active"><a href="/candidate/jobs-applied"
+                                                    title="Danh sách việc làm đã ứng tuyển"><i
+                                                        class="icon-stack-check"></i>
                                                     Việc làm đã ứng tuyển</a></li>
-                                            <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                            <li><a href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
                                                         class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                            <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
-                                                        class="icon-stack4"></i> Việc làm phù hợp</a></li>
+                                            <li><a href="/candidate/jobs-matching"
+                                                    title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i>
+                                                    Việc làm phù hợp</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -550,7 +553,8 @@
             <div class="modal-content">
 
                 <div class="model-header">
-                    <button type="button" class="close" data-dismiss="modal" onclick="colorgbGridReload()">×</button>
+                    <button type="button" class="close" data-dismiss="modal"
+                        onclick="colorgbGridReload()">×</button>
                 </div>
                 <div class="modal-body">
                     <div class="pace-demo colorgb-pace-demo">
@@ -658,9 +662,9 @@
         })
     </script>
     <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+    {{-- <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
         href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
-        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a> --}}
 
     <script>
         $(function() {
@@ -726,18 +730,25 @@
 
                 var url_string = window.location.href;
                 var url = new URL(url_string);
-                var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") : '';
+                var utmSource = url.searchParams.get("utm_source") ? url.searchParams.get("utm_source") :
+                '';
                 var utmMed = url.searchParams.get("utm_medium") ? url.searchParams.get("utm_medium") : '';
-                var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get("utm_campaign") : '';
+                var utmCampaign = url.searchParams.get("utm_campaign") ? url.searchParams.get(
+                    "utm_campaign") : '';
                 var utmTerm = url.searchParams.get("utm_term") ? url.searchParams.get("utm_term") : '';
                 if (utmSource || utmMed || utmCampaign || utmTerm) {
                     $('a').attr("href", function() {
                         var currUrl = $(this).attr('href');
-                        if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
+                        if (currUrl && !currUrl.includes("#") && !currUrl.includes("void(0)") && !
+                            currUrl.includes("tel:") && !currUrl.includes("mailto:")) {
                             if (currUrl && currUrl.indexOf("?") == -1) {
-                                urlWithParam = currUrl + "?utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
+                                urlWithParam = currUrl + "?utm_source=" + utmSource +
+                                    "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                    "&utm_campaign=" + utmCampaign;
                             } else {
-                                urlWithParam = currUrl + "&utm_source=" + utmSource + "&utm_medium=" + utmMed + "&utm_term=" + utmTerm + "&utm_campaign=" + utmCampaign;
+                                urlWithParam = currUrl + "&utm_source=" + utmSource +
+                                    "&utm_medium=" + utmMed + "&utm_term=" + utmTerm +
+                                    "&utm_campaign=" + utmCampaign;
                             }
                             return urlWithParam;
                         }
@@ -748,10 +759,6 @@
     </script>
     </body>
 
-    </html>
 
 
-    </div>
-
-    </div>
 </div>

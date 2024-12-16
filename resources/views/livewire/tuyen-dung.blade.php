@@ -2,8 +2,7 @@
 
 
     <head>
-        <title>{{ $company->company_name }}
-        </title>
+        <title>{{ $company->company_name }} - Rzcareer</title>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
             type="font/woff2" crossorigin>
         <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggixSuXd.woff2" as="font"
@@ -122,7 +121,7 @@
                 });
             </script>
 
-        
+
             <style>
                 .input-group-search {
                     border: 2px solid #1772bd !important;
@@ -242,7 +241,7 @@
                                 </h1>
                                 <h2 class="d-block fw-normal fs-5 my-1">{{ $company->company_name }}</h2>
 
-                               
+
                             </div>
                         </div>
 
@@ -533,7 +532,7 @@
                                                         'Văn phòng làm việc' => $review->workplace_environment,
                                                     ];
                                                 @endphp
-                                
+
                                                 @foreach ($fields as $label => $value)
                                                     <div class="row">
                                                         <div class="col-sm-12">
@@ -552,7 +551,7 @@
                                         </div>
                                     @endforeach
                                 </div>
-                                
+
 
                                 {{-- REVIEW FORM --}}
                                 <livewire:company-review :company_id="$company->id" />
@@ -634,7 +633,7 @@
         </section>
         @livewire('employer.inc.footer')
 
-   
+
         <style>
             .zalo-chat-widget {
                 left: initial !important;
@@ -645,7 +644,7 @@
                 height: 60px !important;
             }
         </style>
-     
+
 
 
         <script>
@@ -761,7 +760,7 @@
                 </div>
             </div>
         </div>
-  
+
         <script>
             window.addEventListener('load', function() {
                 $(function() {

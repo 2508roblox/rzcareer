@@ -1,10 +1,6 @@
 <div>
     <div>
 
-        <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-        <!-- Please send your resume with cover letter to team@jobsgo.vn -->
-        <!DOCTYPE html>
-        <html lang="vi-VN">
 
         <head>
             <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -20,14 +16,7 @@
             <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
                 type="font/woff2" crossorigin>
             <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-            <meta charset="UTF-8">
             <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
-            <meta name="viewport"
-                content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <meta name="robots" content="noindex, nofollow">
-            <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-            <meta name="csrf-token"
-                content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
             <title>Bảng tin - RZCareer</title>
 
@@ -171,10 +160,10 @@
                                     thiện CV <div
                                         style="position:absolute;top:-5px;right:0px;font-size:9px;color:white;background:#ff5722;border-radius: 9px;width: 16px;height: 16px;line-height: 16px;;text-align:center">
                                         67</div></a>
-                                <!--  <a href="candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
+                                <!--  <a href="/candidate/pre-profile?tab=check-spell" class="border-primary text-uppercase text-bold btn -->
                                 <!--"><i class="fa fa-exclamation-triangle"></i> Sửa lỗi CV-->
                                 <!--</a>-->
-                                <a href="candidate/pre-profile?tab=analyze"
+                                <a href="/candidate/pre-profile?tab=analyze"
                                     class="border-primary text-uppercase text-bold btn btn-default"><i
                                         class="fa fa-line-chart"></i> Phân
                                     tích CV</a>
@@ -790,8 +779,9 @@
                                                 <div class="thumbnail" title="Cập nhật ảnh đại diện">
                                                     <div id="imageDropAvatar" class="thumb thumb-slide">
 
-                                                        <img src="{{ Storage::url($user->avatar_url) }}"
-                                                            class="avatar img-responsive" alt="web developer">
+                                                        <img style="max-height: 200px;"
+                                                            src="{{ Storage::url($user->avatar_url) }}"
+                                                            class="avatar img-responsive" alt="">
 
 
 
@@ -1238,14 +1228,15 @@
                                                                                                             data-id="RmFkQisydkRIUGhENXE2OWN5Tm1WZz09">
                                                                                                             {{ $secondaryResume->title ?? 'Untitled' }}
                                                                                                         </h3>
-                                                                                                      
-                                                                                                        <p
-                                                                                                            class="font-12" style="
+
+                                                                                                        <p class="font-12"
+                                                                                                            style="
                                                                                                             display: flex;
                                                                                                         ">
                                                                                                             <a
                                                                                                                 href="{{ route('candidate.review', ['resume_id' => $secondaryResume->id]) }}">
-                                                                                                                <span style="
+                                                                                                                <span
+                                                                                                                    style="
                                                                                                                 margin-top: 0 !important;
                                                                                                                 font-size: 11px;
                                                                                                                 border-radius: 4px !important;
@@ -1264,18 +1255,29 @@
                                                                                                                 font-weight: 600;
                                                                                                                 border: 1px solid #ddd !important;
                                                                                                             ">
-                                                                                                                   
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.1681 2.01256C14.4847 1.32915 13.3766 1.32915 12.6932 2.01256L11.9218 2.78399L14.3967 5.25887L15.1681 4.48744C15.8515 3.80402 15.8515 2.69598 15.1681 2.01256Z" fill="#656565"/>
-    <path d="M13.6896 5.96598L11.2147 3.4911L5.61413 9.09166C5.20293 9.50286 4.90068 10.01 4.73466 10.5673L4.20147 12.3573C4.14906 12.5332 4.19729 12.7237 4.32711 12.8535C4.45693 12.9834 4.64746 13.0316 4.82341 12.9792L6.61334 12.446C7.17065 12.28 7.67782 11.9777 8.08901 11.5665L13.6896 5.96598Z" fill="#656565"/>
-    <path d="M4.18066 3.99999C3.07609 3.99999 2.18066 4.89542 2.18066 5.99999V13C2.18066 14.1046 3.07609 15 4.18066 15H11.1807C12.2852 15 13.1807 14.1046 13.1807 13V9.5C13.1807 9.22385 12.9568 9 12.6807 9C12.4045 9 12.1807 9.22385 12.1807 9.5V13C12.1807 13.5523 11.733 14 11.1807 14H4.18066C3.62838 14 3.18066 13.5523 3.18066 13V5.99999C3.18066 5.44771 3.62838 4.99999 4.18066 4.99999H7.68066C7.95681 4.99999 8.18067 4.77614 8.18067 4.49999C8.18067 4.22385 7.95681 3.99999 7.68066 3.99999H4.18066Z" fill="#656565"/>
-    </svg>
-    
+
+                                                                                                                    <svg width="17"
+                                                                                                                        height="17"
+                                                                                                                        viewBox="0 0 17 17"
+                                                                                                                        fill="none"
+                                                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                                                        <path
+                                                                                                                            d="M15.1681 2.01256C14.4847 1.32915 13.3766 1.32915 12.6932 2.01256L11.9218 2.78399L14.3967 5.25887L15.1681 4.48744C15.8515 3.80402 15.8515 2.69598 15.1681 2.01256Z"
+                                                                                                                            fill="#656565" />
+                                                                                                                        <path
+                                                                                                                            d="M13.6896 5.96598L11.2147 3.4911L5.61413 9.09166C5.20293 9.50286 4.90068 10.01 4.73466 10.5673L4.20147 12.3573C4.14906 12.5332 4.19729 12.7237 4.32711 12.8535C4.45693 12.9834 4.64746 13.0316 4.82341 12.9792L6.61334 12.446C7.17065 12.28 7.67782 11.9777 8.08901 11.5665L13.6896 5.96598Z"
+                                                                                                                            fill="#656565" />
+                                                                                                                        <path
+                                                                                                                            d="M4.18066 3.99999C3.07609 3.99999 2.18066 4.89542 2.18066 5.99999V13C2.18066 14.1046 3.07609 15 4.18066 15H11.1807C12.2852 15 13.1807 14.1046 13.1807 13V9.5C13.1807 9.22385 12.9568 9 12.6807 9C12.4045 9 12.1807 9.22385 12.1807 9.5V13C12.1807 13.5523 11.733 14 11.1807 14H4.18066C3.62838 14 3.18066 13.5523 3.18066 13V5.99999C3.18066 5.44771 3.62838 4.99999 4.18066 4.99999H7.68066C7.95681 4.99999 8.18067 4.77614 8.18067 4.49999C8.18067 4.22385 7.95681 3.99999 7.68066 3.99999H4.18066Z"
+                                                                                                                            fill="#656565" />
+                                                                                                                    </svg>
+
                                                                                                                     Chỉnh
                                                                                                                     sửa
                                                                                                                 </span>
                                                                                                             </a>
-                                                                                                            <button style="
+                                                                                                            <button
+                                                                                                                style="
                                                                                                             margin-top: 0 !important;
                                                                                                             font-size: 11px;
                                                                                                             border-radius: 4px !important;
@@ -1292,15 +1294,31 @@
                                                                                                             color: #555;
                                                                                                             font-weight: 600;
                                                                                                             border: 1px solid #ddd !important;
-                                                                                                        " type="button" class="btn btn-primary btn-icon" onclick="window.open('{{ asset($secondaryResume->file_url) }}' )">
-                                                                                                                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="#00000" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                    <path fill="#00000" clip-rule="evenodd" d="M4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11ZM11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2Z" fill="#ffffff" />
-                                                                                                                    <path fill="#00000" clip-rule="evenodd" d="M10 14C10 14.5523 10.4477 15 11 15C11.5523 15 12 14.5523 12 14V12H14C14.5523 12 15 11.5523 15 11C15 10.4477 14.5523 10 14 10H12V8C12 7.44772 11.5523 7 11 7C10.4477 7 10 7.44772 10 8V10H8C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H10V14Z" fill="#ffffff" />
+                                                                                                        "
+                                                                                                                type="button"
+                                                                                                                class="btn btn-primary btn-icon"
+                                                                                                                onclick="window.open('{{ asset($secondaryResume->file_url) }}' )">
+                                                                                                                <svg width="12px"
+                                                                                                                    height="12px"
+                                                                                                                    viewBox="0 0 24 24"
+                                                                                                                    fill="#00000"
+                                                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                                                    <path
+                                                                                                                        fill="#00000"
+                                                                                                                        clip-rule="evenodd"
+                                                                                                                        d="M4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11ZM11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2Z"
+                                                                                                                        fill="#ffffff" />
+                                                                                                                    <path
+                                                                                                                        fill="#00000"
+                                                                                                                        clip-rule="evenodd"
+                                                                                                                        d="M10 14C10 14.5523 10.4477 15 11 15C11.5523 15 12 14.5523 12 14V12H14C14.5523 12 15 11.5523 15 11C15 10.4477 14.5523 10 14 10H12V8C12 7.44772 11.5523 7 11 7C10.4477 7 10 7.44772 10 8V10H8C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H10V14Z"
+                                                                                                                        fill="#ffffff" />
                                                                                                                 </svg>
                                                                                                             </button>
-                
+
                                                                                                             <!-- Nút xóa với icon -->
-                                                                                                            <button style="
+                                                                                                            <button
+                                                                                                                style="
                                                                                                             margin-top: 0 !important;
                                                                                                             font-size: 11px;
                                                                                                             border-radius: 4px !important;
@@ -1317,23 +1335,33 @@
                                                                                                             color: #555;
                                                                                                             font-weight: 600;
                                                                                                             border: 1px solid #ddd !important;
-                                                                                                        " type="button" class="btn btn-danger btn-icon" wire:click="deleteResume({{ $secondaryResume->id }})">
-                                                                                                                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="#00000" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                    <path d="M6 7V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6ZM10 17H8V9H10V17ZM14 17H16V9H14V17ZM15 4L14 3H10L9 4H4V6H20V4H15Z" />
+                                                                                                        "
+                                                                                                                type="button"
+                                                                                                                class="btn btn-danger btn-icon"
+                                                                                                                wire:click="deleteResume({{ $secondaryResume->id }})">
+                                                                                                                <svg width="12px"
+                                                                                                                    height="12px"
+                                                                                                                    viewBox="0 0 24 24"
+                                                                                                                    fill="#00000"
+                                                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                                                    <path
+                                                                                                                        d="M6 7V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6ZM10 17H8V9H10V17ZM14 17H16V9H14V17ZM15 4L14 3H10L9 4H4V6H20V4H15Z" />
                                                                                                                 </svg>
                                                                                                             </button>
 
                                                                                                             <a href="{{ asset($secondaryResume->file_url) }}"
-                                                                                                            class="download-cv"
-                                                                                                            download
-                                                                                                            data-id="RmFkQisydkRIUGhENXE2OWN5Tm1WZz09"
-                                                                                                            data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống..."
-                                                                                                            >
-                                                                                                            <span class="mrg-l-10 hidden-xs">
-                                                                                                                <img loading="lazy" src="/media/icon_profile/arrow-down-tray.svg" alt="">
-                                                                                                            </span>
-                                                                                                         </a>
-                                                                                                         
+                                                                                                                class="download-cv"
+                                                                                                                download
+                                                                                                                data-id="RmFkQisydkRIUGhENXE2OWN5Tm1WZz09"
+                                                                                                                data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống...">
+                                                                                                                <span
+                                                                                                                    class="mrg-l-10 hidden-xs">
+                                                                                                                    <img loading="lazy"
+                                                                                                                        src="/media/icon_profile/arrow-down-tray.svg"
+                                                                                                                        alt="">
+                                                                                                                </span>
+                                                                                                            </a>
+
                                                                                                             <a style="
                                                                                                             margin-top: 0 !important;
                                                                                                             font-size: 11px;
@@ -1351,18 +1379,27 @@
                                                                                                             color: #555;
                                                                                                             font-weight: 600;
                                                                                                             border: 1px solid #ddd !important;
-                                                                                                        " href="{{ asset($secondaryResume->file_url) }}"
-                                                                                                        download
+                                                                                                        "
+                                                                                                                href="{{ asset($secondaryResume->file_url) }}"
+                                                                                                                download
                                                                                                                 class="download-cv"
                                                                                                                 data-id="RmFkQisydkRIUGhENXE2OWN5Tm1WZz09"
                                                                                                                 data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang tải xuống...">
                                                                                                                 <span
                                                                                                                     class="mrg-l-10 hidden-xs">
-                                                                                                                   
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68067 2C8.95681 2 9.18067 2.22386 9.18067 2.5V10.2929L11.3271 8.14645C11.5224 7.95118 11.839 7.95118 12.0342 8.14645C12.2295 8.34171 12.2295 8.65829 12.0342 8.85355L9.03422 11.8536C8.83896 12.0488 8.52237 12.0488 8.32711 11.8536L5.32711 8.85355C5.13185 8.65829 5.13185 8.34171 5.32711 8.14645C5.52237 7.95118 5.83896 7.95118 6.03422 8.14645L8.18067 10.2929V2.5C8.18067 2.22386 8.40452 2 8.68067 2ZM2.68066 11C2.95681 11 3.18066 11.2239 3.18066 11.5V13C3.18066 13.5523 3.62838 14 4.18066 14H13.1807C13.733 14 14.1807 13.5523 14.1807 13V11.5C14.1807 11.2239 14.4045 11 14.6807 11C14.9568 11 15.1807 11.2239 15.1807 11.5V13C15.1807 14.1046 14.2852 15 13.1807 15H4.18066C3.07609 15 2.18066 14.1046 2.18066 13V11.5C2.18066 11.2239 2.40452 11 2.68066 11Z" fill="#656565"/>
-    </svg>
-    
+
+                                                                                                                    <svg width="17"
+                                                                                                                        height="17"
+                                                                                                                        viewBox="0 0 17 17"
+                                                                                                                        fill="none"
+                                                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                                                        <path
+                                                                                                                            fill-rule="evenodd"
+                                                                                                                            clip-rule="evenodd"
+                                                                                                                            d="M8.68067 2C8.95681 2 9.18067 2.22386 9.18067 2.5V10.2929L11.3271 8.14645C11.5224 7.95118 11.839 7.95118 12.0342 8.14645C12.2295 8.34171 12.2295 8.65829 12.0342 8.85355L9.03422 11.8536C8.83896 12.0488 8.52237 12.0488 8.32711 11.8536L5.32711 8.85355C5.13185 8.65829 5.13185 8.34171 5.32711 8.14645C5.52237 7.95118 5.83896 7.95118 6.03422 8.14645L8.18067 10.2929V2.5C8.18067 2.22386 8.40452 2 8.68067 2ZM2.68066 11C2.95681 11 3.18066 11.2239 3.18066 11.5V13C3.18066 13.5523 3.62838 14 4.18066 14H13.1807C13.733 14 14.1807 13.5523 14.1807 13V11.5C14.1807 11.2239 14.4045 11 14.6807 11C14.9568 11 15.1807 11.2239 15.1807 11.5V13C15.1807 14.1046 14.2852 15 13.1807 15H4.18066C3.07609 15 2.18066 14.1046 2.18066 13V11.5C2.18066 11.2239 2.40452 11 2.68066 11Z"
+                                                                                                                            fill="#656565" />
+                                                                                                                    </svg>
+
                                                                                                                 </span>
                                                                                                             </a>
 
@@ -1541,12 +1578,12 @@
                                         <div class="panel no-border-top no-border-radius-top">
                                             <ul class="navigation">
                                                 <li class="navigation-header">Cá nhân</li>
-                                                <li><a href="candidate/profile"><i class="icon-file-text"></i> Hồ sơ
+                                                <li><a href="/candidate/profile"><i class="icon-file-text"></i> Hồ sơ
                                                         xin
                                                         việc</a></li>
-                                                <li><a href="candidate/document-attachment"><i
+                                                <li><a href="/candidate/document-attachment"><i
                                                             class="icon-file-media"></i> Đính kèm CV/chứng chỉ</a></li>
-                                                <li><a href="candidate/import-linkedin-data"><i
+                                                <li><a href="/candidate/import-linkedin-data"><i
                                                             class="icon-linkedin"></i>Nhập thông tin từ LinkedIn</a>
                                                 </li>
                                                 <li
@@ -1556,14 +1593,14 @@
                                                         chất<span class="badge badge-danger">Mới!</span></a>
                                                 </li>
                                                 <li class="navigation-divider"></li>
-                                                <li><a href="candidate/jobs-applied"
+                                                <li><a href="/candidate/jobs-applied"
                                                         title="Danh sách việc làm đã ứng tuyển"><i
                                                             class="icon-stack-check"></i> Việc làm đã ứng tuyển</a>
                                                 </li>
-                                                <li><a href="candidate/jobs-saved"
+                                                <li><a href="/candidate/jobs-saved"
                                                         title="Danh sách việc làm đã lưu"><i
                                                             class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                                <li><a href="candidate/jobs-matching"
+                                                <li><a href="/candidate/jobs-matching"
                                                         title="Danh sách việc làm phù hợp"><i class="icon-stack4"></i>
                                                         Việc làm phù hợp</a></li>
                                             </ul>
@@ -1706,10 +1743,6 @@
                 })
             </script>
             <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-            <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
-                href="/assets_livewire/candidate/detail?v=1727321539"
-                title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" class="btn-colorgb-float"> <i
-                    class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
 
 
 
@@ -1717,7 +1750,6 @@
 
         </body>
 
-        </html>
 
 
     </div>

@@ -80,7 +80,7 @@ class InterviewResource extends Resource
                             ->required(),
 
                         Forms\Components\TextInput::make('feedback')
-                            ->label('Phản Hồi')
+                            ->label('Mô tả buổi phỏng vấn')
                             ->required(),
                     ]),
 
@@ -155,7 +155,14 @@ class InterviewResource extends Resource
             // Thêm các bộ lọc nếu cần
         ])
         ->actions([
-            Tables\Actions\EditAction::make(), // Cho phép chỉnh sửa từng cuộc phỏng vấn
+            Tables\Actions\ActionGroup::make([
+                Tables\Actions\EditAction::make()
+                    ->label('Chỉnh sửa'),
+                Tables\Actions\ViewAction::make()
+                    ->label('Xem'),
+                Tables\Actions\DeleteAction::make()
+                    ->label('Xóa'),
+            ]),
         ])
         ->bulkActions([
             Tables\Actions\BulkActionGroup::make([

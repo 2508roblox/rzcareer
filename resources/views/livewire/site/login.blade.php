@@ -2,17 +2,10 @@
     <!-- <div>{{Auth::logout()}}</div> -->
     <!-- <div>{{Auth::user()}}</div> -->
 
-    <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team --><!-- Please send your resume with cover letter to team@jobsgo.vn -->
-    <!DOCTYPE html>
-    <html lang="vi-VN">
+
 
     <head>
-        <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-        <meta name="csrf-token" content="m6GRiXQWcMY8qu3uDTSc9bDmAMOWGrPBm51IfnaZQi-olObMFU44nEXTgah3VeWM_LdtgtEj5Y3xr38nAagYdw==">
-        <title>Đăng nhập hệ thống - Dành cho người tìm việc - RZCareer</title>
+        <title>Đăng nhập hệ thống - RZCareer</title>
 
         <link href="/assets_livewire/bolt/assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
@@ -22,9 +15,8 @@
         <link href="/assets_livewire/bolt/assets/css/colors.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/extras/animate.min.css" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/js/plugins/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-        <link href="https://jobsgo.vn/cv_template/dist/css/introjs.css?v=2342081531001" rel="stylesheet" type="text/css">
         <link href="/assets_livewire/bolt/assets/css/main.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
-        <link href="https://jobsgo.vn/css/v2.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
+        <link href="/assets_livewire/css/v2.css?colorgb=2342081531001" rel="stylesheet" type="text/css">
 
 
 
@@ -64,7 +56,7 @@
 
     </head>
 
-    <body class=" access " style="background-color: #050515">
+    <body class=" access "   style="background-image: url(/assets_livewire/banner.png); background-size: cover; ">
         <!-- Google Tag Manager (noscript) -->
         <!--Start of Tawk.to Script--> <!--<div id="load-tawkto"><img src="https://jobsgo.vn/img/chat_icon.png"></div>--> <!-- Messenger Plugin chat Code -->
         <div id="fb-root"></div> <!-- Your Plugin chat code -->
@@ -98,7 +90,7 @@
 
 
         <!-- Page container -->
-        <div class="page-container login-container">
+        <div class="page-container login-container" >
             <!-- Page content -->
             <div class="page-content">
 
@@ -158,62 +150,73 @@
                         }
                     </style>
 
-                    <form wire:submit.prevent="login" class="login-form">
-                        <a title="RZCareer - Trang chủ" href="/" class="site-logo" style="
-    justify-content: center;
-    display: flex;
-">
- <img src="/assets_livewire/logo-dark.svg" alt="">
+<form wire:submit.prevent="login" class="login-form">
+    <a title="RZCareer - Trang chủ" href="/" class="site-logo" style="justify-content: center; display: flex;">
+        <img src="/assets_livewire/logo-dark.svg" alt="">
+    </a>
 
+    <div class="panel panel-body">
+        @if (isset($error['login']))
+            <div class="alert alert-danger">
+                <span>{{ $error['login'] }}</span>
+            </div>
+        @endif
 
-                        </a>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" wire:model="email" class="form-control">
+            @if(isset($error['email'])) <span class="text-danger">{{ $error['email'] }}</span> @endif
+        </div>
 
-                        <div class="panel panel-body">
-                            <div class="content-divider text-uppercase text-muted form-group"><span>Đăng Nhập Với</span></div>
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" wire:model="password" class="form-control">
+            @if(isset($error['password'])) <span class="text-danger">{{ $error['password'] }}</span> @endif
+        </div>
 
-                            <div class="row mb-3">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" wire:model.defer="rememberMe"> Tự động đăng nhập
+                    </label>
+                </div>
+            </div>
+            <div class="col-xs-6 text-right">
+                <a href="/site/request-password-reset">Quên mật khẩu?</a>
+            </div>
+        </div>
 
-                                <div class="col-xs-3">
-                                    <a href="{{ route('google.login', ['id' => 1]) }}" class="btn bg-pink-300 btn-google btn-block btn-flat btn-icon btn-rounded"><i class="icon-google"></i> Google</a>
-                                </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+            <button onclick="window.location.href='{{ route('google.login', ['id' => 1]) }}'" class="btn btn-warning btn-block w-100" type="button" id="loginWithGoogle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display: block;">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                    <path fill="none" d="M0 0h48v48H0z"></path>
+                </svg>
+                Đăng nhập với Google
+            </button>
+            <style>
+                #loginWithGoogle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+                #loginWithGoogle svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            </style>
+        </div>
 
-                            </div>
-
-                            <div class="content-divider text-uppercase text-muted form-group"><span>Hoặc</span></div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" id="email" wire:model="email" class="form-control">
-                                @error('email') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password">Mật khẩu</label>
-                                <input type="password" id="password" wire:model="password" class="form-control">
-                                @error('password') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <label>
-                                            <input type="checkbox" wire:model.defer="rememberMe"> Tự động đăng nhập
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <a href="/site/request-password-reset">Quên mật khẩu?</a>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-                            </div>
-
-                            <div class="content-divider text-muted form-group"><span>Bạn chưa có tài khoản?</span></div>
-                            <a href="/site/register" class="btn btn-default btn-block">Đăng ký nhanh</a>
-                        </div>
-                    </form>
+        <div class="content-divider text-muted form-group"><span>Bạn chưa có tài khoản?</span></div>
+        <a href="/site/register" class="btn btn-default btn-block">Đăng ký nhanh</a>
+    </div>
+</form>
 
                     <!-- The popup modal -->
                     <div class="modal fade" id="phoneAuthModal">
@@ -298,7 +301,6 @@
 
     </body>
 
-    </html>
 
 
 </div>

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $currentTitle }} - RZCareer</title>
-</head>
+
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f3f4f6;">
     <div style="width: 90%; max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); padding: 20px; border: 2px solid {{ $statusColor }};">
+        <h1
+        style="color: {{ $statusColor }}; text-align: center; padding-bottom: 10px;">
+        <img src="https://i.ibb.co/VLCzPcL/Screenshot-2024-12-16-091923-removebg-preview.png" alt=""
+            srcset="" style="width: 200px;  ">
+    </h1>
         <h1 style="color: {{ $statusColor }}; text-align: center; border-bottom: 2px solid {{ $statusColor }}; padding-bottom: 10px;">{{ $currentTitle }}</h1>
-        
+
         <p style="font-size: 16px; line-height: 1.5; color: #333;">Chào <strong style="color: {{ $statusColor }};">{{ $candidateName }}</strong>,</p>
 
         @if($status == 'scheduled')
@@ -24,11 +23,17 @@
                     <li style="margin: 10px 0;">
                         <strong>Người phỏng vấn:</strong> {{ $interviewerName }}
                     </li>
+                    <li style="margin: 10px 0;">
+                        <strong>Địa điểm:</strong> {{ $location }}
+                    </li>
+                    <li style="margin: 10px 0;">
+                        <strong>Mô tả buổi phỏng vấn:</strong> {{ $feedback }}
+                    </li>
                 </ul>
             </div>
         @elseif($status == 'completed')
             <p style="font-size: 16px; line-height: 1.5; color: #555;">
-                Cảm ơn bạn đã tham gia buổi phỏng vấn cho vị trí <strong style="color: {{ $statusColor }};">{{ $jobName }}</strong>. 
+                Cảm ơn bạn đã tham gia buổi phỏng vấn cho vị trí <strong style="color: {{ $statusColor }};">{{ $jobName }}</strong>.
                 Chúng tôi sẽ sớm thông báo kết quả đến bạn.
             </p>
         @elseif($status == 'canceled')
@@ -47,4 +52,4 @@
         </p>
     </div>
 </body>
-</html>
+

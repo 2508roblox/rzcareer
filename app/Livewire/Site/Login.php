@@ -15,7 +15,7 @@ class Login extends Component
     public $email = '';
     public $password = '';
     public $rememberMe = false; // Add rememberMe property
-
+    public $error = [];
     public function mount()
     {
         // Check if the user is already authenticated
@@ -32,11 +32,21 @@ class Login extends Component
 
     public function login()
     {
-        // Validate email and password
-        $this->validate([
-            'email' => 'required|email',
-            'password' => 'required|string|min:6',
-        ]);
+        $this->error = []; // Reset lỗi trước khi kiểm tra
+
+        // Kiểm tra các trường
+        if (empty($this->email)) {
+            $this->error['email'] = 'Email không được để trống';
+        }
+
+        if (empty($this->password)) {
+            $this->error['password'] = 'Mật khẩu không được để trống';
+        }
+
+        // Nếu có lỗi, dừng lại và không tiếp tục
+        if (count($this->error) > 0) {
+            return; // Dừng phương thức nếu có lỗi
+        }
 
         // Attempt to authenticate the user
         if ($this->authenticate($this->email, $this->password)) {
@@ -48,13 +58,11 @@ class Login extends Component
             }
 
             $this->alert('success', 'Đăng nhập thành công!');
-            // Redirect or perform any action after login
             return redirect('/'); // Redirect to your desired route
         } else {
-            $this->alert('error', 'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
+            $this->error['login'] = 'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!';
         }
     }
-
     public function handleGoogleCallback()
     {
         try {
@@ -64,7 +72,7 @@ class Login extends Component
             if ($findUser) {
                 // Login the user if the email is found in the database
                 Auth::login($findUser);
-                
+
                 return redirect('/'); // Redirect to home after login
             } else {
                 // Redirect to login with an error message if the email is not found
@@ -84,7 +92,7 @@ class Login extends Component
     {
         Auth::logout(); // Log out the user
         $this->alert('success', 'Đăng xuất thành công!'); // Show success alert
-        // Optionally redirect after logout, e.g., return redirect()->to('/'); 
+        // Optionally redirect after logout, e.g., return redirect()->to('/');
     }
 
     public function render()

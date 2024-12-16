@@ -53,7 +53,7 @@
                         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
                     <meta name="csrf-token"
                         content="QSCU41F7_ApK5GxiBJAkc4oq9kmA63RO7ZOHpUBgyvMZU621EjiFXAi2BgdswW8U4EKjEeSORwPfwuGTdxTypQ==">
-                    <title>{{$jobPost->job_name}}</title>
+                    <title>{{$jobPost->job_name}} - Rzcareer</title>
                     <link rel="preload" as="font" type="font/woff" crossorigin="anonymous"
                         href="/assets_livewire/static/assets/css/fonts/et-line.woff">
                     <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
@@ -213,33 +213,8 @@
                                                         style="padding: 0 !important;min-height: initial;height: initial;">
                                                         <div class="container-bk">
                                                             <div class="row">
-                                                                <div class="col-sm-12 col-sm-offset-1-bk">
-                                                                    <form class="bt-form teks-search-form clearfix">
-                                                                        <div class="row no-mrg teks-search">
-                                                                            <div class="col-xs-5 padd0 colorgb-search">
-                                                                                <input type="search" value=""
-                                                                                    onfocus="this.select()"
-                                                                                    class="form-control br-1"
-                                                                                    id="jobRole"
-                                                                                    placeholder="Việc, công ty, ngành nghề...">
-                                                                            </div>
-                                                                            <div class="col-xs-4 padd0 colorgb-place">
-                                                                                <input type="search" value=""
-                                                                                    onfocus="this.select()"
-                                                                                    class="form-control br-1"
-                                                                                    id="jobPlace"
-                                                                                    placeholder="Tỉnh/thành, quận...">
-                                                                            </div>
-                                                                            <div class="col-xs-3 colorgb-submit padd0">
-                                                                                <button id="jobSearch" type="submit"
-                                                                                    class="btn btn-success btn-block text-uppercase"
-                                                                                    onclick="ga('send', 'event', 'Search', 'click', 'TÌM KIẾM VIỆC LÀM')"><i
-                                                                                        class="bx hide bx-search-alt bx-sm text-white"></i>
-                                                                                    <span class="hidden-x">TÌM
-                                                                                        VIỆC</span></button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
+                                                                <div class="col-sm-12 col-sm-offset-1-bk" style="margin-top: 50px !important;">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -517,7 +492,7 @@
                                                             class="text-warning"><strong>Chú ý:</strong> Nếu bạn thấy
                                                             rằng tin tuyển dụng
                                                             này không đúng hoặc có dấu hiệu lừa đảo, <a
-                                                                href="javascript:void(0)" data-toggle="modal"
+                                                                href="https://zalo.me/1715225565559061022" data-toggle="modal"
                                                                 data-target="#reportForm"><u>hãy gửi phản ánh đến
                                                                     chúng tôi</u></a></i></p>
 
@@ -603,12 +578,17 @@
                                                             <div class="media">
                                                                 <div class="media-left">
                                                                     <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
-                                                                        class="profile-thumb">
-                                                                        <img width="85" height="85"
-                                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                            src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
-                                                                            class="img-md img-circle lazy"
-                                                                            alt="{{ $jobPost->company->name }}">
+                                                                        class="profile-thumb" style="
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                    ">
+                                                                  <div width="85" height="85" style="width: 85px; height: 85px; background-color: #fff; display: flex; justify-content: center; align-items: center;">
+                                                                    <img style="height: initial"
+                                                                    onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                    src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
+                                                                    class="img-md img-circle lazy"
+                                                                    alt="{{ $jobPost->company->name }}">
+                                                                  </div>
                                                                     </a>
                                                                 </div>
 

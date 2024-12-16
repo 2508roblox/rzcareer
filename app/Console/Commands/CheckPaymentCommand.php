@@ -21,7 +21,7 @@ class CheckPaymentCommand extends Command
         // Gọi API để lấy danh sách giao dịch
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization' => 'Bearer ZTAMVHYFPJWVYTNXQWXEMAP5IOBUADBMH079LUDYBQJQRZLHZTUI2TXS3LS8F8PL',
+            'Authorization' => 'Bearer FHQMNTA45AVPJTZAUU2C61UZQ3OWBZMFDII1MESK8GXYVPB7NKS7JHYLN0PAXQEL',
         ])->timeout(30)->get('https://my.sepay.vn/userapi/transactions/list', [
             'account_number' => '104567890',
             'limit' => 20,

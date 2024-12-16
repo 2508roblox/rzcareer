@@ -178,18 +178,13 @@ class CompanyResource extends Resource
                     ->numeric()
                     ->sortable()
                     ->label('ID'),
-                    // Tables\Columns\ImageColumn::make('company_image_url')
-                    // ->label('Hình Ảnh Công Ty'),
+                    Tables\Columns\ImageColumn::make('company_image_url')
+                    ->label('Hình Ảnh Công Ty'),
 
 
                 Tables\Columns\TextColumn::make('company_name')
                     ->searchable()
                     ->label('Tên Công Ty'),
-
-
-
-
-
                 Tables\Columns\ImageColumn::make('company_image_public_id')
                 ->toggleable(isToggledHiddenByDefault: true)
                     ->label('ID Hình Ảnh Công Ty'),
@@ -236,6 +231,7 @@ class CompanyResource extends Resource
                 Tables\Columns\TextColumn::make('since')
                     ->date()
                     ->sortable()
+                    ->searchable()
                     ->label('Thành Lập'),
 
                 Tables\Columns\TextColumn::make('field_operation')

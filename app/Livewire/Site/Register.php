@@ -17,6 +17,8 @@ class Register extends Component
     public $password;
     public $email;
     public $rememberMe = false;
+    public $confirm_password;
+    public $error = [];
 
     public function mount()
     {
@@ -28,13 +30,18 @@ class Register extends Component
 
     public function register()
     {
-        // Validate input data
-        $this->validate([
-            'password' => 'required|string|min:6',
-            'email' => 'required|email|unique:users,email',
-            'full_name' => 'required|string|max:255',
-        ]);
-
+        if ($this->password != $this->confirm_password) {
+            $this->error['password'] = 'Mật khẩu không khớp';
+        }
+        if ($this->email == '') {
+            $this->error['email'] = 'Email không được để trống';
+        }
+        if ($this->full_name == '') {
+            $this->error['full_name'] = 'Họ tên không được để trống';
+        }
+        if (count($this->error) > 0) {
+            return;
+        }
         try {
 
             // Create a new user
@@ -61,7 +68,6 @@ class Register extends Component
             $this->alert('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
         } catch (\Exception $e) {
             // Show error alert if registration fails
-            dd($e->getMessage());
             $this->alert('error', 'Đăng ký thất bại! Email đã tồn tại.');
         }
 

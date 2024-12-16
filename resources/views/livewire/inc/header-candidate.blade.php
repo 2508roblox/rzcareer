@@ -35,13 +35,6 @@
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-menu7"></i></a>
                 </li>
             </ul>
-            <div class="visible-xs"
-                style="position: absolute;right: 70px;top: 17px;padding: 4px 6px;border-radius: 4px;background-color: #ff5c35; padding: 4px 20px; border-radius: 3px; line-height: 22px;">
-                <a href="/site/download?utm_source=web_ntv&amp;utm_medium=top_menu_tai_app" title="Tải App"
-                    target="_blank" style="color: #fff !important;"><i class="glyphicon glyphicon-download-alt"
-                        style="color: #fff !important;"></i> Tải
-                    App</a>
-            </div>
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
@@ -157,7 +150,7 @@
 
 
 
-                    <a href="candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
+                    <a href="/candidate/index" style=" padding-top: 12px;display: flex; align-items:center "
                         class="dropdown-toggle" data-toggle="dropdown">
                         <img class="lazy rounded-1"
                         src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"

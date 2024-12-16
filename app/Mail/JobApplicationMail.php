@@ -31,6 +31,8 @@ class JobApplicationMail extends Mailable
         $this->experience = $jobPost->experience;
         $this->createdAt = \Carbon\Carbon::parse($jobPost->created_at)->format('d/m/Y');
         $this->sentAt = now()->format('d/m/Y H:i');
+        $this->from('hoangtlhps26819@fpt.edu.vn', 'RZ Career');
+
     }
 
     public function envelope(): Envelope

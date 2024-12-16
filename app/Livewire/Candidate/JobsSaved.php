@@ -34,7 +34,7 @@ class JobsSaved extends Component
 
         if ($savedJob) {
             $savedJob->delete(); // Remove the saved job
-            
+
             // Refresh the saved jobs list
             $this->savedJobs = SavedJobPost::where('user_id', Auth::id())
                 ->with('jobPost')
@@ -46,7 +46,7 @@ class JobsSaved extends Component
                 'timer' => 3000, // Auto-dismiss after 3 seconds
                 'toast' => true, // Show as a toast
                 'showCloseButton' => true, // Optionally show a close button
-            ]); 
+            ]);
         } else {
             // Display error alert with options if job not found
             $this->alert('error', 'Không tìm thấy việc làm.', [
@@ -54,7 +54,7 @@ class JobsSaved extends Component
                 'timer' => 3000, // Auto-dismiss after 3 seconds
                 'toast' => true, // Show as a toast
                 'showCloseButton' => true, // Optionally show a close button
-            ]); 
+            ]);
         }
     }
 

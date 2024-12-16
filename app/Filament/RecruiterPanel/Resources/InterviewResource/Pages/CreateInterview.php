@@ -33,7 +33,10 @@ class CreateInterview extends CreateRecord
             $jobPost->job_name,
             $slot->start_time,
             $slot->interviewer->full_name,
-            $this->record->status // Truyền trạng thái vào mailable
+            $this->record->status, // Truyền trạng thái vào mailable
+            $slot->end_time,
+            $slot->location,
+            $this->record->feedback
         ));
     }
 

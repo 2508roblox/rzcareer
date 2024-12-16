@@ -106,7 +106,7 @@
           <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle" href="/cong-ty">
             <img src="{{ asset('assets_livewire/img/employer.svg') }}" alt="job" loading="lazy"> Công ty
           </a>
-    
+
           <ul class="dropdown-menu">
             @foreach($companies as $company)
             <li>
@@ -117,7 +117,7 @@
             </li>
             @endforeach
           </ul>
-        
+
         </li>
 
         <!-- <li class="nav-item dropdown">
@@ -155,7 +155,7 @@
           src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
           alt="avatar" width="32" height="32">
-        
+
 
           <span style="margin-left: 5px">
             @if (Auth::check())
@@ -228,175 +228,67 @@
             color: #FF5722 !important;
           }
         </style>
-        @if (Auth::check())
-        <div class="dropdown me-sm-3 me-0 text-end mr--20">
-          <a href="#" style=" padding-top: 12px; display: flex !important; align-items:center;"
-            class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <img class="lazy rounded-1"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-              data-src="https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c"
-              alt="avatar" width="32" height="32">
-            @auth
-            <span style="margin-left: 5px" class="">
-              <div class="d-flex fw-bold text-capitalize">
-                {{ Auth::user()->full_name }}
-              </div>
-              <div id="status_job_search" class="status_on">
-                Đang tìm việc
-              </div>
-            </span>
-            @endauth
 
-          </a>
-          <ul class="dropdown-menu text-small">
-            <style>
-              .switcher {
-                display: inline-block;
-                position: relative;
-                font-size: 16px;
-              }
+     @if(Auth::check())
+     <!-- If user is authenticated -->
+     <div class="dropdown me-sm-3 me-0 text-end mr--20">
+       <a href="#" style="padding-top: 12px; display: flex !important; align-items:center;"
+         class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+         aria-expanded="false">
+         <img class="lazy rounded-1"
+         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+         data-src="{{ auth()->user()->avatar_url ? Storage::url(auth()->user()->avatar_url) : 'https://lh3.googleusercontent.com/a/ACg8ocK8gM4BqM7T5N6j_ITi302_WurD0O8FM4ui8JJGNxNbwKM3cyjt=s500-c' }}"
+         alt="avatar" width="32" height="32">
 
-              .status_off {
-                color: #FF5722 !important;
-              }
 
-              .switch__input {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 36px;
-                height: 20px;
-                opacity: 0;
-                z-index: 0;
-              }
+         <span style="margin-left: 5px">
+           @if (Auth::check())
+           <span>
+             <div class="d-flex fw-bold text-capitalize">{{ Auth::user()->full_name }}</div>
 
-              .switch__label {
-                display: block;
-                padding: 0 0 0 44px;
-                cursor: pointer;
-                color: #4CAF50;
-                font-weight: 600;
-                font-size: 14px
-              }
+           </span>
+           @endif
 
-              .switch__label:before {
-                content: "";
-                position: absolute;
-                top: 5px;
-                left: 0;
-                width: 36px;
-                height: 14px;
-                background-color: rgba(0, 0, 0, 0.26);
-                border-radius: 14px;
-                z-index: 1;
-                transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-              }
+           <div id="status_job_search" class="status_on">Đang tìm việc</div>
+         </span>
+       </a>
+       <ul class="dropdown-menu text-small">
+         <!-- Dropdown menu items -->
+         <li><a class="dropdown-item" href="/candidate/dashboard" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i>
+             Quản lý hồ sơ</a></li>
+         <li><a class="dropdown-item" href="/candidate/change-password" title="Đổi mật khẩu"><i
+               class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
+         <li>
+           <hr class="dropdown-divider">
+         </li>
+         <li><a class="dropdown-item" href="javascript: void(0)">
+             <div class="switcher"><input type="checkbox" id="switch__input" class="switch__input" checked> <label
+                 for="switch__input" id="switch__label" class="switch__label status_on">Đang tìm việc</label></div>
+           </a></li>
+         <li>
+           <hr class="dropdown-divider">
+         </li>
+         <li>
+           <a class="dropdown-item" wire:click='logout' class="btn-colorgb-jgd" data-reload="true" data-pjax="false"
+             title="Bạn có chắc muốn đăng xuất khỏi hệ thống?">
+             <i class='bx bx-log-out-circle'></i> Đăng xuất
+           </a>
+         </li>
 
-              .switch__label:after {
-                content: "";
-                position: absolute;
-                top: 2px;
-                left: 0;
-                width: 20px;
-                height: 20px;
-                background-color: #fff;
-                border-radius: 14px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-                z-index: 2;
-                transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-                transition-property: left, background-color;
-              }
 
-              .switch__input:checked+.switch__label:before {
-                background-color: #9fcaa0;
-              }
+       </ul>
+     </div>
+     @else
+     <!-- If user is not authenticated -->
+     <div class="teks-btn-group d-none d-sm-inline-block">
+       <a rel="nofollow" href="/site/register" class="btn rounded-2 btn-outline-primary me-2">Đăng ký</a>
+       <a href="/site/login" class="btn rounded-2 me-3 btn-primary">Đăng nhập</a>
+     </div>
+     @endif
 
-              .switch__input:checked+.switch__label:after {
-                left: 16px;
-                background-color: #4CAF50;
-              }
-            </style>
-            <li><a class="dropdown-item" href="/candidate/manage-resume" title="Hồ sơ xin việc"><i
-                  class='bx bx-list-ul'></i> Quản lý hồ sơ</a></li>
-            <li><a class="dropdown-item" href="/candidate/profile" title="Hồ sơ xin việc"><i class='bx bx-edit'></i> Cập
-                nhật hồ sơ</a></li>
-            <li><a class="dropdown-item" data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" target="_blank"
-                href="/candidate/detail?v=1727272320" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"><i
-                  class='bx bx-user-pin'></i> Xem / tải về hồ sơ</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="/candidate/jobs-applied" title="Danh sách việc làm đã ứng tuyển"><i
-                  class='bx bx-check-square'></i> Việc làm ứng tuyển</a></li>
-            <li><a class="dropdown-item" href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
-                  class='bx bx-heart-circle'></i> Việc làm đã lưu</a></li>
-            <li><a class="dropdown-item" data-caption="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn" target="_blank"
-                href="/candidate/recruiter-view" title="Danh sách nhà tuyển dụng đã xem hồ sơ của bạn"><i
-                  class='bx bx-buildings'></i> NTD đã xem hồ sơ</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="/candidate/video-clip" title="Video/Clip giới thiệu bản thân"><i
-                  class='bx bx-video'></i> Video CV</a></li>
-            <li><a class="dropdown-item" href="/candidate/change-password" title="Đổi mật khẩu"><i
-                  class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="javascript: void(0)">
-                <div class="switcher"><input type="checkbox" id="switch__input" class="switch__input" checked> <label
-                    for="switch__input" id="switch__label" class="switch__label status_on">Đang tìm việc</label></div>
-              </a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="/site/logout" class="btn-colorgb-jgd" data-reload="true"
-                data-pjax="false" title="Bạn có chắc muốn đăng xuất khỏi hệ thống?"><i class='bx bx-log-out-circle'></i>
-                Đăng xuất</a></li>
-            <script>
-              window.addEventListener('load', function() {
-                    $(function() {
 
-                      $('#switch__input').on('change', function() {
-                        $.ajax({
-                          url: '/api/profile',
-                          data: {
-                            pk: 1,
-                            name: 'status',
-                            value: $(this).is(':checked') ? 0 : 2
-                          },
-                          success: function(response) {
-                            response = $.parseJSON(response);
-                            let statusClass = response.mess === 'on' ? 'status_on' : 'status_off';
-                            let statusText = response.mess === 'on' ? 'Đang tìm việc' : 'Đã tắt tìm việc';
-                            $('#switch__input').prop('checked', response.mess === 'on');
-                            $('#status_job_search').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                            $('#switch__label').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                            $('.status').removeClass('status_on status_off').addClass(statusClass);
-                            $('.status').text(statusText);
-                          },
-                          error: function() {
-                            let statusClass = 'status_off';
-                            let statusText = 'Đã tắt tìm việc';
-                            $('#switch__input').prop('checked', false);
-                            $('#status_job_search').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                            $('#switch__label').text(statusText).removeClass('status_on status_off').addClass(statusClass);
-                            $('.status').removeClass('status_on status_off').addClass(statusClass);
-                          }
-                        });
-                      });
-                    });
-                  });
-            </script>
-          </ul>
-        </div>
-        @else
-        <div class="teks-btn-group d-none d-sm-inline-block">
-          <a rel="nofollow" href="/site/register" class="btn rounded-2 btn-outline-primary me-2">Đăng ký</a>
-          <a href="/site/login" class="btn rounded-2 me-3 btn-primary">Đăng nhập</a>
-        </div>
-        @endif
+
+
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span> <span class="d-none">Menu</span>
@@ -485,7 +377,7 @@
                   <img src="/assets_livewire/img/employer.svg" alt="job" loading="lazy"> Công ty
                 </a>
                 <ul class="dropdown-menu">
-              
+
                   @foreach($companies as $company)
                   <li>
                     <a class="dropdown-item"
@@ -494,8 +386,9 @@
                     </a>
                   </li>
                   @endforeach
-            
+
                 </ul>
+
               </li>
               <!-- <li class="nav-item dropdown">
                 <a data-bs-toggle="dropdown" data-toggle="dropdown" class="nav-link dropdown-toggle"
@@ -511,6 +404,17 @@
                 </ul>
               </li> -->
 
+            </ul>
+            <ul class="nav teks-nav navbar-nav navbar-right navbar-left-2" data-in="fadeInDown" data-out="fadeOutUp">
+                @if (Auth::check())
+
+                @else
+                <!-- If user is not authenticated -->
+                <div class="teks-btn-group  d-sm-inline-block">
+                    <a rel="nofollow" href="/site/register" class="btn rounded-2 btn-outline-primary me-2">Đăng ký</a>
+                    <a href="/site/login" class="btn rounded-2 me-3 btn-primary">Đăng nhập</a>
+                </div>
+                @endif
             </ul>
             <div class="vr d-none d-xl-block"></div>
             <div class="d-none d-xl-block ms-sm-3 btn-group">

@@ -2,10 +2,6 @@
     <div>
         <div>
 
-            <!-- This website is like a Rocket, isn't it? Performance optimized by RZCareer Team -->
-            <!-- Please send your resume with cover letter to team@jobsgo.vn -->
-            <!DOCTYPE html>
-            <html lang="vi-VN">
 
             <head>
                 <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggexSg.woff2" as="font"
@@ -20,15 +16,7 @@
                     type="font/woff2" crossorigin>
                 <link rel="preload" href="/assets_livewire/teks/css/fonts/xn7gYHE41ni1AdIRggSxSuXd.woff2" as="font"
                     type="font/woff2" crossorigin>
-                <meta name="google-site-verification" content="9ifARzV85NXV1CAcz8bKd6Dc5t6jcDbT7Pn0J1gU8j8" />
-                <meta charset="UTF-8">
                 <link href="/assets_livewire/teks/css/icons.min.css?v=234208153092" rel="stylesheet">
-                <meta name="viewport"
-                    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-                <meta name="robots" content="noindex, nofollow">
-                <meta name="csrf-param" content="_csrf-jobsgo-candidate">
-                <meta name="csrf-token"
-                    content="w4TUat6SD0qPeYuQ7g-8RA0E8smzP4GR_b5E6ANViSWb9-08ndF2HM0r4fWGXvcjZ2ynkddastzP7yLeNCGxcw==">
 
                 <title>Bảng tin - RZCareer</title>
 
@@ -105,7 +93,7 @@
 
                                     <ul class="breadcrumb">
                                         <li>
-                                            <a href="candidate/dashboard" ">Bảng tin</a></li>
+                                            <a href="/candidate/dashboard" ">Bảng tin</a></li>
                             <li>Quản lý tài liệu hồ sơ, chứng chỉ, bằng cấp </li>
                         </ul>
 
@@ -296,15 +284,15 @@
                               <div class="panel no-border-top no-border-radius-top ">
                                 <ul class="navigation ">
                                   <li class="navigation-header ">Cá nhân</li>
-                                  <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin việc</a></li>
-                                  <li><a href="candidate/document-attachment "><i class="icon-file-media "></i> Đính kèm CV/chứng chỉ</a></li>
-                                  <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập thông tin từ LinkedIn</a></li>
+                                  <li><a href="/candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin việc</a></li>
+                                  <li><a href="/candidate/document-attachment "><i class="icon-file-media "></i> Đính kèm CV/chứng chỉ</a></li>
+                                  <li><a href="/candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập thông tin từ LinkedIn</a></li>
                                   <li data-intro='<h4 class="text-center ">CV Go đã xuất hiện!</h4><p><strong>CV Go</strong> giúp bạn tạo CV cực chất trong chưa đầy 5 phút. Thử ngay!</p> <img width="200px " src="/cv_template/assets/images/theme/cv3.png
                                                 " />'><a href="/candidate/pre-profile?tab=manage-resume " target="_blank "><i class="icon-copy "></i>CV Go - Tạo CV cực chất<span class="badge badge-danger ">Mới!</span></a></li>
                                   <li class="navigation-divider "></li>
-                                  <li><a href="candidate/jobs-applied " title="Danh sách việc làm đã ứng tuyển "><i class="icon-stack-check "></i> Việc làm đã ứng tuyển</a></li>
-                                  <li><a href="candidate/jobs-saved " title="Danh sách việc làm đã lưu "><i class="icon-stack-star "></i> Việc làm đã lưu</a></li>
-                                  <li><a href="candidate/jobs-matching " title="Danh sách việc làm phù hợp "><i class="icon-stack4 "></i> Việc làm phù hợp</a></li>
+                                  <li><a href="/candidate/jobs-applied " title="Danh sách việc làm đã ứng tuyển "><i class="icon-stack-check "></i> Việc làm đã ứng tuyển</a></li>
+                                  <li><a href="/candidate/jobs-saved " title="Danh sách việc làm đã lưu "><i class="icon-stack-star "></i> Việc làm đã lưu</a></li>
+                                  <li><a href="/candidate/jobs-matching " title="Danh sách việc làm phù hợp "><i class="icon-stack4 "></i> Việc làm phù hợp</a></li>
                                 </ul>
                               </div>
                             </div>
@@ -547,11 +535,11 @@
                                     <div class="panel no-border-top no-border-radius-top ">
                                         <ul class="navigation ">
                                             <li class="navigation-header ">Cá nhân</li>
-                                            <li><a href="candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
+                                            <li><a href="/candidate/profile "><i class="icon-file-text "></i> Hồ sơ xin
                                                     việc</a></li>
-                                            <li><a href="candidate/document-attachment "><i class="icon-file-media "></i>
+                                            <li><a href="/candidate/document-attachment "><i class="icon-file-media "></i>
                                                     Đính kèm CV/chứng chỉ</a></li>
-                                            <li><a href="candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
+                                            <li><a href="/candidate/import-linkedin-data "><i class="icon-linkedin "></i>Nhập
                                                     thông tin từ LinkedIn</a></li>
                                             <li
                                                 data-intro="<h4 class=&quot;text-center&quot;>CV Go đã xuất hiện!</h4>
@@ -560,12 +548,12 @@
                                                         class="icon-copy"></i>CV Go - Tạo CV cực chất<span
                                                         class="badge badge-danger">Mới!</span></a></li>
                                             <li class="navigation-divider"></li>
-                                            <li class="active"><a href="candidate/jobs-applied"
+                                            <li class="active"><a href="/candidate/jobs-applied"
                                                     title="Danh sách việc làm đã ứng tuyển"><i class="icon-stack-check"></i>
                                                     Việc làm đã ứng tuyển</a></li>
-                                            <li><a href="candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
+                                            <li><a href="/candidate/jobs-saved" title="Danh sách việc làm đã lưu"><i
                                                         class="icon-stack-star"></i> Việc làm đã lưu</a></li>
-                                            <li><a href="candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
+                                            <li><a href="/candidate/jobs-matching" title="Danh sách việc làm phù hợp"><i
                                                         class="icon-stack4"></i> Việc làm phù hợp</a></li>
                                         </ul>
                                     </div>
@@ -708,9 +696,9 @@
         })
     </script>
     <script src="/assets_livewire/event/min.js?v=1727321539"></script>
-    <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
+    {{-- <a data-caption="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng" data-fancybox data-type="iframe"
         href="/assets_livewire/candidate/detail?v=1727321539" title="Hồ sơ xin việc của bạn trong mắt nhà tuyển dụng"
-        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a>
+        class="btn-colorgb-float"> <i class="icon-vcard icon-float"></i> <span>Xem / tải về hồ sơ</span> </a> --}}
 
     <script>
         $(function() {

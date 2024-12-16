@@ -50,7 +50,7 @@ class JobSearchModal extends Component
             $this->resetPage();
         }
     }
-  
+
 
     protected $listeners = [
         'locationSelected',
@@ -126,10 +126,10 @@ class JobSearchModal extends Component
             $this->sortField = $field;
             $this->sortDirection = 'asc';
         }
-        
+
     }
 
-  
+
     public function search()
     {
         $this->resetPage();
@@ -175,7 +175,7 @@ class JobSearchModal extends Component
 
         // Truy vấn job posts
         $jobPosts = JobPost::with(['career', 'company', 'location', 'location.city', 'location.district'])
-          
+
             ->when($keyword, function ($query) {
                 return $query->where('job_name', 'like', '%' . $this->keyword . '%');
             })
@@ -234,7 +234,7 @@ class JobSearchModal extends Component
             ->paginate($this->perPage);
 
         // Đếm tổng số việc làm
-        $totalJobs = JobPost::count();
+        $totalJobs = $jobPosts->total();
 
         return view('livewire.job-search-modal', [
             'jobPosts' => $jobPosts,

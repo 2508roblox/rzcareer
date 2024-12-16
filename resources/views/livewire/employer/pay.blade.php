@@ -83,7 +83,7 @@
                                     <span style="padding-left: 5px;">Số tài khoản</span>
                                     <br />
                                     <b id="copyStk"
-                                        style="padding-left: 25px;word-break: keep-all;color:greenyellow;">104567890</b>
+                                        style="padding-left: 25px;word-break: keep-all;color:greenyellow;">0966579217</b>
                                     <i onclick="copy()" data-clipboard-target="#copyStk" class="fas fa-copy copy"></i>
                                 </p>
                             </div>
@@ -91,7 +91,7 @@
                                 <p><i class="fa fa-user" aria-hidden="true"></i>
                                     <span style="padding-left: 5px;">Chủ tài khoản</span>
                                     <br />
-                                    <span style="padding-left: 25px;word-break: keep-all;">TRAN LE HUY HOANG</span>
+                                    <span style="padding-left: 5px;word-break: keep-all;">TRAN LE HOANG GIANG</span>
                                 </p>
                             </div>
                             <div class="entry">
@@ -157,7 +157,7 @@
                                                         <a>Sử dụng <b> App Internet Banking </b> hoặc ứng dụng camera hỗ
                                                             trợ QR code để quét mã</a>
                                                     </div>
-                                                    <img src="https://api.vietqr.io/MB/104567890/{{ number_format($invoice->total_price, 0, ',', '') }}/{{ $invoice->invoice_code }}/vietqr_net_2.jpg?accountName=TRAN LE HUY HOANG"
+                                                    <img src="https://api.vietqr.io/MB/0966579217/{{ number_format($invoice->total_price, 0, ',', '') }}/{{ $invoice->invoice_code }}/vietqr_net_2.jpg?accountName=TRAN LE HOANG GIANG"
                                                         width="100%" />
 
                                                 </div>
@@ -178,7 +178,7 @@
                                 <br />
                                 Vui lòng thanh toán vào thông tin tài khoản trên để hệ thống xử lý hoá đơn tự động.
                             </p>
-                            <a href="/pay/client/invoices">
+                            <a href="/recruiter/invoices">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                                 <span>Quay lại</span></a>
                         </div>

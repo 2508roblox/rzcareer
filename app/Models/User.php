@@ -115,10 +115,10 @@ class User extends Authenticatable implements FilamentUser, HasName
         // });
 
     }
-    public function getFilamentAvatarUrl(): ?string
-{
-    return asset('storage/'.$this->avatar_url);//replace with $this->photo
-}
+//     public function getFilamentAvatarUrl(): ?string
+// {
+//     return asset('storage/'.$this->avatar_url);//replace with $this->photo
+// }
 
     protected function casts(): array
     {
