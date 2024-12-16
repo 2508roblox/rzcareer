@@ -172,6 +172,21 @@
           <!-- Dropdown menu items -->
           <li><a class="dropdown-item" href="/candidate/dashboard" title="Hồ sơ xin việc"><i class='bx bx-list-ul'></i>
               Quản lý hồ sơ</a></li>
+              <li>
+                <a class="dropdown-item" href="/candidate/review" title="Cập nhật hồ sơ">
+                    <i class='bx bx-list-ul'></i> Cập nhật hồ sơ
+                </a>
+            </li>
+            <li class="btn-default">
+                <a class="dropdown-item" href="/candidate/jobs-applied">
+                    <div class="nav-item"><i class="bx bx-list-ul"></i> Việc đã ứng tuyển</div>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="/candidate/import-cv-data" title="Tải lên CV có sẵn">
+                    <i class='bx bx-upload'></i> Tải lên CV có sẵn
+                </a>
+            </li>
           <li><a class="dropdown-item" href="/candidate/change-password" title="Đổi mật khẩu"><i
                 class='bx bx-lock-open-alt'></i> Đổi mật khẩu</a></li>
           <li>

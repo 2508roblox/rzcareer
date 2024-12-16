@@ -782,7 +782,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="resume">Chọn bản lý lịch</label>
-                                            <div id="resume" required>
+                                            <div id="resume" required style="
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            gap: 1rem;
+                                        ">
                                                 @foreach($resumes as $resume)
                                                 <div class="form-check" style="margin-bottom: 15px;">
                                                     <input class="form-check-input" type="radio" wire:model="selectedResumeId" name='selectedResumeId' id="resume{{ $resume->id }}" value="{{ $resume->id }}" style="display: none;">
