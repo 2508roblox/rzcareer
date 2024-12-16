@@ -169,6 +169,7 @@ class JobPostResource extends Resource
                                     ->label('Ngày hết hạn công việc'),
 
                                 Forms\Components\TextInput::make('quantity')
+                                    ->required()
                                     ->numeric()
                                     ->label('Số lượng'),
 
