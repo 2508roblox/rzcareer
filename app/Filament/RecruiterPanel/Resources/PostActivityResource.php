@@ -12,7 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\HtmlString;
 class PostActivityResource extends Resource
 {
     protected static ?string $model = PostActivity::class;
@@ -98,6 +99,9 @@ class PostActivityResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->label('ID')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make(name: 'jobPost.job_name')
                     ->label('Bài tuyển dụng')
                     ->numeric()
@@ -112,7 +116,7 @@ class PostActivityResource extends Resource
                     ->label('Số điện thoại')
                     ->searchable(),
                 Tables\Columns\SelectColumn::make('status') // Change to SelectColumn
-                    ->label('Trạng thái  ứng tuyển')
+                    ->label('Trạng thái ứng tuyển')
                     ->options([
                         'Chờ xác nhận' => 'Chờ xác nhận',
                         'Đã liên hệ' => 'Đã liên hệ',
@@ -123,14 +127,16 @@ class PostActivityResource extends Resource
                     ])
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('is_sent_email')
-                    ->label('Đã gửi email')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('is_deleted')
-                    ->label('Đã xóa')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('resume.file_url') // Giả sử 'resume' là thuộc tính chứa đối tượng
+                    ->label('Hồ sơ')
+                    ->searchable()
+                    ->formatStateUsing(function ($state) {
+                        // Kiểm tra xem thuộc tính file_url có tồn tại không
+                        if (isset($state)) {
+                            return new HtmlString('<a href="' . $state . '" target="_blank">Tải xuống</a>');
+                        }
+                        return 'Không có hồ sơ'; // Hoặc trả về thông báo khác nếu không có
+                    }),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Ngày tạo')
                     ->dateTime()
