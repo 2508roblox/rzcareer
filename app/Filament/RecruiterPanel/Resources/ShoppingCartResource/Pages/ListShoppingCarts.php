@@ -12,6 +12,7 @@ use Filament\Notifications\Notification;
 use App\Models\PurchasedService;
 use App\Models\Service;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ListShoppingCarts extends ListRecords
 {
@@ -89,5 +90,13 @@ class ListShoppingCarts extends ListRecords
         } while (Invoice::where('invoice_code', $code)->exists());
 
         return $code;
+    }
+    protected function getTableQuery(): ?\Illuminate\Database\Eloquent\Builder
+    {
+        // Get the current user's ID
+        $userId = Auth::id();
+
+        // Return the query filtered by the user's ID
+        return parent::getTableQuery()->where('user_id', $userId);
     }
 }
