@@ -15,6 +15,7 @@ use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -97,62 +98,6 @@ class UserResource extends Resource
                             ->searchable()
                             ->label('Vai Trò'),
 
-                        Grid::make(3) // Grid với 3 cột
-                            ->schema([
-                                Toggle::make('has_company')
-                                    ->required()
-                                    ->live(100)
-                                    ->afterStateUpdated(function ($state, Get $get, Set $set) {
-                                        $roles = $get('roles') ?? [];
-                                        $recruiterRole = Role::where('name', 'recruiter')->first();
-
-                                        if ($recruiterRole) {
-                                            if ($state) {
-                                                $roles[] = $recruiterRole->id;
-                                            } else {
-                                                $roles = array_diff($roles, [$recruiterRole->id]);
-                                            }
-                                            $set('roles', $roles);
-                                        }
-                                    })
-                                    ->label('Vai Trò Tuyển Dụng'),
-
-                                Toggle::make('is_superuser')
-                                    ->required()
-                                    ->live(100)
-                                    ->afterStateUpdated(function ($state, Get $get, Set $set) {
-                                        $roles = $get('roles') ?? [];
-                                        $superAdminRole = Role::where('name', 'super_admin')->first();
-
-                                        if ($superAdminRole) {
-                                            if ($state) {
-                                                $roles[] = $superAdminRole->id;
-                                            } else {
-                                                $roles = array_diff($roles, [$superAdminRole->id]);
-                                            }
-                                            $set('roles', $roles);
-                                        }
-                                    })
-                                    ->label('Vai Trò Quản Trị Viên'),
-
-                                Toggle::make('is_staff')
-                                    ->required()
-                                    ->live(100)
-                                    ->afterStateUpdated(function ($state, Get $get, Set $set) {
-                                        $roles = $get('roles') ?? [];
-                                        $panelUserRole = Role::where('name', 'panel_user')->first();
-
-                                        if ($panelUserRole) {
-                                            if ($state) {
-                                                $roles[] = $panelUserRole->id;
-                                            } else {
-                                                $roles = array_diff($roles, [$panelUserRole->id]);
-                                            }
-                                            $set('roles', $roles);
-                                        }
-                                    })
-                                    ->label('Vai Trò Người Dùng Quản Lý'),
-                            ]),
                     ]),
 
 
@@ -177,12 +122,6 @@ class UserResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->label('Lần Đăng Nhập Cuối'),
-                Tables\Columns\IconColumn::make('is_superuser')
-                    ->boolean()
-                    ->label('Quản Trị Viên'),
-                Tables\Columns\IconColumn::make('is_staff')
-                    ->boolean()
-                    ->label('Nhân Viên'),
                 Tables\Columns\IconColumn::make('is_active')
                     ->boolean()
                     ->label('Đang Hoạt Động'),
@@ -195,15 +134,13 @@ class UserResource extends Resource
                 Tables\Columns\ImageColumn::make('avatar_url')
                     ->searchable()
                     ->label('Ảnh Đại Diện'),
+                    BadgeColumn::make('roles')
+                    ->label('Vai trò')
+                    ->sortable()
+                    ->getStateUsing(fn(User $record) => $record->getRoleNames()->implode(' | ')), // Hiển thị vai trò dưới dạng chuỗi
                 Tables\Columns\TextColumn::make('avatar_public_id')
                     ->searchable()
                     ->label('ID Ảnh Đại Diện'),
-                Tables\Columns\IconColumn::make('email_notification_active')
-                    ->boolean()
-                    ->label('Kích Hoạt Thông Báo Email'),
-                Tables\Columns\IconColumn::make('sms_notification_active')
-                    ->boolean()
-                    ->label('Kích Hoạt Thông Báo SMS'),
                 Tables\Columns\IconColumn::make('has_company')
                     ->boolean()
                     ->label('Có Công Ty'),

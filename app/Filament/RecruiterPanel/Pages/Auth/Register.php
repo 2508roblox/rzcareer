@@ -57,7 +57,7 @@ class Register extends BaseRegister
                                                                 ->maxLength(100)
                                                                 ->label('Email')
                                                                 ->unique('users', 'email'), // Kiểm tra tính duy nhất trong bảng users
-                                                            
+
                                                     ]),
                                                 FileUpload::make('avatar_url')
                                                     ->disk('public')
@@ -249,7 +249,7 @@ class Register extends BaseRegister
 
         try {
             DB::beginTransaction();
-        
+
             // Step 1: Create a new user
             $user = User::create([
                 'full_name' => $data['full_name'],
@@ -290,12 +290,7 @@ class Register extends BaseRegister
             ]);
 
             // Step 3: Insert roles for the user
-            foreach ($data['roles'] as $roleId) {
-                DB::table('role_users')->insert([
-                    'user_id' => $userId,
-                    'role_id' => $roleId,
-                ]);
-            }
+
 
             DB::commit();
             event(new Registered($user));

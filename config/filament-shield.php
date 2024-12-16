@@ -25,11 +25,11 @@ return [
     ],
 
     'panel_user' => [
-        'enabled' => true,
+        'enabled' => false,
         'name' => 'panel_user',
     ],
     'recruiter' => [
-        'enabled' => true,
+        'enabled' => false,
         'name' => 'recruiter',
     ],
 

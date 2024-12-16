@@ -82,43 +82,15 @@ class User extends Authenticatable implements FilamentUser, HasName
         return $this->hasOne(Company::class);
     }
 
-    /**
-     * Get the URL to the user's avatar.
-     *
-     * @return string
-     */
-
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected static function booted() : void
+    public function canAccessAdminPanel(): bool
     {
-        // static::created(function(User $user) {
-        //     if ($user->has_company) {
-        //         // Tìm vai trò 'recruiter' từ bảng roles
-        //         $recruiterRole = Role::where('name', 'recruiter')->first();
-
-        //         if ($recruiterRole) {
-        //             try {
-
-        //                 $new_user = User::where(['email' =>  $user->email])->first();
-        //             } catch (\Exception $e) {
-        //                 // Log lỗi hoặc hiển thị thông báo lỗi
-        //                 dd( $e->getMessage());
-
-        //             }
-        //         }
-        //     }
-        // });
-
+        return !$this->roles()->count() === 0;
     }
-//     public function getFilamentAvatarUrl(): ?string
-// {
-//     return asset('storage/'.$this->avatar_url);//replace with $this->photo
-// }
+
+    public function canAccessRecruiterPanel(): bool
+    {
+        return $this->has_company === 1;
+    }
 
     protected function casts(): array
     {
