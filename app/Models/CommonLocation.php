@@ -10,10 +10,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CommonLocation extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'address',
         'lat',
-        'lng',
+        'lng', 
         'district_id',
         'city_id',
     ];
@@ -23,17 +24,19 @@ class CommonLocation extends Model
         return $this->belongsTo(CommonDistrict::class, 'district_id');
     }
 
-    public function city()
+    public function city() 
     {
         return $this->belongsTo(CommonCity::class, 'city_id');
     }
+
     public function getLocationAttribute(): array
     {
         return [
-            "lat" => (float)$this->lat,
-            "lng" => (float)$this->lng,
+            'lat' => (float) $this->lat,
+            'lng' => (float) $this->lng,
         ];
     }
+
     public function setLocationAttribute(?array $location): void
     {
         if (is_array($location)) {
@@ -42,6 +45,7 @@ class CommonLocation extends Model
             unset($this->attributes['location']);
         }
     }
+
     public static function getLatLngAttributes(): array
     {
         return [
@@ -49,6 +53,7 @@ class CommonLocation extends Model
             'lng' => 'lng',
         ];
     }
+
     public static function getComputedLocation(): string
     {
         return 'location';

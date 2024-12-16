@@ -4,7 +4,6 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CommonCareerResource\Pages;
 use App\Filament\Resources\CommonCareerResource\RelationManagers;
-use App\Models\CommonCareer;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,6 +11,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Models\CommonCareer;
 
 class CommonCareerResource extends Resource
 {
@@ -34,29 +34,26 @@ class CommonCareerResource extends Resource
                     ->description('Điền các thông tin liên quan đến ứng dụng')
                     ->schema([
                         Forms\Components\TextInput::make('name')
-                            ->label('Tên ứng dụng')
+                            ->label('Tên công việc')
                             ->required()
                             ->maxLength(150)
-                            ->placeholder('Nhập tên ứng dụng'),
+                            ->placeholder('Nhập tên công việc'),
 
                             Forms\Components\FileUpload::make('icon_url')
-                            ->label('Tải lên biểu tượng')
+                            ->label('Tải lên hình ảnh')
                             ->required()
-                            ->maxSize(10240) // Maximum file size in kilobytes (adjust as necessary)
-                            ->placeholder('Chọn file biểu tượng')
-                            ->image() // Optional: Specify that only images are allowed
-                            ->disk('public') // Specify the disk where the file will be stored
-                            ->directory('icons') // Optional: Specify the directory within the disk to store the file
-                            ->preserveFilenames() // Optional: Preserve the original file names
-                            ->enableOpen() // Optional: Allow users to open the file
-                            ->columnSpan(2), // Adjust column span if needed
-
+                            ->maxSize(10240) // Kích thước tối đa cho phép là 10MB
+                            ->placeholder('Chọn file hình ảnh') // Văn bản gợi ý
+                            ->image() // Chỉ cho phép tải lên hình ảnh
+                            ->disk('public')
+                            ->directory('icons') // Thư mục icons
+                            ->preserveFilenames() // Giữ nguyên tên file gốc
+                            ->columnSpan(2),
 
                         Forms\Components\TextInput::make('app_icon_name')
-                            ->label('Tên biểu tượng ứng dụng')
-                            ->required()
+                            ->label('Tên hình ảnh')
                             ->maxLength(50)
-                            ->placeholder('Nhập tên biểu tượng ứng dụng'),
+                            ->placeholder('Nhập tên hình ảnh'),
                     ]),
             ]);
     }
@@ -70,13 +67,10 @@ class CommonCareerResource extends Resource
                     ->label('ID')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Tên ứng dụng')
+                    ->label('Tên nghề nghiệp')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('icon_url')
-                    ->label(' biểu tượng')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('app_icon_name')
-                    ->label('Tên biểu tượng ứng dụng')
+                    ->label('Hình ảnh')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Ngày tạo')

@@ -4,13 +4,10 @@ namespace App\Filament\Resources;
 
 use Str;
 use Filament\Forms;
-use App\Models\User;
 use Filament\Tables;
-use App\Models\Company;
 use Filament\Forms\Set;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use App\Models\CommonLocation;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -26,6 +23,9 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\CompanyResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CompanyResource\RelationManagers;
+use App\Models\User;
+use App\Models\Company;
+use App\Models\CommonLocation;
 use App\Models\CommonCareer;
 
 class CompanyResource extends Resource
@@ -105,7 +105,7 @@ class CompanyResource extends Resource
                             ]),
                     ]),
 
-                Forms\Components\Section::make('Thông tin liên hệ')
+                Forms\Components\Section::make('Th��ng tin liên hệ')
                     ->description('Nhập thông tin liên hệ của công ty.')
                     ->schema([
                         Forms\Components\Grid::make(2) // Sử dụng Grid để chia thành 2 cột
@@ -178,39 +178,13 @@ class CompanyResource extends Resource
                     ->numeric()
                     ->sortable()
                     ->label('ID'),
-                    Tables\Columns\ImageColumn::make('company_image_url')
-                    ->label('Hình Ảnh Công Ty'),
 
+                Tables\Columns\ImageColumn::make('company_image_url')
+                    ->label('Hình Ảnh Công Ty'),
 
                 Tables\Columns\TextColumn::make('company_name')
                     ->searchable()
                     ->label('Tên Công Ty'),
-                Tables\Columns\ImageColumn::make('company_image_public_id')
-                ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('ID Hình Ảnh Công Ty'),
-
-                Tables\Columns\ImageColumn::make('company_cover_image_url')
-                 ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Hình Ảnh Bìa Công Ty'),
-
-                Tables\Columns\ImageColumn::make('company_cover_image_public_id')
-                 ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('ID Hình Ảnh Bìa Công Ty'),
-
-                Tables\Columns\TextColumn::make('facebook_url')
-                    ->searchable()
-                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('URL Facebook'),
-
-                Tables\Columns\TextColumn::make('youtube_url')
-                    ->searchable()
-                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('URL YouTube'),
-
-                Tables\Columns\TextColumn::make('linkedin_url')
-                    ->searchable()
-                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('URL LinkedIn'),
 
                 Tables\Columns\TextColumn::make('company_email')
                     ->searchable()
@@ -229,14 +203,17 @@ class CompanyResource extends Resource
                     ->label('Mã Số Thuế'),
 
                 Tables\Columns\TextColumn::make('since')
-                    ->date()
+                    ->date('d/m/Y')
                     ->sortable()
                     ->searchable()
                     ->label('Thành Lập'),
 
                 Tables\Columns\TextColumn::make('field_operation')
                     ->searchable()
-                    ->label('Lĩnh Vực Hoạt Động'),
+                    ->label('Lĩnh Vực Hoạt Động')
+                    ->formatStateUsing(function ($state) {
+                        return CommonCareer::find($state)?->name ?? $state;
+                    }),
 
                 Tables\Columns\TextColumn::make('employee_size')
                     ->numeric()

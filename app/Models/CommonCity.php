@@ -8,13 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class CommonCity extends Model
 {
     use HasFactory;
-    protected $fillable = ['name'];
+
+    protected $fillable = [
+        'name'
+    ];
+
     public function jobPosts()
     {
-        return $this->hasMany(JobPost::class, 'location_id'); // Assuming location_id references CommonLocation which references CommonCity
+        return $this->hasMany(
+            JobPost::class,
+            'location_id'
+        ); // Assuming location_id references CommonLocation which references CommonCity
     }
-    public function locations()
+
+    public function locations() 
     {
-        return $this->hasMany(CommonLocation::class, 'city_id');
+        return $this->hasMany(
+            CommonLocation::class,
+            'city_id'
+        );
     }
 }

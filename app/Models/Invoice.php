@@ -8,14 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     use HasFactory;
-    protected $fillable = ['invoice_code', 'user_id', 'total_price', 'status', 'purchase_date'];
+
+    protected $fillable = [
+        'invoice_code',
+        'user_id', 
+        'total_price',
+        'status',
+        'purchase_date'
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function purchasedServices()
+    public function purchasedServices() 
     {
         return $this->hasMany(PurchasedService::class, 'invoice_id');
     }
@@ -24,6 +31,7 @@ class Invoice extends Model
     {
         return $this->hasMany(PaymentHistory::class, 'invoice_id');
     }
+
     public function markAsPaid()
     {
         $this->status = 'successful'; // Giả sử bạn có thuộc tính 'status'

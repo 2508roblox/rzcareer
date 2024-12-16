@@ -4,12 +4,13 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CommonLocationResource\Pages;
 use App\Filament\Resources\CommonLocationResource\RelationManagers;
-use App\Models\CommonLocation;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use App\Models\CommonLocation;
+
 
 class CommonLocationResource extends Resource
 {
@@ -17,7 +18,7 @@ class CommonLocationResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Các địa điểm chung'; // Nhãn số nhiều cho mô hình
+        return 'Các địa điểm chung';
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
@@ -27,41 +28,39 @@ class CommonLocationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Thông tin địa điểm') // Tiêu đề cho section
-                    ->description('Vui lòng nhập thông tin chi tiết cho địa điểm.') // Mô tả cho section
-                    ->schema([ // Nội dung của section
+                Forms\Components\Section::make('Thông tin địa điểm')
+                    ->description('Vui lòng nhập thông tin chi tiết cho địa điểm.')
+                    ->schema([
                         Forms\Components\TextInput::make('address')
                             ->required()
                             ->maxLength(255)
-                            ->label('Địa chỉ') // Nhãn tiếng Việt cho trường address
-                            ->placeholder('Nhập địa chỉ'), // Placeholder tiếng Việt
+                            ->label('Địa chỉ')
+                            ->placeholder('Nhập địa chỉ'),
                         Forms\Components\TextInput::make('lat')
                             ->required()
                             ->numeric()
-                            ->label('Vĩ độ') // Nhãn tiếng Việt cho trường lat
-                            ->placeholder('Nhập vĩ độ'), // Placeholder tiếng Việt
+                            ->label('Vĩ độ')
+                            ->placeholder('Nhập vĩ độ'),
                         Forms\Components\TextInput::make('lng')
                             ->required()
                             ->numeric()
-                            ->label('Kinh độ') // Nhãn tiếng Việt cho trường lng
-                            ->placeholder('Nhập kinh độ'), // Placeholder tiếng Việt
+                            ->label('Kinh độ')
+                            ->placeholder('Nhập kinh độ'),
                         Forms\Components\Select::make('district_id')
+                            ->relationship('district', 'name')
                             ->required()
                             ->searchable()
                             ->preload()
-                            ->relationship('district', 'name')
-                            ->label('Quận') // Nhãn tiếng Việt cho trường district_id
-                            ->placeholder('Chọn quận'), // Placeholder tiếng Việt
+                            ->label('Quận, huyện')
+                            ->placeholder('Chọn quận, huyện'),
                         Forms\Components\Select::make('city_id')
                             ->required()
                             ->preload()
                             ->searchable()
                             ->relationship('city', 'name')
-                            ->label('Thành phố') // Nhãn tiếng Việt cho trường city_id
-                            ->placeholder('Chọn thành phố'), // Placeholder tiếng Việt
+                            ->label('Thành phố')
+                            ->placeholder('Chọn thành phố'),
                     ])
-                    ->collapsible() // Cho phép đóng/mở section
-                    ->collapsed() // Bắt đầu với section đóng (bỏ qua nếu bạn muốn mở mặc định)
             ]);
     }
 
@@ -71,33 +70,33 @@ class CommonLocationResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('address')
                     ->searchable()
-                    ->label('Địa chỉ'), // Nhãn tiếng Việt cho cột address
+                    ->label('Địa chỉ'),
                 Tables\Columns\TextColumn::make('lat')
                     ->numeric()
                     ->sortable()
-                    ->label('Vĩ độ'), // Nhãn tiếng Việt cho cột lat
+                    ->label('Vĩ độ'),
                 Tables\Columns\TextColumn::make('lng')
                     ->numeric()
                     ->sortable()
-                    ->label('Kinh độ'), // Nhãn tiếng Việt cho cột lng
-                Tables\Columns\TextColumn::make('district_id')
+                    ->label('Kinh độ'),
+                Tables\Columns\TextColumn::make('district.name')
                     ->numeric()
                     ->sortable()
-                    ->label('ID Quận'), // Nhãn tiếng Việt cho cột district_id
-                Tables\Columns\TextColumn::make('city_id')
+                    ->label('Quận, huyện'),
+                Tables\Columns\TextColumn::make('city.name')
                     ->numeric()
                     ->sortable()
-                    ->label('ID Thành phố'), // Nhãn tiếng Việt cho cột city_id
+                    ->label('Thành phố'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Ngày tạo'), // Nhãn tiếng Việt cho cột created_at
+                    ->label('Ngày tạo'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Ngày cập nhật'), // Nhãn tiếng Việt cho cột updated_at
+                    ->label('Ngày cập nhật'),
             ])
             ->filters([
                 //

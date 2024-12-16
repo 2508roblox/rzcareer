@@ -4,20 +4,13 @@ namespace App\Filament\Resources;
 
 use Carbon\Carbon;
 use Filament\Forms;
-use App\Models\User;
 use Filament\Tables;
-use App\Models\Company;
-use App\Models\JobPost;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Forms\Form;
-use App\Models\CommonCity;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
-use App\Models\CommonCareer;
-use App\Models\CommonDistrict;
-use App\Models\CommonLocation;
 use Filament\Actions\EditAction;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Grid;
@@ -40,6 +33,13 @@ use App\Filament\Resources\JobPostResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\JobPostResource\RelationManagers;
 use Filament\Tables\Filters\SelectFilter;
+use App\Models\User;
+use App\Models\CommonCity;
+use App\Models\Company;
+use App\Models\JobPost;
+use App\Models\CommonCareer;
+use App\Models\CommonDistrict;
+use App\Models\CommonLocation;
 
 class JobPostResource extends Resource
 {
@@ -50,14 +50,13 @@ class JobPostResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Công việc'; // Trả về tên số nhiều cho mô hình Company
+        return 'Công việc';
     }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                // Group: Basic Information
                 Forms\Components\Section::make('Thông tin cơ bản')
                     ->schema([
                         Forms\Components\Grid::make(2)
@@ -82,8 +81,6 @@ class JobPostResource extends Resource
                                     ->label('Quận/Huyện')
                                     ->preload()
                                     ->searchable()
-                                    ->reactive()
-                                    ->live(100)
                                     ->afterStateUpdated(function ($state, callable $set, callable $get) {
                                         $set('location_id', null);
                                         if ($state && $get('city_id')) {
@@ -105,8 +102,6 @@ class JobPostResource extends Resource
                                     ->label('Thành phố')
                                     ->preload()
                                     ->searchable()
-                                    ->reactive()
-                                    ->live(100)
                                     ->afterStateUpdated(function ($state, callable $set, callable $get) {
                                         $set('location_id', null);
                                         if ($state) {
@@ -130,14 +125,12 @@ class JobPostResource extends Resource
                                 Forms\Components\TextInput::make('lat')
                                     ->label('Vĩ độ')
                                     ->live(255)
-                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                    ->hint('Nhập tọa độ vĩ độ.'),
+                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null),
 
                                 Forms\Components\TextInput::make('lng')
                                     ->label('Kinh độ')
                                     ->live(255)
-                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null)
-                                    ->hint('Nhập tọa độ kinh độ.'),
+                                    ->disabled(fn(Component $component) => $component->getState('location_id') != null),
 
                                 Forms\Components\Select::make('user_id')
                                     ->required()
@@ -173,7 +166,7 @@ class JobPostResource extends Resource
 
                                 Forms\Components\DatePicker::make('deadline')
                                     ->required()
-                                    ->label('Hạn cuối'),
+                                    ->label('Ngày hết hạn công việc'),
 
                                 Forms\Components\TextInput::make('quantity')
                                     ->required()
@@ -218,7 +211,6 @@ class JobPostResource extends Resource
                                 Forms\Components\Select::make('position')
                                     ->required()
                                     ->preload()
-                                    ->searchable()
                                     ->options([
                                         'Manager' => 'Quản lý',
                                         'Developer' => 'Lập trình viên',
@@ -229,16 +221,14 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn vị trí')
                                     ->label('Vị trí')
                                     ->helperText('Chọn vị trí công việc cho vai trò này.')
-                                    ->hint('Tiêu đề vị trí trong công ty.')
-                                    ->default('Developer') // Đặt giá trị mặc định nếu có thể
-                                    ->reactive()
+                                    ->default('Developer')
                                     ->disablePlaceholderSelection()
+                                    ->native(false)
                                     ->columnSpan(1),
 
                                 Forms\Components\Select::make('type_of_workplace')
                                     ->required()
                                     ->preload()
-                                    ->searchable()
                                     ->options([
                                         'Office' => 'Văn phòng',
                                         'Remote' => 'Từ xa',
@@ -249,16 +239,15 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn loại nơi làm việc')
                                     ->label('Loại nơi làm việc')
                                     ->helperText('Chọn nơi làm việc cho công việc này.')
-                                    ->hint('Sắp xếp nơi làm việc cho công việc.')
                                     ->default('Remote')
-                                    ->reactive()
+                                    ->native(false)
                                     ->disablePlaceholderSelection()
                                     ->columnSpan(1),
 
                                 Forms\Components\Select::make('experience')
                                     ->required()
                                     ->preload()
-                                    ->searchable()
+                                    ->native(false)
                                     ->options([
                                         '0-1 years' => '0-1 năm',
                                         '2-3 years' => '2-3 năm',
@@ -269,10 +258,10 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn cấp độ kinh nghiệm')
                                     ->label('Kinh nghiệm')
                                     ->helperText('Chỉ định cấp độ kinh nghiệm yêu cầu.'),
+
                                 Forms\Components\Select::make('academic_level')
                                     ->required()
                                     ->preload()
-                                    ->searchable()
                                     ->options([
                                         'High School' => 'Trung học phổ thông',
                                         'Associate Degree' => 'Bằng cao đẳng',
@@ -283,16 +272,14 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn trình độ học vấn')
                                     ->label('Trình độ học vấn')
                                     ->helperText('Chỉ ra trình độ học vấn cần thiết.')
-                                    ->hint('Trình độ học vấn cần cho công việc.')
                                     ->default('Bằng cử nhân')
-                                    ->reactive()
+                                    ->native(false)
                                     ->disablePlaceholderSelection()
                                     ->columnSpan(1),
 
                                 Forms\Components\Select::make('job_type')
                                     ->required()
                                     ->preload()
-                                    ->searchable()
                                     ->options([
                                         'Full-time' => 'Toàn thời gian',
                                         'Part-time' => 'Bán thời gian',
@@ -304,9 +291,8 @@ class JobPostResource extends Resource
                                     ->placeholder('Chọn loại công việc')
                                     ->label('Loại công việc')
                                     ->helperText('Chọn loại hình việc làm.')
-                                    ->hint('Loại hình việc làm cho công việc.')
                                     ->default('Toàn thời gian')
-                                    ->reactive()
+                                    ->native(false)
                                     ->disablePlaceholderSelection()
                                     ->columnSpan(1),
 
@@ -340,17 +326,15 @@ class JobPostResource extends Resource
                                         'monthly' => 'Theo tháng',
                                         'weekly' => 'Theo tuần',
                                     ])
-                                    ->searchable()
                                     ->placeholder('Chọn loại lương')
                                     ->default('monthly')
                                     ->helperText('Chọn cách tính lương')
-                                    ->hint('Tần suất tính lương.')
                                     ->preload()
-                                    ->reactive()
+                                    ->native(false)
                                     ->disablePlaceholderSelection()
                                     ->columnSpan(1),
 
-                                Forms\Components\Section::make('Visibility and Contact')
+                                Forms\Components\Section::make('Hiển thị và Liên hệ')
                                     ->schema([
                                         Forms\Components\Grid::make(2)
                                             ->schema([
@@ -369,6 +353,7 @@ class JobPostResource extends Resource
                                                     ->offIcon('heroicon-o-exclamation-circle'),
 
                                                 Forms\Components\TextInput::make('contact_person_name')
+                                                    ->label('Tên Người Liên Hệ')
                                                     ->required()
                                                     ->maxLength(100)
                                                     ->prefix('👤')
@@ -376,6 +361,7 @@ class JobPostResource extends Resource
                                                     ->helperText('Họ và tên của người liên hệ'),
 
                                                 Forms\Components\TextInput::make('contact_person_phone')
+                                                    ->label('Số Điện Thoại Người Liên Hệ')
                                                     ->required()
                                                     ->tel()
                                                     ->maxLength(15)
@@ -384,6 +370,7 @@ class JobPostResource extends Resource
                                                     ->helperText('Số điện thoại của người liên hệ'),
 
                                                 Forms\Components\TextInput::make('contact_person_email')
+                                                    ->label('Email Người Liên Hệ')
                                                     ->required()
                                                     ->email()
                                                     ->maxLength(100)
@@ -392,6 +379,7 @@ class JobPostResource extends Resource
                                                     ->helperText('Địa chỉ email của người liên hệ'),
 
                                                 Forms\Components\Select::make('status')
+                                                    ->label('Trạng thái')
                                                     ->required()
                                                     ->preload()
                                                     ->searchable()

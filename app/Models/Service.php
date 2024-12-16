@@ -8,9 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+
+    /**
+     * Các thuộc tính có thể gán hàng loạt
+     *
+     * @var array
+     */
     protected $fillable = [
         'package_name',
-        'illustration_image',
+        'illustration_image', 
         'description',
         'price',
         'duration',
@@ -23,8 +29,12 @@ class Service extends Model
         'homepage_banner'
     ];
 
-    // Nếu có quan hệ với các model khác, bạn có thể thêm các phương thức dưới đây
-    // Ví dụ: Một dịch vụ có thể thuộc nhiều đơn hàng purchased_services
+    /**
+     * Quan hệ với bảng purchased_services
+     * Một dịch vụ có thể thuộc nhiều đơn hàng
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function purchasedServices()
     {
         return $this->hasMany(PurchasedService::class, 'service_id');

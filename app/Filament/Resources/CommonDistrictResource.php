@@ -4,12 +4,12 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CommonDistrictResource\Pages;
 use App\Filament\Resources\CommonDistrictResource\RelationManagers;
-use App\Models\CommonDistrict;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use App\Models\CommonDistrict;
 
 class CommonDistrictResource extends Resource
 {
@@ -17,7 +17,7 @@ class CommonDistrictResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Các quận chung'; // Nhãn số nhiều cho mô hình
+        return 'Các quận, huyện chung'; // Nhãn số nhiều cho mô hình
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront';
@@ -27,24 +27,22 @@ class CommonDistrictResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Thông tin quận') // Tiêu đề cho section
-                    ->description('Vui lòng nhập thông tin chi tiết cho quận.') // Mô tả cho section
+                Forms\Components\Section::make('Thông tin quận, huyện')
+                    ->description('Vui lòng nhập thông tin chi tiết cho quận, huyện.') // Mô tả cho section
                     ->schema([ // Nội dung của section
                         Forms\Components\Select::make('city_id')
                             ->relationship('city', 'name')
                             ->searchable()
                             ->preload()
                             ->required()
-                            ->label('Thành phố') // Nhãn tiếng Việt cho trường city_id
-                            ->placeholder('Chọn thành phố'), // Placeholder tiếng Việt
+                            ->label('Thành phố')
+                            ->placeholder('Chọn thành phố'),
                         Forms\Components\TextInput::make('name')
                             ->required()
                             ->maxLength(150)
-                            ->label('Tên quận') // Nhãn tiếng Việt cho trường name
-                            ->placeholder('Nhập tên quận'), // Placeholder tiếng Việt
+                            ->label('Tên quận, huyện')
+                            ->placeholder('Nhập tên quận, huyện'),
                     ])
-                    ->collapsible() // Cho phép đóng/mở section
-                    ->collapsed() // Bắt đầu với section đóng (bỏ qua nếu bạn muốn mở mặc định)
             ]);
     }
 
@@ -53,23 +51,23 @@ class CommonDistrictResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('city_id')
+                Tables\Columns\TextColumn::make('city.name')
                     ->numeric()
                     ->sortable()
-                    ->label('ID Thành phố'), // Nhãn tiếng Việt cho cột city_id
+                    ->label('Thành phố'),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
-                    ->label('Tên quận'), // Nhãn tiếng Việt cho cột name
+                    ->label('Tên quận, huyện'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Ngày tạo'), // Nhãn tiếng Việt cho cột created_at
+                    ->label('Ngày tạo'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Ngày cập nhật'), // Nhãn tiếng Việt cho cột updated_at
+                    ->label('Ngày cập nhật'),
             ])
             ->filters([
                 //
