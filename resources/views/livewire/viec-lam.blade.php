@@ -578,12 +578,17 @@
                                                             <div class="media">
                                                                 <div class="media-left">
                                                                     <a href="{{ url('tuyen-dung/' . $jobPost->company->slug) }}"
-                                                                        class="profile-thumb">
-                                                                        <img width="85" height="85"
-                                                                            onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                            src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
-                                                                            class="img-md img-circle lazy"
-                                                                            alt="{{ $jobPost->company->name }}">
+                                                                        class="profile-thumb" style="
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                    ">
+                                                                  <div width="85" height="85" style="width: 85px; height: 85px; background-color: #fff; display: flex; justify-content: center; align-items: center;">
+                                                                    <img style="height: initial"
+                                                                    onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
+                                                                    src="{{ $jobPost->company->company_image_url ? Storage::url($jobPost->company->company_image_url) : asset('assets_livewire/img/default-company.svg') }}"
+                                                                    class="img-md img-circle lazy"
+                                                                    alt="{{ $jobPost->company->name }}">
+                                                                  </div>
                                                                     </a>
                                                                 </div>
 

@@ -406,12 +406,14 @@
                                                                     <a href="{{ 'tuyen-dung/' . $companies[$index + $i]->slug }}"
                                                                         class="d-block border-0 p-0 text-center teks-item text-dark">
 
+                                                                    <div style="height: 90px;  display: flex; justify-content: center; align-items: center;">
                                                                         <img onerror="this.src='{{ asset('assets_livewire/img/default-company.svg') }}'"
-                                                                            class="w-75 teks-img-thumbnail mb-2"
-                                                                            width="90" height="90"
-                                                                            loading="lazy"
-                                                                            src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}"
-                                                                            alt="{{ $companies[$index + $i]->company_name }}">
+                                                                        class="w-75 teks-img-thumbnail mb-2"
+                                                                        width="90"  style="height: initial !important; max-height: 90px;"
+                                                                        loading="lazy"
+                                                                        src="{{ Storage::url($companies[$index + $i]->company_image_url) ?? '/img/employer-logo.jpg' }}"
+                                                                        alt="{{ $companies[$index + $i]->company_name }}">
+                                                                    </div>
                                                                         <div class="h5 fw-bold text-dark">
                                                                             {{ $companies[$index + $i]->company_name }}
                                                                         </div>
