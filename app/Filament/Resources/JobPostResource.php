@@ -303,7 +303,7 @@ class JobPostResource extends Resource
                                     ->placeholder('Nhập mức lương tối thiểu')
                                     ->helperText('Chỉ ra mức lương tối thiểu cho vị trí.')
                                     ->hint('Số tiền lương tối thiểu.')
-                                    ->prefix('$') // Thêm ký hiệu tiền tệ hoặc bất kỳ tiền tố nào
+                                    ->prefix('đ') // Thêm ký hiệu tiền tệ hoặc bất kỳ tiền tố nào
                                     ->suffix('mỗi năm') // Thêm hậu tố nếu cần
                                     ->columnSpan(1),
 
