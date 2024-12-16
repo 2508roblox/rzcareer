@@ -522,10 +522,10 @@
     
                                         <li class="">
                                             <span
-                                                class="a {{ $activeSort === 'relevance' ? 'active' : '' }}"
-                                                wire:click="sortBy('relevance')"
+                                                class="a {{ $activeSort === 'job_name' ? 'active' : '' }}"
+                                                wire:click="sortBy('job_name')"
                                                 data-sort="true">
-                                                <img src="{{ $activeSort === 'relevance' ? asset('assets_livewire/img/2024/ic18.svg') : asset('assets_livewire/img/2024/ic17.svg') }}"
+                                                <img src="{{ $activeSort === 'job_name' ? asset('assets_livewire/img/2024/ic18.svg') : asset('assets_livewire/img/2024/ic17.svg') }}"
                                                     alt="Rzcareer"
                                                     loading="lazy">
                                                 Phù hợp nhất
@@ -589,7 +589,7 @@
                                                     class="item-fl-box clearfix">
                                                     <div
                                                         class="brows-job-company-img">
-                                                        <a title="{{ $jobPost->job_name }}"
+                                                        <a style="color: #1772bd" title="{{ $jobPost->job_name }}"
                                                             href="{{ url('viec-lam/' . $jobPost->slug) }}">
                                                             <img width="65"
                                                                 height="65"
@@ -605,7 +605,7 @@
                                                         class="brows-job-position">
                                                         <h3 class="h3 tooltip"
                                                             title="{{ $jobPost->job_name }}">
-                                                            <a target="_blank"
+                                                            <a style="color: #1772bd !important" target="_blank"
                                                                 href="{{ url('viec-lam/' . $jobPost->slug) }}"
                                                                 title="{{ $jobPost->job_name }}">
                                                                 {{

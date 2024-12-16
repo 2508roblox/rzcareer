@@ -32,7 +32,7 @@ class DanhSachViecLam extends Component
 
     public $sortField = 'created_at';
     public $sortDirection = 'desc';
-    public $activeSort = '';
+    public $activeSort = 'job_name';
 
     protected $queryString = ['job_type', 'salary', 'position', 'experience', 'career_id'];
     protected $resetPageOnUpdate = ['job_type', 'salary', 'position', 'experience'];
@@ -71,7 +71,7 @@ class DanhSachViecLam extends Component
         $this->is_hot = $request->query('is_hot', false);
         $this->is_urgent = $request->query('is_urgent', false);
         $this->listLocation = collect();
-        $this->activeSort = 'relevance';
+        $this->activeSort = 'job_name';
     }
 
     public function updateCareerFilter($careerId)

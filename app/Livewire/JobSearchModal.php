@@ -80,7 +80,16 @@ class JobSearchModal extends Component
         $this->listLocation = collect();
         $this->isListVisible = false;
     }
-
+    public function updateCareerFilter($careerId)
+    {
+        $this->career_id = $careerId;
+        $this->resetPage();
+        
+        // Cập nhật URL với career_id mới
+        $this->dispatch('urlChange', [
+            'career_id' => $this->career_id
+        ]);
+    }
     public function updatedLocation()
     {
         if ($this->location != '') {
